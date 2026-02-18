@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import PinyinQuiz from '../../../components/tools/chinese/PinyinQuiz.tsx';
+const faq = [
+  { q: 'What HSK level should I choose?', a: 'If you are just starting to learn Chinese, choose HSK 1. If you know basic vocabulary (200+ words), try HSK 2. HSK 3 includes intermediate vocabulary. The quiz adapts to include words from your level and below.' },
+  { q: 'How is this different from the Tone Trainer?', a: 'The Tone Trainer focuses specifically on identifying tones (1st, 2nd, 3rd, 4th). The Pinyin Quiz tests your knowledge of the full pinyin reading of characters, including both the consonant/vowel sounds and the tone marks.' },
+  { q: 'Are quiz scores saved?', a: 'Yes! Your best score and number of attempts are saved locally in your browser. Visit My Progress to see your scores across all quizzes.' },
+];
+const relatedTools = [
+  { name: 'Tone Trainer', url: '/chinese/tools/tone-trainer/', emoji: '🎵' },
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'HSK Vocabulary', url: '/chinese/tools/hsk-vocabulary/', emoji: '📚' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+];
+const relatedArticles = [
+  { title: 'How to Prepare for HSK: Complete Guide', url: '/chinese/blog/hsk-preparation/' },
+  { title: 'Pinyin Guide: Master Chinese Pronunciation', url: '/chinese/blog/pinyin-guide/' },
+];
+---
+<ToolLayout title="Pinyin Quiz" description="Test your Chinese pinyin knowledge by HSK level. Choose the correct pinyin reading for each character. Track your scores and improve over time." language="chinese" toolSlug="pinyin-quiz" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <PinyinQuiz client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Test Your Pinyin Knowledge</h2>
+      <p>Select your HSK level and answer 10 questions. For each character, choose the correct pinyin reading from four options. Your scores are saved so you can track improvement over time.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

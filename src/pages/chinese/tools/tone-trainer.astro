@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import ToneTrainer from '../../../components/tools/chinese/ToneTrainer.tsx';
+const faq = [
+  { q: 'Why are tones so important in Chinese?', a: 'Chinese is a tonal language — the same syllable pronounced with different tones has completely different meanings. For example, mā (mother), má (hemp), mǎ (horse), and mà (scold) are four different words. Getting tones right is essential for being understood.' },
+  { q: 'How does the Tone Trainer work?', a: 'You hear a Chinese character spoken aloud, then choose which of the four tones it uses. The quiz randomizes 10 questions from a pool of tone-minimal pairs — characters that share the same base sound but differ in tone.' },
+  { q: 'What is the hardest Chinese tone to learn?', a: 'Most learners find the third tone (falling-rising) the most challenging, especially in combination with other third tones. The second and fourth tones can also be confused. Regular practice with our Tone Trainer helps build your ear.' },
+];
+const relatedTools = [
+  { name: 'Pinyin Quiz', url: '/chinese/tools/pinyin-quiz/', emoji: '❓' },
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+];
+const relatedArticles = [
+  { title: 'Chinese Tones Explained: The Complete Guide', url: '/chinese/blog/chinese-tones/' },
+  { title: 'Pinyin Guide: Master Chinese Pronunciation', url: '/chinese/blog/pinyin-guide/' },
+];
+---
+<ToolLayout title="Chinese Tone Trainer" description="Practice identifying the four Chinese tones with this interactive quiz. Listen to characters and pick the correct tone. Improve your ear for Mandarin tones." language="chinese" toolSlug="tone-trainer" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <ToneTrainer client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Train Your Ear for Chinese Tones</h2>
+      <p>Mandarin Chinese has four main tones plus a neutral tone. This interactive trainer helps you develop your ability to distinguish between tones by listening to native-quality audio and selecting the correct tone for each character.</p>
+      <h3>The Four Tones</h3>
+      <p>First tone (ˉ) is flat and high. Second tone (ˊ) rises like asking a question. Third tone (ˇ) dips down then rises. Fourth tone (ˋ) falls sharply like a command.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

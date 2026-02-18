@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import MeasureWordPractice from '../../../components/tools/chinese/MeasureWordPractice.tsx';
+const faq = [
+  { q: 'What are Chinese measure words?', a: 'Measure words (量词, liàngcí) are required between a number and a noun in Chinese. Every noun has a specific measure word. For example, "one book" is 一本书 (yī běn shū), where 本 is the measure word for books.' },
+  { q: 'What if I do not know the measure word?', a: 'When in doubt, you can use 个 (gè), which is the most common and general measure word. While not always correct, native speakers will still understand you. As you learn more, you will naturally pick up the specific measure words.' },
+  { q: 'How many measure words are there?', a: 'Chinese has over 100 measure words, but about 20-30 cover most everyday situations. Our tool teaches the most common ones first, with real examples for each.' },
+];
+const relatedTools = [
+  { name: 'Pinyin Quiz', url: '/chinese/tools/pinyin-quiz/', emoji: '❓' },
+  { name: 'Number Converter', url: '/chinese/tools/number-converter/', emoji: '🔢' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+];
+const relatedArticles = [
+  { title: 'Chinese Measure Words: The Complete Guide', url: '/chinese/blog/chinese-measure-words/' },
+  { title: 'Chinese Grammar for Beginners', url: '/chinese/blog/chinese-grammar/' },
+];
+---
+<ToolLayout title="Measure Word Practice" description="Learn and practice Chinese measure words (量词). Study which measure words go with which nouns, then test yourself with an interactive quiz." language="chinese" toolSlug="measure-word" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <MeasureWordPractice client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Master Chinese Measure Words</h2>
+      <p>Measure words are one of the unique challenges of learning Chinese. This tool helps you learn the most common measure words through study mode and then test your knowledge with an interactive quiz.</p>
+      <h3>Study First, Then Quiz</h3>
+      <p>Start in study mode to see all the measure words with their associated nouns. Click any example to hear the pronunciation. When you feel ready, switch to quiz mode and match the correct measure word to each noun.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

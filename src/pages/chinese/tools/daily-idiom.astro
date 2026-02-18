@@ -1,0 +1,27 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import DailyIdiom from '../../../components/tools/chinese/DailyIdiom.tsx';
+const faq = [
+  { q: 'What are Chinese idioms (chengyu)?', a: 'Chengyu (成语) are four-character idiomatic expressions that come from classical Chinese. They carry deep cultural meaning and are widely used in everyday conversation, writing, and even business. Learning them shows advanced Chinese proficiency.' },
+  { q: 'How many chengyu are there?', a: 'There are over 5,000 commonly used chengyu in Chinese, with some estimates putting the total at over 20,000. Our tool focuses on the most popular and useful ones for learners.' },
+  { q: 'Do I need to know chengyu to speak Chinese?', a: 'While not essential for basic communication, knowing common chengyu greatly enriches your Chinese. Native speakers use them frequently, and understanding them helps with reading comprehension and cultural appreciation.' },
+];
+const relatedTools = [
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+  { name: 'Pinyin Quiz', url: '/chinese/tools/pinyin-quiz/', emoji: '❓' },
+  { name: 'HSK Vocabulary', url: '/chinese/tools/hsk-vocabulary/', emoji: '📚' },
+];
+const relatedArticles = [
+  { title: 'Chinese Idioms (Chengyu): Top 50 You Should Know', url: '/chinese/blog/chinese-idioms/' },
+  { title: 'Chinese Culture: Festivals and Traditions', url: '/chinese/blog/chinese-culture/' },
+];
+---
+<ToolLayout title="Daily Chinese Idiom" description="Learn a new Chinese four-character idiom (chengyu) every day with origin story, meaning, pinyin, and example sentences." language="chinese" toolSlug="daily-idiom" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <DailyIdiom client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Daily Chengyu (成语)</h2>
+      <p>Chinese four-character idioms are the gems of the language. Each one tells a story from history, mythology, or folklore. Our Daily Idiom tool introduces one idiom per day with its origin story, literal meaning, and a practical example sentence.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

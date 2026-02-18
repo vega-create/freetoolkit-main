@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import DailyCharacter from '../../../components/tools/chinese/DailyCharacter.tsx';
+const faq = [
+  { q: 'How many Chinese characters do I need to learn?', a: 'About 2,500-3,000 characters cover 98% of everyday Chinese. HSK 1 requires 174 characters, while HSK 6 requires 2,663. Our Daily Character tool helps you build up gradually.' },
+  { q: 'How does the daily character work?', a: 'Each day at midnight, a new character appears. You can see its pinyin, meaning, stroke count, radical, and example words. Click "I Learned This Character" to track your progress and build a streak.' },
+  { q: 'Will I see the same character again?', a: 'The tool cycles through a curated list of common characters. After completing the full cycle, it starts over — great for review! Characters are ordered to build from basic to intermediate level.' },
+];
+const relatedTools = [
+  { name: 'Daily Idiom', url: '/chinese/tools/daily-idiom/', emoji: '🏮' },
+  { name: 'Stroke Order', url: '/chinese/tools/stroke-order/', emoji: '✍️' },
+  { name: 'HSK Vocabulary', url: '/chinese/tools/hsk-vocabulary/', emoji: '📚' },
+  { name: 'Pinyin Quiz', url: '/chinese/tools/pinyin-quiz/', emoji: '❓' },
+];
+const relatedArticles = [
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+  { title: 'How to Learn Chinese Characters Effectively', url: '/chinese/blog/learn-chinese-characters/' },
+  { title: 'Chinese Radicals: The Building Blocks', url: '/chinese/blog/chinese-radicals/' },
+];
+---
+<ToolLayout title="Daily Chinese Character" description="Learn a new Chinese character every day with pinyin, meaning, stroke count, and example words. Build your streak and track progress." language="chinese" toolSlug="daily-character" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <DailyCharacter client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Learn One Character a Day</h2>
+      <p>Consistency is the key to learning Chinese characters. Our Daily Character tool presents one carefully selected character each day, complete with pronunciation, meaning, stroke information, and real-world example words.</p>
+      <h3>Track Your Progress</h3>
+      <p>Click "I Learned This Character" to add it to your learning history and build a streak. Visit your My Progress page to see all the characters you've learned and your current streak.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
