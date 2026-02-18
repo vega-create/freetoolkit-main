@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+<BaseLayout title="Contact" description="Get in touch with FreeToolkit. Questions, suggestions, or feedback welcome.">
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Contact' }]} />
+    <h1 class="mb-6">Contact Us</h1>
+    <div class="prose max-w-none">
+      <p>We'd love to hear from you! Whether you have a question, suggestion, or found a bug, feel free to reach out.</p>
+      <h2>Get in Touch</h2>
+      <p>Email: <a href="mailto:hello@freetoolkit.cc">hello@freetoolkit.cc</a></p>
+      <h2>Suggestions</h2>
+      <p>Have an idea for a new tool or feature? We're always looking to improve. Send us your suggestions and we'll do our best to make it happen.</p>
+      <h2>Bug Reports</h2>
+      <p>If you encounter any issues with our tools, please let us know the tool name, your browser, and what happened. Screenshots are always helpful!</p>
+    </div>
+  </div>
+</BaseLayout>

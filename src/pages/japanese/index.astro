@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../site.config';
+
+const langConfig = siteConfig.languages.japanese;
+
+const tools = [
+  { name: 'Japanese Name Generator', slug: 'name-generator', emoji: '📝', desc: 'Generate a Japanese name from your English name' },
+  { name: 'Hiragana / Katakana Converter', slug: 'kana-converter', emoji: 'あ', desc: 'Convert between hiragana, katakana, and romaji' },
+  { name: 'Romaji Converter', slug: 'romaji-converter', emoji: '🔤', desc: 'Convert Japanese text to romaji pronunciation' },
+  { name: 'Kanji Lookup', slug: 'kanji-lookup', emoji: '漢', desc: 'Look up kanji meaning, readings, and stroke count' },
+  { name: 'Number Converter', slug: 'number-converter', emoji: '🔢', desc: 'Convert between Arabic and Japanese numbers' },
+  { name: 'Hiragana Quiz', slug: 'hiragana-quiz', emoji: 'あ', desc: 'Test your hiragana recognition skills', badge: 'Quiz' },
+  { name: 'Katakana Quiz', slug: 'katakana-quiz', emoji: 'ア', desc: 'Practice reading katakana characters', badge: 'Quiz' },
+  { name: 'Daily Kanji', slug: 'daily-kanji', emoji: '📅', desc: 'Learn a new kanji character every day', badge: 'Daily' },
+  { name: 'Daily Phrase', slug: 'daily-phrase', emoji: '💬', desc: 'Learn a useful Japanese phrase daily', badge: 'Daily' },
+  { name: 'Particle Practice', slug: 'particle-practice', emoji: '🎯', desc: 'Practice using Japanese particles correctly', badge: 'Interactive' },
+  { name: 'Verb Conjugator', slug: 'verb-conjugator', emoji: '📐', desc: 'Conjugate Japanese verbs in all forms' },
+  { name: 'JLPT Vocabulary', slug: 'jlpt-vocabulary', emoji: '📚', desc: 'Browse JLPT N5-N1 vocabulary with audio' },
+];
+
+const downloads = [
+  { name: 'Hiragana Chart (PDF)', slug: 'hiragana-chart', emoji: '📄' },
+  { name: 'Katakana Chart (PDF)', slug: 'katakana-chart', emoji: '📄' },
+  { name: 'JLPT N5-N1 Word Lists', slug: 'jlpt-word-lists', emoji: '📋' },
+  { name: 'Kanji Practice Sheets', slug: 'kanji-practice-sheets', emoji: '✏️' },
+];
+---
+
+<BaseLayout
+  title="Learn Japanese - Free Tools & Resources"
+  description={langConfig.description}
+>
+  {/* Hero */}
+  <section class="bg-gradient-to-br from-pink-50 to-purple-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <Breadcrumb items={[{ name: 'Japanese' }]} />
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Learn Japanese with Free Tools 🗾
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          Interactive tools for Japanese learners. Master hiragana, katakana, kanji, and more with daily practice and free resources.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/japanese/tools/" class="btn-primary !bg-japanese-600 hover:!bg-japanese-700">Browse All Tools</a>
+          <a href="/japanese/blog/" class="btn-primary !bg-white !text-gray-700 border border-gray-300 hover:!bg-gray-50">Read Blog</a>
+          <a href="/japanese/my-progress/" class="btn-primary !bg-white !text-gray-700 border border-gray-300 hover:!bg-gray-50">📊 My Progress</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Daily Practice */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">⭐ Daily Practice</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      {tools.filter(t => t.badge).map((tool) => (
+        <a href={`/japanese/tools/${tool.slug}/`} class="tool-card hover:border-japanese-300 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{tool.emoji}</span>
+            <h3 class="font-bold">{tool.name}</h3>
+          </div>
+          <p class="text-sm text-gray-500">{tool.desc}</p>
+          {tool.badge && <span class="inline-block mt-2 text-xs px-2 py-1 bg-japanese-50 text-japanese-600 rounded-full">{tool.badge}</span>}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* All Tools */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">🔧 All Japanese Tools</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tools.map((tool) => (
+          <a href={`/japanese/tools/${tool.slug}/`} class="tool-card hover:border-japanese-300 transition-all">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-xl">{tool.emoji}</span>
+              <h3 class="font-semibold">{tool.name}</h3>
+            </div>
+            <p class="text-sm text-gray-500">{tool.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Downloads */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">📥 Free Downloads</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      {downloads.map((dl) => (
+        <a href={`/japanese/downloads/#${dl.slug}`} class="tool-card text-center hover:border-primary-300">
+          <span class="text-2xl">{dl.emoji}</span>
+          <p class="font-medium mt-2">{dl.name}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Blog Preview */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold">📝 Latest Articles</h2>
+        <a href="/japanese/blog/" class="text-primary-600 hover:underline text-sm">View all →</a>
+      </div>
+      <p class="text-gray-500">Articles coming soon! Check back for Japanese learning guides, JLPT prep tips, and cultural insights.</p>
+    </div>
+  </section>
+
+  {/* Cross-language */}
+  <section class="max-w-6xl mx-auto px-4 py-8 text-center">
+    <p class="text-gray-500">
+      🈶 Also learning Chinese? <a href="/chinese/" class="text-primary-600 hover:underline font-medium">Explore Chinese tools →</a>
+    </p>
+  </section>
+</BaseLayout>

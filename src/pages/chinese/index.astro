@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../site.config';
+
+const langConfig = siteConfig.languages.chinese;
+
+const tools = [
+  { name: 'Chinese Name Generator', slug: 'name-generator', emoji: '📝', desc: 'Get a meaningful Chinese name based on your English name' },
+  { name: 'Pinyin Converter', slug: 'pinyin-converter', emoji: '🔤', desc: 'Convert Chinese characters to pinyin with tone marks' },
+  { name: 'Traditional ↔ Simplified', slug: 'traditional-simplified', emoji: '🔄', desc: 'Convert between Traditional and Simplified Chinese' },
+  { name: 'Character Counter', slug: 'character-counter', emoji: '📊', desc: 'Count characters, words, and analyze text frequency' },
+  { name: 'Number Converter', slug: 'number-converter', emoji: '🔢', desc: 'Convert between Arabic and Chinese numbers' },
+  { name: 'Tone Trainer', slug: 'tone-trainer', emoji: '🎵', desc: 'Practice identifying the 4 Chinese tones', badge: 'Interactive' },
+  { name: 'Pinyin Quiz', slug: 'pinyin-quiz', emoji: '❓', desc: 'Test your pinyin knowledge by HSK level', badge: 'Quiz' },
+  { name: 'Daily Character', slug: 'daily-character', emoji: '📅', desc: 'Learn a new Chinese character every day', badge: 'Daily' },
+  { name: 'Daily Idiom', slug: 'daily-idiom', emoji: '🏮', desc: 'Discover a new Chinese idiom (chengyu) daily', badge: 'Daily' },
+  { name: 'Stroke Order', slug: 'stroke-order', emoji: '✍️', desc: 'See the correct stroke order for any character' },
+  { name: 'Zhuyin Converter', slug: 'zhuyin-converter', emoji: 'ㄅ', desc: 'Convert between Pinyin and Bopomofo (Zhuyin)' },
+  { name: 'HSK Vocabulary', slug: 'hsk-vocabulary', emoji: '📚', desc: 'Browse HSK 1-6 vocabulary with audio' },
+];
+
+const downloads = [
+  { name: 'Pinyin Chart (PDF)', slug: 'pinyin-chart', emoji: '📄' },
+  { name: 'HSK 1-6 Word Lists', slug: 'hsk-word-lists', emoji: '📋' },
+  { name: 'Radical Chart', slug: 'radical-chart', emoji: '📄' },
+  { name: 'Practice Sheets', slug: 'practice-sheets', emoji: '✏️' },
+];
+---
+
+<BaseLayout
+  title="Learn Chinese - Free Tools & Resources"
+  description={langConfig.description}
+>
+  {/* Hero */}
+  <section class="bg-gradient-to-br from-red-50 to-orange-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <Breadcrumb items={[{ name: 'Chinese' }]} />
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Learn Chinese with Free Tools 🈶
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          Interactive tools for Mandarin learners at every level. Practice daily, track your progress, and download free resources.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/chinese/tools/" class="btn-primary !bg-chinese-600 hover:!bg-chinese-700">Browse All Tools</a>
+          <a href="/chinese/blog/" class="btn-primary !bg-white !text-gray-700 border border-gray-300 hover:!bg-gray-50">Read Blog</a>
+          <a href="/chinese/my-progress/" class="btn-primary !bg-white !text-gray-700 border border-gray-300 hover:!bg-gray-50">📊 My Progress</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Daily Practice */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">⭐ Daily Practice</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      {tools.filter(t => t.badge === 'Daily' || t.badge === 'Interactive' || t.badge === 'Quiz').map((tool) => (
+        <a href={`/chinese/tools/${tool.slug}/`} class="tool-card hover:border-chinese-300 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{tool.emoji}</span>
+            <h3 class="font-bold">{tool.name}</h3>
+          </div>
+          <p class="text-sm text-gray-500">{tool.desc}</p>
+          {tool.badge && <span class="inline-block mt-2 text-xs px-2 py-1 bg-chinese-50 text-chinese-600 rounded-full">{tool.badge}</span>}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* All Tools */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">🔧 All Chinese Tools</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tools.map((tool) => (
+          <a href={`/chinese/tools/${tool.slug}/`} class="tool-card hover:border-chinese-300 transition-all">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-xl">{tool.emoji}</span>
+              <h3 class="font-semibold">{tool.name}</h3>
+            </div>
+            <p class="text-sm text-gray-500">{tool.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Downloads */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">📥 Free Downloads</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      {downloads.map((dl) => (
+        <a href={`/chinese/downloads/#${dl.slug}`} class="tool-card text-center hover:border-primary-300">
+          <span class="text-2xl">{dl.emoji}</span>
+          <p class="font-medium mt-2">{dl.name}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Blog Preview */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold">📝 Latest Articles</h2>
+        <a href="/chinese/blog/" class="text-primary-600 hover:underline text-sm">View all →</a>
+      </div>
+      <p class="text-gray-500">Articles coming soon! Check back for Chinese learning guides, HSK prep tips, and cultural insights.</p>
+    </div>
+  </section>
+
+  {/* Cross-language */}
+  <section class="max-w-6xl mx-auto px-4 py-8 text-center">
+    <p class="text-gray-500">
+      🗾 Also learning Japanese? <a href="/japanese/" class="text-primary-600 hover:underline font-medium">Explore Japanese tools →</a>
+    </p>
+  </section>
+</BaseLayout>

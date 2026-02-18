@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+<BaseLayout title="Privacy Policy" description="FreeToolkit privacy policy. Learn how we handle your data and protect your privacy.">
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Privacy Policy' }]} />
+    <h1 class="mb-6">Privacy Policy</h1>
+    <div class="prose max-w-none">
+      <p><em>Last updated: February 2026</em></p>
+      <h2>Information We Collect</h2>
+      <p>FreeToolkit does not collect personal information. We do not require user registration or login to use any of our tools.</p>
+      <h2>Local Storage</h2>
+      <p>Your learning progress (streak, quiz scores, saved vocabulary) is stored locally in your browser using localStorage. This data never leaves your device and is not sent to our servers. Clearing your browser data will remove this information.</p>
+      <h2>Analytics</h2>
+      <p>We use Google Analytics and Google Tag Manager to understand how visitors use our website. This helps us improve our tools and content. Google Analytics collects anonymous usage data such as pages visited, time on site, and device type.</p>
+      <h2>Advertising</h2>
+      <p>We may display advertisements through Google AdSense. Google may use cookies to serve ads based on your prior visits to this and other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>.</p>
+      <h2>Third-Party Links</h2>
+      <p>Our website may contain links to external sites. We are not responsible for the privacy practices of these third-party websites.</p>
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, please <a href="/contact/">contact us</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+---
+<BaseLayout title="Free Japanese Learning Downloads" description="Download free PDFs: JLPT vocabulary lists, hiragana/katakana charts, and kanji practice sheets.">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Downloads' }]} />
+    <h1 class="mb-2">Free Downloads</h1>
+    <p class="text-gray-500 mb-8">Free printable PDFs for Japanese learners.</p>
+    <p class="text-gray-400 text-center py-12">📥 Downloadable resources coming soon!</p>
+  </div>
+</BaseLayout>

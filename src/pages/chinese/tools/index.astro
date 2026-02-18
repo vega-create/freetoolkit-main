@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const tools = [
+  { name: 'Chinese Name Generator', slug: 'name-generator', emoji: '📝', desc: 'Get a meaningful Chinese name' },
+  { name: 'Pinyin Converter', slug: 'pinyin-converter', emoji: '🔤', desc: 'Convert Chinese to pinyin' },
+  { name: 'Traditional ↔ Simplified', slug: 'traditional-simplified', emoji: '🔄', desc: 'Convert between character sets' },
+  { name: 'Character Counter', slug: 'character-counter', emoji: '📊', desc: 'Count and analyze Chinese text' },
+  { name: 'Number Converter', slug: 'number-converter', emoji: '🔢', desc: 'Arabic ↔ Chinese numbers' },
+  { name: 'Daily Character', slug: 'daily-character', emoji: '📅', desc: 'Learn one character a day' },
+  { name: 'Daily Idiom', slug: 'daily-idiom', emoji: '🏮', desc: 'Learn a chengyu each day' },
+  { name: 'Tone Trainer', slug: 'tone-trainer', emoji: '🎵', desc: 'Practice the 4 tones' },
+  { name: 'Pinyin Quiz', slug: 'pinyin-quiz', emoji: '❓', desc: 'Test your pinyin knowledge' },
+  { name: 'Measure Word Practice', slug: 'measure-word', emoji: '🎯', desc: 'Practice measure words' },
+  { name: 'Stroke Order', slug: 'stroke-order', emoji: '✍️', desc: 'See correct stroke order' },
+  { name: 'Radical Lookup', slug: 'radical-lookup', emoji: '⿱', desc: 'Look up radicals and components' },
+  { name: 'HSK Vocabulary', slug: 'hsk-vocabulary', emoji: '📚', desc: 'Browse HSK 1-6 words' },
+  { name: 'Zhuyin Converter', slug: 'zhuyin-converter', emoji: 'ㄅ', desc: 'Pinyin ↔ Bopomofo' },
+  { name: 'Practice Sheet Generator', slug: 'practice-sheet-generator', emoji: '📝', desc: 'Generate printable practice sheets' },
+];
+---
+<BaseLayout title="Chinese Learning Tools" description="Free interactive tools for learning Mandarin Chinese. Practice tones, learn characters, and test your knowledge.">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Chinese', url: '/chinese/' }, { name: 'Tools' }]} />
+    <h1 class="mb-2">Chinese Learning Tools</h1>
+    <p class="text-gray-500 mb-8">Free interactive tools for learning Mandarin Chinese at every level.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {tools.map((tool) => (
+        <a href={`/chinese/tools/${tool.slug}/`} class="tool-card hover:border-chinese-300 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{tool.emoji}</span>
+            <h2 class="text-lg font-semibold">{tool.name}</h2>
+          </div>
+          <p class="text-sm text-gray-500">{tool.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

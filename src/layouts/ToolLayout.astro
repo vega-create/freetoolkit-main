@@ -1,0 +1,83 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import FAQ from '../components/FAQ.astro';
+import RelatedTools from '../components/RelatedTools.astro';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  title: string;
+  description: string;
+  language: 'chinese' | 'japanese';
+  toolSlug: string;
+  faq?: { q: string; a: string }[];
+  relatedTools?: { name: string; url: string; emoji?: string }[];
+  relatedArticles?: { title: string; url: string }[];
+}
+
+const { title, description, language, toolSlug, faq = [], relatedTools = [], relatedArticles = [] } = Astro.props;
+
+const langConfig = siteConfig.languages[language];
+const breadcrumbs = [
+  { name: langConfig.name, url: `/${language}/` },
+  { name: 'Tools', url: `/${language}/tools/` },
+  { name: title },
+];
+
+const webAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: title,
+  description: description,
+  url: new URL(`/${language}/tools/${toolSlug}/`, siteConfig.url).href,
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Web Browser',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+};
+---
+
+<BaseLayout title={title} description={description} schemas={[webAppSchema]}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <Breadcrumb items={breadcrumbs} />
+
+    <h1 class="mb-2">{title}</h1>
+    <p class="text-gray-500 mb-8">{description}</p>
+
+    {/* Tool Component */}
+    <div class="tool-card mb-8">
+      <slot />
+    </div>
+
+    {/* About / How to Use */}
+    <slot name="about" />
+
+    {/* FAQ */}
+    {faq.length > 0 && <FAQ items={faq} />}
+
+    {/* Related Tools */}
+    {relatedTools.length > 0 && <RelatedTools tools={relatedTools} />}
+
+    {/* Related Articles */}
+    {relatedArticles.length > 0 && (
+      <section class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+        <h3 class="font-bold text-lg mb-4">📖 Learn More</h3>
+        <ul class="space-y-2">
+          {relatedArticles.map((article) => (
+            <li>
+              <a href={article.url} class="text-primary-600 hover:underline">{article.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {/* Cross-language link */}
+    <div class="mt-8 p-4 bg-gray-50 rounded-lg text-center text-sm text-gray-500">
+      {language === 'chinese' ? (
+        <p>🗾 Learning Japanese too? <a href="/japanese/tools/" class="text-primary-600 hover:underline">Check out our Japanese tools →</a></p>
+      ) : (
+        <p>🈶 Learning Chinese too? <a href="/chinese/tools/" class="text-primary-600 hover:underline">Check out our Chinese tools →</a></p>
+      )}
+    </div>
+  </div>
+</BaseLayout>

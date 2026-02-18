@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+<BaseLayout title="About" description="FreeToolkit provides free online tools for learning Chinese and Japanese, plus calculators, converters, and productivity utilities.">
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'About' }]} />
+    <h1 class="mb-6">About FreeToolkit</h1>
+    <div class="prose max-w-none">
+      <p>FreeToolkit is a collection of free online tools designed to help people learn Chinese and Japanese, along with a suite of everyday utility tools like calculators, converters, and generators.</p>
+      <h2>Our Mission</h2>
+      <p>We believe language learning tools should be accessible to everyone. All our tools are 100% free, require no sign-up, and work directly in your browser.</p>
+      <h2>What We Offer</h2>
+      <p>Our platform includes interactive language learning tools with audio pronunciation, daily practice exercises to build consistent habits, downloadable resources like vocabulary lists and practice sheets, and a blog with learning guides and cultural insights.</p>
+      <h2>Features</h2>
+      <p>Every tool includes audio pronunciation powered by your browser's speech engine, progress tracking saved locally in your browser, and support for both Traditional and Simplified Chinese characters.</p>
+      <h2>Contact</h2>
+      <p>Have questions or suggestions? Visit our <a href="/contact/">contact page</a> to get in touch.</p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const tools = [
+  { name: 'Japanese Name Generator', slug: 'name-generator', emoji: '📝', desc: 'Generate a Japanese name' },
+  { name: 'Kana Converter', slug: 'kana-converter', emoji: 'あ', desc: 'Convert between hiragana, katakana, romaji' },
+  { name: 'Romaji Converter', slug: 'romaji-converter', emoji: '🔤', desc: 'Japanese text to romaji' },
+  { name: 'Kanji Lookup', slug: 'kanji-lookup', emoji: '漢', desc: 'Meaning, readings, stroke count' },
+  { name: 'Number Converter', slug: 'number-converter', emoji: '🔢', desc: 'Arabic ↔ Japanese numbers' },
+  { name: 'Daily Kanji', slug: 'daily-kanji', emoji: '📅', desc: 'Learn one kanji a day' },
+  { name: 'Daily Phrase', slug: 'daily-phrase', emoji: '💬', desc: 'Daily useful phrase' },
+  { name: 'Hiragana Quiz', slug: 'hiragana-quiz', emoji: 'あ', desc: 'Test your hiragana' },
+  { name: 'Katakana Quiz', slug: 'katakana-quiz', emoji: 'ア', desc: 'Test your katakana' },
+  { name: 'Particle Practice', slug: 'particle-practice', emoji: '🎯', desc: 'Master Japanese particles' },
+  { name: 'Kanji Stroke Order', slug: 'kanji-stroke-order', emoji: '✍️', desc: 'Correct stroke order' },
+  { name: 'Counter Words', slug: 'counter-words', emoji: '🔢', desc: 'Japanese counter words' },
+  { name: 'JLPT Vocabulary', slug: 'jlpt-vocabulary', emoji: '📚', desc: 'Browse JLPT N5-N1 words' },
+  { name: 'Verb Conjugator', slug: 'verb-conjugator', emoji: '📐', desc: 'Conjugate any verb' },
+  { name: 'Keigo Converter', slug: 'keigo-converter', emoji: '🎩', desc: 'Convert to polite forms' },
+];
+---
+<BaseLayout title="Japanese Learning Tools" description="Free interactive tools for learning Japanese. Practice hiragana, katakana, kanji, and test your knowledge.">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Tools' }]} />
+    <h1 class="mb-2">Japanese Learning Tools</h1>
+    <p class="text-gray-500 mb-8">Free interactive tools for learning Japanese at every level.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {tools.map((tool) => (
+        <a href={`/japanese/tools/${tool.slug}/`} class="tool-card hover:border-japanese-300 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{tool.emoji}</span>
+            <h2 class="text-lg font-semibold">{tool.name}</h2>
+          </div>
+          <p class="text-sm text-gray-500">{tool.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+---
+<BaseLayout title="Chinese Learning Blog" description="Guides, tips, and insights for learning Mandarin Chinese. From beginner basics to HSK prep.">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Chinese', url: '/chinese/' }, { name: 'Blog' }]} />
+    <h1 class="mb-2">Chinese Learning Blog</h1>
+    <p class="text-gray-500 mb-8">Guides, tips, and cultural insights for Mandarin learners.</p>
+    <p class="text-gray-400 text-center py-12">📝 Articles coming soon! Stay tuned for Chinese learning guides and HSK prep tips.</p>
+  </div>
+</BaseLayout>

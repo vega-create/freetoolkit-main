@@ -1,0 +1,124 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import FAQ from '../components/FAQ.astro';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  title: string;
+  description: string;
+  language: 'chinese' | 'japanese';
+  category: string;
+  tags: string[];
+  publishDate: string;
+  updatedDate?: string;
+  image?: string;
+  imageAlt?: string;
+  faq?: { q: string; a: string }[];
+  relatedTools?: { name: string; url: string }[];
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const {
+  title, description, language, category, tags, publishDate, updatedDate,
+  image, imageAlt, faq = [], relatedTools = [], headings
+} = Astro.props;
+
+const langConfig = siteConfig.languages[language];
+const categoryObj = langConfig.categories.find((c) => c.slug === category);
+const breadcrumbs = [
+  { name: langConfig.name, url: `/${language}/` },
+  { name: 'Blog', url: `/${language}/blog/` },
+  { name: title },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: image,
+  datePublished: publishDate,
+  dateModified: updatedDate || publishDate,
+  author: { '@type': 'Organization', name: siteConfig.name },
+  publisher: { '@type': 'Organization', name: siteConfig.name },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={image}
+  article={{ publishedTime: publishDate, modifiedTime: updatedDate, tags }}
+  schemas={[articleSchema]}
+>
+  <article class="max-w-3xl mx-auto px-4 py-8">
+    <Breadcrumb items={breadcrumbs} />
+
+    {/* Article Header */}
+    <header class="mb-8">
+      <div class="flex items-center gap-2 mb-3 text-sm">
+        {categoryObj && (
+          <a href={`/${language}/blog/?category=${category}`} class="tag-badge">
+            {categoryObj.emoji} {categoryObj.name}
+          </a>
+        )}
+      </div>
+      <h1 class="mb-4">{title}</h1>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <time datetime={publishDate}>
+          {new Date(publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        {updatedDate && updatedDate !== publishDate && (
+          <span>Updated: {new Date(updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        )}
+      </div>
+    </header>
+
+    {/* Featured Image */}
+    {image && (
+      <img src={image} alt={imageAlt || title} class="w-full rounded-xl mb-8 shadow-md" loading="lazy" />
+    )}
+
+    {/* Table of Contents */}
+    <TableOfContents headings={headings} />
+
+    {/* Article Body */}
+    <div class="prose max-w-none">
+      <slot />
+    </div>
+
+    {/* Related Tool CTA */}
+    {relatedTools.length > 0 && (
+      <div class="mt-8 p-6 bg-primary-50 rounded-xl border border-primary-100">
+        <h3 class="font-bold text-lg mb-3">🔧 Try These Tools</h3>
+        <div class="flex flex-wrap gap-3">
+          {relatedTools.map((tool) => (
+            <a href={tool.url} class="btn-primary text-sm">{tool.name} →</a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {/* FAQ */}
+    {faq.length > 0 && <FAQ items={faq} />}
+
+    {/* Tags */}
+    <div class="mt-8 flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <a href={`/${language}/tags/${tag}/`} class="tag-badge">#{tag}</a>
+      ))}
+    </div>
+
+    {/* Cross-language */}
+    <div class="mt-8 p-4 bg-gray-50 rounded-lg text-center text-sm text-gray-500">
+      {language === 'chinese' ? (
+        <p>🗾 Interested in Japanese? <a href="/japanese/blog/" class="text-primary-600 hover:underline">Read our Japanese learning blog →</a></p>
+      ) : (
+        <p>🈶 Interested in Chinese? <a href="/chinese/blog/" class="text-primary-600 hover:underline">Read our Chinese learning blog →</a></p>
+      )}
+    </div>
+  </article>
+</BaseLayout>

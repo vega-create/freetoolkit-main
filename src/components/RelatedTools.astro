@@ -1,0 +1,29 @@
+---
+interface Tool {
+  name: string;
+  url: string;
+  emoji?: string;
+}
+
+interface Props {
+  tools: Tool[];
+  title?: string;
+}
+
+const { tools, title = '🔧 Related Tools' } = Astro.props;
+---
+
+<section class="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
+  <h3 class="font-bold text-lg mb-4">{title}</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    {tools.map((tool) => (
+      <a
+        href={tool.url}
+        class="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-shadow border border-gray-100"
+      >
+        <span class="text-xl">{tool.emoji || '🔧'}</span>
+        <span class="text-primary-600 font-medium hover:underline">{tool.name}</span>
+      </a>
+    ))}
+  </div>
+</section>

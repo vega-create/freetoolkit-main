@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+---
+<BaseLayout title="My Japanese Learning Progress" description="Track your Japanese learning streak, quiz scores, and saved vocabulary. All progress saved locally in your browser.">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'My Progress' }]} />
+    <h1 class="mb-2">My Japanese Progress</h1>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 text-sm text-amber-800">
+      ⚠️ Your learning progress is saved in this browser only. If you switch browsers, clear your browser data, or use a different device, your progress will be reset. We recommend using the same browser to keep your streak going! 🔥
+    </div>
+
+    <div id="progress-app">
+      <div class="tool-card mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold">🔥 Learning Streak</h2>
+          <span id="streak-count" class="text-3xl font-bold text-japanese-600">0 days</span>
+        </div>
+        <p id="streak-message" class="text-gray-500 text-sm">Start practicing to build your streak!</p>
+      </div>
+
+      <div class="tool-card mb-6">
+        <h2 class="text-xl font-bold mb-4">📊 Quiz Scores</h2>
+        <div id="quiz-scores" class="space-y-4">
+          <p class="text-gray-400 text-sm">Complete a quiz to see your scores here.</p>
+        </div>
+      </div>
+
+      <div class="tool-card mb-6">
+        <h2 class="text-xl font-bold mb-4">📈 JLPT Progress</h2>
+        <div id="jlpt-progress" class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>JLPT N5</span><span id="n5-count">0 / 800 words</span>
+            </div>
+            <div class="progress-bar"><div id="n5-bar" class="progress-fill !bg-japanese-500" style="width: 0%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>JLPT N4</span><span id="n4-count">0 / 1,500 words</span>
+            </div>
+            <div class="progress-bar"><div id="n4-bar" class="progress-fill !bg-japanese-500" style="width: 0%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>JLPT N3</span><span id="n3-count">0 / 3,750 words</span>
+            </div>
+            <div class="progress-bar"><div id="n3-bar" class="progress-fill !bg-japanese-500" style="width: 0%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card mb-6">
+        <h2 class="text-xl font-bold mb-4">⭐ My Word List</h2>
+        <div id="word-list">
+          <p class="text-gray-400 text-sm">Save words from any tool to build your personal vocabulary list.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <button id="reset-btn" class="text-sm text-gray-400 hover:text-red-500 transition-colors">
+          Reset all progress
+        </button>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const STORAGE_KEY = 'ftk-japanese';
+
+  function getProgress() {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      return data ? JSON.parse(data) : null;
+    } catch { return null; }
+  }
+
+  function renderProgress() {
+    const data = getProgress();
+    if (!data) return;
+
+    const streakEl = document.getElementById('streak-count');
+    const msgEl = document.getElementById('streak-message');
+    if (streakEl && data.streak) {
+      streakEl.textContent = `${data.streak} days`;
+      if (data.streak >= 30) msgEl.textContent = '🏆 30 days! You\'re amazing!';
+      else if (data.streak >= 7) msgEl.textContent = '🔥 One week streak! Keep it up!';
+      else if (data.streak >= 3) msgEl.textContent = '🎉 Great start! Keep going!';
+      else msgEl.textContent = `Last visit: ${data.lastVisit || 'today'}`;
+    }
+
+    const scoresEl = document.getElementById('quiz-scores');
+    if (scoresEl && data.quizScores && Object.keys(data.quizScores).length > 0) {
+      scoresEl.innerHTML = Object.entries(data.quizScores).map(([name, score]) => {
+        const stars = '⭐'.repeat(Math.round((score.best || 0) / 20));
+        return `<div class="flex items-center justify-between">
+          <span class="font-medium capitalize">${name.replace(/([A-Z])/g, ' $1')}</span>
+          <span>${stars} ${score.best || 0}%</span>
+        </div>`;
+      }).join('');
+    }
+
+    if (data.jlptProgress) {
+      ['n5', 'n4', 'n3'].forEach(level => {
+        const p = data.jlptProgress[level];
+        if (p) {
+          const pct = Math.round((p.learned / p.total) * 100);
+          const countEl = document.getElementById(`${level}-count`);
+          const barEl = document.getElementById(`${level}-bar`);
+          if (countEl) countEl.textContent = `${p.learned} / ${p.total.toLocaleString()} words`;
+          if (barEl) barEl.style.width = `${pct}%`;
+        }
+      });
+    }
+
+    const wordListEl = document.getElementById('word-list');
+    if (wordListEl && data.bookmarks && data.bookmarks.length > 0) {
+      wordListEl.innerHTML = `<div class="space-y-2">${data.bookmarks.map(w =>
+        `<div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+          <div><span class="font-bold text-lg mr-2">${w.char}</span><span class="text-gray-500 text-sm">${w.reading || ''}</span></div>
+          <span class="text-sm text-gray-500">${w.meaning || ''}</span>
+        </div>`
+      ).join('')}</div>
+      <p class="text-xs text-gray-400 mt-2">${data.bookmarks.length} words saved</p>`;
+    }
+  }
+
+  document.getElementById('reset-btn')?.addEventListener('click', () => {
+    if (confirm('Are you sure? This will delete all your Japanese learning progress.')) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+  });
+
+  renderProgress();
+</script>
