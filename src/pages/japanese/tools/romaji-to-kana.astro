@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import RomajiToKana from '../../../components/tools/japanese/RomajiToKana.tsx';
+---
+<ToolLayout
+  title="Romaji to Kana Converter"
+  description="Type romaji and get instant hiragana or katakana conversion. Perfect for beginners learning Japanese writing."
+  language="japanese"
+  toolSlug="romaji-to-kana"
+>
+  <RomajiToKana client:load />
+</ToolLayout>

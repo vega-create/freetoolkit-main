@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import ParticleGuide from '../../../components/tools/japanese/ParticleGuide.tsx';
+---
+<ToolLayout
+  title="Particle Guide"
+  description="Interactive guide to Japanese particles with example sentences and audio. Master は, が, を, に, で and more."
+  language="japanese"
+  toolSlug="particle-guide"
+>
+  <ParticleGuide client:load />
+</ToolLayout>

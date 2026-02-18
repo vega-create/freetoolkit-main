@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import KanaConverter from '../../../components/tools/japanese/KanaConverter.tsx';
+---
+<ToolLayout
+  title="Hiragana ↔ Katakana Converter"
+  description="Convert between Hiragana, Katakana, and Romaji instantly. Includes a complete kana reference chart."
+  language="japanese"
+  toolSlug="kana-converter"
+>
+  <KanaConverter client:load />
+</ToolLayout>

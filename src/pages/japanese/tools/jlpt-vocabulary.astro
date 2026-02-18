@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import JLPTVocabulary from '../../../components/tools/japanese/JLPTVocabulary.tsx';
+---
+<ToolLayout
+  title="JLPT Vocabulary Browser"
+  description="Browse essential JLPT N5 and N4 vocabulary with readings, meanings, and audio pronunciation."
+  language="japanese"
+  toolSlug="jlpt-vocabulary"
+>
+  <JLPTVocabulary client:load />
+</ToolLayout>

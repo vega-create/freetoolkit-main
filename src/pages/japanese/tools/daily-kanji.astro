@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import DailyKanji from '../../../components/tools/japanese/DailyKanji.tsx';
+---
+<ToolLayout
+  title="Daily Kanji"
+  description="Learn one new kanji every day with readings, meanings, stroke count, and example words."
+  language="japanese"
+  toolSlug="daily-kanji"
+>
+  <DailyKanji client:load />
+</ToolLayout>

@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import HiraganaQuiz from '../../../components/tools/japanese/HiraganaQuiz.tsx';
+---
+<ToolLayout
+  title="Hiragana Quiz"
+  description="Test your hiragana knowledge with this interactive quiz. 10 random questions each round."
+  language="japanese"
+  toolSlug="hiragana-quiz"
+>
+  <HiraganaQuiz client:load />
+</ToolLayout>

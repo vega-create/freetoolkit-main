@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import KanjiLookup from '../../../components/tools/japanese/KanjiLookup.tsx';
+---
+<ToolLayout
+  title="Kanji Lookup"
+  description="Search JLPT N5-N4 kanji by character, meaning, or reading. View on/kun readings and example words."
+  language="japanese"
+  toolSlug="kanji-lookup"
+>
+  <KanjiLookup client:load />
+</ToolLayout>

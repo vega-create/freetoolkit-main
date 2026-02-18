@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NameGenerator from '../../../components/tools/japanese/NameGenerator.tsx';
+---
+<ToolLayout
+  title="Japanese Name Generator"
+  description="Generate authentic Japanese names with kanji, hiragana, and romaji. Learn the meaning behind Japanese family and given names."
+  language="japanese"
+  toolSlug="name-generator"
+>
+  <NameGenerator client:load />
+</ToolLayout>

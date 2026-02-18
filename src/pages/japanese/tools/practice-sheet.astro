@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import PracticeSheet from '../../../components/tools/japanese/PracticeSheet.tsx';
+---
+<ToolLayout
+  title="Practice Sheet Generator"
+  description="Create printable practice sheets for hiragana, katakana, and kanji with guide lines."
+  language="japanese"
+  toolSlug="practice-sheet"
+>
+  <PracticeSheet client:load />
+</ToolLayout>

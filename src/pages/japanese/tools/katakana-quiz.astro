@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import KatakanaQuiz from '../../../components/tools/japanese/KatakanaQuiz.tsx';
+---
+<ToolLayout
+  title="Katakana Quiz"
+  description="Practice katakana recognition with quizzes and common loanword examples."
+  language="japanese"
+  toolSlug="katakana-quiz"
+>
+  <KatakanaQuiz client:load />
+</ToolLayout>

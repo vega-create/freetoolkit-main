@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NumberConverter from '../../../components/tools/japanese/NumberConverter.tsx';
+---
+<ToolLayout
+  title="Japanese Number Converter"
+  description="Convert numbers to Japanese kanji and learn their readings. Includes Japanese counters reference."
+  language="japanese"
+  toolSlug="number-converter"
+>
+  <NumberConverter client:load />
+</ToolLayout>

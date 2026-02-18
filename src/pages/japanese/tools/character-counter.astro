@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import CharacterCounter from '../../../components/tools/japanese/CharacterCounter.tsx';
+---
+<ToolLayout
+  title="Japanese Character Counter"
+  description="Count hiragana, katakana, kanji, and romaji in your text. Analyze Japanese text composition."
+  language="japanese"
+  toolSlug="character-counter"
+>
+  <CharacterCounter client:load />
+</ToolLayout>

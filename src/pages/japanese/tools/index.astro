@@ -2,39 +2,69 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 
-const tools = [
-  { name: 'Japanese Name Generator', slug: 'name-generator', emoji: '📝', desc: 'Generate a Japanese name' },
-  { name: 'Kana Converter', slug: 'kana-converter', emoji: 'あ', desc: 'Convert between hiragana, katakana, romaji' },
-  { name: 'Romaji Converter', slug: 'romaji-converter', emoji: '🔤', desc: 'Japanese text to romaji' },
-  { name: 'Kanji Lookup', slug: 'kanji-lookup', emoji: '漢', desc: 'Meaning, readings, stroke count' },
-  { name: 'Number Converter', slug: 'number-converter', emoji: '🔢', desc: 'Arabic ↔ Japanese numbers' },
-  { name: 'Daily Kanji', slug: 'daily-kanji', emoji: '📅', desc: 'Learn one kanji a day' },
-  { name: 'Daily Phrase', slug: 'daily-phrase', emoji: '💬', desc: 'Daily useful phrase' },
-  { name: 'Hiragana Quiz', slug: 'hiragana-quiz', emoji: 'あ', desc: 'Test your hiragana' },
-  { name: 'Katakana Quiz', slug: 'katakana-quiz', emoji: 'ア', desc: 'Test your katakana' },
-  { name: 'Particle Practice', slug: 'particle-practice', emoji: '🎯', desc: 'Master Japanese particles' },
-  { name: 'Kanji Stroke Order', slug: 'kanji-stroke-order', emoji: '✍️', desc: 'Correct stroke order' },
-  { name: 'Counter Words', slug: 'counter-words', emoji: '🔢', desc: 'Japanese counter words' },
-  { name: 'JLPT Vocabulary', slug: 'jlpt-vocabulary', emoji: '📚', desc: 'Browse JLPT N5-N1 words' },
-  { name: 'Verb Conjugator', slug: 'verb-conjugator', emoji: '📐', desc: 'Conjugate any verb' },
-  { name: 'Keigo Converter', slug: 'keigo-converter', emoji: '🎩', desc: 'Convert to polite forms' },
+const tiers = [
+  {
+    title: '🔧 Essential Tools',
+    tools: [
+      { slug: 'name-generator', name: 'Name Generator', desc: 'Generate authentic Japanese names with meanings', emoji: '🎌' },
+      { slug: 'kana-converter', name: 'Kana Converter', desc: 'Convert between Hiragana, Katakana & Romaji', emoji: '🔄' },
+      { slug: 'romaji-to-kana', name: 'Romaji → Kana', desc: 'Type romaji, get hiragana or katakana', emoji: '✏️' },
+      { slug: 'number-converter', name: 'Number Converter', desc: 'Numbers to Japanese kanji & readings', emoji: '🔢' },
+      { slug: 'character-counter', name: 'Character Counter', desc: 'Count hiragana, katakana, kanji & romaji', emoji: '📊' },
+    ],
+  },
+  {
+    title: '📅 Daily Practice',
+    tools: [
+      { slug: 'daily-kanji', name: 'Daily Kanji', desc: 'Learn one kanji per day with examples', emoji: '📅' },
+      { slug: 'daily-phrase', name: 'Daily Phrase', desc: 'Essential phrases with pronunciation & context', emoji: '💬' },
+      { slug: 'hiragana-quiz', name: 'Hiragana Quiz', desc: 'Test your hiragana reading skills', emoji: '🎯' },
+      { slug: 'katakana-quiz', name: 'Katakana Quiz', desc: 'Practice katakana with quizzes & loanwords', emoji: '🎮' },
+      { slug: 'counter-practice', name: 'Counter Practice', desc: 'Japanese counters for people, objects & more', emoji: '🔢' },
+    ],
+  },
+  {
+    title: '📚 Study & Reference',
+    tools: [
+      { slug: 'kanji-lookup', name: 'Kanji Lookup', desc: 'Search kanji by character, meaning, or reading', emoji: '🔍' },
+      { slug: 'jlpt-vocabulary', name: 'JLPT Vocabulary', desc: 'Browse N5 & N4 vocabulary with audio', emoji: '📚' },
+      { slug: 'verb-conjugator', name: 'Verb Conjugator', desc: 'Japanese verb forms & conjugations', emoji: '📝' },
+      { slug: 'particle-guide', name: 'Particle Guide', desc: 'Master は, が, を, に, で with examples', emoji: '📖' },
+      { slug: 'practice-sheet', name: 'Practice Sheet', desc: 'Printable kana & kanji writing sheets', emoji: '✍️' },
+    ],
+  },
 ];
 ---
-<BaseLayout title="Japanese Learning Tools" description="Free interactive tools for learning Japanese. Practice hiragana, katakana, kanji, and test your knowledge.">
-  <div class="max-w-6xl mx-auto px-4 py-12">
+<BaseLayout title="Free Japanese Learning Tools" description="15 free interactive Japanese learning tools: kana converters, kanji lookup, JLPT vocabulary, verb conjugator, quizzes, and more.">
+  <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Tools' }]} />
-    <h1 class="mb-2">Japanese Learning Tools</h1>
-    <p class="text-gray-500 mb-8">Free interactive tools for learning Japanese at every level.</p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {tools.map((tool) => (
-        <a href={`/japanese/tools/${tool.slug}/`} class="tool-card hover:border-japanese-300 transition-all">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">{tool.emoji}</span>
-            <h2 class="text-lg font-semibold">{tool.name}</h2>
-          </div>
-          <p class="text-sm text-gray-500">{tool.desc}</p>
-        </a>
-      ))}
+    <h1 class="text-3xl font-bold mb-2">Japanese Learning Tools</h1>
+    <p class="text-gray-500 mb-8">15 free interactive tools for learning Japanese — from kana basics to JLPT vocabulary.</p>
+
+    {tiers.map(tier => (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4">{tier.title}</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {tier.tools.map(tool => (
+            <a href={`/japanese/tools/${tool.slug}/`}
+              class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-red-300 hover:shadow-md transition-all group">
+              <span class="text-2xl">{tool.emoji}</span>
+              <div>
+                <h3 class="font-bold text-gray-900 group-hover:text-red-600">{tool.name}</h3>
+                <p class="text-sm text-gray-500">{tool.desc}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="mt-8 p-6 bg-red-50 rounded-xl text-center">
+      <h3 class="font-bold text-red-800 mb-2">Free Downloads</h3>
+      <p class="text-sm text-red-600 mb-3">Printable PDFs for offline study</p>
+      <a href="/japanese/downloads/" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
+        Download PDFs →
+      </a>
     </div>
   </div>
 </BaseLayout>

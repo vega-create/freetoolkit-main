@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import VerbConjugator from '../../../components/tools/japanese/VerbConjugator.tsx';
+---
+<ToolLayout
+  title="Verb Conjugator"
+  description="See Japanese verb conjugations: dictionary, polite, te-form, past, and negative forms."
+  language="japanese"
+  toolSlug="verb-conjugator"
+>
+  <VerbConjugator client:load />
+</ToolLayout>

@@ -1,0 +1,12 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import DailyPhrase from '../../../components/tools/japanese/DailyPhrase.tsx';
+---
+<ToolLayout
+  title="Daily Phrase"
+  description="Master essential Japanese phrases one per day. Includes pronunciation, context, and usage tips."
+  language="japanese"
+  toolSlug="daily-phrase"
+>
+  <DailyPhrase client:load />
+</ToolLayout>
