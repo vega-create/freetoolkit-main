@@ -1,0 +1,46 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import TraditionalSimplifiedConverter from '../../../components/tools/chinese/TraditionalSimplifiedConverter.tsx';
+
+const faq = [
+  { q: 'What is the difference between Traditional and Simplified Chinese?', a: 'Traditional Chinese (繁體字) uses the original, more complex character forms and is used in Taiwan, Hong Kong, and Macau. Simplified Chinese (简体字) was introduced in mainland China in the 1950s to improve literacy, reducing the number of strokes in many characters.' },
+  { q: 'Which Chinese characters should I learn?', a: 'It depends on your goals. If you plan to live in or do business with Taiwan, Hong Kong, or Macau, learn Traditional. For mainland China or Singapore, learn Simplified. Many learners start with one system and learn the other later — the meaning and pronunciation are the same.' },
+  { q: 'Can native speakers read both Traditional and Simplified?', a: 'Most educated Chinese speakers can read both systems, though they may be more comfortable with the one they grew up using. The differences affect about 30-40% of commonly used characters.' },
+];
+
+const relatedTools = [
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'Zhuyin Converter', url: '/chinese/tools/zhuyin-converter/', emoji: 'ㄅ' },
+  { name: 'Name Generator', url: '/chinese/tools/name-generator/', emoji: '📝' },
+];
+
+const relatedArticles = [
+  { title: 'Traditional vs Simplified Chinese: Key Differences', url: '/chinese/blog/traditional-vs-simplified/' },
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+  { title: 'How to Type Chinese on Phone & Computer', url: '/chinese/blog/type-chinese-keyboard/' },
+];
+---
+
+<ToolLayout
+  title="Traditional ↔ Simplified Chinese Converter"
+  description="Convert between Traditional Chinese (繁體) and Simplified Chinese (简体) instantly. Supports hundreds of commonly used characters with audio pronunciation."
+  language="chinese"
+  toolSlug="traditional-simplified"
+  faq={faq}
+  relatedTools={relatedTools}
+  relatedArticles={relatedArticles}
+>
+  <TraditionalSimplifiedConverter client:load />
+
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>About This Converter</h2>
+      <p>This tool converts text between Traditional Chinese (繁體字) and Simplified Chinese (简体字). Simply paste your text, choose the conversion direction, and get instant results with audio pronunciation.</p>
+      <h3>When to Use Traditional vs Simplified</h3>
+      <p>Traditional characters are the standard in Taiwan, Hong Kong, and Macau. They preserve the historical form of Chinese characters and are considered more aesthetically complex. Simplified characters are used in mainland China, Singapore, and Malaysia, designed to be easier to write and learn.</p>
+      <h3>Not All Characters Are Different</h3>
+      <p>Many Chinese characters are the same in both systems. Only about 2,000 characters were simplified, meaning a large portion of Chinese text looks identical in both Traditional and Simplified forms.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

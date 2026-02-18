@@ -1,0 +1,46 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import CharacterCounter from '../../../components/tools/chinese/CharacterCounter.tsx';
+
+const faq = [
+  { q: 'How do you count Chinese characters?', a: 'Each Chinese character (漢字) counts as one unit, regardless of complexity. Punctuation, spaces, and English letters are counted separately. Our tool breaks down all categories for you and shows a detailed frequency analysis.' },
+  { q: 'How many characters do I need to know to read Chinese?', a: 'About 2,500-3,000 characters cover roughly 98% of everyday Chinese text. HSK 6 (the highest standard level) requires about 2,663 characters. Newspapers typically use around 3,000-4,000 unique characters.' },
+  { q: 'What is the average reading speed for Chinese?', a: 'Native Chinese readers typically read 300-500 characters per minute for general content. Learners usually read much slower, around 50-150 characters per minute depending on level. Our tool estimates reading time based on a moderate pace.' },
+];
+
+const relatedTools = [
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Traditional ↔ Simplified', url: '/chinese/tools/traditional-simplified/', emoji: '🔄' },
+  { name: 'HSK Vocabulary', url: '/chinese/tools/hsk-vocabulary/', emoji: '📚' },
+  { name: 'Stroke Order', url: '/chinese/tools/stroke-order/', emoji: '✍️' },
+];
+
+const relatedArticles = [
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+  { title: 'How to Learn Chinese Characters: Memory Tips', url: '/chinese/blog/learn-chinese-characters/' },
+  { title: 'Chinese Radicals: Key to Memorizing Characters', url: '/chinese/blog/chinese-radicals/' },
+];
+---
+
+<ToolLayout
+  title="Chinese Character Counter"
+  description="Count Chinese characters, English words, and analyze text frequency. See detailed statistics including unique characters, reading time estimate, and character frequency chart."
+  language="chinese"
+  toolSlug="character-counter"
+  faq={faq}
+  relatedTools={relatedTools}
+  relatedArticles={relatedArticles}
+>
+  <CharacterCounter client:load />
+
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>About This Character Counter</h2>
+      <p>Paste any Chinese text to get a comprehensive analysis including total characters, Chinese character count, unique characters, English words, punctuation, and estimated reading time. The tool also generates a visual frequency chart showing which characters appear most often.</p>
+      <h3>Why Character Counting Matters</h3>
+      <p>Chinese character counting is essential for students tracking their vocabulary growth, writers meeting word count requirements, and translators estimating project scope. Unlike English where spaces separate words, Chinese text flows continuously, making automated counting tools especially useful.</p>
+      <h3>Character Frequency Analysis</h3>
+      <p>The frequency chart helps you identify which characters appear most often in your text. This is a great way to discover high-frequency characters you should prioritize in your studies. Click any character in the chart to hear its pronunciation.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

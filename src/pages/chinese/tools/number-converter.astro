@@ -1,0 +1,46 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NumberConverter from '../../../components/tools/chinese/NumberConverter.tsx';
+
+const faq = [
+  { q: 'How do Chinese numbers work?', a: 'Chinese numbers follow a logical pattern. The digits 0-9 each have a character (零一二三四五六七八九). Larger numbers use place value words: 十 (ten), 百 (hundred), 千 (thousand), 万 (ten thousand), 亿 (hundred million). So 234 is 二百三十四 (two-hundred three-ten four).' },
+  { q: 'What are formal/financial Chinese numbers?', a: 'Chinese has a set of complex number characters (大寫) used on checks, legal documents, and financial records to prevent fraud. For example, 一 (one) becomes 壹, 二 becomes 貳, 十 becomes 拾. They are harder to alter than the standard forms.' },
+  { q: 'What is the difference between 二 and 两?', a: '二 (èr) is used for counting and in numbers (like 二十 = 20). 两 (liǎng) is used before measure words when saying "two of something" (like 两个人 = two people). This distinction is important in spoken Chinese.' },
+];
+
+const relatedTools = [
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Traditional ↔ Simplified', url: '/chinese/tools/traditional-simplified/', emoji: '🔄' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+];
+
+const relatedArticles = [
+  { title: 'How to Count in Chinese: Numbers 1-10,000', url: '/chinese/blog/chinese-numbers/' },
+  { title: 'Chinese Measure Words: Complete Guide', url: '/chinese/blog/chinese-measure-words/' },
+  { title: 'Chinese Grammar for Beginners', url: '/chinese/blog/chinese-grammar/' },
+];
+---
+
+<ToolLayout
+  title="Chinese Number Converter"
+  description="Convert between Arabic numbers and Chinese number characters. Includes both standard (小寫) and formal/financial (大寫) formats with audio pronunciation."
+  language="chinese"
+  toolSlug="number-converter"
+  faq={faq}
+  relatedTools={relatedTools}
+  relatedArticles={relatedArticles}
+>
+  <NumberConverter client:load />
+
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>How to Use This Number Converter</h2>
+      <p>Enter any Arabic number (like 12345) to see it written in Chinese characters, or enter Chinese number characters to convert back to Arabic numerals. The tool shows both standard and formal (financial) formats.</p>
+      <h3>Standard vs Formal Numbers</h3>
+      <p>Standard numbers (小寫) like 一二三 are used in everyday writing. Formal numbers (大寫) like 壹貳參 are used on bank checks, contracts, and legal documents because their complex forms prevent tampering.</p>
+      <h3>The 万 (Wàn) System</h3>
+      <p>Chinese groups large numbers differently than English. While English uses thousands (1,000 → 1,000,000), Chinese uses 万 (wàn = 10,000) as a key unit. So one million is 一百万 (one hundred ten-thousands), not "one million."</p>
+    </section>
+  </Fragment>
+</ToolLayout>

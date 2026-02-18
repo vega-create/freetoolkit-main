@@ -1,0 +1,46 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import PinyinConverter from '../../../components/tools/chinese/PinyinConverter.tsx';
+
+const faq = [
+  { q: 'What is pinyin?', a: 'Pinyin is the official romanization system for Mandarin Chinese. It uses Latin letters with tone marks to represent Chinese pronunciation. For example, 你好 becomes nǐ hǎo.' },
+  { q: 'What are the four tones in Chinese?', a: 'Mandarin has four main tones: first tone (flat, high pitch: ā), second tone (rising: á), third tone (falling-rising: ǎ), and fourth tone (falling: à), plus a neutral/light tone.' },
+  { q: 'Is pinyin used in China or Taiwan?', a: 'Pinyin is the standard romanization in mainland China and is widely used internationally. Taiwan primarily uses Zhuyin (Bopomofo) for teaching pronunciation, though pinyin is also recognized.' },
+];
+
+const relatedTools = [
+  { name: 'Tone Trainer', url: '/chinese/tools/tone-trainer/', emoji: '🎵' },
+  { name: 'Zhuyin Converter', url: '/chinese/tools/zhuyin-converter/', emoji: 'ㄅ' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'Name Generator', url: '/chinese/tools/name-generator/', emoji: '📝' },
+];
+
+const relatedArticles = [
+  { title: 'Pinyin Guide: How to Read Chinese Pronunciation', url: '/chinese/blog/pinyin-guide/' },
+  { title: 'Chinese Tones Explained: The Complete Guide', url: '/chinese/blog/chinese-tones/' },
+  { title: 'Bopomofo vs Pinyin: Which Should You Learn?', url: '/chinese/blog/bopomofo-vs-pinyin/' },
+];
+---
+
+<ToolLayout
+  title="Pinyin Converter"
+  description="Convert Chinese characters to pinyin with tone marks. Paste any Chinese text and instantly see the pinyin pronunciation with audio playback."
+  language="chinese"
+  toolSlug="pinyin-converter"
+  faq={faq}
+  relatedTools={relatedTools}
+  relatedArticles={relatedArticles}
+>
+  <PinyinConverter client:load />
+
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>How to Use This Pinyin Converter</h2>
+      <p>Simply paste or type Chinese characters into the text box. The tool will instantly display the pinyin pronunciation above each character, complete with tone marks. Click the speaker button to hear the full sentence spoken aloud.</p>
+      <h3>What is Pinyin?</h3>
+      <p>Pinyin (拼音) literally means "spell sounds" and is the standard system for writing Mandarin Chinese using the Latin alphabet. Created in the 1950s, it's now used worldwide for teaching Chinese pronunciation, typing Chinese on computers, and looking up words in dictionaries.</p>
+      <h3>Understanding Tone Marks</h3>
+      <p>Each pinyin syllable includes a tone mark that indicates which of the four tones to use. Getting the tones right is essential — the word "mā" (mother) has a completely different meaning from "mǎ" (horse)!</p>
+    </section>
+  </Fragment>
+</ToolLayout>
