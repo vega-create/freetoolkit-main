@@ -1,0 +1,39 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "Does stroke order really matter?", "a": "Yes — it produces more natural-looking characters, helps with recognition as you write, and Japanese people will notice incorrect order. Correct order is worth learning."}, {"q": "How long should I practice handwriting daily?", "a": "Even 10-15 minutes of focused practice produces significant results in weeks. Quality over quantity — 5 perfect characters beats 50 sloppy ones."}, {"q": "Is handwriting necessary in the digital age?", "a": "While not strictly required, handwriting provides cognitive benefits for character retention. It is also needed in Japan for forms, notes, and greeting cards."}];
+const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Stroke Order", "url": "/japanese/tools/stroke-order/"}];
+const headings = [{"depth": 2, "slug": "why-matters", "text": "Why Handwriting Matters"}, {"depth": 2, "slug": "stroke-rules", "text": "Stroke Order Rules"}, {"depth": 2, "slug": "hiragana-guide", "text": "Hiragana Writing Guide"}, {"depth": 2, "slug": "katakana-guide", "text": "Katakana Writing Guide"}, {"depth": 2, "slug": "practice-methods", "text": "Practice Methods"}];
+---
+<BlogLayout
+  title="Japanese Handwriting: Write Beautiful Hiragana and Katakana"
+  description="Learn proper handwriting techniques for hiragana and katakana with stroke order rules and practice tips."
+  language="japanese"
+  category="kana"
+  tags={["hiragana", "katakana", "writing"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="why-matters">Why Handwriting Matters</h2>
+    <p>Studies in cognitive science show that handwriting engages different brain pathways than typing, leading to better character retention and faster recognition. When you physically draw each stroke, you create motor memory that reinforces visual recognition far more than typing or reading alone.</p>
+    <p>Handwriting remains necessary in Japan for writing addresses on forms, signing documents, leaving notes, sending greeting cards (年賀状), and taking meeting notes.</p>
+
+    <h2 id="stroke-rules">Stroke Order Rules</h2>
+    <p>Japanese characters follow specific stroke order rules (筆順) that produce natural-looking characters. The fundamentals: <strong>top to bottom</strong> — write strokes from top moving down. <strong>Left to right</strong> — horizontal strokes go left to right. <strong>Horizontal before vertical</strong> — when strokes cross, horizontal comes first. <strong>Outside before inside</strong> — enclosing strokes before contained strokes. <strong>Closing strokes last</strong> — bottom of enclosures is the final stroke.</p>
+    <p>These rules cover about 90 percent of all characters and apply identically to hiragana, katakana, and kanji.</p>
+
+    <h2 id="hiragana-guide">Hiragana Writing Guide</h2>
+    <p>Hiragana characters are curvy and flowing. The key is smooth, confident strokes at moderate pace — writing too slowly creates shaky lines. Start with the vowels (あいうえお) and master their proportions before moving to consonant rows.</p>
+    <p>Commonly confused pairs: あ and お (curved portions differ), は and ほ (right side differs), ぬ and め (loop direction differs), わ and ね (bottom portion differs). Pay careful attention to these distinctions.</p>
+
+    <h2 id="katakana-guide">Katakana Writing Guide</h2>
+    <p>Katakana requires crisp angles and straight lines. Where hiragana curves, katakana turns sharply. Practice clean 90-degree angles — poorly written katakana with rounded corners gets confused with hiragana.</p>
+    <p>Tricky pairs: ツ (tsu) vs シ (shi) — stroke direction differs. ソ (so) vs ン (n) — same principle, smaller scale. ク (ku) vs タ (ta) — second stroke crossing differs.</p>
+
+    <h2 id="practice-methods">Practice Methods</h2>
+    <p>Start with tracing on practice sheets, then move to grid paper (原稿用紙) for independent writing. Finally, write words and sentences to develop consistent spacing. Use our <a href="/japanese/tools/stroke-order/">Stroke Order</a> tool for reference and the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> to check your work.</p>
+    <p>A mechanical pencil (0.5mm) works well for everyday practice. Felt-tip pens produce clean professional lines. For traditional experience, try brush pens (筆ペン).</p>
+
+</BlogLayout>

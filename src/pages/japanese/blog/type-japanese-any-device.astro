@@ -1,0 +1,38 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "What is romaji input vs kana input?", "a": "Romaji input lets you type using English letters that convert to Japanese (type 'ka' to get か). Kana input uses a Japanese keyboard layout. Romaji input is recommended for learners."}, {"q": "How do I type kanji?", "a": "Type the reading in hiragana, then press space to see kanji candidates. Select the correct one and press enter. The system learns your preferences over time."}, {"q": "Can I handwrite Japanese on my phone?", "a": "Yes — both iOS and Android support handwriting input for Japanese. It is useful for looking up unknown kanji by drawing them."}];
+const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}];
+const headings = [{"depth": 2, "slug": "why-type", "text": "Why Learn to Type Japanese"}, {"depth": 2, "slug": "iphone", "text": "iPhone and iPad Setup"}, {"depth": 2, "slug": "android", "text": "Android Setup"}, {"depth": 2, "slug": "windows", "text": "Windows Setup"}, {"depth": 2, "slug": "mac", "text": "Mac Setup"}, {"depth": 2, "slug": "tips", "text": "Typing Tips and Shortcuts"}];
+---
+<BlogLayout
+  title="How to Type Japanese on Phone Computer and Tablet"
+  description="Set up Japanese typing on iPhone, Android, Windows, and Mac with input methods and keyboard shortcuts."
+  language="japanese"
+  category="study tips"
+  tags={["beginner", "tools"]}
+  publishDate="2026-03-03"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="why-type">Why Learn to Type Japanese</h2>
+    <p>Effective Japanese study is about working smarter, not harder. Research consistently shows that certain approaches dramatically outperform traditional study methods.</p>
+    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
+    <h2 id="iphone">iPhone and iPad Setup</h2>
+    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
+    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
+    <h2 id="android">Android Setup</h2>
+    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
+    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
+    <h2 id="windows">Windows Setup</h2>
+    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
+    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
+    <h2 id="mac">Mac Setup</h2>
+    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
+    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
+    <h2 id="tips">Typing Tips and Shortcuts</h2>
+    <p>The spacing effect — reviewing at gradually increasing intervals — and active recall — retrieving information from memory rather than re-reading — are two of the most powerful evidence-based techniques for language learning.</p>
+    <p>Consistency beats intensity. Studying 15 minutes daily produces better results than 2 hours once a week. Build Japanese into your daily routine rather than treating it as a separate activity. Practice with <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> and <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> to reinforce what you have learned.</p>
+
+</BlogLayout>

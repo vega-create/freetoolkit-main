@@ -1,0 +1,38 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "How do I type small kana on a keyboard?", "a": "Type 'x' or 'l' before the character. For example, 'xtsu' gives you っ. For combinations, just type naturally: 'kya' produces きゃ."}, {"q": "What happens if I write regular-sized kana instead of small?", "a": "The meaning changes. きよう (kiyou, skillful) is different from きょう (kyou, today). きて (kite, come) differs from きって (kitte, stamp)."}, {"q": "Are there rarely used small kana?", "a": "Yes — small ゎ (wa) is extremely rare. Small ヵ and ヶ appear in katakana for counting like 3ヶ月 (3 months) but are not standard combinations."}];
+const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
+const headings = [{"depth": 2, "slug": "what-are", "text": "What Are Small Kana?"}, {"depth": 2, "slug": "small-tsu", "text": "Small っ: The Double Consonant"}, {"depth": 2, "slug": "combo-sounds", "text": "Combination Sounds: ゃ ゅ ょ"}, {"depth": 2, "slug": "katakana", "text": "Small Kana in Katakana"}, {"depth": 2, "slug": "practice", "text": "How to Practice"}];
+---
+<BlogLayout
+  title="Small Kana (っ ゃ ゅ ょ): Double Consonants and Combo Sounds"
+  description="Master small kana characters — double consonants with っ and combination sounds with ゃ ゅ ょ."
+  language="japanese"
+  category="kana"
+  tags={["hiragana", "katakana", "beginner"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="what-are">What Are Small Kana?</h2>
+    <p>Small kana (捨て仮名) are miniature versions of certain hiragana and katakana characters. They serve two purposes: creating double consonants and forming combination sounds. Unlike regular kana that represent full syllables, small kana modify the pronunciation of surrounding characters.</p>
+    <p>There are two main categories. The small っ (tsu) creates a brief pause or double consonant. The characters ゃ, ゅ, and ょ combine with consonant characters to create blended sounds.</p>
+
+    <h2 id="small-tsu">Small っ: The Double Consonant</h2>
+    <p>When you see small っ in a word, hold your mouth in position briefly before releasing the next consonant. This creates a sharp, clipped effect shown by doubling the next consonant in romaji.</p>
+    <p>Common examples: <strong>がっこう</strong> (gakkou, school), <strong>きっぷ</strong> (kippu, ticket), <strong>ざっし</strong> (zasshi, magazine), <strong>にっき</strong> (nikki, diary), <strong>いっぱい</strong> (ippai, full). The biggest mistake is ignoring っ entirely — native speakers notice immediately because it changes the word rhythm.</p>
+
+    <h2 id="combo-sounds">Combination Sounds: ゃ ゅ ょ</h2>
+    <p>These small characters combine with い-column characters to create single blended syllables. For example, き (ki) + ゃ (ya) becomes きゃ (kya) — one syllable, not two.</p>
+    <p>The full set: きゃ/きゅ/きょ (kya/kyu/kyo), しゃ/しゅ/しょ (sha/shu/sho), ちゃ/ちゅ/ちょ (cha/chu/cho), にゃ/にゅ/にょ (nya/nyu/nyo), ひゃ/ひゅ/ひょ (hya/hyu/hyo), みゃ/みゅ/みょ (mya/myu/myo), りゃ/りゅ/りょ (rya/ryu/ryo). The same applies to voiced consonants: ぎゃ, じゃ, びゃ, ぴゃ.</p>
+    <p>Real-world examples: <strong>きょう</strong> (kyou, today), <strong>しゃしん</strong> (shashin, photo), <strong>りょうり</strong> (ryouri, cooking), <strong>ちょっと</strong> (chotto, a little — combines both っ and ょ).</p>
+
+    <h2 id="katakana">Small Kana in Katakana</h2>
+    <p>Everything applies to katakana too. Small ッ creates double consonants in loanwords: チョコレート (chokoreeto, chocolate), コンピューター (konpyuutaa, computer). Katakana also has additional small kana like ティ (ti), ディ (di), and フォ (fo) for foreign sounds.</p>
+
+    <h2 id="practice">How to Practice</h2>
+    <p>Start by identifying small kana in everyday Japanese text — product labels, manga, or news articles. Practice writing them clearly smaller than regular characters, positioned in the upper-left of the character space. Use our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> to test recognition and the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> as reference.</p>
+
+</BlogLayout>

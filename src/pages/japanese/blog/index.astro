@@ -4,32 +4,70 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import BlogFilter from '../../../components/BlogFilter.tsx';
 
 const articles = [
+  // ─── Kana (7) ───
   { slug: 'hiragana-guide', title: 'How to Learn Hiragana: Complete Beginner Guide', desc: 'Master all 46 hiragana characters with proven memorization techniques and practice resources.', category: 'Kana', date: '2026-02-19', tags: ['hiragana', 'beginner', 'writing'] },
   { slug: 'katakana-guide', title: 'Katakana Made Easy: Learn All 46 Characters', desc: 'Complete guide to katakana — when it is used, how to read it, and loanword strategies.', category: 'Kana', date: '2026-02-19', tags: ['katakana', 'beginner', 'loanwords'] },
-  { slug: 'jlpt-preparation-guide', title: 'JLPT Preparation Guide: Study Plans for N5 to N1', desc: 'Complete study guide for every JLPT level with timelines and strategies.', category: 'JLPT', date: '2026-02-20', tags: ['jlpt', 'study-tips', 'exam'] },
+  { slug: 'small-kana-guide', title: 'Small Kana (っ ゃ ゅ ょ): Double Consonants and Combo Sounds', desc: 'Master small kana characters — double consonants with っ and combination sounds with ゃ ゅ ょ.', category: 'Kana', date: '2026-02-19', tags: ['hiragana', 'katakana', 'beginner'] },
+  { slug: 'japanese-reading-practice-beginners', title: 'Japanese Reading Practice: 50 Easy Sentences for Beginners', desc: 'Practice reading Japanese with 50 simple sentences using basic hiragana, katakana, and beginner kanji.', category: 'Kana', date: '2026-02-20', tags: ['beginner', 'hiragana', 'reading'] },
+  { slug: 'japanese-handwriting-tips', title: 'Japanese Handwriting: Write Beautiful Hiragana and Katakana', desc: 'Learn proper handwriting techniques for hiragana and katakana with stroke order rules and practice tips.', category: 'Kana', date: '2026-02-20', tags: ['hiragana', 'katakana', 'writing'] },
+  { slug: 'katakana-loanwords-guide', title: 'Katakana Loanwords: 200+ English Words You Already Know in Japanese', desc: 'Discover 200+ English loanwords in katakana and learn the pronunciation rules to decode new ones.', category: 'Kana', date: '2026-02-21', tags: ['katakana', 'vocabulary', 'beginner'] },
+  { slug: 'japanese-writing-systems-guide', title: 'Japanese Writing Systems: Hiragana, Katakana and Kanji Explained', desc: 'Understand all three writing systems — when to use each one, how they work together, and the best learning order.', category: 'Kana', date: '2026-02-21', tags: ['hiragana', 'katakana', 'kanji', 'beginner'] },
+
+  // ─── Grammar (3) ───
   { slug: 'japanese-particles-explained', title: 'Japanese Particles Explained: は が を に で', desc: 'Demystify Japanese particles with clear explanations and examples.', category: 'Grammar', date: '2026-02-20', tags: ['grammar', 'particles', 'beginner'] },
   { slug: 'japanese-verb-conjugation', title: 'Japanese Verb Conjugation: A Practical Guide', desc: 'Learn the three verb groups and essential conjugation forms.', category: 'Grammar', date: '2026-02-21', tags: ['grammar', 'verbs', 'conjugation'] },
   { slug: 'japanese-counters-guide', title: 'Japanese Counters: Complete Guide to Counting Objects', desc: 'Master counters for people, objects, animals, and more with sound change rules.', category: 'Grammar', date: '2026-02-21', tags: ['counters', 'grammar', 'vocabulary'] },
+
+  // ─── JLPT (9) ───
+  { slug: 'jlpt-preparation-guide', title: 'JLPT Preparation Guide: Study Plans for N5 to N1', desc: 'Complete study guide for every JLPT level with timelines and strategies.', category: 'JLPT', date: '2026-02-20', tags: ['jlpt', 'study-tips', 'exam'] },
+  { slug: 'jlpt-n3-kanji-list', title: 'JLPT N3 Kanji: 350 Essential Characters You Must Know', desc: 'Complete JLPT N3 kanji study guide with readings, example words, and memorization strategies.', category: 'JLPT', date: '2026-02-22', tags: ['jlpt', 'kanji', 'intermediate'] },
+  { slug: 'jlpt-n2-grammar-patterns', title: 'JLPT N2 Grammar: 50 Must-Know Patterns with Examples', desc: 'Master 50 essential JLPT N2 grammar patterns with explanations, example sentences, and usage notes.', category: 'JLPT', date: '2026-02-22', tags: ['jlpt', 'grammar', 'intermediate'] },
+  { slug: 'jlpt-n1-reading-strategies', title: 'JLPT N1 Reading: Strategies for Tackling Long Passages', desc: 'Proven strategies for the JLPT N1 reading section — speed techniques, analysis methods, and time management.', category: 'JLPT', date: '2026-02-23', tags: ['jlpt', 'kanji', 'advanced'] },
+  { slug: 'jlpt-listening-tips', title: 'JLPT Listening Tips: Score Higher with Proven Techniques', desc: 'Improve your JLPT listening score with note-taking strategies, question patterns, and daily practice methods.', category: 'JLPT', date: '2026-02-23', tags: ['jlpt', 'beginner', 'listening'] },
+  { slug: 'common-japanese-verbs', title: '100 Most Common Japanese Verbs Every Beginner Needs', desc: 'Essential Japanese verbs with conjugations, example sentences, and memory tips for JLPT N5 level.', category: 'JLPT', date: '2026-02-24', tags: ['jlpt', 'vocabulary', 'beginner', 'grammar'] },
+  { slug: 'japanese-adjectives-complete-guide', title: 'Japanese Adjectives: i-Adjectives vs na-Adjectives Complete Guide', desc: 'Master i-adjectives and na-adjectives — differences, conjugation rules, and 80+ essential adjectives.', category: 'JLPT', date: '2026-02-24', tags: ['grammar', 'vocabulary', 'beginner'] },
+  { slug: 'japanese-counters-complete', title: 'Japanese Counters: How to Count Everything Correctly', desc: 'Complete guide to Japanese counters for people, objects, animals, time, and more with sound change rules.', category: 'JLPT', date: '2026-02-25', tags: ['vocabulary', 'grammar', 'beginner'] },
+  { slug: 'how-long-to-learn-japanese', title: 'How Long to Learn Japanese? Realistic Timeline by Level', desc: 'Honest timeline for learning Japanese — from basic conversation to JLPT N1 with recommended study hours.', category: 'JLPT', date: '2026-02-25', tags: ['beginner', 'jlpt', 'study-tips'] },
+
+  // ─── Culture (12) ───
   { slug: 'japanese-keigo-basics', title: 'Japanese Keigo: Understanding Polite Language', desc: 'Introduction to honorific language — the three levels and essential phrases.', category: 'Culture', date: '2026-02-22', tags: ['keigo', 'polite', 'culture'] },
   { slug: 'japanese-culture-etiquette', title: 'Japanese Culture and Etiquette: Essential Guide', desc: 'Understanding cultural norms from bowing to dining etiquette.', category: 'Culture', date: '2026-02-22', tags: ['culture', 'etiquette', 'travel'] },
+  { slug: 'order-food-in-japanese', title: 'How to Order Food in Japanese: Restaurant Phrases and Etiquette', desc: 'Essential phrases for ordering at restaurants, izakayas, and cafes with menu vocabulary and dining etiquette.', category: 'Culture', date: '2026-02-26', tags: ['culture', 'vocabulary', 'travel'] },
+  { slug: 'japanese-honorifics-explained', title: 'Japanese Honorifics: San Kun Chan Sama and More Explained', desc: 'Understand honorific suffixes — when to use san, kun, chan, sama and the social rules behind them.', category: 'Culture', date: '2026-02-26', tags: ['culture', 'keigo', 'beginner'] },
+  { slug: 'keigo-polite-japanese', title: 'Keigo Guide: Master Japanese Polite Language', desc: 'Learn keigo — sonkeigo, kenjougo, and teineigo with real business and social examples.', category: 'Culture', date: '2026-02-27', tags: ['keigo', 'grammar', 'culture'] },
+  { slug: 'japanese-slang-internet', title: 'Japanese Slang and Internet Words: 50 Terms Not in Textbooks', desc: 'Popular Japanese slang and internet expressions used by young people — from ワロタ to エモい.', category: 'Culture', date: '2026-02-27', tags: ['culture', 'vocabulary', 'slang'] },
+  { slug: 'japanese-zodiac-animals', title: 'Japanese Zodiac (Eto): 12 Animals and Their Meanings', desc: 'Explore the Japanese zodiac system with all 12 animals, personality traits, and cultural significance.', category: 'Culture', date: '2026-02-28', tags: ['culture', 'vocabulary'] },
+  { slug: 'japanese-business-phrases', title: 'Essential Japanese Business Phrases for Email and Meetings', desc: '60+ Japanese business phrases for email, meetings, phone calls, and professional self-introduction.', category: 'Culture', date: '2026-02-28', tags: ['keigo', 'vocabulary', 'business'] },
+  { slug: 'introduce-yourself-japanese', title: 'How to Introduce Yourself in Japanese: Complete Guide', desc: 'Give a perfect Japanese self-introduction for casual, formal, and business settings with templates.', category: 'Culture', date: '2026-03-01', tags: ['culture', 'vocabulary', 'beginner'] },
+  { slug: 'japanese-onomatopoeia', title: 'Japanese Onomatopoeia: 80 Sound Words That Bring Japanese to Life', desc: '80 essential Japanese onomatopoeia — sound words and mimetic words used in conversation, manga, and anime.', category: 'Culture', date: '2026-03-01', tags: ['vocabulary', 'culture', 'anime'] },
+  { slug: 'basic-japanese-phrases-travel', title: '100 Basic Japanese Phrases for Travel: Survival Guide', desc: 'The essential Japanese phrase guide for traveling — airports, hotels, restaurants, shopping, and emergencies.', category: 'Culture', date: '2026-03-02', tags: ['vocabulary', 'beginner', 'travel'] },
+  { slug: 'japanese-seasons-culture', title: 'Japanese Seasonal Words and Festivals: A Cultural Calendar', desc: 'Explore Japanese culture through seasonal vocabulary and festivals across the four seasons.', category: 'Culture', date: '2026-03-02', tags: ['culture', 'vocabulary'] },
+
+  // ─── Study Tips (10) ───
   { slug: 'learn-kanji-effectively', title: 'How to Learn Kanji Effectively: Strategies That Work', desc: 'Evidence-based methods: radical decomposition, spaced repetition, and contextual learning.', category: 'Study Tips', date: '2026-02-23', tags: ['kanji', 'study-tips', 'characters'] },
   { slug: 'japanese-resources-2026', title: 'Best Free Resources for Learning Japanese in 2026', desc: 'Curated list of the best free apps, websites, and tools for learners.', category: 'Study Tips', date: '2026-02-23', tags: ['resources', 'apps', 'study-tips'] },
+  { slug: 'learn-japanese-from-anime', title: 'Learn Japanese Through Anime: A Practical Guide That Works', desc: 'Turn anime into real study material — which shows to start with, subtitle strategies, and vocabulary tips.', category: 'Study Tips', date: '2026-03-03', tags: ['anime', 'culture', 'beginner'] },
+  { slug: 'type-japanese-any-device', title: 'How to Type Japanese on Phone Computer and Tablet', desc: 'Set up Japanese typing on iPhone, Android, Windows, and Mac with input methods and keyboard shortcuts.', category: 'Study Tips', date: '2026-03-03', tags: ['beginner', 'tools'] },
+  { slug: 'is-japanese-hard-honest', title: 'Is Japanese Hard to Learn? An Honest Assessment', desc: 'Honest analysis of Japanese difficulty — what is genuinely hard, what is surprisingly easy, and how to approach it.', category: 'Study Tips', date: '2026-03-04', tags: ['beginner'] },
+  { slug: 'memorize-kanji-techniques', title: 'How to Memorize Kanji: 7 Proven Techniques That Work', desc: 'Stop forgetting kanji with radicals, mnemonics, spaced repetition, and other proven memorization methods.', category: 'Study Tips', date: '2026-03-04', tags: ['kanji', 'study-tips'] },
+  { slug: 'japanese-vs-chinese-comparison', title: 'Japanese vs Chinese: Which Is Harder? Complete Comparison', desc: 'Detailed comparison of Japanese and Chinese difficulty — writing, grammar, pronunciation, and practical factors.', category: 'Study Tips', date: '2026-03-05', tags: ['beginner', 'kanji'] },
+  { slug: 'best-japanese-dramas-learning', title: '15 Best Japanese TV Dramas for Language Learning by Level', desc: 'Improve Japanese with 15 selected dramas organized by difficulty level with vocabulary and study tips.', category: 'Study Tips', date: '2026-03-05', tags: ['culture', 'listening'] },
+  { slug: 'japanese-shadowing-method', title: 'Japanese Shadowing: The Fast Track to Natural Pronunciation', desc: 'Master shadowing for Japanese fluency — how to practice, best materials, and why it transforms speaking skills.', category: 'Study Tips', date: '2026-03-06', tags: ['beginner', 'pronunciation'] },
+  { slug: 'learn-japanese-through-songs', title: 'Learn Japanese Through Songs: 10 Perfect Songs for Each Level', desc: 'Build Japanese skills through music with songs for beginners, intermediate, and advanced learners.', category: 'Study Tips', date: '2026-03-06', tags: ['culture', 'vocabulary', 'listening'] },
 ];
 ---
-<BaseLayout title="Japanese Learning Blog — Guides & Tips" description="10 free guides, tips, and cultural insights for learning Japanese. From kana basics to JLPT prep and cultural deep dives.">
+<BaseLayout title="Japanese Learning Blog — 41 Free Guides & Tips" description="41 free guides, tips, and cultural insights for learning Japanese. From kana basics to JLPT prep and cultural deep dives.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Blog' }]} />
     <h1 class="text-3xl font-bold mb-2">Japanese Learning Blog</h1>
-    <p class="text-gray-500 mb-8">Guides, tips, and cultural insights for Japanese learners.</p>
+    <p class="text-gray-500 mb-8">41 guides, tips, and cultural insights for Japanese learners.</p>
 
     <BlogFilter articles={articles} language="japanese" client:load />
 
     <div class="mt-10 p-6 bg-red-50 rounded-xl text-center">
       <h3 class="font-bold text-red-800 mb-2">Practice What You Learn</h3>
       <p class="text-sm text-red-600 mb-3">Put your knowledge to work with our 15 free interactive tools.</p>
-      <a href="/japanese/tools/" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
-        Try Japanese Tools →
-      </a>
+      <a href="/japanese/tools/" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Explore Japanese Tools →</a>
     </div>
   </div>
 </BaseLayout>

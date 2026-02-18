@@ -1,0 +1,37 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "Can I skip kanji and just use kana?", "a": "You can communicate at a basic level, but reading real Japanese requires kanji. Most written content uses all three systems together."}, {"q": "Why not simplify to one system?", "a": "The three systems offer advantages: kanji is compact and information-dense, visual variety aids reading, and kanji distinguishes homophones that sound identical."}, {"q": "How long to learn all three?", "a": "Hiragana and katakana take 1-2 weeks each. Basic kanji (500 characters) takes 6-12 months. Full jouyou kanji (2,136) takes several years."}];
+const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}];
+const headings = [{"depth": 2, "slug": "overview", "text": "Three Systems at a Glance"}, {"depth": 2, "slug": "hiragana", "text": "Hiragana: The Foundation"}, {"depth": 2, "slug": "katakana", "text": "Katakana: The Foreign Script"}, {"depth": 2, "slug": "kanji", "text": "Kanji: The Meaning Characters"}, {"depth": 2, "slug": "together", "text": "How They Work Together"}, {"depth": 2, "slug": "learning-order", "text": "Best Learning Order"}];
+---
+<BlogLayout
+  title="Japanese Writing Systems: Hiragana, Katakana and Kanji Explained"
+  description="Understand all three writing systems — when to use each one, how they work together, and the best learning order."
+  language="japanese"
+  category="kana"
+  tags={["hiragana", "katakana", "kanji", "beginner"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="overview">Three Systems at a Glance</h2>
+    <p>Japanese uses three writing systems simultaneously. A single sentence like 私はコーヒーを飲みました (I drank coffee) contains all three: 私 and 飲 are <strong>kanji</strong> (meaning characters), は, を, みました are <strong>hiragana</strong> (grammar), and コーヒー is <strong>katakana</strong> (loanword).</p>
+
+    <h2 id="hiragana">Hiragana: The Foundation</h2>
+    <p>46 rounded, flowing characters used for native Japanese words, grammar particles (は, を, に, で), verb endings, and furigana (pronunciation guides above kanji). This is where every learner should start. Refer to our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> while studying.</p>
+
+    <h2 id="katakana">Katakana: The Foreign Script</h2>
+    <p>46 angular, sharp characters representing the same sounds as hiragana. Used for foreign loanwords (コンピューター), emphasis (like italics), scientific terms, onomatopoeia, and brand names. Learn after hiragana — same sounds, just new visual symbols.</p>
+
+    <h2 id="kanji">Kanji: The Meaning Characters</h2>
+    <p>Chinese characters adapted for Japanese. Each carries meaning and usually has multiple readings: on'yomi (Chinese-derived, for compounds) and kun'yomi (native Japanese, standalone). Example: 山 has on'yomi &quot;san&quot; (富士山, Fujisan) and kun'yomi &quot;yama&quot; (山が見える). The government designates 2,136 &quot;jouyou kanji&quot; for everyday use. Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool for study.</p>
+
+    <h2 id="together">How They Work Together</h2>
+    <p>The three systems complement each other beautifully. Kanji provides meaning at a glance. Hiragana adds grammatical structure. Katakana signals foreign concepts. In a language without spaces, the visual distinction between systems helps readers quickly identify word boundaries.</p>
+
+    <h2 id="learning-order">Best Learning Order</h2>
+    <p>Start with <strong>hiragana</strong> (2 weeks), then <strong>katakana</strong> while reinforcing hiragana. Begin basic <strong>kanji</strong> once both kana systems are solid. Do not wait to master one before starting the next — overlap your studies for faster progress.</p>
+
+</BlogLayout>

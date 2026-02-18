@@ -1,0 +1,63 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "Should I learn hiragana or katakana first?", "a": "Start with hiragana — it is used for native Japanese words and grammar. Katakana is mainly for foreign loanwords and comes second in most textbooks."}, {"q": "How long until I can read Japanese fluently?", "a": "Basic sentences with kana take 1-2 months. Reading with kanji at intermediate level takes 1-2 years. Newspapers and novels require 3-5 years of study."}, {"q": "Why do practice sentences have spaces but real Japanese does not?", "a": "Natural Japanese has no spaces between words. Spaces are added in beginner materials to help identify word boundaries. As you advance, you will read without them."}];
+const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
+const headings = [{"depth": 2, "slug": "getting-started", "text": "Getting Started"}, {"depth": 2, "slug": "self-intro", "text": "Self-Introduction (1-10)"}, {"depth": 2, "slug": "daily-life", "text": "Daily Life (11-20)"}, {"depth": 2, "slug": "questions", "text": "Asking Questions (21-30)"}, {"depth": 2, "slug": "descriptions", "text": "Descriptions (31-40)"}, {"depth": 2, "slug": "actions", "text": "Actions and Plans (41-50)"}];
+---
+<BlogLayout
+  title="Japanese Reading Practice: 50 Easy Sentences for Beginners"
+  description="Practice reading Japanese with 50 simple sentences using basic hiragana, katakana, and beginner kanji."
+  language="japanese"
+  category="kana"
+  tags={["beginner", "hiragana", "reading"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="getting-started">Getting Started</h2>
+    <p>Reading Japanese becomes natural with practice. This collection of 50 sentences uses common vocabulary and straightforward grammar. Read each sentence aloud — Japanese pronunciation is very consistent once you know the kana. Use our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> for quick reference.</p>
+
+    <h2 id="self-intro">Self-Introduction (1-10)</h2>
+    <p><strong>1. わたしは たなかです。</strong> (Watashi wa Tanaka desu.) — I am Tanaka.</p>
+    <p><strong>2. にほんごを べんきょうしています。</strong> (Nihongo wo benkyou shite imasu.) — I am studying Japanese.</p>
+    <p><strong>3. アメリカから きました。</strong> (Amerika kara kimashita.) — I came from America.</p>
+    <p><strong>4. がくせいです。</strong> (Gakusei desu.) — I am a student.</p>
+    <p><strong>5. よろしくおねがいします。</strong> (Yoroshiku onegai shimasu.) — Nice to meet you.</p>
+    <p><strong>6. しゅみは おんがくです。</strong> (Shumi wa ongaku desu.) — My hobby is music.</p>
+    <p><strong>7. まいにち にほんごを れんしゅうします。</strong> (Mainichi nihongo wo renshuu shimasu.) — I practice Japanese every day.</p>
+    <p>These sentences use the fundamental pattern: [topic] は [description] です — the most common structure in Japanese.</p>
+
+    <h2 id="daily-life">Daily Life (11-20)</h2>
+    <p><strong>8. あさごはんを たべました。</strong> (Asagohan wo tabemashita.) — I ate breakfast.</p>
+    <p><strong>9. コーヒーを のみます。</strong> (Koohii wo nomimasu.) — I drink coffee.</p>
+    <p><strong>10. でんしゃで かいしゃに いきます。</strong> (Densha de kaisha ni ikimasu.) — I go to work by train.</p>
+    <p><strong>11. テレビを みています。</strong> (Terebi wo mite imasu.) — I am watching TV.</p>
+    <p><strong>12. ほんを よむのが すきです。</strong> (Hon wo yomu no ga suki desu.) — I like reading books.</p>
+    <p><strong>13. きょうは いいてんきですね。</strong> (Kyou wa ii tenki desu ne.) — Nice weather today.</p>
+    <p>Notice katakana loanwords like コーヒー and テレビ — recognizing these English-origin words is a huge shortcut.</p>
+
+    <h2 id="questions">Asking Questions (21-30)</h2>
+    <p><strong>14. これは なんですか。</strong> (Kore wa nan desu ka.) — What is this?</p>
+    <p><strong>15. トイレは どこですか。</strong> (Toire wa doko desu ka.) — Where is the restroom?</p>
+    <p><strong>16. いくらですか。</strong> (Ikura desu ka.) — How much is it?</p>
+    <p><strong>17. にほんごが わかりますか。</strong> (Nihongo ga wakarimasu ka.) — Do you understand Japanese?</p>
+    <p><strong>18. あしたは ひまですか。</strong> (Ashita wa hima desu ka.) — Are you free tomorrow?</p>
+    <p><strong>19. えきは どこですか。</strong> (Eki wa doko desu ka.) — Where is the station?</p>
+
+    <h2 id="descriptions">Descriptions (31-40)</h2>
+    <p><strong>20. このラーメンは おいしいです。</strong> (Kono raamen wa oishii desu.) — This ramen is delicious.</p>
+    <p><strong>21. にほんは きれいな くにです。</strong> (Nihon wa kirei na kuni desu.) — Japan is a beautiful country.</p>
+    <p><strong>22. きょうは さむいです。</strong> (Kyou wa samui desu.) — It is cold today.</p>
+    <p><strong>23. にほんごは むずかしいですが たのしいです。</strong> (Nihongo wa muzukashii desu ga tanoshii desu.) — Japanese is difficult but fun.</p>
+    <p><strong>24. さくらが とても きれいです。</strong> (Sakura ga totemo kirei desu.) — The cherry blossoms are very beautiful.</p>
+
+    <h2 id="actions">Actions and Plans (41-50)</h2>
+    <p><strong>25. にほんに いきたいです。</strong> (Nihon ni ikitai desu.) — I want to go to Japan.</p>
+    <p><strong>26. いっしょに ごはんを たべましょう。</strong> (Issho ni gohan wo tabemashou.) — Let us eat together.</p>
+    <p><strong>27. らいねん にほんに りょこうします。</strong> (Rainen nihon ni ryokou shimasu.) — I will travel to Japan next year.</p>
+    <p><strong>28. たくさん べんきょうして じょうずに なりたいです。</strong> (Takusan benkyou shite jouzu ni naritai desu.) — I want to study hard and get good.</p>
+    <p>After working through these sentences, try covering the romaji and reading only the Japanese. Then cover the English and test comprehension. Use our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> to improve recognition speed.</p>
+
+</BlogLayout>

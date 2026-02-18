@@ -1,0 +1,37 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{"q": "What percentage of Japanese comes from English?", "a": "Loanwords make up roughly 10-15 percent of commonly used vocabulary. In tech, fashion, and food service, the percentage exceeds 50 percent."}, {"q": "Do Japanese people know the English origin?", "a": "Not always. Many loanwords have been used so long they feel fully Japanese. Some have shifted meaning — マンション means apartment, not mansion."}, {"q": "Are new loanwords still being added?", "a": "Yes, constantly. Recent additions include サブスク (subscription), リモートワーク (remote work), and インフルエンサー (influencer)."}];
+const relatedTools = [{"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
+const headings = [{"depth": 2, "slug": "how-it-works", "text": "How English Becomes Japanese"}, {"depth": 2, "slug": "food", "text": "Food and Drinks"}, {"depth": 2, "slug": "technology", "text": "Technology"}, {"depth": 2, "slug": "sports", "text": "Sports"}, {"depth": 2, "slug": "false-friends", "text": "False Friends"}, {"depth": 2, "slug": "decode", "text": "How to Decode New Words"}];
+---
+<BlogLayout
+  title="Katakana Loanwords: 200+ English Words You Already Know in Japanese"
+  description="Discover 200+ English loanwords in katakana and learn the pronunciation rules to decode new ones."
+  language="japanese"
+  category="kana"
+  tags={["katakana", "vocabulary", "beginner"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="how-it-works">How English Becomes Japanese</h2>
+    <p>English words undergo predictable pronunciation changes in Japanese. Consonant clusters get broken up with vowels: &quot;strike&quot; becomes ストライク (sutoraiku). Final consonants get a vowel added: &quot;cat&quot; becomes キャット (kyatto). L becomes R: &quot;lemon&quot; becomes レモン (remon). &quot;Th&quot; becomes s/z: &quot;thank you&quot; becomes サンキュー (sankyuu). Long vowels use ー: &quot;cake&quot; becomes ケーキ (keeki).</p>
+
+    <h2 id="food">Food and Drinks</h2>
+    <p>コーヒー (coffee), ケーキ (cake), チョコレート (chocolate), アイスクリーム (ice cream), ハンバーガー (hamburger), サンドイッチ (sandwich), サラダ (salad), ビール (beer), ワイン (wine), ジュース (juice), ピザ (pizza), パスタ (pasta), ステーキ (steak), カレー (curry), ドーナツ (doughnut), クッキー (cookie).</p>
+
+    <h2 id="technology">Technology</h2>
+    <p>コンピューター (computer), インターネット (internet), スマートフォン (smartphone), アプリ (app), ウェブサイト (website), メール (email), パスワード (password), ダウンロード (download), ソフトウェア (software), データ (data), ブログ (blog), オンライン (online), ログイン (login).</p>
+
+    <h2 id="sports">Sports</h2>
+    <p>サッカー (soccer), バスケットボール (basketball), テニス (tennis), ゴルフ (golf), マラソン (marathon), チーム (team), コーチ (coach), トレーニング (training), ジム (gym), ヨガ (yoga).</p>
+
+    <h2 id="false-friends">False Friends: Words That Trick You</h2>
+    <p><strong>マンション</strong> (manshon) means apartment, not mansion. <strong>スマート</strong> (sumaato) often means slim or stylish, not smart. <strong>バイキング</strong> (baikingu) means buffet, not Viking. <strong>ナイーブ</strong> (naiibu) means sensitive, not naive. <strong>カンニング</strong> (kanningu) means cheating on a test, not cunning.</p>
+
+    <h2 id="decode">How to Decode New Words</h2>
+    <p>When you see unfamiliar katakana: read it aloud slowly, listen for the English hiding inside, then reverse the pronunciation rules — remove extra vowels, try L instead of R, restore consonant clusters. Practice with our <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> and test yourself with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>.</p>
+
+</BlogLayout>
