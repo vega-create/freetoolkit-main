@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Can I learn Japanese for free?`, a: `Yes. Between free apps, YouTube channels, our tools, and online communities, you can reach conversational ability without spending money. Paid resources can accelerate progress but are not required.` }, { q: `How long does it take to learn Japanese?`, a: `The US Foreign Service Institute estimates 2,200 class hours for English speakers to achieve proficiency in Japanese. For conversational ability, most dedicated learners achieve basic communication in 6-12 months of daily study.` }];
+const relatedTools = [{ name: "All Japanese Tools", url: "/japanese/tools/" }];
+const headings = [{ depth: 2, slug: "online-tools", text: "Online Tools" }, { depth: 2, slug: "apps", text: "Mobile Apps" }, { depth: 2, slug: "immersion", text: "Immersion Content" }];
+---
+<BlogLayout
+  title="Best Free Resources for Learning Japanese in 2026"
+  description="Curated list of the best free apps, websites, podcasts, and tools for Japanese learners at every level."
+  language="japanese"
+  category="study-tips"
+  tags={["resources", "apps", "study-tips", "beginner"]}
+  publishDate="2026-02-23"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="online-tools">Online Tools</h2>
+    <p>Our <a href="/japanese/tools/">15 free Japanese learning tools</a> cover kana, kanji, vocabulary, grammar, and daily practice. For grammar reference, Tae Kim's Guide to Japanese Grammar and Imabi are both excellent and free. Jisho.org is the best free online Japanese dictionary, with detailed kanji information and example sentences.</p>
+
+    <h2 id="apps">Mobile Apps</h2>
+    <p>Anki (free on Android) is the gold standard for spaced repetition flashcards with extensive community decks for JLPT vocabulary and kanji. WaniKani offers a structured kanji learning system (first levels free). Bunpo and Tae Kim apps provide grammar lessons organized by JLPT level.</p>
+
+    <h2 id="immersion">Immersion Content</h2>
+    <p>NHK World Japan offers free news in simple Japanese. Japanese podcasts like JapanesePod101 provide graded listening practice. For reading, Tadoku graded readers start from absolute beginner. YouTube channels like Japanese Ammo with Misa and Nihongo no Mori cover grammar and culture. Download our <a href="/japanese/downloads/">free PDFs</a> for offline reference materials.</p>
+
+</BlogLayout>

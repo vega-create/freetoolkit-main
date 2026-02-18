@@ -1,0 +1,30 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What is the difference between は and が?`, a: `は (wa) marks the topic — what the sentence is about. が (ga) marks the grammatical subject — who performs the action. は introduces known information while が introduces new information or emphasis.` }, { q: `How many particles are there in Japanese?`, a: `Japanese has dozens of particles, but mastering about 15 core particles covers the vast majority of usage. Start with は, が, を, に, で, の, と, も, から, まで.` }];
+const relatedTools = [{ name: "Particle Guide", url: "/japanese/tools/particle-guide/" }];
+const headings = [{ depth: 2, slug: "what-are", text: "What Are Particles?" }, { depth: 2, slug: "core-five", text: "The Core Five Particles" }, { depth: 2, slug: "common-mistakes", text: "Common Mistakes" }];
+---
+<BlogLayout
+  title="Japanese Particles Explained: Complete Guide to は が を に で"
+  description="Demystify Japanese particles with clear explanations and example sentences. The most comprehensive free particle guide online."
+  language="japanese"
+  category="grammar"
+  tags={["grammar", "particles", "beginner", "intermediate"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="what-are">What Are Particles?</h2>
+    <p>Particles are small words placed after nouns, verbs, or sentence elements to indicate their grammatical role. They are the glue that holds Japanese sentences together. Unlike English which relies on word order, Japanese uses particles to show who does what to whom.</p>
+    <p>Explore all major particles interactively with our <a href="/japanese/tools/particle-guide/">Particle Guide</a> tool, complete with example sentences and audio pronunciation.</p>
+
+    <h2 id="core-five">The Core Five Particles</h2>
+    <p><strong>は (wa)</strong> — Topic marker. Sets the topic of conversation: 私は学生です (I am a student). <strong>が (ga)</strong> — Subject marker. Identifies the subject, especially for new information: 猫がいます (There is a cat). <strong>を (wo/o)</strong> — Object marker. Marks what the verb acts upon: 水を飲む (drink water).</p>
+    <p><strong>に (ni)</strong> — Direction, time, location of existence. Shows where something exists or when something happens: 学校に行く (go to school), 七時に起きる (wake at 7). <strong>で (de)</strong> — Location of action, means. Shows where an action happens or how: 公園で遊ぶ (play in the park), バスで行く (go by bus).</p>
+
+    <h2 id="common-mistakes">Common Mistakes</h2>
+    <p>The most common particle error is confusing は and が. A useful rule: if you can answer "What about X?" the sentence probably uses は. If you can answer "Who/what does Y?" it probably uses が. Another frequent mistake is using に when で is needed for action locations, or vice versa. Remember: に for existence (いる/ある), で for activities.</p>
+
+</BlogLayout>

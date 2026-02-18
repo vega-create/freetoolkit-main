@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `When is katakana used?`, a: `Katakana is used for foreign loanwords, foreign names, onomatopoeia, scientific terms, and emphasis (similar to italics in English).` }, { q: `Why do some katakana look similar?`, a: `Characters like シ (shi) and ツ (tsu), or ソ (so) and ン (n) are notoriously confusing. Focus on the stroke direction — シ strokes go upward while ツ strokes go downward.` }];
+const relatedTools = [{ name: "Katakana Quiz", url: "/japanese/tools/katakana-quiz/" }, { name: "Kana Converter", url: "/japanese/tools/kana-converter/" }];
+const headings = [{ depth: 2, slug: "when-used", text: "When is Katakana Used?" }, { depth: 2, slug: "confusing-pairs", text: "Confusing Pairs" }, { depth: 2, slug: "loanwords", text: "Reading Loanwords" }];
+---
+<BlogLayout
+  title="Katakana Made Easy: Learn All 46 Characters"
+  description="Complete guide to learning katakana — when it is used, how to read it, and strategies for mastering foreign loanwords."
+  language="japanese"
+  category="kana"
+  tags={["katakana", "beginner", "kana", "loanwords"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="when-used">When is Katakana Used?</h2>
+    <p>Katakana serves several specific purposes in Japanese writing. Its primary use is for foreign loanwords: コーヒー (koohii, coffee), レストラン (resutoran, restaurant), パソコン (pasokon, personal computer). It is also used for foreign personal and place names, onomatopoeia, scientific terminology, and occasionally for emphasis.</p>
+    <p>In modern Japan, katakana words are everywhere — menus, advertisements, technology, fashion. Learning katakana unlocks a huge vocabulary of words borrowed from English and other languages.</p>
+
+    <h2 id="confusing-pairs">Confusing Pairs</h2>
+    <p>Several katakana characters look remarkably similar and trip up beginners. The most infamous pairs: <strong>シ (shi) vs ツ (tsu)</strong> — look at stroke angle; シ strokes are more horizontal while ツ strokes are more vertical. <strong>ソ (so) vs ン (n)</strong> — similar distinction in stroke direction. <strong>ウ (u) vs フ (fu)</strong> — ウ has a top stroke that フ lacks.</p>
+    <p>Practice these confusing pairs specifically with our <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> until they become automatic.</p>
+
+    <h2 id="loanwords">Reading Loanwords</h2>
+    <p>Japanese adapts foreign words to fit its sound system, so they may not be immediately recognizable. The key is to read them aloud at natural speed: テレビ (te-re-bi → television), アイスクリーム (a-i-su-ku-rii-mu → ice cream), チョコレート (cho-ko-ree-to → chocolate). Once you hear the rhythm, the English origin becomes clear.</p>
+    <p>Use our <a href="/japanese/tools/kana-converter/">Kana Converter</a> to check any katakana word, and download our <a href="/japanese/downloads/">free kana chart</a> for quick reference.</p>
+
+</BlogLayout>

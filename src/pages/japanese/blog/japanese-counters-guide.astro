@@ -1,0 +1,29 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why does Japanese have counters?`, a: `Japanese counters classify objects by shape, size, or type — similar to how English says 'a sheet of paper' or 'a head of lettuce.' Most Asian languages use counters. Japanese has hundreds, but about 20 cover daily situations.` }, { q: `What counter do I use if I don't know the right one?`, a: `Use the general counter つ (tsu): ひとつ, ふたつ, みっつ... This works for most objects up to 10 and is always acceptable, even if a more specific counter exists.` }];
+const relatedTools = [{ name: "Counter Practice", url: "/japanese/tools/counter-practice/" }, { name: "Number Converter", url: "/japanese/tools/number-converter/" }];
+const headings = [{ depth: 2, slug: "general", text: "The General Counter つ" }, { depth: 2, slug: "essential", text: "Essential Counters" }, { depth: 2, slug: "sound-changes", text: "Sound Changes" }];
+---
+<BlogLayout
+  title="Japanese Counters: The Complete Guide to Counting Objects"
+  description="Master Japanese counters for people, objects, animals, and more. Learn the rules behind sound changes and which counter to use when."
+  language="japanese"
+  category="grammar"
+  tags={["counters", "grammar", "vocabulary", "beginner"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="general">The General Counter つ</h2>
+    <p>The safest counter for beginners is つ (tsu), which uses native Japanese numbers: ひとつ (1), ふたつ (2), みっつ (3), よっつ (4), いつつ (5), むっつ (6), ななつ (7), やっつ (8), ここのつ (9), とお (10). This works for almost any countable object and is never wrong.</p>
+
+    <h2 id="essential">Essential Counters</h2>
+    <p><strong>人 (nin/ri)</strong> for people — note the irregular ひとり (1) and ふたり (2). <strong>本 (hon)</strong> for long thin objects: pens, bottles, umbrellas, trees. <strong>枚 (mai)</strong> for flat things: paper, tickets, shirts, plates. <strong>匹 (hiki)</strong> for small animals. <strong>杯 (hai)</strong> for cups and glasses of liquid. <strong>台 (dai)</strong> for machines and vehicles.</p>
+    <p>Practice all these counters with audio in our <a href="/japanese/tools/counter-practice/">Counter Practice</a> tool.</p>
+
+    <h2 id="sound-changes">Sound Changes</h2>
+    <p>Numbers 1, 3, 6, 8, and 10 often trigger sound changes when combined with counters. For 本: いっぽん (1), さんぼん (3), ろっぽん (6), はっぽん (8), じゅっぽん (10). These changes follow patterns — h→p after 1/6/8/10, h→b after 3. Learning these patterns saves memorizing each counter individually. Convert any number with our <a href="/japanese/tools/number-converter/">Number Converter</a>.</p>
+
+</BlogLayout>

@@ -1,12 +1,35 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import BlogFilter from '../../../components/BlogFilter.tsx';
+
+const articles = [
+  { slug: 'hiragana-guide', title: 'How to Learn Hiragana: Complete Beginner Guide', desc: 'Master all 46 hiragana characters with proven memorization techniques and practice resources.', category: 'Kana', date: '2026-02-19', tags: ['hiragana', 'beginner', 'writing'] },
+  { slug: 'katakana-guide', title: 'Katakana Made Easy: Learn All 46 Characters', desc: 'Complete guide to katakana — when it is used, how to read it, and loanword strategies.', category: 'Kana', date: '2026-02-19', tags: ['katakana', 'beginner', 'loanwords'] },
+  { slug: 'jlpt-preparation-guide', title: 'JLPT Preparation Guide: Study Plans for N5 to N1', desc: 'Complete study guide for every JLPT level with timelines and strategies.', category: 'JLPT', date: '2026-02-20', tags: ['jlpt', 'study-tips', 'exam'] },
+  { slug: 'japanese-particles-explained', title: 'Japanese Particles Explained: は が を に で', desc: 'Demystify Japanese particles with clear explanations and examples.', category: 'Grammar', date: '2026-02-20', tags: ['grammar', 'particles', 'beginner'] },
+  { slug: 'japanese-verb-conjugation', title: 'Japanese Verb Conjugation: A Practical Guide', desc: 'Learn the three verb groups and essential conjugation forms.', category: 'Grammar', date: '2026-02-21', tags: ['grammar', 'verbs', 'conjugation'] },
+  { slug: 'japanese-counters-guide', title: 'Japanese Counters: Complete Guide to Counting Objects', desc: 'Master counters for people, objects, animals, and more with sound change rules.', category: 'Grammar', date: '2026-02-21', tags: ['counters', 'grammar', 'vocabulary'] },
+  { slug: 'japanese-keigo-basics', title: 'Japanese Keigo: Understanding Polite Language', desc: 'Introduction to honorific language — the three levels and essential phrases.', category: 'Culture', date: '2026-02-22', tags: ['keigo', 'polite', 'culture'] },
+  { slug: 'japanese-culture-etiquette', title: 'Japanese Culture and Etiquette: Essential Guide', desc: 'Understanding cultural norms from bowing to dining etiquette.', category: 'Culture', date: '2026-02-22', tags: ['culture', 'etiquette', 'travel'] },
+  { slug: 'learn-kanji-effectively', title: 'How to Learn Kanji Effectively: Strategies That Work', desc: 'Evidence-based methods: radical decomposition, spaced repetition, and contextual learning.', category: 'Study Tips', date: '2026-02-23', tags: ['kanji', 'study-tips', 'characters'] },
+  { slug: 'japanese-resources-2026', title: 'Best Free Resources for Learning Japanese in 2026', desc: 'Curated list of the best free apps, websites, and tools for learners.', category: 'Study Tips', date: '2026-02-23', tags: ['resources', 'apps', 'study-tips'] },
+];
 ---
-<BaseLayout title="Japanese Learning Blog" description="Guides, tips, and insights for learning Japanese. From hiragana basics to JLPT prep.">
+<BaseLayout title="Japanese Learning Blog — Guides & Tips" description="10 free guides, tips, and cultural insights for learning Japanese. From kana basics to JLPT prep and cultural deep dives.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Blog' }]} />
-    <h1 class="mb-2">Japanese Learning Blog</h1>
+    <h1 class="text-3xl font-bold mb-2">Japanese Learning Blog</h1>
     <p class="text-gray-500 mb-8">Guides, tips, and cultural insights for Japanese learners.</p>
-    <p class="text-gray-400 text-center py-12">📝 Articles coming soon! Stay tuned for Japanese learning guides and JLPT prep tips.</p>
+
+    <BlogFilter articles={articles} language="japanese" client:load />
+
+    <div class="mt-10 p-6 bg-red-50 rounded-xl text-center">
+      <h3 class="font-bold text-red-800 mb-2">Practice What You Learn</h3>
+      <p class="text-sm text-red-600 mb-3">Put your knowledge to work with our 15 free interactive tools.</p>
+      <a href="/japanese/tools/" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
+        Try Japanese Tools →
+      </a>
+    </div>
   </div>
 </BaseLayout>

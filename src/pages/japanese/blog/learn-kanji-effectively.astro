@@ -1,0 +1,29 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How many kanji do I need to know?`, a: `For JLPT N5 about 100, N4 about 300, N3 about 650, N2 about 1,000, and N1 about 2,000. To read a newspaper, approximately 2,136 kanji (the joyo kanji list) are needed.` }, { q: `Should I learn kanji by writing them?`, a: `Writing is very effective for memorization because it engages motor memory. However, recognition (reading) is more immediately practical. A balanced approach works best — write new kanji a few times, then focus on reading them in context.` }];
+const relatedTools = [{ name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }, { name: "Daily Kanji", url: "/japanese/tools/daily-kanji/" }, { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }];
+const headings = [{ depth: 2, slug: "radicals", text: "Learning Through Radicals" }, { depth: 2, slug: "spaced-repetition", text: "Spaced Repetition" }, { depth: 2, slug: "context", text: "Learning in Context" }];
+---
+<BlogLayout
+  title="How to Learn Kanji Effectively: Strategies That Actually Work"
+  description="Evidence-based methods for memorizing kanji. From radical decomposition to spaced repetition and contextual learning."
+  language="japanese"
+  category="study-tips"
+  tags={["kanji", "study-tips", "characters", "intermediate"]}
+  publishDate="2026-02-23"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="radicals">Learning Through Radicals</h2>
+    <p>Kanji are built from smaller components called radicals. Learning these building blocks lets you decompose complex kanji into familiar parts. For example, 休 (rest) combines 人 (person) and 木 (tree) — a person resting against a tree. The character 明 (bright) combines 日 (sun) and 月 (moon) — sun and moon together mean bright.</p>
+    <p>Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> to explore kanji components and find connections between characters.</p>
+
+    <h2 id="spaced-repetition">Spaced Repetition</h2>
+    <p>Spaced repetition is the most scientifically supported method for long-term memorization. Review kanji at increasing intervals: after 1 day, 3 days, 7 days, 14 days, 30 days. Each successful recall strengthens the memory trace. Our <a href="/japanese/tools/daily-kanji/">Daily Kanji</a> tool builds this habit with one new kanji each day.</p>
+
+    <h2 id="context">Learning in Context</h2>
+    <p>Never learn kanji in isolation. Study each kanji as part of vocabulary words: learn 食 through 食べる (to eat), 食事 (meal), 和食 (Japanese food). This gives you both kanji recognition and useful vocabulary simultaneously. Generate writing <a href="/japanese/tools/practice-sheet/">practice sheets</a> for the kanji you're currently studying.</p>
+
+</BlogLayout>

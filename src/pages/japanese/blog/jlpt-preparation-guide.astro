@@ -1,0 +1,33 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How long should I study for each JLPT level?`, a: `General guidelines: N5 requires about 350 study hours, N4 about 600, N3 about 950, N2 about 1,600, and N1 about 3,000-4,800 hours of study. These are cumulative totals.` }, { q: `Which JLPT level should I aim for?`, a: `N5 proves basic Japanese ability. N4 shows you can handle everyday situations. N3 is useful for daily life in Japan. N2 is expected for most jobs in Japan. N1 demonstrates near-native reading comprehension.` }];
+const relatedTools = [{ name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }, { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }];
+const headings = [{ depth: 2, slug: "overview", text: "JLPT Overview" }, { depth: 2, slug: "n5-n4", text: "N5 and N4 Strategy" }, { depth: 2, slug: "n3", text: "N3 Strategy" }, { depth: 2, slug: "n2-n1", text: "N2 and N1 Strategy" }];
+---
+<BlogLayout
+  title="JLPT Preparation Guide: Study Plans for N5 to N1"
+  description="Complete study guide for every JLPT level with recommended timelines, resources, and section-by-section strategies."
+  language="japanese"
+  category="jlpt"
+  tags={["jlpt", "study-tips", "exam", "vocabulary"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="overview">JLPT Overview</h2>
+    <p>The Japanese Language Proficiency Test has five levels, from N5 (beginner) to N1 (advanced). Each test covers three sections: Language Knowledge (vocabulary, grammar, reading) and Listening. Tests are held twice yearly in July and December at testing centers worldwide.</p>
+    <p>Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a> to study essential words for every level from N5 through N1.</p>
+
+    <h2 id="n5-n4">N5 and N4 Strategy</h2>
+    <p>For N5, focus on mastering hiragana and katakana completely, learning about 100 kanji, and building vocabulary of around 800 words. Grammar covers basic sentence patterns, particles, and verb conjugations. For N4, expand to 300 kanji and 1,500 vocabulary words, add complex grammar patterns, and practice listening with natural-speed audio.</p>
+    <p>Our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a> and <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> help ensure your kana foundation is solid before moving to higher levels.</p>
+
+    <h2 id="n3">N3 Strategy</h2>
+    <p>N3 bridges basic and intermediate Japanese. You need around 650 kanji and 3,750 vocabulary words. Reading passages become longer and more complex. Grammar includes conditional forms, passive voice, and causative constructions. Practice reading newspaper articles and short stories at this level.</p>
+
+    <h2 id="n2-n1">N2 and N1 Strategy</h2>
+    <p>N2 requires approximately 1,000 kanji and 6,000 vocabulary words. Reading passages include editorials, business documents, and literature. N1 demands around 2,000 kanji and 10,000 words, with the ability to read and comprehend complex texts on abstract topics. For both levels, immersion through Japanese media, books, and conversation is essential alongside structured study.</p>
+
+</BlogLayout>

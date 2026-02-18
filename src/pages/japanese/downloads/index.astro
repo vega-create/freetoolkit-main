@@ -1,12 +1,41 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const downloads = [
+  { title: 'Hiragana & Katakana Chart', desc: 'Complete kana chart with romaji readings. Hiragana on page 1, Katakana on page 2, plus dakuten.', file: '/downloads/japanese/kana-chart.pdf', size: '45 KB', pages: 2 },
+  { title: 'JLPT N5-N3 Word Lists', desc: '90 essential vocabulary words organized by JLPT level with readings and English meanings.', file: '/downloads/japanese/jlpt-word-lists.pdf', size: '38 KB', pages: 3 },
+  { title: 'Essential Kanji Chart', desc: '24 JLPT N5 kanji with on/kun readings, meanings, and stroke counts in a visual reference grid.', file: '/downloads/japanese/kanji-chart.pdf', size: '22 KB', pages: 1 },
+  { title: 'Writing Practice Sheets', desc: '4 themed practice sheets for hiragana, katakana, and basic kanji with grid guidelines.', file: '/downloads/japanese/practice-sheets.pdf', size: '28 KB', pages: 4 },
+];
 ---
-<BaseLayout title="Free Japanese Learning Downloads" description="Download free PDFs: JLPT vocabulary lists, hiragana/katakana charts, and kanji practice sheets.">
+<BaseLayout title="Free Japanese Learning PDFs" description="Download free printable Japanese learning materials: kana charts, JLPT vocabulary, kanji reference, and writing practice sheets.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Japanese', url: '/japanese/' }, { name: 'Downloads' }]} />
-    <h1 class="mb-2">Free Downloads</h1>
-    <p class="text-gray-500 mb-8">Free printable PDFs for Japanese learners.</p>
-    <p class="text-gray-400 text-center py-12">📥 Downloadable resources coming soon!</p>
+    <h1 class="text-3xl font-bold mb-2">Free Japanese Downloads</h1>
+    <p class="text-gray-500 mb-8">Printable PDFs for offline study — completely free.</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      {downloads.map(d => (
+        <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all">
+          <h3 class="font-bold text-lg mb-1">{d.title}</h3>
+          <p class="text-sm text-gray-500 mb-3">{d.desc}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-400">{d.size} · {d.pages} {d.pages === 1 ? 'page' : 'pages'}</span>
+            <a href={d.file} download class="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700">
+              📥 Download PDF
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-8 p-6 bg-red-50 rounded-xl text-center">
+      <h3 class="font-bold text-red-800 mb-2">Interactive Learning Tools</h3>
+      <p class="text-sm text-red-600 mb-3">Practice online with our 15 free Japanese tools</p>
+      <a href="/japanese/tools/" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">
+        Explore Tools →
+      </a>
+    </div>
   </div>
 </BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Do I really need to learn keigo?`, a: `Yes, if you plan to use Japanese in any professional or social context. Even basic keigo is expected in shops, restaurants, and workplaces. Without it, you may unintentionally come across as rude.` }, { q: `What are the three types of keigo?`, a: `Sonkeigo (尊敬語) elevates others, kenjougo (謙譲語) humbles yourself, and teineigo (丁寧語) is standard polite speech using です/ます forms.` }];
+const relatedTools = [{ name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" }];
+const headings = [{ depth: 2, slug: "three-types", text: "The Three Types of Keigo" }, { depth: 2, slug: "daily-keigo", text: "Daily Keigo Phrases" }, { depth: 2, slug: "mistakes", text: "Common Keigo Mistakes" }];
+---
+<BlogLayout
+  title="Japanese Keigo: Understanding Polite Language"
+  description="Introduction to Japanese honorific language (keigo) — the three levels, when to use them, and essential phrases for beginners."
+  language="japanese"
+  category="culture"
+  tags={["keigo", "polite", "culture", "intermediate"]}
+  publishDate="2026-02-22"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="three-types">The Three Types of Keigo</h2>
+    <p><strong>丁寧語 (teineigo)</strong> — polite language using です and ます. This is the baseline level of politeness most learners already know. <strong>尊敬語 (sonkeigo)</strong> — respectful language that elevates the actions of others: いらっしゃる (to be/go, respectful), ご覧になる (to see, respectful). <strong>謙譲語 (kenjougo)</strong> — humble language that lowers your own actions: 参る (to go, humble), 拝見する (to see, humble).</p>
+
+    <h2 id="daily-keigo">Daily Keigo Phrases</h2>
+    <p>You encounter keigo daily in Japan. Shop staff say いらっしゃいませ (welcome). Restaurants ask 何名様ですか (how many guests). Business emails use お忙しいところ恐れ入りますが (I'm sorry to bother you while you're busy). Learn essential polite phrases with our <a href="/japanese/tools/daily-phrase/">Daily Phrase</a> tool.</p>
+
+    <h2 id="mistakes">Common Keigo Mistakes</h2>
+    <p>The biggest mistake is using sonkeigo for your own actions — elevating yourself is the opposite of the intention. Another common error is mixing keigo levels inappropriately, such as using very formal language with friends (which feels cold and distant) or casual language with superiors. Start with mastering teineigo (です/ます), then gradually add sonkeigo and kenjougo phrases as you encounter them.</p>
+
+</BlogLayout>

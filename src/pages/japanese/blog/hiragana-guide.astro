@@ -1,0 +1,38 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How long does it take to learn hiragana?`, a: `Most learners can memorize all 46 basic hiragana in 1-2 weeks with daily practice of 20-30 minutes. Recognition comes first, then writing fluency follows with continued practice.` }, { q: `Should I learn hiragana or katakana first?`, a: `Start with hiragana. It is used far more frequently in everyday Japanese and is essential for reading grammar particles, verb endings, and native Japanese words.` }, { q: `What is the best way to memorize hiragana?`, a: `Combine visual mnemonics with active writing practice. For example, あ (a) looks like a figure doing a karate chop saying 'Ahh!' Write each character repeatedly while saying the sound aloud.` }];
+const relatedTools = [{ name: "Hiragana Quiz", url: "/japanese/tools/hiragana-quiz/" }, { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }, { name: "Kana Converter", url: "/japanese/tools/kana-converter/" }];
+const headings = [{ depth: 2, slug: "what-is", text: "What is Hiragana?" }, { depth: 2, slug: "five-vowels", text: "The Five Vowels" }, { depth: 2, slug: "consonant-rows", text: "Consonant Rows" }, { depth: 2, slug: "dakuten", text: "Dakuten and Combinations" }, { depth: 2, slug: "practice", text: "Practice Strategy" }];
+---
+<BlogLayout
+  title="How to Learn Hiragana: Complete Beginner Guide"
+  description="Master all 46 hiragana characters with proven memorization techniques, stroke order tips, and free practice resources."
+  language="japanese"
+  category="kana"
+  tags={["hiragana", "beginner", "kana", "writing"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="what-is">What is Hiragana?</h2>
+    <p>Hiragana is one of three Japanese writing systems and the first one every learner should master. It consists of 46 basic characters, each representing a syllable sound. Hiragana is used for native Japanese words, grammatical particles, verb endings, and as reading aids (furigana) above kanji characters.</p>
+    <p>Unlike the English alphabet where letters combine to form sounds, each hiragana character represents a complete syllable. This makes Japanese pronunciation remarkably consistent — once you know the characters, you can pronounce any word written in hiragana.</p>
+
+    <h2 id="five-vowels">The Five Vowels</h2>
+    <p>Japanese has only five vowel sounds, making pronunciation simpler than English. Start by mastering these: <strong>あ (a)</strong> as in "father," <strong>い (i)</strong> as in "meet," <strong>う (u)</strong> as in "food," <strong>え (e)</strong> as in "pet," and <strong>お (o)</strong> as in "go." These five vowels form the foundation — every other hiragana is a consonant plus one of these vowels.</p>
+
+    <h2 id="consonant-rows">Consonant Rows</h2>
+    <p>Hiragana is organized into rows based on consonants: ka-row (かきくけこ), sa-row (さしすせそ), ta-row (たちつてと), na-row (なにぬねの), ha-row (はひふへほ), ma-row (まみむめも), ya-row (やゆよ), ra-row (らりるれろ), and wa-row (わを) plus the standalone ん (n).</p>
+    <p>Learn one row per day and review previous rows. By day 10, you will know all basic hiragana. Test yourself with our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a>.</p>
+
+    <h2 id="dakuten">Dakuten and Combinations</h2>
+    <p>Dakuten (゛) and handakuten (゜) modify existing characters to create new sounds. Adding dakuten to か makes が (ga), to さ makes ざ (za), to た makes だ (da), and to は makes ば (ba). Handakuten only applies to the ha-row, turning は into ぱ (pa).</p>
+    <p>Combination characters use small や, ゆ, or よ after certain characters: きゃ (kya), しゅ (shu), ちょ (cho). These extend your sound inventory significantly.</p>
+
+    <h2 id="practice">Practice Strategy</h2>
+    <p>The most effective approach combines recognition drills with writing practice. Use our <a href="/japanese/tools/hiragana-quiz/">quiz tool</a> for recognition, and our <a href="/japanese/tools/practice-sheet/">practice sheets</a> for writing. Start with 5 characters per session, adding more as previous ones become automatic. Read simple Japanese texts (children's books, NHK Easy News) to reinforce recognition in context.</p>
+    <p>Download our <a href="/japanese/downloads/">free kana chart PDF</a> to keep as a reference while studying.</p>
+
+</BlogLayout>

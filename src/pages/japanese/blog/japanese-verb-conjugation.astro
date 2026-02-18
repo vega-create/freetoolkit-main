@@ -1,0 +1,33 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How many verb groups are there in Japanese?`, a: `Three groups: Group 1 (godan/u-verbs ending in consonant+u), Group 2 (ichidan/ru-verbs ending in -iru or -eru), and Group 3 (irregular — only する and 来る).` }, { q: `What is the te-form used for?`, a: `Te-form is one of the most versatile forms, used for requests (食べてください), connecting actions (食べて飲んで), progressive tense (食べている), and giving/receiving (食べてあげる).` }];
+const relatedTools = [{ name: "Verb Conjugator", url: "/japanese/tools/verb-conjugator/" }];
+const headings = [{ depth: 2, slug: "three-groups", text: "The Three Verb Groups" }, { depth: 2, slug: "polite", text: "Polite Form (ます)" }, { depth: 2, slug: "te-form", text: "Te-Form" }, { depth: 2, slug: "past-negative", text: "Past and Negative" }];
+---
+<BlogLayout
+  title="Japanese Verb Conjugation: A Practical Guide"
+  description="Learn the three verb groups and essential conjugation forms. From dictionary form to polite, te-form, past, and negative."
+  language="japanese"
+  category="grammar"
+  tags={["grammar", "verbs", "conjugation", "beginner"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="three-groups">The Three Verb Groups</h2>
+    <p><strong>Group 1 (五段 godan):</strong> Verbs whose stems end in a consonant. Examples: 飲む (nomu, drink), 書く (kaku, write), 話す (hanasu, speak). These conjugate by changing the final vowel sound.</p>
+    <p><strong>Group 2 (一段 ichidan):</strong> Verbs ending in -iru or -eru. Examples: 食べる (taberu, eat), 見る (miru, see). These conjugate simply by dropping -ru and adding the conjugation ending.</p>
+    <p><strong>Group 3 (不規則 irregular):</strong> Only two verbs — する (suru, to do) and 来る (kuru, to come). These must be memorized individually.</p>
+
+    <h2 id="polite">Polite Form (ます)</h2>
+    <p>The polite form is used in most social situations. Group 1: change the final -u to -imasu (飲む→飲みます). Group 2: drop -ru, add -masu (食べる→食べます). Irregular: する→します, 来る→来ます. Try our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> to see all forms.</p>
+
+    <h2 id="te-form">Te-Form</h2>
+    <p>Te-form is essential for making requests, connecting sentences, and forming progressive tense. Group 2 is easy: drop -ru, add -te (食べて). Group 1 follows patterns based on the ending consonant: -mu/-nu/-bu → -nde, -ku → -ite, -su → -shite, -u/-tsu/-ru → -tte. The irregular verbs: して, 来て.</p>
+
+    <h2 id="past-negative">Past and Negative</h2>
+    <p>Past tense follows the same consonant patterns as te-form but ends in -ta/-da instead. Negative form: Group 1 changes final -u to -anai (飲まない), Group 2 drops -ru and adds -nai (食べない). Irregular: しない, 来ない. Practice all conjugations with our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a>.</p>
+
+</BlogLayout>

@@ -1,0 +1,29 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What cultural mistakes do foreigners commonly make in Japan?`, a: `Common mistakes include wearing shoes indoors, tipping at restaurants (considered rude), speaking loudly on trains, and sticking chopsticks vertically in rice (associated with funeral rituals).` }, { q: `Is bowing really that important?`, a: `Bowing is fundamental to Japanese social interaction. A slight bow (15 degrees) works for casual greetings. Deeper bows (30-45 degrees) show respect to superiors or in formal situations. You'll naturally absorb the nuances by observing.` }];
+const relatedTools = [{ name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" }, { name: "Name Generator", url: "/japanese/tools/name-generator/" }];
+const headings = [{ depth: 2, slug: "greetings", text: "Greetings and Bowing" }, { depth: 2, slug: "dining", text: "Dining Etiquette" }, { depth: 2, slug: "social", text: "Social Norms" }];
+---
+<BlogLayout
+  title="Japanese Culture and Etiquette: Essential Guide for Learners"
+  description="Understanding Japanese cultural norms improves your language learning. From bowing to gift-giving, learn the unwritten rules."
+  language="japanese"
+  category="culture"
+  tags={["culture", "etiquette", "travel", "beginner"]}
+  publishDate="2026-02-22"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="greetings">Greetings and Bowing</h2>
+    <p>Bowing (お辞儀, ojigi) is the standard greeting in Japan. The depth and duration convey the level of respect. In casual situations, a slight head nod suffices. In business, a 30-degree bow is standard. When meeting someone for the first time, say はじめまして (hajimemashite, nice to meet you) followed by your name and よろしくお願いします (yoroshiku onegaishimasu).</p>
+    <p>Practice essential greeting phrases with our <a href="/japanese/tools/daily-phrase/">Daily Phrase</a> tool.</p>
+
+    <h2 id="dining">Dining Etiquette</h2>
+    <p>Say いただきます (itadakimasu, I humbly receive) before eating and ごちそうさまでした (gochisousama deshita, thank you for the meal) after. Never stick chopsticks upright in rice — this resembles funeral incense. Don't pass food chopstick-to-chopstick (another funeral association). Slurping noodles is not only acceptable but shows appreciation.</p>
+
+    <h2 id="social">Social Norms</h2>
+    <p>Remove shoes when entering homes, traditional restaurants, and some businesses — look for a raised entryway (genkan). Keep your voice low on public transportation. Tipping is not practiced and can cause confusion. When receiving a business card, accept it with both hands and read it before putting it away — never write on it in front of the giver.</p>
+
+</BlogLayout>
