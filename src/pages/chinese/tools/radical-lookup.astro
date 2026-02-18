@@ -1,0 +1,27 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import RadicalLookup from '../../../components/tools/chinese/RadicalLookup.tsx';
+const faq = [
+  { q: 'What are Chinese radicals?', a: 'Radicals (部首, bùshǒu) are the building blocks of Chinese characters. Most characters contain a radical that gives a hint about the character\'s meaning. For example, characters with the water radical (氵) often relate to water or liquids.' },
+  { q: 'How many radicals are there?', a: 'The traditional Kangxi Dictionary lists 214 radicals. However, only about 50-80 radicals appear frequently in everyday characters. Our tool covers the most common ones you will encounter.' },
+  { q: 'How do radicals help with learning?', a: 'Knowing radicals helps you guess the meaning of unfamiliar characters, look up characters in dictionaries, and memorize new characters by connecting them to familiar components.' },
+];
+const relatedTools = [
+  { name: 'Stroke Order', url: '/chinese/tools/stroke-order/', emoji: '✍️' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'HSK Vocabulary', url: '/chinese/tools/hsk-vocabulary/', emoji: '📚' },
+];
+const relatedArticles = [
+  { title: 'Chinese Radicals: Key to Memorizing Characters', url: '/chinese/blog/chinese-radicals/' },
+  { title: 'How to Learn Chinese Characters Effectively', url: '/chinese/blog/learn-chinese-characters/' },
+];
+---
+<ToolLayout title="Chinese Radical Lookup" description="Browse and search Chinese radicals (部首). See example characters for each radical. Sort by stroke count or pinyin. A visual guide to the building blocks of Chinese characters." language="chinese" toolSlug="radical-lookup" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <RadicalLookup client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Explore Chinese Radicals</h2>
+      <p>Click any radical to see characters that contain it. Search by radical, pinyin, meaning, or even by a character to find which radical it belongs to. Understanding radicals unlocks the logic behind thousands of Chinese characters.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

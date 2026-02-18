@@ -1,0 +1,27 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import HSKVocabulary from '../../../components/tools/chinese/HSKVocabulary.tsx';
+const faq = [
+  { q: 'What is HSK?', a: 'HSK (Hanyu Shuiping Kaoshi / 汉语水平考试) is the standardized Chinese proficiency test recognized internationally. It has 6 levels, from HSK 1 (beginner, 150 words) to HSK 6 (advanced, 5000+ words). Our tool covers vocabulary from HSK 1-4.' },
+  { q: 'How many HSK words should I learn per day?', a: 'A sustainable pace is 5-10 new words per day. At this rate, you can reach HSK 3 level (~600 words) in about 3-4 months. Quality matters more than quantity — make sure you can recognize, pronounce, and use each word.' },
+  { q: 'Can I search across all HSK levels?', a: 'Yes! Use the search bar to find any word across all levels. You can search by Chinese character, pinyin, or English meaning.' },
+];
+const relatedTools = [
+  { name: 'Pinyin Quiz', url: '/chinese/tools/pinyin-quiz/', emoji: '❓' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+];
+const relatedArticles = [
+  { title: 'How to Prepare for HSK: Complete Guide', url: '/chinese/blog/hsk-preparation/' },
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+];
+---
+<ToolLayout title="HSK Vocabulary Browser" description="Browse HSK vocabulary by level (HSK 1-4). Search by character, pinyin, or meaning. Listen to pronunciation and save words to study later." language="chinese" toolSlug="hsk-vocabulary" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <HSKVocabulary client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Browse HSK Vocabulary</h2>
+      <p>This tool provides a browsable, searchable vocabulary list organized by HSK level. Click any character to hear its pronunciation, or star words to build your personal study list.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

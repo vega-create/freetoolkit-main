@@ -1,0 +1,27 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import PracticeSheetGenerator from '../../../components/tools/chinese/PracticeSheetGenerator.tsx';
+const faq = [
+  { q: 'How do I use the practice sheets?', a: 'Enter Chinese characters or select a preset category, then click Print. The first cell shows the model character, the second has a faded guide, and the remaining cells are blank for you to practice writing.' },
+  { q: 'What are the grid guidelines for?', a: 'The diagonal cross guidelines in each cell help you center and proportion your characters correctly. They show you where the center of the cell is, making it easier to write balanced characters.' },
+  { q: 'How many times should I write each character?', a: 'Writing each character 6-10 times is a good starting point. Focus on correct stroke order rather than speed. As you get comfortable, you can reduce repetitions and spend more time on new characters.' },
+];
+const relatedTools = [
+  { name: 'Stroke Order', url: '/chinese/tools/stroke-order/', emoji: '✍️' },
+  { name: 'Daily Character', url: '/chinese/tools/daily-character/', emoji: '📅' },
+  { name: 'Radical Lookup', url: '/chinese/tools/radical-lookup/', emoji: '⿱' },
+];
+const relatedArticles = [
+  { title: 'How to Learn Chinese Characters Effectively', url: '/chinese/blog/learn-chinese-characters/' },
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+];
+---
+<ToolLayout title="Practice Sheet Generator" description="Generate printable Chinese character practice sheets. Choose preset character sets or enter your own. Includes model characters, tracing guides, and customizable grid options." language="chinese" toolSlug="practice-sheet" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <PracticeSheetGenerator client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Create Custom Practice Sheets</h2>
+      <p>Enter any Chinese characters to generate a printable practice sheet. Use the preset categories for common character groups, or type your own characters for focused practice. Customize the number of practice rows and toggle grid guidelines.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

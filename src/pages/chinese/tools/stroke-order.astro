@@ -1,0 +1,27 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import StrokeOrder from '../../../components/tools/chinese/StrokeOrder.tsx';
+const faq = [
+  { q: 'Why does stroke order matter?', a: 'Correct stroke order helps you write characters more fluidly and naturally. It also improves your ability to recognize characters, aids in memorization, and is essential for using handwriting input on phones and computers.' },
+  { q: 'What are the basic rules of stroke order?', a: 'The main rules are: top to bottom, left to right, horizontal before vertical, outside before inside, center before sides, and closing strokes last. Following these rules makes writing smoother and more natural.' },
+  { q: 'How many basic strokes are there in Chinese?', a: 'There are 8 basic stroke types: horizontal (横), vertical (竖), left-falling (撇), right-falling (捺), dot (点), turn (折), hook (钩), and rising (提). All Chinese characters are composed of combinations of these strokes.' },
+];
+const relatedTools = [
+  { name: 'Radical Lookup', url: '/chinese/tools/radical-lookup/', emoji: '⿱' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'Practice Sheet', url: '/chinese/tools/practice-sheet/', emoji: '📝' },
+];
+const relatedArticles = [
+  { title: 'How to Learn Chinese Characters Effectively', url: '/chinese/blog/learn-chinese-characters/' },
+  { title: 'Chinese Radicals: The Building Blocks', url: '/chinese/blog/chinese-radicals/' },
+];
+---
+<ToolLayout title="Chinese Stroke Order" description="See the correct stroke order for Chinese characters. Step through each stroke with numbered guides and learn the 8 basic stroke types." language="chinese" toolSlug="stroke-order" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <StrokeOrder client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Learn Stroke Order</h2>
+      <p>Select a character to see its stroke order broken down step by step. Each stroke is labeled with its Chinese name and direction. Use the navigation buttons to step through the strokes one at a time.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

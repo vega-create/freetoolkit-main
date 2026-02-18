@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import ZhuyinConverter from '../../../components/tools/chinese/ZhuyinConverter.tsx';
+const faq = [
+  { q: 'What is Zhuyin (Bopomofo)?', a: 'Zhuyin Fuhao (注音符號), also known as Bopomofo, is a phonetic system used in Taiwan to teach Chinese pronunciation. Named after its first four symbols ㄅㄆㄇㄈ, it was developed in the 1910s and remains the primary phonetic system taught in Taiwanese schools.' },
+  { q: 'Is Zhuyin better than Pinyin?', a: 'Neither is better — they serve the same purpose of representing Chinese pronunciation. Pinyin uses Latin letters and is standard internationally. Zhuyin uses unique symbols and is primarily used in Taiwan. Learning both can deepen your understanding of Chinese phonology.' },
+  { q: 'Where is Zhuyin used?', a: 'Zhuyin is primarily used in Taiwan. It appears in children\'s books, dictionaries, and on Taiwanese keyboards. Most Taiwanese people type Chinese using Zhuyin input on their phones and computers.' },
+];
+const relatedTools = [
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Tone Trainer', url: '/chinese/tools/tone-trainer/', emoji: '🎵' },
+  { name: 'Name Generator', url: '/chinese/tools/name-generator/', emoji: '📝' },
+];
+const relatedArticles = [
+  { title: 'Bopomofo vs Pinyin: Which Should You Learn?', url: '/chinese/blog/bopomofo-vs-pinyin/' },
+  { title: 'How to Type Chinese: Zhuyin Keyboard Guide', url: '/chinese/blog/type-chinese-keyboard/' },
+];
+---
+<ToolLayout title="Zhuyin (Bopomofo) Converter" description="Convert Pinyin to Zhuyin (Bopomofo/注音符號). Includes a complete reference chart of all Zhuyin symbols with their Pinyin equivalents." language="chinese" toolSlug="zhuyin-converter" faq={faq} relatedTools={relatedTools} relatedArticles={relatedArticles}>
+  <ZhuyinConverter client:load />
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>Pinyin to Zhuyin Converter</h2>
+      <p>Enter pinyin syllables (separated by spaces) to see them converted to Zhuyin (Bopomofo) symbols. This tool is especially useful for learners studying in Taiwan or using Taiwanese learning materials that use Zhuyin notation.</p>
+      <h3>Quick Reference Chart</h3>
+      <p>Expand the reference chart at the bottom to see all Zhuyin symbols mapped to their Pinyin equivalents. This covers initials (聲母), finals (韻母), and the tone marks used in Zhuyin.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
