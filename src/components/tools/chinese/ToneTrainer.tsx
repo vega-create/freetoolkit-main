@@ -1,43 +1,45 @@
 import { useState, useCallback } from 'react';
 
+type CharSet = 'traditional' | 'simplified';
+
 const TONE_QUESTIONS = [
-  { char: '妈', pinyin: 'mā', tone: 1, meaning: 'mother', group: ['mā', 'má', 'mǎ', 'mà'] },
-  { char: '麻', pinyin: 'má', tone: 2, meaning: 'hemp, numb', group: ['mā', 'má', 'mǎ', 'mà'] },
-  { char: '马', pinyin: 'mǎ', tone: 3, meaning: 'horse', group: ['mā', 'má', 'mǎ', 'mà'] },
-  { char: '骂', pinyin: 'mà', tone: 4, meaning: 'scold', group: ['mā', 'má', 'mǎ', 'mà'] },
-  { char: '八', pinyin: 'bā', tone: 1, meaning: 'eight', group: ['bā', 'bá', 'bǎ', 'bà'] },
-  { char: '拔', pinyin: 'bá', tone: 2, meaning: 'pull out', group: ['bā', 'bá', 'bǎ', 'bà'] },
-  { char: '把', pinyin: 'bǎ', tone: 3, meaning: 'hold, handle', group: ['bā', 'bá', 'bǎ', 'bà'] },
-  { char: '爸', pinyin: 'bà', tone: 4, meaning: 'father', group: ['bā', 'bá', 'bǎ', 'bà'] },
-  { char: '书', pinyin: 'shū', tone: 1, meaning: 'book', group: ['shū', 'shú', 'shǔ', 'shù'] },
-  { char: '熟', pinyin: 'shú', tone: 2, meaning: 'cooked, ripe', group: ['shū', 'shú', 'shǔ', 'shù'] },
-  { char: '鼠', pinyin: 'shǔ', tone: 3, meaning: 'rat, mouse', group: ['shū', 'shú', 'shǔ', 'shù'] },
-  { char: '树', pinyin: 'shù', tone: 4, meaning: 'tree', group: ['shū', 'shú', 'shǔ', 'shù'] },
-  { char: '飞', pinyin: 'fēi', tone: 1, meaning: 'fly', group: ['fēi', 'féi', 'fěi', 'fèi'] },
-  { char: '肥', pinyin: 'féi', tone: 2, meaning: 'fat', group: ['fēi', 'féi', 'fěi', 'fèi'] },
-  { char: '匪', pinyin: 'fěi', tone: 3, meaning: 'bandit', group: ['fēi', 'féi', 'fěi', 'fèi'] },
-  { char: '费', pinyin: 'fèi', tone: 4, meaning: 'fee, expense', group: ['fēi', 'féi', 'fěi', 'fèi'] },
-  { char: '花', pinyin: 'huā', tone: 1, meaning: 'flower', group: ['huā', 'huá', 'huǎ', 'huà'] },
-  { char: '华', pinyin: 'huá', tone: 2, meaning: 'splendid, China', group: ['huā', 'huá', 'huǎ', 'huà'] },
-  { char: '画', pinyin: 'huà', tone: 4, meaning: 'draw, painting', group: ['huā', 'huá', 'huǎ', 'huà'] },
-  { char: '汤', pinyin: 'tāng', tone: 1, meaning: 'soup', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
-  { char: '糖', pinyin: 'táng', tone: 2, meaning: 'sugar, candy', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
-  { char: '躺', pinyin: 'tǎng', tone: 3, meaning: 'lie down', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
-  { char: '烫', pinyin: 'tàng', tone: 4, meaning: 'hot (to touch)', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
-  { char: '猪', pinyin: 'zhū', tone: 1, meaning: 'pig', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
-  { char: '竹', pinyin: 'zhú', tone: 2, meaning: 'bamboo', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
-  { char: '主', pinyin: 'zhǔ', tone: 3, meaning: 'owner, main', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
-  { char: '住', pinyin: 'zhù', tone: 4, meaning: 'live, stay', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
+  { char: '妈', trad: '媽', pinyin: 'mā', tone: 1, meaning: 'mother', group: ['mā', 'má', 'mǎ', 'mà'] },
+  { char: '麻', trad: '麻', pinyin: 'má', tone: 2, meaning: 'hemp, numb', group: ['mā', 'má', 'mǎ', 'mà'] },
+  { char: '马', trad: '馬', pinyin: 'mǎ', tone: 3, meaning: 'horse', group: ['mā', 'má', 'mǎ', 'mà'] },
+  { char: '骂', trad: '罵', pinyin: 'mà', tone: 4, meaning: 'scold', group: ['mā', 'má', 'mǎ', 'mà'] },
+  { char: '八', trad: '八', pinyin: 'bā', tone: 1, meaning: 'eight', group: ['bā', 'bá', 'bǎ', 'bà'] },
+  { char: '拔', trad: '拔', pinyin: 'bá', tone: 2, meaning: 'pull out', group: ['bā', 'bá', 'bǎ', 'bà'] },
+  { char: '把', trad: '把', pinyin: 'bǎ', tone: 3, meaning: 'hold, handle', group: ['bā', 'bá', 'bǎ', 'bà'] },
+  { char: '爸', trad: '爸', pinyin: 'bà', tone: 4, meaning: 'father', group: ['bā', 'bá', 'bǎ', 'bà'] },
+  { char: '书', trad: '書', pinyin: 'shū', tone: 1, meaning: 'book', group: ['shū', 'shú', 'shǔ', 'shù'] },
+  { char: '熟', trad: '熟', pinyin: 'shú', tone: 2, meaning: 'cooked, ripe', group: ['shū', 'shú', 'shǔ', 'shù'] },
+  { char: '鼠', trad: '鼠', pinyin: 'shǔ', tone: 3, meaning: 'rat, mouse', group: ['shū', 'shú', 'shǔ', 'shù'] },
+  { char: '树', trad: '樹', pinyin: 'shù', tone: 4, meaning: 'tree', group: ['shū', 'shú', 'shǔ', 'shù'] },
+  { char: '飞', trad: '飛', pinyin: 'fēi', tone: 1, meaning: 'fly', group: ['fēi', 'féi', 'fěi', 'fèi'] },
+  { char: '肥', trad: '肥', pinyin: 'féi', tone: 2, meaning: 'fat', group: ['fēi', 'féi', 'fěi', 'fèi'] },
+  { char: '匪', trad: '匪', pinyin: 'fěi', tone: 3, meaning: 'bandit', group: ['fēi', 'féi', 'fěi', 'fèi'] },
+  { char: '费', trad: '費', pinyin: 'fèi', tone: 4, meaning: 'fee, expense', group: ['fēi', 'féi', 'fěi', 'fèi'] },
+  { char: '花', trad: '花', pinyin: 'huā', tone: 1, meaning: 'flower', group: ['huā', 'huá', 'huǎ', 'huà'] },
+  { char: '华', trad: '華', pinyin: 'huá', tone: 2, meaning: 'splendid, China', group: ['huā', 'huá', 'huǎ', 'huà'] },
+  { char: '画', trad: '畫', pinyin: 'huà', tone: 4, meaning: 'draw, painting', group: ['huā', 'huá', 'huǎ', 'huà'] },
+  { char: '汤', trad: '湯', pinyin: 'tāng', tone: 1, meaning: 'soup', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
+  { char: '糖', trad: '糖', pinyin: 'táng', tone: 2, meaning: 'sugar, candy', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
+  { char: '躺', trad: '躺', pinyin: 'tǎng', tone: 3, meaning: 'lie down', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
+  { char: '烫', trad: '燙', pinyin: 'tàng', tone: 4, meaning: 'hot (to touch)', group: ['tāng', 'táng', 'tǎng', 'tàng'] },
+  { char: '猪', trad: '豬', pinyin: 'zhū', tone: 1, meaning: 'pig', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
+  { char: '竹', trad: '竹', pinyin: 'zhú', tone: 2, meaning: 'bamboo', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
+  { char: '主', trad: '主', pinyin: 'zhǔ', tone: 3, meaning: 'owner, main', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
+  { char: '住', trad: '住', pinyin: 'zhù', tone: 4, meaning: 'live, stay', group: ['zhū', 'zhú', 'zhǔ', 'zhù'] },
 ];
 
 const TONE_NAMES = ['', '1st (flat)', '2nd (rising)', '3rd (dipping)', '4th (falling)'];
 const TONE_SYMBOLS = ['', '¯', 'ˊ', 'ˇ', 'ˋ'];
 
-function speak(text: string) {
+function speak(text: string, charset: CharSet) {
   if (!('speechSynthesis' in window)) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'zh-CN';
+  u.lang = charset === 'traditional' ? 'zh-TW' : 'zh-CN';
   u.rate = 0.7;
   window.speechSynthesis.speak(u);
 }
@@ -52,16 +54,30 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function ToneTrainer() {
+  const [charset, setCharset] = useState<CharSet>('traditional');
   const [questions, setQuestions] = useState(() => shuffle(TONE_QUESTIONS).slice(0, 10));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
+  const [started, setStarted] = useState(false);
 
   const current = questions[currentIdx];
   const isLast = currentIdx === questions.length - 1;
   const isCorrect = selected === current?.tone;
+  const displayChar = charset === 'traditional' ? current?.trad : current?.char;
+
+  const startQuiz = (cs: CharSet) => {
+    setCharset(cs);
+    setQuestions(shuffle(TONE_QUESTIONS).slice(0, 10));
+    setCurrentIdx(0);
+    setSelected(null);
+    setScore(0);
+    setShowResult(false);
+    setAnswers([]);
+    setStarted(true);
+  };
 
   const handleSelect = (tone: number) => {
     if (selected !== null) return;
@@ -69,13 +85,12 @@ export default function ToneTrainer() {
     const correct = tone === current.tone;
     if (correct) setScore(s => s + 1);
     setAnswers(a => [...a, correct]);
-    speak(current.char);
+    speak(displayChar, charset);
   };
 
   const handleNext = () => {
     if (isLast) {
       setShowResult(true);
-      // Save score
       try {
         const data = JSON.parse(localStorage.getItem('ftk-chinese') || '{}');
         if (!data.quizScores) data.quizScores = {};
@@ -91,13 +106,36 @@ export default function ToneTrainer() {
   };
 
   const restart = () => {
-    setQuestions(shuffle(TONE_QUESTIONS).slice(0, 10));
-    setCurrentIdx(0);
-    setSelected(null);
-    setScore(0);
-    setShowResult(false);
-    setAnswers([]);
+    setStarted(false);
   };
+
+  // Character set selection
+  if (!started) {
+    return (
+      <div className="space-y-6 text-center py-8">
+        <h2 className="text-xl font-bold">Choose Character Set</h2>
+        <p className="text-gray-500">Select which characters you want to practice with</p>
+        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+          <button
+            onClick={() => startQuiz('traditional')}
+            className="p-6 rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all"
+          >
+            <div className="text-3xl font-bold mb-2">繁</div>
+            <div className="text-lg font-bold">Traditional</div>
+            <div className="text-xs text-gray-500 mt-1">Used in Taiwan</div>
+          </button>
+          <button
+            onClick={() => startQuiz('simplified')}
+            className="p-6 rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all"
+          >
+            <div className="text-3xl font-bold mb-2">简</div>
+            <div className="text-lg font-bold">Simplified</div>
+            <div className="text-xs text-gray-500 mt-1">Used in China</div>
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (showResult) {
     const finalScore = score;
@@ -108,12 +146,20 @@ export default function ToneTrainer() {
         <h2 className="text-2xl font-bold">Quiz Complete!</h2>
         <div className="text-4xl font-bold text-blue-600">{finalScore} / {questions.length}</div>
         <p className="text-gray-500">{pct}% correct</p>
+        <p className="text-sm text-gray-400">
+          {charset === 'traditional' ? '繁體 Traditional' : '简体 Simplified'}
+        </p>
         <p className="text-gray-500">
           {pct >= 90 ? 'Excellent! You have a great ear for tones!' : pct >= 70 ? 'Good job! Keep practicing!' : 'Tones are tricky — keep at it!'}
         </p>
-        <button onClick={restart} className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
-          🔄 Try Again
-        </button>
+        <div className="flex gap-3 justify-center">
+          <button onClick={() => startQuiz(charset)} className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
+            🔄 Try Again
+          </button>
+          <button onClick={restart} className="px-8 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300">
+            Change Set
+          </button>
+        </div>
       </div>
     );
   }
@@ -123,7 +169,10 @@ export default function ToneTrainer() {
       {/* Progress */}
       <div className="flex items-center justify-between text-sm text-gray-500">
         <span>Question {currentIdx + 1} of {questions.length}</span>
-        <span>Score: {score}/{currentIdx + (selected !== null ? 1 : 0)}</span>
+        <div className="flex items-center gap-3">
+          <span className="px-2 py-0.5 bg-gray-100 rounded text-xs">{charset === 'traditional' ? '繁體' : '简体'}</span>
+          <span>Score: {score}/{currentIdx + (selected !== null ? 1 : 0)}</span>
+        </div>
       </div>
       <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
         <div className="h-full bg-blue-500 rounded-full transition-all" style={{ width: `${((currentIdx + (selected !== null ? 1 : 0)) / questions.length) * 100}%` }} />
@@ -132,10 +181,10 @@ export default function ToneTrainer() {
       {/* Question */}
       <div className="text-center py-6">
         <p className="text-sm text-gray-500 mb-4">Listen and identify the tone:</p>
-        <div className="text-7xl font-bold mb-4 cursor-pointer hover:text-blue-600" onClick={() => speak(current.char)}>
-          {current.char}
+        <div className="text-7xl font-bold mb-4 cursor-pointer hover:text-blue-600" onClick={() => speak(displayChar, charset)}>
+          {displayChar}
         </div>
-        <button onClick={() => speak(current.char)} className="px-6 py-3 bg-blue-100 text-blue-700 rounded-lg font-medium hover:bg-blue-200 text-lg">
+        <button onClick={() => speak(displayChar, charset)} className="px-6 py-3 bg-blue-100 text-blue-700 rounded-lg font-medium hover:bg-blue-200 text-lg">
           🔊 Play Sound
         </button>
       </div>
