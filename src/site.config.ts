@@ -31,9 +31,11 @@ export const siteConfig = {
       },
       categories: [
         { slug: 'chinese-basics', name: 'Chinese Basics', emoji: '📖' },
+        { slug: 'characters', name: 'Characters', emoji: '字' },
+        { slug: 'grammar', name: 'Grammar', emoji: '📐' },
+        { slug: 'culture', name: 'Culture', emoji: '🏮' },
         { slug: 'hsk-prep', name: 'HSK Prep', emoji: '📝' },
-        { slug: 'culture-context', name: 'Culture & Context', emoji: '🏮' },
-        { slug: 'learning-tips', name: 'Learning Tips', emoji: '💡' },
+        { slug: 'study-tips', name: 'Study Tips', emoji: '💡' },
       ],
     },
     japanese: {

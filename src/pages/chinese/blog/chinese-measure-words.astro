@@ -1,0 +1,43 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What is a Chinese measure word?`, a: `A measure word or classifier is a word placed between a number and a noun in Chinese. For example, to say one book you say yi ben shu, where ben is the measure word for books. Every noun has an associated measure word.` }, { q: `Can I use ge for everything?`, a: `The measure word ge is the most general classifier and can be understood for almost any noun. While not always technically correct, native speakers will understand you. However, learning specific measure words improves your fluency.` }, { q: `How many measure words should I learn?`, a: `Chinese has over 100 measure words, but learning the 20-25 most common ones covers the vast majority of everyday situations.` }];
+const relatedTools = [{ name: "Measure Word Practice", url: "/chinese/tools/measure-word/" }, { name: "Number Converter", url: "/chinese/tools/number-converter/" }];
+const headings = [{ depth: 2, slug: "what-are-measure-words", text: "What Are Measure Words?" }, { depth: 2, slug: "essential-12", text: "The 12 Most Essential Measure Words" }, { depth: 2, slug: "rules-and-tips", text: "Rules and Tips" }];
+---
+<BlogLayout
+  title="Chinese Measure Words: The Complete Guide (with Quiz)"
+  description="Learn the most common Chinese measure words with examples, rules, and an interactive quiz. Master this essential grammar point for natural Mandarin."
+  language="chinese"
+  category="grammar"
+  tags={["grammar", "measure-words", "beginner"]}
+  publishDate="2026-02-17"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="what-are-measure-words">What Are Measure Words?</h2>
+    <p>In English, we sometimes use special words between numbers and nouns: "a <em>piece</em> of paper," "two <em>cups</em> of coffee," "a <em>pair</em> of shoes." Chinese does this with <strong>every noun</strong>, using words called measure words or classifiers (量词, liàngcí).</p>
+    <p>The basic structure is: <strong>Number + Measure Word + Noun</strong>. So "one book" becomes 一本书 (yī běn shū), where 本 (běn) is the measure word specifically for books and bound items.</p>
+    <p>Using the wrong measure word is a common mistake for learners, but it rarely causes misunderstanding. Think of it like saying "a piece of book" in English — it sounds odd but the meaning is clear. Still, using correct measure words marks the difference between basic and natural-sounding Chinese.</p>
+
+    <h2 id="essential-12">The 12 Most Essential Measure Words</h2>
+    <p><strong>个 (gè)</strong> — The universal measure word. Works for people, general objects, and as a fallback when you do not know the specific one: 一个人 (a person), 一个苹果 (an apple).</p>
+    <p><strong>本 (běn)</strong> — Books, magazines, dictionaries: 一本书 (a book), 三本杂志 (three magazines).</p>
+    <p><strong>杯 (bēi)</strong> — Cups and glasses of liquid: 一杯水 (a glass of water), 两杯咖啡 (two cups of coffee).</p>
+    <p><strong>只 (zhī)</strong> — Small animals: 一只猫 (a cat), 两只鸟 (two birds).</p>
+    <p><strong>条 (tiáo)</strong> — Long thin things, fish, roads, pants: 一条鱼 (a fish), 一条路 (a road).</p>
+    <p><strong>张 (zhāng)</strong> — Flat things like paper, tables, photos: 一张纸 (a sheet of paper), 一张桌子 (a table).</p>
+    <p><strong>件 (jiàn)</strong> — Clothing (upper body) and matters: 一件衣服 (a piece of clothing), 一件事 (a matter).</p>
+    <p><strong>辆 (liàng)</strong> — Vehicles: 一辆车 (a car), 两辆自行车 (two bicycles).</p>
+    <p><strong>双 (shuāng)</strong> — Pairs: 一双鞋 (a pair of shoes), 一双筷子 (a pair of chopsticks).</p>
+    <p><strong>瓶 (píng)</strong> — Bottles: 一瓶水 (a bottle of water).</p>
+    <p><strong>块 (kuài)</strong> — Pieces, chunks, and money colloquially: 一块蛋糕 (a piece of cake), 十块钱 (ten yuan).</p>
+    <p><strong>位 (wèi)</strong> — People (polite form): 一位老师 (a teacher), 两位客人 (two guests).</p>
+
+    <h2 id="rules-and-tips">Rules and Tips</h2>
+    <p><strong>Demonstratives need measure words too.</strong> When using "this" or "that," include the measure word: 这本书 (this book), 那只猫 (that cat).</p>
+    <p><strong>Look for patterns.</strong> Measure words often relate to shape or category: 条 (tiáo) for long things, 张 (zhāng) for flat things, 块 (kuài) for chunk-shaped things.</p>
+    <p>Practice with our interactive <a href="/chinese/tools/measure-word/">Measure Word Practice tool</a> which includes both a study mode and a quiz. For Chinese number basics, see our <a href="/chinese/tools/number-converter/">Number Converter</a>. The <a href="https://resources.allsetlearning.com/chinese/grammar/Measure_words_for_counting" target="_blank" rel="noopener">AllSet Learning grammar wiki</a> has additional examples.</p>
+
+</BlogLayout>

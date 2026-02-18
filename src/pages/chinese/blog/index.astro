@@ -1,12 +1,134 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const articles = [
+  {
+    slug: 'chinese-tones-guide',
+    title: 'How to Learn Chinese Tones: Complete Guide for Beginners',
+    desc: 'Master the 4 Chinese tones with practical exercises and common mistakes to avoid.',
+    category: 'Basics',
+    date: '2026-02-15',
+    tags: ['tones', 'pinyin', 'beginner'],
+  },
+  {
+    slug: 'pinyin-guide',
+    title: 'Pinyin Guide: Master Chinese Pronunciation from Day One',
+    desc: 'Learn the complete Pinyin system including initials, finals, and tone marks.',
+    category: 'Basics',
+    date: '2026-02-15',
+    tags: ['pinyin', 'pronunciation'],
+  },
+  {
+    slug: 'common-chinese-characters',
+    title: '50 Most Common Chinese Characters Every Beginner Should Know',
+    desc: 'The most frequently used characters with meanings, pinyin, and example words.',
+    category: 'Characters',
+    date: '2026-02-16',
+    tags: ['characters', 'vocabulary'],
+  },
+  {
+    slug: 'chinese-idioms',
+    title: 'Chinese Idioms (Chengyu): 15 Essential Expressions',
+    desc: 'Four-character idioms with origin stories, meanings, and example sentences.',
+    category: 'Culture',
+    date: '2026-02-16',
+    tags: ['idioms', 'culture'],
+  },
+  {
+    slug: 'chinese-measure-words',
+    title: 'Chinese Measure Words: The Complete Guide',
+    desc: 'Learn the most common measure words with examples and rules.',
+    category: 'Grammar',
+    date: '2026-02-17',
+    tags: ['grammar', 'measure-words'],
+  },
+  {
+    slug: 'hsk-preparation',
+    title: 'How to Prepare for the HSK Exam: Study Guide by Level',
+    desc: 'Study strategies, vocabulary tips, and free resources for every HSK level.',
+    category: 'HSK Prep',
+    date: '2026-02-17',
+    tags: ['hsk', 'exam'],
+  },
+  {
+    slug: 'chinese-radicals',
+    title: 'Chinese Radicals: The Building Blocks of Every Character',
+    desc: 'How radicals work and how they help you learn characters faster.',
+    category: 'Characters',
+    date: '2026-02-18',
+    tags: ['radicals', 'characters'],
+  },
+  {
+    slug: 'learn-chinese-characters',
+    title: 'How to Learn Chinese Characters: Step-by-Step Guide',
+    desc: 'Proven strategies for memorizing characters from stroke order to spaced repetition.',
+    category: 'Study Tips',
+    date: '2026-02-18',
+    tags: ['characters', 'study-tips'],
+  },
+  {
+    slug: 'bopomofo-vs-pinyin',
+    title: 'Bopomofo vs Pinyin: Which Should You Learn?',
+    desc: 'Compare Zhuyin and Pinyin — advantages, usage, and how to choose.',
+    category: 'Basics',
+    date: '2026-02-18',
+    tags: ['zhuyin', 'pinyin', 'taiwan'],
+  },
+  {
+    slug: 'chinese-names-meaning',
+    title: 'Chinese Names: How They Work and What They Mean',
+    desc: 'Understand the structure, meaning, and cultural traditions behind Chinese names.',
+    category: 'Culture',
+    date: '2026-02-18',
+    tags: ['names', 'culture'],
+  },
+];
+
+const categories = [...new Set(articles.map(a => a.category))];
 ---
-<BaseLayout title="Chinese Learning Blog" description="Guides, tips, and insights for learning Mandarin Chinese. From beginner basics to HSK prep.">
+<BaseLayout title="Chinese Learning Blog" description="Guides, tips, and insights for learning Mandarin Chinese. From beginner basics to HSK prep and cultural insights.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Chinese', url: '/chinese/' }, { name: 'Blog' }]} />
-    <h1 class="mb-2">Chinese Learning Blog</h1>
+    <h1 class="text-3xl font-bold mb-2">Chinese Learning Blog</h1>
     <p class="text-gray-500 mb-8">Guides, tips, and cultural insights for Mandarin learners.</p>
-    <p class="text-gray-400 text-center py-12">📝 Articles coming soon! Stay tuned for Chinese learning guides and HSK prep tips.</p>
+
+    {/* Category Filter */}
+    <div class="flex flex-wrap gap-2 mb-8">
+      {categories.map(cat => (
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">{cat}</span>
+      ))}
+    </div>
+
+    {/* Article List */}
+    <div class="space-y-4">
+      {articles.map(art => (
+        <a href={`/chinese/blog/${art.slug}/`}
+          class="block p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+          <div class="flex items-center gap-2 mb-2 text-xs">
+            <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded">{art.category}</span>
+            <time class="text-gray-400" datetime={art.date}>
+              {new Date(art.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            </time>
+          </div>
+          <h2 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-1">{art.title}</h2>
+          <p class="text-sm text-gray-500">{art.desc}</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            {art.tags.map(tag => (
+              <span class="text-xs text-gray-400">#{tag}</span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div class="mt-10 p-6 bg-blue-50 rounded-xl text-center">
+      <h3 class="font-bold text-blue-800 mb-2">Practice What You Learn</h3>
+      <p class="text-sm text-blue-600 mb-3">Put your knowledge to work with our free interactive tools.</p>
+      <a href="/chinese/tools/" class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Try Chinese Tools →
+      </a>
+    </div>
   </div>
 </BaseLayout>

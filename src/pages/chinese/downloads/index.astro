@@ -1,12 +1,69 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const downloads = [
+  {
+    title: 'Pinyin Chart (PDF)',
+    desc: 'Complete chart of all pinyin initials, finals, and tone marks with Zhuyin equivalents.',
+    file: '/downloads/chinese/pinyin-chart.pdf',
+    icon: '📋',
+    size: '1 page',
+  },
+  {
+    title: 'HSK 1-3 Word Lists',
+    desc: 'Essential vocabulary organized by HSK level with pinyin and English meanings.',
+    file: '/downloads/chinese/hsk-word-lists.pdf',
+    icon: '📚',
+    size: '3 pages',
+  },
+  {
+    title: 'Radical Chart',
+    desc: '24 most common Chinese radicals with stroke counts and example characters.',
+    file: '/downloads/chinese/radical-chart.pdf',
+    icon: '⿱',
+    size: '1 page',
+  },
+  {
+    title: 'Practice Sheets',
+    desc: 'Printable character writing sheets with grid guidelines for Numbers, Greetings, Family, and Nature.',
+    file: '/downloads/chinese/practice-sheets.pdf',
+    icon: '✍️',
+    size: '4 pages',
+  },
+];
 ---
-<BaseLayout title="Free Chinese Learning Downloads" description="Download free PDFs: HSK vocabulary lists, pinyin charts, radical charts, and character practice sheets.">
+<BaseLayout title="Free Chinese Learning Downloads" description="Download free PDFs: HSK vocabulary lists, pinyin charts, radical charts, and character practice sheets for Chinese learners.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Chinese', url: '/chinese/' }, { name: 'Downloads' }]} />
-    <h1 class="mb-2">Free Downloads</h1>
-    <p class="text-gray-500 mb-8">Free printable PDFs for Chinese learners.</p>
-    <p class="text-gray-400 text-center py-12">📥 Downloadable resources coming soon!</p>
+    <h1 class="text-3xl font-bold mb-2">Free Downloads</h1>
+    <p class="text-gray-500 mb-8">Free printable PDFs to support your Chinese learning journey.</p>
+
+    <div class="grid gap-4">
+      {downloads.map(d => (
+        <a href={d.file} target="_blank" rel="noopener"
+          class="flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+          <div class="text-3xl">{d.icon}</div>
+          <div class="flex-1">
+            <h2 class="text-lg font-bold text-gray-900 group-hover:text-blue-600">{d.title}</h2>
+            <p class="text-sm text-gray-500">{d.desc}</p>
+          </div>
+          <div class="text-right flex-shrink-0">
+            <div class="text-xs text-gray-400 mb-1">{d.size}</div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg group-hover:bg-blue-700">
+              Download PDF
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 bg-blue-50 rounded-xl p-6 text-center">
+      <h3 class="font-bold text-blue-800 mb-2">Want More Resources?</h3>
+      <p class="text-sm text-blue-600 mb-3">Try our interactive tools for a hands-on learning experience.</p>
+      <a href="/chinese/tools/" class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Explore Chinese Tools →
+      </a>
+    </div>
   </div>
 </BaseLayout>

@@ -1,0 +1,44 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How many Chinese radicals are there?`, a: `The traditional Kangxi Dictionary system lists 214 radicals. In practice, about 50-80 radicals appear frequently in common characters. Learning the top 24 radicals helps you understand hundreds of characters.` }, { q: `Do radicals tell you the meaning of a character?`, a: `Often yes. Many characters have a semantic radical that hints at the general meaning category. For example, characters with the water radical often relate to water or liquids, and characters with the heart radical often relate to emotions.` }, { q: `Do radicals tell you the pronunciation?`, a: `Some characters have a phonetic component alongside the semantic radical that hints at pronunciation. However, this is less reliable than meaning hints, as pronunciations have changed over centuries.` }];
+const relatedTools = [{ name: "Radical Lookup", url: "/chinese/tools/radical-lookup/" }, { name: "Stroke Order", url: "/chinese/tools/stroke-order/" }];
+const headings = [{ depth: 2, slug: "what-are-radicals", text: "What Are Radicals?" }, { depth: 2, slug: "how-radicals-help", text: "How Radicals Help You Learn" }, { depth: 2, slug: "top-radicals", text: "The Most Useful Radicals" }, { depth: 2, slug: "practice-strategy", text: "Practice Strategy" }];
+---
+<BlogLayout
+  title="Chinese Radicals: The Building Blocks of Every Character"
+  description="Understand how Chinese radicals work and how they help you learn characters faster. Covers the most common radicals with examples."
+  language="chinese"
+  category="characters"
+  tags={["radicals", "characters", "beginner"]}
+  publishDate="2026-02-18"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="what-are-radicals">What Are Radicals?</h2>
+    <p>Chinese characters are not random collections of strokes — they are built from recurring components called <strong>radicals</strong> (部首, bùshǒu). Think of radicals as the "building blocks" or "DNA" of Chinese characters. Just as English words are built from roots and affixes (un-help-ful), Chinese characters combine radicals to create meaning.</p>
+    <p>Every Chinese character can be categorized under one radical, which is how characters are organized in traditional dictionaries. There are 214 radicals in the classic Kangxi Dictionary system, ranging from one-stroke radicals like 一 (horizontal line) to complex ones with 17 strokes.</p>
+
+    <h2 id="how-radicals-help">How Radicals Help You Learn</h2>
+    <p><strong>Meaning clues:</strong> The semantic radical in a character often indicates its general meaning category. For example, every character containing the water radical (氵) relates to water or liquids in some way: 河 (river), 海 (ocean), 洗 (wash), 游 (swim), 汤 (soup).</p>
+    <p><strong>Character decomposition:</strong> Instead of memorizing a 15-stroke character as one complex shape, you can break it into 2-3 familiar radicals. This dramatically reduces the memory burden.</p>
+    <p><strong>Dictionary skills:</strong> Knowing radicals lets you look up unfamiliar characters in dictionaries organized by radical (which is still how many Chinese dictionaries are structured).</p>
+    <p><strong>Pattern recognition:</strong> Once you know radicals, new characters feel less foreign. You start seeing familiar patterns everywhere, making reading less intimidating.</p>
+
+    <h2 id="top-radicals">The Most Useful Radicals</h2>
+    <p>Here are the radicals that appear most frequently in common characters:</p>
+    <p><strong>Water (水/氵, shuǐ):</strong> Appears in 河 (river), 海 (sea), 洗 (wash), 游 (swim), 湖 (lake), 汤 (soup). The three-dot form (氵) appears on the left side of characters.</p>
+    <p><strong>Heart (心/忄, xīn):</strong> Emotion-related characters: 想 (think), 情 (feeling), 快 (happy/fast), 忙 (busy), 怕 (afraid). The vertical form (忄) appears on the left.</p>
+    <p><strong>Hand (手/扌, shǒu):</strong> Action-related characters: 打 (hit), 找 (find), 拿 (take), 推 (push), 拉 (pull).</p>
+    <p><strong>Mouth (口, kǒu):</strong> Speech and eating: 吃 (eat), 喝 (drink), 叫 (call), 唱 (sing), 听 (listen).</p>
+    <p><strong>Wood (木, mù):</strong> Trees and wooden objects: 树 (tree), 林 (forest), 桌 (table), 椅 (chair).</p>
+    <p>Explore all common radicals with our <a href="/chinese/tools/radical-lookup/">Radical Lookup tool</a>, which shows example characters for each radical.</p>
+
+    <h2 id="practice-strategy">Practice Strategy</h2>
+    <p><strong>Learn radicals alongside characters.</strong> When you learn a new character, identify its radical. This creates mental connections that reinforce both.</p>
+    <p><strong>Group characters by radical.</strong> Study all the "water" characters together, then all the "heart" characters. This highlights the patterns.</p>
+    <p><strong>Practice writing radicals.</strong> Get comfortable writing each radical form so that complex characters become combinations of easy parts. Our <a href="/chinese/tools/stroke-order/">Stroke Order tool</a> shows the correct way to write basic characters.</p>
+    <p>Download our <a href="/chinese/downloads/">free Radical Chart PDF</a> for a printable reference, and see <a href="https://en.wikipedia.org/wiki/Kangxi_radical" target="_blank" rel="noopener">Wikipedia's Kangxi radical list</a> for the complete set.</p>
+
+</BlogLayout>
