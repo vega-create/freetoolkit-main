@@ -10,7 +10,7 @@ export const siteConfig = {
     gtm: 'GTM-NWNPMSZM',
     ga4: 'G-9FQB214ZEC',
     adsense: {
-      enabled: false, // 審核通過後改 true
+      enabled: true,
       client: 'ca-pub-3493526929407874',
     },
   },
