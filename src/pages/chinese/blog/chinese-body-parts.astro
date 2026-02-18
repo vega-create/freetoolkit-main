@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How do I describe symptoms at a Chinese hospital?`, a: `Start with 我的X不舒服 (My X is uncomfortable) or 我的X疼 (My X hurts), replacing X with the body part.` }];
+const relatedTools = [{ name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }];
+const headings = [{ depth: 2, slug: "head", text: "Head and Face" }, { depth: 2, slug: "body", text: "Body" }, { depth: 2, slug: "health", text: "Health Phrases" }];
+---
+<BlogLayout
+  title="Chinese Body Parts Vocabulary"
+  description="Learn body part names in Chinese — useful for health, sports, and daily life conversations."
+  language="chinese"
+  category="chinese-basics"
+  tags={["body", "vocabulary", "beginner", "health"]}
+  publishDate="2026-02-27"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="head">Head and Face</h2><p><strong>头 (tóu)</strong> head, <strong>眼睛 (yǎnjing)</strong> eyes, <strong>耳朵 (ěrduo)</strong> ears, <strong>鼻子 (bízi)</strong> nose, <strong>嘴巴 (zuǐba)</strong> mouth, <strong>牙齿 (yáchǐ)</strong> teeth, <strong>头发 (tóufa)</strong> hair.</p>
+    <h2 id="body">Body</h2><p><strong>手 (shǒu)</strong> hand, <strong>脚 (jiǎo)</strong> foot, <strong>腿 (tuǐ)</strong> leg, <strong>胳膊 (gēbo)</strong> arm, <strong>肚子 (dùzi)</strong> stomach, <strong>背 (bèi)</strong> back, <strong>心 (xīn)</strong> heart.</p>
+    <h2 id="health">Health Phrases</h2><p><strong>我头疼 (wǒ tóu téng)</strong> I have a headache. <strong>我肚子疼 (wǒ dùzi téng)</strong> I have a stomachache. Practice writing these characters with our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>.</p>
+</BlogLayout>

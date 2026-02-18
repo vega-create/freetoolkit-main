@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Do Chinese people type using Pinyin?`, a: `Yes, Pinyin input is the most common typing method in mainland China. You type the pinyin spelling, and the software suggests matching characters. In Taiwan, many people use Zhuyin (Bopomofo) input instead.` }];
+const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
+const headings = [{ depth: 2, slug: "setup", text: "Setting Up Chinese Input" }, { depth: 2, slug: "pinyin-typing", text: "Pinyin Typing Tips" }, { depth: 2, slug: "shortcuts", text: "Useful Shortcuts" }];
+---
+<BlogLayout
+  title="How to Type Chinese on Your Computer and Phone"
+  description="Step-by-step guide to setting up Chinese input on any device. Learn Pinyin typing, handwriting input, and keyboard shortcuts."
+  language="chinese"
+  category="study-tips"
+  tags={["typing", "technology", "study-tips", "beginner"]}
+  publishDate="2026-02-26"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="setup">Setting Up Chinese Input</h2>
+    <p><strong>Windows:</strong> Settings → Time & Language → Language → Add Chinese (Simplified or Traditional). <strong>Mac:</strong> System Preferences → Keyboard → Input Sources → add Chinese. <strong>iPhone:</strong> Settings → General → Keyboard → Add Keyboard → Chinese. <strong>Android:</strong> Settings → System → Language & Input → add Chinese keyboard.</p>
+
+    <h2 id="pinyin-typing">Pinyin Typing Tips</h2>
+    <p>Type the pinyin without tone marks — the software shows matching characters. For example, type "nihao" and select 你好 from the suggestions. Type full words rather than single characters for better prediction accuracy. Most systems learn your preferences over time.</p>
+
+    <h2 id="shortcuts">Useful Shortcuts</h2>
+    <p>Switch between Chinese and English input with Ctrl+Space (Windows) or Caps Lock (Mac Chinese keyboard). Use the number keys to select from prediction lists. In WeChat and most apps, you can switch input methods within the keyboard. Practice by chatting with language exchange partners or writing social media posts. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> if you need to check the pinyin for any character.</p>
+
+</BlogLayout>

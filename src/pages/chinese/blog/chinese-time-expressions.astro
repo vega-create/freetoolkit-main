@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How do you say the days of the week in Chinese?`, a: `Monday through Saturday use 星期 (xīngqī) plus a number: 星期一 (Monday) through 星期六 (Saturday). Sunday is 星期天 or 星期日.` }];
+const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
+const headings = [{ depth: 2, slug: "clock", text: "Clock Time" }, { depth: 2, slug: "days", text: "Days and Weeks" }, { depth: 2, slug: "months", text: "Months and Years" }];
+---
+<BlogLayout
+  title="Telling Time in Chinese: Hours, Days, Months, and Seasons"
+  description="Learn how to express time in Chinese — from clock time and days of the week to months, seasons, and common time phrases."
+  language="chinese"
+  category="chinese-basics"
+  tags={["time", "beginner", "vocabulary"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="clock">Clock Time</h2>
+    <p>Chinese clock time uses <strong>点 (diǎn)</strong> for hours and <strong>分 (fēn)</strong> for minutes. Three o'clock is 三点 (sān diǎn). 3:30 is 三点半 (sān diǎn bàn, using 半 for half) or 三点三十分. A quarter is 刻 (kè), so 3:15 is 三点一刻.</p>
+
+    <h2 id="days">Days and Weeks</h2>
+    <p>Days of the week follow an elegant number pattern. 星期一 (Monday, literally "week-one") through 星期六 (Saturday, "week-six"). Only Sunday breaks the pattern: 星期天 or 星期日. Today is 今天 (jīntiān), yesterday is 昨天 (zuótiān), tomorrow is 明天 (míngtiān).</p>
+
+    <h2 id="months">Months and Years</h2>
+    <p>Months are simply number + 月: 一月 (January), 二月 (February), and so on through 十二月 (December). Years are read digit by digit: 2026 is 二零二六年. This system is remarkably logical compared to English month names. Try our <a href="/chinese/tools/number-converter/">Number Converter</a> to practice numbers.</p>
+
+</BlogLayout>

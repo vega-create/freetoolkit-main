@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What are the most important animal words to learn?`, a: `Start with common pets and farm animals: 猫 (cat), 狗 (dog), 鱼 (fish), 鸟 (bird), 马 (horse), 牛 (cow), 猪 (pig), 鸡 (chicken). These appear in HSK vocabulary lists and daily conversation.` }];
+const relatedTools = [{ name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }, { name: "Daily Character", url: "/chinese/tools/daily-character/" }];
+const headings = [{ depth: 2, slug: "pets", text: "Pets and Farm Animals" }, { depth: 2, slug: "wild", text: "Wild Animals" }, { depth: 2, slug: "cultural", text: "Animals in Culture" }];
+---
+<BlogLayout
+  title="Animals in Chinese: 30 Common Animal Names"
+  description="Learn the names of common animals in Chinese with pronunciation, characters, and fun facts about their cultural significance."
+  language="chinese"
+  category="chinese-basics"
+  tags={["animals", "vocabulary", "beginner", "fun"]}
+  publishDate="2026-02-28"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="pets">Pets and Farm Animals</h2><p><strong>猫 (māo)</strong> cat, <strong>狗 (gǒu)</strong> dog, <strong>兔子 (tùzi)</strong> rabbit, <strong>鱼 (yú)</strong> fish, <strong>鸟 (niǎo)</strong> bird, <strong>马 (mǎ)</strong> horse, <strong>牛 (niú)</strong> cow, <strong>猪 (zhū)</strong> pig, <strong>羊 (yáng)</strong> sheep, <strong>鸡 (jī)</strong> chicken.</p>
+    <h2 id="wild">Wild Animals</h2><p><strong>老虎 (lǎohǔ)</strong> tiger, <strong>熊猫 (xióngmāo)</strong> panda (literally "bear cat"), <strong>龙 (lóng)</strong> dragon, <strong>蛇 (shé)</strong> snake, <strong>猴子 (hóuzi)</strong> monkey, <strong>大象 (dàxiàng)</strong> elephant, <strong>狮子 (shīzi)</strong> lion.</p>
+    <h2 id="cultural">Animals in Culture</h2><p>Animals carry rich symbolism in Chinese culture. The <strong>dragon (龙)</strong> represents power and good fortune. The <strong>phoenix (凤凰, fènghuáng)</strong> symbolizes grace and virtue. <strong>Fish (鱼)</strong> represents abundance because it sounds like 余 (surplus). Practice writing animal characters with our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>.</p>
+</BlogLayout>

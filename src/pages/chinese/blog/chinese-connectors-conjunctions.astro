@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What are the most important Chinese conjunctions?`, a: `The essential pairs: 因为...所以 (because...so), 虽然...但是 (although...but), 如果...就 (if...then), 不但...而且 (not only...but also).` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "cause-effect", text: "Cause and Effect" }, { depth: 2, slug: "contrast", text: "Contrast" }, { depth: 2, slug: "condition", text: "Condition" }];
+---
+<BlogLayout
+  title="Chinese Connectors: Because, Although, If, and More"
+  description="Master Chinese conjunctions and connectors to form complex sentences. Essential for moving beyond beginner level."
+  language="chinese"
+  category="grammar"
+  tags={["grammar", "connectors", "intermediate", "sentence-structure"]}
+  publishDate="2026-02-28"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="cause-effect">Cause and Effect</h2><p><strong>因为…所以… (yīnwèi…suǒyǐ…)</strong> Because…therefore… Example: 因为下雨，所以我不去 (Because it's raining, I'm not going). Note: in Chinese, you can use both halves of the pair or just one.</p>
+    <h2 id="contrast">Contrast</h2><p><strong>虽然…但是… (suīrán…dànshì…)</strong> Although…but… Example: 虽然很累，但是很开心 (Although tired, I'm happy). Unlike English, Chinese uses both "although" AND "but" in the same sentence.</p>
+    <h2 id="condition">Condition</h2><p><strong>如果…就… (rúguǒ…jiù…)</strong> If…then… Example: 如果明天不下雨，我就去 (If it doesn't rain tomorrow, I'll go). <strong>只要…就… (zhǐyào…jiù…)</strong> As long as…then… These connector pairs are key to expressing complex ideas in Chinese.</p>
+</BlogLayout>

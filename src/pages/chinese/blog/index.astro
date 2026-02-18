@@ -1,128 +1,59 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import BlogFilter from '../../../components/BlogFilter.tsx';
 
 const articles = [
-  {
-    slug: 'chinese-tones-guide',
-    title: 'How to Learn Chinese Tones: Complete Guide for Beginners',
-    desc: 'Master the 4 Chinese tones with practical exercises and common mistakes to avoid.',
-    category: 'Basics',
-    date: '2026-02-15',
-    tags: ['tones', 'pinyin', 'beginner'],
-  },
-  {
-    slug: 'pinyin-guide',
-    title: 'Pinyin Guide: Master Chinese Pronunciation from Day One',
-    desc: 'Learn the complete Pinyin system including initials, finals, and tone marks.',
-    category: 'Basics',
-    date: '2026-02-15',
-    tags: ['pinyin', 'pronunciation'],
-  },
-  {
-    slug: 'common-chinese-characters',
-    title: '50 Most Common Chinese Characters Every Beginner Should Know',
-    desc: 'The most frequently used characters with meanings, pinyin, and example words.',
-    category: 'Characters',
-    date: '2026-02-16',
-    tags: ['characters', 'vocabulary'],
-  },
-  {
-    slug: 'chinese-idioms',
-    title: 'Chinese Idioms (Chengyu): 15 Essential Expressions',
-    desc: 'Four-character idioms with origin stories, meanings, and example sentences.',
-    category: 'Culture',
-    date: '2026-02-16',
-    tags: ['idioms', 'culture'],
-  },
-  {
-    slug: 'chinese-measure-words',
-    title: 'Chinese Measure Words: The Complete Guide',
-    desc: 'Learn the most common measure words with examples and rules.',
-    category: 'Grammar',
-    date: '2026-02-17',
-    tags: ['grammar', 'measure-words'],
-  },
-  {
-    slug: 'hsk-preparation',
-    title: 'How to Prepare for the HSK Exam: Study Guide by Level',
-    desc: 'Study strategies, vocabulary tips, and free resources for every HSK level.',
-    category: 'HSK Prep',
-    date: '2026-02-17',
-    tags: ['hsk', 'exam'],
-  },
-  {
-    slug: 'chinese-radicals',
-    title: 'Chinese Radicals: The Building Blocks of Every Character',
-    desc: 'How radicals work and how they help you learn characters faster.',
-    category: 'Characters',
-    date: '2026-02-18',
-    tags: ['radicals', 'characters'],
-  },
-  {
-    slug: 'learn-chinese-characters',
-    title: 'How to Learn Chinese Characters: Step-by-Step Guide',
-    desc: 'Proven strategies for memorizing characters from stroke order to spaced repetition.',
-    category: 'Study Tips',
-    date: '2026-02-18',
-    tags: ['characters', 'study-tips'],
-  },
-  {
-    slug: 'bopomofo-vs-pinyin',
-    title: 'Bopomofo vs Pinyin: Which Should You Learn?',
-    desc: 'Compare Zhuyin and Pinyin — advantages, usage, and how to choose.',
-    category: 'Basics',
-    date: '2026-02-18',
-    tags: ['zhuyin', 'pinyin', 'taiwan'],
-  },
-  {
-    slug: 'chinese-names-meaning',
-    title: 'Chinese Names: How They Work and What They Mean',
-    desc: 'Understand the structure, meaning, and cultural traditions behind Chinese names.',
-    category: 'Culture',
-    date: '2026-02-18',
-    tags: ['names', 'culture'],
-  },
+  { slug: 'chinese-tones-guide', title: 'How to Learn Chinese Tones: Complete Guide for Beginners', desc: 'Master the 4 Chinese tones with practical exercises and common mistakes to avoid.', category: 'Basics', date: '2026-02-15', tags: ['tones', 'pinyin', 'beginner'] },
+  { slug: 'pinyin-guide', title: 'Pinyin Guide: Master Chinese Pronunciation from Day One', desc: 'Learn the complete Pinyin system including initials, finals, and tone marks.', category: 'Basics', date: '2026-02-15', tags: ['pinyin', 'pronunciation'] },
+  { slug: 'common-chinese-characters', title: '50 Most Common Chinese Characters Every Beginner Should Know', desc: 'The most frequently used characters with meanings, pinyin, and example words.', category: 'Characters', date: '2026-02-16', tags: ['characters', 'vocabulary'] },
+  { slug: 'chinese-idioms', title: 'Chinese Idioms (Chengyu): 15 Essential Expressions', desc: 'Four-character idioms with origin stories, meanings, and example sentences.', category: 'Culture', date: '2026-02-16', tags: ['idioms', 'culture'] },
+  { slug: 'chinese-measure-words', title: 'Chinese Measure Words: The Complete Guide', desc: 'Learn the most common measure words with examples and rules.', category: 'Grammar', date: '2026-02-17', tags: ['grammar', 'measure-words'] },
+  { slug: 'hsk-preparation', title: 'How to Prepare for the HSK Exam: Study Guide by Level', desc: 'Study strategies, vocabulary tips, and free resources for every HSK level.', category: 'HSK Prep', date: '2026-02-17', tags: ['hsk', 'exam'] },
+  { slug: 'chinese-radicals', title: 'Chinese Radicals: The Building Blocks of Every Character', desc: 'How radicals work and how they help you learn characters faster.', category: 'Characters', date: '2026-02-18', tags: ['radicals', 'characters'] },
+  { slug: 'learn-chinese-characters', title: 'How to Learn Chinese Characters: Step-by-Step Guide', desc: 'Proven strategies for memorizing characters from stroke order to spaced repetition.', category: 'Study Tips', date: '2026-02-18', tags: ['characters', 'study-tips'] },
+  { slug: 'bopomofo-vs-pinyin', title: 'Bopomofo vs Pinyin: Which Should You Learn?', desc: 'Compare Zhuyin and Pinyin — advantages, usage, and how to choose.', category: 'Basics', date: '2026-02-18', tags: ['zhuyin', 'pinyin'] },
+  { slug: 'chinese-names-meaning', title: 'Chinese Names: How They Work and What They Mean', desc: 'Understand the structure, meaning, and cultural traditions behind Chinese names.', category: 'Culture', date: '2026-02-18', tags: ['names', 'culture'] },
+  { slug: 'simplified-vs-traditional', title: 'Simplified vs Traditional Chinese: Key Differences', desc: 'History and practical differences between simplified and traditional characters.', category: 'Characters', date: '2026-02-19', tags: ['characters', 'traditional'] },
+  { slug: 'chinese-greetings', title: '20 Essential Chinese Greetings Beyond Ni Hao', desc: 'Practical Chinese greetings for every situation — morning, evening, formal, casual.', category: 'Basics', date: '2026-02-19', tags: ['greetings', 'beginner'] },
+  { slug: 'chinese-sentence-structure', title: 'Chinese Sentence Structure: SVO and Beyond', desc: 'Basic Chinese sentence structure and how it compares to English.', category: 'Grammar', date: '2026-02-19', tags: ['grammar', 'beginner'] },
+  { slug: 'chinese-numbers-guide', title: 'Chinese Numbers: How to Count from 1 to 10,000', desc: 'Master Chinese numbers with counting, large numbers, and cultural meanings.', category: 'Basics', date: '2026-02-20', tags: ['numbers', 'beginner'] },
+  { slug: 'chinese-food-vocabulary', title: '50 Essential Chinese Food Words for Restaurant Survival', desc: 'Navigate Chinese restaurants with food vocabulary and ordering phrases.', category: 'Culture', date: '2026-02-20', tags: ['food', 'travel'] },
+  { slug: 'chinese-time-expressions', title: 'Telling Time in Chinese: Hours, Days, Months', desc: 'Express time in Chinese — clock time, days of the week, months, and seasons.', category: 'Basics', date: '2026-02-20', tags: ['time', 'beginner'] },
+  { slug: 'chinese-travel-phrases', title: '30 Must-Know Chinese Phrases for Travelers', desc: 'Essential Chinese travel phrases for airports, hotels, and emergencies.', category: 'Culture', date: '2026-02-21', tags: ['travel', 'phrases'] },
+  { slug: 'chinese-family-terms', title: 'Chinese Family Terms: A Complete Guide to Kinship Words', desc: 'Chinese has unique words for every family relationship.', category: 'Culture', date: '2026-02-21', tags: ['family', 'vocabulary'] },
+  { slug: 'learn-chinese-from-movies', title: 'Learn Chinese from Movies: 10 Films Every Learner Should Watch', desc: 'Improve listening skills and cultural understanding through cinema.', category: 'Study Tips', date: '2026-02-21', tags: ['movies', 'listening'] },
+  { slug: 'chinese-internet-slang', title: 'Chinese Internet Slang: 20 Popular Online Expressions', desc: 'Stay current with Chinese internet culture — WeChat, Weibo, and Douyin slang.', category: 'Culture', date: '2026-02-22', tags: ['slang', 'internet'] },
+  { slug: 'chinese-business-phrases', title: 'Chinese Business Phrases: Professional Communication Guide', desc: 'Essential Chinese for meetings, email, negotiations, and networking.', category: 'Culture', date: '2026-02-22', tags: ['business', 'professional'] },
+  { slug: 'chinese-writing-tips', title: 'How to Write Chinese Characters: Stroke Order Rules', desc: 'Master the 8 basic stroke types and stroke order rules.', category: 'Characters', date: '2026-02-22', tags: ['writing', 'strokes'] },
+  { slug: 'chinese-colors', title: 'Colors in Chinese: Vocabulary and Cultural Meanings', desc: 'Learn color words and discover their rich cultural symbolism.', category: 'Culture', date: '2026-02-23', tags: ['colors', 'vocabulary'] },
+  { slug: 'chinese-zodiac', title: 'The Chinese Zodiac: 12 Animals and Their Meanings', desc: '12 Chinese zodiac animals — personality traits, compatibility, and culture.', category: 'Culture', date: '2026-02-23', tags: ['zodiac', 'culture'] },
+  { slug: 'chinese-calligraphy-basics', title: 'Chinese Calligraphy for Beginners: Getting Started', desc: 'Introduction to Chinese calligraphy: tools, techniques, and practice tips.', category: 'Characters', date: '2026-02-23', tags: ['calligraphy', 'writing'] },
+  { slug: 'chinese-tongue-twisters', title: '10 Fun Chinese Tongue Twisters for Pronunciation Practice', desc: 'Challenge your pronunciation with classic Chinese tongue twisters.', category: 'Basics', date: '2026-02-24', tags: ['pronunciation', 'fun'] },
+  { slug: 'hsk-vocabulary-strategies', title: 'HSK Vocabulary: 5 Proven Memorization Strategies', desc: 'Evidence-based techniques for memorizing HSK vocabulary efficiently.', category: 'HSK Prep', date: '2026-02-24', tags: ['hsk', 'vocabulary'] },
+  { slug: 'chinese-question-words', title: 'Chinese Question Words: How to Ask Anything', desc: 'Master all Chinese question words: who, what, when, where, why, how.', category: 'Grammar', date: '2026-02-24', tags: ['grammar', 'questions'] },
+  { slug: 'chinese-particles-guide', title: 'Understanding Chinese Particles: 了 过 着 的 地 得', desc: 'Clear explanations of the most confusing Chinese grammar particles.', category: 'Grammar', date: '2026-02-25', tags: ['grammar', 'particles'] },
+  { slug: 'chinese-pronunciation-mistakes', title: '15 Common Chinese Pronunciation Mistakes and Fixes', desc: 'Identify and correct the most common pronunciation errors.', category: 'Basics', date: '2026-02-25', tags: ['pronunciation', 'mistakes'] },
+  { slug: 'chinese-handwriting-tips', title: 'Improve Your Chinese Handwriting: Practical Tips', desc: 'Techniques for cleaner, more readable Chinese handwriting.', category: 'Study Tips', date: '2026-02-25', tags: ['handwriting', 'writing'] },
+  { slug: 'learn-chinese-apps-resources', title: 'Best Free Resources for Learning Chinese in 2026', desc: 'Curated list of the best free tools, apps, and content for learners.', category: 'Study Tips', date: '2026-02-26', tags: ['resources', 'apps'] },
+  { slug: 'chinese-new-year-traditions', title: 'Chinese New Year: Traditions, Vocabulary, and Greetings', desc: 'Essential vocabulary and cultural traditions of Chinese New Year.', category: 'Culture', date: '2026-02-26', tags: ['chinese-new-year', 'traditions'] },
+  { slug: 'chinese-typing-guide', title: 'How to Type Chinese on Your Computer and Phone', desc: 'Step-by-step guide to setting up Chinese input on any device.', category: 'Study Tips', date: '2026-02-26', tags: ['typing', 'technology'] },
+  { slug: 'chinese-weather-vocabulary', title: 'Chinese Weather Vocabulary: Talk About the Weather', desc: 'Learn how to discuss weather in Chinese for daily conversation.', category: 'Basics', date: '2026-02-27', tags: ['weather', 'vocabulary'] },
+  { slug: 'chinese-body-parts', title: 'Chinese Body Parts Vocabulary', desc: 'Body part names in Chinese for health and daily life conversations.', category: 'Basics', date: '2026-02-27', tags: ['body', 'vocabulary'] },
+  { slug: 'chinese-classroom-vocabulary', title: 'Chinese Classroom Vocabulary for Students', desc: 'Essential Chinese words for the classroom and school life.', category: 'Basics', date: '2026-02-27', tags: ['classroom', 'vocabulary'] },
+  { slug: 'chinese-shopping-vocabulary', title: 'Shopping in Chinese: Essential Bargaining Phrases', desc: 'Navigate Chinese markets — pricing, bargaining, and payment vocab.', category: 'Culture', date: '2026-02-28', tags: ['shopping', 'travel'] },
+  { slug: 'chinese-animals-vocabulary', title: 'Animals in Chinese: 30 Common Animal Names', desc: 'Common animal names with pronunciation and cultural significance.', category: 'Basics', date: '2026-02-28', tags: ['animals', 'vocabulary'] },
+  { slug: 'chinese-connectors-conjunctions', title: 'Chinese Connectors: Because, Although, If, and More', desc: 'Master Chinese conjunctions for forming complex sentences.', category: 'Grammar', date: '2026-02-28', tags: ['grammar', 'connectors'] },
 ];
-
-const categories = [...new Set(articles.map(a => a.category))];
 ---
-<BaseLayout title="Chinese Learning Blog" description="Guides, tips, and insights for learning Mandarin Chinese. From beginner basics to HSK prep and cultural insights.">
+<BaseLayout title="Chinese Learning Blog — 40 Guides & Tips" description="40 free guides, tips, and cultural insights for learning Mandarin Chinese. From beginner basics to HSK prep and cultural deep dives.">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <Breadcrumb items={[{ name: 'Chinese', url: '/chinese/' }, { name: 'Blog' }]} />
     <h1 class="text-3xl font-bold mb-2">Chinese Learning Blog</h1>
-    <p class="text-gray-500 mb-8">Guides, tips, and cultural insights for Mandarin learners.</p>
+    <p class="text-gray-500 mb-8">40 guides, tips, and cultural insights for Mandarin learners.</p>
 
-    {/* Category Filter */}
-    <div class="flex flex-wrap gap-2 mb-8">
-      {categories.map(cat => (
-        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">{cat}</span>
-      ))}
-    </div>
+    <BlogFilter articles={articles} language="chinese" client:load />
 
-    {/* Article List */}
-    <div class="space-y-4">
-      {articles.map(art => (
-        <a href={`/chinese/blog/${art.slug}/`}
-          class="block p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-          <div class="flex items-center gap-2 mb-2 text-xs">
-            <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded">{art.category}</span>
-            <time class="text-gray-400" datetime={art.date}>
-              {new Date(art.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-            </time>
-          </div>
-          <h2 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-1">{art.title}</h2>
-          <p class="text-sm text-gray-500">{art.desc}</p>
-          <div class="flex flex-wrap gap-1 mt-2">
-            {art.tags.map(tag => (
-              <span class="text-xs text-gray-400">#{tag}</span>
-            ))}
-          </div>
-        </a>
-      ))}
-    </div>
-
-    {/* CTA */}
     <div class="mt-10 p-6 bg-blue-50 rounded-xl text-center">
       <h3 class="font-bold text-blue-800 mb-2">Practice What You Learn</h3>
       <p class="text-sm text-blue-600 mb-3">Put your knowledge to work with our free interactive tools.</p>

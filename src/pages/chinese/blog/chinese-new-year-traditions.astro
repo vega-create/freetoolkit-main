@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `When is Chinese New Year?`, a: `Chinese New Year follows the lunar calendar, so the date changes each year, falling between January 21 and February 20. The celebration lasts 15 days, ending with the Lantern Festival.` }];
+const relatedTools = [{ name: "Name Generator", url: "/chinese/tools/name-generator/" }];
+const headings = [{ depth: 2, slug: "traditions", text: "Key Traditions" }, { depth: 2, slug: "vocabulary", text: "Essential Vocabulary" }, { depth: 2, slug: "greetings", text: "New Year Greetings" }];
+---
+<BlogLayout
+  title="Chinese New Year: Traditions, Vocabulary, and Greetings"
+  description="Learn the essential vocabulary and cultural traditions of Chinese New Year, the most important holiday in Chinese culture."
+  language="chinese"
+  category="culture"
+  tags={["chinese-new-year", "culture", "traditions", "vocabulary"]}
+  publishDate="2026-02-26"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="traditions">Key Traditions</h2>
+    <p>Chinese New Year (春节, chūnjié) is a family-centered holiday. Key traditions include <strong>团圆饭 (tuányuán fàn)</strong> the reunion dinner on New Year's Eve, <strong>红包 (hóngbāo)</strong> red envelopes with money given to children, <strong>放鞭炮 (fàng biānpào)</strong> setting off firecrackers, and <strong>贴春联 (tiē chūnlián)</strong> posting red couplets on doorframes.</p>
+
+    <h2 id="vocabulary">Essential Vocabulary</h2>
+    <p><strong>春节 (chūnjié)</strong> Spring Festival, <strong>除夕 (chúxī)</strong> New Year's Eve, <strong>拜年 (bàinián)</strong> pay New Year's visits, <strong>压岁钱 (yāsuìqián)</strong> lucky money, <strong>饺子 (jiǎozi)</strong> dumplings (northern tradition), <strong>年糕 (niángāo)</strong> sticky rice cake, <strong>舞龙 (wǔlóng)</strong> dragon dance, <strong>灯笼 (dēnglong)</strong> lantern.</p>
+
+    <h2 id="greetings">New Year Greetings</h2>
+    <p><strong>新年快乐 (xīnnián kuàilè)</strong> Happy New Year. <strong>恭喜发财 (gōngxǐ fācái)</strong> Wishing you prosperity — the most iconic greeting. <strong>万事如意 (wànshì rúyì)</strong> May everything go as you wish. <strong>身体健康 (shēntǐ jiànkāng)</strong> Wishing you good health — especially appropriate for elders.</p>
+
+</BlogLayout>

@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What is the biggest pronunciation mistake beginners make?`, a: `Ignoring tones entirely. Many beginners focus only on consonants and vowels, but tones carry meaning in Chinese. Saying ma with the wrong tone can change mother to horse.` }];
+const relatedTools = [{ name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" }, { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
+const headings = [{ depth: 2, slug: "tone-errors", text: "Tone Errors" }, { depth: 2, slug: "initial-errors", text: "Initial Sound Errors" }, { depth: 2, slug: "final-errors", text: "Final Sound Errors" }];
+---
+<BlogLayout
+  title="15 Common Chinese Pronunciation Mistakes and How to Fix Them"
+  description="Identify and correct the most common pronunciation errors that Chinese learners make. Practical tips for each mistake."
+  language="chinese"
+  category="chinese-basics"
+  tags={["pronunciation", "mistakes", "tones", "beginner"]}
+  publishDate="2026-02-25"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="tone-errors">Tone Errors</h2>
+    <p><strong>Flat-lining tones:</strong> Speaking all syllables at the same pitch. Fix: exaggerate tones initially, then reduce to natural levels. <strong>English intonation override:</strong> Rising pitch at sentence end for questions, conflicting with Chinese tones. Fix: practice sentences where the final character has a falling tone. Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for daily tone practice.</p>
+
+    <h2 id="initial-errors">Initial Sound Errors</h2>
+    <p><strong>Confusing zh/j and ch/q:</strong> These sound similar but are produced at different positions in the mouth. zh/ch/sh are retroflex (tongue curled back), while j/q/x are palatal (tongue against hard palate). <strong>Pronouncing x as "ks":</strong> Chinese x sounds like a sharp "sh" — it has nothing to do with the English letter x.</p>
+
+    <h2 id="final-errors">Final Sound Errors</h2>
+    <p><strong>Mixing up -an and -ang:</strong> The -an ending has a front nasal (tongue touches teeth ridge), while -ang has a back nasal (sound resonates in the back). <strong>Mispronouncing ü:</strong> This sound doesn't exist in English. Say "ee" while rounding your lips like "oo." Check any pronunciation with our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a>.</p>
+
+</BlogLayout>

@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How do I order food in Chinese?`, a: `Start with 我要 (wǒ yào, I want) or 来一个 (lái yī ge, give me one). Point at the menu if needed. End with 谢谢 (xièxie).` }];
+const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
+const headings = [{ depth: 2, slug: "ordering", text: "Ordering Phrases" }, { depth: 2, slug: "staples", text: "Staple Foods" }, { depth: 2, slug: "dishes", text: "Popular Dishes" }, { depth: 2, slug: "drinks", text: "Drinks" }];
+---
+<BlogLayout
+  title="50 Essential Chinese Food Words for Restaurant Survival"
+  description="Navigate Chinese restaurants and menus with confidence. Learn food vocabulary from ordering basics to regional cuisine names."
+  language="chinese"
+  category="culture"
+  tags={["food", "vocabulary", "culture", "travel"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="ordering">Ordering Phrases</h2>
+    <p><strong>菜单 (càidān)</strong> — menu. <strong>我要这个 (wǒ yào zhège)</strong> — I want this one. <strong>买单 (mǎidān)</strong> — the bill please. <strong>不要辣 (bú yào là)</strong> — no spice please. These four phrases alone will get you through most restaurant situations.</p>
+
+    <h2 id="staples">Staple Foods</h2>
+    <p><strong>米饭 (mǐfàn)</strong> rice, <strong>面条 (miàntiáo)</strong> noodles, <strong>饺子 (jiǎozi)</strong> dumplings, <strong>包子 (bāozi)</strong> steamed buns, <strong>馒头 (mántou)</strong> plain steamed bread. In Taiwan, you will also encounter <strong>滷肉飯 (lǔròu fàn)</strong> braised pork rice and <strong>牛肉麵 (niúròu miàn)</strong> beef noodle soup — two beloved national dishes.</p>
+
+    <h2 id="dishes">Popular Dishes</h2>
+    <p><strong>宫保鸡丁 (gōngbǎo jīdīng)</strong> Kung Pao chicken, <strong>麻婆豆腐 (mápó dòufu)</strong> Mapo tofu, <strong>红烧肉 (hóngshāo ròu)</strong> red-braised pork, <strong>炒饭 (chǎofàn)</strong> fried rice, <strong>火锅 (huǒguō)</strong> hotpot. Each region has specialties — Sichuan for spicy, Cantonese for dim sum, Shanghai for sweet savory.</p>
+
+    <h2 id="drinks">Drinks</h2>
+    <p><strong>水 (shuǐ)</strong> water, <strong>茶 (chá)</strong> tea, <strong>咖啡 (kāfēi)</strong> coffee, <strong>啤酒 (píjiǔ)</strong> beer, <strong>珍珠奶茶 (zhēnzhū nǎichá)</strong> bubble tea — arguably Taiwan's most famous culinary export. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation of any food term.</p>
+
+</BlogLayout>

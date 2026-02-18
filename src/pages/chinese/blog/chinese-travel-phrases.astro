@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Can I get by in China with only English?`, a: `In major cities like Beijing and Shanghai, some English is spoken in tourist areas. However, knowing basic Chinese phrases dramatically improves your experience and access to local culture.` }];
+const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
+const headings = [{ depth: 2, slug: "airport", text: "At the Airport" }, { depth: 2, slug: "hotel", text: "At the Hotel" }, { depth: 2, slug: "transport", text: "Transportation" }, { depth: 2, slug: "emergency", text: "Emergencies" }];
+---
+<BlogLayout
+  title="30 Must-Know Chinese Phrases for Travelers"
+  description="Essential Chinese travel phrases for airports, hotels, restaurants, transportation, and emergencies. Survive any trip to China or Taiwan."
+  language="chinese"
+  category="culture"
+  tags={["travel", "phrases", "beginner", "conversation"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="airport">At the Airport</h2>
+    <p><strong>机场 (jīchǎng)</strong> airport. <strong>护照 (hùzhào)</strong> passport. <strong>签证 (qiānzhèng)</strong> visa. <strong>行李 (xínglǐ)</strong> luggage. <strong>出口 (chūkǒu)</strong> exit. <strong>入境 (rùjìng)</strong> immigration entry. When lost, say: <strong>请问…在哪里？(qǐng wèn… zài nǎlǐ?)</strong> — Excuse me, where is…?</p>
+
+    <h2 id="hotel">At the Hotel</h2>
+    <p><strong>我有预订 (wǒ yǒu yùdìng)</strong> I have a reservation. <strong>房间 (fángjiān)</strong> room. <strong>钥匙 (yàoshi)</strong> key. <strong>退房 (tuìfáng)</strong> check out. <strong>WiFi密码是什么？(WiFi mìmǎ shì shénme?)</strong> What's the WiFi password?</p>
+
+    <h2 id="transport">Transportation</h2>
+    <p><strong>出租车 (chūzūchē)</strong> taxi. <strong>地铁 (dìtiě)</strong> subway/metro. <strong>公交车 (gōngjiāochē)</strong> bus. <strong>请到这个地方 (qǐng dào zhège dìfāng)</strong> Please go to this place — useful when showing a taxi driver an address on your phone.</p>
+
+    <h2 id="emergency">Emergencies</h2>
+    <p><strong>帮忙 (bāngmáng)</strong> help. <strong>医院 (yīyuàn)</strong> hospital. <strong>警察 (jǐngchá)</strong> police. <strong>我不舒服 (wǒ bù shūfu)</strong> I don't feel well. In Taiwan, the emergency number is 119 for medical and 110 for police. See our <a href="/chinese/blog/chinese-greetings/">greetings guide</a> for more conversation starters.</p>
+
+</BlogLayout>

@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What is the best way to memorize Chinese vocabulary?`, a: `Research supports spaced repetition as the most efficient method. Combine it with contextual learning (seeing words in sentences), character decomposition (breaking words into radicals), and active recall (testing yourself rather than passive review).` }];
+const relatedTools = [{ name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }, { name: "Daily Character", url: "/chinese/tools/daily-character/" }];
+const headings = [{ depth: 2, slug: "spaced-repetition", text: "Spaced Repetition" }, { depth: 2, slug: "context", text: "Context-Based Learning" }, { depth: 2, slug: "mnemonics", text: "Mnemonics and Stories" }, { depth: 2, slug: "active", text: "Active Recall Testing" }];
+---
+<BlogLayout
+  title="HSK Vocabulary: 5 Proven Memorization Strategies"
+  description="Evidence-based techniques for memorizing HSK vocabulary efficiently. From spaced repetition to contextual learning methods."
+  language="chinese"
+  category="hsk-prep"
+  tags={["hsk", "vocabulary", "study-tips", "memory"]}
+  publishDate="2026-02-24"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="spaced-repetition">Spaced Repetition</h2>
+    <p>Spaced repetition is the single most effective vocabulary learning technique. Review new words after 1 day, then 3 days, then 7 days, then 14 days. Each successful recall extends the interval. This leverages how human memory naturally consolidates information. Our <a href="/chinese/tools/daily-character/">Daily Character</a> tool builds this habit automatically.</p>
+
+    <h2 id="context">Context-Based Learning</h2>
+    <p>Never learn words in isolation. Study 学 as part of 学生 (student), 学校 (school), 学习 (study) — seeing a character in multiple words creates stronger neural connections than flashcard drilling.</p>
+
+    <h2 id="mnemonics">Mnemonics and Stories</h2>
+    <p>Create vivid, unusual stories to link characters to meanings. The character 休 (rest) shows a person (人) leaning against a tree (木). These visual mnemonics exploit your brain's preference for narrative and imagery over abstract symbol-meaning pairs.</p>
+
+    <h2 id="active">Active Recall Testing</h2>
+    <p>Testing yourself is more effective than re-reading. Use our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> to study, then quiz yourself by covering the English meaning and trying to recall it. Active recall strengthens memory traces far more than passive review.</p>
+
+</BlogLayout>

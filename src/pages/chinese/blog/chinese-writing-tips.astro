@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Does stroke order really matter?`, a: `Yes, for three reasons: consistent stroke order makes characters look better and more legible, it helps with handwriting speed, and handwriting recognition software on phones relies on correct stroke order to identify characters.` }];
+const relatedTools = [{ name: "Stroke Order", url: "/chinese/tools/stroke-order/" }, { name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }];
+const headings = [{ depth: 2, slug: "basic-strokes", text: "The 8 Basic Strokes" }, { depth: 2, slug: "order-rules", text: "Stroke Order Rules" }, { depth: 2, slug: "practice", text: "Practice Tips" }];
+---
+<BlogLayout
+  title="How to Write Chinese Characters: Stroke Order Rules"
+  description="Master the 8 basic stroke types and the rules that govern stroke order in Chinese writing. Essential guide for handwriting practice."
+  language="chinese"
+  category="characters"
+  tags={["writing", "strokes", "characters", "beginner"]}
+  publishDate="2026-02-22"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="basic-strokes">The 8 Basic Strokes</h2>
+    <p>Every Chinese character is built from combinations of 8 basic stroke types: <strong>横 (héng)</strong> horizontal, <strong>竖 (shù)</strong> vertical, <strong>撇 (piě)</strong> left-falling, <strong>捺 (nà)</strong> right-falling, <strong>点 (diǎn)</strong> dot, <strong>折 (zhé)</strong> turning, <strong>钩 (gōu)</strong> hook, and <strong>提 (tí)</strong> rising. The character 永 (yǒng, eternal) famously contains all eight basic strokes.</p>
+
+    <h2 id="order-rules">Stroke Order Rules</h2>
+    <p>Six main rules govern stroke order: top before bottom (三: three horizontal strokes, top to bottom), left before right (川: three vertical strokes, left to right), horizontal before vertical (十: horizontal first, then vertical), outside before inside (回: outer square first), close last (国: closing bottom stroke last), and center before sides in symmetrical characters (小: center vertical first).</p>
+
+    <h2 id="practice">Practice Tips</h2>
+    <p>Use our <a href="/chinese/tools/stroke-order/">Stroke Order tool</a> to see animated stroke sequences. Generate custom <a href="/chinese/tools/practice-sheet/">practice sheets</a> for the characters you are learning. Start with simple characters (一二三人大) and gradually work up to complex ones. Even 10 minutes of daily handwriting practice builds lasting muscle memory.</p>
+
+</BlogLayout>

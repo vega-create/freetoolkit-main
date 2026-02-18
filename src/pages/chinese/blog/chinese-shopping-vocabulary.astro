@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Is bargaining common in China?`, a: `Bargaining is expected in street markets, small shops, and tourist areas. Fixed-price stores (like malls and chain stores) do not negotiate. In Taiwan, night markets sometimes allow mild bargaining.` }];
+const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
+const headings = [{ depth: 2, slug: "pricing", text: "Asking About Prices" }, { depth: 2, slug: "bargaining", text: "Bargaining Phrases" }, { depth: 2, slug: "payment", text: "Payment" }];
+---
+<BlogLayout
+  title="Shopping in Chinese: Essential Bargaining Phrases"
+  description="Navigate Chinese markets and shops with confidence. Learn pricing, bargaining, and shopping vocabulary."
+  language="chinese"
+  category="culture"
+  tags={["shopping", "vocabulary", "travel", "conversation"]}
+  publishDate="2026-02-28"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="pricing">Asking About Prices</h2><p><strong>多少钱？(duōshǎo qián?)</strong> How much? <strong>太贵了 (tài guì le)</strong> Too expensive. <strong>便宜一点 (piányi yīdiǎn)</strong> A little cheaper please. Use our <a href="/chinese/tools/number-converter/">Number Converter</a> to understand Chinese number amounts.</p>
+    <h2 id="bargaining">Bargaining Phrases</h2><p><strong>可以便宜吗？(kěyǐ piányi ma?)</strong> Can you make it cheaper? <strong>打折吗？(dǎzhé ma?)</strong> Is there a discount? <strong>最低多少？(zuìdī duōshǎo?)</strong> What's your lowest price? Start by offering about 50-60% of the asking price and negotiate from there.</p>
+    <h2 id="payment">Payment</h2><p><strong>现金 (xiànjīn)</strong> cash. <strong>刷卡 (shuākǎ)</strong> credit card. <strong>微信支付 (wēixìn zhīfù)</strong> WeChat Pay. <strong>支付宝 (zhīfùbǎo)</strong> Alipay. Mobile payment is nearly universal in China — even street vendors accept it.</p>
+</BlogLayout>

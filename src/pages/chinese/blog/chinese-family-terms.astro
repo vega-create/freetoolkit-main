@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why does Chinese have so many family terms?`, a: `Chinese family terminology reflects the Confucian emphasis on family hierarchy and relationships. Each term specifies exact relationship, birth order, and whether the connection is maternal or paternal.` }];
+const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
+const headings = [{ depth: 2, slug: "immediate", text: "Immediate Family" }, { depth: 2, slug: "extended", text: "Extended Family" }, { depth: 2, slug: "paternal-maternal", text: "Paternal vs Maternal" }];
+---
+<BlogLayout
+  title="Chinese Family Terms: A Complete Guide to Kinship Words"
+  description="Chinese has unique words for every family relationship. Learn the distinction between paternal and maternal relatives."
+  language="chinese"
+  category="culture"
+  tags={["family", "vocabulary", "culture"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="immediate">Immediate Family</h2>
+    <p><strong>爸爸 (bàba)</strong> dad, <strong>妈妈 (māma)</strong> mom, <strong>哥哥 (gēge)</strong> older brother, <strong>姐姐 (jiějie)</strong> older sister, <strong>弟弟 (dìdi)</strong> younger brother, <strong>妹妹 (mèimei)</strong> younger sister. Notice that Chinese distinguishes older vs younger siblings with different words — there is no generic word for "brother" or "sister."</p>
+
+    <h2 id="extended">Extended Family</h2>
+    <p>Grandparents on the father's side: <strong>爷爷 (yéye)</strong> paternal grandfather, <strong>奶奶 (nǎinai)</strong> paternal grandmother. On the mother's side: <strong>外公 (wàigōng)</strong> maternal grandfather, <strong>外婆 (wàipó)</strong> maternal grandmother. The 外 prefix literally means "outside," reflecting the traditional view of the maternal family line.</p>
+
+    <h2 id="paternal-maternal">Paternal vs Maternal</h2>
+    <p>Father's brother is 伯伯 (bóbo, if older) or 叔叔 (shūshu, if younger). Mother's brother is 舅舅 (jiùjiu). Father's sister is 姑姑 (gūgu). Mother's sister is 阿姨 (āyí). This precision means you always know the exact relationship when someone mentions a family member. Practice these characters with our <a href="/chinese/tools/daily-character/">Daily Character</a> tool.</p>
+
+</BlogLayout>

@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Is Chinese grammar hard?`, a: `Chinese grammar is actually simpler than many European languages. There are no verb conjugations, no noun genders, and no articles. The main challenge is word order and particles like 了, 过, and 的.` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "svo", text: "Basic SVO Structure" }, { depth: 2, slug: "time-place", text: "Time and Place Rules" }, { depth: 2, slug: "questions", text: "Forming Questions" }];
+---
+<BlogLayout
+  title="Chinese Sentence Structure: SVO and Beyond"
+  description="Learn the basic Chinese sentence structure and how it compares to English. Master subject-verb-object order and time/place placement."
+  language="chinese"
+  category="grammar"
+  tags={["grammar", "sentence-structure", "beginner"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="svo">Basic SVO Structure</h2>
+    <p>Like English, Chinese follows a <strong>Subject-Verb-Object</strong> order for basic sentences. 我吃饭 (wǒ chī fàn) literally translates as "I eat rice" — the structure maps directly to English.</p>
+    <p>Negation is straightforward: place 不 (bù) or 没 (méi) before the verb. 我不吃 (I don't eat), 他没来 (He didn't come). Use 不 for habitual negation and 没 for past events.</p>
+
+    <h2 id="time-place">Time and Place Rules</h2>
+    <p>One key difference from English: <strong>time and place come before the verb</strong> in Chinese. The pattern is: Subject + Time + Place + Verb + Object. So "I eat at school tomorrow" becomes 我明天在学校吃饭 — literally "I tomorrow at school eat rice."</p>
+    <p>This STPVO pattern feels unusual at first, but it follows a logical principle: set the context (when and where) before describing the action.</p>
+
+    <h2 id="questions">Forming Questions</h2>
+    <p>Chinese has several question-forming strategies. The simplest is adding 吗 (ma) to any statement: 你好 → 你好吗？(Are you well?). For choice questions, use the verb-not-verb pattern: 你去不去？(Are you going or not?). Question words like 什么 (what), 哪里 (where), and 谁 (who) stay in the position where the answer would go, unlike English which moves them to the front.</p>
+    <p>Read more about Chinese basics in our <a href="/chinese/blog/pinyin-guide/">Pinyin Guide</a> and practice with our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a>.</p>
+
+</BlogLayout>

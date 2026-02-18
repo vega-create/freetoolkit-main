@@ -1,0 +1,32 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why are there two sets of Chinese characters?`, a: `The Chinese government introduced simplified characters in the 1950s-60s to improve literacy rates. Traditional characters, used for thousands of years, remain standard in Taiwan, Hong Kong, and Macau.` }, { q: `Can simplified readers understand traditional?`, a: `With practice, yes. Many characters are identical or very similar. The differences mainly involve reduced stroke counts in about 2,000 characters.` }];
+const relatedTools = [{ name: "Trad/Simp Converter", url: "/chinese/tools/traditional-simplified/" }];
+const headings = [{ depth: 2, slug: "history", text: "Historical Background" }, { depth: 2, slug: "differences", text: "Key Differences" }, { depth: 2, slug: "which-to-learn", text: "Which Should You Learn?" }];
+---
+<BlogLayout
+  title="Simplified vs Traditional Chinese: Key Differences Explained"
+  description="Understand the history and practical differences between simplified and traditional Chinese characters. Which should you learn first?"
+  language="chinese"
+  category="characters"
+  tags={["characters", "traditional", "simplified", "beginner"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="history">Historical Background</h2>
+    <p>Chinese characters have been written in their traditional forms for over two thousand years. In the 1950s and 1960s, the government of the People's Republic of China introduced a set of simplified characters to increase literacy among the general population. The idea was straightforward: fewer strokes per character means easier to learn and write.</p>
+    <p>Traditional characters remained standard in Taiwan, Hong Kong, Macau, and many overseas Chinese communities. Today, both systems coexist, and understanding their relationship is important for any serious Chinese learner.</p>
+
+    <h2 id="differences">Key Differences</h2>
+    <p>Not all characters were simplified — roughly 2,200 characters were changed, while thousands remain identical in both systems. Common simplification methods include reducing stroke counts (龍→龙, 門→门), replacing complex components with simpler ones (語→语, 話→话), and adopting cursive script forms (書→书, 車→车).</p>
+    <p>Some simplifications merged multiple traditional characters into one simplified form, which occasionally creates ambiguity. For example, simplified 发 represents both traditional 發 (to send/develop) and 髮 (hair).</p>
+    <p>Try our <a href="/chinese/tools/traditional-simplified/">converter tool</a> to see how specific characters differ between the two systems.</p>
+
+    <h2 id="which-to-learn">Which Should You Learn?</h2>
+    <p>The practical answer depends on your goals. If you plan to work or study in mainland China, start with simplified. If your focus is Taiwan, Hong Kong, or classical Chinese literature, start with traditional. Many learners eventually develop reading ability in both systems, which is easier than it might seem since the differences follow predictable patterns.</p>
+    <p>For more character study resources, see our <a href="/chinese/blog/common-chinese-characters/">50 common characters guide</a> and download our <a href="/chinese/downloads/">free HSK word lists</a>.</p>
+
+</BlogLayout>

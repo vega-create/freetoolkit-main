@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `What Chinese do I need for a Chinese class?`, a: `Key phrases include 请跟我读 (please repeat after me), 不懂 (I don't understand), 再说一遍 (say it again), and 怎么说 (how do you say...).` }];
+const relatedTools = [{ name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }];
+const headings = [{ depth: 2, slug: "supplies", text: "School Supplies" }, { depth: 2, slug: "phrases", text: "Classroom Phrases" }, { depth: 2, slug: "subjects", text: "School Subjects" }];
+---
+<BlogLayout
+  title="Chinese Classroom Vocabulary for Students"
+  description="Essential Chinese words for the classroom — from school supplies to common teacher instructions."
+  language="chinese"
+  category="chinese-basics"
+  tags={["classroom", "vocabulary", "beginner", "school"]}
+  publishDate="2026-02-27"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="supplies">School Supplies</h2><p><strong>书 (shū)</strong> book, <strong>笔 (bǐ)</strong> pen, <strong>纸 (zhǐ)</strong> paper, <strong>本子 (běnzi)</strong> notebook, <strong>字典 (zìdiǎn)</strong> dictionary, <strong>书包 (shūbāo)</strong> backpack.</p>
+    <h2 id="phrases">Classroom Phrases</h2><p><strong>听不懂 (tīng bù dǒng)</strong> I don't understand (listening). <strong>请再说一遍 (qǐng zài shuō yī biàn)</strong> Please say it again. <strong>这个怎么说？(zhège zěnme shuō?)</strong> How do you say this?</p>
+    <h2 id="subjects">School Subjects</h2><p><strong>数学 (shùxué)</strong> math, <strong>中文 (zhōngwén)</strong> Chinese, <strong>英语 (yīngyǔ)</strong> English, <strong>历史 (lìshǐ)</strong> history, <strong>科学 (kēxué)</strong> science. Browse more vocabulary in our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a>.</p>
+</BlogLayout>

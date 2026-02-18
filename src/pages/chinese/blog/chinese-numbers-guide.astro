@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why is 4 unlucky in Chinese?`, a: `The number 4 (四, sì) sounds similar to 死 (sǐ, death), making it considered unlucky. Many buildings skip the 4th floor, and phone numbers with 4 are cheaper.` }];
+const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
+const headings = [{ depth: 2, slug: "basics", text: "Numbers 1-10" }, { depth: 2, slug: "larger", text: "Building Larger Numbers" }, { depth: 2, slug: "lucky", text: "Lucky and Unlucky Numbers" }];
+---
+<BlogLayout
+  title="Chinese Numbers: How to Count from 1 to 10,000"
+  description="Master Chinese numbers with this complete guide covering basic counting, large numbers, and cultural number meanings."
+  language="chinese"
+  category="chinese-basics"
+  tags={["numbers", "beginner", "culture"]}
+  publishDate="2026-02-20"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="basics">Numbers 1-10</h2>
+    <p>Chinese numbers 1-10 are single characters and the foundation for all counting: 一(yī) 二(èr) 三(sān) 四(sì) 五(wǔ) 六(liù) 七(qī) 八(bā) 九(jiǔ) 十(shí). Notice that 一, 二, 三 visually represent one, two, and three horizontal strokes.</p>
+
+    <h2 id="larger">Building Larger Numbers</h2>
+    <p>Chinese numbers follow a beautifully logical system. Eleven is simply "ten-one" (十一), twenty is "two-ten" (二十), and twenty-five is "two-ten-five" (二十五). Hundred is 百 (bǎi), thousand is 千 (qiān), and ten thousand is 万/萬 (wàn). Try our <a href="/chinese/tools/number-converter/">Number Converter</a> to see any number in Chinese.</p>
+
+    <h2 id="lucky">Lucky and Unlucky Numbers</h2>
+    <p>Number symbolism is deeply embedded in Chinese culture. <strong>8 (八, bā)</strong> is the luckiest number because it sounds like 发 (fā, prosperity). The 2008 Beijing Olympics started at 8:08 PM on 8/8/08. <strong>6 (六, liù)</strong> represents smooth sailing. <strong>9 (九, jiǔ)</strong> symbolizes longevity. Meanwhile, <strong>4 (四, sì)</strong> is avoided because it sounds like death.</p>
+
+</BlogLayout>

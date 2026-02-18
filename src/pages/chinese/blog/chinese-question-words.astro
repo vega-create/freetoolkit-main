@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How are Chinese questions different from English?`, a: `Chinese question words stay in the same position where the answer would go, unlike English which moves them to the front. So Where do you go? is literally You go where? (你去哪里?).` }];
+const relatedTools = [{ name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" }];
+const headings = [{ depth: 2, slug: "question-words", text: "The Core Question Words" }, { depth: 2, slug: "patterns", text: "Question Patterns" }, { depth: 2, slug: "examples", text: "Practice Examples" }];
+---
+<BlogLayout
+  title="Chinese Question Words: How to Ask Anything"
+  description="Master all Chinese question words: who, what, when, where, why, how. Learn question patterns that work in every conversation."
+  language="chinese"
+  category="grammar"
+  tags={["grammar", "questions", "beginner", "conversation"]}
+  publishDate="2026-02-24"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="question-words">The Core Question Words</h2>
+    <p><strong>谁 (shéi)</strong> who, <strong>什么 (shénme)</strong> what, <strong>哪里 (nǎlǐ)</strong> where, <strong>什么时候 (shénme shíhou)</strong> when, <strong>为什么 (wèi shénme)</strong> why, <strong>怎么 (zěnme)</strong> how, <strong>多少 (duōshǎo)</strong> how many/much, <strong>几 (jǐ)</strong> how many (small number).</p>
+
+    <h2 id="patterns">Question Patterns</h2>
+    <p>In Chinese, questions are formed three ways. First, the <strong>ma (吗) pattern</strong>: add 吗 to any statement to make it a yes/no question. Second, the <strong>question word pattern</strong>: place the question word where the answer goes. Third, the <strong>verb-not-verb pattern</strong>: 你去不去？(Do you go or not go?).</p>
+
+    <h2 id="examples">Practice Examples</h2>
+    <p>你叫什么名字？(What is your name?) 你从哪里来？(Where are you from?) 这个多少钱？(How much is this?) 你为什么学中文？(Why are you learning Chinese?). Practice recognizing these patterns with our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a>.</p>
+
+</BlogLayout>

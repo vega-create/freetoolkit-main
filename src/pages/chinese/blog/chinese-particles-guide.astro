@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why are Chinese particles so confusing?`, a: `Particles are small grammatical words that modify meaning in subtle ways. They have no direct English equivalent, which makes them feel abstract. The key is learning through example sentences rather than memorizing rules.` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "le", text: "了 (le) — Completion and Change" }, { depth: 2, slug: "guo", text: "过 (guo) — Experience" }, { depth: 2, slug: "de", text: "的/地/得 — The Three De" }];
+---
+<BlogLayout
+  title="Understanding Chinese Particles: 了 过 着 的 地 得"
+  description="Demystify the most confusing aspect of Chinese grammar. Clear explanations of particles with examples."
+  language="chinese"
+  category="grammar"
+  tags={["grammar", "particles", "intermediate"]}
+  publishDate="2026-02-25"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="le">了 (le) — Completion and Change</h2>
+    <p>了 has two main uses. After a verb, it indicates completed action: 我吃了 (I ate / I have eaten). At the end of a sentence, it signals a change of state: 下雨了 (It started raining / It's raining now). Sometimes both uses overlap, making 了 one of the trickiest particles in Chinese.</p>
+
+    <h2 id="guo">过 (guo) — Experience</h2>
+    <p>过 indicates that something has been experienced at some point: 我去过中国 (I have been to China before). It differs from 了 in that 了 focuses on a specific completed event, while 过 emphasizes the life experience. 我吃了寿司 (I ate sushi — specific event) vs 我吃过寿司 (I have eaten sushi before — experience).</p>
+
+    <h2 id="de">的/地/得 — The Three De</h2>
+    <p>All three are pronounced "de" but serve different functions. <strong>的</strong> connects modifiers to nouns: 红的花 (red flower). <strong>地</strong> connects adverbs to verbs: 快地跑 (run quickly). <strong>得</strong> connects verbs to complements: 跑得快 (runs fast). A simple trick: 的 before nouns, 地 before verbs, 得 after verbs.</p>
+
+</BlogLayout>

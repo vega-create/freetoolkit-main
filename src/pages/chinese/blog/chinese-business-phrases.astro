@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Do I need Chinese for business in China?`, a: `While many Chinese professionals speak English, even basic Chinese dramatically improves business relationships. Chinese partners deeply appreciate the effort, and it shows cultural respect.` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "meetings", text: "Meeting Phrases" }, { depth: 2, slug: "email", text: "Email Etiquette" }, { depth: 2, slug: "networking", text: "Networking and Small Talk" }];
+---
+<BlogLayout
+  title="Chinese Business Phrases: Professional Communication Guide"
+  description="Essential Chinese for business meetings, email, negotiations, and networking. Professional vocabulary for the workplace."
+  language="chinese"
+  category="culture"
+  tags={["business", "professional", "intermediate", "phrases"]}
+  publishDate="2026-02-22"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="meetings">Meeting Phrases</h2>
+    <p><strong>会议 (huìyì)</strong> meeting. <strong>让我们开始吧 (ràng wǒmen kāishǐ ba)</strong> Let's begin. <strong>关于这个问题 (guānyú zhège wèntí)</strong> Regarding this issue. <strong>我同意 (wǒ tóngyì)</strong> I agree. <strong>我们需要讨论 (wǒmen xūyào tǎolùn)</strong> We need to discuss this.</p>
+
+    <h2 id="email">Email Etiquette</h2>
+    <p>Chinese business emails follow formal patterns. Begin with <strong>尊敬的X先生/女士 (zūnjìng de... xiānsheng/nǚshì)</strong> — Dear Mr./Ms. End with <strong>此致敬礼 (cǐ zhì jìnglǐ)</strong> — Respectfully. Use 您 (nín, formal you) rather than 你 throughout.</p>
+
+    <h2 id="networking">Networking and Small Talk</h2>
+    <p>Business card exchange remains important: present with both hands and read the card before putting it away. Common networking phrases include <strong>互相学习 (hùxiāng xuéxí)</strong> — let's learn from each other — a humble way to suggest collaboration. <strong>保持联系 (bǎochí liánxì)</strong> means "stay in touch."</p>
+
+</BlogLayout>

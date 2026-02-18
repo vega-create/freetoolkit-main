@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Can I learn Chinese for free?`, a: `Absolutely. Between free apps, YouTube channels, podcasts, and tools like ours at FreeToolkit, you can reach conversational fluency without spending money. Paid resources can accelerate learning but are not required.` }];
+const relatedTools = [{ name: "All Chinese Tools", url: "/chinese/tools/" }];
+const headings = [{ depth: 2, slug: "online-tools", text: "Online Tools" }, { depth: 2, slug: "apps", text: "Mobile Apps" }, { depth: 2, slug: "content", text: "Content for Immersion" }];
+---
+<BlogLayout
+  title="Best Free Resources for Learning Chinese in 2026"
+  description="A curated list of the best free tools, apps, websites, and content for Chinese learners at every level."
+  language="chinese"
+  category="study-tips"
+  tags={["resources", "apps", "study-tips", "beginner"]}
+  publishDate="2026-02-26"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="online-tools">Online Tools</h2>
+    <p>Our own <a href="/chinese/tools/">Chinese learning tools</a> cover pinyin, characters, vocabulary, and daily practice — all completely free. For grammar, <a href="https://resources.allsetlearning.com/chinese/grammar" target="_blank" rel="noopener">AllSet Learning's Grammar Wiki</a> is the most comprehensive free reference available. For dictionary lookups, MDBG and Pleco are industry standards.</p>
+
+    <h2 id="apps">Mobile Apps</h2>
+    <p>For flashcard-based vocabulary study, Anki (free on Android, paid on iOS) offers powerful spaced repetition with community-shared decks for HSK vocabulary. HelloChinese and ChineseSkill are both well-designed apps for structured beginner courses with gamification elements.</p>
+
+    <h2 id="content">Content for Immersion</h2>
+    <p>YouTube channels like ChinesePod and Mandarin Corner offer graded content for different levels. For reading practice, The Chairman's Bao provides simplified news articles by HSK level. Chinese podcasts and audiobooks on platforms like Ximalaya provide listening immersion. Combine these with our <a href="/chinese/downloads/">downloadable PDFs</a> for offline study.</p>
+
+</BlogLayout>

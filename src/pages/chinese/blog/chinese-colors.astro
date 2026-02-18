@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Why is red so important in Chinese culture?`, a: `Red (红/紅) symbolizes luck, prosperity, and happiness. It is used for weddings, New Year decorations, lucky money envelopes (红包), and celebrations. It is the most culturally significant color in Chinese tradition.` }];
+const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
+const headings = [{ depth: 2, slug: "basic-colors", text: "Basic Colors" }, { depth: 2, slug: "symbolism", text: "Color Symbolism" }, { depth: 2, slug: "idioms", text: "Color Idioms" }];
+---
+<BlogLayout
+  title="Colors in Chinese: Vocabulary and Cultural Meanings"
+  description="Learn color words in Chinese and discover their rich cultural symbolism. Red for luck, white for mourning, and more."
+  language="chinese"
+  category="culture"
+  tags={["colors", "vocabulary", "culture", "beginner"]}
+  publishDate="2026-02-23"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="basic-colors">Basic Colors</h2>
+    <p><strong>红 (hóng)</strong> red, <strong>蓝 (lán)</strong> blue, <strong>绿 (lǜ)</strong> green, <strong>黄 (huáng)</strong> yellow, <strong>白 (bái)</strong> white, <strong>黑 (hēi)</strong> black, <strong>粉 (fěn)</strong> pink, <strong>紫 (zǐ)</strong> purple, <strong>橙 (chéng)</strong> orange, <strong>灰 (huī)</strong> gray. To say "color" in general, use 颜色 (yánsè).</p>
+
+    <h2 id="symbolism">Color Symbolism</h2>
+    <p><strong>Red</strong> represents luck and joy — used at weddings, New Year, and celebrations. <strong>White</strong> is associated with mourning and funerals, the opposite of Western wedding white. <strong>Yellow</strong> was historically the imperial color, reserved for the emperor. <strong>Green</strong> can have negative connotations — 戴绿帽子 (wearing a green hat) means being cheated on.</p>
+
+    <h2 id="idioms">Color Idioms</h2>
+    <p><strong>红红火火 (hóng hóng huǒ huǒ)</strong> — red and fiery, meaning prosperous. <strong>青出于蓝 (qīng chū yú lán)</strong> — blue comes from indigo but surpasses it, meaning the student surpasses the teacher. Explore more idioms with our <a href="/chinese/tools/daily-idiom/">Daily Idiom</a> tool.</p>
+
+</BlogLayout>

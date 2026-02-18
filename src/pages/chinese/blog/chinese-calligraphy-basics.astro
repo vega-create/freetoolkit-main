@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Do I need special brushes for calligraphy?`, a: `Traditional Chinese calligraphy uses a brush, ink, paper, and inkstone — the Four Treasures of the Study. However, beginners can start with a regular brush pen or even a felt-tip marker to learn stroke control.` }];
+const relatedTools = [{ name: "Stroke Order", url: "/chinese/tools/stroke-order/" }, { name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }];
+const headings = [{ depth: 2, slug: "tools", text: "Essential Tools" }, { depth: 2, slug: "techniques", text: "Basic Techniques" }, { depth: 2, slug: "practice", text: "Practice Path" }];
+---
+<BlogLayout
+  title="Chinese Calligraphy for Beginners: Getting Started"
+  description="Introduction to Chinese calligraphy: tools, basic techniques, and practice tips. Transform your character writing into art."
+  language="chinese"
+  category="characters"
+  tags={["calligraphy", "writing", "characters", "culture"]}
+  publishDate="2026-02-23"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="tools">Essential Tools</h2>
+    <p>The traditional calligraphy set includes the <strong>文房四宝 (wénfáng sì bǎo)</strong> — Four Treasures of the Study: brush (笔, bǐ), ink (墨, mò), paper (纸, zhǐ), and inkstone (砚, yàn). For beginners, a medium-sized wolf-hair brush and practice paper with grid guidelines are sufficient.</p>
+
+    <h2 id="techniques">Basic Techniques</h2>
+    <p>Hold the brush vertically, gripping it with three fingers near the middle. Keep your wrist elevated above the paper. Each stroke begins with a "hidden tip" entry — press then lift slightly to start the stroke cleanly. The key is controlling pressure: press harder for thick strokes, lighter for thin ones.</p>
+
+    <h2 id="practice">Practice Path</h2>
+    <p>Start with the eight basic strokes using the character 永 (yǒng, eternal). Then practice simple characters: 一, 二, 三, 人, 大, 天. Use our <a href="/chinese/tools/stroke-order/">Stroke Order tool</a> to learn correct sequences before writing with a brush. Generate <a href="/chinese/tools/practice-sheet/">practice sheets</a> for structured training.</p>
+
+</BlogLayout>

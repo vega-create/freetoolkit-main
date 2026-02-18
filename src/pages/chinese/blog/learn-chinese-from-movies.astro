@@ -1,0 +1,29 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Should I watch with subtitles?`, a: `Start with Chinese subtitles plus English subtitles. As you improve, switch to Chinese-only subtitles. The goal is training your ear while having visual support.` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "beginner-films", text: "Films for Beginners" }, { depth: 2, slug: "intermediate-films", text: "Intermediate Level Films" }, { depth: 2, slug: "tips", text: "Watching Tips" }];
+---
+<BlogLayout
+  title="Learn Chinese from Movies: 10 Films Every Learner Should Watch"
+  description="Improve your Chinese listening skills and cultural understanding through cinema. Curated film recommendations by proficiency level."
+  language="chinese"
+  category="study-tips"
+  tags={["movies", "listening", "study-tips", "culture"]}
+  publishDate="2026-02-21"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="beginner-films">Films for Beginners</h2>
+    <p>Start with films that use simple, everyday language. Animated films and family dramas are ideal because they use clear pronunciation and common vocabulary. Look for films with scenes set in daily life — ordering food, taking transportation, having conversations with friends — as these provide the most practically useful language input.</p>
+    <p>Taiwanese films often feature a mix of Mandarin with some Taiwanese dialect, which is excellent exposure to real-world language variety. Films set in modern urban environments tend to use more standard Mandarin.</p>
+
+    <h2 id="intermediate-films">Intermediate Level Films</h2>
+    <p>Once you are comfortable with basic dialogue, move to dramas, comedies, and historical films. These introduce more complex vocabulary, cultural references, and varied speaking styles. Pay attention to how characters use different registers — formal speech at work vs casual speech with friends.</p>
+
+    <h2 id="tips">Watching Tips</h2>
+    <p><strong>Active watching:</strong> Pause frequently to look up words. <strong>Repeat after characters:</strong> Practice their pronunciation and intonation. <strong>Watch scenes twice:</strong> First for story comprehension, then for language study. Use our <a href="/chinese/tools/character-counter/">Character Counter</a> to analyze subtitles you copy.</p>
+
+</BlogLayout>

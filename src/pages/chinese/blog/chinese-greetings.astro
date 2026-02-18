@@ -1,0 +1,37 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Do Chinese people actually say ni hao?`, a: `Yes, but less often than textbooks suggest. Among friends, people more commonly ask about what you are doing or whether you have eaten, rather than saying a formal ni hao.` }, { q: `What is the most common casual greeting?`, a: `Among younger Chinese speakers, 嗨 (hāi, from English hi) and 你好呀 (nǐ hǎo ya, a softer hello) are very common in casual settings.` }];
+const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
+const headings = [{ depth: 2, slug: "formal", text: "Formal Greetings" }, { depth: 2, slug: "casual", text: "Casual Greetings" }, { depth: 2, slug: "time-based", text: "Time-Based Greetings" }, { depth: 2, slug: "phone", text: "Phone and Business" }];
+---
+<BlogLayout
+  title="20 Essential Chinese Greetings Beyond Ni Hao"
+  description="Go beyond 你好 with these practical Chinese greetings for every situation — morning, evening, formal, casual, and phone conversations."
+  language="chinese"
+  category="chinese-basics"
+  tags={["greetings", "beginner", "conversation", "phrases"]}
+  publishDate="2026-02-19"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="formal">Formal Greetings</h2>
+    <p><strong>你好 (nǐ hǎo)</strong> remains the standard polite greeting, appropriate in most situations. For extra politeness, especially with elders or in formal contexts, use <strong>您好 (nín hǎo)</strong>, where 您 is the respectful form of "you."</p>
+    <p><strong>很高兴认识你 (hěn gāoxìng rènshi nǐ)</strong> means "pleased to meet you" and is used during introductions. In business settings, people often exchange name cards while saying this phrase.</p>
+    <p><strong>久仰大名 (jiǔ yǎng dà míng)</strong> is an elegant expression meaning "I have long admired your name." Used in formal introductions, it shows respect and cultural sophistication.</p>
+
+    <h2 id="casual">Casual Greetings</h2>
+    <p>Among friends, Chinese speakers often greet each other with practical questions rather than generic hellos. <strong>吃了吗 (chī le ma)</strong> — "Have you eaten?" — is one of the most traditional casual greetings, reflecting the cultural importance of meals.</p>
+    <p><strong>最近怎么样 (zuìjìn zěnme yàng)</strong> means "How have things been lately?" and works well when you haven't seen someone in a while. The response is usually 还好 (hái hǎo, "pretty good") or 还行 (hái xíng, "not bad").</p>
+    <p><strong>忙什么呢 (máng shénme ne)</strong> — "What are you busy with?" — is a common conversation opener that shows friendly interest.</p>
+
+    <h2 id="time-based">Time-Based Greetings</h2>
+    <p><strong>早上好 (zǎoshang hǎo)</strong> for good morning, <strong>下午好 (xiàwǔ hǎo)</strong> for good afternoon, and <strong>晚上好 (wǎnshang hǎo)</strong> for good evening. These are slightly more formal than casual greetings. For a quick informal morning greeting, just say <strong>早 (zǎo)</strong>.</p>
+    <p><strong>晚安 (wǎn'ān)</strong> means good night and is used when parting in the evening or before sleep.</p>
+
+    <h2 id="phone">Phone and Business</h2>
+    <p><strong>喂 (wéi)</strong> is the standard phone greeting — equivalent to "hello" when answering a call. In business contexts, <strong>你好，请问… (nǐ hǎo, qǐng wèn…)</strong> meaning "Hello, may I ask…" is a polite way to begin.</p>
+    <p>Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check the pronunciation of any greeting, and explore our <a href="/chinese/blog/chinese-tones-guide/">tones guide</a> to make sure your greetings sound natural.</p>
+
+</BlogLayout>

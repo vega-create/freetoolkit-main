@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How does the Chinese zodiac work?`, a: `Unlike Western astrology based on birth month, the Chinese zodiac assigns an animal based on birth year in a 12-year cycle. Each animal has associated personality traits and compatibility with other animals.` }];
+const relatedTools = [{ name: "Name Generator", url: "/chinese/tools/name-generator/" }];
+const headings = [{ depth: 2, slug: "twelve-animals", text: "The 12 Animals" }, { depth: 2, slug: "your-year", text: "Finding Your Year" }, { depth: 2, slug: "compatibility", text: "Compatibility" }];
+---
+<BlogLayout
+  title="The Chinese Zodiac: 12 Animals and Their Meanings"
+  description="Learn about the 12 Chinese zodiac animals, their personality traits, compatibility, and cultural significance in Chinese astrology."
+  language="chinese"
+  category="culture"
+  tags={["zodiac", "culture", "vocabulary"]}
+  publishDate="2026-02-23"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="twelve-animals">The 12 Animals</h2>
+    <p>The twelve animals in order: <strong>鼠 (shǔ)</strong> Rat, <strong>牛 (niú)</strong> Ox, <strong>虎 (hǔ)</strong> Tiger, <strong>兔 (tù)</strong> Rabbit, <strong>龙 (lóng)</strong> Dragon, <strong>蛇 (shé)</strong> Snake, <strong>马 (mǎ)</strong> Horse, <strong>羊 (yáng)</strong> Goat, <strong>猴 (hóu)</strong> Monkey, <strong>鸡 (jī)</strong> Rooster, <strong>狗 (gǒu)</strong> Dog, <strong>猪 (zhū)</strong> Pig.</p>
+
+    <h2 id="your-year">Finding Your Year</h2>
+    <p>The zodiac follows a 12-year cycle. 2024 was Dragon, 2025 Snake, 2026 Horse. Your "birth year animal" (属相, shǔxiàng) is a common conversation topic in Chinese culture. People often ask 你属什么？(nǐ shǔ shénme? — What's your zodiac animal?).</p>
+
+    <h2 id="compatibility">Compatibility</h2>
+    <p>Traditional beliefs hold that certain animals are compatible while others clash. The Dragon is considered the most auspicious animal, and Dragon years often see increased birth rates. The Zodiac influences naming conventions too — try our <a href="/chinese/tools/name-generator/">Name Generator</a> to explore Chinese names with meaningful characters.</p>
+
+</BlogLayout>

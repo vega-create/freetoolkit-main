@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `Is internet slang used in real conversation?`, a: `Yes, many terms have crossed from online to spoken language, especially among younger speakers. However, they are inappropriate in formal writing or business communication.` }];
+const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
+const headings = [{ depth: 2, slug: "number-slang", text: "Number Slang" }, { depth: 2, slug: "abbreviations", text: "Character Abbreviations" }, { depth: 2, slug: "expressions", text: "Popular Expressions" }];
+---
+<BlogLayout
+  title="Chinese Internet Slang: 20 Popular Online Expressions"
+  description="Stay current with Chinese internet culture. Learn the most popular slang terms used on WeChat, Weibo, and Douyin."
+  language="chinese"
+  category="culture"
+  tags={["slang", "internet", "culture", "intermediate"]}
+  publishDate="2026-02-22"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+
+    <h2 id="number-slang">Number Slang</h2>
+    <p>Chinese internet culture uses numbers as homophones. <strong>520 (wǔ èr líng)</strong> sounds like 我爱你 (wǒ ài nǐ, I love you). <strong>666 (liù liù liù)</strong> means awesome or impressive (from gaming culture). <strong>88 (bā bā)</strong> sounds like "bye-bye." <strong>233</strong> means laughing hard, originating from an emoticon code on a Chinese forum.</p>
+
+    <h2 id="abbreviations">Character Abbreviations</h2>
+    <p><strong>yyds</strong> — 永远的神 (yǒngyuǎn de shén), meaning "eternal god" or greatest of all time. <strong>xswl</strong> — 笑死我了 (xiào sǐ wǒ le), laughing to death. <strong>awsl</strong> — 啊我死了 (a wǒ sǐ le), expressing extreme cuteness overload. These pinyin abbreviations save typing time.</p>
+
+    <h2 id="expressions">Popular Expressions</h2>
+    <p><strong>内卷 (nèijuǎn)</strong> — "involution," describing intense competition for diminishing returns, especially in work and education. <strong>躺平 (tǎng píng)</strong> — "lying flat," the counterculture response to 内卷, choosing to opt out of the rat race. <strong>打工人 (dǎgōng rén)</strong> — "working person," a self-deprecating term workers use for solidarity.</p>
+
+</BlogLayout>

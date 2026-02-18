@@ -1,0 +1,21 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+const faq = [{ q: `How do you ask about the weather in Chinese?`, a: `今天天气怎么样？(jīntiān tiānqì zěnme yàng?) — How is the weather today? This is one of the most common small talk topics in Chinese.` }];
+const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
+const headings = [{ depth: 2, slug: "basics", text: "Basic Weather Words" }, { depth: 2, slug: "describing", text: "Describing Weather" }, { depth: 2, slug: "seasons", text: "Seasons" }];
+---
+<BlogLayout
+  title="Chinese Weather Vocabulary: Talk About the Weather"
+  description="Learn how to discuss weather in Chinese — essential for daily conversation and small talk."
+  language="chinese"
+  category="chinese-basics"
+  tags={["weather", "vocabulary", "beginner"]}
+  publishDate="2026-02-27"
+  faq={faq}
+  relatedTools={relatedTools}
+  headings={headings}
+>
+<h2 id="basics">Basic Weather Words</h2><p><strong>天气 (tiānqì)</strong> weather, <strong>晴天 (qíngtiān)</strong> sunny, <strong>阴天 (yīntiān)</strong> cloudy, <strong>下雨 (xià yǔ)</strong> raining, <strong>下雪 (xià xuě)</strong> snowing, <strong>风 (fēng)</strong> wind, <strong>热 (rè)</strong> hot, <strong>冷 (lěng)</strong> cold, <strong>暖和 (nuǎnhuo)</strong> warm, <strong>凉快 (liángkuai)</strong> cool.</p>
+    <h2 id="describing">Describing Weather</h2><p>Combine words naturally: 今天很热 (Today is very hot). 外面下大雨了 (It's raining heavily outside). 明天会冷 (Tomorrow will be cold). Weather is a safe and universal conversation topic.</p>
+    <h2 id="seasons">Seasons</h2><p><strong>春天 (chūntiān)</strong> spring, <strong>夏天 (xiàtiān)</strong> summer, <strong>秋天 (qiūtiān)</strong> autumn, <strong>冬天 (dōngtiān)</strong> winter. Each character for season combined with 天 (sky/day) creates the season name. Practice these with our <a href="/chinese/tools/daily-character/">Daily Character</a>.</p>
+</BlogLayout>
