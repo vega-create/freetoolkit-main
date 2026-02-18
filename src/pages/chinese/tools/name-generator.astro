@@ -1,0 +1,60 @@
+---
+import ToolLayout from '../../../layouts/ToolLayout.astro';
+import NameGenerator from '../../../components/tools/chinese/NameGenerator.tsx';
+
+const faq = [
+  {
+    q: 'How do Chinese names work?',
+    a: 'Chinese names have the family name (surname) first, followed by a given name of one or two characters. For example, in 李明 (Lǐ Míng), 李 is the surname and 明 is the given name.',
+  },
+  {
+    q: 'Can foreigners have a Chinese name?',
+    a: 'Absolutely! Having a Chinese name is common and appreciated in Chinese-speaking cultures. It shows respect and makes communication much easier. Many foreigners living or working in China, Taiwan, or other Chinese-speaking regions adopt a Chinese name.',
+  },
+  {
+    q: 'Should I use Traditional or Simplified characters for my name?',
+    a: 'Use Traditional characters (繁體) if you are in Taiwan, Hong Kong, or Macau. Use Simplified characters (简体) if you are in mainland China or Singapore. Our tool generates both versions for you.',
+  },
+];
+
+const relatedTools = [
+  { name: 'Pinyin Converter', url: '/chinese/tools/pinyin-converter/', emoji: '🔤' },
+  { name: 'Stroke Order', url: '/chinese/tools/stroke-order/', emoji: '✍️' },
+  { name: 'Character Counter', url: '/chinese/tools/character-counter/', emoji: '📊' },
+  { name: 'Zhuyin Converter', url: '/chinese/tools/zhuyin-converter/', emoji: 'ㄅ' },
+];
+
+const relatedArticles = [
+  { title: 'How to Choose a Chinese Name: Complete Guide', url: '/chinese/blog/how-to-choose-chinese-name/' },
+  { title: 'Traditional vs Simplified Chinese: Key Differences', url: '/chinese/blog/traditional-vs-simplified/' },
+  { title: '50 Most Common Chinese Characters', url: '/chinese/blog/common-chinese-characters/' },
+];
+---
+
+<ToolLayout
+  title="Chinese Name Generator"
+  description="Generate a meaningful Chinese name based on your English name. Choose from themes like wisdom, nature, beauty, and more. Hear pronunciation and see both Traditional and Simplified characters."
+  language="chinese"
+  toolSlug="name-generator"
+  faq={faq}
+  relatedTools={relatedTools}
+  relatedArticles={relatedArticles}
+>
+  <NameGenerator client:load />
+
+  <Fragment slot="about">
+    <section class="mt-10 mb-8 prose max-w-none">
+      <h2>How to Use This Chinese Name Generator</h2>
+      <p>Enter your English name and our tool will generate meaningful Chinese names tailored to you. Each name includes a common Chinese surname and a given name composed of characters with beautiful meanings.</p>
+
+      <h3>Choosing the Right Name</h3>
+      <p>Chinese names carry deep cultural significance. Unlike English names, each character in a Chinese name has its own meaning, and the combination of characters creates a unique narrative. Our generator groups characters by themes like wisdom, nature, beauty, and strength so you can find a name that resonates with your personality.</p>
+
+      <h3>Traditional vs Simplified Characters</h3>
+      <p>If you plan to use your Chinese name in Taiwan, Hong Kong, or Macau, select Traditional characters (繁體字). For mainland China or Singapore, choose Simplified characters (简体字). The pronunciation and meaning are the same — only the writing style differs.</p>
+
+      <h3>Pronunciation</h3>
+      <p>Click the 🔊 button next to any generated name to hear how it's pronounced. Use the 🐢 slow button to hear it at a slower speed, perfect for practicing. The pronunciation uses your browser's built-in text-to-speech engine.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
