@@ -1,12 +1,31 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Is Japanese harder than Chinese for English speakers?", "a": "Both are Category IV languages requiring 2,200+ hours. Japanese has simpler pronunciation but more complex writing (3 systems) and grammar."}, {"q": "Can I learn Japanese in 6 months?", "a": "You can reach basic conversational level (N5-N4) in 6 months with 1-2 hours daily study. Reading fluency and business-level Japanese takes 2-4 years."}, {"q": "Does living in Japan speed up learning?", "a": "Significantly — immersion provides constant input. Learners in Japan typically progress 1.5-2x faster than those studying abroad."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "FSI Difficulty Rating"}, {"depth": 2, "slug": "milestones", "text": "Learning Milestones"}, {"depth": 2, "slug": "n5-n4", "text": "Beginner: N5-N4 Timeline"}, {"depth": 2, "slug": "n3-n2", "text": "Intermediate: N3-N2 Timeline"}, {"depth": 2, "slug": "n1", "text": "Advanced: N1 Timeline"}, {"depth": 2, "slug": "accelerate", "text": "How to Speed Up"}];
+const faq = [
+  {"q": "Can I learn Japanese in 6 months?", "a": "You can reach basic conversational level (JLPT N5) in 6 months with 1-2 hours of daily study. You will be able to introduce yourself, order food, ask directions, and handle simple daily conversations. Reading fluency and business-level Japanese takes 2-4 years."},
+  {"q": "Is Japanese harder than Chinese for English speakers?", "a": "Both are Category IV languages requiring 2,200+ hours. Japanese has simpler pronunciation (no tones) but more complex writing (3 systems) and grammar (conjugation, particles, keigo). Chinese has harder pronunciation but simpler grammar structure."},
+  {"q": "Does living in Japan speed up learning?", "a": "Significantly. Full immersion provides constant input and forces real communication. Learners living in Japan typically progress 1.5-2x faster than those studying abroad, especially in listening and speaking skills."},
+  {"q": "How many hours per day should I study Japanese?", "a": "For optimal progress, aim for 1-2 hours of focused study daily plus 30-60 minutes of passive immersion (anime, podcasts, music). Quality and consistency matter more than raw hours. Daily 30-minute sessions beat weekly 3-hour marathons."},
+  {"q": "What JLPT level do I need for working in Japan?", "a": "Most jobs require N2 minimum, which takes 1,600-2,800 hours to reach. Some IT or engineering roles accept N3. Business roles dealing with Japanese clients typically need N1. English-teaching positions (ALT/JET) may not require any JLPT certification."}
+];
+const relatedTools = [
+  {"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"},
+  {"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"},
+  {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}
+];
+const headings = [
+  {"depth": 2, "slug": "overview", "text": "The Big Picture: FSI Data"},
+  {"depth": 2, "slug": "jlpt-timeline", "text": "Timeline by JLPT Level"},
+  {"depth": 2, "slug": "n5-n4", "text": "Beginner: N5 to N4 (Months 1-12)"},
+  {"depth": 2, "slug": "n3", "text": "Intermediate: N3 (Year 1-2)"},
+  {"depth": 2, "slug": "n2-n1", "text": "Advanced: N2 to N1 (Year 2-4+)"},
+  {"depth": 2, "slug": "factors", "text": "Factors That Affect Your Speed"},
+  {"depth": 2, "slug": "accelerate", "text": "How to Learn Faster"},
+  {"depth": 2, "slug": "sample-schedules", "text": "Sample Study Schedules"}
+];
 ---
 <BlogLayout
   title="How Long to Learn Japanese? Realistic Timeline by Level"
-  description="Honest timeline for learning Japanese — from basic conversation to JLPT N1 with recommended study hours."
+  description="Honest, data-backed timeline for learning Japanese — from complete beginner to JLPT N1. Includes study hours per level, factors affecting speed, and sample schedules."
   language="japanese"
   category="jlpt"
   tags={["beginner", "jlpt", "study-tips"]}
@@ -16,23 +35,292 @@ const headings = [{"depth": 2, "slug": "overview", "text": "FSI Difficulty Ratin
   headings={headings}
 >
 
-    <h2 id="overview">FSI Difficulty Rating</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="milestones">Learning Milestones</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="n5-n4">Beginner: N5-N4 Timeline</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="n3-n2">Intermediate: N3-N2 Timeline</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="n1">Advanced: N1 Timeline</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="accelerate">How to Speed Up</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+<div class="prose max-w-none">
+
+  <p>How long does it take to learn Japanese? It is one of the first questions every new learner asks, and the answer matters for setting realistic expectations. Too optimistic and you burn out when progress feels slow. Too pessimistic and you never start. This guide gives you honest, data-backed timelines based on FSI research, JLPT pass rates, and real learner experiences — broken down by proficiency level so you can plan your journey accurately.</p>
+
+  <h2 id="overview">The Big Picture: FSI Data</h2>
+
+  <p>The US Foreign Service Institute (FSI) provides the gold standard for language learning time estimates. Based on decades of training diplomats, they classify Japanese as a Category IV language — the most difficult tier for English speakers — requiring approximately <strong>2,200 class hours</strong> to reach professional working proficiency.</p>
+
+  <p>But what does that actually mean in real time? Here is the conversion:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Daily Study Time</th>
+        <th style="padding: 12px; text-align: left;">Time to 2,200 Hours</th>
+        <th style="padding: 12px; text-align: left;">Realistic For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">30 minutes/day</td>
+        <td style="padding: 10px;">12 years</td>
+        <td style="padding: 10px;">Very casual hobby learners</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">1 hour/day</td>
+        <td style="padding: 10px;">6 years</td>
+        <td style="padding: 10px;">Part-time learners with jobs</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">2 hours/day</td>
+        <td style="padding: 10px;">3 years</td>
+        <td style="padding: 10px;">Dedicated self-studiers</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">4 hours/day</td>
+        <td style="padding: 10px;">1.5 years</td>
+        <td style="padding: 10px;">Full-time students, immersion</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">8 hours/day (intensive)</td>
+        <td style="padding: 10px;">9-10 months</td>
+        <td style="padding: 10px;">Language school in Japan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">⚠️ Important Context:</p>
+    <p style="margin: 8px 0 0;">The FSI 2,200-hour figure measures time to <em>professional working proficiency</em> — reading newspapers, writing reports, conducting negotiations. You will reach useful conversational ability much earlier. Most learners can hold basic conversations after 300-500 hours and navigate daily life in Japan after 600-800 hours.</p>
+  </div>
+
+  <h2 id="jlpt-timeline">Timeline by JLPT Level</h2>
+
+  <p>The JLPT (Japanese Language Proficiency Test) provides the most widely recognized benchmarks. Here is an overview of each level with estimated study hours:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Level</th>
+        <th style="padding: 12px; text-align: left;">Hours</th>
+        <th style="padding: 12px; text-align: left;">Kanji</th>
+        <th style="padding: 12px; text-align: left;">Vocabulary</th>
+        <th style="padding: 12px; text-align: left;">What You Can Do</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N5</td>
+        <td style="padding: 10px;">350 hrs</td>
+        <td style="padding: 10px;">~100</td>
+        <td style="padding: 10px;">~800</td>
+        <td style="padding: 10px;">Basic greetings, simple sentences, read hiragana/katakana</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N4</td>
+        <td style="padding: 10px;">600 hrs</td>
+        <td style="padding: 10px;">~300</td>
+        <td style="padding: 10px;">~1,500</td>
+        <td style="padding: 10px;">Daily conversations, basic reading, travel independently</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N3</td>
+        <td style="padding: 10px;">950 hrs</td>
+        <td style="padding: 10px;">~650</td>
+        <td style="padding: 10px;">~3,750</td>
+        <td style="padding: 10px;">Read articles, follow TV shows, discuss familiar topics</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N2</td>
+        <td style="padding: 10px;">1,600 hrs</td>
+        <td style="padding: 10px;">~1,000</td>
+        <td style="padding: 10px;">~6,000</td>
+        <td style="padding: 10px;">Read newspapers, work in Japanese, understand most native speech</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N1</td>
+        <td style="padding: 10px;">2,400 hrs</td>
+        <td style="padding: 10px;">~2,000</td>
+        <td style="padding: 10px;">~10,000</td>
+        <td style="padding: 10px;">Read literature, full professional competency, nuanced discussions</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="n5-n4">Beginner: N5 to N4 (Months 1-12)</h2>
+
+  <p>The beginner phase is where you build the foundation that everything else rests on. This is where consistent study habits matter most.</p>
+
+  <p><strong>N5 Level (3-6 months at 1-2 hours/day):</strong></p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em; font-weight: 700; color: #166534;">46+46</p>
+      <p style="margin: 4px 0 0; color: #64748b;">Hiragana + Katakana</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em;">Master in weeks 1-4</p>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em; font-weight: 700; color: #1e40af;">~100</p>
+      <p style="margin: 4px 0 0; color: #64748b;">Basic Kanji</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em;">Numbers, days, basic nouns</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em; font-weight: 700; color: #92400e;">~60</p>
+      <p style="margin: 4px 0 0; color: #64748b;">Grammar Points</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em;">Particles, verb basics, adjectives</p>
+    </div>
+    <div style="background: #fce7f3; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em; font-weight: 700; color: #9d174d;">~800</p>
+      <p style="margin: 4px 0 0; color: #64748b;">Vocabulary Words</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em;">Greetings, food, numbers, daily items</p>
+    </div>
+  </div>
+
+  <p>At N5, you can introduce yourself, order at restaurants, count objects, tell time, ask basic questions, and read simple signs. Start learning kana immediately with our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> and test yourself with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>.</p>
+
+  <p><strong>N4 Level (6-12 months at 1-2 hours/day):</strong></p>
+  <p>N4 is where Japanese starts feeling like a real language you can use. You can handle most daily life situations — shopping, asking for directions, talking about your schedule, and expressing preferences. The jump from N5 to N4 requires doubling your grammar knowledge and tripling your kanji count. This is where many learners hit their first wall and where good study habits prove essential.</p>
+
+  <h2 id="n3">Intermediate: N3 (Year 1-2)</h2>
+
+  <p>N3 is the first "real" proficiency milestone — the point where you can start consuming native Japanese content (with effort) and handle most non-specialized conversations. It is also where the infamous "intermediate plateau" begins.</p>
+
+  <div style="background: #fef2f2; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">🚧 The Intermediate Plateau:</p>
+    <p style="margin: 8px 0 0;">Between N4 and N3, many learners feel like progress stalls. This is because: (1) new grammar points are more subtle and harder to notice, (2) vocabulary growth slows as words become less common, (3) kanji compounds multiply faster than you can memorize them. The plateau is <em>normal</em> and temporary — push through it by diversifying your study methods and increasing native content exposure.</p>
+  </div>
+
+  <p>At N3 you should be able to:</p>
+  <ul>
+    <li>Read simplified news articles and blog posts</li>
+    <li>Follow anime and drama without English subtitles (with some effort)</li>
+    <li>Write short essays and diary entries</li>
+    <li>Discuss familiar topics — hobbies, work, travel, current events</li>
+    <li>Handle most daily situations in Japan without English fallback</li>
+  </ul>
+
+  <h2 id="n2-n1">Advanced: N2 to N1 (Year 2-4+)</h2>
+
+  <p><strong>N2 (1,600 hours)</strong> is the game-changing level. Most employers in Japan require N2 minimum, and it is where Japanese truly opens up as a usable professional skill. You can read newspapers, write business emails, and participate in meetings — though with some difficulty on specialized topics.</p>
+
+  <p><strong>N1 (2,400+ hours)</strong> is near-native comprehension. You can read literature, understand sarcasm and wordplay, follow rapid native speech, and handle formal Japanese including keigo. Only about 30% of test-takers pass N1 each year.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Milestone</th>
+        <th style="padding: 12px; text-align: left;">At 1 hr/day</th>
+        <th style="padding: 12px; text-align: left;">At 2 hrs/day</th>
+        <th style="padding: 12px; text-align: left;">At 4 hrs/day</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N5 — Basic</td>
+        <td style="padding: 10px;">~1 year</td>
+        <td style="padding: 10px;">~6 months</td>
+        <td style="padding: 10px;">~3 months</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N4 — Elementary</td>
+        <td style="padding: 10px;">~1.5 years</td>
+        <td style="padding: 10px;">~10 months</td>
+        <td style="padding: 10px;">~5 months</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N3 — Intermediate</td>
+        <td style="padding: 10px;">~2.5 years</td>
+        <td style="padding: 10px;">~1.3 years</td>
+        <td style="padding: 10px;">~8 months</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N2 — Advanced</td>
+        <td style="padding: 10px;">~4.5 years</td>
+        <td style="padding: 10px;">~2.2 years</td>
+        <td style="padding: 10px;">~1.1 years</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">N1 — Proficient</td>
+        <td style="padding: 10px;">~6.5 years</td>
+        <td style="padding: 10px;">~3.3 years</td>
+        <td style="padding: 10px;">~1.6 years</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="factors">Factors That Affect Your Speed</h2>
+
+  <p>The timelines above are averages. Your actual speed depends on several factors that can dramatically accelerate or slow your progress:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #166534;">🚀 Speed Boosters</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li>Living in Japan (+50-100% faster)</li>
+        <li>Chinese/Korean background (+30-40% for kanji/grammar)</li>
+        <li>Daily consistent study habit</li>
+        <li>Using spaced repetition effectively</li>
+        <li>Having a Japanese-speaking partner</li>
+        <li>Working in a Japanese environment</li>
+      </ul>
+    </div>
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">🐌 Speed Reducers</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li>Inconsistent study (gaps kill momentum)</li>
+        <li>Only studying textbooks (no real content)</li>
+        <li>Avoiding kanji practice</li>
+        <li>Not speaking or writing regularly</li>
+        <li>Using romaji as a crutch beyond week 2</li>
+        <li>Perfectionism preventing real-world use</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="accelerate">How to Learn Faster</h2>
+
+  <p>Based on research and successful learner experiences, these strategies have the biggest impact on learning speed:</p>
+
+  <ol>
+    <li><strong>Front-load kana mastery</strong> — Spend weeks 1-3 exclusively on <a href="/japanese/blog/hiragana-guide/">hiragana</a> and <a href="/japanese/blog/katakana-guide/">katakana</a>. Being slow at kana creates a bottleneck that slows everything else. Use our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> until you can read any kana in under 1 second.</li>
+    <li><strong>Start kanji from day one of grammar study</strong> — Do not postpone kanji. Learning vocabulary with kanji from the start means you never have to "re-learn" words later. Even 5 kanji per day adds up to 1,800+ in a year.</li>
+    <li><strong>Immerse in native content early</strong> — Start watching anime with Japanese subtitles, reading NHK News Web Easy, and listening to podcasts by month 3. Passive exposure builds comprehension faster than textbooks alone.</li>
+    <li><strong>Use the language daily</strong> — Write a daily journal entry in Japanese (even 3 sentences), talk to yourself, or find a language exchange partner. Output solidifies input.</li>
+    <li><strong>Take the JLPT</strong> — Having a <a href="/japanese/blog/jlpt-preparation-guide/">concrete test goal</a> with a deadline creates structure and motivation. Register even if you are not sure you will pass.</li>
+  </ol>
+
+  <h2 id="sample-schedules">Sample Study Schedules</h2>
+
+  <p>Here are realistic daily schedules for different availability levels. Adjust based on your situation, but keep the proportions roughly similar:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 12px; font-weight: 700; color: #1e40af;">📘 30 Minutes/Day (Casual)</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; line-height: 1.8;">
+        <li>10 min — Kanji/vocabulary review (SRS)</li>
+        <li>10 min — Grammar study (one point)</li>
+        <li>10 min — Reading or listening practice</li>
+      </ul>
+      <p style="margin: 12px 0 0; font-size: 0.85em; color: #64748b;">Target: N5 in ~1 year, N3 in ~4 years</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 12px; font-weight: 700; color: #166534;">📗 1 Hour/Day (Steady)</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; line-height: 1.8;">
+        <li>15 min — Kanji/vocabulary SRS</li>
+        <li>20 min — Grammar + textbook</li>
+        <li>15 min — Reading practice</li>
+        <li>10 min — Listening or speaking</li>
+      </ul>
+      <p style="margin: 12px 0 0; font-size: 0.85em; color: #64748b;">Target: N5 in 6-8 months, N2 in ~4 years</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 12px; font-weight: 700; color: #92400e;">📙 2 Hours/Day (Dedicated)</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; line-height: 1.8;">
+        <li>20 min — Kanji/vocabulary SRS</li>
+        <li>30 min — Grammar study</li>
+        <li>30 min — Reading (graded → native)</li>
+        <li>20 min — Listening practice</li>
+        <li>20 min — Writing or speaking output</li>
+      </ul>
+      <p style="margin: 12px 0 0; font-size: 0.85em; color: #64748b;">Target: N4 in 6 months, N2 in ~2 years</p>
+    </div>
+  </div>
+
+  <p>The most important factor is not how many hours you study — it is whether you study <em>every day</em>. A 15-minute daily habit with zero missed days will outperform random 2-hour sessions. Start building your foundation today with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a>, and read our <a href="/japanese/blog/is-japanese-hard-honest/">honest difficulty assessment</a> to understand what to expect at each stage.</p>
+
+</div>
 
 </BlogLayout>

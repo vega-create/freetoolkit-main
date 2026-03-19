@@ -1,35 +1,497 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Do I need keigo for business Japanese?", "a": "Absolutely. Business Japanese requires polite language at minimum, and formal keigo for client-facing communication and emails."}, {"q": "How do Japanese business emails differ from English?", "a": "They follow a strict structure: greeting, seasonal phrase, self-identification, main content, closing phrase, signature. They are generally more formal."}, {"q": "What is meishi koukan?", "a": "Business card exchange (名刺交換) is a formal ritual in Japan. You present your card with both hands, receive theirs respectfully, and never write on someone's card."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "greetings", "text": "Business Greetings"}, {"depth": 2, "slug": "email", "text": "Email Phrases"}, {"depth": 2, "slug": "meetings", "text": "Meeting Expressions"}, {"depth": 2, "slug": "phone", "text": "Phone Etiquette"}, {"depth": 2, "slug": "self-intro", "text": "Business Self-Introduction"}];
+const faq = [
+  {"q": "Do I need keigo for business Japanese?", "a": "Yes. Business Japanese requires polite language (teineigo) at minimum, and formal keigo (sonkeigo and kenjougo) for client-facing communication, presentations, and emails. Even casual workplaces expect です/ます form with managers and external contacts."},
+  {"q": "How do Japanese business emails differ from English?", "a": "Japanese business emails follow a strict structure: seasonal greeting (時候の挨拶), self-identification with company name, a humble opening phrase like お忙しいところ恐れ入りますが, the main content, a closing request phrase, and a formal signature block. They are significantly more formulaic than English emails."},
+  {"q": "What is meishi koukan?", "a": "Business card exchange (名刺交換) is a formal ritual in Japan. You present your card with both hands facing the recipient, receive theirs with both hands while reading it, place it on the table during the meeting, and never write on someone's card. Forgetting your cards is considered very unprofessional."},
+  {"q": "How formal should I be with Japanese coworkers?", "a": "Use です/ます form with anyone senior or from another department. With close colleagues at the same level, casual speech may develop over time, but always start formal. With clients or external contacts, full keigo is expected regardless of relationship."},
+  {"q": "Can I use English in Japanese business settings?", "a": "It depends on the company. International firms may mix English and Japanese, but domestic companies expect Japanese communication. Even in English-friendly companies, internal emails and meetings with Japanese clients are conducted in Japanese with proper keigo."}
+];
+const relatedTools = [
+  {"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"},
+  {"name": "Daily Phrase", "url": "/japanese/tools/daily-phrase/"}
+];
+const headings = [
+  {"depth": 2, "slug": "why-business-japanese", "text": "Why Business Japanese Matters"},
+  {"depth": 2, "slug": "greetings", "text": "Essential Business Greetings"},
+  {"depth": 2, "slug": "self-intro", "text": "Business Self-Introduction (自己紹介)"},
+  {"depth": 2, "slug": "email", "text": "Email Phrases and Templates"},
+  {"depth": 2, "slug": "meetings", "text": "Meeting Expressions"},
+  {"depth": 2, "slug": "phone", "text": "Phone Etiquette Phrases"},
+  {"depth": 2, "slug": "meishi", "text": "Business Card Exchange (名刺交換)"},
+  {"depth": 2, "slug": "common-mistakes", "text": "Common Mistakes to Avoid"}
+];
 ---
 <BlogLayout
   title="Essential Japanese Business Phrases for Email and Meetings"
-  description="60+ Japanese business phrases for email, meetings, phone calls, and professional self-introduction."
+  description="Master 80+ Japanese business phrases for email, meetings, phone calls, business card exchange, and professional self-introduction with keigo examples."
   language="japanese"
   category="culture"
-  tags={["keigo", "vocabulary", "business"]}
+  tags={["keigo", "vocabulary", "business", "intermediate"]}
   publishDate="2026-02-28"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="greetings">Business Greetings</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="email">Email Phrases</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="meetings">Meeting Expressions</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="phone">Phone Etiquette</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="self-intro">Business Self-Introduction</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+<div class="prose max-w-none">
+
+  <p>Walking into a Japanese office for the first time can feel overwhelming. The language shifts dramatically from textbook Japanese to a world of honorific verbs, set phrases, and unspoken rules. Business Japanese (ビジネス日本語) is not just about vocabulary — it is an entire communication system built on hierarchy, respect, and precision. Whether you are preparing for a job in Japan, working with Japanese clients, or attending business meetings, mastering these phrases will help you navigate the professional world with confidence.</p>
+
+  <p>This guide covers 80+ essential business phrases organized by real workplace situations — from your first self-introduction to writing professional emails and handling phone calls. Each phrase includes the Japanese text, reading, and usage context so you know exactly when and how to use it.</p>
+
+  <h2 id="why-business-japanese">Why Business Japanese Matters</h2>
+
+  <p>In Japan, the way you speak communicates as much as what you say. Using casual language in a business setting does not just sound unprofessional — it can damage relationships and close doors. Japanese business culture operates on three levels of politeness that you will encounter daily:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px; border-left: 4px solid #3b82f6;">
+      <p style="margin: 0 0 4px; font-weight: 700; color: #1e40af;">丁寧語 (Teineigo)</p>
+      <p style="margin: 0 0 8px; font-size: 0.9em; color: #64748b;">Polite Language</p>
+      <p style="margin: 0; font-size: 0.95em;">です/ます forms. The <strong>minimum</strong> level for any business interaction. Used with colleagues at similar levels.</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; border-left: 4px solid #22c55e;">
+      <p style="margin: 0 0 4px; font-weight: 700; color: #166534;">尊敬語 (Sonkeigo)</p>
+      <p style="margin: 0 0 8px; font-size: 0.9em; color: #64748b;">Respectful Language</p>
+      <p style="margin: 0; font-size: 0.95em;">Elevates the other person's actions. Used when talking <strong>about</strong> clients, superiors, or their company.</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; border-left: 4px solid #f59e0b;">
+      <p style="margin: 0 0 4px; font-weight: 700; color: #92400e;">謙譲語 (Kenjougo)</p>
+      <p style="margin: 0 0 8px; font-size: 0.9em; color: #64748b;">Humble Language</p>
+      <p style="margin: 0; font-size: 0.95em;">Lowers your own actions. Used when describing what <strong>you</strong> or your company will do for others.</p>
+    </div>
+  </div>
+
+  <p>The key insight: in business Japanese, you always elevate others and humble yourself. This principle guides every phrase in this article. For a deeper dive into keigo levels, see our <a href="/japanese/blog/japanese-keigo-basics/">complete keigo guide</a>.</p>
+
+  <h2 id="greetings">Essential Business Greetings</h2>
+
+  <p>Japanese offices run on greetings. You will use these phrases every single day, and saying them correctly sets the tone for all your interactions. Here are the greetings organized by when you use them:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Situation</th>
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Reading</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Morning arrival</td>
+        <td style="padding: 10px; font-weight: 600;">おはようございます</td>
+        <td style="padding: 10px; font-size: 0.9em;">Ohayou gozaimasu</td>
+        <td style="padding: 10px;">Good morning (polite)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">General greeting</td>
+        <td style="padding: 10px; font-weight: 600;">お疲れ様です</td>
+        <td style="padding: 10px; font-size: 0.9em;">Otsukaresama desu</td>
+        <td style="padding: 10px;">Thank you for your hard work</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Leaving before others</td>
+        <td style="padding: 10px; font-weight: 600;">お先に失礼します</td>
+        <td style="padding: 10px; font-size: 0.9em;">Osaki ni shitsurei shimasu</td>
+        <td style="padding: 10px;">Excuse me for leaving first</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Someone is leaving</td>
+        <td style="padding: 10px; font-weight: 600;">お疲れ様でした</td>
+        <td style="padding: 10px; font-size: 0.9em;">Otsukaresama deshita</td>
+        <td style="padding: 10px;">Great work today (farewell)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Going out temporarily</td>
+        <td style="padding: 10px; font-weight: 600;">行ってまいります</td>
+        <td style="padding: 10px; font-size: 0.9em;">Itte mairimasu</td>
+        <td style="padding: 10px;">I am heading out (humble)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Returning to office</td>
+        <td style="padding: 10px; font-weight: 600;">ただいま戻りました</td>
+        <td style="padding: 10px; font-size: 0.9em;">Tadaima modorimashita</td>
+        <td style="padding: 10px;">I have just returned</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">First meeting</td>
+        <td style="padding: 10px; font-weight: 600;">初めまして</td>
+        <td style="padding: 10px; font-size: 0.9em;">Hajimemashite</td>
+        <td style="padding: 10px;">Nice to meet you</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Long time no see</td>
+        <td style="padding: 10px; font-weight: 600;">ご無沙汰しております</td>
+        <td style="padding: 10px; font-size: 0.9em;">Gobusata shite orimasu</td>
+        <td style="padding: 10px;">It has been a while (humble)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">💡 Pro Tip:</p>
+    <p style="margin: 8px 0 0;">お疲れ様です is the most versatile business greeting in Japanese. Use it anytime after morning — in the hallway, at the start of emails to colleagues, when answering internal calls, and when someone finishes a task. It is essentially "hello" for the workplace.</p>
+  </div>
+
+  <h2 id="self-intro">Business Self-Introduction (自己紹介)</h2>
+
+  <p>Your business self-introduction follows a specific formula. Unlike casual introductions, the business version always includes your company name and department before your personal name. Here is the standard structure:</p>
+
+  <div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 24px; margin: 20px 0;">
+    <p style="margin: 0 0 12px; font-weight: 700; font-size: 1.1em; color: #0369a1;">Standard Business Self-Introduction Template</p>
+    <p style="margin: 0 0 8px;"><strong>1.</strong> 初めまして。<span style="color: #64748b;">— Hajimemashite. (Nice to meet you.)</span></p>
+    <p style="margin: 0 0 8px;"><strong>2.</strong> [会社名]の[部署名]の[名前]と申します。<span style="color: #64748b;">— [Company] no [Department] no [Name] to moushimasu.</span></p>
+    <p style="margin: 0 0 8px;"><strong>3.</strong> [役割/担当]を担当しております。<span style="color: #64748b;">— [Role] wo tantou shite orimasu. (I am in charge of...)</span></p>
+    <p style="margin: 0 0 8px;"><strong>4.</strong> どうぞよろしくお願いいたします。<span style="color: #64748b;">— Douzo yoroshiku onegai itashimasu.</span></p>
+  </div>
+
+  <p>Notice the use of humble forms: 申します (moushimasu) instead of 言います for "my name is," and しております instead of しています for "I am doing." These humble forms are essential in business introductions. Here are common role descriptions you might use:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Reading</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">営業部</td>
+        <td style="padding: 10px;">Eigyoubu</td>
+        <td style="padding: 10px;">Sales department</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">マーケティング部</td>
+        <td style="padding: 10px;">Maaketingu-bu</td>
+        <td style="padding: 10px;">Marketing department</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">人事部</td>
+        <td style="padding: 10px;">Jinjibu</td>
+        <td style="padding: 10px;">Human resources</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">経理部</td>
+        <td style="padding: 10px;">Keiribu</td>
+        <td style="padding: 10px;">Accounting department</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">開発部</td>
+        <td style="padding: 10px;">Kaihatsubu</td>
+        <td style="padding: 10px;">Development department</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">総務部</td>
+        <td style="padding: 10px;">Soumubu</td>
+        <td style="padding: 10px;">General affairs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="email">Email Phrases and Templates</h2>
+
+  <p>Japanese business emails (ビジネスメール) follow a rigid structure that differs greatly from English emails. Every email has specific opening and closing formulas that you must use. Skipping them is considered rude, even in short messages.</p>
+
+  <p><strong>Opening phrases</strong> — choose based on your relationship with the recipient:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">When to Use</th>
+        <th style="padding: 12px; text-align: left;">Translation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">お世話になっております</td>
+        <td style="padding: 10px;">External contacts (most common)</td>
+        <td style="padding: 10px;">Thank you for your continued support</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">お疲れ様です</td>
+        <td style="padding: 10px;">Internal colleagues</td>
+        <td style="padding: 10px;">Thank you for your hard work</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">初めてメールいたします</td>
+        <td style="padding: 10px;">First contact ever</td>
+        <td style="padding: 10px;">This is my first time emailing you</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">ご無沙汰しております</td>
+        <td style="padding: 10px;">After a long gap</td>
+        <td style="padding: 10px;">It has been a long time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Key email body phrases:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Purpose</th>
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Translation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Making a request</td>
+        <td style="padding: 10px; font-weight: 600;">お忙しいところ恐れ入りますが</td>
+        <td style="padding: 10px;">I am sorry to trouble you while busy, but...</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Confirming</td>
+        <td style="padding: 10px; font-weight: 600;">ご確認いただけますでしょうか</td>
+        <td style="padding: 10px;">Could you please confirm?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Attaching files</td>
+        <td style="padding: 10px; font-weight: 600;">資料を添付いたします</td>
+        <td style="padding: 10px;">I have attached the documents</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Apologizing</td>
+        <td style="padding: 10px; font-weight: 600;">ご迷惑をおかけして申し訳ございません</td>
+        <td style="padding: 10px;">I sincerely apologize for the inconvenience</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Thanking</td>
+        <td style="padding: 10px; font-weight: 600;">ご対応いただきありがとうございます</td>
+        <td style="padding: 10px;">Thank you for your response/handling</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Scheduling</td>
+        <td style="padding: 10px; font-weight: 600;">ご都合のよい日時をお知らせください</td>
+        <td style="padding: 10px;">Please let me know a convenient date/time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Closing phrases:</strong></p>
+  <ul>
+    <li><strong>何卒よろしくお願いいたします</strong> — Most formal closing (please treat this matter favorably)</li>
+    <li><strong>ご検討のほどよろしくお願いいたします</strong> — Please consider this (used after proposals)</li>
+    <li><strong>お返事お待ちしております</strong> — I look forward to your reply</li>
+    <li><strong>引き続きよろしくお願いいたします</strong> — Thank you for your continued cooperation</li>
+  </ul>
+
+  <h2 id="meetings">Meeting Expressions</h2>
+
+  <p>Japanese meetings have their own rhythm. There are specific phrases for starting, participating in, and closing meetings. Knowing these makes you sound professional immediately:</p>
+
+  <p><strong>Starting a meeting:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Reading</th>
+        <th style="padding: 12px; text-align: left;">Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">それでは始めましょう</td>
+        <td style="padding: 10px;">Soredewa hajimemashou</td>
+        <td style="padding: 10px;">Let us begin (meeting leader)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">本日の議題は〜です</td>
+        <td style="padding: 10px;">Honjitsu no gidai wa ~ desu</td>
+        <td style="padding: 10px;">Today's agenda is...</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">資料をご覧ください</td>
+        <td style="padding: 10px;">Shiryou wo goran kudasai</td>
+        <td style="padding: 10px;">Please look at the materials</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>During the meeting — expressing opinions and asking questions:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">一つ質問がございます</td>
+        <td style="padding: 10px;">I have one question (formal)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">少々よろしいでしょうか</td>
+        <td style="padding: 10px;">May I have a moment? (before speaking)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">おっしゃる通りだと思います</td>
+        <td style="padding: 10px;">I think you are absolutely right (agreeing)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">少し違う観点から申し上げますと</td>
+        <td style="padding: 10px;">From a slightly different perspective... (polite disagreement)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">ご提案なのですが</td>
+        <td style="padding: 10px;">I have a suggestion... (before proposing)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">確認させていただきたいのですが</td>
+        <td style="padding: 10px;">I would like to confirm something</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">💡 Cultural Note:</p>
+    <p style="margin: 8px 0 0;">In Japanese meetings, direct disagreement is rare. Instead of saying "I disagree," use softening phrases like 少し違う観点から (from a different perspective) or ちょっと気になる点がありまして (there is a point that concerns me slightly). This indirect approach shows respect while still expressing your view.</p>
+  </div>
+
+  <h2 id="phone">Phone Etiquette Phrases</h2>
+
+  <p>Phone calls in Japanese business follow strict conventions. The person answering identifies themselves and their company immediately. Here is a complete phone call flow:</p>
+
+  <p><strong>Answering and making calls:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #1e293b; color: white;">
+        <th style="padding: 12px; text-align: left;">Situation</th>
+        <th style="padding: 12px; text-align: left;">Japanese</th>
+        <th style="padding: 12px; text-align: left;">Translation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Answering</td>
+        <td style="padding: 10px; font-weight: 600;">はい、[会社名]でございます</td>
+        <td style="padding: 10px;">Yes, this is [Company]</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Identifying yourself</td>
+        <td style="padding: 10px; font-weight: 600;">[会社名]の[名前]と申します</td>
+        <td style="padding: 10px;">This is [Name] from [Company]</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Asking for someone</td>
+        <td style="padding: 10px; font-weight: 600;">[名前]様はいらっしゃいますか</td>
+        <td style="padding: 10px;">Is [Name] available? (honorific)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Transferring</td>
+        <td style="padding: 10px; font-weight: 600;">少々お待ちください</td>
+        <td style="padding: 10px;">Please wait a moment</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Person unavailable</td>
+        <td style="padding: 10px; font-weight: 600;">申し訳ございません、ただいま席を外しております</td>
+        <td style="padding: 10px;">I am sorry, they are away from their desk</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Taking a message</td>
+        <td style="padding: 10px; font-weight: 600;">伝言をお預かりいたしましょうか</td>
+        <td style="padding: 10px;">Shall I take a message?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Will call back</td>
+        <td style="padding: 10px; font-weight: 600;">折り返しお電話いたします</td>
+        <td style="padding: 10px;">I will call back</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Ending call</td>
+        <td style="padding: 10px; font-weight: 600;">失礼いたします</td>
+        <td style="padding: 10px;">Goodbye (formal phone ending)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">📞 Phone Rule:</p>
+    <p style="margin: 8px 0 0;">When referring to your own colleague to an outside caller, <strong>drop all honorifics</strong>. Even your company president becomes just their last name without さん. This is because your company is "inside" and the caller is "outside" — you humble your entire organization.</p>
+  </div>
+
+  <h2 id="meishi">Business Card Exchange (名刺交換)</h2>
+
+  <p>The business card exchange (名刺交換 meishi koukan) is one of the most ritualized aspects of Japanese business culture. Your card represents you and your company, so how you handle it matters enormously.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 12px; font-weight: 700; color: #0369a1; font-size: 1.1em;">Step-by-Step Exchange</p>
+      <ol style="margin: 0; padding-left: 20px; line-height: 1.8;">
+        <li>Stand up and face the other person</li>
+        <li>Hold your card with both hands, text facing them</li>
+        <li>State your company and name clearly</li>
+        <li>Present your card slightly lower than theirs</li>
+        <li>Receive their card with both hands</li>
+        <li>Read their card carefully and acknowledge their position</li>
+        <li>Place their card on the table during the meeting</li>
+        <li>Store it respectfully in a card holder after</li>
+      </ol>
+    </div>
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 12px; font-weight: 700; color: #dc2626; font-size: 1.1em;">❌ Never Do These</p>
+      <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+        <li>Write on someone's business card</li>
+        <li>Put their card in your back pocket</li>
+        <li>Place anything on top of their card</li>
+        <li>Forget to bring your own cards</li>
+        <li>Hand your card with one hand</li>
+        <li>Fidget with or bend their card</li>
+        <li>Toss cards across the table</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Key phrases during the exchange:</p>
+  <ul>
+    <li><strong>名刺を頂戴できますでしょうか</strong> — May I have your business card? (very polite)</li>
+    <li><strong>名刺を切らしておりまして</strong> — I have run out of business cards (apology)</li>
+    <li><strong>頂戴いたします</strong> — I humbly receive (said when accepting the card)</li>
+  </ul>
+
+  <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+  <p>Even advanced Japanese speakers make these business language errors. Being aware of them helps you avoid embarrassing situations:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Common Mistake</p>
+      <p style="margin: 0 0 12px;">Using 了解しました (ryoukai shimashita) with superiors</p>
+      <p style="margin: 0 0 8px; font-weight: 700; color: #16a34a;">✅ Correct Form</p>
+      <p style="margin: 0;">承知いたしました (shouchi itashimashita) — "Understood" in humble form</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Common Mistake</p>
+      <p style="margin: 0 0 12px;">Adding さん to your own company president's name to outsiders</p>
+      <p style="margin: 0 0 8px; font-weight: 700; color: #16a34a;">✅ Correct Form</p>
+      <p style="margin: 0;">Drop all honorifics for your own team when speaking to external people</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Common Mistake</p>
+      <p style="margin: 0 0 12px;">Using すみません (sumimasen) in formal business apologies</p>
+      <p style="margin: 0 0 8px; font-weight: 700; color: #16a34a;">✅ Correct Form</p>
+      <p style="margin: 0;">申し訳ございません (moushiwake gozaimasen) — the proper business apology</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Common Mistake</p>
+      <p style="margin: 0 0 12px;">Saying なるほど (naruhodo) to clients or superiors</p>
+      <p style="margin: 0 0 8px; font-weight: 700; color: #16a34a;">✅ Correct Form</p>
+      <p style="margin: 0;">おっしゃる通りです (ossharu toori desu) — "You are absolutely right"</p>
+    </div>
+  </div>
+
+  <p>The single most important principle in business Japanese is the <strong>uchi-soto</strong> (inside-outside) distinction. Your company is "uchi" (inside), and everyone else is "soto" (outside). You humble your entire uchi group and elevate the soto group — even if your company president is standing right next to you. Mastering this concept makes all other business keigo rules fall into place naturally.</p>
+
+  <p>Build your business vocabulary systematically with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a>, and practice daily phrases with the <a href="/japanese/tools/daily-phrase/">Daily Phrase tool</a>. For more on the keigo system, read our <a href="/japanese/blog/japanese-keigo-basics/">keigo basics guide</a> and <a href="/japanese/blog/japanese-honorifics-explained/">honorifics guide</a>.</p>
+
+</div>
 
 </BlogLayout>

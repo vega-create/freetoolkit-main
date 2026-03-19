@@ -1,38 +1,232 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Can I just use san for everyone?", "a": "San is the safest default and works in almost all situations. It is polite without being overly formal."}, {"q": "When should I drop honorifics entirely?", "a": "Only with very close friends, family, or people younger than you who have given permission. Dropping honorifics prematurely is considered rude."}, {"q": "What is sensei used for?", "a": "Sensei applies to teachers, doctors, lawyers, politicians, and manga artists — anyone considered a master of their profession."}];
-const relatedTools = [{"name": "Name Generator", "url": "/japanese/tools/name-generator/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "What Are Honorifics?"}, {"depth": 2, "slug": "san", "text": "San: The Universal Default"}, {"depth": 2, "slug": "kun-chan", "text": "Kun and Chan"}, {"depth": 2, "slug": "sama-dono", "text": "Sama and Other Formal Titles"}, {"depth": 2, "slug": "sensei", "text": "Sensei and Professional Titles"}, {"depth": 2, "slug": "mistakes", "text": "Common Mistakes"}];
+
+const faq = [
+  { q: `Can I just use さん (san) for everyone?`, a: `さん is the safest default and works in almost all situations — it's polite without being overly formal. Think of it like "Mr./Ms." in English but more universal. When in doubt, use さん. The only time it might feel wrong is with very close friends (too formal) or important clients (not formal enough, use 様).` },
+  { q: `When should I drop honorifics entirely?`, a: `Only with very close friends, family members, or people younger than you who have explicitly invited casual speech. Dropping honorifics prematurely is considered rude and presumptuous. In anime and manga, characters often drop honorifics earlier to show developing intimacy — but real life moves slower.` },
+  { q: `What is 先生 (sensei) used for?`, a: `先生 applies to teachers, doctors, lawyers, politicians, and manga/anime creators — anyone considered a master of their profession or someone you learn from. It's both a title and an honorific: 田中先生 (Tanaka-sensei). Never use it for yourself; it's always for others.` },
+  { q: `Is it offensive to use the wrong honorific?`, a: `Using the wrong honorific is rarely offensive to foreigners — Japanese people understand you're learning. However, using overly casual language (like calling a boss by first name with no honorific) would be noticed. The biggest social faux pas is using 様 (sama) for yourself, which sounds extremely arrogant.` },
+];
+
+const relatedTools = [
+  { name: "Name Generator", url: "/japanese/tools/name-generator/" },
+  { name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+];
+
+const headings = [
+  { depth: 2, slug: "what-are-honorifics", text: "What Are Japanese Honorifics?" },
+  { depth: 2, slug: "san", text: "さん (San) — The Universal Default" },
+  { depth: 2, slug: "kun-chan", text: "くん (Kun) and ちゃん (Chan)" },
+  { depth: 2, slug: "sama", text: "様 (Sama) — High Respect" },
+  { depth: 2, slug: "sensei-senpai", text: "先生 (Sensei) and 先輩 (Senpai)" },
+  { depth: 2, slug: "no-honorific", text: "呼び捨て — Using No Honorific" },
+  { depth: 2, slug: "workplace", text: "Honorifics in the Workplace" },
+  { depth: 2, slug: "common-mistakes", text: "Common Mistakes to Avoid" },
+];
 ---
 <BlogLayout
-  title="Japanese Honorifics: San Kun Chan Sama and More Explained"
-  description="Understand honorific suffixes — when to use san, kun, chan, sama and the social rules behind them."
+  title="Japanese Honorifics Explained: San, Kun, Chan, Sama, Sensei, and More"
+  description="Complete guide to Japanese honorific suffixes — when to use san, kun, chan, sama, sensei, and senpai. Learn the social rules that native speakers follow instinctively."
   language="japanese"
   category="culture"
-  tags={["culture", "keigo", "beginner"]}
+  tags={["culture", "keigo", "beginner", "honorifics"]}
   publishDate="2026-02-26"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="overview">What Are Honorifics?</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="san">San: The Universal Default</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="kun-chan">Kun and Chan</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="sama-dono">Sama and Other Formal Titles</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="sensei">Sensei and Professional Titles</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="mistakes">Common Mistakes</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/name-generator/">Name Generator</a> to reinforce what you have learned.</p>
+<p>In English, you can call almost anyone by their first name after a brief introduction. In Japanese, how you address someone reveals your understanding of your <strong>relationship, social position, and the context</strong> of the conversation. Using the wrong honorific — or no honorific at all — can range from mildly awkward to genuinely offensive.</p>
+
+<p>This guide explains every major Japanese honorific suffix, when to use each one, and the social rules that native speakers follow instinctively. Whether you're watching anime, meeting Japanese colleagues, or preparing for real conversations, mastering honorifics is one of the most important cultural-language skills you can develop.</p>
+
+<h2 id="what-are-honorifics">What Are Japanese Honorifics?</h2>
+
+<p>Japanese honorifics (敬称, keishō) are suffixes attached to names to express respect, familiarity, or social distance. They're added after a person's family name or given name, never used for yourself.</p>
+
+<div style="background:#f0f9ff; border:1px solid #bfdbfe; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Quick Reference Chart</p>
+  <table style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th style="padding:8px; border:1px solid #e2e8f0; text-align:left; background:#dbeafe;">Honorific</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; text-align:left; background:#dbeafe;">Formality</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; text-align:left; background:#dbeafe;">Used For</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; text-align:left; background:#dbeafe;">English Equivalent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px; border:1px solid #e2e8f0;">様 (sama)</td><td style="padding:8px; border:1px solid #e2e8f0;">Very formal</td><td style="padding:8px; border:1px solid #e2e8f0;">Customers, deities, letters</td><td style="padding:8px; border:1px solid #e2e8f0;">"Esteemed Mr./Ms."</td></tr>
+      <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">さん (san)</td><td style="padding:8px; border:1px solid #e2e8f0;">Polite</td><td style="padding:8px; border:1px solid #e2e8f0;">Almost everyone</td><td style="padding:8px; border:1px solid #e2e8f0;">"Mr./Ms./Mrs."</td></tr>
+      <tr><td style="padding:8px; border:1px solid #e2e8f0;">先生 (sensei)</td><td style="padding:8px; border:1px solid #e2e8f0;">Respectful</td><td style="padding:8px; border:1px solid #e2e8f0;">Teachers, doctors, experts</td><td style="padding:8px; border:1px solid #e2e8f0;">"Teacher/Master"</td></tr>
+      <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">先輩 (senpai)</td><td style="padding:8px; border:1px solid #e2e8f0;">Respectful</td><td style="padding:8px; border:1px solid #e2e8f0;">Senior classmates/colleagues</td><td style="padding:8px; border:1px solid #e2e8f0;">"Senior"</td></tr>
+      <tr><td style="padding:8px; border:1px solid #e2e8f0;">くん (kun)</td><td style="padding:8px; border:1px solid #e2e8f0;">Casual</td><td style="padding:8px; border:1px solid #e2e8f0;">Boys, male colleagues</td><td style="padding:8px; border:1px solid #e2e8f0;">Casual "Mr."</td></tr>
+      <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ちゃん (chan)</td><td style="padding:8px; border:1px solid #e2e8f0;">Affectionate</td><td style="padding:8px; border:1px solid #e2e8f0;">Children, close friends, cute</td><td style="padding:8px; border:1px solid #e2e8f0;">Endearing nickname</td></tr>
+      <tr><td style="padding:8px; border:1px solid #e2e8f0;">∅ (none)</td><td style="padding:8px; border:1px solid #e2e8f0;">Very casual</td><td style="padding:8px; border:1px solid #e2e8f0;">Very close friends, family</td><td style="padding:8px; border:1px solid #e2e8f0;">First-name basis</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="san">さん (San) — The Universal Default</h2>
+
+<p>さん is the honorific you'll use 90% of the time. It's gender-neutral, appropriate for all ages, and works in both casual and semi-formal situations. When in doubt, always use さん.</p>
+
+<p><strong>When to use さん:</strong></p>
+<ul>
+  <li>Meeting someone for the first time: 田中さん (Tanaka-san)</li>
+  <li>Colleagues at the same level: 山田さん (Yamada-san)</li>
+  <li>Neighbors, acquaintances, friends of friends</li>
+  <li>Talking about someone not present: 鈴木さんが言いました (Suzuki-san said...)</li>
+  <li>Store names and companies: 花屋さん (hanaya-san — the flower shop)</li>
+</ul>
+
+<p><strong>Interesting uses:</strong> Japanese people even attach さん to non-people! お客さん (okyaku-san — customer), お医者さん (oisha-san — doctor, casual), 太陽さん (taiyou-san — Mr. Sun, in children's speech).</p>
+
+<h2 id="kun-chan">くん (Kun) and ちゃん (Chan)</h2>
+
+<p>These two honorifics express familiarity and affection, but they follow specific social rules.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#dbeafe; border:1px solid #93c5fd; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">くん (Kun)</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Boys and young men (by teachers, parents)</li>
+      <li>Male colleagues of equal or lower rank</li>
+      <li>Sometimes for girls in business settings (modern usage)</li>
+      <li>Shows friendly but slightly superior position</li>
+      <li>Example: 太郎くん (Tarou-kun)</li>
+    </ul>
+  </div>
+  <div style="background:#fce7f3; border:1px solid #f9a8d4; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">ちゃん (Chan)</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Children (all genders)</li>
+      <li>Close female friends among themselves</li>
+      <li>Babies and pets</li>
+      <li>Cute things: うさちゃん (usa-chan, bunny)</li>
+      <li>Expresses endearment and closeness</li>
+      <li>Example: 花子ちゃん (Hanako-chan)</li>
+    </ul>
+  </div>
+</div>
+
+<div style="background:#fef3c7; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">⚠️ Important Warning</p>
+  <p style="margin:0;">Using ちゃん for an adult woman you don't know well can come across as condescending or overly familiar. Stick with さん until the relationship is clearly close. In anime, characters use ちゃん freely — real life requires more caution.</p>
+</div>
+
+<h2 id="sama">様 (Sama) — High Respect</h2>
+
+<p>様 is the most formal honorific, expressing deep respect or reverence. It's used in specific contexts:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Context</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Example</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Customers</td><td style="padding:8px; border:1px solid #e2e8f0;">お客様 (okyaku-sama)</td><td style="padding:8px; border:1px solid #e2e8f0;">Standard in all service industries</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Letters and emails</td><td style="padding:8px; border:1px solid #e2e8f0;">田中様 (Tanaka-sama)</td><td style="padding:8px; border:1px solid #e2e8f0;">Standard for written correspondence</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Deities</td><td style="padding:8px; border:1px solid #e2e8f0;">神様 (kami-sama)</td><td style="padding:8px; border:1px solid #e2e8f0;">Gods and divine beings</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Royal family</td><td style="padding:8px; border:1px solid #e2e8f0;">天皇陛下 (tennō heika)</td><td style="padding:8px; border:1px solid #e2e8f0;">Uses 陛下 instead of 様</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Self-reference (humorous)</td><td style="padding:8px; border:1px solid #e2e8f0;">俺様 (ore-sama)</td><td style="padding:8px; border:1px solid #e2e8f0;">Arrogant; used in anime by villains</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Related formal title:</strong> 殿 (dono) is an archaic honorific sometimes seen on official documents and certificates. It's more formal than さん but less reverential than 様. You'll encounter it on certificates: 田中太郎殿.</p>
+
+<h2 id="sensei-senpai">先生 (Sensei) and 先輩 (Senpai)</h2>
+
+<p>These relationship-based honorifics are used within specific social structures.</p>
+
+<p><strong>先生 (sensei) — "one who came before":</strong></p>
+<ul>
+  <li>Teachers at all levels (elementary through university)</li>
+  <li>Doctors: 山本先生 (Yamamoto-sensei, your doctor)</li>
+  <li>Lawyers, politicians, and other professionals</li>
+  <li>Manga artists: 尾田先生 (Oda-sensei, creator of One Piece)</li>
+  <li>Martial arts instructors</li>
+</ul>
+
+<p><strong>先輩 (senpai) — "senior":</strong></p>
+<ul>
+  <li>Older students in the same school or club</li>
+  <li>More experienced colleagues at work</li>
+  <li>Anyone who entered an organization before you</li>
+  <li>The counterpart 後輩 (kōhai, junior) is rarely used as a direct address</li>
+</ul>
+
+<p>The 先輩/後輩 (senpai/kōhai) system is one of the most important social structures in Japanese life, governing relationships in schools, clubs, and workplaces.</p>
+
+<h2 id="no-honorific">呼び捨て — Using No Honorific</h2>
+
+<p>呼び捨て (yobisute) means calling someone by name without any honorific. This signals either very close intimacy or intentional rudeness.</p>
+
+<p><strong>Acceptable situations:</strong></p>
+<ul>
+  <li>Close family members</li>
+  <li>Very close friends who have mutually agreed to drop honorifics</li>
+  <li>Parents addressing children</li>
+  <li>Couples in private (though some couples use さん even after marriage)</li>
+</ul>
+
+<p><strong>In anime vs real life:</strong> Anime characters often drop honorifics to show a deepening relationship — it's a meaningful character development moment. In real life, this transition happens more gradually and is usually discussed: タメ口でいいよ (tameguchi de ii yo — casual speech is fine).</p>
+
+<h2 id="workplace">Honorifics in the Workplace</h2>
+
+<p>The workplace has its own honorific rules based on position and company hierarchy:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Title</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Romaji</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Position</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">How to Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">社長</td><td style="padding:8px; border:1px solid #e2e8f0;">shachō</td><td style="padding:8px; border:1px solid #e2e8f0;">President/CEO</td><td style="padding:8px; border:1px solid #e2e8f0;">社長 or 田中社長</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">部長</td><td style="padding:8px; border:1px solid #e2e8f0;">buchō</td><td style="padding:8px; border:1px solid #e2e8f0;">Department head</td><td style="padding:8px; border:1px solid #e2e8f0;">部長 or 山田部長</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">課長</td><td style="padding:8px; border:1px solid #e2e8f0;">kachō</td><td style="padding:8px; border:1px solid #e2e8f0;">Section chief</td><td style="padding:8px; border:1px solid #e2e8f0;">課長 or 鈴木課長</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">係長</td><td style="padding:8px; border:1px solid #e2e8f0;">kakarichō</td><td style="padding:8px; border:1px solid #e2e8f0;">Subsection chief</td><td style="padding:8px; border:1px solid #e2e8f0;">Title used as honorific</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key rule:</strong> When talking about your own company's people to an outsider, you drop all honorifics and titles — even for your boss. You would say 田中が申しました (Tanaka said...) not 田中社長が... This is part of humble speech (<a href="/japanese/blog/japanese-keigo-basics/">keigo</a>) — you lower your entire company when speaking to clients.</p>
+
+<h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#fef2f2; border:1px solid #fecaca; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; margin:0 0 0.75rem;">❌ Common Mistakes</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Using さん for yourself</li>
+      <li>Using ちゃん for adults you just met</li>
+      <li>Using 先生 for yourself</li>
+      <li>Adding さん to titles (社長さん is redundant)</li>
+      <li>Dropping honorifics too soon</li>
+      <li>Using 様 in casual conversation (sounds sarcastic)</li>
+    </ul>
+  </div>
+  <div style="background:#f0fdf4; border:1px solid #bbf7d0; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; margin:0 0 0.75rem;">✅ Safe Approach</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Default to さん for everyone</li>
+      <li>Use 先生 for teachers and doctors</li>
+      <li>Mirror what others use for you</li>
+      <li>Wait for invitation before going casual</li>
+      <li>Use 様 in writing and for customers</li>
+      <li>Listen to how Japanese people address each other</li>
+    </ul>
+  </div>
+</div>
+
+<p>Honorifics are the foundation of polite Japanese interaction. To go deeper into formal speech patterns, explore our <a href="/japanese/blog/japanese-keigo-basics/">keigo basics guide</a> and <a href="/japanese/blog/japanese-business-phrases/">business phrases</a>. Practice using names with honorifics using our <a href="/japanese/tools/name-generator/">Name Generator</a>, and build your vocabulary with the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a>.</p>
 
 </BlogLayout>

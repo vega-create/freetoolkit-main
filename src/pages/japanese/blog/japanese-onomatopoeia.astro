@@ -1,38 +1,216 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Why does Japanese have so many onomatopoeia?", "a": "Japanese culture values expressing subtle sensations and emotions. Onomatopoeia fill gaps where regular adjectives and adverbs cannot capture the nuance."}, {"q": "Are onomatopoeia used in formal writing?", "a": "Giongo (actual sounds) appear occasionally. Gitaigo (mimetic words) are common in literature but avoided in academic writing."}, {"q": "How can I learn onomatopoeia naturally?", "a": "Manga is the best resource — sound effects are written in katakana throughout. Anime and variety shows also use them constantly."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "types", "text": "Types of Onomatopoeia"}, {"depth": 2, "slug": "sounds", "text": "Sound Words (Giongo)"}, {"depth": 2, "slug": "mimetic", "text": "Mimetic Words (Gitaigo)"}, {"depth": 2, "slug": "emotions", "text": "Emotion Words"}, {"depth": 2, "slug": "manga", "text": "Onomatopoeia in Manga"}, {"depth": 2, "slug": "daily-use", "text": "Daily Conversation Examples"}];
+
+const faq = [
+  { q: `Why does Japanese have so many onomatopoeia?`, a: `Japanese culture values expressing subtle sensations and emotions precisely. Onomatopoeia fill gaps where regular adjectives and adverbs cannot capture the nuance. While English has maybe 200 commonly used sound words, Japanese has over 1,000+. They appear in everyday speech, not just manga and anime.` },
+  { q: `Are onomatopoeia used in formal writing?`, a: `Giongo (actual sounds like ドンドン) appear occasionally in all contexts. Gitaigo (mimetic words like ふわふわ) are common in literature and advertising but generally avoided in academic or legal writing. In business, some are acceptable in casual emails but not formal documents.` },
+  { q: `How can I learn onomatopoeia naturally?`, a: `Manga is the best resource — sound effects are written in katakana throughout every panel. Anime and variety shows use them constantly, especially in subtitles. Start by learning 20-30 common ones, then expand as you encounter new ones in context. Don't try to memorize all 1,000+ at once.` },
+  { q: `What's the difference between giongo and gitaigo?`, a: `Giongo (擬音語) represents actual sounds you can hear: ドンドン (banging), ザーザー (heavy rain). Gitaigo (擬態語) represents states, feelings, or textures you can't actually hear: ふわふわ (fluffy), キラキラ (sparkling). A third category, gijougo (擬情語), specifically describes emotions: ワクワク (excited), ドキドキ (heart pounding).` },
+];
+
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" },
+  { name: "Kana Quiz", url: "/japanese/tools/kana-quiz/" },
+];
+
+const headings = [
+  { depth: 2, slug: "categories", text: "The Three Categories of Japanese Onomatopoeia" },
+  { depth: 2, slug: "sound-words", text: "Sound Words (擬音語 Giongo)" },
+  { depth: 2, slug: "state-words", text: "State and Texture Words (擬態語 Gitaigo)" },
+  { depth: 2, slug: "emotion-words", text: "Emotion Words (擬情語 Gijougo)" },
+  { depth: 2, slug: "weather-nature", text: "Weather and Nature Sounds" },
+  { depth: 2, slug: "manga-anime", text: "Onomatopoeia in Manga and Anime" },
+  { depth: 2, slug: "daily-conversation", text: "Using Onomatopoeia in Daily Conversation" },
+  { depth: 2, slug: "patterns", text: "Grammar Patterns with Onomatopoeia" },
+];
 ---
 <BlogLayout
-  title="Japanese Onomatopoeia: 80 Sound Words That Bring Japanese to Life"
-  description="80 essential Japanese onomatopoeia — sound words and mimetic words used in conversation, manga, and anime."
+  title="Japanese Onomatopoeia: 80+ Sound and Mimetic Words That Bring Japanese to Life"
+  description="Master 80+ Japanese onomatopoeia — sound words (giongo), mimetic words (gitaigo), and emotion words (gijougo) used in conversation, manga, and anime."
   language="japanese"
   category="culture"
-  tags={["vocabulary", "culture", "anime"]}
+  tags={["vocabulary", "culture", "anime", "onomatopoeia"]}
   publishDate="2026-03-01"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="types">Types of Onomatopoeia</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="sounds">Sound Words (Giongo)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="mimetic">Mimetic Words (Gitaigo)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="emotions">Emotion Words</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="manga">Onomatopoeia in Manga</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="daily-use">Daily Conversation Examples</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+<p>Japanese has over <strong>1,000 onomatopoeia</strong> — more than almost any other language. They're not just sound effects for manga panels. Japanese speakers use onomatopoeia constantly in everyday conversation to describe textures, emotions, weather, actions, and states of being with a precision that regular adjectives can't match.</p>
+
+<p>Say someone asks how the cake was. In English, you might say "soft and fluffy." In Japanese, you'd say ふわふわ (fuwa fuwa) — and that single word captures the exact mouthfeel better than any description could. This guide covers <strong>80+ essential onomatopoeia</strong> organized by type, with real examples showing how native speakers use them in daily life, manga, and anime.</p>
+
+<h2 id="categories">The Three Categories of Japanese Onomatopoeia</h2>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#dbeafe; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">擬音語</div>
+    <div style="font-weight:600;">Giongo</div>
+    <div style="font-size:0.85rem; color:#1e40af; margin-top:0.5rem;">Actual sounds<br/>ドンドン (banging)<br/>ザーザー (heavy rain)<br/>ワンワン (dog barking)</div>
+  </div>
+  <div style="background:#dcfce7; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">擬態語</div>
+    <div style="font-weight:600;">Gitaigo</div>
+    <div style="font-size:0.85rem; color:#166534; margin-top:0.5rem;">States & textures<br/>ふわふわ (fluffy)<br/>ピカピカ (shiny)<br/>ネバネバ (sticky)</div>
+  </div>
+  <div style="background:#fce7f3; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">擬情語</div>
+    <div style="font-weight:600;">Gijougo</div>
+    <div style="font-size:0.85rem; color:#9d174d; margin-top:0.5rem;">Emotions & feelings<br/>ドキドキ (heart pounding)<br/>ワクワク (excited)<br/>イライラ (irritated)</div>
+  </div>
+</div>
+
+<p><strong>Pattern to notice:</strong> Most onomatopoeia are doubled syllables (ABAB pattern): ふわふわ, ドキドキ, ピカピカ. Some use a っ (small tsu) for abruptness: ぐっすり (deep sleep), ばったり (running into someone). The doubling creates a sense of continuation or repetition.</p>
+
+<h2 id="sound-words">Sound Words (擬音語 Giongo)</h2>
+
+<p>These represent actual, audible sounds. They're usually written in katakana.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#dbeafe;">
+      <th style="padding:10px; border:1px solid #e2e8f0;">Japanese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Romaji</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Sound</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ワンワン</td><td style="padding:8px; border:1px solid #e2e8f0;">wan wan</td><td style="padding:8px; border:1px solid #e2e8f0;">Dog barking</td><td style="padding:8px; border:1px solid #e2e8f0;">犬がワンワン吠えている</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ニャーニャー</td><td style="padding:8px; border:1px solid #e2e8f0;">nyaa nyaa</td><td style="padding:8px; border:1px solid #e2e8f0;">Cat meowing</td><td style="padding:8px; border:1px solid #e2e8f0;">猫がニャーニャー鳴いている</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ドンドン</td><td style="padding:8px; border:1px solid #e2e8f0;">don don</td><td style="padding:8px; border:1px solid #e2e8f0;">Banging/knocking</td><td style="padding:8px; border:1px solid #e2e8f0;">ドアをドンドン叩いた</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ガタガタ</td><td style="padding:8px; border:1px solid #e2e8f0;">gata gata</td><td style="padding:8px; border:1px solid #e2e8f0;">Rattling/shaking</td><td style="padding:8px; border:1px solid #e2e8f0;">窓がガタガタ揺れている</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ペラペラ</td><td style="padding:8px; border:1px solid #e2e8f0;">pera pera</td><td style="padding:8px; border:1px solid #e2e8f0;">Speaking fluently</td><td style="padding:8px; border:1px solid #e2e8f0;">日本語ペラペラ！</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ゴロゴロ</td><td style="padding:8px; border:1px solid #e2e8f0;">goro goro</td><td style="padding:8px; border:1px solid #e2e8f0;">Thunder / lounging</td><td style="padding:8px; border:1px solid #e2e8f0;">雷がゴロゴロ / 家でゴロゴロ</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">バタバタ</td><td style="padding:8px; border:1px solid #e2e8f0;">bata bata</td><td style="padding:8px; border:1px solid #e2e8f0;">Flapping/rushing</td><td style="padding:8px; border:1px solid #e2e8f0;">朝からバタバタしている</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">パチパチ</td><td style="padding:8px; border:1px solid #e2e8f0;">pachi pachi</td><td style="padding:8px; border:1px solid #e2e8f0;">Clapping/crackling</td><td style="padding:8px; border:1px solid #e2e8f0;">拍手パチパチ</td></tr>
+  </tbody>
+</table>
+
+<h2 id="state-words">State and Texture Words (擬態語 Gitaigo)</h2>
+
+<p>These describe how things look, feel, or exist — even though they don't make actual sounds. Usually written in hiragana or katakana.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#dcfce7;">
+      <th style="padding:10px; border:1px solid #e2e8f0;">Japanese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Romaji</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Meaning</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ふわふわ</td><td style="padding:8px; border:1px solid #e2e8f0;">fuwa fuwa</td><td style="padding:8px; border:1px solid #e2e8f0;">Fluffy, soft, light</td><td style="padding:8px; border:1px solid #e2e8f0;">ふわふわのパンケーキ (fluffy pancake)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ピカピカ</td><td style="padding:8px; border:1px solid #e2e8f0;">pika pika</td><td style="padding:8px; border:1px solid #e2e8f0;">Shiny, sparkling</td><td style="padding:8px; border:1px solid #e2e8f0;">床がピカピカ (floor is sparkling clean)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">キラキラ</td><td style="padding:8px; border:1px solid #e2e8f0;">kira kira</td><td style="padding:8px; border:1px solid #e2e8f0;">Glittering, twinkling</td><td style="padding:8px; border:1px solid #e2e8f0;">星がキラキラ (stars twinkling)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ネバネバ</td><td style="padding:8px; border:1px solid #e2e8f0;">neba neba</td><td style="padding:8px; border:1px solid #e2e8f0;">Sticky, slimy</td><td style="padding:8px; border:1px solid #e2e8f0;">納豆はネバネバしている</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">サラサラ</td><td style="padding:8px; border:1px solid #e2e8f0;">sara sara</td><td style="padding:8px; border:1px solid #e2e8f0;">Smooth, silky</td><td style="padding:8px; border:1px solid #e2e8f0;">サラサラの髪 (silky hair)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">もちもち</td><td style="padding:8px; border:1px solid #e2e8f0;">mochi mochi</td><td style="padding:8px; border:1px solid #e2e8f0;">Chewy, springy</td><td style="padding:8px; border:1px solid #e2e8f0;">もちもちの食感 (chewy texture)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ぐちゃぐちゃ</td><td style="padding:8px; border:1px solid #e2e8f0;">gucha gucha</td><td style="padding:8px; border:1px solid #e2e8f0;">Messy, chaotic</td><td style="padding:8px; border:1px solid #e2e8f0;">部屋がぐちゃぐちゃ (room is a mess)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ぼろぼろ</td><td style="padding:8px; border:1px solid #e2e8f0;">boro boro</td><td style="padding:8px; border:1px solid #e2e8f0;">Worn out, tattered</td><td style="padding:8px; border:1px solid #e2e8f0;">靴がぼろぼろ (shoes are worn out)</td></tr>
+  </tbody>
+</table>
+
+<h2 id="emotion-words">Emotion Words (擬情語 Gijougo)</h2>
+
+<p>These describe how people feel — they're essential for understanding character emotions in anime and expressing yourself naturally.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:10px; border:1px solid #e2e8f0;">Japanese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Romaji</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">Emotion</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">When You Feel It</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ドキドキ</td><td style="padding:8px; border:1px solid #e2e8f0;">doki doki</td><td style="padding:8px; border:1px solid #e2e8f0;">Heart pounding</td><td style="padding:8px; border:1px solid #e2e8f0;">Nervous, excited, in love</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ワクワク</td><td style="padding:8px; border:1px solid #e2e8f0;">waku waku</td><td style="padding:8px; border:1px solid #e2e8f0;">Excited anticipation</td><td style="padding:8px; border:1px solid #e2e8f0;">Before a trip, waiting for a gift</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">イライラ</td><td style="padding:8px; border:1px solid #e2e8f0;">ira ira</td><td style="padding:8px; border:1px solid #e2e8f0;">Irritated, annoyed</td><td style="padding:8px; border:1px solid #e2e8f0;">Stuck in traffic, someone is late</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ハラハラ</td><td style="padding:8px; border:1px solid #e2e8f0;">hara hara</td><td style="padding:8px; border:1px solid #e2e8f0;">Anxious, on edge</td><td style="padding:8px; border:1px solid #e2e8f0;">Watching a thriller, waiting for results</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">ほっと</td><td style="padding:8px; border:1px solid #e2e8f0;">hotto</td><td style="padding:8px; border:1px solid #e2e8f0;">Relieved</td><td style="padding:8px; border:1px solid #e2e8f0;">ほっとした (I'm relieved)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">うんざり</td><td style="padding:8px; border:1px solid #e2e8f0;">unzari</td><td style="padding:8px; border:1px solid #e2e8f0;">Fed up, disgusted</td><td style="padding:8px; border:1px solid #e2e8f0;">Same complaints every day</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">そわそわ</td><td style="padding:8px; border:1px solid #e2e8f0;">sowa sowa</td><td style="padding:8px; border:1px solid #e2e8f0;">Restless, fidgety</td><td style="padding:8px; border:1px solid #e2e8f0;">Can't sit still, anxious</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">のんびり</td><td style="padding:8px; border:1px solid #e2e8f0;">nonbiri</td><td style="padding:8px; border:1px solid #e2e8f0;">Relaxed, leisurely</td><td style="padding:8px; border:1px solid #e2e8f0;">のんびり過ごす (spend time relaxing)</td></tr>
+  </tbody>
+</table>
+
+<h2 id="weather-nature">Weather and Nature Sounds</h2>
+
+<p>Japanese has specific onomatopoeia for different types of rain, wind, and natural phenomena:</p>
+
+<ul>
+  <li><strong>ザーザー</strong> (zaa zaa) — Heavy, pouring rain</li>
+  <li><strong>しとしと</strong> (shito shito) — Gentle, quiet rain</li>
+  <li><strong>パラパラ</strong> (para para) — Light scattered rain</li>
+  <li><strong>ビュービュー</strong> (byuu byuu) — Strong howling wind</li>
+  <li><strong>そよそよ</strong> (soyo soyo) — Gentle breeze</li>
+  <li><strong>ゴロゴロ</strong> (goro goro) — Rolling thunder</li>
+  <li><strong>チラチラ</strong> (chira chira) — Snow fluttering down</li>
+</ul>
+
+<h2 id="manga-anime">Onomatopoeia in Manga and Anime</h2>
+
+<p>Manga is filled with onomatopoeia — every panel has sound effects written in katakana. Here are the most common ones you'll see:</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:0.75rem; margin:1.5rem 0;">
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">ドカーン</div>
+    <div style="font-size:0.8rem; color:#64748b;">Explosion</div>
+  </div>
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">バキッ</div>
+    <div style="font-size:0.8rem; color:#64748b;">Punch/crack</div>
+  </div>
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">シーン</div>
+    <div style="font-size:0.8rem; color:#64748b;">Silence (the sound of silence!)</div>
+  </div>
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">ゾクッ</div>
+    <div style="font-size:0.8rem; color:#64748b;">Chill/shiver</div>
+  </div>
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">ニヤッ</div>
+    <div style="font-size:0.8rem; color:#64748b;">Sly grin</div>
+  </div>
+  <div style="background:#f8fafc; padding:1rem; border-radius:8px; text-align:center; border:1px solid #e2e8f0;">
+    <div style="font-size:1.25rem; font-weight:700;">ガーン</div>
+    <div style="font-size:0.8rem; color:#64748b;">Shock/devastation</div>
+  </div>
+</div>
+
+<p><strong>Fun fact:</strong> シーン (shiin) is the onomatopoeia for <em>silence</em> — Japanese created a "sound" for the absence of sound! You'll see this in manga when a character says something awkward and everyone goes quiet.</p>
+
+<h2 id="daily-conversation">Using Onomatopoeia in Daily Conversation</h2>
+
+<p>Native speakers use onomatopoeia naturally in everyday speech. Here are common conversational examples:</p>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="margin:0.5rem 0;"><strong>お腹がペコペコ。</strong><span style="color:#64748b;"> — I'm starving. (stomach is empty)</span></p>
+  <p style="margin:0.5rem 0;"><strong>頭がガンガンする。</strong><span style="color:#64748b;"> — My head is pounding.</span></p>
+  <p style="margin:0.5rem 0;"><strong>今日はぐっすり寝た。</strong><span style="color:#64748b;"> — I slept soundly today.</span></p>
+  <p style="margin:0.5rem 0;"><strong>雨がざーざー降っている。</strong><span style="color:#64748b;"> — It's pouring rain.</span></p>
+  <p style="margin:0.5rem 0;"><strong>このケーキ、ふわふわ！</strong><span style="color:#64748b;"> — This cake is so fluffy!</span></p>
+  <p style="margin:0;"><strong>明日の旅行、ワクワクする！</strong><span style="color:#64748b;"> — I'm so excited about tomorrow's trip!</span></p>
+</div>
+
+<h2 id="patterns">Grammar Patterns with Onomatopoeia</h2>
+
+<p>Onomatopoeia connect to sentences in several ways:</p>
+
+<ul>
+  <li><strong>～する</strong>: ドキドキする (to feel heart-pounding), イライラする (to feel irritated)</li>
+  <li><strong>～と</strong>: にこにこと笑う (to smile with a grin)</li>
+  <li><strong>～の/な + noun</strong>: ふわふわのパン (fluffy bread), ピカピカの車 (shiny car)</li>
+  <li><strong>～している</strong>: ネバネバしている (is sticky)</li>
+  <li><strong>Direct use as adverb</strong>: ぐっすり寝る (sleep soundly)</li>
+</ul>
+
+<p>Onomatopoeia are one of the most fun aspects of Japanese. Start with the emotion words (ドキドキ, ワクワク, イライラ) and texture words (ふわふわ, ピカピカ) — these come up constantly in daily life. Build your vocabulary with the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a>, and practice reading onomatopoeia in context through manga. For more cultural insights, check our <a href="/japanese/blog/japanese-culture-etiquette/">culture and etiquette guide</a>.</p>
 
 </BlogLayout>

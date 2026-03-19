@@ -1,29 +1,254 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What cultural mistakes do foreigners commonly make in Japan?`, a: `Common mistakes include wearing shoes indoors, tipping at restaurants (considered rude), speaking loudly on trains, and sticking chopsticks vertically in rice (associated with funeral rituals).` }, { q: `Is bowing really that important?`, a: `Bowing is fundamental to Japanese social interaction. A slight bow (15 degrees) works for casual greetings. Deeper bows (30-45 degrees) show respect to superiors or in formal situations. You'll naturally absorb the nuances by observing.` }];
-const relatedTools = [{ name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" }, { name: "Name Generator", url: "/japanese/tools/name-generator/" }];
-const headings = [{ depth: 2, slug: "greetings", text: "Greetings and Bowing" }, { depth: 2, slug: "dining", text: "Dining Etiquette" }, { depth: 2, slug: "social", text: "Social Norms" }];
+
+const faq = [
+  { q: `What cultural mistakes do foreigners commonly make in Japan?`, a: `The most common mistakes are wearing shoes indoors, tipping at restaurants (considered rude), speaking loudly on trains, sticking chopsticks vertically in rice (funeral ritual), and using your phone in quiet train carriages. Most Japanese people are forgiving of foreigners, but avoiding these shows respect and cultural awareness.` },
+  { q: `Is bowing really that important?`, a: `Bowing is fundamental to Japanese social interaction. A slight bow (15°) works for casual greetings. A 30° bow is standard for business. A 45° bow expresses deep gratitude or apology. As a foreigner, even a small nod shows you understand the custom. You'll naturally absorb the nuances by observing locals.` },
+  { q: `Do I need to learn Japanese before visiting Japan?`, a: `You don't need to, but knowing basic phrases like すみません (excuse me), ありがとうございます (thank you), and お願いします (please) dramatically improves your experience. Major cities have English signage, but rural areas have almost none. Even basic Japanese opens doors to local hospitality.` },
+  { q: `Is it rude to say no directly in Japanese?`, a: `Direct refusal is generally avoided. Japanese people use indirect expressions like ちょっと... (chotto..., "it's a bit..."), 考えておきます (I'll think about it), or すみませんが... (I'm sorry but...). Learning to read these soft refusals is an important cultural skill that helps you navigate social situations smoothly.` },
+];
+
+const relatedTools = [
+  { name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" },
+  { name: "Name Generator", url: "/japanese/tools/name-generator/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+];
+
+const headings = [
+  { depth: 2, slug: "greetings-bowing", text: "Greetings and the Art of Bowing" },
+  { depth: 2, slug: "shoes-indoors", text: "Shoes Off: Indoor Etiquette" },
+  { depth: 2, slug: "dining-etiquette", text: "Dining Etiquette and Food Culture" },
+  { depth: 2, slug: "public-behavior", text: "Public Behavior and Transportation" },
+  { depth: 2, slug: "gift-giving", text: "Gift-Giving Culture" },
+  { depth: 2, slug: "business-social", text: "Business and Social Etiquette" },
+  { depth: 2, slug: "temple-shrine", text: "Temple and Shrine Etiquette" },
+  { depth: 2, slug: "cultural-values", text: "Core Cultural Values Behind the Rules" },
+];
 ---
 <BlogLayout
-  title="Japanese Culture and Etiquette: Essential Guide for Learners"
-  description="Understanding Japanese cultural norms improves your language learning. From bowing to gift-giving, learn the unwritten rules."
+  title="Japanese Culture and Etiquette: The Complete Guide for Learners and Travelers"
+  description="Master Japanese cultural norms from bowing and dining etiquette to gift-giving and temple visits. Essential unwritten rules every learner and traveler needs to know."
   language="japanese"
   category="culture"
   tags={["culture", "etiquette", "travel", "beginner"]}
   publishDate="2026-02-22"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="greetings">Greetings and Bowing</h2>
-    <p>Bowing (お辞儀, ojigi) is the standard greeting in Japan. The depth and duration convey the level of respect. In casual situations, a slight head nod suffices. In business, a 30-degree bow is standard. When meeting someone for the first time, say はじめまして (hajimemashite, nice to meet you) followed by your name and よろしくお願いします (yoroshiku onegaishimasu).</p>
-    <p>Practice essential greeting phrases with our <a href="/japanese/tools/daily-phrase/">Daily Phrase</a> tool.</p>
+<p>Learning Japanese isn't just about memorizing vocabulary and grammar — it's about understanding a culture where <strong>unwritten rules</strong> carry enormous weight. In Japan, how you bow, how you hand someone a business card, and whether you slurp your noodles all communicate something about your awareness and respect for others.</p>
 
-    <h2 id="dining">Dining Etiquette</h2>
-    <p>Say いただきます (itadakimasu, I humbly receive) before eating and ごちそうさまでした (gochisousama deshita, thank you for the meal) after. Never stick chopsticks upright in rice — this resembles funeral incense. Don't pass food chopstick-to-chopstick (another funeral association). Slurping noodles is not only acceptable but shows appreciation.</p>
+<p>This guide covers the essential cultural knowledge that textbooks often skip: from everyday etiquette like removing shoes and dining manners, to deeper concepts like gift-giving protocols and the cultural values that explain <em>why</em> these rules exist. Whether you're planning a trip to Japan, working with Japanese colleagues, or simply want to deepen your language studies, understanding these cultural norms will transform how you interact with Japanese speakers.</p>
 
-    <h2 id="social">Social Norms</h2>
-    <p>Remove shoes when entering homes, traditional restaurants, and some businesses — look for a raised entryway (genkan). Keep your voice low on public transportation. Tipping is not practiced and can cause confusion. When receiving a business card, accept it with both hands and read it before putting it away — never write on it in front of the giver.</p>
+<h2 id="greetings-bowing">Greetings and the Art of Bowing</h2>
+
+<p>Bowing (お辞儀, おじぎ, ojigi) is the cornerstone of Japanese greetings. Unlike a handshake, which is a single gesture, bowing has multiple levels that communicate different degrees of respect.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#f0f9ff; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">15°</div>
+    <div style="font-weight:700;">会釈 (eshaku)</div>
+    <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Casual nod<br/>Passing colleagues, casual greetings, saying thanks in passing</div>
+  </div>
+  <div style="background:#dbeafe; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">30°</div>
+    <div style="font-weight:700;">敬礼 (keirei)</div>
+    <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Standard polite bow<br/>Business meetings, meeting someone new, entering/leaving a room</div>
+  </div>
+  <div style="background:#bfdbfe; padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">45°</div>
+    <div style="font-weight:700;">最敬礼 (saikeirei)</div>
+    <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Deep formal bow<br/>Sincere apology, deep gratitude, meeting VIPs</div>
+  </div>
+</div>
+
+<p><strong>Key greeting phrases paired with bowing:</strong></p>
+<ul>
+  <li><strong>はじめまして</strong> (hajimemashite) — Nice to meet you (first meeting, 30° bow)</li>
+  <li><strong>よろしくお願いします</strong> (yoroshiku onegai shimasu) — Please take care of me (polite, 30° bow)</li>
+  <li><strong>おはようございます</strong> (ohayou gozaimasu) — Good morning (15° bow)</li>
+  <li><strong>お疲れ様です</strong> (otsukaresama desu) — Thank you for your hard work (workplace greeting, 15° bow)</li>
+</ul>
+
+<p><strong>For foreigners:</strong> Japanese people don't expect non-Japanese to bow perfectly. A slight head nod shows awareness and respect. Avoid the awkward "bow-handshake" hybrid — if someone extends their hand, shake it; if they bow, bow back.</p>
+
+<h2 id="shoes-indoors">Shoes Off: Indoor Etiquette</h2>
+
+<p>The inside/outside distinction (内/外, uchi/soto) is fundamental to Japanese culture and extends far beyond shoes. Physically, it means removing shoes at the <strong>玄関 (genkan)</strong> — the entryway area where outdoor shoes are left.</p>
+
+<p><strong>Where to remove shoes:</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Location</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Remove Shoes?</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">How to Tell</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Homes</td><td style="padding:8px; border:1px solid #e2e8f0;">Always</td><td style="padding:8px; border:1px solid #e2e8f0;">Raised floor at entrance</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Traditional restaurants</td><td style="padding:8px; border:1px solid #e2e8f0;">Yes</td><td style="padding:8px; border:1px solid #e2e8f0;">Tatami rooms, shoe lockers at entrance</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Temples and shrines</td><td style="padding:8px; border:1px solid #e2e8f0;">Yes (inner areas)</td><td style="padding:8px; border:1px solid #e2e8f0;">Signs, shoe racks provided</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Some clinics/offices</td><td style="padding:8px; border:1px solid #e2e8f0;">Sometimes</td><td style="padding:8px; border:1px solid #e2e8f0;">Slippers provided at entrance</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Hotels (Western-style)</td><td style="padding:8px; border:1px solid #e2e8f0;">No</td><td style="padding:8px; border:1px solid #e2e8f0;">Carpet throughout</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Ryokan (traditional inn)</td><td style="padding:8px; border:1px solid #e2e8f0;">Yes</td><td style="padding:8px; border:1px solid #e2e8f0;">Genkan and slippers provided</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Slipper rules:</strong> Special toilet slippers are provided outside bathrooms in many homes and traditional establishments. Always switch to them when entering the bathroom and switch back when leaving. Forgetting to change back is a common and embarrassing mistake!</p>
+
+<h2 id="dining-etiquette">Dining Etiquette and Food Culture</h2>
+
+<p>Japanese dining has its own rhythm and rituals. Following them shows appreciation for the food and the person who prepared it.</p>
+
+<div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">🍽️ The Dining Ritual</p>
+  <p style="margin:0.25rem 0;"><strong>Before eating:</strong> Say いただきます (itadakimasu) — "I humbly receive this meal"</p>
+  <p style="margin:0.25rem 0;"><strong>After eating:</strong> Say ごちそうさまでした (gochisousama deshita) — "Thank you for the feast"</p>
+  <p style="margin:0;">These phrases are said every time, even for a convenience store snack eaten alone.</p>
+</div>
+
+<p><strong>Chopstick rules (箸のマナー):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef2f2;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">❌ Never Do This</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Stick chopsticks upright in rice (立て箸)</td><td style="padding:8px; border:1px solid #e2e8f0;">Resembles funeral incense offering</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Pass food chopstick to chopstick (箸渡し)</td><td style="padding:8px; border:1px solid #e2e8f0;">Done with bones at funerals</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Point at people with chopsticks</td><td style="padding:8px; border:1px solid #e2e8f0;">Considered very rude</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Hover chopsticks over dishes (迷い箸)</td><td style="padding:8px; border:1px solid #e2e8f0;">Shows indecisiveness, considered impolite</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Rub disposable chopsticks together</td><td style="padding:8px; border:1px solid #e2e8f0;">Implies the restaurant is cheap</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Things that ARE okay:</strong> Slurping noodles (shows enjoyment!), lifting small bowls to your mouth, eating sushi with your hands (at the counter), and making sounds of appreciation while eating.</p>
+
+<p><strong>Tipping:</strong> There is no tipping culture in Japan. Leaving money on the table can cause confusion — staff may chase you thinking you forgot your change. Excellent service is simply expected and included.</p>
+
+<h2 id="public-behavior">Public Behavior and Transportation</h2>
+
+<p>Japan's public spaces are remarkably quiet and orderly. Understanding the unwritten rules helps you blend in and avoid uncomfortable situations.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#fef2f2; border:1px solid #fecaca; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; margin:0 0 0.75rem;">🚫 Avoid</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Talking on your phone on trains</li>
+      <li>Speaking loudly in public</li>
+      <li>Eating while walking</li>
+      <li>Blowing your nose loudly in public</li>
+      <li>Cutting in line (queues are sacred)</li>
+    </ul>
+  </div>
+  <div style="background:#f0fdf4; border:1px solid #bbf7d0; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; margin:0 0 0.75rem;">✅ Expected</p>
+    <ul style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Stand on the correct side of escalators (left in Tokyo, right in Osaka)</li>
+      <li>Give up priority seats for elderly/pregnant</li>
+      <li>Set your phone to silent (マナーモード)</li>
+      <li>Carry your trash until you find a bin</li>
+      <li>Queue orderly at train platforms</li>
+    </ul>
+  </div>
+</div>
+
+<p><strong>Train etiquette specifics:</strong> Set your phone to マナーモード (manner mode = silent). Near priority seats, turn off your phone entirely. Keep conversations quiet. Don't apply makeup on the train (considered inappropriate). Let passengers exit before boarding.</p>
+
+<h2 id="gift-giving">Gift-Giving Culture</h2>
+
+<p>Gift-giving (贈り物, おくりもの) is a deeply ingrained social practice in Japan with its own set of rules about timing, wrapping, and presentation.</p>
+
+<p><strong>Key gift-giving occasions:</strong></p>
+<ul>
+  <li><strong>お土産 (omiyage)</strong> — Souvenir gifts brought back from trips for colleagues, friends, and family. This is practically mandatory after traveling.</li>
+  <li><strong>お中元 (ochuugen)</strong> — Mid-year gifts (July) to express gratitude</li>
+  <li><strong>お歳暮 (oseibo)</strong> — Year-end gifts (December) to thank those who helped you</li>
+  <li><strong>手土産 (temiyage)</strong> — Gifts brought when visiting someone's home</li>
+</ul>
+
+<p><strong>Gift-giving rules:</strong></p>
+<ul>
+  <li>Present and receive gifts with <strong>both hands</strong></li>
+  <li>Say つまらないものですが (tsumaranai mono desu ga — "it's a trivial thing but...") when giving — this humility is expected</li>
+  <li>Gifts are typically not opened in front of the giver</li>
+  <li>Avoid sets of 4 (四 sounds like 死, death) and 9 (九 sounds like 苦, suffering)</li>
+  <li>Wrapping matters — beautiful presentation shows care</li>
+</ul>
+
+<h2 id="business-social">Business and Social Etiquette</h2>
+
+<p>Japanese business culture has specific protocols that differ significantly from Western practices. Even if you're not working in Japan, understanding these helps with formal interactions.</p>
+
+<p><strong>Business card exchange (名刺交換, meishi koukan):</strong></p>
+<ol>
+  <li>Present your card with both hands, text facing the recipient</li>
+  <li>Receive their card with both hands</li>
+  <li>Read the card carefully — this shows respect</li>
+  <li>Place it on the table during the meeting (never in your pocket immediately)</li>
+  <li>Never write on someone's card in front of them</li>
+</ol>
+
+<p><strong>Social hierarchy awareness:</strong> Age and position determine seating (上座/下座, kamiza/shimoza), speaking order, and even who pours drinks. The most senior person sits furthest from the door (kamiza). In taxis, the seat behind the driver is the position of honor. These details matter in professional settings.</p>
+
+<p>For the language of business interactions, see our <a href="/japanese/blog/japanese-business-phrases/">Japanese business phrases guide</a> and <a href="/japanese/blog/japanese-keigo-basics/">keigo basics</a>.</p>
+
+<h2 id="temple-shrine">Temple and Shrine Etiquette</h2>
+
+<p>Visiting temples (寺, tera) and shrines (神社, jinja) is a cultural highlight, but each has its own protocols.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#fef3c7; border:1px solid #fde68a; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">⛩️ Shrine (神社) Protocol</p>
+    <ol style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Bow slightly at the torii gate</li>
+      <li>Walk on the sides (center is for the gods)</li>
+      <li>Purify at the 手水舎 (temizuya): left hand, right hand, rinse mouth</li>
+      <li>At the altar: bow twice, clap twice, pray, bow once</li>
+    </ol>
+  </div>
+  <div style="background:#f5f3ff; border:1px solid #ddd6fe; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">🛕 Temple (寺) Protocol</p>
+    <ol style="margin:0; padding-left:1.25rem; font-size:0.95rem;">
+      <li>Bow at the gate</li>
+      <li>Light incense if available</li>
+      <li>At the altar: bow, put hands together silently (no clapping)</li>
+      <li>Remove shoes if entering inner areas</li>
+    </ol>
+  </div>
+</div>
+
+<p><strong>Photography:</strong> Always check for 撮影禁止 (satsuei kinshi — no photography) signs before taking photos. Many inner sanctuaries prohibit photography. Ask 写真を撮ってもいいですか (shashin wo totte mo ii desu ka — may I take a photo?) when unsure.</p>
+
+<h2 id="cultural-values">Core Cultural Values Behind the Rules</h2>
+
+<p>Japanese etiquette isn't arbitrary — it reflects deep cultural values that shape every aspect of social interaction:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Value</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Japanese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">What It Means</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">How It Shows Up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Harmony</td><td style="padding:8px; border:1px solid #e2e8f0;">和 (wa)</td><td style="padding:8px; border:1px solid #e2e8f0;">Group harmony over individual needs</td><td style="padding:8px; border:1px solid #e2e8f0;">Avoiding direct confrontation, quiet public spaces</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Consideration</td><td style="padding:8px; border:1px solid #e2e8f0;">思いやり (omoiyari)</td><td style="padding:8px; border:1px solid #e2e8f0;">Anticipating others' needs</td><td style="padding:8px; border:1px solid #e2e8f0;">Gift-giving, indirect communication, service quality</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Respect</td><td style="padding:8px; border:1px solid #e2e8f0;">敬意 (keii)</td><td style="padding:8px; border:1px solid #e2e8f0;">Honor for hierarchy and relationships</td><td style="padding:8px; border:1px solid #e2e8f0;">Keigo, bowing, seating arrangements</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Cleanliness</td><td style="padding:8px; border:1px solid #e2e8f0;">清潔 (seiketsu)</td><td style="padding:8px; border:1px solid #e2e8f0;">Physical and spiritual purity</td><td style="padding:8px; border:1px solid #e2e8f0;">Shoes off, temple purification, clean streets</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Humility</td><td style="padding:8px; border:1px solid #e2e8f0;">謙虚 (kenkyo)</td><td style="padding:8px; border:1px solid #e2e8f0;">Lowering yourself, elevating others</td><td style="padding:8px; border:1px solid #e2e8f0;">Kenjougo (humble speech), gift disclaimers</td></tr>
+  </tbody>
+</table>
+
+<p>Understanding these values makes the rules intuitive rather than arbitrary. When you wonder "why can't I eat while walking?" — it's because it might inconvenience others (omoiyari) and disrupt the shared public space (wa).</p>
+
+<p>Cultural knowledge deepens every aspect of language learning. Explore our <a href="/japanese/blog/japanese-honorifics-explained/">honorifics guide</a> to understand the language of respect, learn <a href="/japanese/blog/japanese-keigo-basics/">keigo basics</a> for polite speech patterns, and practice everyday phrases with our <a href="/japanese/tools/daily-phrase/">Daily Phrase tool</a>. For more on the language of self-introduction in formal settings, see our <a href="/japanese/blog/introduce-yourself-japanese/">self-introduction guide</a>.</p>
 
 </BlogLayout>

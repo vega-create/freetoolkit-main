@@ -1,29 +1,208 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Why does Japanese have counters?`, a: `Japanese counters classify objects by shape, size, or type — similar to how English says 'a sheet of paper' or 'a head of lettuce.' Most Asian languages use counters. Japanese has hundreds, but about 20 cover daily situations.` }, { q: `What counter do I use if I don't know the right one?`, a: `Use the general counter つ (tsu): ひとつ, ふたつ, みっつ... This works for most objects up to 10 and is always acceptable, even if a more specific counter exists.` }];
-const relatedTools = [{ name: "Counter Practice", url: "/japanese/tools/counter-practice/" }, { name: "Number Converter", url: "/japanese/tools/number-converter/" }];
-const headings = [{ depth: 2, slug: "general", text: "The General Counter つ" }, { depth: 2, slug: "essential", text: "Essential Counters" }, { depth: 2, slug: "sound-changes", text: "Sound Changes" }];
+
+const faq = [
+  { q: `Why does Japanese have counters?`, a: `Japanese counters classify objects by shape, size, or type — similar to how English says "a sheet of paper" or "a head of lettuce." Most East Asian languages use counters. Japanese has hundreds, but about 20 cover 95% of daily situations. They developed because Japanese numbers alone don't indicate what type of object is being counted.` },
+  { q: `What counter do I use if I don't know the right one?`, a: `Use the general counter つ (tsu): ひとつ, ふたつ, みっつ... up to とお (10). This works for almost any countable object and is never wrong. Above 10, you can use the specific counter or just say the number + the object name, which is understood in casual speech.` },
+  { q: `Do I need to memorize all the sound changes?`, a: `Focus on patterns rather than memorizing every combination. Numbers 1, 3, 6, 8, and 10 trigger most changes. The pattern is consistent: h→p after いっ/ろっ/はっ/じゅっ, and h→b after さん. Learning this one pattern covers 本, 匹, 杯, and more.` },
+  { q: `How many counters do I need for the JLPT?`, a: `JLPT N5 requires about 8 counters (つ, 人, 本, 枚, 匹, 台, 杯, 個). N4 adds about 5 more. N3-N1 add increasingly specialized counters. For daily life, mastering the top 15 counters covers virtually all situations you'll encounter.` },
+];
+
+const relatedTools = [
+  { name: "Counter Practice", url: "/japanese/tools/counter-practice/" },
+  { name: "Number Converter", url: "/japanese/tools/number-converter/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+];
+
+const headings = [
+  { depth: 2, slug: "general-counter", text: "The General Counter つ (Tsu)" },
+  { depth: 2, slug: "people-counter", text: "Counting People: 人 (Nin/Ri)" },
+  { depth: 2, slug: "essential-counters", text: "10 Essential Counters for Daily Life" },
+  { depth: 2, slug: "sound-changes", text: "Sound Changes Explained" },
+  { depth: 2, slug: "time-counters", text: "Time and Date Counters" },
+  { depth: 2, slug: "specialized", text: "Specialized Counters" },
+  { depth: 2, slug: "counter-patterns", text: "How Counters Work in Sentences" },
+  { depth: 2, slug: "practice-tips", text: "Practice Tips and Common Mistakes" },
+];
 ---
 <BlogLayout
-  title="Japanese Counters: The Complete Guide to Counting Objects"
-  description="Master Japanese counters for people, objects, animals, and more. Learn the rules behind sound changes and which counter to use when."
+  title="Japanese Counters: The Complete Guide to Counting Everything"
+  description="Master Japanese counters with sound change rules, 20+ essential counters for daily life, and sentence patterns. From the general つ counter to specialized counters for every situation."
   language="japanese"
   category="grammar"
   tags={["counters", "grammar", "vocabulary", "beginner"]}
   publishDate="2026-02-21"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="general">The General Counter つ</h2>
-    <p>The safest counter for beginners is つ (tsu), which uses native Japanese numbers: ひとつ (1), ふたつ (2), みっつ (3), よっつ (4), いつつ (5), むっつ (6), ななつ (7), やっつ (8), ここのつ (9), とお (10). This works for almost any countable object and is never wrong.</p>
+<p>In English, you say "three dogs" or "five books" without thinking about it. In Japanese, you need a <strong>counter word</strong> between the number and the object — and the counter changes depending on the shape, size, and type of what you're counting. Three dogs is 三匹 (sanbiki), five books is 五冊 (gosatsu), and two people is 二人 (futari, not ninin!).</p>
 
-    <h2 id="essential">Essential Counters</h2>
-    <p><strong>人 (nin/ri)</strong> for people — note the irregular ひとり (1) and ふたり (2). <strong>本 (hon)</strong> for long thin objects: pens, bottles, umbrellas, trees. <strong>枚 (mai)</strong> for flat things: paper, tickets, shirts, plates. <strong>匹 (hiki)</strong> for small animals. <strong>杯 (hai)</strong> for cups and glasses of liquid. <strong>台 (dai)</strong> for machines and vehicles.</p>
-    <p>Practice all these counters with audio in our <a href="/japanese/tools/counter-practice/">Counter Practice</a> tool.</p>
+<p>This sounds overwhelming, but here's the good news: about <strong>15-20 counters cover 95% of everyday situations</strong>, and there's a universal backup counter (つ) that works for almost anything. This guide teaches you the essential counters in order of usefulness, explains the sound change patterns that trip up learners, and gives you the sentence structures to use them naturally.</p>
 
-    <h2 id="sound-changes">Sound Changes</h2>
-    <p>Numbers 1, 3, 6, 8, and 10 often trigger sound changes when combined with counters. For 本: いっぽん (1), さんぼん (3), ろっぽん (6), はっぽん (8), じゅっぽん (10). These changes follow patterns — h→p after 1/6/8/10, h→b after 3. Learning these patterns saves memorizing each counter individually. Convert any number with our <a href="/japanese/tools/number-converter/">Number Converter</a>.</p>
+<h2 id="general-counter">The General Counter つ (Tsu)</h2>
+
+<p>The つ counter uses native Japanese numbers (not the Chinese-derived いち, に, さん system) and works for almost any countable object. This is your safety net — when you don't know the specific counter, use つ.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:center;">Number</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Japanese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Romaji</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">1</td><td style="padding:8px; border:1px solid #e2e8f0;">ひとつ</td><td style="padding:8px; border:1px solid #e2e8f0;">hitotsu</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">2</td><td style="padding:8px; border:1px solid #e2e8f0;">ふたつ</td><td style="padding:8px; border:1px solid #e2e8f0;">futatsu</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">3</td><td style="padding:8px; border:1px solid #e2e8f0;">みっつ</td><td style="padding:8px; border:1px solid #e2e8f0;">mittsu</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">4</td><td style="padding:8px; border:1px solid #e2e8f0;">よっつ</td><td style="padding:8px; border:1px solid #e2e8f0;">yottsu</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">5</td><td style="padding:8px; border:1px solid #e2e8f0;">いつつ</td><td style="padding:8px; border:1px solid #e2e8f0;">itsutsu</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">6</td><td style="padding:8px; border:1px solid #e2e8f0;">むっつ</td><td style="padding:8px; border:1px solid #e2e8f0;">muttsu</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">7</td><td style="padding:8px; border:1px solid #e2e8f0;">ななつ</td><td style="padding:8px; border:1px solid #e2e8f0;">nanatsu</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">8</td><td style="padding:8px; border:1px solid #e2e8f0;">やっつ</td><td style="padding:8px; border:1px solid #e2e8f0;">yattsu</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">9</td><td style="padding:8px; border:1px solid #e2e8f0;">ここのつ</td><td style="padding:8px; border:1px solid #e2e8f0;">kokonotsu</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0; text-align:center;">10</td><td style="padding:8px; border:1px solid #e2e8f0;">とお</td><td style="padding:8px; border:1px solid #e2e8f0;">too</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Limitation:</strong> The つ system only goes up to 10. For numbers above 10, you'll need the specific counter. But for everyday situations like ordering food or buying items, 1-10 covers most needs.</p>
+
+<h2 id="people-counter">Counting People: 人 (Nin/Ri)</h2>
+
+<p>The people counter 人 has two irregular readings that every learner must memorize:</p>
+
+<div style="background:#fef3c7; border:1px solid #fde68a; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="margin:0.25rem 0;"><strong>一人</strong> (ひとり, hitori) — 1 person ⚠️ Irregular!</p>
+  <p style="margin:0.25rem 0;"><strong>二人</strong> (ふたり, futari) — 2 people ⚠️ Irregular!</p>
+  <p style="margin:0.25rem 0;"><strong>三人</strong> (さんにん, sannin) — 3 people ✓ Regular from here</p>
+  <p style="margin:0.25rem 0;"><strong>四人</strong> (よにん, yonin) — 4 people</p>
+  <p style="margin:0.25rem 0;"><strong>五人</strong> (ごにん, gonin) — 5 people</p>
+  <p style="margin:0.25rem 0;"><strong>六人</strong> (ろくにん, rokunin) — 6 people</p>
+  <p style="margin:0.25rem 0;"><strong>七人</strong> (しちにん/ななにん, shichinin/nananin) — 7 people</p>
+  <p style="margin:0;">何人 (なんにん, nannin) — How many people?</p>
+</div>
+
+<p>You'll hear this constantly: 何名様ですか (nanmei-sama desu ka) — "How many in your party?" at restaurants uses 名 (mei), the formal counter for people.</p>
+
+<h2 id="essential-counters">10 Essential Counters for Daily Life</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Counter</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Used For</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Examples</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Memory Tip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">本 (hon)</td><td style="padding:8px; border:1px solid #e2e8f0;">Long, thin objects</td><td style="padding:8px; border:1px solid #e2e8f0;">Pens, bottles, trees, roads</td><td style="padding:8px; border:1px solid #e2e8f0;">Think of a tree trunk</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">枚 (mai)</td><td style="padding:8px; border:1px solid #e2e8f0;">Flat, thin objects</td><td style="padding:8px; border:1px solid #e2e8f0;">Paper, tickets, shirts, plates</td><td style="padding:8px; border:1px solid #e2e8f0;">Think of a flat sheet</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">匹 (hiki)</td><td style="padding:8px; border:1px solid #e2e8f0;">Small/medium animals</td><td style="padding:8px; border:1px solid #e2e8f0;">Dogs, cats, fish, insects</td><td style="padding:8px; border:1px solid #e2e8f0;">Small enough to hold</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">台 (dai)</td><td style="padding:8px; border:1px solid #e2e8f0;">Machines, vehicles</td><td style="padding:8px; border:1px solid #e2e8f0;">Cars, computers, TVs</td><td style="padding:8px; border:1px solid #e2e8f0;">Things on a platform</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">杯 (hai)</td><td style="padding:8px; border:1px solid #e2e8f0;">Cups/glasses of liquid</td><td style="padding:8px; border:1px solid #e2e8f0;">Coffee, beer, water, rice bowls</td><td style="padding:8px; border:1px solid #e2e8f0;">杯 = cup radical</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">個 (ko)</td><td style="padding:8px; border:1px solid #e2e8f0;">Small, round objects</td><td style="padding:8px; border:1px solid #e2e8f0;">Apples, eggs, balls</td><td style="padding:8px; border:1px solid #e2e8f0;">Things you can hold</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">冊 (satsu)</td><td style="padding:8px; border:1px solid #e2e8f0;">Books, volumes</td><td style="padding:8px; border:1px solid #e2e8f0;">Books, magazines, notebooks</td><td style="padding:8px; border:1px solid #e2e8f0;">Bound materials</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">頭 (tou)</td><td style="padding:8px; border:1px solid #e2e8f0;">Large animals</td><td style="padding:8px; border:1px solid #e2e8f0;">Horses, cows, elephants</td><td style="padding:8px; border:1px solid #e2e8f0;">Big enough to ride</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">羽 (wa)</td><td style="padding:8px; border:1px solid #e2e8f0;">Birds, rabbits</td><td style="padding:8px; border:1px solid #e2e8f0;">Birds, chickens, rabbits</td><td style="padding:8px; border:1px solid #e2e8f0;">Things with wings (+ rabbits!)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">足 (soku)</td><td style="padding:8px; border:1px solid #e2e8f0;">Pairs of footwear</td><td style="padding:8px; border:1px solid #e2e8f0;">Shoes, socks, boots</td><td style="padding:8px; border:1px solid #e2e8f0;">足 = foot</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sound-changes">Sound Changes Explained</h2>
+
+<p>Numbers 1, 3, 6, 8, and 10 trigger consonant changes when combined with certain counters. This is the part that intimidates learners, but there's a pattern:</p>
+
+<div style="background:#f0f9ff; border:1px solid #bfdbfe; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">The h→p/b Pattern (for 本, 匹, 杯)</p>
+  <table style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th style="padding:8px; border:1px solid #e2e8f0; background:#dbeafe;">Number</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; background:#dbeafe;">本 (hon)</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; background:#dbeafe;">匹 (hiki)</th>
+        <th style="padding:8px; border:1px solid #e2e8f0; background:#dbeafe;">杯 (hai)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#fef2f2;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">1</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">いっ<strong>ぽん</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">いっ<strong>ぴき</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">いっ<strong>ぱい</strong></td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">2</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">にほん</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">にひき</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">にはい</td></tr>
+      <tr style="background:#fef2f2;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">3</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">さん<strong>ぼん</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">さん<strong>びき</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">さん<strong>ばい</strong></td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">4</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">よんほん</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">よんひき</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">よんはい</td></tr>
+      <tr style="background:#fef2f2;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">6</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ろっ<strong>ぽん</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ろっ<strong>ぴき</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ろっ<strong>ぱい</strong></td></tr>
+      <tr style="background:#fef2f2;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">8</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">はっ<strong>ぽん</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">はっ<strong>ぴき</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">はっ<strong>ぱい</strong></td></tr>
+      <tr style="background:#fef2f2;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">10</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">じゅっ<strong>ぽん</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">じゅっ<strong>ぴき</strong></td><td style="padding:6px 8px; border:1px solid #e2e8f0;">じゅっ<strong>ぱい</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="margin:0.75rem 0 0; font-size:0.9rem; color:#64748b;">Red rows = sound changes. Pattern: 1/6/8/10 → h becomes p (doubled consonant). 3 → h becomes b.</p>
+</div>
+
+<p><strong>Good news:</strong> Counters like 枚 (mai), 台 (dai), and 冊 (satsu) have <strong>no sound changes</strong> — they're completely regular. Focus on these first if sound changes feel overwhelming.</p>
+
+<h2 id="time-counters">Time and Date Counters</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Counter</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Meaning</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Example</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Watch Out</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">時 (ji)</td><td style="padding:8px; border:1px solid #e2e8f0;">o'clock</td><td style="padding:8px; border:1px solid #e2e8f0;">三時 (sanji) = 3:00</td><td style="padding:8px; border:1px solid #e2e8f0;">4時 = よじ, 9時 = くじ</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">分 (fun/pun)</td><td style="padding:8px; border:1px solid #e2e8f0;">minutes</td><td style="padding:8px; border:1px solid #e2e8f0;">十五分 = 15 minutes</td><td style="padding:8px; border:1px solid #e2e8f0;">Sound changes apply</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">時間 (jikan)</td><td style="padding:8px; border:1px solid #e2e8f0;">hours (duration)</td><td style="padding:8px; border:1px solid #e2e8f0;">二時間 = 2 hours</td><td style="padding:8px; border:1px solid #e2e8f0;">Different from 時!</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">日 (nichi/ka)</td><td style="padding:8px; border:1px solid #e2e8f0;">days of month / duration</td><td style="padding:8px; border:1px solid #e2e8f0;">三日 (mikka) = 3rd</td><td style="padding:8px; border:1px solid #e2e8f0;">1st-10th are very irregular</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">週間 (shūkan)</td><td style="padding:8px; border:1px solid #e2e8f0;">weeks</td><td style="padding:8px; border:1px solid #e2e8f0;">二週間 = 2 weeks</td><td style="padding:8px; border:1px solid #e2e8f0;">Regular</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">ヶ月 (kagetsu)</td><td style="padding:8px; border:1px solid #e2e8f0;">months</td><td style="padding:8px; border:1px solid #e2e8f0;">三ヶ月 = 3 months</td><td style="padding:8px; border:1px solid #e2e8f0;">Regular</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">年 (nen)</td><td style="padding:8px; border:1px solid #e2e8f0;">years</td><td style="padding:8px; border:1px solid #e2e8f0;">五年 = 5 years</td><td style="padding:8px; border:1px solid #e2e8f0;">Regular</td></tr>
+  </tbody>
+</table>
+
+<h2 id="specialized">Specialized Counters</h2>
+
+<p>These counters are less common but useful for specific situations:</p>
+
+<ul>
+  <li><strong>階 (kai)</strong> — Floors of buildings: 三階 (sangai) = 3rd floor</li>
+  <li><strong>着 (chaku)</strong> — Suits and outfits: 一着 (icchaku) = one suit</li>
+  <li><strong>軒 (ken)</strong> — Houses and shops: 三軒 (sangen) = 3 houses</li>
+  <li><strong>回 (kai)</strong> — Times/occurrences: 二回 (nikai) = twice</li>
+  <li><strong>番 (ban)</strong> — Ordinal numbers: 一番 (ichiban) = number one / best</li>
+  <li><strong>席 (seki)</strong> — Seats: 二席 (niseki) = 2 seats</li>
+</ul>
+
+<h2 id="counter-patterns">How Counters Work in Sentences</h2>
+
+<p>Counters typically go right before or right after the object they're counting:</p>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="margin:0.5rem 0;"><strong>りんごを三つください。</strong><span style="color:#64748b;"> — Three apples, please.</span></p>
+  <p style="margin:0.5rem 0;"><strong>ビールを二杯飲みました。</strong><span style="color:#64748b;"> — I drank two beers.</span></p>
+  <p style="margin:0.5rem 0;"><strong>猫が三匹います。</strong><span style="color:#64748b;"> — There are three cats.</span></p>
+  <p style="margin:0.5rem 0;"><strong>切手を五枚ください。</strong><span style="color:#64748b;"> — Five stamps, please.</span></p>
+  <p style="margin:0;"><strong>友達が二人来ました。</strong><span style="color:#64748b;"> — Two friends came.</span></p>
+</div>
+
+<h2 id="practice-tips">Practice Tips and Common Mistakes</h2>
+
+<p><strong>Start small:</strong> Master つ, 人, 本, 枚, and 個 first. These five counters cover the majority of daily counting needs.</p>
+
+<p><strong>Common mistakes:</strong></p>
+<ul>
+  <li>Saying ににん instead of ふたり for 2 people</li>
+  <li>Forgetting sound changes (saying さんほん instead of さんぼん)</li>
+  <li>Using つ above 10 (it only works 1-10)</li>
+  <li>Using 匹 for large animals (use 頭 for horses, elephants, etc.)</li>
+</ul>
+
+<p>Practice counting objects around you throughout the day. When you see pens, count them with 本. When you see plates, use 枚. This real-world practice builds automatic counter selection faster than flashcards alone.</p>
+
+<p>Use our <a href="/japanese/tools/counter-practice/">Counter Practice tool</a> to drill the essential counters with audio, and check the <a href="/japanese/tools/number-converter/">Number Converter</a> for quick reference. For more grammar foundations, explore our <a href="/japanese/blog/japanese-particles-explained/">particles guide</a> and <a href="/japanese/blog/japanese-verb-conjugation/">verb conjugation guide</a>.</p>
 
 </BlogLayout>

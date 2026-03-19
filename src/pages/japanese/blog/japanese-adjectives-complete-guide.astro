@@ -1,35 +1,232 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How do I know if an adjective is i-type or na-type?", "a": "Most adjectives ending in い are i-adjectives. Exceptions like きれい and 有名 end in い but are na-adjectives — you learn these through exposure."}, {"q": "Can adjectives be used as verbs in Japanese?", "a": "i-adjectives conjugate like verbs — they have past tense, negative, and te-form. na-adjectives use です/だ for conjugation."}, {"q": "How many adjectives do I need for N5?", "a": "About 50-60 adjectives appear at the N5 level. Focus on the most common 30 first, as they cover most daily conversations."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Particle Guide", "url": "/japanese/tools/particle-guide/"}];
-const headings = [{"depth": 2, "slug": "two-types", "text": "Two Types of Adjectives"}, {"depth": 2, "slug": "i-adjectives", "text": "i-Adjective Conjugation"}, {"depth": 2, "slug": "na-adjectives", "text": "na-Adjective Conjugation"}, {"depth": 2, "slug": "essential-list", "text": "Essential Adjective List"}, {"depth": 2, "slug": "common-mistakes", "text": "Common Mistakes"}];
+
+const faq = [
+  { q: `How do I know if an adjective is i-type or na-type?`, a: `Most adjectives ending in い are i-adjectives (大きい, 高い, 面白い). The exceptions to memorize are きれい (beautiful), 有名 (famous), 嫌い (dislike), and a few others that end in い but are na-adjectives. When in doubt, check a dictionary — it will mark na-adjectives clearly.` },
+  { q: `Can adjectives be used as verbs in Japanese?`, a: `i-adjectives conjugate like verbs — they have past tense (高かった = was expensive), negative (高くない = not expensive), and te-form (高くて = expensive and...). na-adjectives need helper words like です/だ/じゃない for conjugation. This verb-like behavior is unique to Japanese.` },
+  { q: `How many adjectives do I need for JLPT N5?`, a: `About 50-60 adjectives appear at the N5 level. Focus on the most common 30 first (大きい, 小さい, 高い, 安い, 新しい, 古い, いい, 悪い, 暑い, 寒い, etc.) as they cover most daily conversations. N4 adds another 40-50 adjectives.` },
+  { q: `Why does いい change to よかった in past tense?`, a: `いい (good) is historically derived from よい. In modern Japanese, the dictionary form is いい, but all conjugations use the よ- stem: よかった (was good), よくない (not good), よくて (good and...). This is the single most important irregular adjective to memorize.` },
+];
+
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Particle Guide", url: "/japanese/tools/particle-guide/" },
+  { name: "Daily Phrase", url: "/japanese/tools/daily-phrase/" },
+];
+
+const headings = [
+  { depth: 2, slug: "two-types", text: "Two Types of Japanese Adjectives" },
+  { depth: 2, slug: "i-conjugation", text: "i-Adjective Conjugation" },
+  { depth: 2, slug: "na-conjugation", text: "na-Adjective Conjugation" },
+  { depth: 2, slug: "comparison", text: "Side-by-Side Conjugation Comparison" },
+  { depth: 2, slug: "essential-i", text: "30 Essential i-Adjectives" },
+  { depth: 2, slug: "essential-na", text: "20 Essential na-Adjectives" },
+  { depth: 2, slug: "tricky-adjectives", text: "Tricky Adjectives That Fool Learners" },
+  { depth: 2, slug: "sentence-patterns", text: "Adjective Sentence Patterns" },
+];
 ---
 <BlogLayout
   title="Japanese Adjectives: i-Adjectives vs na-Adjectives Complete Guide"
-  description="Master i-adjectives and na-adjectives — differences, conjugation rules, and 80+ essential adjectives."
+  description="Master i-adjectives and na-adjectives with complete conjugation tables, 50+ essential adjectives, tricky exceptions, and real sentence patterns."
   language="japanese"
-  category="jlpt"
-  tags={["grammar", "vocabulary", "beginner"]}
+  category="grammar"
+  tags={["grammar", "vocabulary", "beginner", "adjectives"]}
   publishDate="2026-02-24"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="two-types">Two Types of Adjectives</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="i-adjectives">i-Adjective Conjugation</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="na-adjectives">na-Adjective Conjugation</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="essential-list">Essential Adjective List</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="common-mistakes">Common Mistakes</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/particle-guide/">Particle Guide</a> to reinforce what you have learned.</p>
+<p>Japanese adjectives are surprisingly different from English ones. While English adjectives just sit in front of nouns unchanged ("big dog," "big house," "was big"), Japanese adjectives <strong>conjugate</strong> — they change form for past tense, negative, and connections, much like verbs. And there are two completely different systems depending on whether the adjective is an <strong>i-adjective</strong> or a <strong>na-adjective</strong>.</p>
+
+<p>This guide covers both types with complete conjugation tables, 50+ essential adjectives organized by type, the tricky exceptions that fool even intermediate learners, and the sentence patterns you need to use adjectives naturally in conversation.</p>
+
+<h2 id="two-types">Two Types of Japanese Adjectives</h2>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#dbeafe; border:1px solid #93c5fd; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">い-Adjectives (i-adjectives)</p>
+    <ul style="margin:0; padding-left:1.25rem;">
+      <li>End in い: 大きい, 高い, 面白い</li>
+      <li>Conjugate by changing the い ending</li>
+      <li>Don't need です for basic polite form</li>
+      <li>More "verb-like" behavior</li>
+      <li>Native Japanese origin (mostly)</li>
+    </ul>
+  </div>
+  <div style="background:#fce7f3; border:1px solid #f9a8d4; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">な-Adjectives (na-adjectives)</p>
+    <ul style="margin:0; padding-left:1.25rem;">
+      <li>Various endings: 静か, 元気, 有名</li>
+      <li>Use な before nouns: 静かな部屋</li>
+      <li>Conjugate using です/じゃない</li>
+      <li>More "noun-like" behavior</li>
+      <li>Many from Chinese origin</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="i-conjugation">i-Adjective Conjugation</h2>
+
+<p>i-adjectives conjugate by dropping the final い and adding a new ending. Here's the complete pattern using 高い (takai, expensive):</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#dbeafe;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Form</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Casual</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Polite</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Present ✓</td><td style="padding:8px; border:1px solid #e2e8f0;">高い</td><td style="padding:8px; border:1px solid #e2e8f0;">高いです</td><td style="padding:8px; border:1px solid #e2e8f0;">is expensive</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Present ✗</td><td style="padding:8px; border:1px solid #e2e8f0;">高くない</td><td style="padding:8px; border:1px solid #e2e8f0;">高くないです</td><td style="padding:8px; border:1px solid #e2e8f0;">is not expensive</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Past ✓</td><td style="padding:8px; border:1px solid #e2e8f0;">高かった</td><td style="padding:8px; border:1px solid #e2e8f0;">高かったです</td><td style="padding:8px; border:1px solid #e2e8f0;">was expensive</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Past ✗</td><td style="padding:8px; border:1px solid #e2e8f0;">高くなかった</td><td style="padding:8px; border:1px solid #e2e8f0;">高くなかったです</td><td style="padding:8px; border:1px solid #e2e8f0;">was not expensive</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">te-form</td><td style="padding:8px; border:1px solid #e2e8f0;" colspan="2">高くて</td><td style="padding:8px; border:1px solid #e2e8f0;">expensive and...</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Before noun</td><td style="padding:8px; border:1px solid #e2e8f0;" colspan="2">高い + noun</td><td style="padding:8px; border:1px solid #e2e8f0;">expensive [noun]</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">⚠️ The いい Exception</p>
+  <p style="margin:0;">いい (good) is irregular. Dictionary form = いい, but all conjugations use よ-: よくない (not good), よかった (was good), よくなかった (was not good), よくて (good and...). This is the #1 irregular adjective to memorize.</p>
+</div>
+
+<h2 id="na-conjugation">na-Adjective Conjugation</h2>
+
+<p>na-adjectives conjugate like nouns — using です/じゃない rather than changing their own form. Using 静か (shizuka, quiet):</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Form</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Casual</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Polite</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Present ✓</td><td style="padding:8px; border:1px solid #e2e8f0;">静かだ</td><td style="padding:8px; border:1px solid #e2e8f0;">静かです</td><td style="padding:8px; border:1px solid #e2e8f0;">is quiet</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Present ✗</td><td style="padding:8px; border:1px solid #e2e8f0;">静かじゃない</td><td style="padding:8px; border:1px solid #e2e8f0;">静かじゃないです</td><td style="padding:8px; border:1px solid #e2e8f0;">is not quiet</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Past ✓</td><td style="padding:8px; border:1px solid #e2e8f0;">静かだった</td><td style="padding:8px; border:1px solid #e2e8f0;">静かでした</td><td style="padding:8px; border:1px solid #e2e8f0;">was quiet</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Past ✗</td><td style="padding:8px; border:1px solid #e2e8f0;">静かじゃなかった</td><td style="padding:8px; border:1px solid #e2e8f0;">静かじゃなかったです</td><td style="padding:8px; border:1px solid #e2e8f0;">was not quiet</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">te-form</td><td style="padding:8px; border:1px solid #e2e8f0;" colspan="2">静かで</td><td style="padding:8px; border:1px solid #e2e8f0;">quiet and...</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Before noun</td><td style="padding:8px; border:1px solid #e2e8f0;" colspan="2">静か<strong>な</strong> + noun</td><td style="padding:8px; border:1px solid #e2e8f0;">quiet [noun]</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key difference:</strong> na-adjectives need な between the adjective and noun (静か<strong>な</strong>部屋 = quiet room), while i-adjectives connect directly (大き<strong>い</strong>部屋 = big room).</p>
+
+<h2 id="comparison">Side-by-Side Conjugation Comparison</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0;">Form</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">i-adj (高い)</th>
+      <th style="padding:10px; border:1px solid #e2e8f0;">na-adj (静か)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Neg</td><td style="padding:8px; border:1px solid #e2e8f0;">高<strong>くない</strong></td><td style="padding:8px; border:1px solid #e2e8f0;">静か<strong>じゃない</strong></td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">Past</td><td style="padding:8px; border:1px solid #e2e8f0;">高<strong>かった</strong></td><td style="padding:8px; border:1px solid #e2e8f0;">静か<strong>だった</strong></td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">Te</td><td style="padding:8px; border:1px solid #e2e8f0;">高<strong>くて</strong></td><td style="padding:8px; border:1px solid #e2e8f0;">静か<strong>で</strong></td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">+ Noun</td><td style="padding:8px; border:1px solid #e2e8f0;">高<strong>い</strong>本</td><td style="padding:8px; border:1px solid #e2e8f0;">静か<strong>な</strong>部屋</td></tr>
+  </tbody>
+</table>
+
+<h2 id="essential-i">30 Essential i-Adjectives</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#dbeafe;">
+      <th style="padding:8px; border:1px solid #e2e8f0;">Japanese</th>
+      <th style="padding:8px; border:1px solid #e2e8f0;">Romaji</th>
+      <th style="padding:8px; border:1px solid #e2e8f0;">English</th>
+      <th style="padding:8px; border:1px solid #e2e8f0;">Opposite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">大きい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ookii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">big</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">小さい</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">高い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">takai</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">expensive / tall</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">安い / 低い</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">新しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">atarashii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">new</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">古い</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">いい/良い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ii/yoi</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">good</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">悪い</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">暑い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">atsui</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">hot (weather)</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">寒い</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">面白い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">omoshiroi</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">interesting/funny</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">つまらない</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">難しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">muzukashii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">difficult</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">易しい</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">楽しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">tanoshii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">fun/enjoyable</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">—</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">美味しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">oishii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">delicious</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">まずい</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">忙しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">isogashii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">busy</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">暇</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">嬉しい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">ureshii</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">happy/glad</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">悲しい</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">長い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">nagai</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">long</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">短い</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">早い/速い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">hayai</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">early / fast</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">遅い</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">強い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">tsuyoi</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">strong</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">弱い</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">近い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">chikai</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">near</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">遠い</td></tr>
+  </tbody>
+</table>
+
+<h2 id="essential-na">20 Essential na-Adjectives</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:8px; border:1px solid #e2e8f0;">Japanese</th>
+      <th style="padding:8px; border:1px solid #e2e8f0;">Romaji</th>
+      <th style="padding:8px; border:1px solid #e2e8f0;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">元気</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">genki</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">healthy/energetic</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">きれい</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">kirei</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">beautiful/clean ⚠️</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">静か</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">shizuka</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">quiet</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">有名</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">yuumei</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">famous ⚠️</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">好き</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">suki</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">liked/favorite</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">嫌い</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">kirai</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">disliked ⚠️</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">上手</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">jouzu</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">skillful</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">下手</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">heta</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">unskillful</td></tr>
+    <tr><td style="padding:6px 8px; border:1px solid #e2e8f0;">大変</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">taihen</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">tough/terrible</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:6px 8px; border:1px solid #e2e8f0;">便利</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">benri</td><td style="padding:6px 8px; border:1px solid #e2e8f0;">convenient</td></tr>
+  </tbody>
+</table>
+
+<p>⚠️ = These end in い but are na-adjectives! きれいな人 (not きれい人), 有名な店 (not 有名い店).</p>
+
+<h2 id="tricky-adjectives">Tricky Adjectives That Fool Learners</h2>
+
+<div style="background:#fef3c7; border:1px solid #fde68a; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.75rem;">na-Adjectives That Look Like i-Adjectives</p>
+  <ul style="margin:0; padding-left:1.25rem;">
+    <li><strong>きれい</strong> (kirei) — beautiful → きれい<strong>な</strong>花 (NOT きれい花)</li>
+    <li><strong>嫌い</strong> (kirai) — disliked → 嫌い<strong>な</strong>食べ物</li>
+    <li><strong>有名</strong> (yuumei) — famous → 有名<strong>な</strong>人</li>
+    <li><strong>幸い</strong> (saiwai) — fortunate → na-adjective</li>
+  </ul>
+  <p style="margin:0.75rem 0 0; font-size:0.9rem; color:#92400e;">Rule of thumb: If the い is part of a kanji reading (not a standalone い ending), it's likely a na-adjective.</p>
+</div>
+
+<h2 id="sentence-patterns">Adjective Sentence Patterns</h2>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.75rem;">Pattern 1: [Noun] は [Adjective] です</p>
+  <p style="margin:0.25rem 0;">この本は面白いです。<span style="color:#64748b;"> — This book is interesting.</span></p>
+  <p style="margin:0.25rem 0;">日本語は難しいです。<span style="color:#64748b;"> — Japanese is difficult.</span></p>
+
+  <p style="font-weight:700; margin:1rem 0 0.75rem;">Pattern 2: [Adjective] + [Noun] (modifying nouns)</p>
+  <p style="margin:0.25rem 0;">高いレストラン <span style="color:#64748b;"> — expensive restaurant</span></p>
+  <p style="margin:0.25rem 0;">静かな場所 <span style="color:#64748b;"> — quiet place</span></p>
+
+  <p style="font-weight:700; margin:1rem 0 0.75rem;">Pattern 3: Connecting adjectives (te-form)</p>
+  <p style="margin:0.25rem 0;">安くて美味しい。<span style="color:#64748b;"> — Cheap and delicious.</span></p>
+  <p style="margin:0.25rem 0;">静かできれいな部屋。<span style="color:#64748b;"> — A quiet and beautiful room.</span></p>
+
+  <p style="font-weight:700; margin:1rem 0 0.75rem;">Pattern 4: Comparison with より</p>
+  <p style="margin:0.25rem 0;">東京は大阪より大きいです。<span style="color:#64748b;"> — Tokyo is bigger than Osaka.</span></p>
+  <p style="margin:0;">日本語は英語より難しいです。<span style="color:#64748b;"> — Japanese is harder than English.</span></p>
+</div>
+
+<p>Adjectives are building blocks for expressing opinions, descriptions, and comparisons. Practice them with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a> and use the <a href="/japanese/tools/particle-guide/">Particle Guide</a> to understand how adjectives interact with particles. For more grammar fundamentals, check our <a href="/japanese/blog/japanese-particles-explained/">particles guide</a> and <a href="/japanese/blog/japanese-verb-conjugation/">verb conjugation guide</a>.</p>
 
 </BlogLayout>
