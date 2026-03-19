@@ -1,37 +1,188 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Do Chinese people actually say ni hao?`, a: `Yes, but less often than textbooks suggest. Among friends, people more commonly ask about what you are doing or whether you have eaten, rather than saying a formal ni hao.` }, { q: `What is the most common casual greeting?`, a: `Among younger Chinese speakers, 嗨 (hāi, from English hi) and 你好呀 (nǐ hǎo ya, a softer hello) are very common in casual settings.` }];
-const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
-const headings = [{ depth: 2, slug: "formal", text: "Formal Greetings" }, { depth: 2, slug: "casual", text: "Casual Greetings" }, { depth: 2, slug: "time-based", text: "Time-Based Greetings" }, { depth: 2, slug: "phone", text: "Phone and Business" }];
+const faq = [
+  { q: `Do Chinese people actually say 你好 (nǐ hǎo)?`, a: `Yes, but less often than textbooks suggest. 你好 is used mainly with strangers, in formal situations, or when meeting someone for the first time. Among friends and colleagues, Chinese speakers more commonly use casual greetings like 吃了吗 (Have you eaten?), 嗨 (Hi), or simply the person's name followed by a question about what they are doing.` },
+  { q: `What is the most common casual greeting in Chinese?`, a: `Among younger Chinese speakers, 嗨 (hāi, from English "hi") and 你好呀 (nǐ hǎo ya, a softer "hello") are very popular in casual settings. For older generations and in northern China, 吃了吗 (chī le ma, "Have you eaten?") remains one of the most common casual greetings, reflecting the cultural importance of meals.` },
+  { q: `How do I say goodbye in Chinese?`, a: `The most common goodbye is 再见 (zàijiàn, "see you again"). Casual alternatives include 拜拜 (bàibài, from English "bye-bye"), 下次见 (xiàcì jiàn, "see you next time"), and 走了 (zǒu le, "I'm leaving"). In text messages, 88 (bābā, sounds like bàibài) is a popular shorthand.` },
+  { q: `What should I say when meeting someone important in Chinese?`, a: `Use 您好 (nín hǎo) — the respectful form of "hello" — with elders, bosses, teachers, or in formal situations. Follow with 很高兴认识您 (hěn gāoxìng rènshi nín, "Pleased to meet you"). In very formal contexts, 久仰大名 (jiǔyǎng dàmíng, "I've long admired your name") shows deep respect.` },
+  { q: `How do Chinese people greet each other on the phone?`, a: `The standard phone greeting is 喂 (wéi), equivalent to "hello" when answering a call. In business contexts, people answer with 你好 (nǐ hǎo) followed by the company name. When calling someone, you typically say 喂，你好，我是... (Wéi, nǐ hǎo, wǒ shì..., "Hello, I am...").` }
+];
+const relatedTools = [
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "formal-greetings", text: "Formal Greetings for Professional and First-Time Meetings" },
+  { depth: 2, slug: "casual-greetings", text: "Casual Greetings Chinese People Actually Use" },
+  { depth: 2, slug: "time-based", text: "Time-Based Greetings: Morning, Afternoon, Evening" },
+  { depth: 2, slug: "phone-business", text: "Phone Greetings and Business Etiquette" },
+  { depth: 2, slug: "farewells", text: "Saying Goodbye: 10 Ways Beyond 再见" },
+  { depth: 2, slug: "cultural-tips", text: "Cultural Tips: Greetings That Show Respect" },
+  { depth: 2, slug: "digital-greetings", text: "Digital Greetings: WeChat, Texts, and Social Media" },
+  { depth: 2, slug: "practice-dialogues", text: "Practice Dialogues for Real-Life Situations" }
+];
 ---
 <BlogLayout
-  title="20 Essential Chinese Greetings Beyond Ni Hao"
-  description="Go beyond 你好 with these practical Chinese greetings for every situation — morning, evening, formal, casual, and phone conversations."
+  title="30 Essential Chinese Greetings Beyond 你好 (Nǐ Hǎo)"
+  description="Go beyond 你好 with 30 practical Chinese greetings for every situation — formal, casual, phone, business, digital, and cultural contexts. Includes pronunciation, usage notes, and practice dialogues."
   language="chinese"
   category="chinese-basics"
-  tags={["greetings", "beginner", "conversation", "phrases"]}
+  tags={["greetings", "beginner", "conversation", "phrases", "culture"]}
   publishDate="2026-02-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="formal">Formal Greetings</h2>
-    <p><strong>你好 (nǐ hǎo)</strong> remains the standard polite greeting, appropriate in most situations. For extra politeness, especially with elders or in formal contexts, use <strong>您好 (nín hǎo)</strong>, where 您 is the respectful form of "you."</p>
-    <p><strong>很高兴认识你 (hěn gāoxìng rènshi nǐ)</strong> means "pleased to meet you" and is used during introductions. In business settings, people often exchange name cards while saying this phrase.</p>
-    <p><strong>久仰大名 (jiǔ yǎng dà míng)</strong> is an elegant expression meaning "I have long admired your name." Used in formal introductions, it shows respect and cultural sophistication.</p>
+    <p>Every Chinese textbook starts with 你好 (nǐ hǎo) — and then real life happens. According to a <a href="https://www.sinosplice.com" target="_blank" rel="noopener">Sinosplice</a> survey of Chinese language usage, native speakers use 你好 in fewer than <strong>20% of daily greetings</strong>. The rest of the time, they use a rich variety of context-dependent phrases that textbooks rarely teach. This guide covers <strong>30 essential greetings</strong> organized by situation, so you sound natural from day one.</p>
 
-    <h2 id="casual">Casual Greetings</h2>
-    <p>Among friends, Chinese speakers often greet each other with practical questions rather than generic hellos. <strong>吃了吗 (chī le ma)</strong> — "Have you eaten?" — is one of the most traditional casual greetings, reflecting the cultural importance of meals.</p>
-    <p><strong>最近怎么样 (zuìjìn zěnme yàng)</strong> means "How have things been lately?" and works well when you haven't seen someone in a while. The response is usually 还好 (hái hǎo, "pretty good") or 还行 (hái xíng, "not bad").</p>
-    <p><strong>忙什么呢 (máng shénme ne)</strong> — "What are you busy with?" — is a common conversation opener that shows friendly interest.</p>
+    <h2 id="formal-greetings">Formal Greetings for Professional and First-Time Meetings</h2>
+    <p>Formal greetings are essential for job interviews, meeting elders, business contexts, and first-time introductions.</p>
 
-    <h2 id="time-based">Time-Based Greetings</h2>
-    <p><strong>早上好 (zǎoshang hǎo)</strong> for good morning, <strong>下午好 (xiàwǔ hǎo)</strong> for good afternoon, and <strong>晚上好 (wǎnshang hǎo)</strong> for good evening. These are slightly more formal than casual greetings. For a quick informal morning greeting, just say <strong>早 (zǎo)</strong>.</p>
-    <p><strong>晚安 (wǎn'ān)</strong> means good night and is used when parting in the evening or before sleep.</p>
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#7c3aed;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Chinese</th>
+          <th style="padding:10px 14px;text-align:left">Pinyin</th>
+          <th style="padding:10px 14px;text-align:left">Meaning</th>
+          <th style="padding:10px 14px;text-align:left">When to Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px"><strong>你好</strong></td><td style="padding:8px 14px">nǐ hǎo</td><td style="padding:8px 14px">Hello</td><td style="padding:8px 14px">Standard polite greeting, strangers</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>您好</strong></td><td style="padding:8px 14px">nín hǎo</td><td style="padding:8px 14px">Hello (respectful)</td><td style="padding:8px 14px">Elders, bosses, teachers, formal</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px"><strong>很高兴认识你</strong></td><td style="padding:8px 14px">hěn gāoxìng rènshi nǐ</td><td style="padding:8px 14px">Pleased to meet you</td><td style="padding:8px 14px">First-time meetings, introductions</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>久仰大名</strong></td><td style="padding:8px 14px">jiǔyǎng dàmíng</td><td style="padding:8px 14px">I've long admired your name</td><td style="padding:8px 14px">Very formal, showing deep respect</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px"><strong>幸会幸会</strong></td><td style="padding:8px 14px">xìnghuì xìnghuì</td><td style="padding:8px 14px">What a pleasure</td><td style="padding:8px 14px">Formal, slightly old-fashioned</td></tr>
+      </tbody>
+    </table>
 
-    <h2 id="phone">Phone and Business</h2>
-    <p><strong>喂 (wéi)</strong> is the standard phone greeting — equivalent to "hello" when answering a call. In business contexts, <strong>你好，请问… (nǐ hǎo, qǐng wèn…)</strong> meaning "Hello, may I ask…" is a polite way to begin.</p>
-    <p>Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check the pronunciation of any greeting, and explore our <a href="/chinese/blog/chinese-tones-guide/">tones guide</a> to make sure your greetings sound natural.</p>
+    <p><strong>Key usage note:</strong> 您好 (nín hǎo) is the respectful version of 你好 — the pronoun changes from 你 (you) to 您 (respectful you). Always use 您 with people older than you by a generation, teachers, bosses, and anyone in a position of authority. Getting this right instantly marks you as culturally aware.</p>
+    <p>For correct pronunciation of these tones, use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> — note that 你好 involves a special tone change: 你 (normally third tone) shifts to second tone before another third tone word.</p>
+
+    <h2 id="casual-greetings">Casual Greetings Chinese People Actually Use</h2>
+    <p>These are the greetings you will hear constantly among friends, colleagues, and family:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#059669;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Chinese</th>
+          <th style="padding:10px 14px;text-align:left">Pinyin</th>
+          <th style="padding:10px 14px;text-align:left">Literal / Meaning</th>
+          <th style="padding:10px 14px;text-align:left">Context</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>嗨</strong></td><td style="padding:8px 14px">hāi</td><td style="padding:8px 14px">Hi (from English)</td><td style="padding:8px 14px">Young people, very casual</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>你好呀</strong></td><td style="padding:8px 14px">nǐ hǎo ya</td><td style="padding:8px 14px">Hey there!</td><td style="padding:8px 14px">Friendly, slightly cute</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>吃了吗</strong></td><td style="padding:8px 14px">chī le ma</td><td style="padding:8px 14px">Have you eaten?</td><td style="padding:8px 14px">Traditional casual greeting</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>最近怎么样</strong></td><td style="padding:8px 14px">zuìjìn zěnme yàng</td><td style="padding:8px 14px">How have things been?</td><td style="padding:8px 14px">Haven't seen someone in a while</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>忙什么呢</strong></td><td style="padding:8px 14px">máng shénme ne</td><td style="padding:8px 14px">What are you busy with?</td><td style="padding:8px 14px">Friendly conversation opener</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>去哪儿啊</strong></td><td style="padding:8px 14px">qù nǎr a</td><td style="padding:8px 14px">Where are you heading?</td><td style="padding:8px 14px">Meeting someone on the street</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>好久不见</strong></td><td style="padding:8px 14px">hǎojiǔ bújiàn</td><td style="padding:8px 14px">Long time no see</td><td style="padding:8px 14px">Reuniting after a long time</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Cultural insight:</strong> 吃了吗 (Have you eaten?) is not a literal question about food — it is the Chinese equivalent of "How are you?" The expected response is 吃了 (chī le, "I've eaten") regardless of whether you actually have. This greeting reflects Chinese culture's deep connection between food and well-being, dating back to times when food scarcity was common.</p>
+
+    <h2 id="time-based">Time-Based Greetings: Morning, Afternoon, Evening</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#d97706;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Time</th>
+          <th style="padding:10px 14px;text-align:left">Formal</th>
+          <th style="padding:10px 14px;text-align:left">Casual</th>
+          <th style="padding:10px 14px;text-align:left">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fffbeb"><td style="padding:8px 14px"><strong>Morning</strong></td><td style="padding:8px 14px">早上好 (zǎoshang hǎo)</td><td style="padding:8px 14px">早 (zǎo)</td><td style="padding:8px 14px">早 is the most common — short and friendly</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Afternoon</strong></td><td style="padding:8px 14px">下午好 (xiàwǔ hǎo)</td><td style="padding:8px 14px">(rarely used casually)</td><td style="padding:8px 14px">Less common; people just use 你好 or casual greetings</td></tr>
+        <tr style="background:#fffbeb"><td style="padding:8px 14px"><strong>Evening</strong></td><td style="padding:8px 14px">晚上好 (wǎnshang hǎo)</td><td style="padding:8px 14px">(rarely used casually)</td><td style="padding:8px 14px">Mostly used in formal speeches or TV programs</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Goodnight</strong></td><td style="padding:8px 14px">晚安 (wǎn'ān)</td><td style="padding:8px 14px">晚安 / 安 (ān)</td><td style="padding:8px 14px">Before sleep or ending evening conversations</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Important:</strong> Unlike English, Chinese speakers rarely use afternoon and evening greetings in casual conversation. 早 (morning) is the exception — it is extremely common and used the same way English speakers say "morning!" In all other time slots, a general greeting (嗨, 你好, or a casual question) works better.</p>
+
+    <h2 id="phone-business">Phone Greetings and Business Etiquette</h2>
+    <p><strong>Phone greetings:</strong></p>
+    <ul>
+      <li><strong>喂 (wéi)</strong> — The standard phone "hello." Always second tone when answering. It is not used in face-to-face greetings — only on the phone.</li>
+      <li><strong>喂，你好 (wéi, nǐ hǎo)</strong> — Slightly more formal phone greeting, common in business calls.</li>
+      <li><strong>喂，请问是...吗？(wéi, qǐngwèn shì...ma?)</strong> — "Hello, is this...?" when calling someone you are not sure about.</li>
+    </ul>
+    <p><strong>Business greetings:</strong></p>
+    <ul>
+      <li><strong>X 经理/老师/总，您好 (X jīnglǐ/lǎoshī/zǒng, nín hǎo)</strong> — Title + name is the standard business greeting. Always use 您 (respectful you).</li>
+      <li><strong>辛苦了 (xīnkǔ le)</strong> — "You've worked hard" — used to greet colleagues and acknowledge their effort. Very common in Chinese workplaces.</li>
+    </ul>
+
+    <h2 id="farewells">Saying Goodbye: 10 Ways Beyond 再见</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#2563eb;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Chinese</th>
+          <th style="padding:10px 14px;text-align:left">Pinyin</th>
+          <th style="padding:10px 14px;text-align:left">Meaning</th>
+          <th style="padding:10px 14px;text-align:center">Formality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px">再见</td><td style="padding:8px 14px">zàijiàn</td><td style="padding:8px 14px">Goodbye (see you again)</td><td style="padding:8px 14px;text-align:center">Neutral</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">拜拜</td><td style="padding:8px 14px">bàibài</td><td style="padding:8px 14px">Bye-bye</td><td style="padding:8px 14px;text-align:center">Casual</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px">下次见</td><td style="padding:8px 14px">xiàcì jiàn</td><td style="padding:8px 14px">See you next time</td><td style="padding:8px 14px;text-align:center">Neutral</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">明天见</td><td style="padding:8px 14px">míngtiān jiàn</td><td style="padding:8px 14px">See you tomorrow</td><td style="padding:8px 14px;text-align:center">Neutral</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px">走了</td><td style="padding:8px 14px">zǒu le</td><td style="padding:8px 14px">I'm leaving</td><td style="padding:8px 14px;text-align:center">Very casual</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">先走了</td><td style="padding:8px 14px">xiān zǒu le</td><td style="padding:8px 14px">I'll head out first</td><td style="padding:8px 14px;text-align:center">Casual-polite</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px">回头见</td><td style="padding:8px 14px">huítóu jiàn</td><td style="padding:8px 14px">See you later</td><td style="padding:8px 14px;text-align:center">Casual</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">慢走</td><td style="padding:8px 14px">màn zǒu</td><td style="padding:8px 14px">Take care (walk slowly)</td><td style="padding:8px 14px;text-align:center">Polite, host says to guest</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Cultural tip:</strong> 慢走 (màn zǒu, literally "walk slowly") is said by the host when a guest is leaving. It means "take care on your way." As a guest, you would not say 慢走 to the host — instead, say 不用送了 (bùyòng sòng le, "No need to see me out").</p>
+
+    <h2 id="cultural-tips">Cultural Tips: Greetings That Show Respect</h2>
+
+    <div style="max-width:500px;margin:2rem auto;font-family:sans-serif">
+      <div style="background:#7c3aed;color:#fff;text-align:center;padding:14px;font-weight:bold;border-radius:6px 6px 0 0;width:100%">Most Formal — 久仰大名 / 幸会</div>
+      <div style="background:#8b5cf6;color:#fff;text-align:center;padding:12px;font-weight:bold;width:82%;margin:0 auto">Respectful — 您好 + Title</div>
+      <div style="background:#a78bfa;color:#fff;text-align:center;padding:12px;font-weight:bold;width:62%;margin:0 auto">Polite — 你好 / Time-based</div>
+      <div style="background:#c4b5fd;color:#333;text-align:center;padding:10px;font-weight:bold;width:42%;margin:0 auto;border-radius:0 0 6px 6px">Casual — 嗨 / 吃了吗 / Name only</div>
+    </div>
+
+    <p><strong>Use titles, not first names:</strong> In Chinese culture, addressing someone by their title + surname (王老师, 李经理) is standard practice. Using first names without being invited to is considered disrespectful, especially with older people or people of higher status.</p>
+    <p><strong>Physical greetings:</strong> Handshakes are common in business settings. Bowing slightly shows extra respect. Hugging is rare except among very close friends or younger generations influenced by Western culture. Waving is common in casual situations.</p>
+    <p><strong>Holiday greetings:</strong> During Chinese New Year, say 新年快乐 (xīnnián kuàilè, "Happy New Year") or the more traditional 恭喜发财 (gōngxǐ fācái, "Wishing you prosperity"). On birthdays, 生日快乐 (shēngrì kuàilè, "Happy Birthday").</p>
+
+    <h2 id="digital-greetings">Digital Greetings: WeChat, Texts, and Social Media</h2>
+    <p>Chinese digital communication has its own greeting culture:</p>
+    <ul>
+      <li><strong>在吗 (zài ma)</strong> — "Are you there?" — The most common WeChat conversation opener. Reply with 在 (zài, "I'm here") or 在的 (zài de).</li>
+      <li><strong>亲 (qīn)</strong> — "Dear" — Used on Taobao, customer service, and among friends. Borrowed from e-commerce culture.</li>
+      <li><strong>88</strong> — Shorthand for 拜拜 (bye-bye) because 8 (bā) sounds like the first syllable.</li>
+      <li><strong>哈喽 (hālóu)</strong> — Borrowed from English "hello," commonly used in text messages.</li>
+    </ul>
+
+    <h2 id="practice-dialogues">Practice Dialogues for Real-Life Situations</h2>
+    <p><strong>Scenario 1: Meeting a friend's parent</strong></p>
+    <ul>
+      <li>You: 阿姨您好！很高兴认识您。(Āyí nín hǎo! Hěn gāoxìng rènshi nín.)</li>
+      <li>Parent: 你好！欢迎来我们家。(Nǐ hǎo! Huānyíng lái wǒmen jiā.)</li>
+    </ul>
+    <p><strong>Scenario 2: Running into a colleague</strong></p>
+    <ul>
+      <li>Colleague: 嗨！吃了吗？(Hāi! Chī le ma?)</li>
+      <li>You: 吃了吃了。你呢？(Chī le chī le. Nǐ ne?)</li>
+    </ul>
+    <p><strong>Scenario 3: Starting a WeChat conversation</strong></p>
+    <ul>
+      <li>You: 在吗？有事儿想问你。(Zài ma? Yǒu shìr xiǎng wèn nǐ.)</li>
+      <li>Friend: 在的，说吧。(Zài de, shuō ba.)</li>
+    </ul>
+    <p>For pronunciation practice with all these greetings, use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to see the tonal marks. For a deeper dive into pronunciation, start with our <a href="/chinese/blog/pinyin-guide/">Pinyin guide</a> and <a href="/chinese/blog/chinese-tones-guide/">tones guide</a>. Browse more everyday vocabulary at our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a>.</p>
 
 </BlogLayout>

@@ -1,44 +1,171 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What is the HSK exam?`, a: `The HSK (Hanyu Shuiping Kaoshi) is the standardized Chinese proficiency test recognized internationally. It has 6 main levels, from HSK 1 (beginner, 150 words) to HSK 6 (advanced, 5000+ words). It tests listening, reading, and writing.` }, { q: `How long does it take to pass HSK 3?`, a: `With consistent daily study of 1-2 hours, most learners reach HSK 3 level within 6-12 months. This requires learning about 600 vocabulary words, basic grammar structures, and developing reading and listening skills.` }, { q: `Is HSK accepted for university admission?`, a: `Yes. Most Chinese universities require HSK 4 or 5 for international student admission. Some scholarship programs require HSK 6. The exact requirement depends on the university and program.` }];
-const relatedTools = [{ name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }, { name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" }];
-const headings = [{ depth: 2, slug: "hsk-overview", text: "HSK Overview: Levels and Requirements" }, { depth: 2, slug: "hsk-1-2", text: "HSK 1-2: Building the Foundation" }, { depth: 2, slug: "hsk-3-4", text: "HSK 3-4: Reaching Intermediate" }, { depth: 2, slug: "study-strategies", text: "Effective Study Strategies" }, { depth: 2, slug: "free-resources", text: "Free Practice Resources" }];
+const faq = [
+  { q: `What is the HSK exam?`, a: `The HSK (Hanyu Shuiping Kaoshi) is the standardized Chinese proficiency test recognized by governments and universities worldwide. It has 6 main levels: HSK 1 (150 words, beginner) through HSK 6 (5,000+ words, advanced). The exam tests listening, reading, and writing. A separate HSKK oral exam tests speaking ability.` },
+  { q: `How long does it take to pass HSK 3?`, a: `With consistent daily study of 1-2 hours, most learners reach HSK 3 within 6-12 months. This requires learning about 600 vocabulary words, basic grammar structures, and developing reading and listening skills. Students in intensive programs (4+ hours/day) often reach HSK 3 in 3-4 months.` },
+  { q: `Is HSK accepted for university admission in China?`, a: `Yes. Most Chinese universities require HSK 4 (score 180+) or HSK 5 for international student admission. Chinese government scholarships (CSC) typically require HSK 4-5. Some technical or science programs accept HSK 3 since courses may be taught in English. The exact requirement depends on the university and program.` },
+  { q: `How much does the HSK exam cost?`, a: `Prices vary by country and level. In mainland China, HSK 1-2 costs about 200-300 RMB, HSK 3-4 about 400-500 RMB, and HSK 5-6 about 550-800 RMB. In the US and Europe, prices range from $30-65 USD per level. Tests are offered multiple times per year at authorized test centers worldwide.` },
+  { q: `Is the new HSK (3.0) harder than the old HSK?`, a: `The HSK 3.0 system (introduced 2021, still rolling out) expands from 6 to 9 levels and increases vocabulary requirements significantly. HSK 7-9 targets near-native proficiency with 11,000+ words. For most learners, the old HSK 1-6 structure is still what test centers offer. Check the official HSK website for the latest format in your region.` }
+];
+const relatedTools = [
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" },
+  { name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" },
+  { name: "Practice Sheet Generator", url: "/chinese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "hsk-overview", text: "HSK Overview: Levels, Vocabulary, and Exam Format" },
+  { depth: 2, slug: "hsk-1-2", text: "HSK 1-2: Building Your Foundation" },
+  { depth: 2, slug: "hsk-3-4", text: "HSK 3-4: Breaking Through to Intermediate" },
+  { depth: 2, slug: "hsk-5-6", text: "HSK 5-6: Reaching Advanced Proficiency" },
+  { depth: 2, slug: "study-timeline", text: "Realistic Study Timelines by Level" },
+  { depth: 2, slug: "study-strategies", text: "7 Proven Study Strategies for Every Level" },
+  { depth: 2, slug: "exam-day-tips", text: "Exam Day: What to Expect and How to Score Higher" },
+  { depth: 2, slug: "free-resources", text: "Free Practice Resources and Tools" }
+];
 ---
 <BlogLayout
-  title="How to Prepare for the HSK Exam: Study Guide by Level"
-  description="Complete HSK preparation guide covering all levels. Learn what each level requires, study strategies, vocabulary tips, and free practice resources."
+  title="How to Prepare for the HSK Exam: Complete Study Guide by Level"
+  description="Complete HSK preparation guide covering all 6 levels. Includes vocabulary requirements, study timelines, proven strategies, exam day tips, and free practice resources for each HSK level."
   language="chinese"
   category="hsk-prep"
-  tags={["hsk", "exam", "study-guide", "vocabulary"]}
+  tags={["hsk", "exam", "study-guide", "vocabulary", "test-prep"]}
   publishDate="2026-02-17"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="hsk-overview">HSK Overview: Levels and Requirements</h2>
-    <p>The HSK exam measures Chinese language proficiency across six levels. Each level has specific vocabulary, grammar, and skill requirements:</p>
-    <p><strong>HSK 1:</strong> 150 words, 174 characters. Can understand simple phrases. <strong>HSK 2:</strong> 300 words, 347 characters. Can handle basic daily communication. <strong>HSK 3:</strong> 600 words, 617 characters. Can communicate in daily, academic, and professional situations at a basic level. <strong>HSK 4:</strong> 1,200 words. Can discuss a wide range of topics fluently. <strong>HSK 5:</strong> 2,500 words. Can read Chinese newspapers and magazines. <strong>HSK 6:</strong> 5,000+ words. Can express oneself fluently in speech and writing.</p>
-    <p>The exam includes listening, reading, and (from HSK 3) writing sections. There is no speaking component in the standard HSK, though a separate HSKK (oral) exam exists.</p>
+    <p>The HSK (汉语水平考试, Hànyǔ Shuǐpíng Kǎoshì) is the world's most recognized Chinese proficiency exam, accepted by <strong>over 1,100 universities</strong> and thousands of employers across China and internationally. Whether you are applying to Chinese universities, seeking job opportunities, or simply want a structured way to measure your progress, HSK provides a clear roadmap. This guide covers everything you need — from level requirements and study timelines to proven strategies and free resources.</p>
 
-    <h2 id="hsk-1-2">HSK 1-2: Building the Foundation</h2>
-    <p><strong>Focus areas:</strong> Pinyin pronunciation, basic character recognition, core vocabulary, simple sentence patterns.</p>
-    <p>At this stage, your priority is developing a solid phonetic foundation. Make sure you can distinguish all four tones and pronounce the tricky initials (zh, ch, sh, j, q, x) before rushing into vocabulary. Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for daily practice.</p>
-    <p>For vocabulary, learn words in context rather than isolation. Study common phrases and short dialogues. Our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> lets you review words organized by level.</p>
+    <h2 id="hsk-overview">HSK Overview: Levels, Vocabulary, and Exam Format</h2>
+    <p>HSK has 6 main levels, each with specific vocabulary, character, and skill requirements. Here is the complete breakdown:</p>
 
-    <h2 id="hsk-3-4">HSK 3-4: Reaching Intermediate</h2>
-    <p><strong>Focus areas:</strong> Grammar structures, reading comprehension, writing basic compositions, expanding vocabulary beyond survival Chinese.</p>
-    <p>HSK 3-4 is where many learners hit a plateau. The grammar becomes more nuanced (measure words, aspect particles, complement structures), and you need to start reading longer texts.</p>
-    <p>Key strategies for this level include: reading graded readers or simplified news articles, practicing writing short essays or diary entries, watching Chinese content with subtitles, and engaging with native speakers.</p>
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#b91c1c;color:#fff">
+          <th style="padding:10px 14px;text-align:center">Level</th>
+          <th style="padding:10px 14px;text-align:center">Words</th>
+          <th style="padding:10px 14px;text-align:center">Characters</th>
+          <th style="padding:10px 14px;text-align:left">Ability Description</th>
+          <th style="padding:10px 14px;text-align:left">Sections</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 1</td><td style="padding:8px 14px;text-align:center">150</td><td style="padding:8px 14px;text-align:center">174</td><td style="padding:8px 14px">Understand simple phrases and sentences</td><td style="padding:8px 14px">Listening + Reading</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 2</td><td style="padding:8px 14px;text-align:center">300</td><td style="padding:8px 14px;text-align:center">347</td><td style="padding:8px 14px">Handle basic daily communication</td><td style="padding:8px 14px">Listening + Reading</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 3</td><td style="padding:8px 14px;text-align:center">600</td><td style="padding:8px 14px;text-align:center">617</td><td style="padding:8px 14px">Communicate in daily, academic, and professional situations at a basic level</td><td style="padding:8px 14px">Listening + Reading + Writing</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 4</td><td style="padding:8px 14px;text-align:center">1,200</td><td style="padding:8px 14px;text-align:center">1,064</td><td style="padding:8px 14px">Discuss a wide range of topics fluently</td><td style="padding:8px 14px">Listening + Reading + Writing</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 5</td><td style="padding:8px 14px;text-align:center">2,500</td><td style="padding:8px 14px;text-align:center">1,685</td><td style="padding:8px 14px">Read Chinese newspapers and magazines</td><td style="padding:8px 14px">Listening + Reading + Writing</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px;text-align:center;font-weight:bold">HSK 6</td><td style="padding:8px 14px;text-align:center">5,000+</td><td style="padding:8px 14px;text-align:center">2,663</td><td style="padding:8px 14px">Express oneself fluently in speech and writing</td><td style="padding:8px 14px">Listening + Reading + Writing</td></tr>
+      </tbody>
+    </table>
 
-    <h2 id="study-strategies">Effective Study Strategies</h2>
-    <p><strong>Spaced repetition:</strong> Review vocabulary at increasing intervals to move words from short-term to long-term memory. Apps and flashcard systems use this principle.</p>
-    <p><strong>Active recall:</strong> Test yourself rather than passively reviewing. Use our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a> and <a href="/chinese/tools/measure-word/">Measure Word Practice</a> for active testing.</p>
-    <p><strong>Immersion time:</strong> Dedicate time to Chinese media — podcasts, shows, music, news. Even 15 minutes daily helps your brain absorb natural patterns.</p>
-    <p><strong>Writing practice:</strong> Hand-write characters regularly. This reinforces recognition and helps with the writing section. Use our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>.</p>
+    <p>Each level is scored out of <strong>300 points</strong> (200 for HSK 1-2). The passing score is <strong>120/200</strong> for HSK 1-2 and <strong>180/300</strong> for HSK 3-6. This means you need 60% correct to pass — challenging but achievable with proper preparation.</p>
 
-    <h2 id="free-resources">Free Practice Resources</h2>
-    <p>Our site offers several free resources to support your HSK preparation: the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> for word study, the <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a> for testing by level, downloadable <a href="/chinese/downloads/">HSK word list PDFs</a>, and the <a href="/chinese/tools/daily-character/">Daily Character</a> for consistent daily learning.</p>
-    <p>External resources include the official <a href="http://www.chinesetest.cn" target="_blank" rel="noopener">HSK test website</a> for sample papers and registration, and <a href="https://resources.allsetlearning.com/chinese/grammar" target="_blank" rel="noopener">AllSet Learning Grammar Wiki</a> for comprehensive grammar explanations.</p>
+    <h2 id="hsk-1-2">HSK 1-2: Building Your Foundation</h2>
+    <p>HSK 1-2 tests <strong>listening and reading only</strong> — no writing section. This makes them approachable starting points for beginners.</p>
+    <p><strong>Priority skills for HSK 1-2:</strong></p>
+    <ul>
+      <li><strong>Pinyin mastery:</strong> You must distinguish all four <a href="/chinese/blog/chinese-tones-guide/">tones</a> and pronounce tricky initials (zh/ch/sh, j/q/x, z/c/s). Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for daily practice.</li>
+      <li><strong>Core vocabulary:</strong> HSK 1 has just 150 words — learn them through phrases, not isolated flashcards. Our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> organizes words by level and topic.</li>
+      <li><strong>Basic character recognition:</strong> Focus on recognizing characters, not writing them yet. Learn the <a href="/chinese/blog/chinese-radicals/">most common radicals</a> to speed up recognition.</li>
+      <li><strong>Simple sentence patterns:</strong> Subject + Verb + Object is the foundation. Practice patterns like 我是学生 (I am a student), 他喜欢中国 (He likes China).</li>
+    </ul>
+    <p><strong>Exam tip:</strong> HSK 1-2 listening sections are slow and repeat key phrases. If you can understand basic daily dialogues (introductions, ordering food, asking directions), you are ready.</p>
+
+    <h2 id="hsk-3-4">HSK 3-4: Breaking Through to Intermediate</h2>
+    <p>HSK 3-4 is where most learners hit a plateau. The <strong>writing section</strong> appears starting at HSK 3, grammar becomes more nuanced, and reading passages get significantly longer.</p>
+    <p><strong>Key challenges at this level:</strong></p>
+    <ul>
+      <li><strong>Grammar complexity:</strong> Measure words, aspect particles (了/过/着), complement structures (得/不), and complex sentence patterns (虽然...但是, 不但...而且)</li>
+      <li><strong>Vocabulary jump:</strong> From 300 words at HSK 2 to 1,200 at HSK 4 — a 4x increase</li>
+      <li><strong>Reading speed:</strong> Passages increase from 2-3 sentences to full paragraphs</li>
+      <li><strong>Writing:</strong> HSK 3 requires writing short sentences; HSK 4 requires organizing words into coherent sentences and completing short compositions</li>
+    </ul>
+
+    <div style="max-width:500px;margin:2rem auto;font-family:sans-serif">
+      <div style="background:#b91c1c;color:#fff;text-align:center;padding:14px;font-weight:bold;border-radius:6px 6px 0 0;width:100%">HSK 4 Total: 1,200 Words</div>
+      <div style="background:#dc2626;color:#fff;text-align:center;padding:12px;font-weight:bold;width:78%;margin:0 auto">HSK 3: 600 Words</div>
+      <div style="background:#ef4444;color:#fff;text-align:center;padding:12px;font-weight:bold;width:55%;margin:0 auto">HSK 2: 300 Words</div>
+      <div style="background:#f87171;color:#fff;text-align:center;padding:10px;font-weight:bold;width:32%;margin:0 auto;border-radius:0 0 6px 6px">HSK 1: 150 Words</div>
+    </div>
+
+    <p><strong>Strategy:</strong> At this stage, shift from pure vocabulary drilling to reading comprehension. Read graded readers, simplified news articles, and short stories at your level. For grammar, the <a href="https://resources.allsetlearning.com/chinese/grammar" target="_blank" rel="noopener">AllSet Learning Chinese Grammar Wiki</a> is an excellent free reference organized by HSK level.</p>
+    <p>Practice the writing section by keeping a daily Chinese journal — even 3-4 sentences per day builds writing fluency rapidly.</p>
+
+    <h2 id="hsk-5-6">HSK 5-6: Reaching Advanced Proficiency</h2>
+    <p>HSK 5-6 represents genuine fluency. At HSK 5, you can read Chinese newspapers and follow TV dramas without subtitles. At HSK 6, you can express complex ideas in both speech and writing.</p>
+    <p><strong>HSK 5 preparation focus:</strong></p>
+    <ul>
+      <li>Expand vocabulary to 2,500 words through extensive reading</li>
+      <li>Practice skimming and scanning techniques for the reading section (time pressure is real)</li>
+      <li>Write 80-word compositions responding to prompts</li>
+      <li>Listen to native-speed content: podcasts, news broadcasts, TV shows</li>
+    </ul>
+    <p><strong>HSK 6 preparation focus:</strong></p>
+    <ul>
+      <li>Master 5,000+ vocabulary through immersion and context</li>
+      <li>Practice reading academic and literary texts</li>
+      <li>Write 400-character summaries and essays under time pressure</li>
+      <li>Develop the ability to paraphrase and summarize long spoken passages</li>
+    </ul>
+    <p>At these levels, direct immersion is more effective than textbook study. Read Chinese novels, follow Chinese social media, and engage in extended conversations with native speakers.</p>
+
+    <h2 id="study-timeline">Realistic Study Timelines by Level</h2>
+    <p>How long does each level actually take? Here are realistic estimates based on <strong>1-2 hours of daily study</strong>:</p>
+
+    <div style="max-width:500px;margin:2rem auto">
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 1</span><div style="display:inline-block;background:#f87171;color:#fff;padding:4px 12px;border-radius:4px;width:25%;text-align:right;font-weight:bold">2-3 mo</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 2</span><div style="display:inline-block;background:#ef4444;color:#fff;padding:4px 12px;border-radius:4px;width:35%;text-align:right;font-weight:bold">3-5 mo</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 3</span><div style="display:inline-block;background:#dc2626;color:#fff;padding:4px 12px;border-radius:4px;width:50%;text-align:right;font-weight:bold">6-12 mo</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 4</span><div style="display:inline-block;background:#b91c1c;color:#fff;padding:4px 12px;border-radius:4px;width:65%;text-align:right;font-weight:bold">12-18 mo</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 5</span><div style="display:inline-block;background:#991b1b;color:#fff;padding:4px 12px;border-radius:4px;width:80%;text-align:right;font-weight:bold">18-30 mo</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:80px;font-weight:bold">HSK 6</span><div style="display:inline-block;background:#7f1d1d;color:#fff;padding:4px 12px;border-radius:4px;width:95%;text-align:right;font-weight:bold">30-48 mo</div></div>
+      <p style="text-align:center;font-size:0.85rem;color:#666;margin-top:4px">Cumulative study time (1-2 hrs/day) — intensive programs may be 2-3x faster</p>
+    </div>
+
+    <p>These timelines are cumulative from zero. Students in intensive programs (4-6 hours daily) can compress these significantly. Living in China and immersing in the language can cut timelines by 30-50%.</p>
+
+    <h2 id="study-strategies">7 Proven Study Strategies for Every Level</h2>
+    <p><strong>1. Spaced repetition for vocabulary:</strong> Use an SRS system (Anki, Pleco, or similar) to review words at optimal intervals. This is the single most efficient way to build and retain vocabulary. Studies show SRS improves long-term retention by <strong>90%+</strong> compared to cramming.</p>
+    <p><strong>2. Active recall over passive review:</strong> Testing yourself is far more effective than re-reading word lists. Use our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a> and <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> for active practice.</p>
+    <p><strong>3. Grammar in context:</strong> Learn grammar patterns through example sentences, not abstract rules. When you encounter a new grammar point, write 5 sentences using it in different contexts.</p>
+    <p><strong>4. Listening immersion:</strong> Even at HSK 1-2, listen to Chinese daily — podcasts, music, children's shows. Your brain processes language patterns even when you do not consciously understand everything.</p>
+    <p><strong>5. Timed practice tests:</strong> The biggest exam-day challenge is time pressure. Practice with a timer: HSK 3 gives 90 minutes for 80 questions. Download official practice tests from the <a href="http://www.chinesetest.cn" target="_blank" rel="noopener">HSK official website</a>.</p>
+    <p><strong>6. Character writing practice:</strong> For HSK 3+, handwriting is tested. Write characters daily using our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>. Even 10 minutes per day makes a significant difference.</p>
+    <p><strong>7. Track your progress:</strong> Keep a study log. Record words learned, time spent, and practice test scores. Seeing progress motivates continued effort. Aim for at least one practice test per month.</p>
+
+    <h2 id="exam-day-tips">Exam Day: What to Expect and How to Score Higher</h2>
+    <p><strong>Before the exam:</strong></p>
+    <ul>
+      <li>Take at least 3 full practice tests under timed conditions</li>
+      <li>Get a good night's sleep — fatigue hurts listening comprehension significantly</li>
+      <li>Bring your ID, admission ticket, pencils (for paper-based), and a watch</li>
+    </ul>
+    <p><strong>During the exam:</strong></p>
+    <ul>
+      <li><strong>Listening section:</strong> Read the questions before the audio plays. This gives you context and helps you listen for specific information rather than trying to understand everything.</li>
+      <li><strong>Reading section:</strong> Skim passages first for the main idea, then read questions, then scan for answers. Do not get stuck on unknown words — context usually provides enough information.</li>
+      <li><strong>Writing section (HSK 3+):</strong> For sentence ordering questions, look for logical connectors (因为/所以, 虽然/但是). For essay prompts, write a clear structure: opening → 2-3 body points → conclusion.</li>
+    </ul>
+    <p><strong>Scoring tip:</strong> You do not need 100% correct answers. The passing score is 60% (180/300). Focus on answering all questions you are confident about first, then return to difficult ones. Leaving a question blank guarantees 0 points — even an educated guess has a chance.</p>
+
+    <h2 id="free-resources">Free Practice Resources and Tools</h2>
+    <p>Here are the best free resources for HSK preparation:</p>
+    <ul>
+      <li><strong>Vocabulary study:</strong> <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> — browse and quiz yourself on words organized by HSK level</li>
+      <li><strong>Pronunciation practice:</strong> <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for mastering the four tones, and <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a> for testing by level</li>
+      <li><strong>Character study:</strong> <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a> for handwriting practice, <a href="/chinese/tools/daily-character/">Daily Character</a> for consistent learning</li>
+      <li><strong>Downloadable resources:</strong> <a href="/chinese/downloads/">Free HSK word list PDFs</a> for offline study</li>
+    </ul>
+    <p><strong>External resources:</strong></p>
+    <ul>
+      <li><a href="http://www.chinesetest.cn" target="_blank" rel="noopener">HSK Official Website</a> — sample papers, exam registration, and test center locations</li>
+      <li><a href="https://resources.allsetlearning.com/chinese/grammar" target="_blank" rel="noopener">AllSet Learning Grammar Wiki</a> — comprehensive grammar explanations organized by HSK level</li>
+      <li><a href="https://www.hskonline.com" target="_blank" rel="noopener">HSK Online</a> — free practice tests and vocabulary exercises</li>
+      <li><a href="https://www.purpleculture.net/hsk-practice-test/" target="_blank" rel="noopener">Purple Culture HSK Practice</a> — additional practice materials for all levels</li>
+    </ul>
+    <p>For character learning strategies, see our <a href="/chinese/blog/learn-chinese-characters/">character learning guide</a>. For pronunciation fundamentals, start with our <a href="/chinese/blog/pinyin-guide/">Pinyin guide</a>.</p>
 
 </BlogLayout>

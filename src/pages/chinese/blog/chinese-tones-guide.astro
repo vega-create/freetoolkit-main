@@ -1,8 +1,27 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How many tones does Chinese have?`, a: `Mandarin Chinese has 4 main tones plus a neutral (light) tone. The first tone is flat and high, the second rises, the third dips then rises, and the fourth falls sharply.` }, { q: `Which Chinese tone is hardest for English speakers?`, a: `Most learners find the third tone (falling-rising) most challenging because English does not have a similar pitch pattern. It requires a distinct dip before rising.` }, { q: `Can wrong tones cause misunderstanding?`, a: `Yes! Tones change meaning completely. For example, tang with 1st tone means soup, with 2nd tone means sugar, with 3rd tone means lie down, and with 4th tone means hot to touch.` }];
-const relatedTools = [{ name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" }, { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
-const headings = [{ depth: 2, slug: "what-are-tones", text: "What Are Chinese Tones?" }, { depth: 2, slug: "the-four-tones", text: "The Four Tones Explained" }, { depth: 2, slug: "tone-pairs", text: "Practicing Tone Pairs" }, { depth: 2, slug: "common-mistakes", text: "Common Tone Mistakes" }, { depth: 2, slug: "practice-tips", text: "Tips for Mastering Tones" }];
+const faq = [
+  { q: `How many tones does Mandarin Chinese have?`, a: `Mandarin has four main tones plus a neutral (light) tone. The first tone is high and flat, the second rises from mid to high, the third dips low then rises slightly, and the fourth falls sharply from high to low. The neutral tone is short and light with no fixed pitch. Every syllable in Mandarin carries one of these tones, and the tone determines the meaning of the word.` },
+  { q: `Why are tones so important in Chinese?`, a: `Tones distinguish meaning between otherwise identical syllables. The syllable "ma" can mean mother, hemp, horse, or scold depending on the tone. Using the wrong tone does not just sound awkward — it can change your message entirely. Native speakers rely heavily on tones to understand speech, so mastering tones is not optional for clear communication.` },
+  { q: `What is the hardest Chinese tone for English speakers?`, a: `Most English speakers find the third tone most difficult. It requires starting low, dipping even lower with a creaky voice, then rising slightly. In connected speech, the rising part is often minimal, making it essentially a low flat tone. The third tone also undergoes sandhi — when two third tones appear consecutively, the first changes to a second tone in pronunciation.` },
+  { q: `How long does it take to master Chinese tones?`, a: `Basic tone awareness develops within the first month of study. However, producing tones consistently and correctly in natural conversation typically takes three to six months of regular practice. Full mastery, where tones feel automatic even in complex sentences, can take one to two years. Consistent listening and speaking practice accelerates this timeline significantly.` },
+  { q: `Do all Chinese dialects use the same tones?`, a: `No. Mandarin has four tones, but Cantonese has six to nine tones depending on the analysis. Shanghainese has five tones, and Hokkien has seven or eight. However, since Mandarin is the standard language taught to foreigners, the four-tone system is what most learners need to master first. Learning Mandarin tones provides a strong foundation for understanding tonal languages in general.` }
+];
+const relatedTools = [
+  { name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "Character Quiz", url: "/chinese/tools/character-quiz/" }
+];
+const headings = [
+  { depth: 2, slug: "why-tones-matter", text: "Why Tones Matter in Chinese" },
+  { depth: 2, slug: "four-tones-explained", text: "The Four Tones Explained" },
+  { depth: 2, slug: "neutral-tone", text: "The Neutral (Fifth) Tone" },
+  { depth: 2, slug: "tone-sandhi", text: "Tone Sandhi: When Tones Change" },
+  { depth: 2, slug: "tone-pairs", text: "Practicing Tone Pairs" },
+  { depth: 2, slug: "common-mistakes", text: "Common Tone Mistakes and How to Fix Them" },
+  { depth: 2, slug: "listening-strategies", text: "Listening Strategies for Tone Recognition" },
+  { depth: 2, slug: "daily-practice", text: "Daily Practice Routines for Tone Mastery" }
+];
 ---
 <BlogLayout
   title="How to Learn Chinese Tones: Complete Guide for Beginners"
@@ -16,40 +35,78 @@ const headings = [{ depth: 2, slug: "what-are-tones", text: "What Are Chinese To
   headings={headings}
 >
 
-    <h2 id="what-are-tones">What Are Chinese Tones?</h2>
-    <p>Chinese is a <strong>tonal language</strong>, meaning the pitch pattern you use when pronouncing a syllable changes its meaning entirely. Unlike English, where pitch mainly conveys emotion or emphasis, in Mandarin Chinese, pitch is as fundamental to a word's identity as the consonants and vowels.</p>
-    <p>Think of it this way: in English, the word "yes" means the same whether you say it with a rising pitch (like a question) or a falling pitch (like confirmation). In Chinese, changing the pitch pattern on "ma" gives you four completely different words — mother, hemp, horse, or scold.</p>
-    <p>This is what makes tones simultaneously one of the most challenging and most important aspects of learning Mandarin. The good news? With consistent practice, your brain will adapt, and tones will become second nature.</p>
+    <h2 id="why-tones-matter">Why Tones Matter in Chinese</h2>
+    <p>Mandarin Chinese is a <strong>tonal language</strong>, meaning the pitch pattern you use when pronouncing a syllable determines its meaning. Unlike English, where pitch mainly conveys emotion or emphasis, Chinese uses pitch as a core part of the word itself. Change the tone, and you change the word entirely.</p>
+    <p>The classic example is the syllable <em>ma</em>: with a high flat tone (mā) it means "mother," with a rising tone (má) it means "hemp," with a dipping tone (mǎ) it means "horse," and with a falling tone (mà) it means "scold." Imagine telling someone you want to ride your mother instead of a horse — that is the kind of confusion wrong tones can create.</p>
+    <p>Many beginners underestimate the importance of tones, assuming context will compensate. While context does help in some situations, Chinese listeners are wired to process tones as fundamental sound information. Consistently wrong tones make you significantly harder to understand, even if your consonants and vowels are perfect. Research from <a href="https://www.cambridge.org/core/journals/studies-in-second-language-acquisition" target="_blank" rel="noopener">Cambridge Studies in Second Language Acquisition</a> shows that tone errors cause more communication breakdowns than segmental (consonant/vowel) errors for Mandarin learners.</p>
+    <p>The good news is that tones follow clear, learnable patterns. With systematic practice, you can develop accurate tone production and recognition. This guide breaks down everything you need to know, from the basic mechanics of each tone to advanced practice strategies that accelerate mastery. For the complete Pinyin romanization system, check our <a href="/chinese/blog/pinyin-guide/">Pinyin Guide</a>.</p>
 
-    <h2 id="the-four-tones">The Four Tones Explained</h2>
-    <p><strong>First Tone (ˉ) — High and Flat:</strong> Hold your voice at a steady high pitch, like singing a sustained note. Think of the sound a doctor asks you to make: "Ahhhhh." Example: <em>mā</em> (妈/媽) means "mother."</p>
-    <p><strong>Second Tone (ˊ) — Rising:</strong> Your pitch rises from middle to high, similar to the way English speakers naturally raise their voice when asking "What?" Example: <em>má</em> (麻) means "hemp" or "numb."</p>
-    <p><strong>Third Tone (ˇ) — Dipping:</strong> Your pitch drops low and then rises back up, creating a valley shape. In natural speech, the rising part is often subtle. Example: <em>mǎ</em> (马/馬) means "horse."</p>
-    <p><strong>Fourth Tone (ˋ) — Falling:</strong> A sharp drop from high to low, like giving a firm command: "Stop!" Example: <em>mà</em> (骂/罵) means "scold."</p>
-    <p>There is also a <strong>neutral tone</strong> (also called the light tone), which is short and unstressed. It appears in particles like 吗 (ma — question marker) and the second syllable of some words like 妈妈 (māma — mom).</p>
+    <h2 id="four-tones-explained">The Four Tones Explained</h2>
+    <p><strong>First Tone (ˉ) — High Flat:</strong> Hold your voice at a steady, high pitch. Imagine singing a single sustained note at the top of your comfortable range. Do not let your pitch waver or drop. Example words: <em>mā</em> (妈, mother), <em>tā</em> (他, he), <em>fēi</em> (飞, fly), <em>gāo</em> (高, tall). The most common mistake is not pitching high enough — really commit to a high, steady note.</p>
+    <p><strong>Second Tone (ˊ) — Rising:</strong> Start at a middle pitch and rise sharply to high, like the intonation of a surprised English question: "What?!" The rise should be decisive and quick. Example words: <em>má</em> (麻, hemp), <em>rén</em> (人, person), <em>lái</em> (来, come), <em>shí</em> (十, ten). Many learners do not start low enough — begin from a genuinely mid-level pitch to create a noticeable rise.</p>
+    <p><strong>Third Tone (ˇ) — Dipping:</strong> This is the most complex tone. In isolation, it dips from mid to low and then rises slightly. However, in natural connected speech, the rising part is often omitted — it sounds more like a low, creaky murmur. The defining characteristic is the <strong>low pitch</strong> and slightly rough voice quality. Example words: <em>mǎ</em> (马, horse), <em>nǐ</em> (你, you), <em>hǎo</em> (好, good), <em>wǒ</em> (我, I).</p>
+    <p><strong>Fourth Tone (ˋ) — Falling:</strong> Drop your pitch sharply from high to low, like giving a firm command or expressing strong emphasis. It is short and decisive. Example words: <em>mà</em> (骂, scold), <em>dà</em> (大, big), <em>shì</em> (是, is), <em>qù</em> (去, go). This is usually the easiest tone for English speakers because English naturally uses falling pitch for emphatic statements.</p>
+    <p>Practice all four tones using the same syllable: <em>mā, má, mǎ, mà</em>. Then try with other syllables: <em>bā, bá, bǎ, bà</em> and <em>dā, dá, dǎ, dà</em>. Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> to hear native pronunciations and check your accuracy. For more on how Pinyin represents these tones, see our <a href="/chinese/blog/pinyin-guide/">complete Pinyin guide</a>.</p>
+
+    <h2 id="neutral-tone">The Neutral (Fifth) Tone</h2>
+    <p>Beyond the four main tones, Mandarin has a <strong>neutral tone</strong> (also called the fifth tone or light tone). Neutral tone syllables are pronounced short, light, and without a fixed pitch — their pitch is determined by the preceding tone. In Pinyin, neutral tone syllables carry no tone mark.</p>
+    <p>The neutral tone most commonly appears in: grammatical particles like <em>ma</em> (吗, question marker), <em>de</em> (的, possessive marker), and <em>le</em> (了, aspect marker); the second syllable of certain common words like <em>māma</em> (妈妈, mom), <em>bàba</em> (爸爸, dad), and <em>xièxie</em> (谢谢, thanks); and some suffixes like <em>-zi</em> (子), <em>-tou</em> (头), and <em>-men</em> (们).</p>
+    <p>After a first tone, the neutral tone drops to a mid-low level. After a second tone, it drops to mid level. After a third tone, it rises to mid-high level. After a fourth tone, it stays low. These pitch adjustments happen naturally once you have internalized the main tones — do not try to memorize each combination separately.</p>
+    <p>The key to pronouncing the neutral tone correctly is keeping it <strong>short and unstressed</strong>. Think of it as the syllable "throwing away" its weight. In <em>māma</em>, the first syllable gets full duration and a clear high tone, while the second syllable is quick and faded. According to <a href="https://resources.allsetlearning.com/chinese/pronunciation/Neutral_tone" target="_blank" rel="noopener">AllSet Learning's pronunciation resources</a>, neutral tone syllables are typically only half the duration of full-toned syllables.</p>
+
+    <h2 id="tone-sandhi">Tone Sandhi: When Tones Change</h2>
+    <p>Chinese tones are not always pronounced as written. In certain contexts, tones change according to rules called <strong>tone sandhi</strong>. Understanding these rules is essential for natural-sounding speech.</p>
+    <p><strong>Third tone sandhi (the most important rule):</strong> When two third-tone syllables appear in sequence, the first one changes to a second tone in pronunciation. For example, <em>nǐ hǎo</em> (你好, hello) is written with two third tones but pronounced as <em>ní hǎo</em>. Similarly, <em>wǒ hěn hǎo</em> (我很好, I am very good) becomes <em>wó hén hǎo</em> in pronunciation. This change is never written in Pinyin — you must remember to apply it when speaking.</p>
+    <p><strong>The word 不 (bù, not):</strong> Normally a fourth tone, 不 changes to second tone (bú) before another fourth tone. So <em>bù duì</em> (不对, incorrect) is pronounced <em>bú duì</em>, and <em>bù shì</em> (不是, is not) becomes <em>bú shì</em>. Before first, second, or third tones, it stays as fourth tone: <em>bù hǎo</em> (不好, not good).</p>
+    <p><strong>The word 一 (yī, one):</strong> This character has the most complex sandhi. Before a fourth tone, it changes to second tone: <em>yí gè</em> (一个, one). Before first, second, or third tones, it changes to fourth tone: <em>yì tiān</em> (一天, one day), <em>yì nián</em> (一年, one year). In counting or as a number, it keeps its original first tone: <em>yī, èr, sān</em> (1, 2, 3).</p>
+    <p>These sandhi rules feel overwhelming at first, but they become automatic with practice. Focus on the third-tone sandhi rule first, as it is by far the most frequently encountered. For more details, the <a href="https://en.wikipedia.org/wiki/Standard_Chinese_phonology#Tone_sandhi" target="_blank" rel="noopener">Wikipedia article on Standard Chinese phonology</a> provides a comprehensive reference. Also read our <a href="/chinese/blog/chinese-pronunciation-mistakes/">common pronunciation mistakes guide</a> for more tone-related pitfalls.</p>
 
     <h2 id="tone-pairs">Practicing Tone Pairs</h2>
-    <p>Once you can produce individual tones, the next step is practicing <strong>tone pairs</strong> — two syllables spoken together. This matters because your tongue and vocal cords need to transition smoothly between different pitch patterns.</p>
-    <p>There are 16 possible tone pair combinations (4 × 4). Some particularly tricky ones include:</p>
-    <ul>
-      <li><strong>3rd + 3rd tone:</strong> When two third tones appear together, the first one changes to a second tone. For example, 你好 (nǐhǎo) is actually pronounced more like "níhǎo." This is called <em>tone sandhi</em>.</li>
-      <li><strong>2nd + 3rd tone:</strong> Many learners accidentally merge these, making both sound like second tones.</li>
-      <li><strong>4th + 4th tone:</strong> Two sharp drops in a row requires clear separation between syllables.</li>
-    </ul>
-    <p>Practice these pairs with our <a href="/chinese/tools/tone-trainer/">Tone Trainer tool</a> to build your muscle memory for natural-sounding combinations.</p>
+    <p>The most effective way to internalize tones is through <strong>tone pair drills</strong>. Since most Chinese words are two syllables long, practicing all possible tone combinations prepares you for real conversation.</p>
+    <p>There are 16 possible two-tone combinations (4 tones × 4 tones, excluding neutral tone). Here are example words for each pair:</p>
+    <table>
+      <thead><tr><th>Tone Pair</th><th>Example</th><th>Pinyin</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>1-1</td><td>飞机</td><td>fēijī</td><td>airplane</td></tr>
+        <tr><td>1-2</td><td>中国</td><td>Zhōngguó</td><td>China</td></tr>
+        <tr><td>1-3</td><td>公司</td><td>gōngsī</td><td>company</td></tr>
+        <tr><td>1-4</td><td>工作</td><td>gōngzuò</td><td>work</td></tr>
+        <tr><td>2-1</td><td>学生</td><td>xuéshēng</td><td>student</td></tr>
+        <tr><td>2-2</td><td>时间</td><td>shíjiān</td><td>time</td></tr>
+        <tr><td>2-3</td><td>啤酒</td><td>píjiǔ</td><td>beer</td></tr>
+        <tr><td>2-4</td><td>学校</td><td>xuéxiào</td><td>school</td></tr>
+        <tr><td>3-1</td><td>北京</td><td>Běijīng</td><td>Beijing</td></tr>
+        <tr><td>3-2</td><td>美国</td><td>Měiguó</td><td>America</td></tr>
+        <tr><td>3-3</td><td>你好 (→ ní hǎo)</td><td>nǐhǎo</td><td>hello</td></tr>
+        <tr><td>3-4</td><td>点菜</td><td>diǎncài</td><td>order food</td></tr>
+        <tr><td>4-1</td><td>大家</td><td>dàjiā</td><td>everyone</td></tr>
+        <tr><td>4-2</td><td>地图</td><td>dìtú</td><td>map</td></tr>
+        <tr><td>4-3</td><td>电脑</td><td>diànnǎo</td><td>computer</td></tr>
+        <tr><td>4-4</td><td>再见</td><td>zàijiàn</td><td>goodbye</td></tr>
+      </tbody>
+    </table>
+    <p>Practice each pair by saying the word slowly, exaggerating the tones, then gradually speeding up to natural pace. Record yourself and compare with native speakers. Spend extra time on pairs you find difficult — for most learners, 2-2 and 3-3 combinations are the hardest. Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for structured pair drills.</p>
 
-    <h2 id="common-mistakes">Common Tone Mistakes</h2>
-    <p><strong>Ignoring tones entirely:</strong> Some beginners focus only on consonants and vowels, hoping context will fill in the gaps. While native speakers can sometimes guess, poor tones frequently cause real misunderstanding.</p>
-    <p><strong>Exaggerating tones:</strong> Overcorrecting by making each tone dramatically different sounds unnatural. Chinese tones are relative pitch changes, not absolute pitches.</p>
-    <p><strong>Losing tones in longer sentences:</strong> Maintaining correct tones becomes harder as sentences get longer. The key is to practice at word level first, then build up to phrases and full sentences.</p>
-    <p><strong>Applying English intonation:</strong> English uses rising pitch for questions and falling pitch for statements. This habit can override Chinese tones if you are not careful. In Chinese, the sentence particle (like 吗) signals a question, not the intonation.</p>
+    <h2 id="common-mistakes">Common Tone Mistakes and How to Fix Them</h2>
+    <p><strong>Mistake 1: Flat-lining all tones.</strong> Many beginners pronounce everything in a flat, monotone voice. This is often caused by focusing too much on getting consonants and vowels right while neglecting pitch. <em>Fix:</em> Exaggerate your tones dramatically at first. Sound silly if you need to. Over time, you will naturally moderate to a natural range, but starting with exaggeration builds the correct muscle memory.</p>
+    <p><strong>Mistake 2: Confusing second and third tones.</strong> This is the most common confusion among learners. Both tones involve upward pitch movement, but they start from different places. The second tone starts mid and rises to high (like a surprised "What?"). The third tone starts mid, dips to the very bottom, and may rise slightly (like a skeptical "Hmm..."). <em>Fix:</em> Focus on the starting point — second tone starts noticeably higher than third tone.</p>
+    <p><strong>Mistake 3: Making the third tone too "bouncy."</strong> Textbooks often describe the third tone as a V-shape (dip then rise), which leads learners to create an exaggerated dip-and-bounce pattern. In natural speech, the third tone is usually just low and flat — the rise only appears when the third tone is the very last syllable of a phrase. <em>Fix:</em> Practice the third tone as simply "low" — think of it as staying at the bottom of your pitch range.</p>
+    <p><strong>Mistake 4: Forgetting tone sandhi.</strong> Learners who carefully memorize each character's tone often forget to apply sandhi rules in connected speech. <em>Fix:</em> When you learn new words, practice them in context rather than in isolation. Learn <em>nǐ hǎo</em> as a unit pronounced "ní hǎo," not as two separate characters.</p>
+    <p><strong>Mistake 5: Applying English intonation patterns.</strong> English uses rising pitch for questions and falling pitch for statements. Chinese tones operate independently of sentence intonation. A question in Chinese can end with a fourth (falling) tone if the last word happens to have that tone. <em>Fix:</em> Consciously separate "word tone" from "sentence intonation" in your mind. The <a href="https://www.hackingchinese.com/learning-to-hear-the-tones-in-mandarin/" target="_blank" rel="noopener">Hacking Chinese tone guide</a> offers excellent exercises for developing this awareness.</p>
 
-    <h2 id="practice-tips">Tips for Mastering Tones</h2>
-    <p><strong>Listen before speaking.</strong> Spend time listening to native speakers — podcasts, shows, music — focusing specifically on how tones sound in natural speech. This builds your internal model of what correct tones should sound like.</p>
-    <p><strong>Use visual aids.</strong> Tone diagrams, color coding, and pinyin tone marks all help reinforce the pitch patterns visually as you learn.</p>
-    <p><strong>Record yourself.</strong> Record your pronunciation and compare it to native audio. You will notice differences you cannot hear in real time.</p>
-    <p><strong>Learn words, not isolated tones.</strong> Practice tones in the context of real words and phrases. Learning that 谢谢 is "xièxiè" (4th-4th) as a unit is more effective than drilling isolated syllables.</p>
-    <p><strong>Practice daily, even briefly.</strong> Five minutes of focused tone practice every day is more effective than an hour once a week. Try our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for quick daily sessions.</p>
-    <p>For a deeper dive into the romanization system, check out our <a href="/chinese/blog/pinyin-guide/">Complete Pinyin Guide</a>. External resources like <a href="https://resources.allsetlearning.com/chinese/pronunciation/Tone" target="_blank" rel="noopener">AllSet Learning's Tone Guide</a> also provide excellent supplementary materials.</p>
+    <h2 id="listening-strategies">Listening Strategies for Tone Recognition</h2>
+    <p>Producing tones correctly starts with <strong>hearing them clearly</strong>. Many learners struggle with tone production because their ears have not yet learned to distinguish the four tones reliably. Here are proven strategies to sharpen your tone perception:</p>
+    <p><strong>Minimal pair listening:</strong> Listen to pairs of words that differ only in tone: <em>māi</em> (买, buy) vs. <em>mài</em> (卖, sell), <em>tāng</em> (汤, soup) vs. <em>táng</em> (糖, sugar). Train yourself to hear the difference before trying to produce it. Our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> provides exactly this kind of targeted listening practice.</p>
+    <p><strong>Tone color association:</strong> Some learners benefit from associating each tone with a color or physical gesture. For example, first tone could be red (high energy, steady), second tone yellow (rising, bright), third tone blue (low, deep), and fourth tone green (sharp, decisive). When you hear a tone, visualize the associated color to reinforce recognition. This multisensory approach is supported by research from <a href="https://www.frontiersin.org/journals/psychology" target="_blank" rel="noopener">Frontiers in Psychology</a> on multisensory learning.</p>
+    <p><strong>Shadowing practice:</strong> Listen to a native Chinese speaker (podcast, YouTube, drama) and repeat what they say with a slight delay, matching their tones as closely as possible. This technique, borrowed from interpreter training, simultaneously trains your ears and your voice. Start with slow, clear speech such as <a href="https://www3.nhk.or.jp/nhkworld/zh/learnchinese/" target="_blank" rel="noopener">NHK Chinese lessons</a> or <a href="https://chinesepod.com/" target="_blank" rel="noopener">ChinesePod</a>, and gradually increase to natural speed.</p>
+    <p><strong>Active dictation:</strong> Listen to short Chinese phrases and write down the Pinyin with tone marks. This forces you to consciously identify each tone. Check your answers against the correct transcription. Over time, this exercise dramatically improves both tone recognition and awareness. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to verify your transcriptions.</p>
+
+    <h2 id="daily-practice">Daily Practice Routines for Tone Mastery</h2>
+    <p>Consistency beats intensity when it comes to tone practice. Here is a sustainable daily routine that builds strong tonal foundations in 15-20 minutes per day:</p>
+    <p><strong>Minutes 1-5: Warm-up with the four tones.</strong> Say <em>ā, á, ǎ, à</em> slowly and clearly. Then do the same with <em>ō, ó, ǒ, ò</em> and each simple vowel. Focus on making each tone feel distinct and intentional. This is like a musician doing scales — it sets your vocal cords to "Chinese mode."</p>
+    <p><strong>Minutes 5-10: Tone pair drills.</strong> Pick three tone pairs from the table above and say each example word 10 times. Alternate between pairs you are good at and pairs you find difficult. Record yourself on your phone and play it back — you will often notice errors you cannot hear in real-time.</p>
+    <p><strong>Minutes 10-15: Sentence reading.</strong> Read 3-5 Pinyin sentences aloud, paying careful attention to tones and sandhi rules. If you do not have Pinyin text available, use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to generate Pinyin for any Chinese text. Try to read at a natural pace rather than word by word.</p>
+    <p><strong>Minutes 15-20: Listening check.</strong> Use the <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> to test your recognition. Listen to 10 random syllables and identify the tone before the answer is revealed. Track your accuracy over days and weeks — you should see steady improvement.</p>
+    <p>Remember that tone mastery is a marathon, not a sprint. Even advanced learners occasionally slip up on tones, especially when tired or speaking quickly. The goal is to build strong enough habits that correct tones become your default, with occasional errors rather than the other way around. For more pronunciation guidance, explore our <a href="/chinese/blog/pinyin-guide/">complete Pinyin guide</a>, our guide on <a href="/chinese/blog/chinese-pronunciation-mistakes/">common pronunciation mistakes</a>, and resources like <a href="https://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/introduction" target="_blank" rel="noopener">Yoyo Chinese's tone lessons</a> for supplementary video instruction.</p>
 
 </BlogLayout>
