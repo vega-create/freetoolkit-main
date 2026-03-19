@@ -1,12 +1,29 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How does the Chinese zodiac work?`, a: `Unlike Western astrology based on birth month, the Chinese zodiac assigns an animal based on birth year in a 12-year cycle. Each animal has associated personality traits and compatibility with other animals.` }];
-const relatedTools = [{ name: "Name Generator", url: "/chinese/tools/name-generator/" }];
-const headings = [{ depth: 2, slug: "twelve-animals", text: "The 12 Animals" }, { depth: 2, slug: "your-year", text: "Finding Your Year" }, { depth: 2, slug: "compatibility", text: "Compatibility" }];
+const faq = [
+  {"q": "How does the Chinese zodiac work?", "a": "Unlike Western astrology based on birth month, the Chinese zodiac assigns an animal based on birth year in a 12-year cycle. Each animal has personality traits, lucky numbers, compatible partners, and career tendencies. The cycle follows the lunar calendar, so people born in January-February may belong to the previous year's animal."},
+  {"q": "What year is 2026 in the Chinese zodiac?", "a": "2026 is the Year of the Horse (马年). People born in Horse years (1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026) are said to be energetic, independent, and adventurous."},
+  {"q": "What is your Ben Ming Nian?", "a": "Your Ben Ming Nian (本命年) is when your zodiac year comes around again — every 12 years. It is considered an unlucky year because you are 'in conflict' with the Tai Sui (太岁) god. People wear red underwear and accessories throughout their Ben Ming Nian for protection."},
+  {"q": "Which zodiac animals are most compatible?", "a": "Traditional compatibility follows a pattern: animals 4 positions apart are most compatible (forming 'trine' groups). The four trine groups are: Rat-Dragon-Monkey, Ox-Snake-Rooster, Tiger-Horse-Dog, and Rabbit-Goat-Pig. Animals 6 positions apart are considered incompatible."},
+  {"q": "Why is the Dragon the most popular zodiac animal?", "a": "The Dragon (龙) is the only mythical animal in the zodiac and symbolizes power, strength, and good fortune in Chinese culture. Dragon years consistently see higher birth rates across China, Taiwan, and other Chinese communities as parents hope their children will inherit the Dragon's auspicious traits."}
+];
+const relatedTools = [
+  {"name": "Name Generator", "url": "/chinese/tools/name-generator/"},
+  {"name": "Character Counter", "url": "/chinese/tools/character-counter/"}
+];
+const headings = [
+  {"depth": 2, "slug": "origin", "text": "Origin of the Chinese Zodiac"},
+  {"depth": 2, "slug": "twelve-animals", "text": "The 12 Animals and Their Traits"},
+  {"depth": 2, "slug": "find-your-animal", "text": "Find Your Zodiac Animal"},
+  {"depth": 2, "slug": "compatibility", "text": "Zodiac Compatibility"},
+  {"depth": 2, "slug": "ben-ming-nian", "text": "Ben Ming Nian (本命年)"},
+  {"depth": 2, "slug": "five-elements", "text": "The Five Elements Connection"},
+  {"depth": 2, "slug": "vocabulary", "text": "Zodiac Vocabulary"}
+];
 ---
 <BlogLayout
-  title="The Chinese Zodiac: 12 Animals and Their Meanings"
-  description="Learn about the 12 Chinese zodiac animals, their personality traits, compatibility, and cultural significance in Chinese astrology."
+  title="The Chinese Zodiac: Complete Guide to 12 Animals and Their Meanings"
+  description="Learn the 12 Chinese zodiac animals with personality traits, compatibility chart, the Ben Ming Nian tradition, five elements, and essential zodiac vocabulary."
   language="chinese"
   category="culture"
   tags={["zodiac", "culture", "vocabulary"]}
@@ -16,13 +33,287 @@ const headings = [{ depth: 2, slug: "twelve-animals", text: "The 12 Animals" }, 
   headings={headings}
 >
 
-    <h2 id="twelve-animals">The 12 Animals</h2>
-    <p>The twelve animals in order: <strong>鼠 (shǔ)</strong> Rat, <strong>牛 (niú)</strong> Ox, <strong>虎 (hǔ)</strong> Tiger, <strong>兔 (tù)</strong> Rabbit, <strong>龙 (lóng)</strong> Dragon, <strong>蛇 (shé)</strong> Snake, <strong>马 (mǎ)</strong> Horse, <strong>羊 (yáng)</strong> Goat, <strong>猴 (hóu)</strong> Monkey, <strong>鸡 (jī)</strong> Rooster, <strong>狗 (gǒu)</strong> Dog, <strong>猪 (zhū)</strong> Pig.</p>
+<div class="prose max-w-none">
 
-    <h2 id="your-year">Finding Your Year</h2>
-    <p>The zodiac follows a 12-year cycle. 2024 was Dragon, 2025 Snake, 2026 Horse. Your "birth year animal" (属相, shǔxiàng) is a common conversation topic in Chinese culture. People often ask 你属什么？(nǐ shǔ shénme? — What's your zodiac animal?).</p>
+  <p>The Chinese zodiac (生肖 shēngxiào) is a 12-year cycle where each year is represented by an animal. Unlike Western astrology, which is based on birth month, the Chinese zodiac is determined by your birth year. It influences personality analysis, marriage compatibility, career choices, and even baby planning — Dragon years consistently see birth rate spikes across Chinese communities worldwide. Understanding the zodiac is essential for anyone interested in Chinese culture.</p>
 
-    <h2 id="compatibility">Compatibility</h2>
-    <p>Traditional beliefs hold that certain animals are compatible while others clash. The Dragon is considered the most auspicious animal, and Dragon years often see increased birth rates. The Zodiac influences naming conventions too — try our <a href="/chinese/tools/name-generator/">Name Generator</a> to explore Chinese names with meaningful characters.</p>
+  <h2 id="origin">Origin of the Chinese Zodiac</h2>
+
+  <p>The most famous origin story is the Great Race. The Jade Emperor (玉皇大帝) invited all animals to a race across a river — the first 12 to cross would earn a place in the zodiac.</p>
+
+  <div style="background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 24px; margin: 20px 0;">
+    <p style="margin: 0 0 12px; font-weight: 700; font-size: 1.1em; color: #dc2626;">🏁 The Great Race (Brief Version)</p>
+    <p style="margin: 0; font-size: 0.95em; line-height: 1.8;">The Rat (clever but small) rode on the Ox's back and jumped off at the finish line, arriving first. The Ox came second. The Tiger swam against strong currents for third. The Rabbit hopped across stones and a floating log for fourth. The Dragon flew but stopped to make rain for farmers, arriving fifth. The Snake hid in the Horse's hoof and slithered out suddenly, scaring the Horse — Snake sixth, Horse seventh. The Goat, Monkey, and Rooster worked together on a raft — eighth, ninth, tenth. The Dog played in the water despite being a strong swimmer, coming eleventh. The Pig ate and napped, arriving last at twelfth.</p>
+  </div>
+
+  <h2 id="twelve-animals">The 12 Animals and Their Traits</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: center;">#</th>
+        <th style="padding: 12px; text-align: left;">Animal</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Personality Traits</th>
+        <th style="padding: 12px; text-align: left;">Recent Years</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">1</td>
+        <td style="padding: 10px; font-weight: 600;">🐀 Rat</td>
+        <td style="padding: 10px;">鼠 (shǔ)</td>
+        <td style="padding: 10px;">Clever, resourceful, quick-witted</td>
+        <td style="padding: 10px;">2008, 2020</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">2</td>
+        <td style="padding: 10px; font-weight: 600;">🐂 Ox</td>
+        <td style="padding: 10px;">牛 (niú)</td>
+        <td style="padding: 10px;">Diligent, dependable, strong-willed</td>
+        <td style="padding: 10px;">2009, 2021</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">3</td>
+        <td style="padding: 10px; font-weight: 600;">🐅 Tiger</td>
+        <td style="padding: 10px;">虎 (hǔ)</td>
+        <td style="padding: 10px;">Brave, competitive, confident</td>
+        <td style="padding: 10px;">2010, 2022</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">4</td>
+        <td style="padding: 10px; font-weight: 600;">🐇 Rabbit</td>
+        <td style="padding: 10px;">兔 (tù)</td>
+        <td style="padding: 10px;">Gentle, elegant, alert</td>
+        <td style="padding: 10px;">2011, 2023</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">5</td>
+        <td style="padding: 10px; font-weight: 600;">🐉 Dragon</td>
+        <td style="padding: 10px;">龙 (lóng)</td>
+        <td style="padding: 10px;">Powerful, ambitious, charismatic</td>
+        <td style="padding: 10px;">2012, 2024</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">6</td>
+        <td style="padding: 10px; font-weight: 600;">🐍 Snake</td>
+        <td style="padding: 10px;">蛇 (shé)</td>
+        <td style="padding: 10px;">Wise, intuitive, graceful</td>
+        <td style="padding: 10px;">2013, 2025</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">7</td>
+        <td style="padding: 10px; font-weight: 600;">🐴 Horse</td>
+        <td style="padding: 10px;">马 (mǎ)</td>
+        <td style="padding: 10px;">Energetic, independent, adventurous</td>
+        <td style="padding: 10px; color: #dc2626; font-weight: 600;">2014, 2026 ⭐</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">8</td>
+        <td style="padding: 10px; font-weight: 600;">🐐 Goat</td>
+        <td style="padding: 10px;">羊 (yáng)</td>
+        <td style="padding: 10px;">Calm, gentle, creative</td>
+        <td style="padding: 10px;">2015, 2027</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">9</td>
+        <td style="padding: 10px; font-weight: 600;">🐒 Monkey</td>
+        <td style="padding: 10px;">猴 (hóu)</td>
+        <td style="padding: 10px;">Smart, mischievous, versatile</td>
+        <td style="padding: 10px;">2016, 2028</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">10</td>
+        <td style="padding: 10px; font-weight: 600;">🐓 Rooster</td>
+        <td style="padding: 10px;">鸡 (jī)</td>
+        <td style="padding: 10px;">Observant, hardworking, confident</td>
+        <td style="padding: 10px;">2017, 2029</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">11</td>
+        <td style="padding: 10px; font-weight: 600;">🐕 Dog</td>
+        <td style="padding: 10px;">狗 (gǒu)</td>
+        <td style="padding: 10px;">Loyal, honest, trustworthy</td>
+        <td style="padding: 10px;">2018, 2030</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; text-align: center; font-weight: 600;">12</td>
+        <td style="padding: 10px; font-weight: 600;">🐖 Pig</td>
+        <td style="padding: 10px;">猪 (zhū)</td>
+        <td style="padding: 10px;">Generous, compassionate, diligent</td>
+        <td style="padding: 10px;">2019, 2031</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="find-your-animal">Find Your Zodiac Animal</h2>
+
+  <p>To find your zodiac animal, match your birth year to the 12-year cycle. But remember: the Chinese zodiac follows the <strong>lunar calendar</strong>, not January 1st. If you were born in January or early February, you may actually belong to the previous year's animal.</p>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">💡 Quick Formula:</p>
+    <p style="margin: 8px 0 0;">The most common question in Chinese: <strong>你属什么？(nǐ shǔ shénme?)</strong> — What is your zodiac animal? Answer: <strong>我属[animal]。(wǒ shǔ...)</strong> — I am the [animal]. For example: 我属龙 (I am the Dragon).</p>
+  </div>
+
+  <h2 id="compatibility">Zodiac Compatibility</h2>
+
+  <p>Traditional Chinese astrology groups the 12 animals into four "trine" groups of three. Animals in the same trine are considered highly compatible:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 1.5em;">🐀🐉🐒</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #dc2626;">First Trine</p>
+      <p style="margin: 0; font-size: 0.9em;">Rat + Dragon + Monkey</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em; color: #64748b;">Action-oriented, competitive</p>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 1.5em;">🐂🐍🐓</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #1e40af;">Second Trine</p>
+      <p style="margin: 0; font-size: 0.9em;">Ox + Snake + Rooster</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em; color: #64748b;">Determined, intellectual</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 1.5em;">🐅🐴🐕</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #166534;">Third Trine</p>
+      <p style="margin: 0; font-size: 0.9em;">Tiger + Horse + Dog</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em; color: #64748b;">Freedom-loving, humanitarian</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 1.5em;">🐇🐐🐖</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #92400e;">Fourth Trine</p>
+      <p style="margin: 0; font-size: 0.9em;">Rabbit + Goat + Pig</p>
+      <p style="margin: 4px 0 0; font-size: 0.85em; color: #64748b;">Peaceful, artistic, nurturing</p>
+    </div>
+  </div>
+
+  <p><strong>Most incompatible pairs</strong> (animals 6 positions apart):</p>
+  <ul>
+    <li>Rat ↔ Horse</li>
+    <li>Ox ↔ Goat</li>
+    <li>Tiger ↔ Monkey</li>
+    <li>Rabbit ↔ Rooster</li>
+    <li>Dragon ↔ Dog</li>
+    <li>Snake ↔ Pig</li>
+  </ul>
+
+  <h2 id="ben-ming-nian">Ben Ming Nian (本命年)</h2>
+
+  <p>Your Ben Ming Nian (本命年 běn mìng nián) is when your zodiac year returns — every 12 years. Traditional belief holds that your Ben Ming Nian is an unlucky year because you are in conflict with the Tai Sui (太岁), the god who governs that year.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">🔴 How to Protect Yourself</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li>Wear red underwear all year</li>
+        <li>Wear a red bracelet or belt</li>
+        <li>Avoid big life changes if possible</li>
+        <li>Visit a temple for blessings</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #1e40af;">📅 Ben Ming Nian Ages</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li>12, 24, 36, 48, 60, 72, 84...</li>
+        <li>In 2026 (Horse year): people born in 2014, 2002, 1990, 1978...</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="five-elements">The Five Elements Connection</h2>
+
+  <p>The Chinese zodiac actually operates on a 60-year cycle, not just 12. Each animal year combines with one of the five elements (五行 wǔxíng), creating unique variations:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Element</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Traits Added</th>
+        <th style="padding: 12px; text-align: left;">Years Ending In</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">🪵 Wood</td>
+        <td style="padding: 10px;">木 (mù)</td>
+        <td style="padding: 10px;">Growth, creativity, generosity</td>
+        <td style="padding: 10px;">4, 5</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">🔥 Fire</td>
+        <td style="padding: 10px;">火 (huǒ)</td>
+        <td style="padding: 10px;">Passion, energy, leadership</td>
+        <td style="padding: 10px;">6, 7</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">🌍 Earth</td>
+        <td style="padding: 10px;">土 (tǔ)</td>
+        <td style="padding: 10px;">Stability, patience, reliability</td>
+        <td style="padding: 10px;">8, 9</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">⚙️ Metal</td>
+        <td style="padding: 10px;">金 (jīn)</td>
+        <td style="padding: 10px;">Determination, discipline, ambition</td>
+        <td style="padding: 10px;">0, 1</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">💧 Water</td>
+        <td style="padding: 10px;">水 (shuǐ)</td>
+        <td style="padding: 10px;">Wisdom, flexibility, empathy</td>
+        <td style="padding: 10px;">2, 3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>So 2026 is a <strong>Fire Horse</strong> (火马) year — combining the Horse's energy with Fire's passion. This means a Fire Horse person is especially dynamic and independent.</p>
+
+  <h2 id="vocabulary">Zodiac Vocabulary</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">生肖</td>
+        <td style="padding: 10px;">shēngxiào</td>
+        <td style="padding: 10px;">Chinese zodiac</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">属相</td>
+        <td style="padding: 10px;">shǔxiàng</td>
+        <td style="padding: 10px;">Zodiac sign / birth animal</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">本命年</td>
+        <td style="padding: 10px;">běn mìng nián</td>
+        <td style="padding: 10px;">Your zodiac year (every 12 years)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">太岁</td>
+        <td style="padding: 10px;">tàisuì</td>
+        <td style="padding: 10px;">The year god (in conflict during Ben Ming Nian)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">五行</td>
+        <td style="padding: 10px;">wǔxíng</td>
+        <td style="padding: 10px;">Five elements (wood, fire, earth, metal, water)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">你属什么？</td>
+        <td style="padding: 10px;">nǐ shǔ shénme?</td>
+        <td style="padding: 10px;">What is your zodiac animal?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The Chinese zodiac is deeply woven into everyday life — from casual conversation topics to major life decisions. Try generating a Chinese name that matches your zodiac animal with our <a href="/chinese/tools/name-generator/">Name Generator</a>. Explore more Chinese culture through our <a href="/chinese/blog/chinese-new-year-traditions/">Chinese New Year guide</a> and <a href="/chinese/blog/chinese-names-meaning/">Chinese naming traditions</a>.</p>
+
+</div>
 
 </BlogLayout>

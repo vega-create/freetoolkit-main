@@ -1,12 +1,30 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Do I need Chinese for business in China?`, a: `While many Chinese professionals speak English, even basic Chinese dramatically improves business relationships. Chinese partners deeply appreciate the effort, and it shows cultural respect.` }];
-const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
-const headings = [{ depth: 2, slug: "meetings", text: "Meeting Phrases" }, { depth: 2, slug: "email", text: "Email Etiquette" }, { depth: 2, slug: "networking", text: "Networking and Small Talk" }];
+const faq = [
+  {"q": "Do I need Chinese for business in China?", "a": "While many Chinese professionals speak English, even basic Chinese dramatically improves business relationships. Chinese partners deeply appreciate the effort, and it shows cultural respect that can influence deal outcomes. For formal negotiations, having a translator is common even among Chinese speakers."},
+  {"q": "Is business Chinese different from everyday Chinese?", "a": "Yes. Business Chinese uses more formal vocabulary, four-character idioms (chengyu), and specific professional terminology. The grammar is the same, but the register is more polished. You will also use 您 (nín) instead of 你 (nǐ) in most business contexts."},
+  {"q": "How formal should Chinese business emails be?", "a": "Very formal. Always start with 尊敬的 (zūnjìng de, respected) plus the person's title and name. Use 您 throughout, include a polite opening phrase, and close with 此致敬礼 (cǐ zhì jìnglǐ). Chinese business emails are significantly more formulaic than English ones."},
+  {"q": "What is guanxi and why does it matter?", "a": "Guanxi (关系) literally means 'relationships' but in business it refers to the network of mutual obligations and trust that facilitates deals. Building guanxi through meals, gifts, and personal connections is essential for long-term business success in China."},
+  {"q": "Should I learn simplified or traditional characters for business?", "a": "For mainland China business, learn simplified characters. For Taiwan, Hong Kong, or Macau business, learn traditional. Many professionals learn both. Our Traditional/Simplified Converter tool can help you switch between the two systems."}
+];
+const relatedTools = [
+  {"name": "Character Counter", "url": "/chinese/tools/character-counter/"},
+  {"name": "Traditional/Simplified Converter", "url": "/chinese/tools/traditional-simplified/"}
+];
+const headings = [
+  {"depth": 2, "slug": "why-business-chinese", "text": "Why Business Chinese Matters"},
+  {"depth": 2, "slug": "greetings", "text": "Business Greetings and Introductions"},
+  {"depth": 2, "slug": "meetings", "text": "Meeting Phrases"},
+  {"depth": 2, "slug": "email", "text": "Email Etiquette and Templates"},
+  {"depth": 2, "slug": "phone", "text": "Phone and Video Call Phrases"},
+  {"depth": 2, "slug": "negotiation", "text": "Negotiation Vocabulary"},
+  {"depth": 2, "slug": "networking", "text": "Networking and Relationship Building"},
+  {"depth": 2, "slug": "cultural-tips", "text": "Business Culture Tips"}
+];
 ---
 <BlogLayout
   title="Chinese Business Phrases: Professional Communication Guide"
-  description="Essential Chinese for business meetings, email, negotiations, and networking. Professional vocabulary for the workplace."
+  description="Master 80+ essential Chinese business phrases for meetings, emails, phone calls, negotiations, and networking. Includes cultural tips for doing business in China and Taiwan."
   language="chinese"
   category="culture"
   tags={["business", "professional", "intermediate", "phrases"]}
@@ -16,13 +34,401 @@ const headings = [{ depth: 2, slug: "meetings", text: "Meeting Phrases" }, { dep
   headings={headings}
 >
 
-    <h2 id="meetings">Meeting Phrases</h2>
-    <p><strong>会议 (huìyì)</strong> meeting. <strong>让我们开始吧 (ràng wǒmen kāishǐ ba)</strong> Let's begin. <strong>关于这个问题 (guānyú zhège wèntí)</strong> Regarding this issue. <strong>我同意 (wǒ tóngyì)</strong> I agree. <strong>我们需要讨论 (wǒmen xūyào tǎolùn)</strong> We need to discuss this.</p>
+<div class="prose max-w-none">
 
-    <h2 id="email">Email Etiquette</h2>
-    <p>Chinese business emails follow formal patterns. Begin with <strong>尊敬的X先生/女士 (zūnjìng de... xiānsheng/nǚshì)</strong> — Dear Mr./Ms. End with <strong>此致敬礼 (cǐ zhì jìnglǐ)</strong> — Respectfully. Use 您 (nín, formal you) rather than 你 throughout.</p>
+  <p>Doing business in China or Taiwan requires more than just language skills — it demands an understanding of cultural protocols, relationship dynamics, and the right level of formality. Whether you are attending your first meeting with Chinese partners, writing professional emails, or building long-term business relationships, the phrases in this guide will help you communicate with confidence and cultural awareness.</p>
 
-    <h2 id="networking">Networking and Small Talk</h2>
-    <p>Business card exchange remains important: present with both hands and read the card before putting it away. Common networking phrases include <strong>互相学习 (hùxiāng xuéxí)</strong> — let's learn from each other — a humble way to suggest collaboration. <strong>保持联系 (bǎochí liánxì)</strong> means "stay in touch."</p>
+  <p>This guide covers 80+ essential business Chinese phrases organized by real workplace situations, from formal greetings to negotiation tactics. Each phrase includes pinyin pronunciation and usage notes so you know exactly when and how to use it.</p>
+
+  <h2 id="why-business-chinese">Why Business Chinese Matters</h2>
+
+  <p>Even in international companies where English is the working language, speaking Chinese creates a fundamentally different dynamic. Chinese business culture places enormous value on <strong>关系 (guānxi)</strong> — relationships — and speaking the language signals respect, commitment, and trustworthiness.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em;">🤝</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #dc2626;">关系 (Guānxi)</p>
+      <p style="margin: 0; font-size: 0.9em;">Relationships and connections — the foundation of Chinese business</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em;">🎭</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #92400e;">面子 (Miànzi)</p>
+      <p style="margin: 0; font-size: 0.9em;">Face — social reputation and dignity that must be preserved</p>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em;">🍽️</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #1e40af;">饭局 (Fànjú)</p>
+      <p style="margin: 0; font-size: 0.9em;">Business dinner — where real deals often happen</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2em;">🎁</p>
+      <p style="margin: 8px 0 4px; font-weight: 700; color: #166534;">礼尚往来 (Lǐ shàng wǎng lái)</p>
+      <p style="margin: 0; font-size: 0.9em;">Reciprocity — gifts and favors should be returned</p>
+    </div>
+  </div>
+
+  <h2 id="greetings">Business Greetings and Introductions</h2>
+
+  <p>First impressions in Chinese business are formal. Always address people by their title and family name until invited to do otherwise.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+        <th style="padding: 12px; text-align: left;">When to Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">您好</td>
+        <td style="padding: 10px;">nín hǎo</td>
+        <td style="padding: 10px;">Hello (formal)</td>
+        <td style="padding: 10px;">All business situations</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">久仰大名</td>
+        <td style="padding: 10px;">jiǔ yǎng dà míng</td>
+        <td style="padding: 10px;">I have long admired your reputation</td>
+        <td style="padding: 10px;">Meeting someone important for the first time</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">幸会幸会</td>
+        <td style="padding: 10px;">xìng huì xìng huì</td>
+        <td style="padding: 10px;">Pleased to meet you</td>
+        <td style="padding: 10px;">First meeting (formal)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">请多关照</td>
+        <td style="padding: 10px;">qǐng duō guānzhào</td>
+        <td style="padding: 10px;">Please take care of me / guide me</td>
+        <td style="padding: 10px;">After self-introduction (shows humility)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">这是我的名片</td>
+        <td style="padding: 10px;">zhè shì wǒ de míngpiàn</td>
+        <td style="padding: 10px;">This is my business card</td>
+        <td style="padding: 10px;">Exchanging cards (use both hands)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Common titles to use before the family name:</strong></p>
+  <ul>
+    <li><strong>X总 (zǒng)</strong> — General Manager / CEO / Boss X (most common respectful title)</li>
+    <li><strong>X经理 (jīnglǐ)</strong> — Manager X</li>
+    <li><strong>X主任 (zhǔrèn)</strong> — Director X</li>
+    <li><strong>X老师 (lǎoshī)</strong> — Teacher/Expert X (used broadly as a respectful title)</li>
+    <li><strong>X先生/女士 (xiānsheng/nǚshì)</strong> — Mr./Ms. X (safe default)</li>
+  </ul>
+
+  <h2 id="meetings">Meeting Phrases</h2>
+
+  <p>Chinese business meetings tend to be more hierarchical than Western ones. The most senior person usually speaks first and makes final decisions.</p>
+
+  <p><strong>Starting a meeting:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">让我们开始吧</td>
+        <td style="padding: 10px;">ràng wǒmen kāishǐ ba</td>
+        <td style="padding: 10px;">Let us begin</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">今天的议题是...</td>
+        <td style="padding: 10px;">jīntiān de yìtí shì...</td>
+        <td style="padding: 10px;">Today's agenda is...</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">请看一下这份资料</td>
+        <td style="padding: 10px;">qǐng kàn yíxià zhè fèn zīliào</td>
+        <td style="padding: 10px;">Please look at these materials</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>During the meeting — opinions and discussion:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">我同意</td>
+        <td style="padding: 10px;">wǒ tóngyì</td>
+        <td style="padding: 10px;">I agree</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">我有一个建议</td>
+        <td style="padding: 10px;">wǒ yǒu yí ge jiànyì</td>
+        <td style="padding: 10px;">I have a suggestion</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">关于这个问题</td>
+        <td style="padding: 10px;">guānyú zhège wèntí</td>
+        <td style="padding: 10px;">Regarding this issue</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">我们需要进一步讨论</td>
+        <td style="padding: 10px;">wǒmen xūyào jìnyībù tǎolùn</td>
+        <td style="padding: 10px;">We need to discuss this further</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">可以再解释一下吗？</td>
+        <td style="padding: 10px;">kěyǐ zài jiěshì yíxià ma?</td>
+        <td style="padding: 10px;">Could you explain further?</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">这个方案不错</td>
+        <td style="padding: 10px;">zhège fāng'àn búcuò</td>
+        <td style="padding: 10px;">This plan is good</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">💡 Cultural Tip:</p>
+    <p style="margin: 8px 0 0;">Direct disagreement is uncommon in Chinese business meetings. Instead of saying 我不同意 (I disagree), use softer expressions like 我有一点不同的看法 (I have a slightly different view) or 这个值得再考虑 (this is worth reconsidering). Preserving 面子 (face) is critical.</p>
+  </div>
+
+  <h2 id="email">Email Etiquette and Templates</h2>
+
+  <p>Chinese business emails follow a rigid formal structure. Here is the standard framework:</p>
+
+  <div style="background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 24px; margin: 20px 0;">
+    <p style="margin: 0 0 12px; font-weight: 700; font-size: 1.1em; color: #dc2626;">Standard Business Email Template</p>
+    <p style="margin: 0 0 6px;"><strong>1. Opening:</strong> 尊敬的X总/经理/先生/女士 <span style="color: #64748b;">— Respected [Title + Name]</span></p>
+    <p style="margin: 0 0 6px;"><strong>2. Greeting:</strong> 您好！ <span style="color: #64748b;">— Hello (formal)</span></p>
+    <p style="margin: 0 0 6px;"><strong>3. Self-ID (if first contact):</strong> 我是[公司]的[名字] <span style="color: #64748b;">— I am [Name] from [Company]</span></p>
+    <p style="margin: 0 0 6px;"><strong>4. Purpose:</strong> 关于[主题]，我想... <span style="color: #64748b;">— Regarding [topic], I would like to...</span></p>
+    <p style="margin: 0 0 6px;"><strong>5. Body:</strong> Main content</p>
+    <p style="margin: 0 0 6px;"><strong>6. Closing request:</strong> 请您百忙之中抽空回复 <span style="color: #64748b;">— Please find time in your busy schedule to reply</span></p>
+    <p style="margin: 0;"><strong>7. Sign-off:</strong> 此致敬礼 <span style="color: #64748b;">— Respectfully yours</span></p>
+  </div>
+
+  <p><strong>Key email phrases:</strong></p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Purpose</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Translation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Making a request</td>
+        <td style="padding: 10px; font-weight: 600;">麻烦您帮我...</td>
+        <td style="padding: 10px;">May I trouble you to help me...</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Attaching files</td>
+        <td style="padding: 10px; font-weight: 600;">请查收附件</td>
+        <td style="padding: 10px;">Please see the attachment</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Following up</td>
+        <td style="padding: 10px; font-weight: 600;">关于上次的邮件...</td>
+        <td style="padding: 10px;">Regarding the previous email...</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Thanking</td>
+        <td style="padding: 10px; font-weight: 600;">感谢您的大力支持</td>
+        <td style="padding: 10px;">Thank you for your generous support</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Apologizing</td>
+        <td style="padding: 10px; font-weight: 600;">给您带来不便，深表歉意</td>
+        <td style="padding: 10px;">I sincerely apologize for the inconvenience</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Scheduling</td>
+        <td style="padding: 10px; font-weight: 600;">请问您什么时候方便？</td>
+        <td style="padding: 10px;">When would be convenient for you?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="phone">Phone and Video Call Phrases</h2>
+
+  <p>Phone etiquette in Chinese business is formal. Always identify yourself and your company immediately.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Situation</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Answering</td>
+        <td style="padding: 10px; font-weight: 600;">喂，您好，[公司名]</td>
+        <td style="padding: 10px;">Hello, this is [Company]</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Identifying yourself</td>
+        <td style="padding: 10px; font-weight: 600;">我是[公司]的[名字]</td>
+        <td style="padding: 10px;">I am [Name] from [Company]</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Asking for someone</td>
+        <td style="padding: 10px; font-weight: 600;">请问X总在吗？</td>
+        <td style="padding: 10px;">Is [Boss X] available?</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Person unavailable</td>
+        <td style="padding: 10px; font-weight: 600;">他/她现在不在，请稍后再打</td>
+        <td style="padding: 10px;">They are not available, please call back later</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Will call back</td>
+        <td style="padding: 10px; font-weight: 600;">我稍后回复您</td>
+        <td style="padding: 10px;">I will get back to you shortly</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px;">Video call start</td>
+        <td style="padding: 10px; font-weight: 600;">大家能听到吗？</td>
+        <td style="padding: 10px;">Can everyone hear me?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="negotiation">Negotiation Vocabulary</h2>
+
+  <p>Chinese negotiations tend to be longer and more relationship-focused than Western ones. Patience is essential — rushing signals desperation.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">合同</td>
+        <td style="padding: 10px;">hétong</td>
+        <td style="padding: 10px;">Contract</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">报价</td>
+        <td style="padding: 10px;">bàojià</td>
+        <td style="padding: 10px;">Quote / quotation</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">折扣</td>
+        <td style="padding: 10px;">zhékòu</td>
+        <td style="padding: 10px;">Discount</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">付款条件</td>
+        <td style="padding: 10px;">fùkuǎn tiáojiàn</td>
+        <td style="padding: 10px;">Payment terms</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">交货日期</td>
+        <td style="padding: 10px;">jiāohuò rìqī</td>
+        <td style="padding: 10px;">Delivery date</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">我们可以谈谈价格吗？</td>
+        <td style="padding: 10px;">wǒmen kěyǐ tántan jiàgé ma?</td>
+        <td style="padding: 10px;">Can we discuss the price?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">双赢</td>
+        <td style="padding: 10px;">shuāngyíng</td>
+        <td style="padding: 10px;">Win-win (valued concept in Chinese business)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">我们再考虑一下</td>
+        <td style="padding: 10px;">wǒmen zài kǎolǜ yíxià</td>
+        <td style="padding: 10px;">We will think about it further</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="networking">Networking and Relationship Building</h2>
+
+  <p>In Chinese business, relationships come before transactions. The most important deals often happen over dinner, not in the boardroom.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">🍽️ Business Dinner Phrases</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>请坐 (qǐng zuò)</strong> — Please sit</li>
+        <li><strong>随便点 (suíbiàn diǎn)</strong> — Order whatever you like</li>
+        <li><strong>干杯 (gānbēi)</strong> — Cheers! (literally "dry cup")</li>
+        <li><strong>我敬您一杯 (wǒ jìng nín yì bēi)</strong> — Let me toast you</li>
+        <li><strong>今天我请客 (jīntiān wǒ qǐngkè)</strong> — It is my treat today</li>
+        <li><strong>菜很好吃 (cài hěn hǎochī)</strong> — The food is delicious</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #1e40af;">💬 Networking Small Talk</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>互相学习 (hùxiāng xuéxí)</strong> — Let us learn from each other</li>
+        <li><strong>保持联系 (bǎochí liánxì)</strong> — Stay in touch</li>
+        <li><strong>有空常联系 (yǒu kòng cháng liánxì)</strong> — Keep in touch when you are free</li>
+        <li><strong>多多指教 (duōduō zhǐjiào)</strong> — Please guide me (humble)</li>
+        <li><strong>加个微信吧 (jiā ge Wēixìn ba)</strong> — Let us add each other on WeChat</li>
+        <li><strong>合作愉快 (hézuò yúkuài)</strong> — Pleasure working with you</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background: #fef3c7; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <p style="margin: 0; font-weight: 600;">📱 WeChat is Essential:</p>
+    <p style="margin: 8px 0 0;">In Chinese business, WeChat (微信) has replaced email and phone for most daily communication. Adding someone on WeChat is the equivalent of exchanging business cards. If you are doing business in China, having WeChat is not optional — it is your primary communication tool.</p>
+  </div>
+
+  <h2 id="cultural-tips">Business Culture Tips</h2>
+
+  <p>Understanding these cultural dynamics is just as important as learning the vocabulary:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="border: 2px solid #dc2626; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">🇨🇳 Mainland China</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; line-height: 1.8;">
+        <li>WeChat dominates all communication</li>
+        <li>Business dinners with baijiu toasting are common</li>
+        <li>Gift-giving follows strict cultural rules</li>
+        <li>Hierarchy matters — always address the senior person first</li>
+        <li>Patience in negotiations is essential</li>
+      </ul>
+    </div>
+    <div style="border: 2px solid #0ea5e9; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #0369a1;">🇹🇼 Taiwan</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; line-height: 1.8;">
+        <li>LINE is more common than WeChat</li>
+        <li>Business culture is slightly less formal</li>
+        <li>Traditional characters are used</li>
+        <li>Tea culture is important in business meetings</li>
+        <li>More Western-influenced business practices</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Build your business vocabulary with our <a href="/chinese/tools/character-counter/">Character Counter</a> for checking document length, and use the <a href="/chinese/tools/traditional-simplified/">Traditional/Simplified Converter</a> when communicating across regions. For more on Chinese <a href="/chinese/blog/chinese-idioms/">idioms</a> that impress in business settings, or <a href="/chinese/blog/chinese-greetings/">greeting phrases</a> for daily professional use, explore our other guides.</p>
+
+</div>
 
 </BlogLayout>

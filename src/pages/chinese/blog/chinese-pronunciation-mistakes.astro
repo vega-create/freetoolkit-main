@@ -1,28 +1,373 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What is the biggest pronunciation mistake beginners make?`, a: `Ignoring tones entirely. Many beginners focus only on consonants and vowels, but tones carry meaning in Chinese. Saying ma with the wrong tone can change mother to horse.` }];
-const relatedTools = [{ name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" }, { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
-const headings = [{ depth: 2, slug: "tone-errors", text: "Tone Errors" }, { depth: 2, slug: "initial-errors", text: "Initial Sound Errors" }, { depth: 2, slug: "final-errors", text: "Final Sound Errors" }];
+const faq = [
+  { q: `What is the biggest pronunciation mistake beginners make?`, a: `Ignoring tones entirely. Many beginners focus only on consonants and vowels, but tones carry meaning in Chinese. Saying mā (mother) vs mǎ (horse) vs mà (scold) demonstrates how tones completely change word meaning.` },
+  { q: `How long does it take to master Chinese pronunciation?`, a: `Most learners achieve clear pronunciation within 3-6 months of focused practice. Tones typically take the longest — expect 2-3 months before they feel natural. Daily practice with native audio and a tone trainer tool accelerates the process significantly.` },
+  { q: `Should I focus on pronunciation or vocabulary first?`, a: `Pronunciation first, absolutely. Bad pronunciation habits formed early are very difficult to fix later. Spend the first 2-4 weeks focusing primarily on tones, initials, and finals before building vocabulary. Every word you learn after that will have correct pronunciation built in.` },
+  { q: `Is it possible to learn Chinese pronunciation without a teacher?`, a: `Yes, with the right tools. Use a tone trainer for ear training, record yourself and compare with native audio, and use pinyin converters to check pronunciation. However, getting periodic feedback from a native speaker (even through language exchange apps) is highly recommended.` },
+  { q: `Why do I still make tone mistakes even after years of study?`, a: `This is common and usually caused by tone sandhi (tone change rules), multi-syllable words where tones interact, or reverting to English intonation patterns during longer sentences. Focused practice on tone pairs and reading aloud with tone-marked text helps.` }
+];
+const relatedTools = [
+  { name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" }
+];
+const headings = [
+  { depth: 2, slug: "why-pronunciation-matters", text: "Why Pronunciation Matters More in Chinese" },
+  { depth: 2, slug: "tone-mistakes", text: "Tone Mistakes: The #1 Problem" },
+  { depth: 2, slug: "initial-sound-mistakes", text: "Initial Sound Mistakes" },
+  { depth: 2, slug: "final-sound-mistakes", text: "Final Sound Mistakes" },
+  { depth: 2, slug: "tone-sandhi", text: "Tone Sandhi: When Tones Change" },
+  { depth: 2, slug: "common-word-mistakes", text: "Commonly Mispronounced Words" },
+  { depth: 2, slug: "practice-method", text: "The Fix-It Practice Method" },
+  { depth: 2, slug: "daily-drills", text: "Daily Pronunciation Drills" }
+];
 ---
 <BlogLayout
   title="15 Common Chinese Pronunciation Mistakes and How to Fix Them"
-  description="Identify and correct the most common pronunciation errors that Chinese learners make. Practical tips for each mistake."
+  description="Identify and correct the most common pronunciation errors that Chinese learners make. Practical fixes for tone mistakes, confusing initials, tricky finals, and tone sandhi rules."
   language="chinese"
   category="chinese-basics"
-  tags={["pronunciation", "mistakes", "tones", "beginner"]}
+  tags={["pronunciation", "mistakes", "tones", "beginner", "pinyin"]}
   publishDate="2026-02-25"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="tone-errors">Tone Errors</h2>
-    <p><strong>Flat-lining tones:</strong> Speaking all syllables at the same pitch. Fix: exaggerate tones initially, then reduce to natural levels. <strong>English intonation override:</strong> Rising pitch at sentence end for questions, conflicting with Chinese tones. Fix: practice sentences where the final character has a falling tone. Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for daily tone practice.</p>
+  <div class="prose max-w-none">
 
-    <h2 id="initial-errors">Initial Sound Errors</h2>
-    <p><strong>Confusing zh/j and ch/q:</strong> These sound similar but are produced at different positions in the mouth. zh/ch/sh are retroflex (tongue curled back), while j/q/x are palatal (tongue against hard palate). <strong>Pronouncing x as "ks":</strong> Chinese x sounds like a sharp "sh" — it has nothing to do with the English letter x.</p>
+    <p>Chinese pronunciation is the foundation everything else is built on. Get it wrong, and even perfect grammar and extensive vocabulary will not save you — native speakers will struggle to understand you, and you will struggle to understand them. The good news? Most learners make the <strong>same predictable mistakes</strong>, and every single one is fixable with the right approach.</p>
 
-    <h2 id="final-errors">Final Sound Errors</h2>
-    <p><strong>Mixing up -an and -ang:</strong> The -an ending has a front nasal (tongue touches teeth ridge), while -ang has a back nasal (sound resonates in the back). <strong>Mispronouncing ü:</strong> This sound doesn't exist in English. Say "ee" while rounding your lips like "oo." Check any pronunciation with our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a>.</p>
+    <p>This guide breaks down the <strong>15 most common pronunciation mistakes</strong>, explains exactly why they happen, and gives you concrete drills to fix each one. Whether you are a complete beginner or an intermediate learner who suspects your pronunciation needs work, this is your diagnostic checklist.</p>
+
+    <!-- Why Pronunciation Matters -->
+    <h2 id="why-pronunciation-matters">Why Pronunciation Matters More in Chinese</h2>
+
+    <p>In English, mispronunciation usually just sounds like an accent. In Chinese, mispronunciation changes the <strong>meaning entirely</strong>. This is because Chinese is a tonal language — the pitch pattern you use on a syllable determines which word you are saying.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #fef2f2; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: bold;">mā</div>
+        <div style="font-size: 0.85rem; color: #666;">Tone 1 (flat high)</div>
+        <div style="font-size: 1.1rem; margin-top: 0.3rem;"><strong>妈 mother</strong></div>
+      </div>
+      <div style="background: #fefce8; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: bold;">má</div>
+        <div style="font-size: 0.85rem; color: #666;">Tone 2 (rising)</div>
+        <div style="font-size: 1.1rem; margin-top: 0.3rem;"><strong>麻 hemp</strong></div>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: bold;">mǎ</div>
+        <div style="font-size: 0.85rem; color: #666;">Tone 3 (dip)</div>
+        <div style="font-size: 1.1rem; margin-top: 0.3rem;"><strong>马 horse</strong></div>
+      </div>
+      <div style="background: #eff6ff; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: bold;">mà</div>
+        <div style="font-size: 0.85rem; color: #666;">Tone 4 (falling)</div>
+        <div style="font-size: 1.1rem; margin-top: 0.3rem;"><strong>骂 scold</strong></div>
+      </div>
+    </div>
+
+    <p>Same consonant, same vowel, four completely different words. This is why Chinese pronunciation demands more attention than most other languages. Let's fix the most common mistakes one by one.</p>
+
+    <!-- Tone Mistakes -->
+    <h2 id="tone-mistakes">Tone Mistakes: The #1 Problem</h2>
+
+    <p>Tone errors account for the majority of comprehension failures. Here are the five most common tone-related mistakes and their fixes:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fef2f2;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">#</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Mistake</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">What Happens</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">How to Fix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>1</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Flat-lining all tones</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Speaking every syllable at the same pitch, like a robot</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Exaggerate tones dramatically at first, then gradually reduce to natural levels</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>2</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>English intonation override</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Rising pitch at sentence end for questions, overriding Chinese tones</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Practice sentences where final character has Tone 4 (falling) — force yourself to go down</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>3</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Tone 2 vs Tone 3 confusion</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Both involve pitch going up, so learners mix them</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Tone 3 dips LOW first then rises slightly. Tone 2 just goes up. Think: Tone 3 = valley, Tone 2 = hill</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>4</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Half-hearted Tone 4</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Not dropping pitch sharply enough — sounds like Tone 1 to native ears</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Imagine dropping something heavy. Tone 4 is a fast, decisive fall from high to low</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>5</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Ignoring neutral tone</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Giving full tone to syllables that should be light and quick</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Practice common neutral-tone words: 吗(ma), 的(de), 了(le), 呢(ne) — say them short and light</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>🎯 Best practice tool:</strong> Use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> for daily ear training. Start with single-syllable tone identification, then progress to tone pairs (the real challenge). Even 5 minutes daily makes a dramatic difference within weeks.
+    </div>
+
+    <!-- Initial Sound Mistakes -->
+    <h2 id="initial-sound-mistakes">Initial Sound Mistakes</h2>
+
+    <p>Chinese has several initial consonant sounds that do not exist in English (or sound similar but are produced differently). These are the trickiest ones:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fefce8;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">#</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Mistake</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">The Problem</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Correct Production</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>6</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>zh/ch/sh vs j/q/x</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Treating them as the same sound</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>zh/ch/sh</strong> = retroflex (tongue curled back, tip touches roof). <strong>j/q/x</strong> = palatal (tongue flat against hard palate)</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>7</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>x pronounced as "ks"</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Applying English letter sound to Chinese pinyin</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Chinese <strong>x</strong> = a sharp "sh" sound (tongue behind lower teeth, air through narrow gap). Think "shee" not "ksee"</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>8</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>r as English "r"</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Using the English r-sound (tongue does not touch anything)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Chinese <strong>r</strong> = tongue curled back like zh, but voiced with buzzing. Closer to French "j" than English "r"</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>9</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>No aspiration contrast</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Not distinguishing b/p, d/t, g/k, z/c, zh/ch, j/q</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Hold paper in front of mouth: <strong>p, t, k, c, ch, q</strong> should make it move (aspirated). <strong>b, d, g, z, zh, j</strong> should not</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.5rem;">zh/ch/sh Practice Pairs</h3>
+        <p style="font-size: 0.92rem; margin: 0;">zhī 知 (know) vs jī 鸡 (chicken)<br/>chī 吃 (eat) vs qī 七 (seven)<br/>shī 师 (teacher) vs xī 西 (west)<br/>zhù 住 (live) vs jù 句 (sentence)</p>
+      </div>
+      <div style="background: #fef3c7; border-radius: 10px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.5rem;">Aspiration Practice Pairs</h3>
+        <p style="font-size: 0.92rem; margin: 0;">bā 八 (eight) vs pā 趴 (prone)<br/>dà 大 (big) vs tà 踏 (step)<br/>gē 歌 (song) vs kē 科 (subject)<br/>jī 鸡 (chicken) vs qī 七 (seven)</p>
+      </div>
+    </div>
+
+    <!-- Final Sound Mistakes -->
+    <h2 id="final-sound-mistakes">Final Sound Mistakes</h2>
+
+    <p>Finals (the vowel part of a syllable, sometimes with a nasal ending) contain several sounds that are especially tricky for English speakers:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dcfce7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">#</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Mistake</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">The Problem</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Correct Production</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>10</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-an vs -ang confusion</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Both end with "n" sound to English ears</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-an</strong>: tongue tip touches behind teeth (front nasal). <strong>-ang</strong>: back of tongue lifts, mouth more open (back nasal)</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>11</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-en vs -eng confusion</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Same front/back nasal distinction</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-en</strong>: like "un" in English "fun." <strong>-eng</strong>: like "ung" in English "sung"</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>12</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>ü pronounced as "u"</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">English has no ü sound, so learners default to "oo"</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Say "ee" (tongue position) while rounding your lips like "oo" (lip position). The combination = ü. Practice: 女 nǚ, 绿 lǜ, 鱼 yú</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>13</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-i after z/c/s vs zh/ch/sh/r</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Pronouncing -i the same in all contexts</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">After <strong>z/c/s</strong>: a buzzy "zzz" (teeth nearly closed). After <strong>zh/ch/sh/r</strong>: a retroflex "rr." Neither sounds like "ee"</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>14</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-ou vs -uo confusion</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Mixing up the vowel order</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-ou</strong>: starts with "o" and glides to "u" (like "oh-oo"). <strong>-uo</strong>: starts with "u" and opens to "o" (like "oo-oh")</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>15</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-in vs -ing confusion</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Same front/back nasal issue as -an/-ang</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>-in</strong>: like "een" with tip of tongue. <strong>-ing</strong>: like English "ing" in "sing" — back of tongue rises</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #fef3c7; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>💡 The nasal test:</strong> For -n endings, pinch your nose at the end — you should feel the sound stop. For -ng endings, the sound continues resonating even with your nose pinched because it's in the back of your throat.
+    </div>
+
+    <!-- Tone Sandhi -->
+    <h2 id="tone-sandhi">Tone Sandhi: When Tones Change</h2>
+
+    <p>Even after mastering individual tones, many learners get tripped up by <strong>tone sandhi</strong> — rules that change tones when certain tones appear next to each other. These are not optional stylistic choices; they are mandatory pronunciation rules.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #faf5ff;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Rule</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pattern</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">What Happens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>3-3 → 2-3</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Two Tone 3 in a row</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你好 nǐ hǎo → ní hǎo</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">First Tone 3 becomes Tone 2</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>不 bù rule</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">不 before Tone 4</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">不是 bù shì → bú shì</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">不 changes from Tone 4 to Tone 2</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>一 yī rule</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一 before Tone 4</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一个 yī gè → yí gè</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一 changes from Tone 1 to Tone 2</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>一 yī rule</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一 before Tone 1/2/3</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一天 yī tiān → yì tiān</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一 changes from Tone 1 to Tone 4</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Half Tone 3</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Tone 3 before 1/2/4</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">老师 lǎo shī</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Tone 3 only dips low without rising — "half third tone"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>📝 Key insight:</strong> Pinyin in textbooks shows the <em>dictionary tone</em> (original), not the spoken tone. So 你好 is written nǐ hǎo but pronounced ní hǎo. This catches many learners off guard. Listening practice is essential — use our <a href="/chinese/tools/tone-trainer/">Tone Trainer</a> to hear actual spoken tones.
+    </div>
+
+    <!-- Commonly Mispronounced Words -->
+    <h2 id="common-word-mistakes">Commonly Mispronounced Words</h2>
+
+    <p>These everyday words trip up learners constantly. Check if you have been saying them correctly:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Word</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Common Wrong Way</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Correct Way</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">女 (woman)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nǚ</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"noo"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nü with rounded lips + ee tongue</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">日 (day/sun)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">rì</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"ree" like English</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Retroflex r + buzzy -i (not "ee")</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">去 (go)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">qù</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"choo"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Aspirated palatal q + ü (not u)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">学 (study)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xué</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"shway" or "ksway"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Sharp sh-like x + üe (rounded)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">吃 (eat)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">chī</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"chee"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Retroflex ch + buzzy -i (not "ee")</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">四 (four)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sì</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"see" or "sue"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">s + buzzy -i (teeth nearly closed)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">十 (ten)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">shí</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"shee"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Retroflex sh + retroflex buzzy -i</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">人 (person)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">rén</td><td style="padding: 10px; border: 1px solid #e2e8f0;">"ren" like English</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Chinese r (tongue curled) + en</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Practice Method -->
+    <h2 id="practice-method">The Fix-It Practice Method</h2>
+
+    <p>Knowing what is wrong is half the battle. Here is a systematic approach to fixing pronunciation issues:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #eff6ff; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: bold; color: #3b82f6;">Step 1</div>
+        <strong>Identify</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">Record yourself reading 10 sentences. Compare with native audio. Circle every syllable that sounds different.</p>
+      </div>
+      <div style="background: #fef3c7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: bold; color: #eab308;">Step 2</div>
+        <strong>Isolate</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">Pick your top 3 problem sounds. Practice ONLY those sounds in isolation for one week before combining with words.</p>
+      </div>
+      <div style="background: #dcfce7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: bold; color: #22c55e;">Step 3</div>
+        <strong>Minimal Pairs</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">Practice words that differ by only the problem sound: zhī vs jī, -an vs -ang. This trains your ear AND your mouth.</p>
+      </div>
+      <div style="background: #faf5ff; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 1.8rem; font-weight: bold; color: #a855f7;">Step 4</div>
+        <strong>Context</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">Practice the sounds inside full sentences. Read aloud daily. Speed up gradually. Record and compare weekly.</p>
+      </div>
+    </div>
+
+    <!-- Daily Drills -->
+    <h2 id="daily-drills">Daily Pronunciation Drills</h2>
+
+    <p>Consistency beats intensity. Here is a 15-minute daily routine that covers all major pronunciation areas:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Time</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Activity</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Focus Area</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3 min</td><td style="padding: 10px; border: 1px solid #e2e8f0;"><a href="/chinese/tools/tone-trainer/">Tone Trainer</a> — tone pair drills</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Tone accuracy</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">3 min</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Minimal pair practice (zh/j, ch/q, sh/x)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Initial consonants</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3 min</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Nasal ending pairs (-an/-ang, -en/-eng, -in/-ing)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Final sounds</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">3 min</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Read aloud — 5 sentences with tone marks</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Fluency + tone sandhi</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3 min</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Record + compare with native audio</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Self-assessment</td></tr>
+      </tbody>
+    </table>
+
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>✅ Progress check:</strong> After two weeks of daily practice, re-record the same 10 sentences from Step 1. You will be surprised at the improvement. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to generate tone-marked text for your read-aloud practice.
+    </div>
+
+    <p>Pronunciation is not something you "finish" — it is an ongoing refinement process. But the 15 mistakes in this guide represent the biggest barriers between you and being understood clearly. Fix these, and your Chinese communication will improve dramatically. For more fundamentals, explore our guides on <a href="/chinese/blog/bopomofo-vs-pinyin/">Bopomofo vs Pinyin</a>, <a href="/chinese/blog/chinese-question-words/">Chinese question words</a>, and <a href="/chinese/blog/mandarin-vs-cantonese/">Mandarin vs Cantonese</a>.</p>
+
+  </div>
 
 </BlogLayout>

@@ -1,28 +1,441 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How are Chinese questions different from English?`, a: `Chinese question words stay in the same position where the answer would go, unlike English which moves them to the front. So Where do you go? is literally You go where? (你去哪里?).` }];
-const relatedTools = [{ name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" }];
-const headings = [{ depth: 2, slug: "question-words", text: "The Core Question Words" }, { depth: 2, slug: "patterns", text: "Question Patterns" }, { depth: 2, slug: "examples", text: "Practice Examples" }];
+const faq = [
+  { q: `How are Chinese questions different from English?`, a: `Chinese question words stay in the same position where the answer would go, unlike English which moves them to the front. So "Where do you go?" is literally "You go where?" (你去哪里?). The word order of the statement stays the same — you just swap the answer for the question word.` },
+  { q: `Do I need to change word order to ask questions in Chinese?`, a: `No, and this is one of the best things about Chinese grammar. To turn a statement into a question, you either add 吗 at the end, use a question word in the answer position, or use the verb-not-verb pattern. The basic subject-verb-object order stays the same.` },
+  { q: `What is the difference between 几 and 多少?`, a: `Both mean "how many/how much," but 几 (jǐ) is used when you expect a small number (usually under 10) and requires a measure word. 多少 (duōshǎo) is used for any quantity and does not require a measure word. For prices, 多少钱 is the standard way to ask.` },
+  { q: `Can I end a Chinese sentence with 吗 and also use a question word?`, a: `Generally no. If you use a question word (谁, 什么, 哪里, etc.), you do not need 吗. Using both sounds redundant and unnatural. Choose one method: either a question word OR 吗, not both.` },
+  { q: `Is the verb-not-verb pattern formal or informal?`, a: `It is neutral — appropriate for both formal and informal contexts. It is very common in everyday speech (你去不去? Do you want to go or not?) and is also perfectly fine in writing. It often implies you want a direct yes/no answer.` }
+];
+const relatedTools = [
+  { name: "Pinyin Quiz", url: "/chinese/tools/pinyin-quiz/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "Tone Trainer", url: "/chinese/tools/tone-trainer/" }
+];
+const headings = [
+  { depth: 2, slug: "how-questions-work", text: "How Chinese Questions Work" },
+  { depth: 2, slug: "core-question-words", text: "The 8 Core Question Words" },
+  { depth: 2, slug: "ma-pattern", text: "Pattern 1: The 吗 (ma) Yes/No Question" },
+  { depth: 2, slug: "question-word-pattern", text: "Pattern 2: Question Word in Place" },
+  { depth: 2, slug: "verb-not-verb", text: "Pattern 3: Verb-Not-Verb (A不A)" },
+  { depth: 2, slug: "advanced-patterns", text: "Advanced Question Patterns" },
+  { depth: 2, slug: "practice-sentences", text: "40 Practice Sentences" },
+  { depth: 2, slug: "common-mistakes", text: "Common Question Mistakes to Avoid" }
+];
 ---
 <BlogLayout
-  title="Chinese Question Words: How to Ask Anything"
-  description="Master all Chinese question words: who, what, when, where, why, how. Learn question patterns that work in every conversation."
+  title="Chinese Question Words: Complete Guide to Asking Anything in Mandarin"
+  description="Master all Chinese question words (who, what, when, where, why, how) and three question patterns. Includes 40 practice sentences with pinyin and English translations."
   language="chinese"
   category="grammar"
-  tags={["grammar", "questions", "beginner", "conversation"]}
+  tags={["grammar", "questions", "beginner", "conversation", "pinyin"]}
   publishDate="2026-02-24"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="question-words">The Core Question Words</h2>
-    <p><strong>谁 (shéi)</strong> who, <strong>什么 (shénme)</strong> what, <strong>哪里 (nǎlǐ)</strong> where, <strong>什么时候 (shénme shíhou)</strong> when, <strong>为什么 (wèi shénme)</strong> why, <strong>怎么 (zěnme)</strong> how, <strong>多少 (duōshǎo)</strong> how many/much, <strong>几 (jǐ)</strong> how many (small number).</p>
+  <div class="prose max-w-none">
 
-    <h2 id="patterns">Question Patterns</h2>
-    <p>In Chinese, questions are formed three ways. First, the <strong>ma (吗) pattern</strong>: add 吗 to any statement to make it a yes/no question. Second, the <strong>question word pattern</strong>: place the question word where the answer goes. Third, the <strong>verb-not-verb pattern</strong>: 你去不去？(Do you go or not go?).</p>
+    <p>Questions are the engine of conversation. Whether you are ordering food, asking for directions, or making friends, you need to know how to ask questions in Chinese. The great news? <strong>Chinese questions are grammatically simpler than English questions.</strong> There is no do/does/did, no auxiliary verb inversion, and no complicated tense changes. Once you learn the patterns, you can ask about anything.</p>
 
-    <h2 id="examples">Practice Examples</h2>
-    <p>你叫什么名字？(What is your name?) 你从哪里来？(Where are you from?) 这个多少钱？(How much is this?) 你为什么学中文？(Why are you learning Chinese?). Practice recognizing these patterns with our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a>.</p>
+    <p>This guide covers the <strong>8 core question words</strong>, <strong>3 question patterns</strong>, and gives you <strong>40 practice sentences</strong> to drill until asking questions in Chinese becomes second nature.</p>
+
+    <!-- How Questions Work -->
+    <h2 id="how-questions-work">How Chinese Questions Work</h2>
+
+    <p>The fundamental rule of Chinese questions is beautifully simple:</p>
+
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; text-align: center;">
+      <p style="font-size: 1.2rem; font-weight: bold; margin: 0 0 0.5rem;">The Golden Rule</p>
+      <p style="font-size: 1.1rem; margin: 0;">The question word goes <strong>exactly where the answer would go</strong>.</p>
+      <p style="font-size: 0.95rem; margin: 0.8rem 0 0; color: #555;">Statement: 他去<strong>北京</strong>。(He goes to <strong>Beijing</strong>.)<br/>Question: 他去<strong>哪里</strong>？(He goes <strong>where</strong>?)</p>
+    </div>
+
+    <p>In English, you rearrange the entire sentence to form a question. In Chinese, you keep the same word order and just swap the unknown information with a question word. This means that every statement is a template for a question.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">3 Ways to Ask Questions</strong>
+        <ol style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.92rem;">
+          <li><strong>吗 (ma)</strong> — Add to end for yes/no questions</li>
+          <li><strong>Question word</strong> — Replace the unknown with 谁/什么/哪里/etc.</li>
+          <li><strong>Verb-not-verb</strong> — 去不去？(Go or not go?)</li>
+        </ol>
+      </div>
+      <div style="background: #fef3c7; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #ca8a04;">Key Differences from English</strong>
+        <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.92rem;">
+          <li>No word order changes</li>
+          <li>No do/does/did auxiliaries</li>
+          <li>No verb conjugation changes</li>
+          <li>Question mark (？) is the same as English</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Core Question Words -->
+    <h2 id="core-question-words">The 8 Core Question Words</h2>
+
+    <p>These eight question words cover everything you will need for daily conversation. Master these and you can ask about any person, thing, place, time, reason, or method.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Chinese</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example Question</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Who</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">谁</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">shéi</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他是谁？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Who is he?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>What</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">什么</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">shénme</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">这是什么？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">What is this?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Where</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">哪里 / 哪儿</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">nǎlǐ / nǎr</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你去哪里？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Where are you going?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>When</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">什么时候</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">shénme shíhou</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你什么时候来？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">When are you coming?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Why</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">为什么</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">wèi shénme</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你为什么学中文？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Why are you learning Chinese?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>How</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">怎么</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">zěnme</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">这个字怎么读？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">How do you read this character?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>How many (large)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">多少</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">duōshǎo</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">这个多少钱？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">How much is this?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>How many (small)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">几</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">jǐ</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你有几个孩子？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">How many children do you have?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>💡 几 vs 多少:</strong> Use <strong>几 (jǐ)</strong> when expecting a small number (under ~10) — it REQUIRES a measure word: 几个、几本、几杯. Use <strong>多少 (duōshǎo)</strong> for any quantity — measure word is optional: 多少钱、多少人、多少个学生.
+    </div>
+
+    <!-- Pattern 1: Ma -->
+    <h2 id="ma-pattern">Pattern 1: The 吗 (ma) Yes/No Question</h2>
+
+    <p>The simplest question pattern in Chinese: take any statement and add <strong>吗</strong> at the end. Done. The statement becomes a yes/no question.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dcfce7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Statement</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Question (+ 吗)</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">你是学生。</td><td style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你是学生<strong>吗</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Are you a student?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">他会说中文。</td><td style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</td><td style="padding: 10px; border: 1px solid #e2e8f0;">他会说中文<strong>吗</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Can he speak Chinese?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">你喜欢咖啡。</td><td style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你喜欢咖啡<strong>吗</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Do you like coffee?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">这是你的书。</td><td style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</td><td style="padding: 10px; border: 1px solid #e2e8f0;">这是你的书<strong>吗</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Is this your book?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">你吃过早饭。</td><td style="padding: 10px; border: 1px solid #e2e8f0; text-align: center;">→</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你吃过早饭<strong>吗</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Have you eaten breakfast?</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>How to answer:</strong> For yes, repeat the verb: 是 (yes/am), 会 (can), 喜欢 (like). For no, add 不: 不是, 不会, 不喜欢. There is no single word for "yes" or "no" in Chinese — you use the verb itself.</p>
+
+    <!-- Pattern 2: Question Word -->
+    <h2 id="question-word-pattern">Pattern 2: Question Word in Place</h2>
+
+    <p>Replace the part you want to ask about with the matching question word. The rest of the sentence stays exactly the same:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dbeafe;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Asking About</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Statement → Question</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Person (谁)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><s>小明</s> 打电话了 → <strong>谁</strong>打电话了？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Who called?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Thing (什么)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你吃<s>面包</s> → 你吃<strong>什么</strong>？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">What are you eating?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Place (哪里)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你住在<s>上海</s> → 你住在<strong>哪里</strong>？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Where do you live?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Time (什么时候)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他<s>明天</s>走 → 他<strong>什么时候</strong>走？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">When is he leaving?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Reason (为什么)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他不来 → 他<strong>为什么</strong>不来？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Why isn't he coming?</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Method (怎么)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">你<s>坐地铁</s>去 → 你<strong>怎么</strong>去？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">How do you go?</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Quantity (多少)</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">这个<s>50块</s> → 这个<strong>多少</strong>钱？</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">How much is this?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pattern 3: Verb-Not-Verb -->
+    <h2 id="verb-not-verb">Pattern 3: Verb-Not-Verb (A不A)</h2>
+
+    <p>This pattern offers the listener a clear choice between "yes" and "no" by stating the verb twice — once positive, once negative:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fef3c7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">A不A Pattern</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">你<strong>去不去</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nǐ qù bú qù?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Are you going (or not)?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">你<strong>是不是</strong>老师？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nǐ shì bú shì lǎoshī?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Are you a teacher (or not)?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">他<strong>会不会</strong>来？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">tā huì bú huì lái?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Will he come (or not)?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">你<strong>喜不喜欢</strong>这个？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nǐ xǐ bù xǐhuan zhège?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Do you like this (or not)?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">好<strong>吃不好吃</strong>？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">hǎo chī bù hǎochī?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Is it tasty (or not)?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">你<strong>有没有</strong>时间？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">nǐ yǒu méiyǒu shíjiān?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Do you have time (or not)?</td></tr>
+      </tbody>
+    </table>
+
+    <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>⚠️ Special case — 有:</strong> The verb 有 (have) uses 没 instead of 不 in the negative form. So it is <strong>有没有</strong> (yǒu méiyǒu), NOT 有不有. This is the only common exception to the A不A pattern.
+    </div>
+
+    <!-- Advanced Patterns -->
+    <h2 id="advanced-patterns">Advanced Question Patterns</h2>
+
+    <p>Once you master the three basic patterns, these advanced structures will make your questions more natural and nuanced:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #faf5ff;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pattern</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Structure</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>怎么样</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">How about / How is</td><td style="padding: 10px; border: 1px solid #e2e8f0;">这个餐厅怎么样？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">How is this restaurant?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>哪个</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Which one</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你要哪个？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Which one do you want?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>多 + adj</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">How + adjective</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你多大？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">How old are you?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>是不是</strong> (tag)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Confirmation tag</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你是中国人，是不是？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">You're Chinese, right?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>...呢？</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">And you? / What about?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我很好，你呢？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">I'm fine, and you?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>...好吗？</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Is that okay?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我们去吃饭，好吗？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Let's go eat, okay?</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>...对吗？</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Is that correct?</td><td style="padding: 10px; border: 1px solid #e2e8f0;">明天是星期五，对吗？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Tomorrow is Friday, right?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>能不能</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Can you / Is it possible</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你能不能帮我？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Can you help me?</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Practice Sentences -->
+    <h2 id="practice-sentences">40 Practice Sentences</h2>
+
+    <p>Practice reading these aloud. For each one, identify which question pattern is being used. Check your pronunciation with our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a>.</p>
+
+    <h3>Basic Questions (1-10)</h3>
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">#</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Pinyin</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">1</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你叫什么名字？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ jiào shénme míngzì?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What is your name?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">2</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你是哪国人？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ shì nǎ guó rén?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What country are you from?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">3</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你多大了？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ duō dà le?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How old are you?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">4</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你住在哪里？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ zhù zài nǎlǐ?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Where do you live?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">5</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你做什么工作？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ zuò shénme gōngzuò?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What do you do for work?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">6</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你会说英语吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ huì shuō yīngyǔ ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Can you speak English?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">7</td><td style="padding: 8px; border: 1px solid #e2e8f0;">现在几点了？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">xiànzài jǐ diǎn le?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What time is it now?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">8</td><td style="padding: 8px; border: 1px solid #e2e8f0;">今天星期几？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">jīntiān xīngqī jǐ?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What day is it today?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">9</td><td style="padding: 8px; border: 1px solid #e2e8f0;">洗手间在哪里？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">xǐshǒujiān zài nǎlǐ?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Where is the restroom?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">10</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你有没有兄弟姐妹？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ yǒu méiyǒu xiōngdì jiěmèi?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Do you have siblings?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Daily Life Questions (11-20)</h3>
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">#</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Pinyin</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">11</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你想吃什么？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ xiǎng chī shénme?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What do you want to eat?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">12</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这个多少钱？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhège duōshǎo qián?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How much is this?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">13</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你怎么去上班？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ zěnme qù shàngbān?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How do you get to work?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">14</td><td style="padding: 8px; border: 1px solid #e2e8f0;">附近有没有超市？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">fùjìn yǒu méiyǒu chāoshì?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Is there a supermarket nearby?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">15</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你喜欢什么颜色？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ xǐhuan shénme yánsè?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What color do you like?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">16</td><td style="padding: 8px; border: 1px solid #e2e8f0;">天气怎么样？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">tiānqì zěnmeyàng?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How is the weather?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">17</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你为什么迟到了？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ wèi shénme chídào le?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Why were you late?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">18</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你什么时候有空？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ shénme shíhou yǒu kòng?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">When are you free?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">19</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你家有几口人？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ jiā yǒu jǐ kǒu rén?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How many people are in your family?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">20</td><td style="padding: 8px; border: 1px solid #e2e8f0;">WiFi密码是什么？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">WiFi mìmǎ shì shénme?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What is the WiFi password?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Shopping & Restaurant Questions (21-30)</h3>
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">#</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Pinyin</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">21</td><td style="padding: 8px; border: 1px solid #e2e8f0;">有没有大一点的？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">yǒu méiyǒu dà yìdiǎn de?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Do you have a bigger one?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">22</td><td style="padding: 8px; border: 1px solid #e2e8f0;">可以便宜一点吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">kěyǐ piányi yìdiǎn ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Can it be cheaper?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">23</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你们有什么推荐的？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐmen yǒu shénme tuījiàn de?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What do you recommend?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">24</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这个菜辣不辣？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhège cài là bú là?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Is this dish spicy?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">25</td><td style="padding: 8px; border: 1px solid #e2e8f0;">可以用微信支付吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">kěyǐ yòng wēixìn zhīfù ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Can I pay with WeChat?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">26</td><td style="padding: 8px; border: 1px solid #e2e8f0;">哪个好吃？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǎge hǎochī?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Which one is tasty?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">27</td><td style="padding: 8px; border: 1px solid #e2e8f0;">需要等多长时间？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">xūyào děng duō cháng shíjiān?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How long is the wait?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">28</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这个有没有素食的？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhège yǒu méiyǒu sùshí de?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Is there a vegetarian option?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">29</td><td style="padding: 8px; border: 1px solid #e2e8f0;">能不能打包？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">néng bù néng dǎbāo?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Can I get it to go?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">30</td><td style="padding: 8px; border: 1px solid #e2e8f0;">买一送一吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">mǎi yī sòng yī ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Is it buy one get one free?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Travel & Directions Questions (31-40)</h3>
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">#</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Pinyin</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">31</td><td style="padding: 8px; border: 1px solid #e2e8f0;">去机场怎么走？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">qù jīchǎng zěnme zǒu?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How do I get to the airport?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">32</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这趟车到不到火车站？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhè tàng chē dào bú dào huǒchēzhàn?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Does this bus go to the train station?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">33</td><td style="padding: 8px; border: 1px solid #e2e8f0;">从这里到那里多远？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">cóng zhèlǐ dào nàlǐ duō yuǎn?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">How far is it from here to there?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">34</td><td style="padding: 8px; border: 1px solid #e2e8f0;">最近的地铁站在哪里？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zuìjìn de dìtiězhàn zài nǎlǐ?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Where is the nearest subway station?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">35</td><td style="padding: 8px; border: 1px solid #e2e8f0;">几点出发？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">jǐ diǎn chūfā?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What time do we depart?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">36</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这个航班准时吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhège hángbān zhǔnshí ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Is this flight on time?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">37</td><td style="padding: 8px; border: 1px solid #e2e8f0;">在哪里换乘？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zài nǎlǐ huànchéng?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Where do I transfer?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">38</td><td style="padding: 8px; border: 1px solid #e2e8f0;">能不能帮我拍张照？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">néng bù néng bāng wǒ pāi zhāng zhào?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Can you take a photo for me?</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">39</td><td style="padding: 8px; border: 1px solid #e2e8f0;">这附近有什么好玩的？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">zhè fùjìn yǒu shénme hǎowán de?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">What's fun to do around here?</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">40</td><td style="padding: 8px; border: 1px solid #e2e8f0;">你去过中国吗？</td><td style="padding: 8px; border: 1px solid #e2e8f0;">nǐ qùguò zhōngguó ma?</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Have you been to China?</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Common Mistakes -->
+    <h2 id="common-mistakes">Common Question Mistakes to Avoid</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #dc2626;">❌ Wrong</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;"><s>你去哪里吗？</s></p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">Don't use 吗 AND a question word together</p>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">✅ Correct</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;">你去哪里？</p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">Question word alone is sufficient</p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #dc2626;">❌ Wrong</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;"><s>什么你想吃？</s></p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">Don't move the question word to the front like English</p>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">✅ Correct</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;">你想吃什么？</p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">Question word stays in the answer position</p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #dc2626;">❌ Wrong</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;"><s>你有不有钱？</s></p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">有 uses 没 not 不 in the negative</p>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">✅ Correct</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;">你有没有钱？</p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">有没有 is the correct pattern for 有</p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #dc2626;">❌ Wrong</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;"><s>多少个人？</s> (for "how many people")</p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">多少 does not need a measure word</p>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">✅ Correct</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0;">多少人？ or 几个人？</p>
+        <p style="font-size: 0.85rem; color: #666; margin: 0;">多少 no measure word; 几 needs one</p>
+      </div>
+    </div>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>🎯 Practice tip:</strong> Pick 5 questions from the practice list each day and say them aloud 10 times. After a week, you will have 35 questions memorized and the patterns will feel automatic. Test your pronunciation with our <a href="/chinese/tools/pinyin-quiz/">Pinyin Quiz</a>.
+    </div>
+
+    <p>Chinese questions are one of the most learner-friendly parts of the language. No conjugation, no word order changes, just simple patterns you can apply to any situation. Master these three patterns and eight question words, and you will be able to ask about anything in Mandarin. For more grammar fundamentals, check out our guides on <a href="/chinese/blog/chinese-pronunciation-mistakes/">pronunciation mistakes</a>, <a href="/chinese/blog/chinese-idioms/">Chinese idioms</a>, and <a href="/chinese/blog/chinese-business-phrases/">business phrases</a>.</p>
+
+  </div>
 
 </BlogLayout>

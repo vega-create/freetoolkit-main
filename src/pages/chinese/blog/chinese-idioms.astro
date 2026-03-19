@@ -1,12 +1,29 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What is a chengyu?`, a: `A chengyu is a four-character idiomatic expression from classical Chinese literature, history, or folklore. They function like proverbs or idioms in English and are used extensively in both spoken and written modern Chinese.` }, { q: `How many chengyu should I know?`, a: `Knowing 50-100 common chengyu will significantly enhance your Chinese. For HSK 5-6 level or professional use, aim for 200-300. Our Daily Idiom tool introduces one per day.` }, { q: `Do Chinese people really use chengyu in daily life?`, a: `Yes! Native speakers use common chengyu naturally in conversation, writing, and especially in formal or business contexts. Using chengyu appropriately shows language sophistication.` }];
-const relatedTools = [{ name: "Daily Idiom", url: "/chinese/tools/daily-idiom/" }, { name: "Character Counter", url: "/chinese/tools/character-counter/" }];
-const headings = [{ depth: 2, slug: "what-are-chengyu", text: "What Are Chengyu?" }, { depth: 2, slug: "essential-chengyu", text: "Essential Chengyu to Know" }, { depth: 2, slug: "how-to-learn", text: "How to Learn and Use Chengyu" }];
+const faq = [
+  {"q": "What is a chengyu?", "a": "A chengyu (成语) is a four-character idiomatic expression from classical Chinese literature, history, or folklore. They function like proverbs or idioms in English and are used extensively in both spoken and written modern Chinese. Most chengyu have a story behind them that makes the meaning memorable."},
+  {"q": "How many chengyu should I know?", "a": "Knowing 50-100 common chengyu will significantly enhance your Chinese. For HSK 5-6 level or professional use, aim for 200-300. Start with the most frequently used ones in daily conversation and expand from there. Our Daily Idiom tool introduces one per day."},
+  {"q": "Do Chinese people really use chengyu in daily life?", "a": "Yes. Native speakers use common chengyu naturally in conversation, writing, news reports, and especially in formal or business contexts. Some chengyu like 马马虎虎 (so-so) and 一言为定 (it is a deal) are used almost daily. Using chengyu appropriately shows language sophistication."},
+  {"q": "Are chengyu the same in simplified and traditional Chinese?", "a": "The characters may differ between simplified and traditional, but the expressions are the same. For example, 画龙点睛 (simplified) is 畫龍點睛 (traditional). The meaning and usage are identical across all Chinese-speaking regions."},
+  {"q": "How do I use chengyu correctly in sentences?", "a": "Most chengyu function as adjectives, adverbs, or predicates. For example: 他说得头头是道 (He spoke logically — 头头是道 as adverb). Start by using them in simple sentence positions and gradually try more complex constructions. Overusing chengyu can sound forced, so 1-2 per conversation is natural."}
+];
+const relatedTools = [
+  {"name": "Daily Idiom", "url": "/chinese/tools/daily-idiom/"},
+  {"name": "Character Counter", "url": "/chinese/tools/character-counter/"}
+];
+const headings = [
+  {"depth": 2, "slug": "what-are-chengyu", "text": "What Are Chengyu?"},
+  {"depth": 2, "slug": "daily-chengyu", "text": "10 Chengyu for Daily Conversation"},
+  {"depth": 2, "slug": "story-chengyu", "text": "10 Chengyu with Famous Stories"},
+  {"depth": 2, "slug": "study-chengyu", "text": "5 Chengyu for Language Learners"},
+  {"depth": 2, "slug": "business-chengyu", "text": "5 Chengyu for Business"},
+  {"depth": 2, "slug": "how-to-use", "text": "How to Use Chengyu in Sentences"},
+  {"depth": 2, "slug": "learning-tips", "text": "Tips for Learning Chengyu"}
+];
 ---
 <BlogLayout
-  title="Chinese Idioms (Chengyu): 15 Essential Four-Character Expressions"
-  description="Discover the most useful Chinese four-character idioms with origin stories, meanings, and example sentences. Add depth and color to your Mandarin."
+  title="Chinese Idioms (Chengyu): 30 Essential Four-Character Expressions"
+  description="Master 30 essential Chinese chengyu (四字成语) with origin stories, meanings, example sentences, and tips for natural usage. Organized by daily life, stories, study, and business."
   language="chinese"
   category="culture"
   tags={["idioms", "chengyu", "culture", "intermediate"]}
@@ -16,24 +33,323 @@ const headings = [{ depth: 2, slug: "what-are-chengyu", text: "What Are Chengyu?
   headings={headings}
 >
 
-    <h2 id="what-are-chengyu">What Are Chengyu?</h2>
-    <p>Chengyu (成语) are fixed four-character expressions that originate from classical Chinese literature, historical events, and ancient fables. With over 5,000 commonly used chengyu and perhaps 20,000 in total, they represent one of the richest aspects of the Chinese language.</p>
-    <p>Each chengyu packs a complete idea into just four characters. Their compact form and cultural depth make them prized in both spoken conversation and formal writing. Using them appropriately signals a deeper understanding of Chinese language and culture.</p>
-    <p>Most chengyu have a story behind them — a historical event, a fable, or a philosophical lesson. Understanding these stories makes the idioms easier to remember and more meaningful to use.</p>
+<div class="prose max-w-none">
 
-    <h2 id="essential-chengyu">Essential Chengyu to Know</h2>
-    <p><strong>画龙点睛 (huà lóng diǎn jīng)</strong> — "Paint a dragon, dot its eyes." Meaning: add the finishing touch that brings something to life. Legend says painter Zhang Sengyou drew four dragons without eyes. When he dotted two with eyes, they flew away. Use it when someone adds the perfect final detail to a project or work.</p>
-    <p><strong>入乡随俗 (rù xiāng suí sú)</strong> — "Enter a village, follow its customs." The Chinese equivalent of "When in Rome, do as the Romans do." This idiom teaches respect for local cultures when visiting new places.</p>
-    <p><strong>塞翁失马 (sài wēng shī mǎ)</strong> — "The old man on the frontier lost his horse." Meaning: a blessing in disguise. The story tells of an old man whose escaped horse returned with a wild stallion, whose son then broke his leg riding it, but was consequently exempt from military service. What seems bad may turn out well.</p>
-    <p><strong>守株待兔 (shǒu zhū dài tù)</strong> — "Guard a tree stump, waiting for rabbits." A farmer once saw a rabbit crash into a tree stump and die. He then sat by the stump every day hoping for another. It means waiting passively for good fortune instead of taking action.</p>
-    <p><strong>亡羊补牢 (wáng yáng bǔ láo)</strong> — "Mend the fence after losing sheep." The Chinese way of saying "better late than never." Even if a problem has already occurred, taking corrective action is still worthwhile.</p>
-    <p>For a new idiom every day with origin stories, example sentences, and pronunciation, try our <a href="/chinese/tools/daily-idiom/">Daily Idiom tool</a>.</p>
+  <p>Chengyu (成语) are the jewels of the Chinese language — compact four-character expressions that pack entire stories, philosophies, and life lessons into just a few syllables. With over 5,000 commonly used chengyu and perhaps 20,000 in total, they represent one of the richest and most unique aspects of Chinese. Using chengyu naturally in conversation instantly elevates your Chinese from textbook-correct to genuinely impressive.</p>
 
-    <h2 id="how-to-learn">How to Learn and Use Chengyu</h2>
-    <p><strong>Start with the stories.</strong> The origin tales make chengyu memorable. When you know why an idiom exists, you naturally remember what it means.</p>
-    <p><strong>Learn in pairs.</strong> Some chengyu have natural opposites. Learning them together reinforces both.</p>
-    <p><strong>Listen for them.</strong> Once you know a few chengyu, you will start hearing them in Chinese media. This real-world exposure solidifies your understanding of how they are actually used.</p>
-    <p><strong>Use them sparingly.</strong> In conversation, one or two well-placed chengyu are impressive. Overusing them sounds forced. In formal writing, they are more common.</p>
-    <p>Explore more Chinese cultural insights in our guide to <a href="/chinese/blog/common-chinese-characters/">common Chinese characters</a>, or dive into <a href="https://en.wikipedia.org/wiki/Chengyu" target="_blank" rel="noopener">Wikipedia's comprehensive chengyu article</a>.</p>
+  <p>This guide covers 30 essential chengyu organized by how you will actually use them: daily conversation, story-based idioms, language learning motivation, and business settings. Each entry includes the characters, pinyin, literal meaning, actual meaning, and an example sentence.</p>
+
+  <h2 id="what-are-chengyu">What Are Chengyu?</h2>
+
+  <p>Chengyu are fixed four-character expressions originating from classical Chinese literature, historical events, ancient fables, and philosophical texts. Unlike regular vocabulary, they cannot be modified — each character is fixed in its position and meaning.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em; font-weight: 700;">四</p>
+      <p style="margin: 4px 0; font-weight: 600;">Always 4 Characters</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Fixed form — never shortened or expanded</p>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em; font-weight: 700;">📖</p>
+      <p style="margin: 4px 0; font-weight: 600;">Story-Based</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Most have an origin story from history or literature</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em; font-weight: 700;">🗣️</p>
+      <p style="margin: 4px 0; font-weight: 600;">Widely Used</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Common in daily speech, writing, and media</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em; font-weight: 700;">🎯</p>
+      <p style="margin: 4px 0; font-weight: 600;">Precise Meaning</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Each idiom carries a very specific nuance</p>
+    </div>
+  </div>
+
+  <h2 id="daily-chengyu">10 Chengyu for Daily Conversation</h2>
+
+  <p>These are the chengyu you will hear most often in everyday Chinese. They are casual enough for regular conversation.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chengyu</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Literal → Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">马马虎虎</td>
+        <td style="padding: 10px;">mǎma hūhu</td>
+        <td style="padding: 10px;">Horse horse tiger tiger → So-so, careless</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">一言为定</td>
+        <td style="padding: 10px;">yì yán wéi dìng</td>
+        <td style="padding: 10px;">One word as settled → It is a deal!</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">乱七八糟</td>
+        <td style="padding: 10px;">luàn qī bā zāo</td>
+        <td style="padding: 10px;">Chaotic seven eight mess → A total mess</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">自言自语</td>
+        <td style="padding: 10px;">zì yán zì yǔ</td>
+        <td style="padding: 10px;">Self speak self talk → Talking to oneself</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">一举两得</td>
+        <td style="padding: 10px;">yì jǔ liǎng dé</td>
+        <td style="padding: 10px;">One action two gains → Kill two birds with one stone</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">半途而废</td>
+        <td style="padding: 10px;">bàn tú ér fèi</td>
+        <td style="padding: 10px;">Half way then stop → Give up halfway</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">入乡随俗</td>
+        <td style="padding: 10px;">rù xiāng suí sú</td>
+        <td style="padding: 10px;">Enter village follow customs → When in Rome</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">不可思议</td>
+        <td style="padding: 10px;">bù kě sīyì</td>
+        <td style="padding: 10px;">Cannot be imagined → Unbelievable</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">津津有味</td>
+        <td style="padding: 10px;">jīnjīn yǒu wèi</td>
+        <td style="padding: 10px;">Saliva saliva have taste → With great relish</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600; font-size: 1.1em;">莫名其妙</td>
+        <td style="padding: 10px;">mò míng qí miào</td>
+        <td style="padding: 10px;">Cannot name its wonder → Baffling, inexplicable</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="story-chengyu">10 Chengyu with Famous Stories</h2>
+
+  <p>These chengyu each have a famous origin story. Learning the story makes the idiom unforgettable.</p>
+
+  <div style="background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 20px; margin: 20px 0;">
+    <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.15em;">画龙点睛 <span style="font-weight: 400; font-size: 0.85em; color: #64748b;">huà lóng diǎn jīng</span></p>
+    <p style="margin: 0 0 8px; color: #dc2626; font-weight: 600;">Paint a dragon, dot its eyes → Add the finishing touch</p>
+    <p style="margin: 0; font-size: 0.95em;">Legend says painter Zhang Sengyou drew four dragons without eyes on a temple wall. When he dotted two with eyes, they came alive and flew away. Used when someone adds the perfect final detail that brings something to life.</p>
+  </div>
+
+  <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 20px; margin: 20px 0;">
+    <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.15em;">守株待兔 <span style="font-weight: 400; font-size: 0.85em; color: #64748b;">shǒu zhū dài tù</span></p>
+    <p style="margin: 0 0 8px; color: #1e40af; font-weight: 600;">Guard a tree stump, wait for rabbits → Wait passively for luck</p>
+    <p style="margin: 0; font-size: 0.95em;">A farmer saw a rabbit crash into a tree stump and die. He abandoned his fields and sat by the stump every day hoping for another rabbit. He starved. Criticizes those who rely on luck instead of effort.</p>
+  </div>
+
+  <div style="background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px 0;">
+    <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.15em;">塞翁失马 <span style="font-weight: 400; font-size: 0.85em; color: #64748b;">sài wēng shī mǎ</span></p>
+    <p style="margin: 0 0 8px; color: #166534; font-weight: 600;">Old man lost his horse → A blessing in disguise</p>
+    <p style="margin: 0; font-size: 0.95em;">An old man's horse ran away. Neighbors said how unlucky. The horse returned with a wild stallion. His son broke his leg riding it. But then war came and the son was exempt from service. Good fortune and misfortune are intertwined.</p>
+  </div>
+
+  <div style="background: #fef3c7; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px; margin: 20px 0;">
+    <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.15em;">亡羊补牢 <span style="font-weight: 400; font-size: 0.85em; color: #64748b;">wáng yáng bǔ láo</span></p>
+    <p style="margin: 0 0 8px; color: #92400e; font-weight: 600;">Lost sheep, mend the pen → Better late than never</p>
+    <p style="margin: 0; font-size: 0.95em;">A shepherd lost sheep because his pen was broken. A neighbor told him to fix it. He said "the sheep are already gone." He lost more sheep the next night and finally repaired the fence. Taking corrective action is always worthwhile, even after a loss.</p>
+  </div>
+
+  <p>More story chengyu you should know:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chengyu</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Story Summary → Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">掩耳盗铃</td>
+        <td style="padding: 10px;">yǎn ěr dào líng</td>
+        <td style="padding: 10px;">Cover ears to steal a bell → Self-deception</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">杯弓蛇影</td>
+        <td style="padding: 10px;">bēi gōng shé yǐng</td>
+        <td style="padding: 10px;">Bow reflection in cup looks like snake → Unfounded fears</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">画蛇添足</td>
+        <td style="padding: 10px;">huà shé tiān zú</td>
+        <td style="padding: 10px;">Draw snake, add legs → Ruin by overdoing</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">刻舟求剑</td>
+        <td style="padding: 10px;">kè zhōu qiú jiàn</td>
+        <td style="padding: 10px;">Mark boat to find sword → Rigid, outdated thinking</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">对牛弹琴</td>
+        <td style="padding: 10px;">duì niú tán qín</td>
+        <td style="padding: 10px;">Play music to a cow → Talk to someone who cannot understand</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">叶公好龙</td>
+        <td style="padding: 10px;">yè gōng hào lóng</td>
+        <td style="padding: 10px;">Lord Ye loves dragons (but ran from a real one) → Superficial interest</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="study-chengyu">5 Chengyu for Language Learners</h2>
+
+  <p>These chengyu are perfect for motivating your Chinese study — and for describing your learning journey:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chengyu</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+        <th style="padding: 12px; text-align: left;">Use For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">学无止境</td>
+        <td style="padding: 10px;">xué wú zhǐ jìng</td>
+        <td style="padding: 10px;">Learning has no limits</td>
+        <td style="padding: 10px;">Staying motivated</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">熟能生巧</td>
+        <td style="padding: 10px;">shú néng shēng qiǎo</td>
+        <td style="padding: 10px;">Practice makes perfect</td>
+        <td style="padding: 10px;">Encouraging daily practice</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">温故知新</td>
+        <td style="padding: 10px;">wēn gù zhī xīn</td>
+        <td style="padding: 10px;">Review old, learn new</td>
+        <td style="padding: 10px;">Spaced repetition value</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">不耻下问</td>
+        <td style="padding: 10px;">bù chǐ xià wèn</td>
+        <td style="padding: 10px;">Not ashamed to ask those below you</td>
+        <td style="padding: 10px;">Asking questions is good</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">事半功倍</td>
+        <td style="padding: 10px;">shì bàn gōng bèi</td>
+        <td style="padding: 10px;">Half effort, double result</td>
+        <td style="padding: 10px;">Smart study strategies</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="business-chengyu">5 Chengyu for Business</h2>
+
+  <p>Using chengyu in <a href="/chinese/blog/chinese-business-phrases/">business settings</a> signals sophistication. These are commonly heard in meetings, presentations, and professional communication:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chengyu</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">Meaning</th>
+        <th style="padding: 12px; text-align: left;">Business Context</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">精益求精</td>
+        <td style="padding: 10px;">jīng yì qiú jīng</td>
+        <td style="padding: 10px;">Refine the already refined</td>
+        <td style="padding: 10px;">Continuous improvement, quality focus</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">各取所需</td>
+        <td style="padding: 10px;">gè qǔ suǒ xū</td>
+        <td style="padding: 10px;">Each takes what they need</td>
+        <td style="padding: 10px;">Win-win partnerships</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">言行一致</td>
+        <td style="padding: 10px;">yán xíng yí zhì</td>
+        <td style="padding: 10px;">Words match actions</td>
+        <td style="padding: 10px;">Integrity, trustworthiness</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">与时俱进</td>
+        <td style="padding: 10px;">yǔ shí jù jìn</td>
+        <td style="padding: 10px;">Advance with the times</td>
+        <td style="padding: 10px;">Innovation, staying current</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">未雨绸缪</td>
+        <td style="padding: 10px;">wèi yǔ chóumóu</td>
+        <td style="padding: 10px;">Prepare before the rain comes</td>
+        <td style="padding: 10px;">Risk management, planning ahead</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="how-to-use">How to Use Chengyu in Sentences</h2>
+
+  <p>Chengyu can function as different parts of speech depending on the idiom. Here are the most common patterns:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #1e40af;">As a Predicate (最常見)</p>
+      <p style="margin: 0 0 4px; font-size: 0.95em;">他的房间<strong>乱七八糟</strong>。</p>
+      <p style="margin: 0; font-size: 0.85em; color: #64748b;">His room is a total mess.</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #166534;">As an Adverb (修飾動詞)</p>
+      <p style="margin: 0 0 4px; font-size: 0.95em;">他<strong>津津有味</strong>地吃着。</p>
+      <p style="margin: 0; font-size: 0.85em; color: #64748b;">He is eating with great relish.</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #92400e;">As an Attributive (形容名詞)</p>
+      <p style="margin: 0 0 4px; font-size: 0.95em;">这是一个<strong>不可思议</strong>的故事。</p>
+      <p style="margin: 0; font-size: 0.85em; color: #64748b;">This is an unbelievable story.</p>
+    </div>
+    <div style="background: #fce7f3; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #9d174d;">As a Comment (整句評價)</p>
+      <p style="margin: 0 0 4px; font-size: 0.95em;">这真是<strong>画蛇添足</strong>。</p>
+      <p style="margin: 0; font-size: 0.85em; color: #64748b;">This is really overdoing it.</p>
+    </div>
+  </div>
+
+  <h2 id="learning-tips">Tips for Learning Chengyu</h2>
+
+  <p>Chengyu can seem overwhelming, but these strategies make them manageable and even fun:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #0369a1;">📖 Learn the Story First</p>
+      <p style="margin: 0; font-size: 0.95em;">The origin tale makes chengyu stick in memory. When you know why 守株待兔 exists, you will never forget its meaning.</p>
+    </div>
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #0369a1;">🔄 Learn in Pairs</p>
+      <p style="margin: 0; font-size: 0.95em;">Some chengyu have natural opposites. 事半功倍 (efficient) vs 事倍功半 (inefficient). Learning pairs reinforces both.</p>
+    </div>
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #0369a1;">👂 Listen for Them</p>
+      <p style="margin: 0; font-size: 0.95em;">Once you know a few, you will start hearing them everywhere — in dramas, news, and conversations. This real exposure solidifies understanding.</p>
+    </div>
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #0369a1;">✍️ Use Sparingly</p>
+      <p style="margin: 0; font-size: 0.95em;">1-2 well-placed chengyu in conversation is impressive. Overusing them sounds forced. In formal writing, they are more naturally frequent.</p>
+    </div>
+  </div>
+
+  <p>Discover a new chengyu every day with our <a href="/chinese/tools/daily-idiom/">Daily Idiom tool</a>, and use the <a href="/chinese/tools/character-counter/">Character Counter</a> to analyze chengyu in your own writing. For more cultural insights, explore our guide to <a href="/chinese/blog/common-chinese-characters/">common Chinese characters</a> and <a href="/chinese/blog/chinese-new-year-traditions/">Chinese New Year traditions</a>.</p>
+
+</div>
 
 </BlogLayout>

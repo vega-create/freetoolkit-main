@@ -1,12 +1,30 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `When is Chinese New Year?`, a: `Chinese New Year follows the lunar calendar, so the date changes each year, falling between January 21 and February 20. The celebration lasts 15 days, ending with the Lantern Festival.` }];
-const relatedTools = [{ name: "Name Generator", url: "/chinese/tools/name-generator/" }];
-const headings = [{ depth: 2, slug: "traditions", text: "Key Traditions" }, { depth: 2, slug: "vocabulary", text: "Essential Vocabulary" }, { depth: 2, slug: "greetings", text: "New Year Greetings" }];
+const faq = [
+  {"q": "When is Chinese New Year?", "a": "Chinese New Year follows the lunar calendar, so the date changes each year, falling between January 21 and February 20. The celebration lasts 15 days, starting with New Year's Eve (除夕) and ending with the Lantern Festival (元宵节) on the 15th day of the first lunar month."},
+  {"q": "What is the most important tradition of Chinese New Year?", "a": "The reunion dinner (团圆饭) on New Year's Eve is considered the most important tradition. Family members travel from across the country to gather for this meal — it is the largest annual human migration in the world, known as 春运 (chūnyùn)."},
+  {"q": "Why is everything red during Chinese New Year?", "a": "Red (红色) symbolizes luck, prosperity, and happiness in Chinese culture. According to legend, the color red scared away the monster Nian (年). Red decorations, red envelopes, red clothing, and red lanterns are all meant to bring good fortune."},
+  {"q": "How much money should go in a red envelope?", "a": "The amount varies by relationship and region. In mainland China, 200-1000 RMB per envelope is common for relatives. In Taiwan, amounts often contain 6 or 8 (lucky numbers). Always use new, crisp bills and even amounts — odd numbers are associated with funerals."},
+  {"q": "What foods are traditionally eaten for Chinese New Year?", "a": "Dumplings (饺子) in northern China symbolize wealth (they look like ancient gold ingots). Fish (鱼) symbolizes surplus (余, yú sounds the same). Spring rolls (春卷) represent wealth. Sticky rice cake (年糕) symbolizes rising higher each year. Tangyuan (汤圆) represent family reunion."}
+];
+const relatedTools = [
+  {"name": "Name Generator", "url": "/chinese/tools/name-generator/"},
+  {"name": "Character Counter", "url": "/chinese/tools/character-counter/"}
+];
+const headings = [
+  {"depth": 2, "slug": "overview", "text": "What Is Chinese New Year?"},
+  {"depth": 2, "slug": "preparations", "text": "Pre-New Year Preparations"},
+  {"depth": 2, "slug": "new-years-eve", "text": "New Year's Eve (除夕)"},
+  {"depth": 2, "slug": "traditions", "text": "Key Traditions Day by Day"},
+  {"depth": 2, "slug": "food", "text": "Traditional New Year Foods"},
+  {"depth": 2, "slug": "vocabulary", "text": "Essential Vocabulary (40+ Words)"},
+  {"depth": 2, "slug": "greetings", "text": "New Year Greetings"},
+  {"depth": 2, "slug": "taboos", "text": "Things to Avoid During New Year"}
+];
 ---
 <BlogLayout
-  title="Chinese New Year: Traditions, Vocabulary, and Greetings"
-  description="Learn the essential vocabulary and cultural traditions of Chinese New Year, the most important holiday in Chinese culture."
+  title="Chinese New Year: Complete Guide to Traditions, Food, and Vocabulary"
+  description="Everything about Chinese New Year — traditions day by day, symbolic foods, 40+ essential vocabulary words, greetings, red envelope etiquette, and cultural taboos."
   language="chinese"
   category="culture"
   tags={["chinese-new-year", "culture", "traditions", "vocabulary"]}
@@ -16,13 +34,338 @@ const headings = [{ depth: 2, slug: "traditions", text: "Key Traditions" }, { de
   headings={headings}
 >
 
-    <h2 id="traditions">Key Traditions</h2>
-    <p>Chinese New Year (春节, chūnjié) is a family-centered holiday. Key traditions include <strong>团圆饭 (tuányuán fàn)</strong> the reunion dinner on New Year's Eve, <strong>红包 (hóngbāo)</strong> red envelopes with money given to children, <strong>放鞭炮 (fàng biānpào)</strong> setting off firecrackers, and <strong>贴春联 (tiē chūnlián)</strong> posting red couplets on doorframes.</p>
+<div class="prose max-w-none">
 
-    <h2 id="vocabulary">Essential Vocabulary</h2>
-    <p><strong>春节 (chūnjié)</strong> Spring Festival, <strong>除夕 (chúxī)</strong> New Year's Eve, <strong>拜年 (bàinián)</strong> pay New Year's visits, <strong>压岁钱 (yāsuìqián)</strong> lucky money, <strong>饺子 (jiǎozi)</strong> dumplings (northern tradition), <strong>年糕 (niángāo)</strong> sticky rice cake, <strong>舞龙 (wǔlóng)</strong> dragon dance, <strong>灯笼 (dēnglong)</strong> lantern.</p>
+  <p>Chinese New Year (春节 chūnjié, literally "Spring Festival") is the most important holiday in Chinese culture — a 15-day celebration of family reunion, fresh starts, and good fortune. For nearly 1.5 billion people worldwide, it marks the beginning of the lunar new year with rich traditions that have been practiced for over 3,000 years. Understanding Chinese New Year gives you deep insight into Chinese values: family, prosperity, respect for elders, and the renewal of hope.</p>
 
-    <h2 id="greetings">New Year Greetings</h2>
-    <p><strong>新年快乐 (xīnnián kuàilè)</strong> Happy New Year. <strong>恭喜发财 (gōngxǐ fācái)</strong> Wishing you prosperity — the most iconic greeting. <strong>万事如意 (wànshì rúyì)</strong> May everything go as you wish. <strong>身体健康 (shēntǐ jiànkāng)</strong> Wishing you good health — especially appropriate for elders.</p>
+  <p>This guide covers everything from pre-holiday preparations to day-by-day traditions, symbolic foods, essential vocabulary, greetings you can use, and cultural taboos to avoid.</p>
+
+  <h2 id="overview">What Is Chinese New Year?</h2>
+
+  <p>Chinese New Year follows the lunar calendar, falling between January 21 and February 20 each year. While the official holiday in China is 7 days, the full celebration spans 15 days, culminating in the Lantern Festival (元宵节).</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em;">🏠</p>
+      <p style="margin: 4px 0; font-weight: 700; color: #dc2626;">Family Reunion</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">3 billion passenger trips during 春运</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em;">🧧</p>
+      <p style="margin: 4px 0; font-weight: 700; color: #92400e;">Red Envelopes</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Money gifts for children and unmarried adults</p>
+    </div>
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em;">🎆</p>
+      <p style="margin: 4px 0; font-weight: 700; color: #dc2626;">Firecrackers</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Scare away evil spirits, welcome the new year</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px; text-align: center;">
+      <p style="margin: 0; font-size: 2.5em;">🐉</p>
+      <p style="margin: 4px 0; font-weight: 700; color: #92400e;">Dragon & Lion Dance</p>
+      <p style="margin: 0; font-size: 0.9em; color: #64748b;">Performed in streets and temples for luck</p>
+    </div>
+  </div>
+
+  <h2 id="preparations">Pre-New Year Preparations</h2>
+
+  <p>Preparations begin weeks before New Year's Eve. Every task has symbolic meaning related to clearing away the old and welcoming the new:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Activity</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Symbolism</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Deep cleaning the house</td>
+        <td style="padding: 10px;">大扫除 (dà sǎochú)</td>
+        <td style="padding: 10px;">Sweep away bad luck, make room for good fortune</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Posting red couplets</td>
+        <td style="padding: 10px;">贴春联 (tiē chūnlián)</td>
+        <td style="padding: 10px;">Blessings on doorframes for prosperity</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Getting a haircut</td>
+        <td style="padding: 10px;">剪头发 (jiǎn tóufa)</td>
+        <td style="padding: 10px;">Fresh start — no cutting during the first month</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Buying new clothes</td>
+        <td style="padding: 10px;">买新衣服 (mǎi xīn yīfu)</td>
+        <td style="padding: 10px;">New beginning, fresh appearance</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Hanging lanterns</td>
+        <td style="padding: 10px;">挂灯笼 (guà dēnglong)</td>
+        <td style="padding: 10px;">Red lanterns bring brightness and good luck</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Posting upside-down 福</td>
+        <td style="padding: 10px;">倒贴福字 (dào tiē fú zì)</td>
+        <td style="padding: 10px;">倒 (upside down) sounds like 到 (arrive) — fortune has arrived!</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="new-years-eve">New Year's Eve (除夕)</h2>
+
+  <p>New Year's Eve (除夕 chúxī) is the emotional heart of the holiday. The reunion dinner is the single most important meal of the year.</p>
+
+  <div style="background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 24px; margin: 20px 0;">
+    <p style="margin: 0 0 12px; font-weight: 700; font-size: 1.1em; color: #dc2626;">🏠 New Year's Eve Timeline</p>
+    <p style="margin: 0 0 6px;"><strong>Afternoon:</strong> Final preparations, cooking begins</p>
+    <p style="margin: 0 0 6px;"><strong>6-8 PM:</strong> 团圆饭 (tuányuán fàn) — the grand reunion dinner</p>
+    <p style="margin: 0 0 6px;"><strong>8 PM:</strong> Watch the CCTV Spring Festival Gala (春晚 chūnwǎn)</p>
+    <p style="margin: 0 0 6px;"><strong>Evening:</strong> 守岁 (shǒusuì) — staying up past midnight for longevity</p>
+    <p style="margin: 0 0 6px;"><strong>Midnight:</strong> 放鞭炮 (fàng biānpào) — firecrackers and fireworks</p>
+    <p style="margin: 0;"><strong>After midnight:</strong> 发红包 (fā hóngbāo) — giving red envelopes</p>
+  </div>
+
+  <h2 id="traditions">Key Traditions Day by Day</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Day</th>
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Tradition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 1 (初一)</td>
+        <td style="padding: 10px;">拜年 (bàinián)</td>
+        <td style="padding: 10px;">Visit family elders, bow and wish happy new year</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 2 (初二)</td>
+        <td style="padding: 10px;">回娘家 (huí niángjia)</td>
+        <td style="padding: 10px;">Married women visit their parents' home</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 3 (初三)</td>
+        <td style="padding: 10px;">赤口日 (chìkǒu rì)</td>
+        <td style="padding: 10px;">Stay home — visiting may bring quarrels</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 5 (初五)</td>
+        <td style="padding: 10px;">迎财神 (yíng cáishén)</td>
+        <td style="padding: 10px;">Welcome the God of Wealth — businesses reopen</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 7 (初七)</td>
+        <td style="padding: 10px;">人日 (rén rì)</td>
+        <td style="padding: 10px;">Everyone's birthday — eat noodles for longevity</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">Day 15 (十五)</td>
+        <td style="padding: 10px;">元宵节 (yuánxiāo jié)</td>
+        <td style="padding: 10px;">Lantern Festival — eat tangyuan, watch lanterns</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="food">Traditional New Year Foods</h2>
+
+  <p>Every dish served during Chinese New Year has symbolic meaning. The meal is designed to bring luck, wealth, health, and happiness:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🥟 饺子 (jiǎozi)</p>
+      <p style="margin: 0 0 8px; color: #dc2626; font-weight: 600;">Dumplings → Wealth</p>
+      <p style="margin: 0; font-size: 0.95em;">Shaped like ancient gold ingots. Northern tradition. Sometimes a coin is hidden inside — the finder gets extra luck!</p>
+    </div>
+    <div style="background: #eff6ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🐟 鱼 (yú)</p>
+      <p style="margin: 0 0 8px; color: #1e40af; font-weight: 600;">Fish → Surplus</p>
+      <p style="margin: 0; font-size: 0.95em;">鱼 sounds like 余 (surplus). Served whole and often intentionally not finished — leaving surplus for next year. 年年有余!</p>
+    </div>
+    <div style="background: #f0fdf4; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🍰 年糕 (niángāo)</p>
+      <p style="margin: 0 0 8px; color: #166534; font-weight: 600;">Sticky Rice Cake → Rising Higher</p>
+      <p style="margin: 0; font-size: 0.95em;">糕 sounds like 高 (high/tall). Eating it means 年年高升 — rising higher each year in career and life.</p>
+    </div>
+    <div style="background: #fef3c7; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🧅 春卷 (chūnjuǎn)</p>
+      <p style="margin: 0 0 8px; color: #92400e; font-weight: 600;">Spring Rolls → Wealth</p>
+      <p style="margin: 0; font-size: 0.95em;">Their golden color resembles gold bars. Popular in southern China and Southeast Asian Chinese communities.</p>
+    </div>
+    <div style="background: #fce7f3; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🍊 橘子 (júzi)</p>
+      <p style="margin: 0 0 8px; color: #9d174d; font-weight: 600;">Tangerines → Good Luck</p>
+      <p style="margin: 0; font-size: 0.95em;">橘 sounds like 吉 (lucky). Always displayed and given as gifts. Eat them, share them, and keep them visible throughout the holiday.</p>
+    </div>
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em;">🍜 汤圆 (tāngyuán)</p>
+      <p style="margin: 0 0 8px; color: #0369a1; font-weight: 600;">Glutinous Rice Balls → Reunion</p>
+      <p style="margin: 0; font-size: 0.95em;">Round shape symbolizes family togetherness. 圆 means round and sounds like 团圆 (reunion). Eaten on Lantern Festival (Day 15).</p>
+    </div>
+  </div>
+
+  <h2 id="vocabulary">Essential Vocabulary (40+ Words)</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 12px; text-align: left;">Chinese</th>
+        <th style="padding: 12px; text-align: left;">Pinyin</th>
+        <th style="padding: 12px; text-align: left;">English</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">春节</td>
+        <td style="padding: 10px;">chūnjié</td>
+        <td style="padding: 10px;">Spring Festival / Chinese New Year</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">除夕</td>
+        <td style="padding: 10px;">chúxī</td>
+        <td style="padding: 10px;">New Year's Eve</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">农历</td>
+        <td style="padding: 10px;">nónglì</td>
+        <td style="padding: 10px;">Lunar calendar</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">团圆饭</td>
+        <td style="padding: 10px;">tuányuán fàn</td>
+        <td style="padding: 10px;">Reunion dinner</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">红包 / 红包</td>
+        <td style="padding: 10px;">hóngbāo</td>
+        <td style="padding: 10px;">Red envelope (with money)</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">压岁钱</td>
+        <td style="padding: 10px;">yāsuìqián</td>
+        <td style="padding: 10px;">Lucky money (for children)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">拜年</td>
+        <td style="padding: 10px;">bàinián</td>
+        <td style="padding: 10px;">Pay New Year's visits</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">春联</td>
+        <td style="padding: 10px;">chūnlián</td>
+        <td style="padding: 10px;">Red couplets (on doorframes)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">鞭炮</td>
+        <td style="padding: 10px;">biānpào</td>
+        <td style="padding: 10px;">Firecrackers</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">烟花</td>
+        <td style="padding: 10px;">yānhua</td>
+        <td style="padding: 10px;">Fireworks</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">灯笼</td>
+        <td style="padding: 10px;">dēnglong</td>
+        <td style="padding: 10px;">Lantern</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">舞龙</td>
+        <td style="padding: 10px;">wǔlóng</td>
+        <td style="padding: 10px;">Dragon dance</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">舞狮</td>
+        <td style="padding: 10px;">wǔshī</td>
+        <td style="padding: 10px;">Lion dance</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">守岁</td>
+        <td style="padding: 10px;">shǒusuì</td>
+        <td style="padding: 10px;">Stay up past midnight on NYE</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">春运</td>
+        <td style="padding: 10px;">chūnyùn</td>
+        <td style="padding: 10px;">Spring Festival travel rush</td>
+      </tr>
+      <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 10px; font-weight: 600;">春晚</td>
+        <td style="padding: 10px;">chūnwǎn</td>
+        <td style="padding: 10px;">CCTV Spring Festival Gala</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="greetings">New Year Greetings</h2>
+
+  <p>Knowing the right greeting for the right person shows cultural awareness. Here are the most common greetings ranked by formality:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="background: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em; color: #dc2626;">🧧 Universal Greetings</p>
+      <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>新年快乐 (xīnnián kuàilè)</strong> — Happy New Year</li>
+        <li><strong>恭喜发财 (gōngxǐ fācái)</strong> — Wishing prosperity (most iconic)</li>
+        <li><strong>万事如意 (wànshì rúyì)</strong> — May all go as you wish</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em; color: #1e40af;">👴 For Elders</p>
+      <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>身体健康 (shēntǐ jiànkāng)</strong> — Good health</li>
+        <li><strong>长命百岁 (chángmìng bǎisuì)</strong> — Live to 100</li>
+        <li><strong>福如东海 (fú rú dōnghǎi)</strong> — Blessings as vast as the eastern sea</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em; color: #166534;">💼 For Work / Business</p>
+      <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>生意兴隆 (shēngyì xīnglóng)</strong> — Thriving business</li>
+        <li><strong>财源广进 (cáiyuán guǎng jìn)</strong> — Wealth flowing in</li>
+        <li><strong>步步高升 (bùbù gāoshēng)</strong> — Rising step by step</li>
+      </ul>
+    </div>
+    <div style="background: #fef3c7; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1.1em; color: #92400e;">📚 For Students</p>
+      <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 0.95em;">
+        <li><strong>学业进步 (xuéyè jìnbù)</strong> — Academic progress</li>
+        <li><strong>金榜题名 (jīnbǎng tímíng)</strong> — Top exam results</li>
+        <li><strong>学有所成 (xué yǒu suǒ chéng)</strong> — Success in studies</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="taboos">Things to Avoid During New Year</h2>
+
+  <p>Chinese New Year has several taboos. While younger generations may not follow all of them strictly, being aware of them shows cultural sensitivity:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Do NOT Sweep on Day 1</p>
+      <p style="margin: 0; font-size: 0.95em;">Sweeping symbolizes sweeping away good fortune. Wait until at least Day 3 before cleaning.</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Do NOT Say Negative Words</p>
+      <p style="margin: 0; font-size: 0.95em;">Avoid words like 死 (death), 破 (break), 坏 (bad), 输 (lose) during the holiday. Words have power.</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Do NOT Wear Black or White</p>
+      <p style="margin: 0; font-size: 0.95em;">These are funeral colors. Wear red, gold, or bright colors to attract good luck.</p>
+    </div>
+    <div style="border: 2px solid #ef4444; border-radius: 12px; padding: 20px;">
+      <p style="margin: 0 0 8px; font-weight: 700; color: #dc2626;">❌ Do NOT Cut Hair in Month 1</p>
+      <p style="margin: 0; font-size: 0.95em;">Traditional belief: cutting hair in the first lunar month brings bad luck to your uncle. Get your haircut before New Year!</p>
+    </div>
+  </div>
+
+  <p>Chinese New Year is the perfect time to practice your Chinese and connect with Chinese culture. Explore more with our <a href="/chinese/blog/chinese-zodiac/">Chinese Zodiac guide</a>, learn <a href="/chinese/blog/chinese-greetings/">everyday greetings</a>, or discover <a href="/chinese/blog/chinese-idioms/">chengyu idioms</a> that are frequently used during the holiday season.</p>
+
+</div>
 
 </BlogLayout>
