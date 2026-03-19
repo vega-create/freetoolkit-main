@@ -1,35 +1,446 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Why does Japanese need counters?", "a": "Japanese does not have singular/plural forms. Counters specify the type and quantity of what you are counting, similar to English 'a sheet of paper' or 'a head of cattle.'"}, {"q": "What if I use the wrong counter?", "a": "Using the generic counter つ (hitotsu, futatsu...) is always acceptable. Japanese people will understand you even with the wrong specific counter."}, {"q": "How many counters do I need to know?", "a": "About 10-15 common counters cover 90 percent of daily situations. There are hundreds of specialized counters, but most Japanese people only use 20-30 regularly."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Number Converter", "url": "/japanese/tools/number-converter/"}];
-const headings = [{"depth": 2, "slug": "why-counters", "text": "Why Counters Exist"}, {"depth": 2, "slug": "essential-10", "text": "10 Essential Counters"}, {"depth": 2, "slug": "sound-changes", "text": "Sound Change Rules"}, {"depth": 2, "slug": "time-counters", "text": "Time Counters"}, {"depth": 2, "slug": "practice", "text": "Practice Exercises"}];
+const faq = [
+  { q: `Why does Japanese need counters?`, a: `Japanese does not have singular/plural forms. Counters specify the type and quantity of what you are counting, similar to English "a sheet of paper" or "a head of cattle." They tell the listener what kind of object is being counted.` },
+  { q: `What if I use the wrong counter?`, a: `Using the generic counter つ (hitotsu, futatsu...) is always acceptable for most objects. Japanese people will understand you even with the wrong specific counter. As you progress, learning the correct counter shows fluency and attention to detail.` },
+  { q: `How many counters do I need to know?`, a: `About 10–15 common counters cover 90% of daily situations. There are hundreds of specialized counters, but most Japanese people only regularly use 20–30. Focus on the essential ones first and add specialized counters as you encounter them.` },
+  { q: `Why do counter readings change with certain numbers?`, a: `Sound changes (音便 onbin) occur to make pronunciation smoother. For example, いっぴき instead of いちひき is easier to say quickly. These follow consistent patterns based on whether the counter starts with h, k, s, or t sounds.` },
+  { q: `Do I need counters for JLPT?`, a: `Yes — counters appear on every JLPT level. N5 tests basic counters (人, 枚, 本). N4-N3 add more specific counters. N2-N1 include uncommon counters in reading passages. Mastering counters is essential for the test and real-life Japanese.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Number Converter", url: "/japanese/tools/number-converter/" },
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }
+];
+const headings = [
+  { depth: 2, slug: "why-counters", text: "Why Counters Exist in Japanese" },
+  { depth: 2, slug: "generic-counter", text: "The Generic Counter つ — Your Safety Net" },
+  { depth: 2, slug: "essential-counters", text: "10 Essential Counters for Daily Life" },
+  { depth: 2, slug: "sound-changes", text: "Sound Change Rules — The Tricky Part" },
+  { depth: 2, slug: "time-counters", text: "Time and Date Counters" },
+  { depth: 2, slug: "specialized-counters", text: "Specialized Counters Worth Knowing" },
+  { depth: 2, slug: "common-mistakes", text: "Common Counter Mistakes and How to Fix Them" },
+  { depth: 2, slug: "practice-tips", text: "How to Practice and Remember Counters" }
+];
 ---
 <BlogLayout
-  title="Japanese Counters: How to Count Everything Correctly"
-  description="Complete guide to Japanese counters for people, objects, animals, time, and more with sound change rules."
+  title="Japanese Counters: Complete Guide to Counting Everything Correctly"
+  description="Master Japanese counters with this complete guide. Learn the 10 essential counters, sound change rules, time counters, and practical tips for daily use and JLPT preparation."
   language="japanese"
-  category="jlpt"
-  tags={["vocabulary", "grammar", "beginner"]}
+  category="grammar"
+  tags={["vocabulary", "grammar", "beginner", "counters", "jlpt"]}
   publishDate="2026-02-25"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="why-counters">Why Counters Exist</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="essential-10">10 Essential Counters</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="sound-changes">Sound Change Rules</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="time-counters">Time Counters</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="practice">Practice Exercises</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/number-converter/">Number Converter</a> to reinforce what you have learned.</p>
+  <h2 id="why-counters">Why Counters Exist in Japanese</h2>
+  <p>In English, you can simply say "three books" or "five cats." In Japanese, you need a <strong>counter word</strong> (助数詞 josūshi) between the number and the noun — or after the noun with the particle を. Counters classify objects by their shape, size, or type, telling the listener <em>what kind of thing</em> is being counted.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Without Counter</strong>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">三犬 (san inu) — unnatural / incorrect</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ With Counter</strong>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">犬三匹 (inu sanbiki) — three dogs ✓</p>
+    </div>
+  </div>
+
+  <p>Think of it like English measure words: you say "two <em>slices</em> of pizza" not "two pizzas of slice." Japanese simply uses this system for <em>everything</em> — people, animals, flat things, long things, machines, and more.</p>
+
+  <h2 id="generic-counter">The Generic Counter つ — Your Safety Net</h2>
+  <p>Before learning specific counters, memorize the <strong>generic counter つ</strong> (tsu). It works for most small objects and is always understood, even when a specific counter exists. This is your lifeline when you cannot remember the right counter.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Number</th>
+        <th style="padding: 10px; text-align: left;">Japanese</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Number</th>
+        <th style="padding: 10px; text-align: left;">Japanese</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">1</td>
+        <td style="padding: 10px; font-size: 1.2rem;">一つ</td>
+        <td style="padding: 10px;">ひとつ (hitotsu)</td>
+        <td style="padding: 10px;">6</td>
+        <td style="padding: 10px; font-size: 1.2rem;">六つ</td>
+        <td style="padding: 10px;">むっつ (muttsu)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">2</td>
+        <td style="padding: 10px; font-size: 1.2rem;">二つ</td>
+        <td style="padding: 10px;">ふたつ (futatsu)</td>
+        <td style="padding: 10px;">7</td>
+        <td style="padding: 10px; font-size: 1.2rem;">七つ</td>
+        <td style="padding: 10px;">ななつ (nanatsu)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">3</td>
+        <td style="padding: 10px; font-size: 1.2rem;">三つ</td>
+        <td style="padding: 10px;">みっつ (mittsu)</td>
+        <td style="padding: 10px;">8</td>
+        <td style="padding: 10px; font-size: 1.2rem;">八つ</td>
+        <td style="padding: 10px;">やっつ (yattsu)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">4</td>
+        <td style="padding: 10px; font-size: 1.2rem;">四つ</td>
+        <td style="padding: 10px;">よっつ (yottsu)</td>
+        <td style="padding: 10px;">9</td>
+        <td style="padding: 10px; font-size: 1.2rem;">九つ</td>
+        <td style="padding: 10px;">ここのつ (kokonotsu)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5</td>
+        <td style="padding: 10px; font-size: 1.2rem;">五つ</td>
+        <td style="padding: 10px;">いつつ (itsutsu)</td>
+        <td style="padding: 10px;">10</td>
+        <td style="padding: 10px; font-size: 1.2rem;">十</td>
+        <td style="padding: 10px;">とお (tō)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>⚠️ Limitation:</strong> The つ counter only goes up to 10 and cannot be used for people (use 人) or very specific categories. For numbers above 10, you need the specific counter.
+  </div>
+
+  <h2 id="essential-counters">10 Essential Counters for Daily Life</h2>
+  <p>These 10 counters cover approximately 90% of daily counting situations. Master these first before learning specialized counters:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Counter</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Used For</th>
+        <th style="padding: 10px; text-align: left;">Examples</th>
+        <th style="padding: 10px; text-align: left;">"3" Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>人</strong></td>
+        <td style="padding: 10px;">にん (nin)</td>
+        <td style="padding: 10px;">People</td>
+        <td style="padding: 10px;">Friends, family, students</td>
+        <td style="padding: 10px;">三人 (さんにん)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>枚</strong></td>
+        <td style="padding: 10px;">まい (mai)</td>
+        <td style="padding: 10px;">Flat, thin objects</td>
+        <td style="padding: 10px;">Paper, tickets, plates, shirts</td>
+        <td style="padding: 10px;">三枚 (さんまい)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>本</strong></td>
+        <td style="padding: 10px;">ほん (hon)</td>
+        <td style="padding: 10px;">Long, cylindrical objects</td>
+        <td style="padding: 10px;">Pens, bottles, trees, roads, movies</td>
+        <td style="padding: 10px;">三本 (さんぼん)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>匹</strong></td>
+        <td style="padding: 10px;">ひき (hiki)</td>
+        <td style="padding: 10px;">Small/medium animals</td>
+        <td style="padding: 10px;">Cats, dogs, fish, insects</td>
+        <td style="padding: 10px;">三匹 (さんびき)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>冊</strong></td>
+        <td style="padding: 10px;">さつ (satsu)</td>
+        <td style="padding: 10px;">Books, notebooks</td>
+        <td style="padding: 10px;">Books, magazines, notebooks</td>
+        <td style="padding: 10px;">三冊 (さんさつ)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>台</strong></td>
+        <td style="padding: 10px;">だい (dai)</td>
+        <td style="padding: 10px;">Machines, vehicles</td>
+        <td style="padding: 10px;">Cars, computers, TVs, bikes</td>
+        <td style="padding: 10px;">三台 (さんだい)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>個</strong></td>
+        <td style="padding: 10px;">こ (ko)</td>
+        <td style="padding: 10px;">Small, round objects</td>
+        <td style="padding: 10px;">Apples, eggs, boxes, balls</td>
+        <td style="padding: 10px;">三個 (さんこ)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>杯</strong></td>
+        <td style="padding: 10px;">はい (hai)</td>
+        <td style="padding: 10px;">Cups, glasses, bowls</td>
+        <td style="padding: 10px;">Coffee, tea, rice bowls</td>
+        <td style="padding: 10px;">三杯 (さんばい)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>回</strong></td>
+        <td style="padding: 10px;">かい (kai)</td>
+        <td style="padding: 10px;">Times, occurrences</td>
+        <td style="padding: 10px;">Once, twice, how many times</td>
+        <td style="padding: 10px;">三回 (さんかい)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.3rem;"><strong>階</strong></td>
+        <td style="padding: 10px;">かい (kai)</td>
+        <td style="padding: 10px;">Building floors</td>
+        <td style="padding: 10px;">1st floor, 3rd floor</td>
+        <td style="padding: 10px;">三階 (さんがい)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>🔑 Special Note on 人:</strong> 1 person = ひとり (hitori), 2 people = ふたり (futari). From 3 onward, use the regular pattern: さんにん, よにん, ごにん...
+  </div>
+
+  <h2 id="sound-changes">Sound Change Rules — The Tricky Part</h2>
+  <p>Certain numbers cause the counter's first consonant to change. This is called <strong>音便 (onbin)</strong> — sound euphony. The main pattern: numbers 1, 3, 6, 8, and 10 often trigger changes with counters starting in h, k, s, or t sounds.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Counter</th>
+        <th style="padding: 10px; text-align: left;">1</th>
+        <th style="padding: 10px; text-align: left;">3</th>
+        <th style="padding: 10px; text-align: left;">6</th>
+        <th style="padding: 10px; text-align: left;">8</th>
+        <th style="padding: 10px; text-align: left;">10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>本 (hon)</strong></td>
+        <td style="padding: 10px;">いっ<strong>ぽん</strong></td>
+        <td style="padding: 10px;">さん<strong>ぼん</strong></td>
+        <td style="padding: 10px;">ろっ<strong>ぽん</strong></td>
+        <td style="padding: 10px;">はっ<strong>ぽん</strong></td>
+        <td style="padding: 10px;">じゅっ<strong>ぽん</strong></td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>匹 (hiki)</strong></td>
+        <td style="padding: 10px;">いっ<strong>ぴき</strong></td>
+        <td style="padding: 10px;">さん<strong>びき</strong></td>
+        <td style="padding: 10px;">ろっ<strong>ぴき</strong></td>
+        <td style="padding: 10px;">はっ<strong>ぴき</strong></td>
+        <td style="padding: 10px;">じゅっ<strong>ぴき</strong></td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>杯 (hai)</strong></td>
+        <td style="padding: 10px;">いっ<strong>ぱい</strong></td>
+        <td style="padding: 10px;">さん<strong>ばい</strong></td>
+        <td style="padding: 10px;">ろっ<strong>ぱい</strong></td>
+        <td style="padding: 10px;">はっ<strong>ぱい</strong></td>
+        <td style="padding: 10px;">じゅっ<strong>ぱい</strong></td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>階 (kai)</strong></td>
+        <td style="padding: 10px;">いっ<strong>かい</strong></td>
+        <td style="padding: 10px;">さん<strong>がい</strong></td>
+        <td style="padding: 10px;">ろっ<strong>かい</strong></td>
+        <td style="padding: 10px;">はっ<strong>かい</strong></td>
+        <td style="padding: 10px;">じゅっ<strong>かい</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 1px solid #93c5fd; padding: 1rem; border-radius: 8px;">
+      <strong>Pattern for h-counters (本, 匹, 杯):</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>1, 6, 8, 10 → h becomes <strong>p</strong> (っぽん, っぴき)</li>
+        <li>3 → h becomes <strong>b</strong> (さんぼん, さんびき)</li>
+      </ul>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; padding: 1rem; border-radius: 8px;">
+      <strong>Pattern for k-counters (階, 回, 個):</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>1, 6, 8, 10 → add っ (いっかい, ろっかい)</li>
+        <li>3 → k may become <strong>g</strong> (さんがい for 階)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="time-counters">Time and Date Counters</h2>
+  <p>Time expressions use specific counters for hours, minutes, months, and durations:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Counter</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Used For</th>
+        <th style="padding: 10px; text-align: left;">Example</th>
+        <th style="padding: 10px; text-align: left;">Watch Out</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>時</strong></td>
+        <td style="padding: 10px;">じ (ji)</td>
+        <td style="padding: 10px;">O'clock</td>
+        <td style="padding: 10px;">三時 (さんじ) = 3 o'clock</td>
+        <td style="padding: 10px;">4時 = よじ, 7時 = しちじ, 9時 = くじ</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>分</strong></td>
+        <td style="padding: 10px;">ふん/ぷん (fun/pun)</td>
+        <td style="padding: 10px;">Minutes</td>
+        <td style="padding: 10px;">五分 (ごふん) = 5 minutes</td>
+        <td style="padding: 10px;">1,3,4,6,8,10 min = ぷん</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>時間</strong></td>
+        <td style="padding: 10px;">じかん (jikan)</td>
+        <td style="padding: 10px;">Hours (duration)</td>
+        <td style="padding: 10px;">三時間 (さんじかん) = 3 hours</td>
+        <td style="padding: 10px;">Different from 時 (point in time)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>日</strong></td>
+        <td style="padding: 10px;">にち/か (nichi/ka)</td>
+        <td style="padding: 10px;">Days of month / days</td>
+        <td style="padding: 10px;">三日 (みっか) = 3rd / 3 days</td>
+        <td style="padding: 10px;">1st–10th have irregular readings!</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>月</strong></td>
+        <td style="padding: 10px;">がつ (gatsu)</td>
+        <td style="padding: 10px;">Months (names)</td>
+        <td style="padding: 10px;">三月 (さんがつ) = March</td>
+        <td style="padding: 10px;">4月=しがつ, 7月=しちがつ, 9月=くがつ</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>ヶ月</strong></td>
+        <td style="padding: 10px;">かげつ (kagetsu)</td>
+        <td style="padding: 10px;">Months (duration)</td>
+        <td style="padding: 10px;">三ヶ月 (さんかげつ) = 3 months</td>
+        <td style="padding: 10px;">Different from 月 (month name)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>年</strong></td>
+        <td style="padding: 10px;">ねん (nen)</td>
+        <td style="padding: 10px;">Years</td>
+        <td style="padding: 10px;">三年 (さんねん) = 3 years</td>
+        <td style="padding: 10px;">Regular — no sound changes</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;"><strong>週間</strong></td>
+        <td style="padding: 10px;">しゅうかん (shūkan)</td>
+        <td style="padding: 10px;">Weeks</td>
+        <td style="padding: 10px;">三週間 (さんしゅうかん) = 3 weeks</td>
+        <td style="padding: 10px;">Regular — no sound changes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="specialized-counters">Specialized Counters Worth Knowing</h2>
+  <p>Beyond the essentials, these counters appear frequently in daily life and JLPT tests:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Counter</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Used For</th>
+        <th style="padding: 10px; text-align: left;">Example Situation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;">頭</td>
+        <td style="padding: 10px;">とう (tō)</td>
+        <td style="padding: 10px;">Large animals</td>
+        <td style="padding: 10px;">Horses, cows, elephants at a zoo</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;">羽</td>
+        <td style="padding: 10px;">わ (wa)</td>
+        <td style="padding: 10px;">Birds, rabbits</td>
+        <td style="padding: 10px;">Ducks at a pond, pet rabbits</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;">足</td>
+        <td style="padding: 10px;">そく (soku)</td>
+        <td style="padding: 10px;">Pairs of footwear</td>
+        <td style="padding: 10px;">Shoes, socks, slippers</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;">着</td>
+        <td style="padding: 10px;">ちゃく (chaku)</td>
+        <td style="padding: 10px;">Clothing (worn on body)</td>
+        <td style="padding: 10px;">Suits, dresses, jackets</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.2rem;">軒</td>
+        <td style="padding: 10px;">けん (ken)</td>
+        <td style="padding: 10px;">Buildings, houses</td>
+        <td style="padding: 10px;">Restaurants, homes, shops</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.2rem;">番</td>
+        <td style="padding: 10px;">ばん (ban)</td>
+        <td style="padding: 10px;">Numbers in sequence</td>
+        <td style="padding: 10px;">Bus numbers, rankings, turns</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="common-mistakes">Common Counter Mistakes and How to Fix Them</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Common Mistakes</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Using 個 for people (should be 人)</li>
+        <li>Using 匹 for large animals (should be 頭)</li>
+        <li>Forgetting sound changes (さんほん → さんぼん)</li>
+        <li>Confusing 時 (o'clock) with 時間 (duration)</li>
+        <li>Using 枚 for books (should be 冊)</li>
+        <li>Saying にひき instead of にひき (2 is regular, 3 changes)</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Tips</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>When in doubt, use つ for objects</li>
+        <li>People always use 人 (never つ)</li>
+        <li>Think about the object's shape to choose the counter</li>
+        <li>Practice sound changes for 1, 3, 6, 8, 10 specifically</li>
+        <li>Flat = 枚, long = 本, bound = 冊</li>
+        <li>Listen for counters in dramas and anime</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="practice-tips">How to Practice and Remember Counters</h2>
+  <p>Counters are best learned through real-world practice, not memorization lists. Here are effective methods:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">🏠 At Home Practice</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Count objects around you: 本が三冊 (3 books), ペンが二本 (2 pens), コップが四つ (4 cups). Do this daily for 5 minutes.</p>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">🍽️ Restaurant Practice</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Order using counters: ビール二杯 (2 beers), おにぎり三個 (3 onigiri). Restaurants are the perfect counter practice environment.</p>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #eab308; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #ca8a04;">📝 Flashcard Method</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Create Anki cards with pictures: show 3 cats → answer さんびき. Visual association makes counters stick better than word lists.</p>
+    </div>
+  </div>
+
+  <p>Use our <a href="/japanese/tools/number-converter/">Number Converter</a> to check counter readings, and browse <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to see counters in context. For more grammar foundations, check out our <a href="/japanese/blog/japanese-particles-explained/">Particles Guide</a> and <a href="/japanese/blog/japanese-verb-conjugation/">Verb Conjugation Guide</a>.</p>
 
 </BlogLayout>

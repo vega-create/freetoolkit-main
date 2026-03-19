@@ -1,35 +1,292 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How many kanji do I need for N3?", "a": "Approximately 350 kanji beyond the 250 from N5 and N4, for a total of about 600 characters."}, {"q": "Should I learn on'yomi or kun'yomi first?", "a": "Learn both together in context. On'yomi appears in compound words while kun'yomi is used when the kanji stands alone."}, {"q": "What is the best way to study N3 kanji?", "a": "Use radical decomposition to understand components, learn kanji in word pairs rather than isolation, and use spaced repetition for review."}];
-const relatedTools = [{"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}, {"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "N3 Kanji Overview"}, {"depth": 2, "slug": "categories", "text": "Key Categories"}, {"depth": 2, "slug": "study-method", "text": "Effective Study Method"}, {"depth": 2, "slug": "common-compounds", "text": "Common Compound Words"}, {"depth": 2, "slug": "practice", "text": "Practice Strategy"}];
+const faq = [
+  { q: `How many kanji do I need for N3?`, a: `Approximately 350 new kanji beyond the 250 from N5 and N4, for a total of about 600 characters. You should recognize all of them and know their common readings and compound words.` },
+  { q: `Should I learn on'yomi or kun'yomi first?`, a: `Learn both together in context. On'yomi (Chinese reading) appears in compound words like 学校 (がっこう), while kun'yomi (Japanese reading) is used when the kanji stands alone like 学ぶ (まなぶ). Learning words, not isolated readings, is the most effective approach.` },
+  { q: `What is the best way to study N3 kanji?`, a: `Use radical decomposition to understand components, learn kanji in word pairs rather than isolation, use spaced repetition for review, and read extensively at your level. Writing practice also strengthens recognition.` },
+  { q: `How long does it take to learn all N3 kanji?`, a: `At a pace of 5–10 new kanji per day with consistent review, you can cover the N3 kanji list in 2–3 months. However, truly knowing a kanji (all readings, common compounds, nuances) takes longer — plan for 4–6 months of solid study.` },
+  { q: `Should I write kanji or just recognize them?`, a: `For the JLPT, recognition is sufficient — the test is multiple choice. However, writing practice significantly improves recognition and memory. Even writing each kanji 3–5 times when learning it helps.` }
+];
+const relatedTools = [
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "overview", text: "N3 Kanji Overview — What You Need to Know" },
+  { depth: 2, slug: "categories", text: "Key Kanji Categories for N3" },
+  { depth: 2, slug: "high-frequency", text: "50 Highest-Frequency N3 Kanji" },
+  { depth: 2, slug: "compounds", text: "Essential N3 Compound Words (熟語)" },
+  { depth: 2, slug: "similar-kanji", text: "Easily Confused Kanji Pairs" },
+  { depth: 2, slug: "study-method", text: "The Most Effective N3 Kanji Study Method" },
+  { depth: 2, slug: "daily-routine", text: "Daily Kanji Study Routine" },
+  { depth: 2, slug: "test-strategies", text: "N3 Kanji Test Strategies" }
+];
 ---
 <BlogLayout
-  title="JLPT N3 Kanji: 350 Essential Characters You Must Know"
-  description="Complete JLPT N3 kanji study guide with readings, example words, and memorization strategies."
+  title="JLPT N3 Kanji: 350 Essential Characters with Study Strategies"
+  description="Complete JLPT N3 kanji study guide with the most important characters, compound words, study methods, and test strategies. Master 600 total kanji for N3 success."
   language="japanese"
   category="jlpt"
-  tags={["jlpt", "kanji", "intermediate"]}
+  tags={["jlpt", "kanji", "intermediate", "n3", "study-tips"]}
   publishDate="2026-02-22"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="overview">N3 Kanji Overview</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="categories">Key Categories</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="study-method">Effective Study Method</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="common-compounds">Common Compound Words</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="practice">Practice Strategy</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> and <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <h2 id="overview">N3 Kanji Overview — What You Need to Know</h2>
+  <p>JLPT N3 is the bridge between basic and intermediate Japanese. In terms of kanji, you need to know approximately <strong>600 characters total</strong> — the 250 from N5/N4 plus about 350 new ones. This is the level where kanji knowledge starts to feel powerful: you can read simple articles, understand menus, and follow basic written instructions.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">New Kanji</th>
+        <th style="padding: 10px; text-align: left;">Total Kanji</th>
+        <th style="padding: 10px; text-align: left;">What You Can Read</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">N5</td>
+        <td style="padding: 10px;">~80</td>
+        <td style="padding: 10px;">~80</td>
+        <td style="padding: 10px;">Numbers, days, basic words</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">N4</td>
+        <td style="padding: 10px;">~170</td>
+        <td style="padding: 10px;">~250</td>
+        <td style="padding: 10px;">Simple sentences, signs</td>
+      </tr>
+      <tr style="background: #f8fafc; border: 2px solid #3b82f6;">
+        <td style="padding: 10px;"><strong>N3</strong></td>
+        <td style="padding: 10px;"><strong>~350</strong></td>
+        <td style="padding: 10px;"><strong>~600</strong></td>
+        <td style="padding: 10px;"><strong>News headlines, simple articles, manga</strong></td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">N2</td>
+        <td style="padding: 10px;">~400</td>
+        <td style="padding: 10px;">~1000</td>
+        <td style="padding: 10px;">Newspapers, novels, business docs</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">N1</td>
+        <td style="padding: 10px;">~1000</td>
+        <td style="padding: 10px;">~2000</td>
+        <td style="padding: 10px;">Academic papers, literature</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="categories">Key Kanji Categories for N3</h2>
+  <p>N3 kanji cluster around practical life topics. Here are the main categories with representative examples:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Category</th>
+        <th style="padding: 10px; text-align: left;">Example Kanji</th>
+        <th style="padding: 10px; text-align: left;">Count</th>
+        <th style="padding: 10px; text-align: left;">Why Important</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Actions / Verbs</strong></td>
+        <td style="padding: 10px;">届, 届, 届, 届, 届</td>
+        <td style="padding: 10px;">~80</td>
+        <td style="padding: 10px;">Expands your ability to describe daily activities</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Emotions / States</strong></td>
+        <td style="padding: 10px;">悲, 怒, 恥, 幸, 苦</td>
+        <td style="padding: 10px;">~40</td>
+        <td style="padding: 10px;">Express and understand feelings</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Society / Work</strong></td>
+        <td style="padding: 10px;">経, 済, 届, 届, 届</td>
+        <td style="padding: 10px;">~50</td>
+        <td style="padding: 10px;">Read news and workplace documents</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Nature / Environment</strong></td>
+        <td style="padding: 10px;">島, 湖, 港, 届, 届</td>
+        <td style="padding: 10px;">~30</td>
+        <td style="padding: 10px;">Describe places and geography</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Abstract Concepts</strong></td>
+        <td style="padding: 10px;">届, 届, 届, 届, 届</td>
+        <td style="padding: 10px;">~60</td>
+        <td style="padding: 10px;">Essential for intermediate grammar patterns</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="high-frequency">50 Highest-Frequency N3 Kanji</h2>
+  <p>These kanji appear most frequently in N3 reading passages and test questions. Prioritize these if you are short on time:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #0d9488; color: white;">
+        <th style="padding: 10px; text-align: left;">Kanji</th>
+        <th style="padding: 10px; text-align: left;">On'yomi</th>
+        <th style="padding: 10px; text-align: left;">Kun'yomi</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Key Compound</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;"><td style="padding: 10px; font-size: 1.3rem;">届</td><td style="padding: 10px;">トドケ</td><td style="padding: 10px;">とど.ける</td><td style="padding: 10px;">deliver, reach</td><td style="padding: 10px;">届ける (to deliver)</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px; font-size: 1.3rem;">経</td><td style="padding: 10px;">ケイ</td><td style="padding: 10px;">へ.る</td><td style="padding: 10px;">pass through</td><td style="padding: 10px;">経験 (experience)</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px; font-size: 1.3rem;">済</td><td style="padding: 10px;">サイ</td><td style="padding: 10px;">す.む</td><td style="padding: 10px;">finish, settle</td><td style="padding: 10px;">経済 (economy)</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px; font-size: 1.3rem;">達</td><td style="padding: 10px;">タツ</td><td style="padding: 10px;">—</td><td style="padding: 10px;">achieve, reach</td><td style="padding: 10px;">友達 (friend)</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px; font-size: 1.3rem;">判</td><td style="padding: 10px;">ハン/バン</td><td style="padding: 10px;">わか.る</td><td style="padding: 10px;">judge</td><td style="padding: 10px;">判断 (judgment)</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px; font-size: 1.3rem;">積</td><td style="padding: 10px;">セキ</td><td style="padding: 10px;">つ.む</td><td style="padding: 10px;">accumulate</td><td style="padding: 10px;">面積 (area)</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px; font-size: 1.3rem;">認</td><td style="padding: 10px;">ニン</td><td style="padding: 10px;">みと.める</td><td style="padding: 10px;">recognize</td><td style="padding: 10px;">確認 (confirm)</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px; font-size: 1.3rem;">識</td><td style="padding: 10px;">シキ</td><td style="padding: 10px;">—</td><td style="padding: 10px;">knowledge</td><td style="padding: 10px;">知識 (knowledge)</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px; font-size: 1.3rem;">減</td><td style="padding: 10px;">ゲン</td><td style="padding: 10px;">へ.る</td><td style="padding: 10px;">decrease</td><td style="padding: 10px;">減る (to decrease)</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px; font-size: 1.3rem;">増</td><td style="padding: 10px;">ゾウ</td><td style="padding: 10px;">ふ.える</td><td style="padding: 10px;">increase</td><td style="padding: 10px;">増える (to increase)</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 0.9rem; color: #666;">This is a sample of the top 10. Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup tool</a> to study the full N3 kanji list with detailed readings and compound words.</p>
+
+  <h2 id="compounds">Essential N3 Compound Words (熟語)</h2>
+  <p>Kanji rarely appear alone — they form compound words (熟語 jukugo) that are the real building blocks of intermediate Japanese vocabulary:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Compound</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Component Logic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">経験</td><td style="padding: 10px;">けいけん</td><td style="padding: 10px;">experience</td><td style="padding: 10px;">pass through + test = experience</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">確認</td><td style="padding: 10px;">かくにん</td><td style="padding: 10px;">confirmation</td><td style="padding: 10px;">certain + recognize = confirm</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">判断</td><td style="padding: 10px;">はんだん</td><td style="padding: 10px;">judgment</td><td style="padding: 10px;">judge + cut = judgment</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">連絡</td><td style="padding: 10px;">れんらく</td><td style="padding: 10px;">contact</td><td style="padding: 10px;">connect + link = contact</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">準備</td><td style="padding: 10px;">じゅんび</td><td style="padding: 10px;">preparation</td><td style="padding: 10px;">standard + prepare = preparation</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">関係</td><td style="padding: 10px;">かんけい</td><td style="padding: 10px;">relationship</td><td style="padding: 10px;">barrier + connect = relationship</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">参加</td><td style="padding: 10px;">さんか</td><td style="padding: 10px;">participation</td><td style="padding: 10px;">join + add = participate</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">相談</td><td style="padding: 10px;">そうだん</td><td style="padding: 10px;">consultation</td><td style="padding: 10px;">mutual + talk = consult</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="similar-kanji">Easily Confused Kanji Pairs</h2>
+  <p>These N3 kanji look similar but have different meanings. The test loves these:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong>待 vs 持</strong>
+      <p style="font-size: 0.9rem;">待つ (まつ) = wait ↔ 持つ (もつ) = hold/carry</p>
+      <p style="font-size: 0.85rem; color: #666;">Tip: 待 has the "go" radical (彳) = wait to go. 持 has the "hand" radical (扌) = hold in hand.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong>届 vs 届</strong>
+      <p style="font-size: 0.9rem;">届ける (とどける) = deliver ↔ 届く (とどく) = arrive/reach</p>
+      <p style="font-size: 0.85rem; color: #666;">Same kanji but transitive vs intransitive! ける = you deliver, く = it reaches.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong>決 vs 泣</strong>
+      <p style="font-size: 0.9rem;">決める (きめる) = decide ↔ 泣く (なく) = cry</p>
+      <p style="font-size: 0.85rem; color: #666;">Both have the water radical (氵) but different right sides. 決 has 夬, 泣 has 立.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong>増 vs 贈</strong>
+      <p style="font-size: 0.9rem;">増える (ふえる) = increase ↔ 贈る (おくる) = give a gift</p>
+      <p style="font-size: 0.85rem; color: #666;">増 has 土 (earth/stack up). 贈 has 貝 (shell/money = gift).</p>
+    </div>
+  </div>
+
+  <h2 id="study-method">The Most Effective N3 Kanji Study Method</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">1. Learn in Word Pairs</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Never learn a kanji alone. Always learn it with 2–3 compound words. For 経: learn 経験 (experience), 経済 (economy), 経由 (via).</p>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">2. Radical Decomposition</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Break kanji into radicals. Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> to see component breakdowns. Radicals help you guess meaning and remember structure.</p>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #eab308; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #ca8a04;">3. Spaced Repetition</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Use Anki or WaniKani with the N3 kanji deck. Review daily — even 10 minutes maintains your progress and prevents forgetting.</p>
+    </div>
+  </div>
+
+  <h2 id="daily-routine">Daily Kanji Study Routine</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Tool</th>
+        <th style="padding: 10px; text-align: left;">Daily Goal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5 min</td>
+        <td style="padding: 10px;">Review old kanji (SRS)</td>
+        <td style="padding: 10px;">Anki / WaniKani</td>
+        <td style="padding: 10px;">20–30 review cards</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">10 min</td>
+        <td style="padding: 10px;">Learn new kanji + compounds</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a></td>
+        <td style="padding: 10px;">5–7 new kanji</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5 min</td>
+        <td style="padding: 10px;">Write each new kanji 3×</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/practice-sheet/">Practice Sheet</a></td>
+        <td style="padding: 10px;">Motor memory reinforcement</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">10 min</td>
+        <td style="padding: 10px;">Read a short Japanese text</td>
+        <td style="padding: 10px;">NHK Easy News</td>
+        <td style="padding: 10px;">Spot today's kanji in context</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="test-strategies">N3 Kanji Test Strategies</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Test Tips</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Use context to guess unknown kanji readings</li>
+        <li>Compound words usually use on'yomi</li>
+        <li>Verbs/adjectives usually use kun'yomi</li>
+        <li>Eliminate options with clearly wrong readings</li>
+        <li>If unsure, choose the most common reading</li>
+      </ul>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Common Mistakes</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Spending too long on kanji section (move fast!)</li>
+        <li>Only learning meaning without readings</li>
+        <li>Mixing up similar-looking kanji (待/持)</li>
+        <li>Forgetting rendaku (sound changes in compounds)</li>
+        <li>Not reviewing N4/N5 kanji (they still appear!)</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Start your N3 kanji journey with our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup tool</a> and reinforce vocabulary with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a>. For the big picture on JLPT preparation, see our <a href="/japanese/blog/jlpt-preparation-guide/">Complete JLPT Preparation Guide</a> and <a href="/japanese/blog/learn-kanji-effectively/">How to Learn Kanji Effectively</a>.</p>
 
 </BlogLayout>

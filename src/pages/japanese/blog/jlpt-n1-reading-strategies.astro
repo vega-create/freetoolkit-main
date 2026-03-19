@@ -1,35 +1,309 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How long are N1 reading passages?", "a": "N1 includes short passages (200-300 characters), medium passages (500-700 characters), long passages (1000+ characters), and integrated comprehension comparing multiple texts."}, {"q": "How do I improve reading speed?", "a": "Practice extensive reading daily with materials slightly below your level. Speed comes from recognizing word chunks rather than reading character by character."}, {"q": "What topics appear on N1?", "a": "N1 passages cover editorials, academic essays, business correspondence, and abstract discussions on society, science, and culture."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}];
-const headings = [{"depth": 2, "slug": "section-format", "text": "Reading Section Format"}, {"depth": 2, "slug": "scanning", "text": "Scanning Techniques"}, {"depth": 2, "slug": "question-types", "text": "Question Type Analysis"}, {"depth": 2, "slug": "time-management", "text": "Time Management"}, {"depth": 2, "slug": "daily-practice", "text": "Daily Practice Plan"}];
+const faq = [
+  { q: `How long are N1 reading passages?`, a: `N1 includes short passages (200–300 characters), medium passages (500–700 characters), long passages (1000+ characters), and integrated comprehension comparing two or more texts. The total reading section is 110 minutes.` },
+  { q: `How do I improve reading speed for N1?`, a: `Practice extensive reading daily with materials slightly below your level. Speed comes from recognizing word chunks and grammar patterns instantly rather than reading character by character. Aim for 400+ characters per minute.` },
+  { q: `What topics appear on N1?`, a: `N1 passages cover editorials, academic essays, business correspondence, abstract discussions on society, science, philosophy, and culture. Unlike lower levels, N1 tests your ability to understand the author's implicit argument and attitude.` },
+  { q: `How should I allocate time in the N1 reading section?`, a: `Recommended split: short passages 3–4 min each, medium passages 6–8 min each, long passages 12–15 min each, integrated comprehension 15 min, information retrieval 5 min. Leave 5 minutes to review flagged questions.` },
+  { q: `Is N1 reading harder than real Japanese?`, a: `N1 reading difficulty is comparable to newspaper editorials and academic writing. The challenge is not just comprehension but answering tricky multiple-choice questions under time pressure. In real life, you can re-read; on the test, time is limited.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }
+];
+const headings = [
+  { depth: 2, slug: "section-format", text: "N1 Reading Section Format and Structure" },
+  { depth: 2, slug: "question-types", text: "Question Types and How to Approach Each" },
+  { depth: 2, slug: "scanning", text: "Speed Reading and Scanning Techniques" },
+  { depth: 2, slug: "tricky-questions", text: "How to Handle Tricky Questions" },
+  { depth: 2, slug: "time-management", text: "Time Management Strategy" },
+  { depth: 2, slug: "vocabulary", text: "Key Vocabulary and Grammar for N1 Reading" },
+  { depth: 2, slug: "daily-practice", text: "Daily Practice Plan for Reading Improvement" },
+  { depth: 2, slug: "test-day", text: "Test Day Reading Strategies" }
+];
 ---
 <BlogLayout
   title="JLPT N1 Reading: Strategies for Tackling Long Passages"
-  description="Proven strategies for the JLPT N1 reading section — speed techniques, analysis methods, and time management."
+  description="Proven strategies for the JLPT N1 reading section — speed techniques, question type analysis, time management, and daily practice plans for consistently high scores."
   language="japanese"
   category="jlpt"
-  tags={["jlpt", "kanji", "advanced"]}
+  tags={["jlpt", "reading", "advanced", "n1", "study-tips"]}
   publishDate="2026-02-23"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="section-format">Reading Section Format</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="scanning">Scanning Techniques</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="question-types">Question Type Analysis</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="time-management">Time Management</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="daily-practice">Daily Practice Plan</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> to reinforce what you have learned.</p>
+  <h2 id="section-format">N1 Reading Section Format and Structure</h2>
+  <p>The JLPT N1 reading section (読解 dokkai) is the longest and most demanding part of the test. With 110 minutes to handle multiple passage types, understanding the structure lets you plan your time and energy strategically.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Section</th>
+        <th style="padding: 10px; text-align: left;">Japanese</th>
+        <th style="padding: 10px; text-align: left;">Length</th>
+        <th style="padding: 10px; text-align: left;">Questions</th>
+        <th style="padding: 10px; text-align: left;">Suggested Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Short passages</strong></td>
+        <td style="padding: 10px;">短文</td>
+        <td style="padding: 10px;">200–300 chars each</td>
+        <td style="padding: 10px;">4 passages × 1 question</td>
+        <td style="padding: 10px;">12–16 min total</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Medium passages</strong></td>
+        <td style="padding: 10px;">中文</td>
+        <td style="padding: 10px;">500–700 chars each</td>
+        <td style="padding: 10px;">3 passages × 3 questions</td>
+        <td style="padding: 10px;">24–30 min total</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Long passages</strong></td>
+        <td style="padding: 10px;">長文</td>
+        <td style="padding: 10px;">1000+ chars each</td>
+        <td style="padding: 10px;">2 passages × 4 questions</td>
+        <td style="padding: 10px;">24–30 min total</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Integrated</strong></td>
+        <td style="padding: 10px;">統合理解</td>
+        <td style="padding: 10px;">2 texts compared</td>
+        <td style="padding: 10px;">1 set × 3 questions</td>
+        <td style="padding: 10px;">15 min</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Information retrieval</strong></td>
+        <td style="padding: 10px;">情報検索</td>
+        <td style="padding: 10px;">Charts/notices</td>
+        <td style="padding: 10px;">1 set × 2 questions</td>
+        <td style="padding: 10px;">5 min</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="question-types">Question Types and How to Approach Each</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Question Type</th>
+        <th style="padding: 10px; text-align: left;">What It Asks</th>
+        <th style="padding: 10px; text-align: left;">Strategy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Underlined word meaning</strong></td>
+        <td style="padding: 10px;">What does the underlined expression mean?</td>
+        <td style="padding: 10px;">Read 2–3 sentences around it; the context always provides clues</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Author's opinion</strong></td>
+        <td style="padding: 10px;">What does the author think about X?</td>
+        <td style="padding: 10px;">Look for opinion markers: と思う, ではないだろうか, べきだ</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Reason / Cause</strong></td>
+        <td style="padding: 10px;">Why does the author say X?</td>
+        <td style="padding: 10px;">Search for から, ため, ので, なぜなら near the referenced sentence</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Main idea</strong></td>
+        <td style="padding: 10px;">What is the main point of this passage?</td>
+        <td style="padding: 10px;">Focus on the final paragraph — Japanese essays often conclude with the thesis</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Comparison (integrated)</strong></td>
+        <td style="padding: 10px;">How do the two texts differ?</td>
+        <td style="padding: 10px;">Identify each author's position first; compare where they agree and disagree</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Fill-in-the-blank</strong></td>
+        <td style="padding: 10px;">Which sentence fits in the gap?</td>
+        <td style="padding: 10px;">Check logical flow: does the sentence before connect to the sentence after?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="scanning">Speed Reading and Scanning Techniques</h2>
+  <p>At N1 level, reading every word carefully is too slow. You need strategic scanning:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">📖 Read Questions First</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Always read the questions BEFORE the passage. This tells you exactly what information to look for, so you can skim irrelevant sections quickly.</p>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">🔍 Paragraph First Sentences</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Read the first sentence of each paragraph to get the structure. Most Japanese academic writing follows a topic-sentence pattern. This gives you a mental map before diving in.</p>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #eab308; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #ca8a04;">⚡ Signal Word Scanning</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Scan for しかし (however), つまり (in other words), 一方 (on the other hand), したがって (therefore). These mark where the argument shifts or concludes.</p>
+    </div>
+  </div>
+
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>🔑 Key Signal Words for N1 Reading:</strong>
+    <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+      <li><strong>しかし / ところが / だが</strong> — Contrast (the next part is often the author's real opinion)</li>
+      <li><strong>つまり / 要するに / すなわち</strong> — Summary (rephrases the main point)</li>
+      <li><strong>したがって / そのため / ゆえに</strong> — Conclusion (the result or argument)</li>
+      <li><strong>例えば / 具体的には</strong> — Example (supporting detail, not the main point)</li>
+      <li><strong>〜ではないだろうか</strong> — Rhetorical question (the author's opinion disguised as a question)</li>
+    </ul>
+  </div>
+
+  <h2 id="tricky-questions">How to Handle Tricky Questions</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">🪤 Common Traps</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Options that are true but do not answer the question</li>
+        <li>Options with one wrong word changing the meaning</li>
+        <li>Extreme language (必ず, 絶対) when the passage is more nuanced</li>
+        <li>Confusing the author's opinion with a quoted opposing view</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ How to Avoid Them</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Re-read the specific question before choosing</li>
+        <li>Find the exact sentence in the passage that supports your answer</li>
+        <li>Eliminate options with absolute language if the passage hedges</li>
+        <li>Track who is speaking — author vs. quoted person</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="time-management">Time Management Strategy</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Phase</th>
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">What to Do</th>
+        <th style="padding: 10px; text-align: left;">Key Rule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Short passages</td>
+        <td style="padding: 10px;">0–15 min</td>
+        <td style="padding: 10px;">Answer quickly — these are warmup</td>
+        <td style="padding: 10px;">Max 4 min per passage</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Medium passages</td>
+        <td style="padding: 10px;">15–45 min</td>
+        <td style="padding: 10px;">Careful reading with scanning</td>
+        <td style="padding: 10px;">Max 10 min per passage</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Long passages</td>
+        <td style="padding: 10px;">45–75 min</td>
+        <td style="padding: 10px;">Questions-first approach; scan for answers</td>
+        <td style="padding: 10px;">Max 15 min per passage</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Integrated + Info</td>
+        <td style="padding: 10px;">75–100 min</td>
+        <td style="padding: 10px;">Compare texts carefully; info retrieval is fastest</td>
+        <td style="padding: 10px;">Do info retrieval last (easiest points)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Review</td>
+        <td style="padding: 10px;">100–110 min</td>
+        <td style="padding: 10px;">Check flagged questions; fill in any blanks</td>
+        <td style="padding: 10px;">Never leave questions unanswered</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="vocabulary">Key Vocabulary and Grammar for N1 Reading</h2>
+  <p>N1 reading passages frequently use academic and literary expressions that do not appear in conversation. Here are essential patterns to recognize:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Pattern</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Function in Reading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">〜にほかならない</td><td style="padding: 10px;">is nothing other than</td><td style="padding: 10px;">Emphasis — marks the author's strong assertion</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">〜ざるを得ない</td><td style="padding: 10px;">cannot help but / have no choice but</td><td style="padding: 10px;">Indicates reluctant necessity</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">〜に基づいて</td><td style="padding: 10px;">based on</td><td style="padding: 10px;">Introduces evidence or foundation</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">〜に反して</td><td style="padding: 10px;">contrary to</td><td style="padding: 10px;">Signals contrast between expectation and reality</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">〜をめぐって</td><td style="padding: 10px;">regarding / concerning</td><td style="padding: 10px;">Introduces the topic of debate</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">〜とはいえ</td><td style="padding: 10px;">although / having said that</td><td style="padding: 10px;">Concession before the real argument</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="daily-practice">Daily Practice Plan for Reading Improvement</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Resource</th>
+        <th style="padding: 10px; text-align: left;">Goal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">Extensive reading</td>
+        <td style="padding: 10px;">Japanese news articles, essays</td>
+        <td style="padding: 10px;">Build speed and fluency</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">JLPT practice passage</td>
+        <td style="padding: 10px;">Past tests or 新完全マスター</td>
+        <td style="padding: 10px;">Test format familiarity</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">10 min</td>
+        <td style="padding: 10px;">Vocabulary from reading</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> + Anki</td>
+        <td style="padding: 10px;">Fill vocabulary gaps</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">5 min</td>
+        <td style="padding: 10px;">Kanji compound review</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a></td>
+        <td style="padding: 10px;">Recognize kanji compounds faster</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="test-day">Test Day Reading Strategies</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>🎯 Start Strong</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Short passages first — they are quick points that build confidence. Do not get stuck on any single question for more than 4 minutes.</p>
+    </div>
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>⏱️ Watch the Clock</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Check time after each passage type. If you are behind, skip to information retrieval (easiest points) and come back to long passages.</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>✏️ Mark and Return</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">If unsure about a question, mark your best guess and flag it. Return during the review phase. A guess is always better than a blank.</p>
+    </div>
+  </div>
+
+  <p>For complete JLPT preparation, see our <a href="/japanese/blog/jlpt-preparation-guide/">JLPT Preparation Guide</a> and <a href="/japanese/blog/jlpt-listening-tips/">Listening Tips</a>. Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a> to study the vocabulary that appears most frequently in N1 reading passages.</p>
 
 </BlogLayout>

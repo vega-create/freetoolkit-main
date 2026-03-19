@@ -1,35 +1,342 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Can I listen to the audio twice?", "a": "No — JLPT listening plays each audio only once. This is why note-taking skills are essential."}, {"q": "What is the hardest part of JLPT listening?", "a": "The quick response section where you hear a statement and must choose the appropriate reply from three options with no written text."}, {"q": "How can I practice daily?", "a": "Listen to Japanese podcasts, watch dramas without subtitles, and use official JLPT practice audio. Shadowing is particularly effective."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "section-types", "text": "Listening Section Types"}, {"depth": 2, "slug": "note-taking", "text": "Note-Taking Strategy"}, {"depth": 2, "slug": "keywords", "text": "Keywords to Listen For"}, {"depth": 2, "slug": "common-traps", "text": "Common Trap Patterns"}, {"depth": 2, "slug": "daily-plan", "text": "Daily Listening Practice"}];
+const faq = [
+  { q: `Can I listen to the JLPT audio twice?`, a: `No — JLPT listening plays each audio only once. This is why developing strong note-taking skills and learning to catch key information on the first listen is essential for scoring well.` },
+  { q: `What is the hardest part of JLPT listening?`, a: `The quick response section (即時応答) is the most difficult for most test-takers. You hear a statement and must choose the appropriate reply from three audio options — with no written text to help you. Speed and natural response recognition are key.` },
+  { q: `How long should I prepare for the JLPT listening section?`, a: `Start dedicated listening practice at least 3 months before the test. Daily practice of 15–30 minutes using JLPT-format questions is more effective than cramming. Build up to full-length practice tests in the final month.` },
+  { q: `Are JLPT listening questions in standard Japanese?`, a: `Yes — JLPT listening uses standard Tokyo Japanese (標準語) spoken at natural speed. You will not encounter strong regional dialects, but speakers do use different registers (polite, casual) depending on the scenario.` },
+  { q: `What should I do if I miss a question during the test?`, a: `Move on immediately. Do not spend time trying to remember what you missed — the next question is already playing. Mark your best guess and focus your attention completely on the upcoming question. Dwelling on missed questions causes you to miss more.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Particle Practice", url: "/japanese/tools/particle-practice/" }
+];
+const headings = [
+  { depth: 2, slug: "section-overview", text: "JLPT Listening Section Overview by Level" },
+  { depth: 2, slug: "question-types", text: "4 Question Types and How to Approach Each" },
+  { depth: 2, slug: "note-taking", text: "Note-Taking Strategies That Actually Work" },
+  { depth: 2, slug: "keywords", text: "Keywords and Signal Phrases to Listen For" },
+  { depth: 2, slug: "common-traps", text: "Common Trap Patterns and How to Avoid Them" },
+  { depth: 2, slug: "daily-practice", text: "Daily Listening Practice Plan" },
+  { depth: 2, slug: "resources", text: "Best Resources for JLPT Listening Practice" },
+  { depth: 2, slug: "test-day", text: "Test Day Strategies" }
+];
 ---
 <BlogLayout
-  title="JLPT Listening Tips: Score Higher with Proven Techniques"
-  description="Improve your JLPT listening score with note-taking strategies, question patterns, and daily practice methods."
+  title="JLPT Listening Tips: Proven Techniques to Score Higher"
+  description="Improve your JLPT listening score with note-taking strategies, question type breakdowns, trap pattern analysis, and daily practice methods for every level."
   language="japanese"
   category="jlpt"
-  tags={["jlpt", "beginner", "listening"]}
+  tags={["jlpt", "listening", "study-tips", "test-prep"]}
   publishDate="2026-02-23"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="section-types">Listening Section Types</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="note-taking">Note-Taking Strategy</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="keywords">Keywords to Listen For</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="common-traps">Common Trap Patterns</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="daily-plan">Daily Listening Practice</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <h2 id="section-overview">JLPT Listening Section Overview by Level</h2>
+  <p>The listening section (聴解 chōkai) is often the section where test-takers lose the most points — and the one they practice least. Understanding the format and scoring for your level is the first step to improvement.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">Questions</th>
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Points</th>
+        <th style="padding: 10px; text-align: left;">Key Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>N5</strong></td>
+        <td style="padding: 10px;">~25 questions</td>
+        <td style="padding: 10px;">30 min</td>
+        <td style="padding: 10px;">60 pts</td>
+        <td style="padding: 10px;">Basic daily conversations, numbers, time</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>N4</strong></td>
+        <td style="padding: 10px;">~28 questions</td>
+        <td style="padding: 10px;">35 min</td>
+        <td style="padding: 10px;">60 pts</td>
+        <td style="padding: 10px;">Longer dialogues, directions, schedules</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>N3</strong></td>
+        <td style="padding: 10px;">~30 questions</td>
+        <td style="padding: 10px;">40 min</td>
+        <td style="padding: 10px;">60 pts</td>
+        <td style="padding: 10px;">Opinions, reasons, implicit meaning</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>N2</strong></td>
+        <td style="padding: 10px;">~32 questions</td>
+        <td style="padding: 10px;">50 min</td>
+        <td style="padding: 10px;">60 pts</td>
+        <td style="padding: 10px;">Natural speed, nuanced opinions, formal speech</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>N1</strong></td>
+        <td style="padding: 10px;">~37 questions</td>
+        <td style="padding: 10px;">60 min</td>
+        <td style="padding: 10px;">60 pts</td>
+        <td style="padding: 10px;">Complex arguments, abstract topics, rapid speech</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fef2f2; border-left: 4px solid #dc2626; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>⚠️ Critical Rule:</strong> You must score at least <strong>19 points</strong> (out of 60) in the listening section to pass, regardless of your other scores. Many test-takers with strong reading scores fail because of insufficient listening preparation.
+  </div>
+
+  <h2 id="question-types">4 Question Types and How to Approach Each</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Type</th>
+        <th style="padding: 10px; text-align: left;">Japanese Name</th>
+        <th style="padding: 10px; text-align: left;">Format</th>
+        <th style="padding: 10px; text-align: left;">Strategy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Task-based</strong></td>
+        <td style="padding: 10px;">課題理解</td>
+        <td style="padding: 10px;">Read question first → listen to dialogue → choose answer</td>
+        <td style="padding: 10px;">Read options carefully before audio starts; listen for the specific info needed</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Key point</strong></td>
+        <td style="padding: 10px;">ポイント理解</td>
+        <td style="padding: 10px;">Listen to dialogue → then hear question → choose answer</td>
+        <td style="padding: 10px;">Take notes during audio; you will not know the question until after</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>General comprehension</strong></td>
+        <td style="padding: 10px;">概要理解</td>
+        <td style="padding: 10px;">Listen to a monologue or announcement → answer about the main idea</td>
+        <td style="padding: 10px;">Focus on the speaker's conclusion or recommendation, not every detail</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Quick response</strong></td>
+        <td style="padding: 10px;">即時応答</td>
+        <td style="padding: 10px;">Hear a statement → choose the best reply (audio only, no text)</td>
+        <td style="padding: 10px;">Practice natural conversation patterns; eliminate clearly wrong answers fast</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="note-taking">Note-Taking Strategies That Actually Work</h2>
+  <p>Since audio plays only once, your notes are crucial. Here is a proven note-taking system:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">📝 Use Symbols, Not Words</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>○ = yes/agree, × = no/disagree</li>
+        <li>→ = then/next, ← = but/however</li>
+        <li>▲ = maybe/uncertain</li>
+        <li>Numbers: 3:00, ¥500, 2F</li>
+        <li>Write in whatever language is fastest</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">🎯 Focus on Key Info</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>WHO is speaking (man/woman, role)</li>
+        <li>WHAT do they decide to do</li>
+        <li>WHEN and WHERE</li>
+        <li>Changes and corrections</li>
+        <li>The FINAL decision (not initial suggestions)</li>
+      </ul>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #eab308; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #ca8a04;">⚡ Speed Tips</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>Abbreviate: Mon, Tue instead of Monday</li>
+        <li>Draw quick diagrams for directions</li>
+        <li>Cross out options as you eliminate them</li>
+        <li>Write on the question paper, not answer sheet</li>
+        <li>Transfer answers during breaks between sections</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="keywords">Keywords and Signal Phrases to Listen For</h2>
+  <p>Certain Japanese phrases signal important information. Train your ears to catch these instantly:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #0d9488; color: white;">
+        <th style="padding: 10px; text-align: left;">Signal Type</th>
+        <th style="padding: 10px; text-align: left;">Japanese Phrases</th>
+        <th style="padding: 10px; text-align: left;">What It Signals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Conclusion / Decision</strong></td>
+        <td style="padding: 10px;">じゃ、〜にしましょう / そうしましょう / 〜ことにする</td>
+        <td style="padding: 10px;">The final answer — this is usually what the question asks about</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Change of plan</strong></td>
+        <td style="padding: 10px;">やっぱり / でも / ただ / ところが</td>
+        <td style="padding: 10px;">Previous info is being corrected — listen for the NEW info</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Suggestion</strong></td>
+        <td style="padding: 10px;">〜たらどうですか / 〜ほうがいい / 〜ませんか</td>
+        <td style="padding: 10px;">A recommendation — note whether it is accepted or rejected</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Reason / Cause</strong></td>
+        <td style="padding: 10px;">〜から / 〜ので / 〜ため / なぜかというと</td>
+        <td style="padding: 10px;">Explains WHY — often the answer to key point questions</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Contrast / But</strong></td>
+        <td style="padding: 10px;">けど / しかし / ところが / 一方</td>
+        <td style="padding: 10px;">The information AFTER this word is usually more important</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>First action</strong></td>
+        <td style="padding: 10px;">まず / 最初に / 先に / 〜前に</td>
+        <td style="padding: 10px;">Sequence questions — note the order of actions</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="common-traps">Common Trap Patterns and How to Avoid Them</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">🪤 Trap 1: First Mention</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">The first suggestion is often NOT the answer. Speakers frequently say "Let's do X... actually, Y would be better." The answer is Y.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">🪤 Trap 2: Similar Sounds</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Options may include words that sound similar (e.g., 一時 vs 七時, 火曜日 vs 木曜日). Listen carefully for exact numbers and days.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">🪤 Trap 3: Partial Truth</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Some options contain true info from the audio but do not answer the specific question. Always re-read the question before marking your answer.</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">🪤 Trap 4: Negation</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Speakers may use double negatives or indirect refusals (ちょっと... = no). Listen for polite rejections disguised as hesitation.</p>
+    </div>
+  </div>
+
+  <h2 id="daily-practice">Daily Listening Practice Plan</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Resource</th>
+        <th style="padding: 10px; text-align: left;">Skill Trained</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5 min</td>
+        <td style="padding: 10px;">Shadowing practice</td>
+        <td style="padding: 10px;">NHK Easy News audio</td>
+        <td style="padding: 10px;">Processing speed + pronunciation</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">10 min</td>
+        <td style="padding: 10px;">JLPT practice questions</td>
+        <td style="padding: 10px;">Past tests or practice books</td>
+        <td style="padding: 10px;">Test format familiarity</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">10 min</td>
+        <td style="padding: 10px;">Podcast listening</td>
+        <td style="padding: 10px;">Nihongo con Teppei / JapanesePod101</td>
+        <td style="padding: 10px;">Natural speech comprehension</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">5 min</td>
+        <td style="padding: 10px;">Review missed vocabulary</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a></td>
+        <td style="padding: 10px;">Vocabulary gaps from listening</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="resources">Best Resources for JLPT Listening Practice</h2>
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Resource</th>
+        <th style="padding: 10px; text-align: left;">Type</th>
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">Why It Helps</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Official JLPT practice tests</strong></td>
+        <td style="padding: 10px;">Book + Audio</td>
+        <td style="padding: 10px;">All</td>
+        <td style="padding: 10px;">Closest to actual test format and difficulty</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>新完全マスター 聴解</strong></td>
+        <td style="padding: 10px;">Book + Audio</td>
+        <td style="padding: 10px;">N1–N4</td>
+        <td style="padding: 10px;">Systematic practice by question type</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>NHK Easy News</strong></td>
+        <td style="padding: 10px;">Web / App</td>
+        <td style="padding: 10px;">N3–N4</td>
+        <td style="padding: 10px;">Daily news with slow, clear audio + text</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Nihongo no Mori (YouTube)</strong></td>
+        <td style="padding: 10px;">Video</td>
+        <td style="padding: 10px;">All</td>
+        <td style="padding: 10px;">JLPT-focused lessons taught mostly in Japanese</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="test-day">Test Day Strategies</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Before the Section</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>Sharpen your pencil — you will write fast</li>
+        <li>Preview the first few questions while waiting</li>
+        <li>Take a deep breath — anxiety reduces comprehension</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>During the Section</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>Read options BEFORE audio plays</li>
+        <li>Mark answers on question paper first</li>
+        <li>If you miss a question, guess and move on</li>
+        <li>Listen for the FINAL decision, not the first mention</li>
+      </ul>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Transfer Answers</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li>Use pauses between question types to bubble in answers</li>
+        <li>Double-check you are on the right question number</li>
+        <li>Never leave a question blank — always guess</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Combine listening practice with vocabulary building using our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a>, and explore our <a href="/japanese/blog/jlpt-preparation-guide/">Complete JLPT Preparation Guide</a> for strategies across all test sections. For grammar patterns that frequently appear in listening, see our <a href="/japanese/blog/japanese-particles-explained/">Particles Guide</a>.</p>
 
 </BlogLayout>

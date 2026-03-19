@@ -1,35 +1,373 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Should I use slang when speaking Japanese?", "a": "Only in casual settings with friends your age. Using slang in formal situations or with older people is inappropriate."}, {"q": "Where can I learn more current slang?", "a": "Japanese Twitter/X, YouTube comments, and variety shows are the best sources for current slang."}, {"q": "Does Japanese slang change quickly?", "a": "Yes — internet slang especially can go in and out of fashion within months. Some terms become permanent vocabulary while others fade."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "internet-slang", "text": "Internet Slang"}, {"depth": 2, "slug": "youth-words", "text": "Youth Slang"}, {"depth": 2, "slug": "abbreviations", "text": "Common Abbreviations"}, {"depth": 2, "slug": "emoji-culture", "text": "Emoji and Kaomoji"}, {"depth": 2, "slug": "when-to-use", "text": "When to Use Slang"}];
+const faq = [
+  { q: `Should I use slang when speaking Japanese?`, a: `Only in casual settings with friends your age or younger. Using slang in formal situations, with older people, or at work is inappropriate and can make you seem rude or immature. Always default to polite Japanese when unsure.` },
+  { q: `Where can I learn more current Japanese slang?`, a: `Japanese Twitter/X, YouTube comments, TikTok, and variety shows are the best sources for current slang. Following popular Japanese creators on social media exposes you to trending expressions naturally.` },
+  { q: `Does Japanese slang change quickly?`, a: `Yes — internet slang especially can go in and out of fashion within months. Some terms become permanent vocabulary (like エモい) while others fade quickly. Focus on understanding slang rather than memorizing every new term.` },
+  { q: `Will using slang help me pass the JLPT?`, a: `Slang rarely appears on the JLPT directly, but understanding colloquial language helps with the listening section. Focus on standard Japanese for test preparation, but slang knowledge makes real-world interactions much smoother.` },
+  { q: `Is anime slang the same as real Japanese slang?`, a: `No — anime often uses exaggerated, archaic, or fictional speech patterns. Real Japanese slang is different from anime language. Learn real slang from social media, dramas, and conversations with native speakers, not from anime dialogue.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Kana Converter", url: "/japanese/tools/romaji-to-kana/" }
+];
+const headings = [
+  { depth: 2, slug: "why-learn-slang", text: "Why Learn Japanese Slang?" },
+  { depth: 2, slug: "internet-slang", text: "Internet Slang — Online Communication" },
+  { depth: 2, slug: "youth-slang", text: "Youth Slang — Trending Expressions" },
+  { depth: 2, slug: "abbreviations", text: "Common Abbreviations and Shortened Words" },
+  { depth: 2, slug: "kaomoji", text: "Kaomoji and Emoji Culture" },
+  { depth: 2, slug: "generational", text: "Generational Slang — From JK to Salaryman" },
+  { depth: 2, slug: "when-to-use", text: "When to Use (and Not Use) Slang" },
+  { depth: 2, slug: "staying-current", text: "How to Stay Current with Japanese Slang" }
+];
 ---
 <BlogLayout
-  title="Japanese Slang and Internet Words: 50 Terms Not in Textbooks"
-  description="Popular Japanese slang and internet expressions used by young people — from ワロタ to エモい."
+  title="Japanese Slang and Internet Words: 50+ Terms Not in Textbooks"
+  description="Popular Japanese slang, internet expressions, abbreviations, and kaomoji used by young Japanese people. Learn when and how to use them naturally."
   language="japanese"
   category="culture"
-  tags={["culture", "vocabulary", "slang"]}
+  tags={["culture", "vocabulary", "slang", "internet", "youth"]}
   publishDate="2026-02-27"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="internet-slang">Internet Slang</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="youth-words">Youth Slang</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="abbreviations">Common Abbreviations</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="emoji-culture">Emoji and Kaomoji</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="when-to-use">When to Use Slang</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <h2 id="why-learn-slang">Why Learn Japanese Slang?</h2>
+  <p>Textbook Japanese and real Japanese are different languages. If you only study formal Japanese, you will struggle to understand social media, YouTube comments, casual conversations, and Japanese TV shows. Learning slang bridges the gap between classroom knowledge and <strong>real-world communication</strong>.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">📱</div>
+      <strong>Understand Social Media</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Twitter, LINE, and Instagram posts use slang heavily</p>
+    </div>
+    <div style="background: #f0fdf4; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">📺</div>
+      <strong>Enjoy Entertainment</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Variety shows, YouTube, and dramas are full of casual speech</p>
+    </div>
+    <div style="background: #fefce8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🗣️</div>
+      <strong>Sound Natural</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Using appropriate slang shows cultural awareness</p>
+    </div>
+    <div style="background: #fdf2f8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🤝</div>
+      <strong>Connect with People</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Young Japanese people bond through shared language trends</p>
+    </div>
+  </div>
+
+  <h2 id="internet-slang">Internet Slang — Online Communication</h2>
+  <p>These terms dominate Japanese social media, chat apps, and online forums:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Term</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>ワロタ / 草</strong></td>
+        <td style="padding: 10px;">warota / kusa</td>
+        <td style="padding: 10px;">LOL / laughing</td>
+        <td style="padding: 10px;">草 comes from www (笑) looking like grass</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>ヤバい</strong></td>
+        <td style="padding: 10px;">yabai</td>
+        <td style="padding: 10px;">Crazy / amazing / terrible</td>
+        <td style="padding: 10px;">Context-dependent — can mean good or bad</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>ウケる</strong></td>
+        <td style="padding: 10px;">ukeru</td>
+        <td style="padding: 10px;">That's hilarious</td>
+        <td style="padding: 10px;">Reacting to something funny</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>キモい</strong></td>
+        <td style="padding: 10px;">kimoi</td>
+        <td style="padding: 10px;">Gross / creepy</td>
+        <td style="padding: 10px;">Short for 気持ち悪い (kimochi warui)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>ガチ</strong></td>
+        <td style="padding: 10px;">gachi</td>
+        <td style="padding: 10px;">Seriously / for real</td>
+        <td style="padding: 10px;">ガチでヤバい = seriously crazy</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>ディスる</strong></td>
+        <td style="padding: 10px;">disuru</td>
+        <td style="padding: 10px;">To disrespect / diss</td>
+        <td style="padding: 10px;">From English "disrespect," turned into a verb</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>バズる</strong></td>
+        <td style="padding: 10px;">bazuru</td>
+        <td style="padding: 10px;">To go viral</td>
+        <td style="padding: 10px;">From English "buzz"</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>エモい</strong></td>
+        <td style="padding: 10px;">emoi</td>
+        <td style="padding: 10px;">Emotional / nostalgic / moving</td>
+        <td style="padding: 10px;">Positive — describes aesthetically touching things</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="youth-slang">Youth Slang — Trending Expressions</h2>
+  <p>These expressions are popular among young Japanese people and appear constantly in conversation and social media:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Term</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>推し</strong></td>
+        <td style="padding: 10px;">oshi</td>
+        <td style="padding: 10px;">Your favorite (idol, character)</td>
+        <td style="padding: 10px;">推しが尊い — My favorite is precious</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>尊い</strong></td>
+        <td style="padding: 10px;">tōtoi</td>
+        <td style="padding: 10px;">Precious / too pure</td>
+        <td style="padding: 10px;">Used about beloved characters or moments</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>沼</strong></td>
+        <td style="padding: 10px;">numa</td>
+        <td style="padding: 10px;">Obsession / deep into</td>
+        <td style="padding: 10px;">アニメ沼にハマった — fell into the anime swamp</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>それな</strong></td>
+        <td style="padding: 10px;">sore na</td>
+        <td style="padding: 10px;">That's so true / exactly</td>
+        <td style="padding: 10px;">Agreement — like "ikr" in English</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>ワンチャン</strong></td>
+        <td style="padding: 10px;">wanchan</td>
+        <td style="padding: 10px;">Maybe / there's a chance</td>
+        <td style="padding: 10px;">From "one chance" — ワンチャンいける = might work</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>マジ卍</strong></td>
+        <td style="padding: 10px;">maji manji</td>
+        <td style="padding: 10px;">Really awesome / intense</td>
+        <td style="padding: 10px;">Emphasis word (somewhat dated now)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>チルい</strong></td>
+        <td style="padding: 10px;">chirui</td>
+        <td style="padding: 10px;">Chill / relaxing</td>
+        <td style="padding: 10px;">From English "chill" + い adjective ending</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>限界</strong></td>
+        <td style="padding: 10px;">genkai</td>
+        <td style="padding: 10px;">At my limit / overwhelmed</td>
+        <td style="padding: 10px;">限界オタク = someone obsessed to their limit</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="abbreviations">Common Abbreviations and Shortened Words</h2>
+  <p>Japanese love abbreviating words (略語 ryakugo). Understanding these is essential for reading casual text:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #0d9488; color: white;">
+        <th style="padding: 10px; text-align: left;">Abbreviation</th>
+        <th style="padding: 10px; text-align: left;">Full Form</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>スタバ</strong></td>
+        <td style="padding: 10px;">スターバックス</td>
+        <td style="padding: 10px;">Starbucks</td>
+        <td style="padding: 10px;">Brand</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>コンビニ</strong></td>
+        <td style="padding: 10px;">コンビニエンスストア</td>
+        <td style="padding: 10px;">Convenience store</td>
+        <td style="padding: 10px;">Place</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>バイト</strong></td>
+        <td style="padding: 10px;">アルバイト</td>
+        <td style="padding: 10px;">Part-time job</td>
+        <td style="padding: 10px;">Work</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>リア充</strong></td>
+        <td style="padding: 10px;">リアル充実</td>
+        <td style="padding: 10px;">Someone with a fulfilling real life</td>
+        <td style="padding: 10px;">Internet</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>JK</strong></td>
+        <td style="padding: 10px;">女子高生</td>
+        <td style="padding: 10px;">High school girl</td>
+        <td style="padding: 10px;">People</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>KY</strong></td>
+        <td style="padding: 10px;">空気読めない</td>
+        <td style="padding: 10px;">Cannot read the room</td>
+        <td style="padding: 10px;">Personality</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>www</strong></td>
+        <td style="padding: 10px;">笑い (warai)</td>
+        <td style="padding: 10px;">LOL (more w's = funnier)</td>
+        <td style="padding: 10px;">Reaction</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>おつ / 乙</strong></td>
+        <td style="padding: 10px;">お疲れ様</td>
+        <td style="padding: 10px;">Good work / thanks</td>
+        <td style="padding: 10px;">Chat</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="kaomoji">Kaomoji and Emoji Culture</h2>
+  <p>Japan invented emoticons (顔文字 kaomoji) before emoji existed. Japanese kaomoji are read horizontally (unlike Western emoticons) and are still widely used in text messages:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Kaomoji</th>
+        <th style="padding: 10px; text-align: left;">Emotion</th>
+        <th style="padding: 10px; text-align: left;">Kaomoji</th>
+        <th style="padding: 10px; text-align: left;">Emotion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">(^^)</td>
+        <td style="padding: 10px;">Happy / smiling</td>
+        <td style="padding: 10px;">(T_T)</td>
+        <td style="padding: 10px;">Crying</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">(´・ω・`)</td>
+        <td style="padding: 10px;">Cute / neutral</td>
+        <td style="padding: 10px;">(ノ´∀`)ノ</td>
+        <td style="padding: 10px;">Excited / celebrating</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">orz</td>
+        <td style="padding: 10px;">Despair / defeat</td>
+        <td style="padding: 10px;">(・∀・)</td>
+        <td style="padding: 10px;">Mischievous / playful</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">( ˘ω˘ )</td>
+        <td style="padding: 10px;">Relaxed / sleepy</td>
+        <td style="padding: 10px;">(╯°□°)╯︵ ┻━┻</td>
+        <td style="padding: 10px;">Flipping tables / frustrated</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="generational">Generational Slang — From JK to Salaryman</h2>
+  <p>Different age groups use different slang. Understanding these distinctions helps you communicate appropriately:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fdf2f8; border: 2px solid #ec4899; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #db2777;">🎀 Teen Slang (10–19)</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>エグい</strong> — extreme / intense</li>
+        <li><strong>てぇてぇ</strong> — precious (from 尊い)</li>
+        <li><strong>ぴえん</strong> — sad (crying face emoji sound)</li>
+        <li><strong>きゅんです</strong> — heart flutter</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">🎓 Young Adult Slang (20–30)</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>ガチ</strong> — seriously</li>
+        <li><strong>推し活</strong> — supporting your favorite idol</li>
+        <li><strong>映える</strong> (ばえる) — Instagram-worthy</li>
+        <li><strong>タピる</strong> — to get bubble tea</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">👔 Work Slang (30+)</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>ブラック企業</strong> — exploitative company</li>
+        <li><strong>社畜</strong> (しゃちく) — corporate slave</li>
+        <li><strong>定時退社</strong> — leaving on time (rare!)</li>
+        <li><strong>飲みニケーション</strong> — bonding over drinks</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="when-to-use">When to Use (and Not Use) Slang</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Safe to Use Slang</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Texting with friends your age</li>
+        <li>Casual conversations with peers</li>
+        <li>Social media comments</li>
+        <li>Online gaming chat</li>
+        <li>Talking about pop culture topics</li>
+      </ul>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Never Use Slang</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Business meetings or emails</li>
+        <li>Speaking with seniors or elders</li>
+        <li>Job interviews</li>
+        <li>Formal presentations</li>
+        <li>First meeting with someone older</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="staying-current">How to Stay Current with Japanese Slang</h2>
+  <p>Japanese slang evolves rapidly. Here are the best ways to keep up:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>📱 Follow Japanese Social Media</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Follow Japanese creators on Twitter/X, TikTok, and YouTube. Read comments sections where slang appears naturally.</p>
+    </div>
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>📺 Watch Variety Shows</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Shows like ロンドンハーツ, 月曜から夜ふかし, and アメトーーク feature natural casual speech with current slang.</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>📖 Check Annual Slang Lists</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Japan publishes 流行語大賞 (buzzword of the year) annually. Following these helps you understand cultural trends.</p>
+    </div>
+  </div>
+
+  <p>For formal Japanese to balance your slang knowledge, explore our <a href="/japanese/blog/keigo-polite-japanese/">Keigo Guide</a> and <a href="/japanese/blog/japanese-culture-etiquette/">Culture and Etiquette Guide</a>. Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a> to study the standard vocabulary that forms the foundation beneath all slang.</p>
 
 </BlogLayout>

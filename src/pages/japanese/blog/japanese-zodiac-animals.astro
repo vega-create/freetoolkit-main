@@ -1,35 +1,369 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Is the Japanese zodiac the same as Chinese?", "a": "Very similar — both use the same 12 animals in the same order. The Japanese version (干支, eto) was adopted from China but has some cultural differences."}, {"q": "How do I find my zodiac animal?", "a": "Your birth year determines your animal. The cycle repeats every 12 years: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Sheep, Monkey, Rooster, Dog, Boar."}, {"q": "Is the zodiac still important in modern Japan?", "a": "Yes — each New Year celebrates the incoming zodiac animal. Many Japanese know their animal sign, and it appears on greeting cards and decorations."}];
-const relatedTools = [{"name": "Name Generator", "url": "/japanese/tools/name-generator/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "What is Eto?"}, {"depth": 2, "slug": "12-animals", "text": "The 12 Animals"}, {"depth": 2, "slug": "personality", "text": "Personality Traits"}, {"depth": 2, "slug": "new-year", "text": "Zodiac and New Year"}, {"depth": 2, "slug": "compatibility", "text": "Animal Compatibility"}];
+const faq = [
+  { q: `Is the Japanese zodiac the same as Chinese?`, a: `Very similar — both use the same 12 animals in the same order. The Japanese version (干支 eto) was adopted from China but has some cultural differences. The biggest difference is that Japan uses the wild boar (猪 inoshishi) instead of the pig used in Chinese zodiac.` },
+  { q: `How do I find my zodiac animal?`, a: `Your birth year determines your animal. The cycle repeats every 12 years. For example, 2024 is the Year of the Dragon. Subtract or add 12 from any known year to find other years with the same animal.` },
+  { q: `Is the zodiac still important in modern Japan?`, a: `Yes — each New Year prominently features the incoming zodiac animal on greeting cards (年賀状), decorations, and TV specials. Many Japanese people know their animal sign and associated personality traits. It is a common conversation topic.` },
+  { q: `Does the zodiac affect personality like Western astrology?`, a: `Japanese zodiac personality traits are taken less seriously than Western horoscopes. Most people enjoy them as fun conversation starters rather than genuine personality assessments. However, some older people do consider zodiac compatibility for marriages.` },
+  { q: `What vocabulary can I learn from the zodiac?`, a: `The zodiac teaches 12 animal kanji (鼠, 牛, 虎, etc.), counter words for animals, personality adjectives, and New Year vocabulary. It is an excellent cultural topic that naturally introduces useful vocabulary.` }
+];
+const relatedTools = [
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "what-is-eto", text: "What Is Eto (干支)? The Japanese Zodiac System" },
+  { depth: 2, slug: "twelve-animals", text: "The 12 Zodiac Animals — Kanji, Reading, and Years" },
+  { depth: 2, slug: "personality-traits", text: "Personality Traits for Each Animal" },
+  { depth: 2, slug: "new-year-traditions", text: "Zodiac and Japanese New Year Traditions" },
+  { depth: 2, slug: "compatibility", text: "Animal Compatibility and Relationships" },
+  { depth: 2, slug: "vs-chinese", text: "Japanese vs Chinese Zodiac — Key Differences" },
+  { depth: 2, slug: "vocabulary", text: "Zodiac Vocabulary for Japanese Learners" },
+  { depth: 2, slug: "modern-culture", text: "The Zodiac in Modern Japanese Culture" }
+];
 ---
 <BlogLayout
-  title="Japanese Zodiac (Eto): 12 Animals and Their Meanings"
-  description="Explore the Japanese zodiac system with all 12 animals, personality traits, and cultural significance."
+  title="Japanese Zodiac (Eto): 12 Animals, Meanings, and Cultural Significance"
+  description="Explore the Japanese zodiac system with all 12 animals, personality traits, New Year traditions, and cultural significance. Includes vocabulary for Japanese learners."
   language="japanese"
   category="culture"
-  tags={["culture", "vocabulary"]}
+  tags={["culture", "vocabulary", "zodiac", "new-year", "traditions"]}
   publishDate="2026-02-28"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="overview">What is Eto?</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="12-animals">The 12 Animals</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="personality">Personality Traits</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="new-year">Zodiac and New Year</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="compatibility">Animal Compatibility</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/name-generator/">Name Generator</a> to reinforce what you have learned.</p>
+  <h2 id="what-is-eto">What Is Eto (干支)? The Japanese Zodiac System</h2>
+  <p>The Japanese zodiac, called <strong>干支 (eto)</strong> or <strong>十二支 (jūnishi)</strong>, is a 12-year cycle where each year is represented by an animal. Originally from China, this system has been part of Japanese culture for over 1,400 years and remains deeply woven into modern daily life — from New Year celebrations to personality discussions.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🏮</div>
+      <strong>New Year Symbol</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Each year's zodiac animal dominates New Year decorations and cards</p>
+    </div>
+    <div style="background: #f0f9ff; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🗣️</div>
+      <strong>Conversation Topic</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">何年？(nan-doshi?) is a common question — "What's your zodiac?"</p>
+    </div>
+    <div style="background: #f0fdf4; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">📚</div>
+      <strong>Kanji Practice</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">12 animal kanji are practical vocabulary for learners</p>
+    </div>
+  </div>
+
+  <p>The zodiac is not just cultural trivia — asking someone their zodiac animal is a natural, polite way to learn their approximate age without asking directly (a sensitive topic in Japanese culture).</p>
+
+  <h2 id="twelve-animals">The 12 Zodiac Animals — Kanji, Reading, and Years</h2>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Animal</th>
+        <th style="padding: 10px; text-align: left;">Kanji</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Recent Years</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">1</td>
+        <td style="padding: 10px;">🐀 Rat</td>
+        <td style="padding: 10px; font-size: 1.3rem;">子</td>
+        <td style="padding: 10px;">ね (ne) / ねずみ (nezumi)</td>
+        <td style="padding: 10px;">2008, 2020, 2032</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">2</td>
+        <td style="padding: 10px;">🐂 Ox</td>
+        <td style="padding: 10px; font-size: 1.3rem;">丑</td>
+        <td style="padding: 10px;">うし (ushi)</td>
+        <td style="padding: 10px;">2009, 2021, 2033</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">3</td>
+        <td style="padding: 10px;">🐅 Tiger</td>
+        <td style="padding: 10px; font-size: 1.3rem;">寅</td>
+        <td style="padding: 10px;">とら (tora)</td>
+        <td style="padding: 10px;">2010, 2022, 2034</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">4</td>
+        <td style="padding: 10px;">🐇 Rabbit</td>
+        <td style="padding: 10px; font-size: 1.3rem;">卯</td>
+        <td style="padding: 10px;">う (u) / うさぎ (usagi)</td>
+        <td style="padding: 10px;">2011, 2023, 2035</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5</td>
+        <td style="padding: 10px;">🐉 Dragon</td>
+        <td style="padding: 10px; font-size: 1.3rem;">辰</td>
+        <td style="padding: 10px;">たつ (tatsu)</td>
+        <td style="padding: 10px;">2012, 2024, 2036</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">6</td>
+        <td style="padding: 10px;">🐍 Snake</td>
+        <td style="padding: 10px; font-size: 1.3rem;">巳</td>
+        <td style="padding: 10px;">み (mi) / へび (hebi)</td>
+        <td style="padding: 10px;">2013, 2025, 2037</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">7</td>
+        <td style="padding: 10px;">🐴 Horse</td>
+        <td style="padding: 10px; font-size: 1.3rem;">午</td>
+        <td style="padding: 10px;">うま (uma)</td>
+        <td style="padding: 10px;">2014, 2026, 2038</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">8</td>
+        <td style="padding: 10px;">🐑 Sheep</td>
+        <td style="padding: 10px; font-size: 1.3rem;">未</td>
+        <td style="padding: 10px;">ひつじ (hitsuji)</td>
+        <td style="padding: 10px;">2015, 2027, 2039</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">9</td>
+        <td style="padding: 10px;">🐒 Monkey</td>
+        <td style="padding: 10px; font-size: 1.3rem;">申</td>
+        <td style="padding: 10px;">さる (saru)</td>
+        <td style="padding: 10px;">2016, 2028, 2040</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">10</td>
+        <td style="padding: 10px;">🐔 Rooster</td>
+        <td style="padding: 10px; font-size: 1.3rem;">酉</td>
+        <td style="padding: 10px;">とり (tori)</td>
+        <td style="padding: 10px;">2017, 2029, 2041</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">11</td>
+        <td style="padding: 10px;">🐕 Dog</td>
+        <td style="padding: 10px; font-size: 1.3rem;">戌</td>
+        <td style="padding: 10px;">いぬ (inu)</td>
+        <td style="padding: 10px;">2018, 2030, 2042</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">12</td>
+        <td style="padding: 10px;">🐗 Boar</td>
+        <td style="padding: 10px; font-size: 1.3rem;">亥</td>
+        <td style="padding: 10px;">い (i) / いのしし (inoshishi)</td>
+        <td style="padding: 10px;">2019, 2031, 2043</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="personality-traits">Personality Traits for Each Animal</h2>
+  <p>Like Western zodiac signs, each animal has associated personality characteristics. Japanese people often use these as lighthearted conversation topics:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Animal</th>
+        <th style="padding: 10px; text-align: left;">Positive Traits</th>
+        <th style="padding: 10px; text-align: left;">Challenges</th>
+        <th style="padding: 10px; text-align: left;">Japanese Trait Words</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐀 子 Rat</td>
+        <td style="padding: 10px;">Clever, resourceful, charming</td>
+        <td style="padding: 10px;">Can be too cautious</td>
+        <td style="padding: 10px;">賢い (kashikoi), 器用 (kiyō)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐂 丑 Ox</td>
+        <td style="padding: 10px;">Patient, dependable, hardworking</td>
+        <td style="padding: 10px;">Stubborn at times</td>
+        <td style="padding: 10px;">真面目 (majime), 忍耐強い (nintaizuyoi)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐅 寅 Tiger</td>
+        <td style="padding: 10px;">Brave, competitive, confident</td>
+        <td style="padding: 10px;">Sometimes impulsive</td>
+        <td style="padding: 10px;">勇敢 (yūkan), 自信がある (jishin ga aru)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐇 卯 Rabbit</td>
+        <td style="padding: 10px;">Gentle, elegant, compassionate</td>
+        <td style="padding: 10px;">Can avoid conflict</td>
+        <td style="padding: 10px;">優しい (yasashii), 上品 (jōhin)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐉 辰 Dragon</td>
+        <td style="padding: 10px;">Ambitious, energetic, lucky</td>
+        <td style="padding: 10px;">Can be demanding</td>
+        <td style="padding: 10px;">野心的 (yashin-teki), 元気 (genki)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐍 巳 Snake</td>
+        <td style="padding: 10px;">Wise, intuitive, mysterious</td>
+        <td style="padding: 10px;">Can be secretive</td>
+        <td style="padding: 10px;">知恵がある (chie ga aru), 直感的 (chokkanteki)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐴 午 Horse</td>
+        <td style="padding: 10px;">Free-spirited, energetic, social</td>
+        <td style="padding: 10px;">Can be impatient</td>
+        <td style="padding: 10px;">活発 (kappatsu), 社交的 (shakōteki)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐑 未 Sheep</td>
+        <td style="padding: 10px;">Creative, kind, peaceful</td>
+        <td style="padding: 10px;">Can be indecisive</td>
+        <td style="padding: 10px;">創造的 (sōzōteki), 穏やか (odayaka)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐒 申 Monkey</td>
+        <td style="padding: 10px;">Witty, versatile, playful</td>
+        <td style="padding: 10px;">Can be mischievous</td>
+        <td style="padding: 10px;">機転が利く (kiten ga kiku), 面白い (omoshiroi)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐔 酉 Rooster</td>
+        <td style="padding: 10px;">Organized, punctual, observant</td>
+        <td style="padding: 10px;">Can be perfectionist</td>
+        <td style="padding: 10px;">几帳面 (kichōmen), 観察力 (kansatsu-ryoku)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">🐕 戌 Dog</td>
+        <td style="padding: 10px;">Loyal, honest, protective</td>
+        <td style="padding: 10px;">Can worry too much</td>
+        <td style="padding: 10px;">忠実 (chūjitsu), 正直 (shōjiki)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">🐗 亥 Boar</td>
+        <td style="padding: 10px;">Courageous, determined, sincere</td>
+        <td style="padding: 10px;">Can be headstrong</td>
+        <td style="padding: 10px;">猪突猛進 (chototsu mōshin), 誠実 (seijitsu)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="new-year-traditions">Zodiac and Japanese New Year Traditions</h2>
+  <p>The zodiac plays a central role in Japan's biggest holiday — <strong>お正月 (oshōgatsu)</strong>, New Year. Here is how the zodiac appears in New Year celebrations:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 2px solid #fca5a5; padding: 1.2rem; border-radius: 8px;">
+      <strong>🎴 年賀状 (Nengajō)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">New Year postcards feature the year's zodiac animal in artistic designs. Japanese people send millions of these cards, delivered on January 1st.</p>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #fde68a; padding: 1.2rem; border-radius: 8px;">
+      <strong>🏮 Decorations (飾り)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Stores, homes, and shrines display zodiac animal decorations. Figurines and ornaments of the year's animal are popular souvenirs.</p>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #86efac; padding: 1.2rem; border-radius: 8px;">
+      <strong>⛩️ Shrine Visits (初詣)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Shrines sell zodiac-themed お守り (omamori, charms) and 絵馬 (ema, wishing plaques) with the year's animal.</p>
+    </div>
+  </div>
+
+  <h2 id="compatibility">Animal Compatibility and Relationships</h2>
+  <p>Traditional zodiac compatibility suggests which animals harmonize and which may clash:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Compatibility</th>
+        <th style="padding: 10px; text-align: left;">Animal Pairs</th>
+        <th style="padding: 10px; text-align: left;">Relationship</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Best matches ❤️</strong></td>
+        <td style="padding: 10px;">Rat + Dragon, Ox + Snake, Tiger + Horse</td>
+        <td style="padding: 10px;">Natural harmony and mutual support</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Good matches 👍</strong></td>
+        <td style="padding: 10px;">Rabbit + Sheep, Monkey + Rat, Dog + Tiger</td>
+        <td style="padding: 10px;">Complementary strengths</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Challenging 😤</strong></td>
+        <td style="padding: 10px;">Rat + Horse, Ox + Sheep, Tiger + Monkey</td>
+        <td style="padding: 10px;">Opposite personalities may clash</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="vs-chinese">Japanese vs Chinese Zodiac — Key Differences</h2>
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Aspect</th>
+        <th style="padding: 10px; text-align: left;">Japanese 干支</th>
+        <th style="padding: 10px; text-align: left;">Chinese 生肖</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>12th animal</strong></td>
+        <td style="padding: 10px;">猪 Boar (wild boar)</td>
+        <td style="padding: 10px;">猪 Pig (domestic pig)</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>New Year date</strong></td>
+        <td style="padding: 10px;">January 1 (solar calendar)</td>
+        <td style="padding: 10px;">Lunar New Year (Jan/Feb)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Cultural weight</strong></td>
+        <td style="padding: 10px;">Lighter — more for fun</td>
+        <td style="padding: 10px;">Stronger — affects major decisions</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Elements</strong></td>
+        <td style="padding: 10px;">Rarely used in modern Japan</td>
+        <td style="padding: 10px;">Five elements cycle (Wood, Fire, Earth, Metal, Water)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="vocabulary">Zodiac Vocabulary for Japanese Learners</h2>
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Japanese</th>
+        <th style="padding: 10px; text-align: left;">Reading</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+        <th style="padding: 10px; text-align: left;">Context</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">干支</td><td style="padding: 10px;">えと</td><td style="padding: 10px;">zodiac</td><td style="padding: 10px;">干支は何ですか？ What's your zodiac?</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">年</td><td style="padding: 10px;">どし</td><td style="padding: 10px;">year (zodiac)</td><td style="padding: 10px;">何年？ What year (animal) are you?</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">年賀状</td><td style="padding: 10px;">ねんがじょう</td><td style="padding: 10px;">New Year card</td><td style="padding: 10px;">年賀状を書く to write New Year cards</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">お正月</td><td style="padding: 10px;">おしょうがつ</td><td style="padding: 10px;">New Year</td><td style="padding: 10px;">お正月おめでとう Happy New Year</td></tr>
+      <tr style="background: #f8fafc;"><td style="padding: 10px;">相性</td><td style="padding: 10px;">あいしょう</td><td style="padding: 10px;">compatibility</td><td style="padding: 10px;">相性がいい good compatibility</td></tr>
+      <tr style="background: #ffffff;"><td style="padding: 10px;">性格</td><td style="padding: 10px;">せいかく</td><td style="padding: 10px;">personality</td><td style="padding: 10px;">性格を表す to express personality</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="modern-culture">The Zodiac in Modern Japanese Culture</h2>
+  <p>Beyond New Year, the zodiac appears throughout modern Japanese culture in surprising ways:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>🍫 Limited Edition Products</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Brands release zodiac-themed snacks, drinks, and merchandise every December for the upcoming year's animal.</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>📺 Media and Entertainment</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Anime like Fruits Basket features zodiac animals as central plot elements. Many games include zodiac-themed characters.</p>
+    </div>
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>🗣️ Daily Conversation</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Asking 何年？(nani-doshi?) is a polite way to guess someone's age without directly asking — a useful social skill in Japan.</p>
+    </div>
+  </div>
+
+  <p>Understanding the zodiac gives you a natural conversation topic with Japanese speakers and deeper appreciation for New Year culture. Explore more Japanese culture topics in our <a href="/japanese/blog/japanese-culture-etiquette/">Culture and Etiquette Guide</a>, and use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup tool</a> to study the zodiac animal kanji.</p>
 
 </BlogLayout>

@@ -1,35 +1,376 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Are dramas better than anime for learning?", "a": "Dramas use more natural, everyday speech patterns. Anime often uses exaggerated or archaic language. For conversation skills, dramas are generally better."}, {"q": "Should I take notes while watching?", "a": "On first viewing, just enjoy. On second viewing, pause and note new vocabulary. This two-pass method is more effective and enjoyable."}, {"q": "Where can I watch Japanese dramas?", "a": "Netflix, Viki, and Crunchyroll have extensive Japanese drama libraries. NHK World offers free content with Japanese subtitles."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "why-dramas", "text": "Why Dramas Work"}, {"depth": 2, "slug": "beginner", "text": "Beginner Dramas (5)"}, {"depth": 2, "slug": "intermediate", "text": "Intermediate Dramas (5)"}, {"depth": 2, "slug": "advanced", "text": "Advanced Dramas (5)"}, {"depth": 2, "slug": "study-method", "text": "How to Study with Dramas"}];
+const faq = [
+  { q: `Are dramas better than anime for learning Japanese?`, a: `For conversation skills, dramas are generally better because they use natural, everyday speech patterns. Anime often features exaggerated, archaic, or gender-specific language. Dramas model the way real Japanese people actually talk in daily life.` },
+  { q: `Should I take notes while watching?`, a: `On first viewing, just enjoy the story. On second viewing, pause to note 5–10 new vocabulary words per episode. This two-pass method is more effective and enjoyable than constant pausing on your first watch.` },
+  { q: `Where can I watch Japanese dramas with subtitles?`, a: `Netflix, Viki, and Crunchyroll have extensive Japanese drama libraries. NHK World offers free content. Viki is especially good because it often has both Japanese and English subtitles available simultaneously.` },
+  { q: `How many episodes should I watch per week for learning?`, a: `Quality matters more than quantity. Actively studying 2–3 episodes per week (with vocabulary mining and shadowing) produces better results than passively watching 10 episodes. Follow the active watching method for maximum benefit.` },
+  { q: `Can I learn Japanese from dramas alone?`, a: `Dramas are excellent for listening and vocabulary, but they cannot replace structured grammar study, kanji learning, or speaking practice. Use dramas as a supplement to — not a replacement for — a balanced study plan.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Kana Converter", url: "/japanese/tools/romaji-to-kana/" },
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }
+];
+const headings = [
+  { depth: 2, slug: "why-dramas", text: "Why Japanese Dramas Are Perfect for Language Learning" },
+  { depth: 2, slug: "beginner-dramas", text: "5 Dramas for Beginners (N5–N4)" },
+  { depth: 2, slug: "intermediate-dramas", text: "5 Dramas for Intermediate Learners (N3–N2)" },
+  { depth: 2, slug: "advanced-dramas", text: "5 Dramas for Advanced Learners (N2–N1)" },
+  { depth: 2, slug: "active-watching", text: "The Active Watching Method — 5 Steps" },
+  { depth: 2, slug: "subtitle-strategy", text: "Subtitle Strategy by Level" },
+  { depth: 2, slug: "drama-vs-anime", text: "Drama vs Anime — Which Is Better for Learning?" },
+  { depth: 2, slug: "weekly-routine", text: "Building a Drama-Based Study Routine" }
+];
 ---
 <BlogLayout
   title="15 Best Japanese TV Dramas for Language Learning by Level"
-  description="Improve Japanese with 15 selected dramas organized by difficulty level with vocabulary and study tips."
+  description="Improve your Japanese with 15 carefully selected dramas organized by difficulty level. Includes the active watching method, subtitle strategies, and study tips."
   language="japanese"
-  category="study tips"
-  tags={["culture", "listening"]}
+  category="study-tips"
+  tags={["culture", "listening", "dramas", "immersion", "study-tips"]}
   publishDate="2026-03-05"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="why-dramas">Why Dramas Work</h2>
-    <p>Effective Japanese study is about working smarter, not harder. Research consistently shows that certain approaches dramatically outperform traditional study methods.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="beginner">Beginner Dramas (5)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="intermediate">Intermediate Dramas (5)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="advanced">Advanced Dramas (5)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="study-method">How to Study with Dramas</h2>
-    <p>The spacing effect — reviewing at gradually increasing intervals — and active recall — retrieving information from memory rather than re-reading — are two of the most powerful evidence-based techniques for language learning.</p>
-    <p>Consistency beats intensity. Studying 15 minutes daily produces better results than 2 hours once a week. Build Japanese into your daily routine rather than treating it as a separate activity. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <h2 id="why-dramas">Why Japanese Dramas Are Perfect for Language Learning</h2>
+  <p>Japanese TV dramas (ドラマ, dorama) are one of the most effective — and enjoyable — ways to improve your Japanese. Unlike textbook dialogues, dramas expose you to <strong>natural speech patterns, real pronunciation, cultural context, and emotional nuance</strong> that no classroom can replicate.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">👂</div>
+      <strong>Natural Listening</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Hear real speech speed, pitch accent, and connected sounds</p>
+    </div>
+    <div style="background: #f0fdf4; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🎭</div>
+      <strong>Register Awareness</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Learn formal, casual, and keigo speech in context</p>
+    </div>
+    <div style="background: #fefce8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🇯🇵</div>
+      <strong>Cultural Learning</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Understand social norms, etiquette, and daily life</p>
+    </div>
+    <div style="background: #fdf2f8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🧠</div>
+      <strong>Emotional Memory</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Words learned in emotional scenes stick far better</p>
+    </div>
+  </div>
+
+  <p>A typical 10-episode drama gives you 8–10 hours of immersive listening practice — equivalent to dozens of textbook audio tracks, but far more engaging and memorable.</p>
+
+  <h2 id="beginner-dramas">5 Dramas for Beginners (N5–N4)</h2>
+  <p>These dramas use simple, everyday vocabulary with clear pronunciation. Slice-of-life and family dramas are ideal because they feature common conversation patterns you will actually use.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #16a34a; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Drama Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why Great for Beginners</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">1</td>
+        <td style="padding: 10px;"><strong>テレビ演劇 サザエさん</strong><br><em>Sazae-san (Live Action)</em></td>
+        <td style="padding: 10px;">Family comedy</td>
+        <td style="padding: 10px;">Simple family conversations, everyday situations, clear speech</td>
+        <td style="padding: 10px;">Family, daily life, food</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">2</td>
+        <td style="padding: 10px;"><strong>逃げるは恥だが役に立つ</strong><br><em>We Married as a Job</em></td>
+        <td style="padding: 10px;">Romantic comedy</td>
+        <td style="padding: 10px;">Slow dialogue, household vocabulary, modern setting</td>
+        <td style="padding: 10px;">Home, work, relationships</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">3</td>
+        <td style="padding: 10px;"><strong>孤独のグルメ</strong><br><em>Solitary Gourmet</em></td>
+        <td style="padding: 10px;">Food drama</td>
+        <td style="padding: 10px;">Food vocabulary, restaurant ordering, internal monologue (slow)</td>
+        <td style="padding: 10px;">Food, restaurants, ordering</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">4</td>
+        <td style="padding: 10px;"><strong>深夜食堂</strong><br><em>Midnight Diner</em></td>
+        <td style="padding: 10px;">Slice of life</td>
+        <td style="padding: 10px;">Short episodes, simple dialogue, diverse characters</td>
+        <td style="padding: 10px;">Food, emotions, daily life</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5</td>
+        <td style="padding: 10px;"><strong>日本人の知らない日本語</strong><br><em>Japanese the Japanese Don't Know</em></td>
+        <td style="padding: 10px;">Comedy / Educational</td>
+        <td style="padding: 10px;">About teaching Japanese — meta-learning, simple explanations</td>
+        <td style="padding: 10px;">Grammar terms, classroom, culture</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="intermediate-dramas">5 Dramas for Intermediate Learners (N3–N2)</h2>
+  <p>At this level, you can handle faster dialogue and more complex plots. These dramas introduce workplace language, varied speech registers, and cultural nuance:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #2563eb; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Drama Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why Great for Intermediate</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">6</td>
+        <td style="padding: 10px;"><strong>半沢直樹</strong><br><em>Hanzawa Naoki</em></td>
+        <td style="padding: 10px;">Business drama</td>
+        <td style="padding: 10px;">Keigo in action, business vocabulary, dramatic speech</td>
+        <td style="padding: 10px;">Business, banking, formal speech</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">7</td>
+        <td style="padding: 10px;"><strong>アンナチュラル</strong><br><em>Unnatural</em></td>
+        <td style="padding: 10px;">Medical mystery</td>
+        <td style="padding: 10px;">Professional vocabulary, investigation dialogue, emotional depth</td>
+        <td style="padding: 10px;">Medical, science, investigation</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">8</td>
+        <td style="padding: 10px;"><strong>リーガルハイ</strong><br><em>Legal High</em></td>
+        <td style="padding: 10px;">Legal comedy</td>
+        <td style="padding: 10px;">Rapid dialogue, witty wordplay, formal vs casual contrast</td>
+        <td style="padding: 10px;">Legal, debate, humor</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">9</td>
+        <td style="padding: 10px;"><strong>重版出来！</strong><br><em>Juhan Shuttai!</em></td>
+        <td style="padding: 10px;">Workplace</td>
+        <td style="padding: 10px;">Publishing industry, workplace culture, motivational themes</td>
+        <td style="padding: 10px;">Work, publishing, teamwork</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">10</td>
+        <td style="padding: 10px;"><strong>コード・ブルー</strong><br><em>Code Blue</em></td>
+        <td style="padding: 10px;">Medical drama</td>
+        <td style="padding: 10px;">Emergency situations, teamwork vocabulary, emotional scenes</td>
+        <td style="padding: 10px;">Medical, emergency, teamwork</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="advanced-dramas">5 Dramas for Advanced Learners (N2–N1)</h2>
+  <p>These dramas challenge you with complex dialogue, subtle humor, historical language, and nuanced social dynamics:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Drama Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why Great for Advanced</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">11</td>
+        <td style="padding: 10px;"><strong>大河ドラマ</strong><br><em>NHK Historical Dramas</em></td>
+        <td style="padding: 10px;">Historical</td>
+        <td style="padding: 10px;">Classical expressions, historical vocabulary, formal registers</td>
+        <td style="padding: 10px;">History, politics, tradition</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">12</td>
+        <td style="padding: 10px;"><strong>VIVANT</strong><br><em>VIVANT</em></td>
+        <td style="padding: 10px;">Thriller</td>
+        <td style="padding: 10px;">Complex plot, military/intelligence vocabulary, multiple languages</td>
+        <td style="padding: 10px;">Intelligence, strategy, politics</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">13</td>
+        <td style="padding: 10px;"><strong>白い巨塔</strong><br><em>The Great White Tower</em></td>
+        <td style="padding: 10px;">Medical / Political</td>
+        <td style="padding: 10px;">Academic language, hospital hierarchy, ethical debates</td>
+        <td style="padding: 10px;">Medicine, academia, power</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">14</td>
+        <td style="padding: 10px;"><strong>最愛</strong><br><em>Dearest</em></td>
+        <td style="padding: 10px;">Mystery / Drama</td>
+        <td style="padding: 10px;">Layered dialogue, emotional nuance, unreliable narration</td>
+        <td style="padding: 10px;">Mystery, emotion, family</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">15</td>
+        <td style="padding: 10px;"><strong>カルテット</strong><br><em>Quartet</em></td>
+        <td style="padding: 10px;">Drama / Comedy</td>
+        <td style="padding: 10px;">Subtle humor, wordplay, subtext-heavy conversations</td>
+        <td style="padding: 10px;">Music, relationships, wit</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="active-watching">The Active Watching Method — 5 Steps</h2>
+  <p>Passive watching helps, but <strong>active watching</strong> accelerates your learning dramatically. Follow this method for every episode you study:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 1: Watch for Story</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Watch the full episode with Japanese + English subtitles. Focus on understanding the plot without pausing.</p>
+    </div>
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 2: Scene Study</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Pick 2–3 favorite scenes. Re-watch with Japanese subtitles only. Pause to note new words.</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 3: Vocabulary Mining</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Add 5–10 useful new words to your flashcard deck with the drama scene as context.</p>
+    </div>
+    <div style="background: #fdf2f8; border-left: 4px solid #ec4899; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 4: Shadow Dialogue</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Play chosen scenes and speak along with characters. Match speed, pitch, and emotion.</p>
+    </div>
+    <div style="background: #f5f3ff; border-left: 4px solid #7c3aed; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 5: Re-watch No Subs</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Days later, re-watch the same scenes without subtitles. Test how much you now understand.</p>
+    </div>
+  </div>
+
+  <h2 id="subtitle-strategy">Subtitle Strategy by Level</h2>
+  <p>Your subtitle setup should evolve as your Japanese improves:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">First Watch</th>
+        <th style="padding: 10px; text-align: left;">Study Watch</th>
+        <th style="padding: 10px; text-align: left;">Review Watch</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Beginner</strong></td>
+        <td style="padding: 10px;">English + Japanese subtitles</td>
+        <td style="padding: 10px;">Japanese subtitles only</td>
+        <td style="padding: 10px;">Japanese subtitles</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Intermediate</strong></td>
+        <td style="padding: 10px;">Japanese subtitles only</td>
+        <td style="padding: 10px;">Japanese subtitles only</td>
+        <td style="padding: 10px;">No subtitles</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Advanced</strong></td>
+        <td style="padding: 10px;">No subtitles</td>
+        <td style="padding: 10px;">Japanese subtitles (for new vocab)</td>
+        <td style="padding: 10px;">No subtitles</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>⚠️ Important:</strong> English-only subtitles are the <strong>worst</strong> option for learning. Your brain defaults to reading English and ignores the Japanese audio. Always include Japanese text in your subtitles.
+  </div>
+
+  <h2 id="drama-vs-anime">Drama vs Anime — Which Is Better for Learning?</h2>
+  <p>Both have value, but they serve different purposes:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Aspect</th>
+        <th style="padding: 10px; text-align: left;">Dramas ドラマ</th>
+        <th style="padding: 10px; text-align: left;">Anime アニメ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Speech style</strong></td>
+        <td style="padding: 10px;">Natural, everyday conversation</td>
+        <td style="padding: 10px;">Often exaggerated or archaic</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Keigo (polite speech)</strong></td>
+        <td style="padding: 10px;">Extensive — workplace and social</td>
+        <td style="padding: 10px;">Limited — mostly casual</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Cultural context</strong></td>
+        <td style="padding: 10px;">Real-world settings and customs</td>
+        <td style="padding: 10px;">Often fantasy or exaggerated</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Best for</strong></td>
+        <td style="padding: 10px;">Conversation skills, business Japanese</td>
+        <td style="padding: 10px;">Casual speech, vocabulary building</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Recommendation</strong></td>
+        <td style="padding: 10px;">Primary study material</td>
+        <td style="padding: 10px;">Supplementary / enjoyment</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>For more on learning with anime specifically, see our <a href="/japanese/blog/learn-japanese-from-anime/">Learn Japanese from Anime Guide</a>.</p>
+
+  <h2 id="weekly-routine">Building a Drama-Based Study Routine</h2>
+  <p>Integrate drama watching into your weekly study plan:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Day</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Saturday</td>
+        <td style="padding: 10px;">Watch 1–2 episodes (Step 1)</td>
+        <td style="padding: 10px;">60–90 min</td>
+        <td style="padding: 10px;">Enjoyment + general comprehension</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Sunday</td>
+        <td style="padding: 10px;">Scene study + vocabulary (Steps 2–3)</td>
+        <td style="padding: 10px;">30 min</td>
+        <td style="padding: 10px;">New words + patterns</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Mon–Wed</td>
+        <td style="padding: 10px;">Review flashcards from drama</td>
+        <td style="padding: 10px;">10 min/day</td>
+        <td style="padding: 10px;">Retain new vocabulary</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Thursday</td>
+        <td style="padding: 10px;">Shadow key scenes (Step 4)</td>
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">Pronunciation + fluency</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Friday</td>
+        <td style="padding: 10px;">Re-watch without subtitles (Step 5)</td>
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">Test listening comprehension</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Start with a beginner drama from the list above and commit to the active watching method this week. Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary tool</a> to check and study the words you encounter, and explore our <a href="/japanese/blog/japanese-resources-2026/">Best Japanese Resources guide</a> for more tools to support your learning journey.</p>
 
 </BlogLayout>

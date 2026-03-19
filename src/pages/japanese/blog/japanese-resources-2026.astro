@@ -1,28 +1,394 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Can I learn Japanese for free?`, a: `Yes. Between free apps, YouTube channels, our tools, and online communities, you can reach conversational ability without spending money. Paid resources can accelerate progress but are not required.` }, { q: `How long does it take to learn Japanese?`, a: `The US Foreign Service Institute estimates 2,200 class hours for English speakers to achieve proficiency in Japanese. For conversational ability, most dedicated learners achieve basic communication in 6-12 months of daily study.` }];
-const relatedTools = [{ name: "All Japanese Tools", url: "/japanese/tools/" }];
-const headings = [{ depth: 2, slug: "online-tools", text: "Online Tools" }, { depth: 2, slug: "apps", text: "Mobile Apps" }, { depth: 2, slug: "immersion", text: "Immersion Content" }];
+const faq = [
+  { q: `Can I learn Japanese for free?`, a: `Yes. Between free apps like Anki and Tae Kim, YouTube channels, NHK World, and tools like FreeToolkit, you can reach conversational ability without spending money. Paid resources can accelerate progress but are not required — consistency matters more than budget.` },
+  { q: `How long does it take to learn Japanese?`, a: `The US Foreign Service Institute estimates 2,200 class hours for English speakers. For basic conversation, most dedicated learners achieve it in 6–12 months with 1–2 hours of daily study. JLPT N3 level (intermediate) typically takes 12–18 months.` },
+  { q: `What is the single best app for learning Japanese?`, a: `There is no single best app because different tools excel at different skills. For kanji: WaniKani. For vocabulary: Anki. For grammar: Bunpo. For dictionary: Jisho. The best approach is combining 2–3 tools that cover your weakest areas.` },
+  { q: `Should I learn hiragana and katakana before using apps?`, a: `Yes — learn hiragana and katakana first (1–2 weeks). Most quality Japanese learning resources use kana instead of romaji. This small upfront investment makes everything else easier and more effective.` },
+  { q: `Is Duolingo good for Japanese?`, a: `Duolingo Japanese is fine for absolute beginners to build motivation, but it lacks depth in grammar explanation, kanji teaching, and natural conversation. Supplement with dedicated tools for each skill area for serious progress.` }
+];
+const relatedTools = [
+  { name: "All Japanese Tools", url: "/japanese/tools/" },
+  { name: "Kana Converter", url: "/japanese/tools/romaji-to-kana/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "choosing-resources", text: "How to Choose the Right Resources for Your Level" },
+  { depth: 2, slug: "online-tools", text: "Best Free Online Tools and Websites" },
+  { depth: 2, slug: "mobile-apps", text: "Top Mobile Apps for Japanese Learning" },
+  { depth: 2, slug: "listening-resources", text: "Listening Resources — Podcasts, Audio, and Video" },
+  { depth: 2, slug: "reading-resources", text: "Reading Resources for Every Level" },
+  { depth: 2, slug: "speaking-practice", text: "Speaking and Pronunciation Practice" },
+  { depth: 2, slug: "study-plan", text: "How to Build a Daily Study Plan" },
+  { depth: 2, slug: "mistakes-to-avoid", text: "Resource Mistakes Most Learners Make" }
+];
 ---
 <BlogLayout
   title="Best Free Resources for Learning Japanese in 2026"
-  description="Curated list of the best free apps, websites, podcasts, and tools for Japanese learners at every level."
+  description="Curated list of the best free apps, websites, podcasts, and tools for learning Japanese at every level. Includes study plan templates and expert recommendations."
   language="japanese"
   category="study-tips"
-  tags={["resources", "apps", "study-tips", "beginner"]}
+  tags={["resources", "apps", "study-tips", "beginner", "intermediate"]}
   publishDate="2026-02-23"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="online-tools">Online Tools</h2>
-    <p>Our <a href="/japanese/tools/">15 free Japanese learning tools</a> cover kana, kanji, vocabulary, grammar, and daily practice. For grammar reference, Tae Kim's Guide to Japanese Grammar and Imabi are both excellent and free. Jisho.org is the best free online Japanese dictionary, with detailed kanji information and example sentences.</p>
+  <h2 id="choosing-resources">How to Choose the Right Resources for Your Level</h2>
+  <p>With hundreds of Japanese learning apps and websites available, the biggest challenge is not finding resources — it is choosing the <strong>right combination</strong> for your current level. The most successful learners use 2–3 focused tools rather than downloading every app available.</p>
 
-    <h2 id="apps">Mobile Apps</h2>
-    <p>Anki (free on Android) is the gold standard for spaced repetition flashcards with extensive community decks for JLPT vocabulary and kanji. WaniKani offers a structured kanji learning system (first levels free). Bunpo and Tae Kim apps provide grammar lessons organized by JLPT level.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🌱</div>
+      <strong>Beginner (N5–N4)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Focus on: kana mastery, basic kanji (200), core vocabulary, simple grammar patterns</p>
+    </div>
+    <div style="background: #eff6ff; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">📘</div>
+      <strong>Intermediate (N3)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Focus on: kanji expansion (600+), grammar patterns, reading practice, listening comprehension</p>
+    </div>
+    <div style="background: #fdf2f8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🎯</div>
+      <strong>Advanced (N2–N1)</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Focus on: native content, nuance, keigo, academic/business Japanese, kanji (2000+)</p>
+    </div>
+  </div>
 
-    <h2 id="immersion">Immersion Content</h2>
-    <p>NHK World Japan offers free news in simple Japanese. Japanese podcasts like JapanesePod101 provide graded listening practice. For reading, Tadoku graded readers start from absolute beginner. YouTube channels like Japanese Ammo with Misa and Nihongo no Mori cover grammar and culture. Download our <a href="/japanese/downloads/">free PDFs</a> for offline reference materials.</p>
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>🔑 Golden Rule:</strong> Every study session should include at least two of the four core skills — <strong>reading, listening, speaking, writing</strong>. An app that only covers vocabulary is not enough on its own.
+  </div>
+
+  <h2 id="online-tools">Best Free Online Tools and Websites</h2>
+  <p>These web-based resources cover everything from kana practice to grammar reference. All are free and accessible from any device:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">Resource</th>
+        <th style="padding: 10px; text-align: left;">Best For</th>
+        <th style="padding: 10px; text-align: left;">Key Features</th>
+        <th style="padding: 10px; text-align: left;">Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong><a href="/japanese/tools/">FreeToolkit Japanese Tools</a></strong></td>
+        <td style="padding: 10px;">Kana, kanji, practice</td>
+        <td style="padding: 10px;">Kana charts, kanji lookup, practice sheets, JLPT vocabulary</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Tae Kim's Grammar Guide</strong></td>
+        <td style="padding: 10px;">Grammar reference</td>
+        <td style="padding: 10px;">Comprehensive grammar explanations from beginner to advanced</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Jisho.org</strong></td>
+        <td style="padding: 10px;">Dictionary</td>
+        <td style="padding: 10px;">Detailed definitions, kanji info, example sentences, radical lookup</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Imabi</strong></td>
+        <td style="padding: 10px;">Deep grammar</td>
+        <td style="padding: 10px;">University-level Japanese grammar with extensive examples</td>
+        <td style="padding: 10px;">Intermediate+</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Forvo</strong></td>
+        <td style="padding: 10px;">Pronunciation</td>
+        <td style="padding: 10px;">Native speaker recordings of any Japanese word</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Massif</strong></td>
+        <td style="padding: 10px;">Reading practice</td>
+        <td style="padding: 10px;">Japanese news with built-in dictionary and furigana toggle</td>
+        <td style="padding: 10px;">Intermediate+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="mobile-apps">Top Mobile Apps for Japanese Learning</h2>
+  <p>Mobile apps turn dead time — commuting, waiting in line, lunch breaks — into productive study sessions. Here are the best options organized by skill:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">App</th>
+        <th style="padding: 10px; text-align: left;">Primary Skill</th>
+        <th style="padding: 10px; text-align: left;">Free Tier</th>
+        <th style="padding: 10px; text-align: left;">Best Feature</th>
+        <th style="padding: 10px; text-align: left;">Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Anki</strong></td>
+        <td style="padding: 10px;">Vocabulary / Kanji</td>
+        <td style="padding: 10px;">Free (Android), $25 (iOS)</td>
+        <td style="padding: 10px;">Spaced repetition with community JLPT decks</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>WaniKani</strong></td>
+        <td style="padding: 10px;">Kanji</td>
+        <td style="padding: 10px;">First 3 levels free</td>
+        <td style="padding: 10px;">Mnemonic-based kanji system with radicals</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Bunpo</strong></td>
+        <td style="padding: 10px;">Grammar</td>
+        <td style="padding: 10px;">Core lessons free</td>
+        <td style="padding: 10px;">JLPT-organized grammar with practice exercises</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Takoboto</strong></td>
+        <td style="padding: 10px;">Dictionary</td>
+        <td style="padding: 10px;">Fully free</td>
+        <td style="padding: 10px;">Offline dictionary with conjugation tables and examples</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Todai Easy Japanese</strong></td>
+        <td style="padding: 10px;">Reading / Listening</td>
+        <td style="padding: 10px;">Many articles free</td>
+        <td style="padding: 10px;">NHK news simplified with audio and furigana</td>
+        <td style="padding: 10px;">Intermediate</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>HelloTalk / Tandem</strong></td>
+        <td style="padding: 10px;">Speaking / Exchange</td>
+        <td style="padding: 10px;">Free with ads</td>
+        <td style="padding: 10px;">Find native Japanese speakers for language exchange</td>
+        <td style="padding: 10px;">Intermediate+</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Kanji Study</strong></td>
+        <td style="padding: 10px;">Kanji writing</td>
+        <td style="padding: 10px;">Free tier available</td>
+        <td style="padding: 10px;">Stroke order animations with handwriting practice</td>
+        <td style="padding: 10px;">All levels</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>💡 Must-Have:</strong> Download Jisho.org (or Takoboto for offline use) immediately — it is the essential dictionary for any Japanese learner. Its radical-based kanji lookup and sentence search make it invaluable for reading practice.
+  </div>
+
+  <h2 id="listening-resources">Listening Resources — Podcasts, Audio, and Video</h2>
+  <p>Listening is the skill most learners neglect, yet it is crucial for real-world communication. Here are the best free listening resources by level:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #0d9488; color: white;">
+        <th style="padding: 10px; text-align: left;">Resource</th>
+        <th style="padding: 10px; text-align: left;">Type</th>
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">What Makes It Great</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>NHK World Japan</strong></td>
+        <td style="padding: 10px;">News / Lessons</td>
+        <td style="padding: 10px;">Beginner+</td>
+        <td style="padding: 10px;">Free news in simple Japanese with transcripts</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Japanese Ammo with Misa</strong></td>
+        <td style="padding: 10px;">YouTube</td>
+        <td style="padding: 10px;">All levels</td>
+        <td style="padding: 10px;">Clear grammar explanations with native speaker insight</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Nihongo no Mori</strong></td>
+        <td style="padding: 10px;">YouTube</td>
+        <td style="padding: 10px;">All levels</td>
+        <td style="padding: 10px;">JLPT-organized lessons taught mostly in Japanese</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>JapanesePod101</strong></td>
+        <td style="padding: 10px;">Podcast</td>
+        <td style="padding: 10px;">Beginner–Intermediate</td>
+        <td style="padding: 10px;">Dialogue-based lessons with cultural notes</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Nihongo con Teppei</strong></td>
+        <td style="padding: 10px;">Podcast</td>
+        <td style="padding: 10px;">Intermediate</td>
+        <td style="padding: 10px;">Daily topics spoken in natural, comprehensible Japanese</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Onomappu</strong></td>
+        <td style="padding: 10px;">YouTube</td>
+        <td style="padding: 10px;">All levels</td>
+        <td style="padding: 10px;">Visual vocabulary lessons with memorable animations</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="reading-resources">Reading Resources for Every Level</h2>
+  <p>Reading builds vocabulary passively and reinforces grammar patterns. Start with material slightly below your level (understand 90%+ of words) and gradually increase difficulty:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">🌱 Beginner Reading</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li><strong>Tadoku Graded Readers</strong> — free online, levels 0–5</li>
+        <li><strong>NHK Easy News</strong> — simplified articles with furigana</li>
+        <li><strong>Satori Reader</strong> — stories with grammar notes (some free)</li>
+        <li><strong>Children's books</strong> — simple language with illustrations</li>
+      </ul>
+    </div>
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">📘 Intermediate Reading</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li><strong>Manga</strong> — natural dialogue with visual context</li>
+        <li><strong>Light novels</strong> — often with furigana on kanji</li>
+        <li><strong>NHK regular news</strong> — standard Japanese reporting</li>
+        <li><strong>Wikipedia Japanese</strong> — familiar topics in Japanese</li>
+      </ul>
+    </div>
+    <div style="background: #fdf2f8; border: 2px solid #ec4899; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #db2777;">🎯 Advanced Reading</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li><strong>Novels</strong> — Murakami, Yoshimoto, contemporary fiction</li>
+        <li><strong>News sites</strong> — 朝日新聞, 読売新聞, NHK</li>
+        <li><strong>2ch / 5ch</strong> — internet forums (colloquial Japanese)</li>
+        <li><strong>Academic papers</strong> — for specialized vocabulary</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="speaking-practice">Speaking and Pronunciation Practice</h2>
+  <p>Speaking is the hardest skill to practice alone, but these methods make it possible without a personal tutor:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Method</th>
+        <th style="padding: 10px; text-align: left;">How It Works</th>
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Shadowing</strong></td>
+        <td style="padding: 10px;">Play native audio and speak along simultaneously</td>
+        <td style="padding: 10px;">10 min/day</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Language Exchange</strong></td>
+        <td style="padding: 10px;">HelloTalk or Tandem — practice with native speakers</td>
+        <td style="padding: 10px;">30 min/session</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Self-Narration</strong></td>
+        <td style="padding: 10px;">Describe your daily activities in Japanese</td>
+        <td style="padding: 10px;">Anytime</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Record & Compare</strong></td>
+        <td style="padding: 10px;">Record yourself, compare to native speakers</td>
+        <td style="padding: 10px;">5 min/day</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Check out our <a href="/japanese/blog/japanese-shadowing-method/">Japanese Shadowing Method Guide</a> for a detailed shadowing technique walkthrough.</p>
+
+  <h2 id="study-plan">How to Build a Daily Study Plan</h2>
+  <p>Great resources mean nothing without a consistent routine. Here is a sample 60-minute daily plan:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Tool / Resource</th>
+        <th style="padding: 10px; text-align: left;">Skill</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Morning (10 min)</td>
+        <td style="padding: 10px;">Flashcard review</td>
+        <td style="padding: 10px;">Anki JLPT deck</td>
+        <td style="padding: 10px;">Vocabulary</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Commute (15 min)</td>
+        <td style="padding: 10px;">Podcast listening</td>
+        <td style="padding: 10px;">Nihongo con Teppei</td>
+        <td style="padding: 10px;">Listening</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Lunch (10 min)</td>
+        <td style="padding: 10px;">Read graded article</td>
+        <td style="padding: 10px;">NHK Easy News / Tadoku</td>
+        <td style="padding: 10px;">Reading</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Afternoon (5 min)</td>
+        <td style="padding: 10px;">Shadowing</td>
+        <td style="padding: 10px;">Morning podcast clip</td>
+        <td style="padding: 10px;">Speaking</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Evening (15 min)</td>
+        <td style="padding: 10px;">Kanji / Grammar</td>
+        <td style="padding: 10px;">WaniKani / Bunpo</td>
+        <td style="padding: 10px;">Kanji + Grammar</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Before bed (10 min)</td>
+        <td style="padding: 10px;">Writing practice</td>
+        <td style="padding: 10px;"><a href="/japanese/tools/practice-sheet/">Practice Sheet</a></td>
+        <td style="padding: 10px;">Writing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="mistakes-to-avoid">Resource Mistakes Most Learners Make</h2>
+  <p>Collecting apps is not the same as learning Japanese. Here are the most common resource mistakes:</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Common Mistakes</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Downloading 10+ apps and using none consistently</li>
+        <li>Only studying kanji without grammar or listening</li>
+        <li>Staying in romaji instead of learning kana early</li>
+        <li>Spending more time choosing resources than studying</li>
+        <li>Skipping review — learning new words but forgetting old ones</li>
+        <li>Using only English-language resources after beginner stage</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Better Approach</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Pick 2–3 core tools and commit for 30 days</li>
+        <li>Balance all four skills weekly</li>
+        <li>Learn hiragana and katakana in week 1</li>
+        <li>Commit to your tools before switching</li>
+        <li>Use Anki with spaced repetition to retain vocabulary</li>
+        <li>Gradually transition to Japanese-only resources</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Start with our <a href="/japanese/tools/">free Japanese learning tools</a> for kana, kanji, and vocabulary practice. If you are just starting, check our <a href="/japanese/blog/hiragana-guide/">Hiragana Guide</a> and <a href="/japanese/blog/katakana-guide/">Katakana Guide</a> first, then move to <a href="/japanese/blog/jlpt-preparation-guide/">JLPT Preparation</a> when you are ready for structured exam study.</p>
 
 </BlogLayout>
