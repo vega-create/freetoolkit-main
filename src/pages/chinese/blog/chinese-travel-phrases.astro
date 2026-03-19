@@ -1,31 +1,294 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Can I get by in China with only English?`, a: `In major cities like Beijing and Shanghai, some English is spoken in tourist areas. However, knowing basic Chinese phrases dramatically improves your experience and access to local culture.` }];
-const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
-const headings = [{ depth: 2, slug: "airport", text: "At the Airport" }, { depth: 2, slug: "hotel", text: "At the Hotel" }, { depth: 2, slug: "transport", text: "Transportation" }, { depth: 2, slug: "emergency", text: "Emergencies" }];
+
+const faq = [
+  { q: `Can I get by in China with only English?`, a: `In major cities like Beijing and Shanghai, some English is spoken in tourist areas, international hotels, and airports. However, knowing basic Chinese phrases dramatically improves your experience — from getting better prices at markets to finding hidden local restaurants. Outside major cities, English is rarely spoken. In Taiwan, English proficiency is higher in Taipei but limited elsewhere.` },
+  { q: `What are the most important phrases for a first trip to China?`, a: `The top 10 survival phrases are: 你好 (hello), 谢谢 (thank you), 多少钱 (how much), 这个 (this one), 在哪里 (where is), 我要 (I want), 不要 (don't want), 听不懂 (I don't understand), 帮忙 (help), and 买单 (check please). These alone will cover most tourist situations.` },
+  { q: `Is it safe to take taxis in China?`, a: `Taxis in major Chinese cities are generally safe and affordable. Always use the meter (打表, dǎbiǎo) — say 请打表 if the driver doesn't turn it on. In China, ride-hailing apps like DiDi (滴滴) are very popular and convenient. In Taiwan, taxis are metered by law and very safe. Keep your hotel's address card handy to show drivers.` },
+  { q: `How different is Chinese in China vs Taiwan for travelers?`, a: `The core vocabulary is the same, but there are some differences: Taiwan uses traditional characters (繁体字) while China uses simplified (简体字). Some words differ — for example, taxi is 出租车 in China but 计程车 in Taiwan. Accents and some expressions also vary. However, your basic travel phrases will work in both places.` },
+];
+
+const relatedTools = [
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Number Converter", url: "/chinese/tools/number-converter/" },
+];
+
+const headings = [
+  { depth: 2, slug: "survival-phrases", text: "10 Survival Phrases Every Traveler Needs" },
+  { depth: 2, slug: "airport-immigration", text: "Airport and Immigration" },
+  { depth: 2, slug: "transportation", text: "Getting Around: Transportation" },
+  { depth: 2, slug: "hotel", text: "Hotel and Accommodation" },
+  { depth: 2, slug: "restaurant", text: "Restaurants and Ordering Food" },
+  { depth: 2, slug: "directions", text: "Asking for Directions" },
+  { depth: 2, slug: "emergency", text: "Emergency and Health Phrases" },
+  { depth: 2, slug: "cultural-tips", text: "Cultural Tips for Travelers" },
+];
 ---
 <BlogLayout
-  title="30 Must-Know Chinese Phrases for Travelers"
-  description="Essential Chinese travel phrases for airports, hotels, restaurants, transportation, and emergencies. Survive any trip to China or Taiwan."
+  title="80+ Essential Chinese Travel Phrases: Your Complete Survival Guide for China and Taiwan"
+  description="Master 80+ Chinese travel phrases with pinyin for airports, hotels, restaurants, transportation, directions, and emergencies. Your complete guide to traveling in China and Taiwan."
   language="chinese"
   category="culture"
-  tags={["travel", "phrases", "beginner", "conversation"]}
+  tags={["travel", "phrases", "beginner", "conversation", "culture"]}
   publishDate="2026-02-21"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="airport">At the Airport</h2>
-    <p><strong>机场 (jīchǎng)</strong> airport. <strong>护照 (hùzhào)</strong> passport. <strong>签证 (qiānzhèng)</strong> visa. <strong>行李 (xínglǐ)</strong> luggage. <strong>出口 (chūkǒu)</strong> exit. <strong>入境 (rùjìng)</strong> immigration entry. When lost, say: <strong>请问…在哪里？(qǐng wèn… zài nǎlǐ?)</strong> — Excuse me, where is…?</p>
+<p>You've booked your flights, packed your bags, and you're heading to China or Taiwan. But there's one thing that can make or break your trip: being able to communicate. Even a handful of Chinese phrases can transform your travel experience — from getting the real local price instead of the tourist markup, to finding that incredible hole-in-the-wall restaurant your guidebook missed.</p>
 
-    <h2 id="hotel">At the Hotel</h2>
-    <p><strong>我有预订 (wǒ yǒu yùdìng)</strong> I have a reservation. <strong>房间 (fángjiān)</strong> room. <strong>钥匙 (yàoshi)</strong> key. <strong>退房 (tuìfáng)</strong> check out. <strong>WiFi密码是什么？(WiFi mìmǎ shì shénme?)</strong> What's the WiFi password?</p>
+<p>This guide gives you <strong>80+ travel phrases</strong> organized by the actual situations you'll face: arriving at the airport, catching a taxi, checking into your hotel, ordering food, asking for directions, and handling emergencies. Every phrase includes pinyin so you can pronounce it correctly even if you can't read characters yet. Print this guide, bookmark it on your phone, or use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to practice — and travel with confidence.</p>
 
-    <h2 id="transport">Transportation</h2>
-    <p><strong>出租车 (chūzūchē)</strong> taxi. <strong>地铁 (dìtiě)</strong> subway/metro. <strong>公交车 (gōngjiāochē)</strong> bus. <strong>请到这个地方 (qǐng dào zhège dìfāng)</strong> Please go to this place — useful when showing a taxi driver an address on your phone.</p>
+<h2 id="survival-phrases">10 Survival Phrases Every Traveler Needs</h2>
 
-    <h2 id="emergency">Emergencies</h2>
-    <p><strong>帮忙 (bāngmáng)</strong> help. <strong>医院 (yīyuàn)</strong> hospital. <strong>警察 (jǐngchá)</strong> police. <strong>我不舒服 (wǒ bù shūfu)</strong> I don't feel well. In Taiwan, the emergency number is 119 for medical and 110 for police. See our <a href="/chinese/blog/chinese-greetings/">greetings guide</a> for more conversation starters.</p>
+<p>If you only learn 10 phrases before your trip, make it these. They cover the situations you'll encounter multiple times every day.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:0.75rem; margin:1.5rem 0;">
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">1</span>
+    <div><strong>你好</strong> (nǐ hǎo) — Hello</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">2</span>
+    <div><strong>谢谢</strong> (xièxie) — Thank you</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">3</span>
+    <div><strong>多少钱？</strong> (duōshǎo qián?) — How much?</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">4</span>
+    <div><strong>我要这个</strong> (wǒ yào zhège) — I want this</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">5</span>
+    <div><strong>…在哪里？</strong> (…zài nǎlǐ?) — Where is…?</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">6</span>
+    <div><strong>不要</strong> (bú yào) — Don't want / No</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">7</span>
+    <div><strong>听不懂</strong> (tīng bù dǒng) — I don't understand</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">8</span>
+    <div><strong>洗手间在哪里？</strong> (xǐshǒujiān zài nǎlǐ?) — Where's the bathroom?</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">9</span>
+    <div><strong>帮忙</strong> (bāngmáng) — Help!</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.75rem;">
+    <span style="background:#3b82f6; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">10</span>
+    <div><strong>买单</strong> (mǎidān) — Check, please</div>
+  </div>
+</div>
+
+<h2 id="airport-immigration">Airport and Immigration</h2>
+
+<p>Your journey starts at the airport. These words and phrases help you navigate check-in, immigration, customs, and finding your way to ground transportation.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">机场</td><td style="padding:8px; border:1px solid #e2e8f0;">jīchǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">airport</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">护照</td><td style="padding:8px; border:1px solid #e2e8f0;">hùzhào</td><td style="padding:8px; border:1px solid #e2e8f0;">passport</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">签证</td><td style="padding:8px; border:1px solid #e2e8f0;">qiānzhèng</td><td style="padding:8px; border:1px solid #e2e8f0;">visa</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">入境</td><td style="padding:8px; border:1px solid #e2e8f0;">rùjìng</td><td style="padding:8px; border:1px solid #e2e8f0;">entry/immigration</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">出口</td><td style="padding:8px; border:1px solid #e2e8f0;">chūkǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">exit</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">行李</td><td style="padding:8px; border:1px solid #e2e8f0;">xínglǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">luggage/baggage</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">行李转盘</td><td style="padding:8px; border:1px solid #e2e8f0;">xínglǐ zhuǎnpán</td><td style="padding:8px; border:1px solid #e2e8f0;">baggage carousel</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">海关</td><td style="padding:8px; border:1px solid #e2e8f0;">hǎiguān</td><td style="padding:8px; border:1px solid #e2e8f0;">customs</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">登机口</td><td style="padding:8px; border:1px solid #e2e8f0;">dēngjīkǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">boarding gate</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">航班</td><td style="padding:8px; border:1px solid #e2e8f0;">hángbān</td><td style="padding:8px; border:1px solid #e2e8f0;">flight</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Airport phrases:</strong></p>
+<ul>
+  <li>请问…在哪里？(Qǐng wèn…zài nǎlǐ?) — Excuse me, where is…?</li>
+  <li>我的行李丢了。(Wǒ de xínglǐ diū le.) — My luggage is lost.</li>
+  <li>我来旅游的。(Wǒ lái lǚyóu de.) — I'm here for tourism.</li>
+  <li>我住在XX酒店。(Wǒ zhù zài XX jiǔdiàn.) — I'm staying at XX hotel.</li>
+</ul>
+
+<h2 id="transportation">Getting Around: Transportation</h2>
+
+<p>Moving around Chinese cities is easy once you know the vocabulary. Public transportation is excellent and affordable in major cities.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">China vs Taiwan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">出租车 / 计程车</td><td style="padding:8px; border:1px solid #e2e8f0;">chūzūchē / jìchéngchē</td><td style="padding:8px; border:1px solid #e2e8f0;">taxi</td><td style="padding:8px; border:1px solid #e2e8f0;">China / Taiwan</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">地铁 / 捷运</td><td style="padding:8px; border:1px solid #e2e8f0;">dìtiě / jiéyùn</td><td style="padding:8px; border:1px solid #e2e8f0;">subway/metro</td><td style="padding:8px; border:1px solid #e2e8f0;">China / Taiwan</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">公交车 / 公车</td><td style="padding:8px; border:1px solid #e2e8f0;">gōngjiāochē / gōngchē</td><td style="padding:8px; border:1px solid #e2e8f0;">bus</td><td style="padding:8px; border:1px solid #e2e8f0;">China / Taiwan</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">火车</td><td style="padding:8px; border:1px solid #e2e8f0;">huǒchē</td><td style="padding:8px; border:1px solid #e2e8f0;">train</td><td style="padding:8px; border:1px solid #e2e8f0;">Same</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">高铁</td><td style="padding:8px; border:1px solid #e2e8f0;">gāotiě</td><td style="padding:8px; border:1px solid #e2e8f0;">high-speed rail</td><td style="padding:8px; border:1px solid #e2e8f0;">Same</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">飞机</td><td style="padding:8px; border:1px solid #e2e8f0;">fēijī</td><td style="padding:8px; border:1px solid #e2e8f0;">airplane</td><td style="padding:8px; border:1px solid #e2e8f0;">Same</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Transportation phrases:</strong></p>
+<div style="background:#fef3c7; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="margin:0.25rem 0;">请到这个地方。<span style="color:#64748b;"> — Please go to this place. (Show address on phone)</span></p>
+  <p style="margin:0.25rem 0;">请打表。<span style="color:#64748b;"> — Please use the meter.</span></p>
+  <p style="margin:0.25rem 0;">到了请告诉我。<span style="color:#64748b;"> — Please tell me when we arrive.</span></p>
+  <p style="margin:0.25rem 0;">去XX怎么走？<span style="color:#64748b;"> — How do I get to XX?</span></p>
+  <p style="margin:0.25rem 0;">坐几号线？<span style="color:#64748b;"> — Which metro line do I take?</span></p>
+  <p style="margin:0.25rem 0;">在哪里下车？<span style="color:#64748b;"> — Where do I get off?</span></p>
+  <p style="margin:0;">还有多远？<span style="color:#64748b;"> — How much farther?</span></p>
+</div>
+
+<h2 id="hotel">Hotel and Accommodation</h2>
+
+<p>From luxury hotels to budget hostels, these phrases cover everything from check-in to resolving room issues.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">我有预订</td><td style="padding:8px; border:1px solid #e2e8f0;">wǒ yǒu yùdìng</td><td style="padding:8px; border:1px solid #e2e8f0;">I have a reservation</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">入住 / 退房</td><td style="padding:8px; border:1px solid #e2e8f0;">rùzhù / tuìfáng</td><td style="padding:8px; border:1px solid #e2e8f0;">check in / check out</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">房间</td><td style="padding:8px; border:1px solid #e2e8f0;">fángjiān</td><td style="padding:8px; border:1px solid #e2e8f0;">room</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">单人间 / 双人间</td><td style="padding:8px; border:1px solid #e2e8f0;">dānrénjiān / shuāngrénjiān</td><td style="padding:8px; border:1px solid #e2e8f0;">single / double room</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">钥匙 / 房卡</td><td style="padding:8px; border:1px solid #e2e8f0;">yàoshi / fángkǎ</td><td style="padding:8px; border:1px solid #e2e8f0;">key / key card</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">早餐</td><td style="padding:8px; border:1px solid #e2e8f0;">zǎocān</td><td style="padding:8px; border:1px solid #e2e8f0;">breakfast</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">电梯</td><td style="padding:8px; border:1px solid #e2e8f0;">diàntī</td><td style="padding:8px; border:1px solid #e2e8f0;">elevator</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">前台</td><td style="padding:8px; border:1px solid #e2e8f0;">qiántái</td><td style="padding:8px; border:1px solid #e2e8f0;">front desk</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Hotel phrases:</strong></p>
+<ul>
+  <li>WiFi密码是什么？(WiFi mìmǎ shì shénme?) — What's the WiFi password?</li>
+  <li>可以换一个房间吗？(Kěyǐ huàn yī gè fángjiān ma?) — Can I change rooms?</li>
+  <li>空调不工作了。(Kōngtiáo bù gōngzuò le.) — The AC isn't working.</li>
+  <li>热水不热。(Rè shuǐ bú rè.) — The hot water isn't hot.</li>
+  <li>可以寄存行李吗？(Kěyǐ jìcún xínglǐ ma?) — Can I store my luggage?</li>
+</ul>
+
+<h2 id="restaurant">Restaurants and Ordering Food</h2>
+
+<p>Food is a highlight of any trip to China or Taiwan. These phrases help you navigate everything from street food stalls to formal restaurants. For a complete food vocabulary guide, see our <a href="/chinese/blog/chinese-food-vocabulary/">Chinese food vocabulary article</a>.</p>
+
+<div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Restaurant Phrases</p>
+  <p style="margin:0.5rem 0;">几位？<span style="color:#64748b;"> — How many people? (Host will ask)</span></p>
+  <p style="margin:0.5rem 0;">两位。<span style="color:#64748b;"> — Two people.</span></p>
+  <p style="margin:0.5rem 0;">有菜单吗？<span style="color:#64748b;"> — Do you have a menu?</span></p>
+  <p style="margin:0.5rem 0;">有英文菜单吗？<span style="color:#64748b;"> — Do you have an English menu?</span></p>
+  <p style="margin:0.5rem 0;">推荐什么？<span style="color:#64748b;"> — What do you recommend?</span></p>
+  <p style="margin:0.5rem 0;">我要这个和这个。<span style="color:#64748b;"> — I want this and this. (Pointing at menu)</span></p>
+  <p style="margin:0.5rem 0;">不要辣的。<span style="color:#64748b;"> — No spicy, please.</span></p>
+  <p style="margin:0.5rem 0;">少放盐。<span style="color:#64748b;"> — Less salt, please.</span></p>
+  <p style="margin:0.5rem 0;">我吃素的。<span style="color:#64748b;"> — I'm vegetarian.</span></p>
+  <p style="margin:0.5rem 0;">我对花生过敏。<span style="color:#64748b;"> — I'm allergic to peanuts.</span></p>
+  <p style="margin:0.5rem 0;">买单！<span style="color:#64748b;"> — Check, please!</span></p>
+  <p style="margin:0;">可以打包吗？<span style="color:#64748b;"> — Can I get a to-go box?</span></p>
+</div>
+
+<h2 id="directions">Asking for Directions</h2>
+
+<p>Even with smartphone maps, knowing direction vocabulary is essential when asking locals for help or reading signs.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">左转</td><td style="padding:8px; border:1px solid #e2e8f0;">zuǒ zhuǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">turn left</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">右转</td><td style="padding:8px; border:1px solid #e2e8f0;">yòu zhuǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">turn right</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">直走</td><td style="padding:8px; border:1px solid #e2e8f0;">zhí zǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">go straight</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">前面</td><td style="padding:8px; border:1px solid #e2e8f0;">qiánmiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">in front / ahead</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">后面</td><td style="padding:8px; border:1px solid #e2e8f0;">hòumiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">behind</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">旁边</td><td style="padding:8px; border:1px solid #e2e8f0;">pángbiān</td><td style="padding:8px; border:1px solid #e2e8f0;">next to</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">对面</td><td style="padding:8px; border:1px solid #e2e8f0;">duìmiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">across / opposite</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">近 / 远</td><td style="padding:8px; border:1px solid #e2e8f0;">jìn / yuǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">near / far</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">红绿灯</td><td style="padding:8px; border:1px solid #e2e8f0;">hónglǜdēng</td><td style="padding:8px; border:1px solid #e2e8f0;">traffic light</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">路口</td><td style="padding:8px; border:1px solid #e2e8f0;">lùkǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">intersection</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Direction phrases:</strong></p>
+<ul>
+  <li>请问，XX怎么走？(Qǐng wèn, XX zěnme zǒu?) — Excuse me, how do I get to XX?</li>
+  <li>走路大概多长时间？(Zǒulù dàgài duō cháng shíjiān?) — About how long by walking?</li>
+  <li>可以帮我在地图上指一下吗？(Kěyǐ bāng wǒ zài dìtú shàng zhǐ yīxià ma?) — Can you point it out on a map?</li>
+</ul>
+
+<h2 id="emergency">Emergency and Health Phrases</h2>
+
+<p>You hope you'll never need these, but having them ready gives peace of mind. For more health vocabulary, see our <a href="/chinese/blog/chinese-body-parts/">body parts guide</a>.</p>
+
+<div style="background:#fef2f2; border:2px solid #ef4444; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin:0 0 1rem;">🚨 Emergency Quick Reference</p>
+  <table style="width:100%; border-collapse:collapse;">
+    <tbody>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">救命！</td><td style="padding:6px 8px; border:1px solid #fecaca;">jiùmìng!</td><td style="padding:6px 8px; border:1px solid #fecaca;">Help! (life-threatening)</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">请帮帮我</td><td style="padding:6px 8px; border:1px solid #fecaca;">qǐng bāng bang wǒ</td><td style="padding:6px 8px; border:1px solid #fecaca;">Please help me</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">请叫救护车</td><td style="padding:6px 8px; border:1px solid #fecaca;">qǐng jiào jiùhùchē</td><td style="padding:6px 8px; border:1px solid #fecaca;">Please call an ambulance</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">请叫警察</td><td style="padding:6px 8px; border:1px solid #fecaca;">qǐng jiào jǐngchá</td><td style="padding:6px 8px; border:1px solid #fecaca;">Please call the police</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">我不舒服</td><td style="padding:6px 8px; border:1px solid #fecaca;">wǒ bù shūfu</td><td style="padding:6px 8px; border:1px solid #fecaca;">I don't feel well</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">医院在哪里？</td><td style="padding:6px 8px; border:1px solid #fecaca;">yīyuàn zài nǎlǐ?</td><td style="padding:6px 8px; border:1px solid #fecaca;">Where is the hospital?</td></tr>
+      <tr><td style="padding:6px 8px; border:1px solid #fecaca; font-weight:700;">我的东西被偷了</td><td style="padding:6px 8px; border:1px solid #fecaca;">wǒ de dōngxi bèi tōu le</td><td style="padding:6px 8px; border:1px solid #fecaca;">My belongings were stolen</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid #fecaca;">
+    <p style="margin:0.25rem 0;"><strong>China:</strong> Police 110 · Fire 119 · Ambulance 120</p>
+    <p style="margin:0.25rem 0;"><strong>Taiwan:</strong> Police 110 · Fire/Ambulance 119</p>
+  </div>
+</div>
+
+<p><strong>Health phrases for the pharmacy or clinic:</strong></p>
+<ul>
+  <li>我头疼。(Wǒ tóu téng.) — I have a headache.</li>
+  <li>我拉肚子。(Wǒ lā dùzi.) — I have diarrhea.</li>
+  <li>我发烧了。(Wǒ fāshāo le.) — I have a fever.</li>
+  <li>我对XX过敏。(Wǒ duì XX guòmǐn.) — I'm allergic to XX.</li>
+  <li>附近有药店吗？(Fùjìn yǒu yàodiàn ma?) — Is there a pharmacy nearby?</li>
+</ul>
+
+<h2 id="cultural-tips">Cultural Tips for Travelers</h2>
+
+<p>Language is only part of the picture. These cultural insights will make your interactions smoother and more enjoyable:</p>
+
+<p><strong>Tipping:</strong> Tipping is not customary in China or Taiwan. In fact, some restaurants may refuse tips or consider it awkward. Your 谢谢 (thank you) is sufficient.</p>
+
+<p><strong>Showing addresses:</strong> When taking a taxi, show the destination on your phone screen rather than trying to pronounce it. Say 请到这个地方 (please go to this place) and hold up your phone. Most drivers appreciate this approach.</p>
+
+<p><strong>Photography:</strong> Ask 可以拍照吗？(Kěyǐ pāizhào ma? — Can I take photos?) before photographing people, religious sites, or in some museums.</p>
+
+<p><strong>Receiving business cards:</strong> Accept with both hands, look at it briefly, and don't immediately put it in your pocket. This shows respect.</p>
+
+<p><strong>Chopstick etiquette:</strong> Never stick chopsticks upright in rice — it resembles funeral incense. Lay them across your bowl or on the chopstick rest instead.</p>
+
+<p>Your travel vocabulary will grow quickly once you start using it in real situations. For more conversation skills, read our <a href="/chinese/blog/chinese-greetings/">greetings guide</a> and <a href="/chinese/blog/chinese-shopping-vocabulary/">shopping phrases</a>. Use the <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to practice pronunciation before your trip, and check our <a href="/chinese/blog/chinese-numbers-guide/">numbers guide</a> to understand prices, addresses, and phone numbers with confidence.</p>
 
 </BlogLayout>

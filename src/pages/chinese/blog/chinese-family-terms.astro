@@ -1,28 +1,218 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Why does Chinese have so many family terms?`, a: `Chinese family terminology reflects the Confucian emphasis on family hierarchy and relationships. Each term specifies exact relationship, birth order, and whether the connection is maternal or paternal.` }];
-const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
-const headings = [{ depth: 2, slug: "immediate", text: "Immediate Family" }, { depth: 2, slug: "extended", text: "Extended Family" }, { depth: 2, slug: "paternal-maternal", text: "Paternal vs Maternal" }];
+const faq = [
+  { q: `Why does Chinese have so many different family terms?`, a: `Chinese family terminology reflects Confucian values that emphasize hierarchy, birth order, and lineage. Each term specifies the exact relationship — whether someone is older or younger, paternal or maternal — because these distinctions carry social expectations about respect, responsibility, and inheritance.` },
+  { q: `What is the difference between 爷爷 and 外公?`, a: `爷爷 (yéye) is your paternal grandfather (father's father), while 外公 (wàigōng) is your maternal grandfather (mother's father). The character 外 means "outside," reflecting the traditional view that the maternal family is outside the patrilineal family line. In Taiwan, 外公 is often called 阿公 (āgōng).` },
+  { q: `How do I address my spouse's family in Chinese?`, a: `Your spouse's parents are 公公 (gōnggong — father-in-law, husband's father) and 婆婆 (pópo — mother-in-law, husband's mother) or 岳父 (yuèfù) and 岳母 (yuèmǔ) for wife's parents. Address them as 爸/妈 (dad/mom) after marriage, which is expected and shows closeness.` },
+  { q: `What do Chinese children call non-family adults?`, a: `Children call older men 叔叔 (shūshu — uncle) and older women 阿姨 (āyí — auntie) even when there is no blood relation. This extends family respect to the broader community. Elderly people are respectfully called 爷爷/奶奶 (grandpa/grandma) by children.` },
+  { q: `Are family terms the same in mainland China and Taiwan?`, a: `Most core terms are identical, but some differ. In Taiwan, grandparents are often called 阿公/阿嬤 (āgōng/āmà) in addition to standard terms. Taiwan also uses traditional characters (爺爺 vs 爷爷). Some extended family terms have regional variations influenced by Taiwanese Hokkien.` }
+];
+const relatedTools = [
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "why-complex", text: "Why Chinese Family Terms Are So Complex" },
+  { depth: 2, slug: "immediate-family", text: "Immediate Family Members" },
+  { depth: 2, slug: "grandparents", text: "Grandparents: Paternal vs Maternal" },
+  { depth: 2, slug: "aunts-uncles", text: "Aunts and Uncles: The Full System" },
+  { depth: 2, slug: "cousins", text: "Cousins: Eight Different Terms" },
+  { depth: 2, slug: "in-laws", text: "In-Law Relationships" },
+  { depth: 2, slug: "modern-usage", text: "Modern Usage and Social Terms" },
+  { depth: 2, slug: "cultural-significance", text: "Cultural Significance of Family" }
+];
 ---
 <BlogLayout
-  title="Chinese Family Terms: A Complete Guide to Kinship Words"
-  description="Chinese has unique words for every family relationship. Learn the distinction between paternal and maternal relatives."
+  title="Chinese Family Terms: The Complete Guide to Kinship Vocabulary"
+  description="Master the complex Chinese family terminology system — from immediate family to extended relatives, in-laws, and social family terms. Understand why Chinese has unique words for every relationship."
   language="chinese"
   category="culture"
-  tags={["family", "vocabulary", "culture"]}
+  tags={["family", "vocabulary", "culture", "beginner"]}
   publishDate="2026-02-21"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="immediate">Immediate Family</h2>
-    <p><strong>爸爸 (bàba)</strong> dad, <strong>妈妈 (māma)</strong> mom, <strong>哥哥 (gēge)</strong> older brother, <strong>姐姐 (jiějie)</strong> older sister, <strong>弟弟 (dìdi)</strong> younger brother, <strong>妹妹 (mèimei)</strong> younger sister. Notice that Chinese distinguishes older vs younger siblings with different words — there is no generic word for "brother" or "sister."</p>
+  <h2 id="why-complex">Why Chinese Family Terms Are So Complex</h2>
+  <p>English has simple terms like "uncle," "aunt," and "cousin" that cover multiple relationships. Chinese, by contrast, has a <strong>unique word for every single family relationship</strong>. Your father's older brother, your father's younger brother, your mother's brother, and your mother's sister's husband all have different titles. This level of precision is not arbitrary — it reflects thousands of years of Confucian family structure where knowing someone's exact position in the family hierarchy determined how you should interact with them.</p>
+  <p>The system distinguishes three key dimensions: <strong>paternal vs maternal</strong> (father's side vs mother's side), <strong>older vs younger</strong> (birth order matters), and <strong>gender</strong> (male vs female). Once you understand these three axes, the seemingly overwhelming vocabulary becomes a logical, predictable system.</p>
 
-    <h2 id="extended">Extended Family</h2>
-    <p>Grandparents on the father's side: <strong>爷爷 (yéye)</strong> paternal grandfather, <strong>奶奶 (nǎinai)</strong> paternal grandmother. On the mother's side: <strong>外公 (wàigōng)</strong> maternal grandfather, <strong>外婆 (wàipó)</strong> maternal grandmother. The 外 prefix literally means "outside," reflecting the traditional view of the maternal family line.</p>
+  <!-- Family Complexity Comparison -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #e3f2fd; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #1565c0; margin-bottom: 8px;">English: Simple System</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>"Uncle" = any parent's brother</li>
+        <li>"Aunt" = any parent's sister</li>
+        <li>"Cousin" = any uncle/aunt's child</li>
+        <li>"Grandfather" = either grandpa</li>
+        <li>Total: ~15 unique terms</li>
+      </ul>
+    </div>
+    <div style="background: #ffebee; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #c62828; margin-bottom: 8px;">Chinese: Precise System</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>Father's older brother ≠ younger brother</li>
+        <li>Paternal aunt ≠ maternal aunt</li>
+        <li>8 different words for "cousin"</li>
+        <li>Paternal grandpa ≠ maternal grandpa</li>
+        <li>Total: ~70+ unique terms</li>
+      </ul>
+    </div>
+  </div>
 
-    <h2 id="paternal-maternal">Paternal vs Maternal</h2>
-    <p>Father's brother is 伯伯 (bóbo, if older) or 叔叔 (shūshu, if younger). Mother's brother is 舅舅 (jiùjiu). Father's sister is 姑姑 (gūgu). Mother's sister is 阿姨 (āyí). This precision means you always know the exact relationship when someone mentions a family member. Practice these characters with our <a href="/chinese/tools/daily-character/">Daily Character</a> tool.</p>
+  <h2 id="immediate-family">Immediate Family Members</h2>
+  <p>Start with the core family unit. These are the first family words every Chinese learner should master, as they appear in daily conversation and HSK vocabulary from the earliest levels.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>爸爸</td><td>bàba</td><td>Father / Dad</td><td>Formal: 父亲 (fùqīn)</td></tr>
+      <tr><td>妈妈</td><td>māma</td><td>Mother / Mom</td><td>Formal: 母亲 (mǔqīn)</td></tr>
+      <tr><td>哥哥</td><td>gēge</td><td>Older brother</td><td>Must be older than you</td></tr>
+      <tr><td>姐姐</td><td>jiějie</td><td>Older sister</td><td>Must be older than you</td></tr>
+      <tr><td>弟弟</td><td>dìdi</td><td>Younger brother</td><td>Must be younger than you</td></tr>
+      <tr><td>妹妹</td><td>mèimei</td><td>Younger sister</td><td>Must be younger than you</td></tr>
+      <tr><td>丈夫 / 老公</td><td>zhàngfu / lǎogōng</td><td>Husband</td><td>老公 is informal/affectionate</td></tr>
+      <tr><td>妻子 / 老婆</td><td>qīzi / lǎopó</td><td>Wife</td><td>老婆 is informal/affectionate</td></tr>
+      <tr><td>儿子</td><td>érzi</td><td>Son</td><td></td></tr>
+      <tr><td>女儿</td><td>nǚ'ér</td><td>Daughter</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p>A critical distinction: Chinese has <strong>no generic word for "brother" or "sister."</strong> You must specify whether the sibling is older (哥哥/姐姐) or younger (弟弟/妹妹). This reflects the Confucian principle that older siblings carry responsibility for younger ones, and younger siblings owe respect to older ones. Even twins have assigned "older" and "younger" roles.</p>
+
+  <h2 id="grandparents">Grandparents: Paternal vs Maternal</h2>
+  <p>This is where Chinese family terms first diverge dramatically from English. Your father's parents and your mother's parents have completely different titles.</p>
+
+  <table>
+    <thead>
+      <tr><th>Relationship</th><th>Chinese</th><th>Pinyin</th><th>Side</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Father's father</td><td>爷爷</td><td>yéye</td><td>Paternal</td></tr>
+      <tr><td>Father's mother</td><td>奶奶</td><td>nǎinai</td><td>Paternal</td></tr>
+      <tr><td>Mother's father</td><td>外公 / 姥爷</td><td>wàigōng / lǎoye</td><td>Maternal</td></tr>
+      <tr><td>Mother's mother</td><td>外婆 / 姥姥</td><td>wàipó / lǎolao</td><td>Maternal</td></tr>
+    </tbody>
+  </table>
+
+  <p>The character 外 (wài, outside) in 外公/外婆 reveals the traditional patrilineal worldview: the mother's family was considered "outside" the primary family line. In modern China, this distinction is linguistic rather than social — maternal grandparents are loved equally. Northern China tends to use 姥爷/姥姥, while southern China and Taiwan prefer 外公/外婆.</p>
+
+  <h2 id="aunts-uncles">Aunts and Uncles: The Full System</h2>
+  <p>This section contains the most terms and is where most learners feel overwhelmed. The key is to learn them in logical groups based on which parent they connect through.</p>
+
+  <h3>Father's Side (Paternal)</h3>
+  <table>
+    <thead>
+      <tr><th>Relationship</th><th>Chinese</th><th>Pinyin</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Father's older brother</td><td>伯伯 / 大伯</td><td>bóbo / dàbó</td></tr>
+      <tr><td>Father's older brother's wife</td><td>伯母</td><td>bómǔ</td></tr>
+      <tr><td>Father's younger brother</td><td>叔叔</td><td>shūshu</td></tr>
+      <tr><td>Father's younger brother's wife</td><td>婶婶</td><td>shěnshen</td></tr>
+      <tr><td>Father's sister</td><td>姑姑 / 姑妈</td><td>gūgu / gūmā</td></tr>
+      <tr><td>Father's sister's husband</td><td>姑父</td><td>gūfu</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Mother's Side (Maternal)</h3>
+  <table>
+    <thead>
+      <tr><th>Relationship</th><th>Chinese</th><th>Pinyin</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mother's brother</td><td>舅舅</td><td>jiùjiu</td></tr>
+      <tr><td>Mother's brother's wife</td><td>舅妈</td><td>jiùmā</td></tr>
+      <tr><td>Mother's sister</td><td>阿姨 / 姨妈</td><td>āyí / yímā</td></tr>
+      <tr><td>Mother's sister's husband</td><td>姨父</td><td>yífu</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice the pattern: on the father's side, birth order matters (伯伯 for older, 叔叔 for younger), but on the mother's side, 舅舅 covers all brothers regardless of age. This asymmetry reflects the historical emphasis on the paternal family hierarchy.</p>
+
+  <h2 id="cousins">Cousins: Eight Different Terms</h2>
+  <p>Where English has one word — "cousin" — Chinese has <strong>eight</strong>. The terms vary based on: which side of the family (paternal or maternal), the cousin's gender, and whether they are older or younger than you.</p>
+
+  <!-- Cousin System Visual -->
+  <div style="max-width: 550px; margin: 24px auto;">
+    <div style="font-weight: 700; margin-bottom: 12px; text-align: center; color: #333;">The 8 Types of "Cousin" in Chinese</div>
+    <div style="background: #e3f2fd; padding: 12px; border-radius: 8px; margin-bottom: 8px;">
+      <div style="font-weight: 600; color: #1565c0; margin-bottom: 6px;">Paternal Side (堂 táng) — Same Surname</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.85rem;">
+        <div>堂哥 (táng gē) — older male cousin</div>
+        <div>堂姐 (táng jiě) — older female cousin</div>
+        <div>堂弟 (táng dì) — younger male cousin</div>
+        <div>堂妹 (táng mèi) — younger female cousin</div>
+      </div>
+    </div>
+    <div style="background: #fce4ec; padding: 12px; border-radius: 8px;">
+      <div style="font-weight: 600; color: #c62828; margin-bottom: 6px;">Maternal Side (表 biǎo) — Different Surname</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.85rem;">
+        <div>表哥 (biǎo gē) — older male cousin</div>
+        <div>表姐 (biǎo jiě) — older female cousin</div>
+        <div>表弟 (biǎo dì) — younger male cousin</div>
+        <div>表妹 (biǎo mèi) — younger female cousin</div>
+      </div>
+    </div>
+  </div>
+
+  <p>The prefix 堂 (táng) marks paternal cousins (same surname), while 表 (biǎo) marks maternal cousins (different surname). After the prefix, you simply use the same older/younger brother/sister terms you already know (哥/姐/弟/妹). So if you have mastered the sibling terms, you only need to learn two new prefixes.</p>
+
+  <h2 id="in-laws">In-Law Relationships</h2>
+  <p>Marriage creates a new web of family terms. Chinese distinguishes between the husband's family and the wife's family with different terms for each relationship.</p>
+
+  <table>
+    <thead>
+      <tr><th>Relationship</th><th>Chinese</th><th>Pinyin</th><th>Context</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Husband's father</td><td>公公</td><td>gōnggong</td><td>Husband's side</td></tr>
+      <tr><td>Husband's mother</td><td>婆婆</td><td>pópo</td><td>Husband's side</td></tr>
+      <tr><td>Wife's father</td><td>岳父 / 丈人</td><td>yuèfù / zhàngrén</td><td>Wife's side</td></tr>
+      <tr><td>Wife's mother</td><td>岳母 / 丈母娘</td><td>yuèmǔ / zhàngmǔniáng</td><td>Wife's side</td></tr>
+      <tr><td>Son-in-law</td><td>女婿</td><td>nǚxù</td><td>—</td></tr>
+      <tr><td>Daughter-in-law</td><td>儿媳妇</td><td>érxífù</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p>In practice, married couples typically address their in-laws as 爸爸/妈妈 (dad/mom) rather than the formal terms. Using the formal terms (公公, 岳父) sounds cold and distant. Calling your in-laws "mom and dad" signals acceptance into the family and is expected in Chinese culture.</p>
+
+  <h2 id="modern-usage">Modern Usage and Social Terms</h2>
+  <p>Family terms in Chinese extend far beyond blood relations. Chinese culture uses kinship terms as a way to show respect and warmth to non-family members, creating a sense of extended community.</p>
+
+  <table>
+    <thead>
+      <tr><th>Term</th><th>Pinyin</th><th>Literal Meaning</th><th>Social Usage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>叔叔</td><td>shūshu</td><td>Uncle (paternal)</td><td>Any man your parents' age</td></tr>
+      <tr><td>阿姨</td><td>āyí</td><td>Auntie (maternal)</td><td>Any woman your parents' age</td></tr>
+      <tr><td>爷爷</td><td>yéye</td><td>Grandpa (paternal)</td><td>Any elderly man</td></tr>
+      <tr><td>奶奶</td><td>nǎinai</td><td>Grandma (paternal)</td><td>Any elderly woman</td></tr>
+      <tr><td>哥 / 姐</td><td>gē / jiě</td><td>Older brother/sister</td><td>Slightly older peers, service staff</td></tr>
+    </tbody>
+  </table>
+
+  <p>This social usage creates interesting situations for foreigners. A Chinese child might call you 叔叔 or 阿姨 when meeting you, which feels strange if you are only 25. It simply means they see you as an adult worthy of respect. In service contexts, calling a waiter 小哥 (xiǎo gē) or a waitress 小姐姐 (xiǎo jiějie) is friendly and common.</p>
+
+  <h2 id="cultural-significance">Cultural Significance of Family</h2>
+  <p>Family (家庭, jiātíng) sits at the center of Chinese culture. The concept of 孝 (xiào — filial piety) — respect and care for parents and elders — has shaped Chinese society for over 2,000 years. Understanding family vocabulary is not just about words; it is about understanding the social fabric of Chinese-speaking communities.</p>
+
+  <p>Common family-related expressions reflect these deep cultural values:</p>
+  <ul>
+    <li><strong>家和万事兴</strong> (jiā hé wànshì xīng) — When the family is harmonious, everything prospers</li>
+    <li><strong>血浓于水</strong> (xuè nóng yú shuǐ) — Blood is thicker than water</li>
+    <li><strong>百善孝为先</strong> (bǎi shàn xiào wéi xiān) — Of all virtues, filial piety is the first</li>
+    <li><strong>四世同堂</strong> (sì shì tóng táng) — Four generations under one roof (an ideal)</li>
+  </ul>
+
+  <h3>Start Learning Family Terms Today</h3>
+  <p>Begin with immediate family (parents, siblings, children), then expand to grandparents, then aunts and uncles. Learn one new family character daily with our <a href="/chinese/tools/daily-character/">Daily Character</a> tool, browse family-related vocabulary in the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary</a> browser, and use the <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation. Read our <a href="/chinese/blog/chinese-greetings/">Chinese greetings guide</a> to learn how to address family members properly, and explore <a href="/chinese/blog/chinese-sentence-structure/">Chinese sentence structure</a> to see how family terms fit into real conversations.</p>
 
 </BlogLayout>

@@ -1,21 +1,312 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How do I describe symptoms at a Chinese hospital?`, a: `Start with 我的X不舒服 (My X is uncomfortable) or 我的X疼 (My X hurts), replacing X with the body part.` }];
-const relatedTools = [{ name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }];
-const headings = [{ depth: 2, slug: "head", text: "Head and Face" }, { depth: 2, slug: "body", text: "Body" }, { depth: 2, slug: "health", text: "Health Phrases" }];
+
+const faq = [
+  { q: `How do I describe symptoms at a Chinese hospital?`, a: `Use the pattern 我的 + body part + 不舒服 (bù shūfu, uncomfortable) or 疼 (téng, hurts). For example, 我的头疼 means "my head hurts" and 我的肚子不舒服 means "my stomach feels uncomfortable." You can add duration with 已经…了, like 已经两天了 (it's been two days already).` },
+  { q: `What's the difference between 脚 (jiǎo) and 腿 (tuǐ)?`, a: `脚 specifically means "foot" — the part below the ankle. 腿 means "leg" — everything from the hip to the ankle. This is different from English where "leg" sometimes loosely includes the foot. In Chinese, the distinction is always clear. 大腿 is "thigh" and 小腿 is "calf/shin."` },
+  { q: `Why do some body parts have two characters while others have one?`, a: `Single-character words like 手, 头, 心 are older classical Chinese. Two-character words like 眼睛, 鼻子, 耳朵 developed because adding a second syllable made speech clearer in conversation. In modern Mandarin, the two-character forms are standard for most body parts in everyday speech.` },
+  { q: `How do I learn body part characters faster?`, a: `Many body part characters share common radicals. The 月 (moon/flesh) radical appears in 脚, 腿, 胳膊, 腰, 肚, 脸, 脑, and 肩. Learning this radical pattern helps you recognize dozens of related characters. Practice writing them grouped by radical for faster memorization.` },
+];
+
+const relatedTools = [
+  { name: "Practice Sheet Generator", url: "/chinese/tools/practice-sheet/" },
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+];
+
+const headings = [
+  { depth: 2, slug: "head-face", text: "Head and Face (头和脸)" },
+  { depth: 2, slug: "upper-body", text: "Upper Body (上半身)" },
+  { depth: 2, slug: "lower-body", text: "Lower Body (下半身)" },
+  { depth: 2, slug: "internal-organs", text: "Internal Organs (内脏)" },
+  { depth: 2, slug: "flesh-radical", text: "The 月 Radical — Your Body Part Shortcut" },
+  { depth: 2, slug: "health-symptoms", text: "Describing Health and Symptoms" },
+  { depth: 2, slug: "body-idioms", text: "Chinese Idioms Using Body Parts" },
+  { depth: 2, slug: "practice-tips", text: "Practice Tips and Next Steps" },
+];
 ---
 <BlogLayout
-  title="Chinese Body Parts Vocabulary"
-  description="Learn body part names in Chinese — useful for health, sports, and daily life conversations."
+  title="Chinese Body Parts Vocabulary: 60+ Essential Words for Health and Daily Life"
+  description="Master 60+ Chinese body part words with pinyin, radicals, health phrases, and cultural idioms. Essential for doctor visits, sports, and everyday conversation."
   language="chinese"
   category="chinese-basics"
-  tags={["body", "vocabulary", "beginner", "health"]}
+  tags={["body", "vocabulary", "beginner", "health", "radicals"]}
   publishDate="2026-02-27"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="head">Head and Face</h2><p><strong>头 (tóu)</strong> head, <strong>眼睛 (yǎnjing)</strong> eyes, <strong>耳朵 (ěrduo)</strong> ears, <strong>鼻子 (bízi)</strong> nose, <strong>嘴巴 (zuǐba)</strong> mouth, <strong>牙齿 (yáchǐ)</strong> teeth, <strong>头发 (tóufa)</strong> hair.</p>
-    <h2 id="body">Body</h2><p><strong>手 (shǒu)</strong> hand, <strong>脚 (jiǎo)</strong> foot, <strong>腿 (tuǐ)</strong> leg, <strong>胳膊 (gēbo)</strong> arm, <strong>肚子 (dùzi)</strong> stomach, <strong>背 (bèi)</strong> back, <strong>心 (xīn)</strong> heart.</p>
-    <h2 id="health">Health Phrases</h2><p><strong>我头疼 (wǒ tóu téng)</strong> I have a headache. <strong>我肚子疼 (wǒ dùzi téng)</strong> I have a stomachache. Practice writing these characters with our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>.</p>
+
+<p>Whether you need to describe an injury to a doctor, follow a fitness class, or simply talk about your morning routine, <strong>body part vocabulary</strong> is one of the most practical word groups in Chinese. Yet many learners skip this topic until they actually need it — and then panic at a clinic trying to explain where it hurts.</p>
+
+<p>This guide covers <strong>60+ body part words</strong> organized from head to toe, plus the radical pattern that connects most of them, health phrases for real medical situations, and cultural idioms that use body parts in surprising ways. By the end, you'll feel confident describing any part of the body — and understanding when a Chinese speaker uses body-part expressions in everyday conversation.</p>
+
+<h2 id="head-face">Head and Face (头和脸)</h2>
+
+<p>The head and face have the most vocabulary because Chinese distinguishes many parts that English groups together. Here's every word you need:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Memory Tip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">头</td><td style="padding:8px; border:1px solid #e2e8f0;">tóu</td><td style="padding:8px; border:1px solid #e2e8f0;">head</td><td style="padding:8px; border:1px solid #e2e8f0;">Top of everything</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">头发</td><td style="padding:8px; border:1px solid #e2e8f0;">tóufa</td><td style="padding:8px; border:1px solid #e2e8f0;">hair</td><td style="padding:8px; border:1px solid #e2e8f0;">头 (head) + 发 (emit/grow)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">脸</td><td style="padding:8px; border:1px solid #e2e8f0;">liǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">face</td><td style="padding:8px; border:1px solid #e2e8f0;">月 radical = flesh</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">额头</td><td style="padding:8px; border:1px solid #e2e8f0;">étóu</td><td style="padding:8px; border:1px solid #e2e8f0;">forehead</td><td style="padding:8px; border:1px solid #e2e8f0;">额 = the upper part of face</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">眼睛</td><td style="padding:8px; border:1px solid #e2e8f0;">yǎnjing</td><td style="padding:8px; border:1px solid #e2e8f0;">eyes</td><td style="padding:8px; border:1px solid #e2e8f0;">目 radical = eye</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">眉毛</td><td style="padding:8px; border:1px solid #e2e8f0;">méimao</td><td style="padding:8px; border:1px solid #e2e8f0;">eyebrows</td><td style="padding:8px; border:1px solid #e2e8f0;">眉 looks like brows over an eye</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">鼻子</td><td style="padding:8px; border:1px solid #e2e8f0;">bízi</td><td style="padding:8px; border:1px solid #e2e8f0;">nose</td><td style="padding:8px; border:1px solid #e2e8f0;">鼻 is its own radical</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">耳朵</td><td style="padding:8px; border:1px solid #e2e8f0;">ěrduo</td><td style="padding:8px; border:1px solid #e2e8f0;">ears</td><td style="padding:8px; border:1px solid #e2e8f0;">耳 radical looks like an ear</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">嘴巴</td><td style="padding:8px; border:1px solid #e2e8f0;">zuǐba</td><td style="padding:8px; border:1px solid #e2e8f0;">mouth</td><td style="padding:8px; border:1px solid #e2e8f0;">口 radical = mouth</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">牙齿</td><td style="padding:8px; border:1px solid #e2e8f0;">yáchǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">teeth</td><td style="padding:8px; border:1px solid #e2e8f0;">牙 looks like two teeth</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">舌头</td><td style="padding:8px; border:1px solid #e2e8f0;">shétou</td><td style="padding:8px; border:1px solid #e2e8f0;">tongue</td><td style="padding:8px; border:1px solid #e2e8f0;">舌 = tongue sticking out of 口</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">下巴</td><td style="padding:8px; border:1px solid #e2e8f0;">xiàba</td><td style="padding:8px; border:1px solid #e2e8f0;">chin</td><td style="padding:8px; border:1px solid #e2e8f0;">下 = below/under</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">脖子</td><td style="padding:8px; border:1px solid #e2e8f0;">bózi</td><td style="padding:8px; border:1px solid #e2e8f0;">neck</td><td style="padding:8px; border:1px solid #e2e8f0;">月 radical = flesh</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Quick practice sentence:</strong> 她的眼睛很大，鼻子很小。(Tā de yǎnjing hěn dà, bízi hěn xiǎo.) — Her eyes are big, and her nose is small.</p>
+
+<h2 id="upper-body">Upper Body (上半身)</h2>
+
+<p>The upper body includes your torso, arms, and hands. Notice how many of these characters share the <strong>月 (flesh)</strong> radical — we'll explore this pattern in detail below.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">肩膀</td><td style="padding:8px; border:1px solid #e2e8f0;">jiānbǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">shoulders</td><td style="padding:8px; border:1px solid #e2e8f0;">Both chars have 月</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">胳膊</td><td style="padding:8px; border:1px solid #e2e8f0;">gēbo</td><td style="padding:8px; border:1px solid #e2e8f0;">arm</td><td style="padding:8px; border:1px solid #e2e8f0;">The whole arm</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">手臂</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒubì</td><td style="padding:8px; border:1px solid #e2e8f0;">arm (formal)</td><td style="padding:8px; border:1px solid #e2e8f0;">More written/formal</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">手肘</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒuzhǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">elbow</td><td style="padding:8px; border:1px solid #e2e8f0;">手 (hand) + 肘 (joint)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">手</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒu</td><td style="padding:8px; border:1px solid #e2e8f0;">hand</td><td style="padding:8px; border:1px solid #e2e8f0;">One of the first chars to learn</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">手指</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒuzhǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">finger</td><td style="padding:8px; border:1px solid #e2e8f0;">手 (hand) + 指 (point)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">手腕</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒuwàn</td><td style="padding:8px; border:1px solid #e2e8f0;">wrist</td><td style="padding:8px; border:1px solid #e2e8f0;">腕 has the 月 radical</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">胸</td><td style="padding:8px; border:1px solid #e2e8f0;">xiōng</td><td style="padding:8px; border:1px solid #e2e8f0;">chest</td><td style="padding:8px; border:1px solid #e2e8f0;">月 radical</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">背</td><td style="padding:8px; border:1px solid #e2e8f0;">bèi</td><td style="padding:8px; border:1px solid #e2e8f0;">back</td><td style="padding:8px; border:1px solid #e2e8f0;">Also means "carry on back"</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">腰</td><td style="padding:8px; border:1px solid #e2e8f0;">yāo</td><td style="padding:8px; border:1px solid #e2e8f0;">waist/lower back</td><td style="padding:8px; border:1px solid #e2e8f0;">月 radical + 要 (want)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">肚子</td><td style="padding:8px; border:1px solid #e2e8f0;">dùzi</td><td style="padding:8px; border:1px solid #e2e8f0;">belly/stomach</td><td style="padding:8px; border:1px solid #e2e8f0;">Most common word for stomach</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Useful phrases:</strong></p>
+<ul>
+  <li>我的肩膀很酸。(Wǒ de jiānbǎng hěn suān.) — My shoulders are sore.</li>
+  <li>他的手很大。(Tā de shǒu hěn dà.) — His hands are big.</li>
+  <li>我腰疼。(Wǒ yāo téng.) — My lower back hurts.</li>
+</ul>
+
+<h2 id="lower-body">Lower Body (下半身)</h2>
+
+<p>Lower body vocabulary is essential for sports, exercise, and describing injuries. Chinese makes clear distinctions between the upper leg, lower leg, and foot that English often blurs.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">臀部</td><td style="padding:8px; border:1px solid #e2e8f0;">túnbù</td><td style="padding:8px; border:1px solid #e2e8f0;">buttocks</td><td style="padding:8px; border:1px solid #e2e8f0;">Formal; 屁股 (pìgu) is casual</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">大腿</td><td style="padding:8px; border:1px solid #e2e8f0;">dàtuǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">thigh</td><td style="padding:8px; border:1px solid #e2e8f0;">大 (big) + 腿 (leg)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">膝盖</td><td style="padding:8px; border:1px solid #e2e8f0;">xīgài</td><td style="padding:8px; border:1px solid #e2e8f0;">knee</td><td style="padding:8px; border:1px solid #e2e8f0;">Common injury site</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">小腿</td><td style="padding:8px; border:1px solid #e2e8f0;">xiǎotuǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">calf/shin</td><td style="padding:8px; border:1px solid #e2e8f0;">小 (small) + 腿 (leg)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">脚踝</td><td style="padding:8px; border:1px solid #e2e8f0;">jiǎohuái</td><td style="padding:8px; border:1px solid #e2e8f0;">ankle</td><td style="padding:8px; border:1px solid #e2e8f0;">脚 (foot) + 踝 (ankle bone)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">脚</td><td style="padding:8px; border:1px solid #e2e8f0;">jiǎo</td><td style="padding:8px; border:1px solid #e2e8f0;">foot</td><td style="padding:8px; border:1px solid #e2e8f0;">Below the ankle only</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">脚趾</td><td style="padding:8px; border:1px solid #e2e8f0;">jiǎozhǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">toes</td><td style="padding:8px; border:1px solid #e2e8f0;">脚 (foot) + 趾 (digit)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">脚后跟</td><td style="padding:8px; border:1px solid #e2e8f0;">jiǎohòugēn</td><td style="padding:8px; border:1px solid #e2e8f0;">heel</td><td style="padding:8px; border:1px solid #e2e8f0;">脚 + 后 (behind) + 跟 (follow)</td></tr>
+  </tbody>
+</table>
+
+<div style="background:linear-gradient(135deg, #fef3c7, #fde68a); padding:1.25rem; border-radius:12px; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">💡 大 vs 小 Pattern</p>
+  <p style="margin:0;">Chinese uses 大 (big) and 小 (small) to distinguish upper and lower parts: <strong>大腿</strong> = thigh (big leg), <strong>小腿</strong> = calf (small leg). This same pattern appears in other areas too.</p>
+</div>
+
+<h2 id="internal-organs">Internal Organs (内脏)</h2>
+
+<p>You don't need to memorize every organ, but knowing the key ones helps with health discussions, <a href="/chinese/blog/chinese-food-vocabulary/">food vocabulary</a> (some are eaten!), and understanding common expressions.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Cultural Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">心脏</td><td style="padding:8px; border:1px solid #e2e8f0;">xīnzàng</td><td style="padding:8px; border:1px solid #e2e8f0;">heart (organ)</td><td style="padding:8px; border:1px solid #e2e8f0;">心 alone = heart/mind/feelings</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">肺</td><td style="padding:8px; border:1px solid #e2e8f0;">fèi</td><td style="padding:8px; border:1px solid #e2e8f0;">lungs</td><td style="padding:8px; border:1px solid #e2e8f0;">月 radical</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">肝</td><td style="padding:8px; border:1px solid #e2e8f0;">gān</td><td style="padding:8px; border:1px solid #e2e8f0;">liver</td><td style="padding:8px; border:1px solid #e2e8f0;">Common in food: 猪肝 (pork liver)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">胃</td><td style="padding:8px; border:1px solid #e2e8f0;">wèi</td><td style="padding:8px; border:1px solid #e2e8f0;">stomach (organ)</td><td style="padding:8px; border:1px solid #e2e8f0;">胃疼 = stomachache (medical)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">肾</td><td style="padding:8px; border:1px solid #e2e8f0;">shèn</td><td style="padding:8px; border:1px solid #e2e8f0;">kidney</td><td style="padding:8px; border:1px solid #e2e8f0;">Important in Chinese medicine</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">脑</td><td style="padding:8px; border:1px solid #e2e8f0;">nǎo</td><td style="padding:8px; border:1px solid #e2e8f0;">brain</td><td style="padding:8px; border:1px solid #e2e8f0;">脑子 = brain (colloquial)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">骨头</td><td style="padding:8px; border:1px solid #e2e8f0;">gǔtou</td><td style="padding:8px; border:1px solid #e2e8f0;">bone</td><td style="padding:8px; border:1px solid #e2e8f0;">骨 radical = bone</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">血</td><td style="padding:8px; border:1px solid #e2e8f0;">xuè / xiě</td><td style="padding:8px; border:1px solid #e2e8f0;">blood</td><td style="padding:8px; border:1px solid #e2e8f0;">xuè (formal), xiě (colloquial)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">皮肤</td><td style="padding:8px; border:1px solid #e2e8f0;">pífū</td><td style="padding:8px; border:1px solid #e2e8f0;">skin</td><td style="padding:8px; border:1px solid #e2e8f0;">肤 has 月 radical</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> 肚子 (dùzi) is the everyday word for "stomach/belly" used in casual conversation. 胃 (wèi) is the medical/anatomical term for the stomach organ specifically. When seeing a doctor, use 胃 for precision.</p>
+
+<h2 id="flesh-radical">The 月 Radical — Your Body Part Shortcut</h2>
+
+<p>Here's a secret that saves dozens of hours of memorization: the <strong>月 radical</strong> (called 肉月旁, ròu yuè páng) appears in the vast majority of body part characters. Originally from 肉 (ròu, meat/flesh), it was simplified to look like 月 (moon) but has nothing to do with the moon when it appears on the left side of a character.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:0.75rem; margin:1.5rem 0;">
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">脸</div>
+    <div style="font-size:0.8rem; color:#64748b;">liǎn — face</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">脖</div>
+    <div style="font-size:0.8rem; color:#64748b;">bó — neck</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">肩</div>
+    <div style="font-size:0.8rem; color:#64748b;">jiān — shoulder</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">胸</div>
+    <div style="font-size:0.8rem; color:#64748b;">xiōng — chest</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">腰</div>
+    <div style="font-size:0.8rem; color:#64748b;">yāo — waist</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">肚</div>
+    <div style="font-size:0.8rem; color:#64748b;">dù — belly</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">腿</div>
+    <div style="font-size:0.8rem; color:#64748b;">tuǐ — leg</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">脚</div>
+    <div style="font-size:0.8rem; color:#64748b;">jiǎo — foot</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">脑</div>
+    <div style="font-size:0.8rem; color:#64748b;">nǎo — brain</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">肝</div>
+    <div style="font-size:0.8rem; color:#64748b;">gān — liver</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">肺</div>
+    <div style="font-size:0.8rem; color:#64748b;">fèi — lungs</div>
+  </div>
+  <div style="background:#f0f9ff; padding:1rem; border-radius:8px; text-align:center;">
+    <div style="font-size:1.5rem; font-weight:700;">肾</div>
+    <div style="font-size:0.8rem; color:#64748b;">shèn — kidney</div>
+  </div>
+</div>
+
+<p>When you see a character with 月 on the left, there's a strong chance it relates to the body. This is one of the most useful radical patterns in Chinese — learn more about how radicals work in our <a href="/chinese/blog/chinese-radicals/">complete radicals guide</a>.</p>
+
+<h2 id="health-symptoms">Describing Health and Symptoms</h2>
+
+<p>This is where body part vocabulary becomes truly practical. Whether you're at a pharmacy, clinic, or describing how you feel to a friend, these patterns will serve you well.</p>
+
+<p><strong>Pattern 1: Body Part + 疼/痛 (téng/tòng) = hurts</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+  <tbody>
+    <tr style="background:#fef2f2;"><td style="padding:8px; border:1px solid #e2e8f0; width:40%;">头疼 (tóu téng)</td><td style="padding:8px; border:1px solid #e2e8f0;">headache</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">牙疼 (yá téng)</td><td style="padding:8px; border:1px solid #e2e8f0;">toothache</td></tr>
+    <tr style="background:#fef2f2;"><td style="padding:8px; border:1px solid #e2e8f0;">胃疼 (wèi téng)</td><td style="padding:8px; border:1px solid #e2e8f0;">stomachache</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">腰疼 (yāo téng)</td><td style="padding:8px; border:1px solid #e2e8f0;">lower back pain</td></tr>
+    <tr style="background:#fef2f2;"><td style="padding:8px; border:1px solid #e2e8f0;">膝盖疼 (xīgài téng)</td><td style="padding:8px; border:1px solid #e2e8f0;">knee pain</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Pattern 2: Body Part + 不舒服 (bù shūfu) = uncomfortable</strong></p>
+<ul>
+  <li>我的肚子不舒服。(Wǒ de dùzi bù shūfu.) — My stomach feels uncomfortable.</li>
+  <li>我的眼睛不舒服。(Wǒ de yǎnjing bù shūfu.) — My eyes feel uncomfortable.</li>
+</ul>
+
+<p><strong>Pattern 3: Common symptoms</strong></p>
+<ul>
+  <li>发烧 (fāshāo) — have a fever</li>
+  <li>咳嗽 (késou) — cough</li>
+  <li>流鼻涕 (liú bítì) — runny nose</li>
+  <li>拉肚子 (lā dùzi) — diarrhea</li>
+  <li>过敏 (guòmǐn) — allergies</li>
+  <li>受伤了 (shòushāng le) — injured</li>
+</ul>
+
+<div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">🏥 At the Doctor — Sample Dialogue</p>
+  <p style="margin:0.25rem 0;">医生：哪里不舒服？<em>(Doctor: Where does it feel uncomfortable?)</em></p>
+  <p style="margin:0.25rem 0;">你：我头疼，还有一点发烧。<em>(You: I have a headache and a slight fever.)</em></p>
+  <p style="margin:0.25rem 0;">医生：多长时间了？<em>(Doctor: How long has it been?)</em></p>
+  <p style="margin:0;">你：已经两天了。<em>(You: It's been two days already.)</em></p>
+</div>
+
+<h2 id="body-idioms">Chinese Idioms Using Body Parts</h2>
+
+<p>Body parts appear in many Chinese idioms (成语, chéngyǔ) and everyday expressions. Learning these helps you sound more natural and understand native speakers.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Idiom</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Literal</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">心花怒放</td><td style="padding:8px; border:1px solid #e2e8f0;">xīnhuā nùfàng</td><td style="padding:8px; border:1px solid #e2e8f0;">heart flowers bloom</td><td style="padding:8px; border:1px solid #e2e8f0;">Overjoyed, bursting with happiness</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">目中无人</td><td style="padding:8px; border:1px solid #e2e8f0;">mù zhōng wú rén</td><td style="padding:8px; border:1px solid #e2e8f0;">no one in the eyes</td><td style="padding:8px; border:1px solid #e2e8f0;">Arrogant, looking down on everyone</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">手足无措</td><td style="padding:8px; border:1px solid #e2e8f0;">shǒuzú wúcuò</td><td style="padding:8px; border:1px solid #e2e8f0;">hands and feet lost</td><td style="padding:8px; border:1px solid #e2e8f0;">Flustered, don't know what to do</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">口是心非</td><td style="padding:8px; border:1px solid #e2e8f0;">kǒu shì xīn fēi</td><td style="padding:8px; border:1px solid #e2e8f0;">mouth yes, heart no</td><td style="padding:8px; border:1px solid #e2e8f0;">Saying one thing but meaning another</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">三头六臂</td><td style="padding:8px; border:1px solid #e2e8f0;">sān tóu liù bì</td><td style="padding:8px; border:1px solid #e2e8f0;">three heads, six arms</td><td style="padding:8px; border:1px solid #e2e8f0;">Superhuman ability, very capable</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">眼高手低</td><td style="padding:8px; border:1px solid #e2e8f0;">yǎn gāo shǒu dī</td><td style="padding:8px; border:1px solid #e2e8f0;">eyes high, hands low</td><td style="padding:8px; border:1px solid #e2e8f0;">Ambitious but incompetent</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Everyday body-part expressions:</strong></p>
+<ul>
+  <li><strong>丢脸</strong> (diūliǎn) — lose face (embarrassed)</li>
+  <li><strong>放心</strong> (fàngxīn) — put the heart down (relax, don't worry)</li>
+  <li><strong>伤脑筋</strong> (shāng nǎojīn) — hurt the brain (a headache to deal with)</li>
+  <li><strong>动手</strong> (dòngshǒu) — move the hands (start working / get physical)</li>
+  <li><strong>插手</strong> (chāshǒu) — insert hands (interfere in someone's business)</li>
+</ul>
+
+<h2 id="practice-tips">Practice Tips and Next Steps</h2>
+
+<p>Body part vocabulary sticks best when you connect words to physical experience. Here are proven study methods:</p>
+
+<p><strong>1. Touch-and-say drill:</strong> Touch each body part while saying the Chinese word aloud. Start from 头 and work down to 脚. Do this every morning for a week and you'll have the core 20 words memorized.</p>
+
+<p><strong>2. Radical grouping:</strong> Write out all the 月-radical body part characters together. Grouping by radical helps your brain categorize them and recognize new body-part characters you encounter later.</p>
+
+<p><strong>3. Symptom role-play:</strong> Practice the doctor dialogue above with a study partner. One person plays the doctor asking 哪里不舒服？ and the other describes different symptoms each round.</p>
+
+<p><strong>4. Label your mirror:</strong> Put sticky notes with Chinese body part names on your bathroom mirror at the appropriate positions. You'll review them naturally every day.</p>
+
+<p>Use our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a> to create custom writing practice for the characters in this guide. For more vocabulary building, explore our <a href="/chinese/blog/chinese-weather-vocabulary/">weather vocabulary</a> and <a href="/chinese/blog/chinese-family-terms/">family terms</a> guides. And if you're preparing for a proficiency exam, check our <a href="/chinese/blog/hsk-preparation/">HSK preparation guide</a> — body part vocabulary appears across HSK 2 through HSK 4.</p>
+
 </BlogLayout>

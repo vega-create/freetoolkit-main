@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { siteConfig } from '../../site.config';
+
+const author = siteConfig.authorPerson;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: author.name,
+  url: `${siteConfig.url}${author.url}`,
+  jobTitle: author.title,
+  description: author.bio,
+  worksFor: {
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.url,
+  },
+  knowsAbout: author.expertise,
+  sameAs: author.sameAs,
+};
+---
+<BaseLayout
+  title={`${author.name} — ${author.title} | ${siteConfig.name}`}
+  description={author.bio}
+  schemas={[personSchema]}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    {/* Author Header */}
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
+      <div class="w-24 h-24 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center text-3xl font-bold flex-shrink-0">
+        {author.name.charAt(0)}
+      </div>
+      <div class="text-center sm:text-left">
+        <h1 class="text-3xl font-bold text-gray-900 mb-1">{author.name}</h1>
+        <p class="text-primary-600 font-medium text-lg">{author.title}</p>
+        <p class="text-gray-500 text-sm mt-1">FreeToolkit · Taipei, Taiwan</p>
+      </div>
+    </div>
+
+    {/* Bio */}
+    <div class="prose max-w-none mb-10">
+      <h2>About {author.name.split(' ')[0]}</h2>
+      <p>{author.bio}</p>
+      <p>
+        Through FreeToolkit, {author.name.split(' ')[0]} provides free interactive tools and in-depth study guides that break down
+        complex language concepts into clear, actionable steps. Whether you are preparing for the HSK, studying for the JLPT,
+        or simply curious about East Asian languages, her goal is to make your learning journey smoother and more enjoyable.
+      </p>
+      <p>
+        Based in Taipei, Taiwan, {author.name.split(' ')[0]} brings a unique perspective as someone who grew up immersed in both
+        Mandarin Chinese and Japanese language environments. This firsthand experience informs every tool, article, and study guide
+        on FreeToolkit — ensuring the content is not just technically accurate but culturally authentic.
+      </p>
+
+      <h2>Areas of Expertise</h2>
+      <ul>
+        {author.expertise.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+
+      <h2>Featured Articles</h2>
+      <div class="not-prose grid gap-3">
+        <a href="/chinese/blog/pinyin-guide/" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors">
+          <span class="font-medium text-gray-900">Pinyin Guide: Master Chinese Pronunciation from Day One</span>
+          <span class="block text-sm text-gray-500 mt-1">The complete guide to the Chinese romanization system</span>
+        </a>
+        <a href="/japanese/blog/hiragana-guide/" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors">
+          <span class="font-medium text-gray-900">Hiragana Guide: Master All 46 Characters</span>
+          <span class="block text-sm text-gray-500 mt-1">Learn the foundation of Japanese writing in 2 weeks</span>
+        </a>
+        <a href="/chinese/blog/hsk-preparation/" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors">
+          <span class="font-medium text-gray-900">HSK Preparation: Complete Study Guide</span>
+          <span class="block text-sm text-gray-500 mt-1">Study plans and strategies for every HSK level</span>
+        </a>
+        <a href="/japanese/blog/jlpt-preparation-guide/" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors">
+          <span class="font-medium text-gray-900">JLPT Preparation Guide: N5 to N1</span>
+          <span class="block text-sm text-gray-500 mt-1">Your complete roadmap to JLPT success</span>
+        </a>
+      </div>
+
+      <h2>Explore FreeToolkit</h2>
+      <p>
+        Ready to start learning? Explore our free tools for
+        <a href="/chinese/">Chinese</a> and <a href="/japanese/">Japanese</a>,
+        or browse our study guides in the
+        <a href="/chinese/blog/">Chinese blog</a> and
+        <a href="/japanese/blog/">Japanese blog</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

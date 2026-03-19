@@ -1,12 +1,31 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How do I order food in Chinese?`, a: `Start with 我要 (wǒ yào, I want) or 来一个 (lái yī ge, give me one). Point at the menu if needed. End with 谢谢 (xièxie).` }];
-const relatedTools = [{ name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }];
-const headings = [{ depth: 2, slug: "ordering", text: "Ordering Phrases" }, { depth: 2, slug: "staples", text: "Staple Foods" }, { depth: 2, slug: "dishes", text: "Popular Dishes" }, { depth: 2, slug: "drinks", text: "Drinks" }];
+const faq = [
+  { q: `How do I order food in a Chinese restaurant?`, a: `Start with 我要 (wǒ yào — I want) or 来一个 (lái yī ge — give me one) followed by the dish name. Point at the menu or food pictures if needed. To get the bill, say 买单 (mǎidān) or 结账 (jiézhàng). End with 谢谢 (xièxie — thank you).` },
+  { q: `What is the difference between Chinese and Taiwanese food terms?`, a: `Many dishes have different names. Pineapple is 菠萝 (bōluó) in mainland China but 凤梨 (fènglí) in Taiwan. Potato is 土豆 (tǔdòu) in China but 马铃薯 (mǎlíngshǔ) in Taiwan. Menus in Taiwan use traditional characters while mainland China uses simplified.` },
+  { q: `How do I tell a restaurant about food allergies in Chinese?`, a: `Say 我对X过敏 (wǒ duì X guòmǐn — I am allergic to X). Common allergens: 花生 (huāshēng — peanut), 虾 (xiā — shrimp), 牛奶 (niúnǎi — milk), 鸡蛋 (jīdàn — egg), 麸质 (fūzhì — gluten). Writing it on paper is recommended for safety.` },
+  { q: `What are the eight great cuisines of China?`, a: `The eight regional cuisines are: Sichuan (川菜, spicy), Cantonese (粤菜, dim sum), Shandong (鲁菜, seafood), Jiangsu (苏菜, refined), Zhejiang (浙菜, fresh), Fujian (闽菜, umami), Hunan (湘菜, sour-spicy), and Anhui (徽菜, braised). Each has distinct flavors and techniques.` },
+  { q: `How do I ask for no spice or less spice?`, a: `不要辣 (bú yào là) means "no spice." 微辣 (wēi là) means "mild spice." 少放辣椒 (shǎo fàng làjiāo) means "use less chili." In Sichuan restaurants, even "mild" can be quite spicy by Western standards, so 不要辣 is the safest option.` }
+];
+const relatedTools = [
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" }
+];
+const headings = [
+  { depth: 2, slug: "ordering-phrases", text: "Essential Ordering Phrases" },
+  { depth: 2, slug: "staple-foods", text: "Staple Foods and Carbs" },
+  { depth: 2, slug: "meat-seafood", text: "Meat and Seafood" },
+  { depth: 2, slug: "vegetables-fruits", text: "Vegetables and Fruits" },
+  { depth: 2, slug: "popular-dishes", text: "25 Must-Know Chinese Dishes" },
+  { depth: 2, slug: "cooking-methods", text: "Cooking Methods on Menus" },
+  { depth: 2, slug: "drinks-desserts", text: "Drinks and Desserts" },
+  { depth: 2, slug: "regional-cuisines", text: "Regional Cuisine Guide" }
+];
 ---
 <BlogLayout
-  title="50 Essential Chinese Food Words for Restaurant Survival"
-  description="Navigate Chinese restaurants and menus with confidence. Learn food vocabulary from ordering basics to regional cuisine names."
+  title="Chinese Food Vocabulary: 100+ Essential Words for Restaurant Survival"
+  description="Master Chinese food vocabulary — from ordering phrases to dish names, cooking methods, and regional cuisines. Navigate any Chinese restaurant with confidence."
   language="chinese"
   category="culture"
   tags={["food", "vocabulary", "culture", "travel"]}
@@ -16,16 +35,214 @@ const headings = [{ depth: 2, slug: "ordering", text: "Ordering Phrases" }, { de
   headings={headings}
 >
 
-    <h2 id="ordering">Ordering Phrases</h2>
-    <p><strong>菜单 (càidān)</strong> — menu. <strong>我要这个 (wǒ yào zhège)</strong> — I want this one. <strong>买单 (mǎidān)</strong> — the bill please. <strong>不要辣 (bú yào là)</strong> — no spice please. These four phrases alone will get you through most restaurant situations.</p>
+  <h2 id="ordering-phrases">Essential Ordering Phrases</h2>
+  <p>Before learning specific food words, master these phrases that get you through any restaurant situation in China or Taiwan. Chinese restaurants range from tiny street-side stalls with no English menu to upscale establishments where staff may speak some English. These phrases work everywhere.</p>
 
-    <h2 id="staples">Staple Foods</h2>
-    <p><strong>米饭 (mǐfàn)</strong> rice, <strong>面条 (miàntiáo)</strong> noodles, <strong>饺子 (jiǎozi)</strong> dumplings, <strong>包子 (bāozi)</strong> steamed buns, <strong>馒头 (mántou)</strong> plain steamed bread. In Taiwan, you will also encounter <strong>滷肉飯 (lǔròu fàn)</strong> braised pork rice and <strong>牛肉麵 (niúròu miàn)</strong> beef noodle soup — two beloved national dishes.</p>
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>When to Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>菜单</td><td>càidān</td><td>Menu</td><td>Asking for the menu</td></tr>
+      <tr><td>我要这个</td><td>wǒ yào zhège</td><td>I want this one</td><td>Pointing at menu items</td></tr>
+      <tr><td>来一份</td><td>lái yī fèn</td><td>One serving, please</td><td>Ordering a dish</td></tr>
+      <tr><td>有推荐吗？</td><td>yǒu tuījiàn ma?</td><td>Any recommendations?</td><td>Asking for suggestions</td></tr>
+      <tr><td>不要辣</td><td>bú yào là</td><td>No spice please</td><td>Spice sensitivity</td></tr>
+      <tr><td>少放盐</td><td>shǎo fàng yán</td><td>Less salt please</td><td>Dietary preference</td></tr>
+      <tr><td>打包</td><td>dǎbāo</td><td>To go / takeaway</td><td>Packing leftovers</td></tr>
+      <tr><td>买单 / 结账</td><td>mǎidān / jiézhàng</td><td>The bill please</td><td>Asking to pay</td></tr>
+      <tr><td>可以刷卡吗？</td><td>kěyǐ shuākǎ ma?</td><td>Can I pay by card?</td><td>Payment method</td></tr>
+      <tr><td>很好吃！</td><td>hěn hǎo chī!</td><td>Very delicious!</td><td>Complimenting the chef</td></tr>
+    </tbody>
+  </table>
 
-    <h2 id="dishes">Popular Dishes</h2>
-    <p><strong>宫保鸡丁 (gōngbǎo jīdīng)</strong> Kung Pao chicken, <strong>麻婆豆腐 (mápó dòufu)</strong> Mapo tofu, <strong>红烧肉 (hóngshāo ròu)</strong> red-braised pork, <strong>炒饭 (chǎofàn)</strong> fried rice, <strong>火锅 (huǒguō)</strong> hotpot. Each region has specialties — Sichuan for spicy, Cantonese for dim sum, Shanghai for sweet savory.</p>
+  <p>Pro tip: In China, mobile payment (微信支付 WeChat Pay, 支付宝 Alipay) is nearly universal. In Taiwan, cash is still king at most local restaurants and night market stalls. Always carry some cash (现金, xiànjīn) when eating at smaller establishments.</p>
 
-    <h2 id="drinks">Drinks</h2>
-    <p><strong>水 (shuǐ)</strong> water, <strong>茶 (chá)</strong> tea, <strong>咖啡 (kāfēi)</strong> coffee, <strong>啤酒 (píjiǔ)</strong> beer, <strong>珍珠奶茶 (zhēnzhū nǎichá)</strong> bubble tea — arguably Taiwan's most famous culinary export. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation of any food term.</p>
+  <h2 id="staple-foods">Staple Foods and Carbs</h2>
+  <p>Rice and noodles form the backbone of Chinese cuisine. Northern China traditionally favors wheat-based foods (noodles, dumplings, steamed buns), while southern China centers around rice. Understanding these staples helps you navigate any menu.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>米饭</td><td>mǐfàn</td><td>Steamed rice</td><td>Served with most meals in southern China</td></tr>
+      <tr><td>面条</td><td>miàntiáo</td><td>Noodles</td><td>Hundreds of regional varieties</td></tr>
+      <tr><td>饺子</td><td>jiǎozi</td><td>Dumplings</td><td>Boiled; northern China specialty</td></tr>
+      <tr><td>包子</td><td>bāozi</td><td>Steamed buns (filled)</td><td>Common breakfast food</td></tr>
+      <tr><td>馒头</td><td>mántou</td><td>Steamed bread (plain)</td><td>Eaten like bread with dishes</td></tr>
+      <tr><td>粥</td><td>zhōu</td><td>Rice porridge / congee</td><td>Breakfast staple; comforting when sick</td></tr>
+      <tr><td>炒饭</td><td>chǎofàn</td><td>Fried rice</td><td>Egg fried rice is the most basic version</td></tr>
+      <tr><td>炒面</td><td>chǎomiàn</td><td>Fried noodles</td><td>Origin of "chow mein"</td></tr>
+      <tr><td>馄饨</td><td>húntun</td><td>Wontons</td><td>Origin of "wonton" — usually in soup</td></tr>
+      <tr><td>春卷</td><td>chūnjuǎn</td><td>Spring rolls</td><td>Origin of "spring roll" / "egg roll"</td></tr>
+    </tbody>
+  </table>
+
+  <p>Many English food words actually come from Chinese: "wonton" from 馄饨, "chow mein" from 炒面, "dim sum" from 点心, and "tofu" from 豆腐. Recognizing these connections makes the vocabulary easier to remember.</p>
+
+  <h2 id="meat-seafood">Meat and Seafood</h2>
+  <p>Knowing meat and seafood terms is essential for ordering and for avoiding ingredients you do not eat. Chinese menus typically list the main protein first, then the cooking method.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>猪肉</td><td>zhūròu</td><td>Pork (most common meat in Chinese cooking)</td></tr>
+      <tr><td>牛肉</td><td>niúròu</td><td>Beef</td></tr>
+      <tr><td>鸡肉</td><td>jīròu</td><td>Chicken</td></tr>
+      <tr><td>鸭肉</td><td>yāròu</td><td>Duck</td></tr>
+      <tr><td>羊肉</td><td>yángròu</td><td>Lamb / Mutton</td></tr>
+      <tr><td>鱼</td><td>yú</td><td>Fish</td></tr>
+      <tr><td>虾</td><td>xiā</td><td>Shrimp / Prawn</td></tr>
+      <tr><td>螃蟹</td><td>pángxiè</td><td>Crab</td></tr>
+      <tr><td>豆腐</td><td>dòufu</td><td>Tofu</td></tr>
+      <tr><td>鸡蛋</td><td>jīdàn</td><td>Egg</td></tr>
+    </tbody>
+  </table>
+
+  <p>The character 肉 (ròu, meat) appears in all meat terms. The animal character comes first: 猪 (pig) + 肉 (meat) = 猪肉 (pork). Once you know this pattern and the common animal characters, you can decode any meat item on a menu. For vegetarians: 素食 (sùshí) means vegetarian food, and 我吃素 (wǒ chī sù) means "I am vegetarian."</p>
+
+  <h2 id="vegetables-fruits">Vegetables and Fruits</h2>
+  <p>Chinese cuisine features an extraordinary variety of vegetables, many unfamiliar to Western diners. Learning these terms opens up an entire world of delicious and healthy options.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #e8f5e9; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #2e7d32; margin-bottom: 10px;">Common Vegetables 蔬菜</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>白菜 (báicài) — Chinese cabbage</li>
+        <li>青菜 (qīngcài) — Green vegetables</li>
+        <li>西红柿 (xīhóngshì) — Tomato</li>
+        <li>黄瓜 (huángguā) — Cucumber</li>
+        <li>茄子 (qiézi) — Eggplant</li>
+        <li>土豆 (tǔdòu) — Potato</li>
+        <li>蘑菇 (mógu) — Mushroom</li>
+        <li>豆芽 (dòuyá) — Bean sprouts</li>
+      </ul>
+    </div>
+    <div style="background: #fff3e0; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #e65100; margin-bottom: 10px;">Common Fruits 水果</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>苹果 (píngguǒ) — Apple</li>
+        <li>香蕉 (xiāngjiāo) — Banana</li>
+        <li>西瓜 (xīguā) — Watermelon</li>
+        <li>草莓 (cǎoméi) — Strawberry</li>
+        <li>葡萄 (pútao) — Grape</li>
+        <li>橙子 (chéngzi) — Orange</li>
+        <li>芒果 (mángguǒ) — Mango</li>
+        <li>荔枝 (lìzhī) — Lychee</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="popular-dishes">25 Must-Know Chinese Dishes</h2>
+  <p>These are the dishes you will encounter most frequently on Chinese restaurant menus worldwide. Knowing their names in Chinese lets you order with confidence and impress your dining companions. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check the pronunciation of any dish name.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Flavor Profile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>宫保鸡丁</td><td>gōngbǎo jīdīng</td><td>Kung Pao Chicken</td><td>Spicy, nutty (Sichuan)</td></tr>
+      <tr><td>麻婆豆腐</td><td>mápó dòufu</td><td>Mapo Tofu</td><td>Numbing-spicy (Sichuan)</td></tr>
+      <tr><td>红烧肉</td><td>hóngshāo ròu</td><td>Red-Braised Pork</td><td>Sweet, savory (Shanghai)</td></tr>
+      <tr><td>北京烤鸭</td><td>Běijīng kǎoyā</td><td>Peking Duck</td><td>Crispy, rich (Beijing)</td></tr>
+      <tr><td>回锅肉</td><td>huíguōròu</td><td>Twice-Cooked Pork</td><td>Savory, slightly spicy</td></tr>
+      <tr><td>鱼香肉丝</td><td>yúxiāng ròusī</td><td>Fish-Flavored Pork</td><td>Sweet-sour-spicy (no fish!)</td></tr>
+      <tr><td>小笼包</td><td>xiǎolóngbāo</td><td>Soup Dumplings</td><td>Juicy, delicate (Shanghai)</td></tr>
+      <tr><td>糖醋排骨</td><td>tángcù páigǔ</td><td>Sweet and Sour Ribs</td><td>Sweet-sour</td></tr>
+      <tr><td>蛋炒饭</td><td>dàn chǎofàn</td><td>Egg Fried Rice</td><td>Simple, comforting</td></tr>
+      <tr><td>火锅</td><td>huǒguō</td><td>Hot Pot</td><td>Varies — communal cooking</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice how dish names follow a pattern: <strong>ingredient + cooking method + optional modifier</strong>. 红烧 (red-braised) + 肉 (meat) = 红烧肉. 宫保 (Kung Pao style) + 鸡丁 (diced chicken) = 宫保鸡丁. Understanding this structure lets you decode unfamiliar dishes by recognizing the parts.</p>
+
+  <h2 id="cooking-methods">Cooking Methods on Menus</h2>
+  <p>Chinese cooking uses dozens of techniques, and these terms appear constantly on menus. Knowing them helps you predict what a dish will taste and look like before ordering.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">炒</div>
+      <div style="font-size: 0.85rem; color: #555;">chǎo — Stir-fry</div>
+      <div style="font-size: 0.8rem; color: #777;">Quick, high heat</div>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">蒸</div>
+      <div style="font-size: 0.85rem; color: #555;">zhēng — Steam</div>
+      <div style="font-size: 0.8rem; color: #777;">Gentle, healthy</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">煮</div>
+      <div style="font-size: 0.85rem; color: #555;">zhǔ — Boil</div>
+      <div style="font-size: 0.8rem; color: #777;">In liquid, soup-based</div>
+    </div>
+    <div style="background: #fce4ec; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">烤</div>
+      <div style="font-size: 0.85rem; color: #555;">kǎo — Roast/Grill</div>
+      <div style="font-size: 0.8rem; color: #777;">Dry heat, crispy</div>
+    </div>
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">炸</div>
+      <div style="font-size: 0.85rem; color: #555;">zhá — Deep-fry</div>
+      <div style="font-size: 0.8rem; color: #777;">Crispy, golden</div>
+    </div>
+    <div style="background: #f3e5f5; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.3rem; font-weight: 700;">红烧</div>
+      <div style="font-size: 0.85rem; color: #555;">hóngshāo — Red-braise</div>
+      <div style="font-size: 0.8rem; color: #777;">Soy sauce-based, rich</div>
+    </div>
+  </div>
+
+  <p>When you see 清蒸鱼 (qīngzhēng yú) on a menu, you can decode it: 清蒸 (steamed simply) + 鱼 (fish) = simply steamed fish. 炸鸡 (zhá jī) = deep-fried chicken. 烤羊肉 (kǎo yángròu) = roasted lamb. This pattern recognition makes you a confident menu reader.</p>
+
+  <h2 id="drinks-desserts">Drinks and Desserts</h2>
+  <p>Chinese drink culture extends far beyond tea — though tea remains central to daily life. Modern China and Taiwan also have a thriving bubble tea and coffee culture.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>水</td><td>shuǐ</td><td>Water</td><td>Hot water (热水) is the default in China</td></tr>
+      <tr><td>茶</td><td>chá</td><td>Tea</td><td>Green (绿茶), black (红茶), oolong (乌龙茶)</td></tr>
+      <tr><td>咖啡</td><td>kāfēi</td><td>Coffee</td><td>Growing café culture in cities</td></tr>
+      <tr><td>啤酒</td><td>píjiǔ</td><td>Beer</td><td>Tsingtao (青岛) is the most famous brand</td></tr>
+      <tr><td>珍珠奶茶</td><td>zhēnzhū nǎichá</td><td>Bubble tea</td><td>Taiwan's most famous culinary export</td></tr>
+      <tr><td>豆浆</td><td>dòujiāng</td><td>Soy milk</td><td>Traditional Chinese breakfast drink</td></tr>
+      <tr><td>果汁</td><td>guǒzhī</td><td>Fruit juice</td><td>Fresh-squeezed widely available</td></tr>
+      <tr><td>冰淇淋</td><td>bīngqílín</td><td>Ice cream</td><td>Unique flavors: red bean, taro, matcha</td></tr>
+      <tr><td>月饼</td><td>yuèbing</td><td>Mooncake</td><td>Mid-Autumn Festival specialty</td></tr>
+      <tr><td>汤圆</td><td>tāngyuán</td><td>Sweet rice balls</td><td>Lantern Festival; symbolizes reunion</td></tr>
+    </tbody>
+  </table>
+
+  <p>An important cultural note: in China, restaurants usually serve <strong>hot water</strong> (热水, rè shuǐ) by default, not cold. Chinese medicine considers cold drinks harmful to digestion. If you want cold water, specifically request 冰水 (bīng shuǐ — ice water) or 凉水 (liáng shuǐ — cold water).</p>
+
+  <h2 id="regional-cuisines">Regional Cuisine Guide</h2>
+  <p>Chinese cuisine is not one single style — it encompasses eight major regional traditions (八大菜系), each with distinct flavors, techniques, and signature dishes. Understanding these differences helps you know what to expect when ordering.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #c62828;">川菜 Sichuan</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Spicy + numbing (麻辣). Famous for: 火锅, 麻婆豆腐, 回锅肉. Uses Sichuan peppercorn (花椒) for the distinctive numbing sensation.</div>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #1565c0;">粤菜 Cantonese</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Light, fresh flavors. Famous for: dim sum (点心), roast goose, steamed fish. Emphasizes ingredient freshness over heavy seasoning.</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #e65100;">鲁菜 Shandong</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Salty, crispy seafood. Famous for: braised sea cucumber, sweet-sour carp. The oldest and most influential of the eight cuisines.</div>
+    </div>
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #2e7d32;">湘菜 Hunan</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Sour-spicy, smoky. Famous for: smoked pork, red-braised pork. Uses fresh chilies more than dried ones (unlike Sichuan).</div>
+    </div>
+  </div>
+
+  <h3>Start Your Food Vocabulary Journey</h3>
+  <p>The best way to learn food vocabulary is to use it — visit a Chinese restaurant and try ordering in Chinese. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation of any dish name, explore the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary</a> browser for food-related words at your level, and learn one new food character daily with <a href="/chinese/tools/daily-character/">Daily Character</a>. Check out our <a href="/chinese/blog/chinese-travel-phrases/">travel phrases guide</a> for more practical conversation starters, and read about <a href="/chinese/blog/chinese-measure-words/">measure words</a> to learn the correct counters for ordering (一碗面, 一杯茶, 一盘菜). Every meal is a learning opportunity — 吃饭了吗？(Have you eaten yet?)</p>
 
 </BlogLayout>

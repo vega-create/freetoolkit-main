@@ -1,12 +1,31 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Why is red so important in Chinese culture?`, a: `Red (红/紅) symbolizes luck, prosperity, and happiness. It is used for weddings, New Year decorations, lucky money envelopes (红包), and celebrations. It is the most culturally significant color in Chinese tradition.` }];
-const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
-const headings = [{ depth: 2, slug: "basic-colors", text: "Basic Colors" }, { depth: 2, slug: "symbolism", text: "Color Symbolism" }, { depth: 2, slug: "idioms", text: "Color Idioms" }];
+const faq = [
+  { q: `Why is red so important in Chinese culture?`, a: `Red (红/紅, hóng) symbolizes luck, prosperity, happiness, and celebration. It dominates weddings, Chinese New Year, and festivals. Red envelopes (红包) contain gift money. Brides traditionally wear red. The Chinese flag is red. It is deeply woven into every aspect of Chinese life and represents the most auspicious energy.` },
+  { q: `Why is white associated with death in Chinese culture?`, a: `White (白, bái) is the traditional color of mourning and funerals in Chinese culture — the opposite of Western tradition where white means purity. Funeral attendees wear white, and white flowers (especially chrysanthemums) are for mourning. Avoid giving white-wrapped gifts unless certain of the context.` },
+  { q: `What does wearing a green hat mean in Chinese?`, a: `戴绿帽子 (dài lǜ màozi — wearing a green hat) means being cheated on by a romantic partner. This idiom dates back centuries and is extremely well-known. Avoid giving green hats as gifts in Chinese culture. The association is so strong that even green hat emojis can cause awkwardness.` },
+  { q: `How do I describe colors in Chinese — light and dark shades?`, a: `Add 深 (shēn — deep/dark) or 浅 (qiǎn — light/pale) before the color: 深蓝 (dark blue), 浅绿 (light green). For very bright colors, use 鲜 (xiān — vivid): 鲜红 (vivid red). For "color" in general, use 颜色 (yánsè).` },
+  { q: `Are color meanings different in Taiwan vs mainland China?`, a: `The core symbolism is the same (red = luck, white = mourning). However, Taiwan uses traditional characters (紅 vs 红). Some modern color terms differ: purple is sometimes called 紫色 universally but fashion terminology may vary. Cultural taboos around colors are consistent across both regions.` }
+];
+const relatedTools = [
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "basic-colors", text: "12 Basic Colors in Chinese" },
+  { depth: 2, slug: "color-grammar", text: "How to Use Colors in Sentences" },
+  { depth: 2, slug: "shades", text: "Describing Shades and Tones" },
+  { depth: 2, slug: "cultural-symbolism", text: "Cultural Symbolism of Colors" },
+  { depth: 2, slug: "color-in-life", text: "Colors in Daily Chinese Life" },
+  { depth: 2, slug: "color-idioms", text: "Color Idioms and Expressions" },
+  { depth: 2, slug: "color-taboos", text: "Color Taboos and Gift-Giving" },
+  { depth: 2, slug: "nature-colors", text: "Colors in Nature and Food" }
+];
 ---
 <BlogLayout
-  title="Colors in Chinese: Vocabulary and Cultural Meanings"
-  description="Learn color words in Chinese and discover their rich cultural symbolism. Red for luck, white for mourning, and more."
+  title="Colors in Chinese: Vocabulary, Cultural Meanings, and Taboos"
+  description="Learn all color words in Chinese with pronunciation, cultural symbolism, idioms, and important taboos. Understand why red means luck and green hats are dangerous."
   language="chinese"
   category="culture"
   tags={["colors", "vocabulary", "culture", "beginner"]}
@@ -16,13 +35,178 @@ const headings = [{ depth: 2, slug: "basic-colors", text: "Basic Colors" }, { de
   headings={headings}
 >
 
-    <h2 id="basic-colors">Basic Colors</h2>
-    <p><strong>红 (hóng)</strong> red, <strong>蓝 (lán)</strong> blue, <strong>绿 (lǜ)</strong> green, <strong>黄 (huáng)</strong> yellow, <strong>白 (bái)</strong> white, <strong>黑 (hēi)</strong> black, <strong>粉 (fěn)</strong> pink, <strong>紫 (zǐ)</strong> purple, <strong>橙 (chéng)</strong> orange, <strong>灰 (huī)</strong> gray. To say "color" in general, use 颜色 (yánsè).</p>
+  <h2 id="basic-colors">12 Basic Colors in Chinese</h2>
+  <p>Color words in Chinese carry far more cultural weight than in English. While English speakers think of colors as simple descriptors, Chinese colors are loaded with symbolism, superstition, and centuries of cultural meaning. Learning colors is not just vocabulary — it is a window into Chinese worldview.</p>
 
-    <h2 id="symbolism">Color Symbolism</h2>
-    <p><strong>Red</strong> represents luck and joy — used at weddings, New Year, and celebrations. <strong>White</strong> is associated with mourning and funerals, the opposite of Western wedding white. <strong>Yellow</strong> was historically the imperial color, reserved for the emperor. <strong>Green</strong> can have negative connotations — 戴绿帽子 (wearing a green hat) means being cheated on.</p>
+  <table>
+    <thead>
+      <tr><th>Color</th><th>Chinese</th><th>Pinyin</th><th>Cultural Hint</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="width:30px;height:24px;background:#e53935;border-radius:4px;"></td><td>红色</td><td>hóngsè</td><td>Luck, celebration, happiness</td></tr>
+      <tr><td style="width:30px;height:24px;background:#1565c0;border-radius:4px;"></td><td>蓝色</td><td>lánsè</td><td>Calm, healing, melancholy</td></tr>
+      <tr><td style="width:30px;height:24px;background:#2e7d32;border-radius:4px;"></td><td>绿色</td><td>lǜsè</td><td>Nature, but green hat = cheated on</td></tr>
+      <tr><td style="width:30px;height:24px;background:#f9a825;border-radius:4px;"></td><td>黄色</td><td>huángsè</td><td>Imperial, noble; also = vulgar content</td></tr>
+      <tr><td style="width:30px;height:24px;background:#fafafa;border:1px solid #ddd;border-radius:4px;"></td><td>白色</td><td>báisè</td><td>Mourning, death, funerals</td></tr>
+      <tr><td style="width:30px;height:24px;background:#212121;border-radius:4px;"></td><td>黑色</td><td>hēisè</td><td>Evil, corruption, darkness</td></tr>
+      <tr><td style="width:30px;height:24px;background:#ec407a;border-radius:4px;"></td><td>粉色 / 粉红色</td><td>fěnsè / fěnhóngsè</td><td>Romance, femininity</td></tr>
+      <tr><td style="width:30px;height:24px;background:#7b1fa2;border-radius:4px;"></td><td>紫色</td><td>zǐsè</td><td>Nobility, spirituality</td></tr>
+      <tr><td style="width:30px;height:24px;background:#ef6c00;border-radius:4px;"></td><td>橙色</td><td>chéngsè</td><td>Warmth, harvest</td></tr>
+      <tr><td style="width:30px;height:24px;background:#9e9e9e;border-radius:4px;"></td><td>灰色</td><td>huīsè</td><td>Neutral, dull, discouraged</td></tr>
+      <tr><td style="width:30px;height:24px;background:#795548;border-radius:4px;"></td><td>棕色 / 咖啡色</td><td>zōngsè / kāfēisè</td><td>Earth, natural</td></tr>
+      <tr><td style="width:30px;height:24px;background:#ffd700;border-radius:4px;"></td><td>金色</td><td>jīnsè</td><td>Wealth, prestige</td></tr>
+    </tbody>
+  </table>
 
-    <h2 id="idioms">Color Idioms</h2>
-    <p><strong>红红火火 (hóng hóng huǒ huǒ)</strong> — red and fiery, meaning prosperous. <strong>青出于蓝 (qīng chū yú lán)</strong> — blue comes from indigo but surpasses it, meaning the student surpasses the teacher. Explore more idioms with our <a href="/chinese/tools/daily-idiom/">Daily Idiom</a> tool.</p>
+  <p>Notice that most colors add 色 (sè, color) as a suffix when used as nouns: 红 (red as adjective) → 红色 (the color red). In casual speech, 色 is often dropped. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation of any color word.</p>
+
+  <h2 id="color-grammar">How to Use Colors in Sentences</h2>
+  <p>Colors function as adjectives in Chinese, but they follow different grammar patterns depending on whether you use them before a noun or in a descriptive sentence.</p>
+
+  <table>
+    <thead>
+      <tr><th>Pattern</th><th>Example</th><th>Pinyin</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Color + 的 + noun</td><td>红色的花</td><td>hóngsè de huā</td><td>Red flower</td></tr>
+      <tr><td>Noun + 是 + color + 的</td><td>天空是蓝色的</td><td>tiānkōng shì lánsè de</td><td>The sky is blue</td></tr>
+      <tr><td>Short form (no 的/色)</td><td>红花</td><td>hóng huā</td><td>Red flower (literary)</td></tr>
+      <tr><td>Question</td><td>这是什么颜色？</td><td>zhè shì shénme yánsè?</td><td>What color is this?</td></tr>
+      <tr><td>Preference</td><td>我喜欢蓝色</td><td>wǒ xǐhuan lánsè</td><td>I like blue</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="shades">Describing Shades and Tones</h2>
+  <p>Chinese has a systematic way to describe color shades using modifier words before the base color.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 24px 0;">
+    <div style="background: #1a237e; border-radius: 8px; padding: 14px; text-align: center; color: #fff;">
+      <div style="font-weight: 700;">深蓝</div>
+      <div style="font-size: 0.8rem;">shēn lán</div>
+      <div style="font-size: 0.8rem;">dark blue</div>
+    </div>
+    <div style="background: #1565c0; border-radius: 8px; padding: 14px; text-align: center; color: #fff;">
+      <div style="font-weight: 700;">蓝色</div>
+      <div style="font-size: 0.8rem;">lánsè</div>
+      <div style="font-size: 0.8rem;">blue</div>
+    </div>
+    <div style="background: #90caf9; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-weight: 700;">浅蓝</div>
+      <div style="font-size: 0.8rem;">qiǎn lán</div>
+      <div style="font-size: 0.8rem;">light blue</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Modifier</th><th>Pinyin</th><th>Meaning</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>深</td><td>shēn</td><td>Deep / dark</td><td>深红 (dark red / crimson)</td></tr>
+      <tr><td>浅</td><td>qiǎn</td><td>Light / pale</td><td>浅绿 (light green)</td></tr>
+      <tr><td>鲜</td><td>xiān</td><td>Vivid / bright</td><td>鲜红 (bright red)</td></tr>
+      <tr><td>暗</td><td>àn</td><td>Dark / dim</td><td>暗红 (dark muted red)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="cultural-symbolism">Cultural Symbolism of Colors</h2>
+  <p>Color symbolism in Chinese culture runs far deeper than Western associations. These meanings affect everything from wedding planning to business presentations to gift wrapping.</p>
+
+  <!-- Color Symbolism Cards -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0;">
+    <div style="background: #ffebee; border-left: 4px solid #c62828; padding: 16px; border-radius: 0 8px 8px 0;">
+      <div style="font-weight: 700; color: #c62828;">红 Red — Luck & Joy</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 6px;">Weddings, Chinese New Year, red envelopes (红包), celebrations. The most positive and auspicious color. Brides wear red. Lucky money comes in red envelopes.</div>
+    </div>
+    <div style="background: #fff8e1; border-left: 4px solid #f9a825; padding: 16px; border-radius: 0 8px 8px 0;">
+      <div style="font-weight: 700; color: #f57f17;">黄 Yellow — Imperial Power</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 6px;">Historically reserved for the emperor. The Forbidden City's roofs are yellow. Yellow also means "vulgar/pornographic" in modern slang (黄色 content = adult content).</div>
+    </div>
+    <div style="background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 16px; border-radius: 0 8px 8px 0;">
+      <div style="font-weight: 700; color: #7b1fa2;">白 White — Mourning</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 6px;">Associated with death and funerals — the opposite of Western weddings. Mourners wear white. White flowers go to funerals. Avoid white gift wrapping.</div>
+    </div>
+    <div style="background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 16px; border-radius: 0 8px 8px 0;">
+      <div style="font-weight: 700; color: #2e7d32;">绿 Green — Nature, but...</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 6px;">Generally positive (nature, ecology). But 戴绿帽子 (wearing a green hat) = being cheated on. Never give a green hat as a gift. This is one of the most well-known Chinese cultural taboos.</div>
+    </div>
+  </div>
+
+  <h2 id="color-in-life">Colors in Daily Chinese Life</h2>
+  <p>Colors appear constantly in everyday Chinese vocabulary, often in ways that reveal cultural priorities.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>Literal</th><th>Actual Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>红包</td><td>hóngbāo</td><td>Red envelope</td><td>Gift money (physical or digital via WeChat)</td></tr>
+      <tr><td>红茶</td><td>hóngchá</td><td>Red tea</td><td>What English calls "black tea"</td></tr>
+      <tr><td>黑市</td><td>hēishì</td><td>Black market</td><td>Same meaning as English</td></tr>
+      <tr><td>白酒</td><td>báijiǔ</td><td>White alcohol</td><td>Strong Chinese liquor (clear, 40-60% ABV)</td></tr>
+      <tr><td>黄金</td><td>huángjīn</td><td>Yellow gold</td><td>Gold (the precious metal)</td></tr>
+      <tr><td>绿卡</td><td>lǜkǎ</td><td>Green card</td><td>Permanent residency card (same as English)</td></tr>
+      <tr><td>蓝牙</td><td>lányá</td><td>Blue tooth</td><td>Bluetooth technology</td></tr>
+    </tbody>
+  </table>
+
+  <p>An interesting cultural note: what English calls "black tea" is 红茶 (red tea) in Chinese, because Chinese names the tea by the color of the liquid, not the dried leaves. Similarly, "green tea" (绿茶) matches in both languages.</p>
+
+  <h2 id="color-idioms">Color Idioms and Expressions</h2>
+  <p>Chinese color idioms (成语) add richness to conversation and writing. These four-character expressions are widely used and recognized.</p>
+
+  <table>
+    <thead>
+      <tr><th>Idiom</th><th>Pinyin</th><th>Literal</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>红红火火</td><td>hóng hóng huǒ huǒ</td><td>Red red fire fire</td><td>Booming, prosperous, thriving</td></tr>
+      <tr><td>青出于蓝</td><td>qīng chū yú lán</td><td>Blue from indigo</td><td>Student surpasses the teacher</td></tr>
+      <tr><td>黑白分明</td><td>hēi bái fēnmíng</td><td>Black white clearly separated</td><td>Clear distinction between right and wrong</td></tr>
+      <tr><td>万紫千红</td><td>wàn zǐ qiān hóng</td><td>Ten-thousand purple thousand red</td><td>A riot of colors; great variety and beauty</td></tr>
+      <tr><td>灰心丧气</td><td>huī xīn sàng qì</td><td>Gray heart lost spirit</td><td>Discouraged, disheartened</td></tr>
+      <tr><td>白手起家</td><td>bái shǒu qǐ jiā</td><td>White hands build a home</td><td>Start from nothing; self-made success</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="color-taboos">Color Taboos and Gift-Giving</h2>
+  <p>Understanding color taboos prevents embarrassing mistakes in Chinese social situations, especially when giving gifts or attending important events.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #c62828; margin-bottom: 8px;">Avoid These</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem;">
+        <li>White wrapping paper for gifts</li>
+        <li>Green hats (of any kind)</li>
+        <li>Black or white flowers (except funerals)</li>
+        <li>Writing names in red ink (death association)</li>
+        <li>All-white outfits to celebrations</li>
+      </ul>
+    </div>
+    <div style="background: #e8f5e9; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #2e7d32; margin-bottom: 8px;">Good Choices</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem;">
+        <li>Red wrapping paper for gifts</li>
+        <li>Red envelopes for money gifts</li>
+        <li>Gold/yellow for prosperity themes</li>
+        <li>Pink for romantic occasions</li>
+        <li>Red outfits for Chinese New Year</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>One particularly important taboo: <strong>never write someone's name in red ink</strong>. In Chinese tradition, the names of the deceased were written in red on memorial tablets and records. Writing a living person's name in red is like wishing them death. Use black or blue ink instead.</p>
+
+  <h2 id="nature-colors">Colors in Nature and Food</h2>
+  <p>Colors help describe food, seasons, and nature in Chinese, creating vivid imagery in conversation.</p>
+
+  <ul>
+    <li><strong>Seasons:</strong> 春天 (spring) = green 绿色, 夏天 (summer) = red 红色, 秋天 (autumn) = golden 金色, 冬天 (winter) = white 白色</li>
+    <li><strong>Food descriptors:</strong> 红烧 (red-braised), 白切鸡 (white-cut chicken), 金针菇 (golden needle mushroom), 黑木耳 (black wood ear fungus)</li>
+    <li><strong>Chinese Five Elements:</strong> 金 (gold/metal), 木 (green/wood), 水 (black/water), 火 (red/fire), 土 (yellow/earth)</li>
+  </ul>
+
+  <h3>Start Learning Color Vocabulary</h3>
+  <p>Practice one new color character daily with <a href="/chinese/tools/daily-character/">Daily Character</a>, browse color-related vocabulary in the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary</a> browser, and use the <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to perfect your pronunciation. Read our <a href="/chinese/blog/chinese-culture-basics/">Chinese culture guide</a> for more cultural context, and explore <a href="/chinese/blog/common-chinese-characters/">common Chinese characters</a> to see how color radicals build into other words.</p>
 
 </BlogLayout>

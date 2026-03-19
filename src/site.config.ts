@@ -5,6 +5,17 @@ export const siteConfig = {
   author: 'FreeToolkit',
   ogImage: '/images/og-default.png',
 
+  // Author (EEAT)
+  authorPerson: {
+    name: 'Yang Lin',
+    slug: 'yang-lin',
+    title: 'Language Education Specialist',
+    bio: 'Yang Lin is a Taiwan-based bilingual educator specializing in Mandarin Chinese and Japanese instruction. With over 10 years of experience helping learners worldwide master East Asian languages, Yang creates practical tools and structured study guides that make language learning accessible, effective, and enjoyable. She holds a degree in Applied Linguistics and has taught students from more than 20 countries.',
+    url: '/about/yang-lin/',
+    expertise: ['Mandarin Chinese', 'Japanese', 'HSK Preparation', 'JLPT Preparation', 'Language Pedagogy', 'Applied Linguistics'],
+    sameAs: [],
+  },
+
   // Tracking
   tracking: {
     gtm: 'GTM-NWNPMSZM',

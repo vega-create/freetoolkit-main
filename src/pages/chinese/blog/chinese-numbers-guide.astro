@@ -1,28 +1,226 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Why is 4 unlucky in Chinese?`, a: `The number 4 (四, sì) sounds similar to 死 (sǐ, death), making it considered unlucky. Many buildings skip the 4th floor, and phone numbers with 4 are cheaper.` }];
-const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
-const headings = [{ depth: 2, slug: "basics", text: "Numbers 1-10" }, { depth: 2, slug: "larger", text: "Building Larger Numbers" }, { depth: 2, slug: "lucky", text: "Lucky and Unlucky Numbers" }];
+const faq = [
+  { q: `Why is 4 considered unlucky in Chinese culture?`, a: `The number 4 (四, sì) sounds almost identical to 死 (sǐ, death). This phonetic similarity makes 4 deeply avoided — buildings skip the 4th floor, phone numbers with 4 are discounted, and gifts should never come in groups of four. This superstition is called 四谐音忌讳 (tetraphobia).` },
+  { q: `What is the luckiest number in Chinese?`, a: `Eight (八, bā) is the luckiest number because it sounds like 发 (fā, to prosper/get rich). The 2008 Beijing Olympics started at 8:08:08 PM on 08/08/08. Phone numbers and license plates with multiple 8s sell for premium prices. The number 168 (一路发) means "prosperity all the way."` },
+  { q: `How does the Chinese number system differ from English?`, a: `Chinese numbers are more logical: 11 is "ten-one" (十一), 25 is "two-ten-five" (二十五). The biggest difference is the unit 万 (wàn, ten-thousand) — Chinese groups large numbers by ten-thousands, not thousands. So one million is 一百万 (100 ten-thousands), not "one thousand thousands."` },
+  { q: `What are Chinese hand gestures for numbers?`, a: `Chinese has unique one-hand gestures for numbers 1-10. Numbers 1-5 use the obvious finger counting. 6 uses the pinky and thumb extended. 7 pinches all fingers together. 8 makes an L-shape with thumb and index finger. 9 hooks the index finger. 10 crosses the index fingers or makes a fist.` },
+  { q: `How do I say prices and money amounts in Chinese?`, a: `Use 块 (kuài) for the main currency unit (colloquial for 元, yuán) and 毛 (máo) for ten-cent units. Example: ¥25.50 is 二十五块五毛 (èrshíwǔ kuài wǔ máo) or simply 二十五块五. For large amounts, the 万 unit becomes essential: ¥50,000 is 五万块.` }
+];
+const relatedTools = [
+  { name: "Number Converter", url: "/chinese/tools/number-converter/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" }
+];
+const headings = [
+  { depth: 2, slug: "numbers-1-10", text: "Numbers 1-10: The Foundation" },
+  { depth: 2, slug: "building-larger", text: "Building Larger Numbers" },
+  { depth: 2, slug: "wan-system", text: "The 万 (Ten-Thousand) System" },
+  { depth: 2, slug: "ordinals-fractions", text: "Ordinal Numbers and Fractions" },
+  { depth: 2, slug: "money-prices", text: "Money and Prices" },
+  { depth: 2, slug: "dates-time", text: "Numbers in Dates and Time" },
+  { depth: 2, slug: "lucky-unlucky", text: "Lucky and Unlucky Numbers" },
+  { depth: 2, slug: "hand-gestures", text: "Hand Gestures for Numbers" }
+];
 ---
 <BlogLayout
-  title="Chinese Numbers: How to Count from 1 to 10,000"
-  description="Master Chinese numbers with this complete guide covering basic counting, large numbers, and cultural number meanings."
+  title="Chinese Numbers: Complete Guide from 1 to 100 Million"
+  description="Master the Chinese number system — from basic counting to large numbers, money, dates, lucky numbers, and hand gestures. The most logical number system you will ever learn."
   language="chinese"
   category="chinese-basics"
-  tags={["numbers", "beginner", "culture"]}
+  tags={["numbers", "beginner", "culture", "vocabulary"]}
   publishDate="2026-02-20"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="basics">Numbers 1-10</h2>
-    <p>Chinese numbers 1-10 are single characters and the foundation for all counting: 一(yī) 二(èr) 三(sān) 四(sì) 五(wǔ) 六(liù) 七(qī) 八(bā) 九(jiǔ) 十(shí). Notice that 一, 二, 三 visually represent one, two, and three horizontal strokes.</p>
+  <h2 id="numbers-1-10">Numbers 1-10: The Foundation</h2>
+  <p>Chinese numbers 1-10 are single characters that form the foundation of the entire counting system. Unlike English, which requires memorizing unique words for each number, Chinese numbers follow patterns that make them remarkably easy to learn. Master these ten characters and you can count to any number.</p>
 
-    <h2 id="larger">Building Larger Numbers</h2>
-    <p>Chinese numbers follow a beautifully logical system. Eleven is simply "ten-one" (十一), twenty is "two-ten" (二十), and twenty-five is "two-ten-five" (二十五). Hundred is 百 (bǎi), thousand is 千 (qiān), and ten thousand is 万/萬 (wàn). Try our <a href="/chinese/tools/number-converter/">Number Converter</a> to see any number in Chinese.</p>
+  <table>
+    <thead>
+      <tr><th>Number</th><th>Character</th><th>Pinyin</th><th>Memory Tip</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td style="font-size: 1.3rem;">一</td><td>yī</td><td>One horizontal stroke = one</td></tr>
+      <tr><td>2</td><td style="font-size: 1.3rem;">二</td><td>èr</td><td>Two horizontal strokes = two</td></tr>
+      <tr><td>3</td><td style="font-size: 1.3rem;">三</td><td>sān</td><td>Three horizontal strokes = three</td></tr>
+      <tr><td>4</td><td style="font-size: 1.3rem;">四</td><td>sì</td><td>Looks like a window with 4 panes</td></tr>
+      <tr><td>5</td><td style="font-size: 1.3rem;">五</td><td>wǔ</td><td>5 strokes in the character</td></tr>
+      <tr><td>6</td><td style="font-size: 1.3rem;">六</td><td>liù</td><td>Looks like a person with arms out</td></tr>
+      <tr><td>7</td><td style="font-size: 1.3rem;">七</td><td>qī</td><td>Looks like an upside-down 7</td></tr>
+      <tr><td>8</td><td style="font-size: 1.3rem;">八</td><td>bā</td><td>Two strokes spreading apart</td></tr>
+      <tr><td>9</td><td style="font-size: 1.3rem;">九</td><td>jiǔ</td><td>Looks like a flexed arm</td></tr>
+      <tr><td>10</td><td style="font-size: 1.3rem;">十</td><td>shí</td><td>Cross shape = the Roman numeral X</td></tr>
+    </tbody>
+  </table>
 
-    <h2 id="lucky">Lucky and Unlucky Numbers</h2>
-    <p>Number symbolism is deeply embedded in Chinese culture. <strong>8 (八, bā)</strong> is the luckiest number because it sounds like 发 (fā, prosperity). The 2008 Beijing Olympics started at 8:08 PM on 8/8/08. <strong>6 (六, liù)</strong> represents smooth sailing. <strong>9 (九, jiǔ)</strong> symbolizes longevity. Meanwhile, <strong>4 (四, sì)</strong> is avoided because it sounds like death.</p>
+  <p>Notice the beautiful simplicity: 一, 二, 三 literally show one, two, and three horizontal strokes. This pictographic quality is unique among modern number systems. Also note that 零 (líng) means zero and is used in phone numbers, addresses, and mathematical contexts. Try our <a href="/chinese/tools/number-converter/">Number Converter</a> to see any number in Chinese characters.</p>
+
+  <h2 id="building-larger">Building Larger Numbers</h2>
+  <p>Chinese numbers follow a perfectly logical "multiplication + addition" system. Where English has irregular patterns (eleven, twelve, thirteen...), Chinese is completely predictable:</p>
+
+  <table>
+    <thead>
+      <tr><th>Number</th><th>Chinese</th><th>Pinyin</th><th>Literal Translation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>11</td><td>十一</td><td>shí yī</td><td>ten-one</td></tr>
+      <tr><td>12</td><td>十二</td><td>shí èr</td><td>ten-two</td></tr>
+      <tr><td>20</td><td>二十</td><td>èr shí</td><td>two-ten</td></tr>
+      <tr><td>25</td><td>二十五</td><td>èr shí wǔ</td><td>two-ten-five</td></tr>
+      <tr><td>99</td><td>九十九</td><td>jiǔ shí jiǔ</td><td>nine-ten-nine</td></tr>
+      <tr><td>100</td><td>一百</td><td>yī bǎi</td><td>one-hundred</td></tr>
+      <tr><td>250</td><td>二百五十</td><td>èr bǎi wǔ shí</td><td>two-hundred-five-ten</td></tr>
+      <tr><td>1,000</td><td>一千</td><td>yī qiān</td><td>one-thousand</td></tr>
+      <tr><td>3,456</td><td>三千四百五十六</td><td>sān qiān sì bǎi wǔ shí liù</td><td>three-thousand-four-hundred-five-ten-six</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Number Building Funnel -->
+  <div style="max-width: 500px; margin: 24px auto; text-align: center;">
+    <div style="font-weight: 700; margin-bottom: 12px; color: #333;">Chinese Number Building Blocks</div>
+    <div style="background: #ffebee; padding: 10px; border-radius: 6px; width: 30%; margin: 4px auto; font-size: 0.85rem;">一~十 (1-10)</div>
+    <div style="background: #fce4ec; padding: 10px; border-radius: 6px; width: 45%; margin: 4px auto; font-size: 0.85rem;">十一~九十九 (11-99)</div>
+    <div style="background: #f3e5f5; padding: 10px; border-radius: 6px; width: 60%; margin: 4px auto; font-size: 0.85rem;">百 bǎi (100s)</div>
+    <div style="background: #e8eaf6; padding: 10px; border-radius: 6px; width: 75%; margin: 4px auto; font-size: 0.85rem;">千 qiān (1,000s)</div>
+    <div style="background: #e3f2fd; padding: 10px; border-radius: 6px; width: 90%; margin: 4px auto; font-size: 0.85rem;">万 wàn (10,000s)</div>
+    <div style="background: #e0f7fa; padding: 10px; border-radius: 6px; width: 100%; margin: 4px auto; font-size: 0.85rem;">亿 yì (100,000,000s)</div>
+  </div>
+
+  <p><strong>Important rule about zero:</strong> When a zero appears in the middle of a number, you must include 零 (líng). For example: 101 = 一百零一 (yī bǎi líng yī), 1,005 = 一千零五 (yī qiān líng wǔ). However, trailing zeros are not spoken: 1,000 is just 一千, not 一千零零零.</p>
+
+  <h2 id="wan-system">The 万 (Ten-Thousand) System</h2>
+  <p>This is where Chinese numbers diverge most from English. English groups numbers by thousands (thousand, million, billion). Chinese groups by <strong>ten-thousands</strong> using the unit 万 (wàn). This is the single biggest mental adjustment for English speakers learning Chinese numbers.</p>
+
+  <table>
+    <thead>
+      <tr><th>Number</th><th>English</th><th>Chinese</th><th>Literal</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>10,000</td><td>ten thousand</td><td>一万</td><td>one wàn</td></tr>
+      <tr><td>50,000</td><td>fifty thousand</td><td>五万</td><td>five wàn</td></tr>
+      <tr><td>100,000</td><td>one hundred thousand</td><td>十万</td><td>ten wàn</td></tr>
+      <tr><td>1,000,000</td><td>one million</td><td>一百万</td><td>one-hundred wàn</td></tr>
+      <tr><td>10,000,000</td><td>ten million</td><td>一千万</td><td>one-thousand wàn</td></tr>
+      <tr><td>100,000,000</td><td>one hundred million</td><td>一亿</td><td>one yì</td></tr>
+    </tbody>
+  </table>
+
+  <p>The key conversion: <strong>1 million = 100万, 10 million = 1000万, 100 million = 1亿</strong>. When reading Chinese news about company valuations or population figures, the 万/亿 system is essential. China's population of 1.4 billion is expressed as 14亿 (shísì yì) — fourteen 亿-units.</p>
+
+  <h2 id="ordinals-fractions">Ordinal Numbers and Fractions</h2>
+  <p>Ordinal numbers (first, second, third) are formed by adding 第 (dì) before the number. Fractions use 分之 (fēn zhī) between the denominator and numerator — but in reverse order from English.</p>
+
+  <table>
+    <thead>
+      <tr><th>Expression</th><th>Chinese</th><th>Pinyin</th><th>Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>First</td><td>第一</td><td>dì yī</td><td>第 + number = ordinal</td></tr>
+      <tr><td>Second</td><td>第二</td><td>dì èr</td><td></td></tr>
+      <tr><td>Third</td><td>第三</td><td>dì sān</td><td></td></tr>
+      <tr><td>1/2</td><td>二分之一</td><td>èr fēn zhī yī</td><td>"two parts, of which one"</td></tr>
+      <tr><td>1/3</td><td>三分之一</td><td>sān fēn zhī yī</td><td>"three parts, of which one"</td></tr>
+      <tr><td>3/4</td><td>四分之三</td><td>sì fēn zhī sān</td><td>"four parts, of which three"</td></tr>
+      <tr><td>50%</td><td>百分之五十</td><td>bǎi fēn zhī wǔshí</td><td>"hundred parts, of which fifty"</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice the pattern for fractions: denominator first, then 分之, then numerator. This is the <strong>opposite</strong> of English order. Percentages follow the same pattern: 百分之 (out of one hundred) + the number. So 85% is 百分之八十五.</p>
+
+  <h2 id="money-prices">Money and Prices</h2>
+  <p>Understanding money terms is essential for shopping, dining, and daily life in Chinese-speaking regions. China uses 人民币 (rénmínbì, RMB), while Taiwan uses 新台币 (xīn táibì, NTD).</p>
+
+  <table>
+    <thead>
+      <tr><th>Term</th><th>Formal</th><th>Colloquial</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Main unit</td><td>元 (yuán)</td><td>块 (kuài)</td><td>1 yuan</td></tr>
+      <tr><td>Ten cents</td><td>角 (jiǎo)</td><td>毛 (máo)</td><td>0.1 yuan</td></tr>
+      <tr><td>One cent</td><td>分 (fēn)</td><td>分 (fēn)</td><td>0.01 yuan (rarely used)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Price examples: ¥15 = 十五块 (shíwǔ kuài). ¥3.50 = 三块五 (sān kuài wǔ — the 毛 is often dropped). ¥128 = 一百二十八块 (yī bǎi èrshíbā kuài). When asking prices: 多少钱？(duōshǎo qián? — How much?). Use our <a href="/chinese/tools/number-converter/">Number Converter</a> to practice converting any amount.</p>
+
+  <h2 id="dates-time">Numbers in Dates and Time</h2>
+  <p>Chinese dates follow the order <strong>year → month → day</strong> (largest to smallest), which is the opposite of American English but matches the ISO standard. Time uses a 12-hour or 24-hour system.</p>
+
+  <table>
+    <thead>
+      <tr><th>Expression</th><th>Chinese</th><th>Pinyin</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2026</td><td>二零二六年</td><td>èr líng èr liù nián</td></tr>
+      <tr><td>March</td><td>三月</td><td>sān yuè (third month)</td></tr>
+      <tr><td>15th</td><td>十五号/日</td><td>shíwǔ hào/rì</td></tr>
+      <tr><td>March 15, 2026</td><td>二零二六年三月十五号</td><td>èr líng èr liù nián sān yuè shíwǔ hào</td></tr>
+      <tr><td>3:30 PM</td><td>下午三点半</td><td>xiàwǔ sān diǎn bàn</td></tr>
+      <tr><td>Monday</td><td>星期一</td><td>xīngqī yī (week-one)</td></tr>
+      <tr><td>Sunday</td><td>星期天/日</td><td>xīngqī tiān/rì</td></tr>
+    </tbody>
+  </table>
+
+  <p>Days of the week are beautifully logical: 星期一 (Monday = week-one) through 星期六 (Saturday = week-six). Only Sunday breaks the pattern: 星期天 or 星期日. Months are equally simple: 一月 (January = month-one) through 十二月 (December = month-twelve). No need to memorize unique names.</p>
+
+  <h2 id="lucky-unlucky">Lucky and Unlucky Numbers</h2>
+  <p>Number symbolism profoundly influences Chinese culture — from wedding dates to phone numbers, apartment selection to business deals. Understanding these associations is essential cultural knowledge.</p>
+
+  <!-- Lucky/Unlucky Number Visual -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #c62828; margin-bottom: 10px;">Unlucky Numbers</div>
+      <div style="margin-bottom: 10px;">
+        <span style="font-size: 1.5rem; font-weight: 700;">4 四</span>
+        <p style="font-size: 0.85rem; color: #555; margin: 4px 0;">Sounds like 死 (death). Buildings skip 4th floor. Worst: 14, 24, 44.</p>
+      </div>
+      <div>
+        <span style="font-size: 1.5rem; font-weight: 700;">7 七</span>
+        <p style="font-size: 0.85rem; color: #555; margin: 4px 0;">Associated with ghosts and the 7th month Ghost Festival. Context-dependent.</p>
+      </div>
+    </div>
+    <div style="background: #e8f5e9; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #2e7d32; margin-bottom: 10px;">Lucky Numbers</div>
+      <div style="margin-bottom: 8px;">
+        <span style="font-size: 1.5rem; font-weight: 700;">8 八</span>
+        <p style="font-size: 0.85rem; color: #555; margin: 4px 0;">Sounds like 发 (prosper). The luckiest number in business.</p>
+      </div>
+      <div style="margin-bottom: 8px;">
+        <span style="font-size: 1.5rem; font-weight: 700;">6 六</span>
+        <p style="font-size: 0.85rem; color: #555; margin: 4px 0;">Means 顺利 (smooth). 66, 666 = everything goes well.</p>
+      </div>
+      <div>
+        <span style="font-size: 1.5rem; font-weight: 700;">9 九</span>
+        <p style="font-size: 0.85rem; color: #555; margin: 4px 0;">Sounds like 久 (long-lasting). Popular for weddings: 99, 999.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Lucky number combinations are everywhere in daily life: <strong>168</strong> (一路发, prosperity all the way), <strong>520</strong> (我爱你, I love you — phonetically), <strong>1314</strong> (一生一世, forever), <strong>888</strong> (triple prosperity). These number codes are used in WeChat red envelopes, gifts, and romantic expressions.</p>
+
+  <h2 id="hand-gestures">Hand Gestures for Numbers</h2>
+  <p>Chinese number hand gestures let you show numbers 1-10 with a single hand — extremely practical in noisy markets, restaurants, or when language barriers exist. Numbers 1-5 use standard finger counting, but 6-10 are unique to Chinese culture.</p>
+
+  <table>
+    <thead>
+      <tr><th>Number</th><th>Gesture</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1-5</td><td>Fingers</td><td>Standard finger counting (1 = index finger, etc.)</td></tr>
+      <tr><td>6</td><td>🤙</td><td>Pinky and thumb extended, other fingers folded</td></tr>
+      <tr><td>7</td><td>🤏</td><td>All fingertips pinched together, pointing up</td></tr>
+      <tr><td>8</td><td>👉</td><td>Thumb and index finger extended in L-shape</td></tr>
+      <tr><td>9</td><td>☝️</td><td>Index finger hooked (like a hook shape)</td></tr>
+      <tr><td>10</td><td>✊ or ✌️</td><td>Fist, or cross index fingers of both hands</td></tr>
+    </tbody>
+  </table>
+
+  <p>These gestures are indispensable at markets, restaurants, and street food stalls. When a vendor shouts a price you cannot hear clearly, holding up the gesture confirms the number. Practice these along with the spoken numbers for the most effective communication.</p>
+
+  <h3>Start Practicing Numbers Today</h3>
+  <p>Use our <a href="/chinese/tools/number-converter/">Number Converter</a> to convert any number to Chinese characters instantly. Browse number-related vocabulary in the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary</a> browser, and practice writing number characters with <a href="/chinese/tools/daily-character/">Daily Character</a>. Read our <a href="/chinese/blog/chinese-shopping-vocabulary/">shopping vocabulary guide</a> to see numbers in action at markets, and check out <a href="/chinese/blog/chinese-measure-words/">measure words</a> to learn how numbers combine with counters in Chinese sentences.</p>
 
 </BlogLayout>

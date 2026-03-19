@@ -1,21 +1,272 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How do you ask about the weather in Chinese?`, a: `今天天气怎么样？(jīntiān tiānqì zěnme yàng?) — How is the weather today? This is one of the most common small talk topics in Chinese.` }];
-const relatedTools = [{ name: "Daily Character", url: "/chinese/tools/daily-character/" }];
-const headings = [{ depth: 2, slug: "basics", text: "Basic Weather Words" }, { depth: 2, slug: "describing", text: "Describing Weather" }, { depth: 2, slug: "seasons", text: "Seasons" }];
+
+const faq = [
+  { q: `How do you ask about the weather in Chinese?`, a: `The most common question is 今天天气怎么样？(jīntiān tiānqì zěnme yàng?) meaning "How is the weather today?" You can swap 今天 with 明天 (tomorrow) or 这周 (this week). For temperature specifically, ask 今天几度？(jīntiān jǐ dù?) — "How many degrees is it today?"` },
+  { q: `What's the difference between 热 and 暖和?`, a: `热 (rè) means uncomfortably hot — summer heat that makes you sweat. 暖和 (nuǎnhuo) means pleasantly warm — like a cozy spring day or a heated room in winter. Similarly, 冷 (lěng) is uncomfortably cold while 凉快 (liángkuai) is pleasantly cool.` },
+  { q: `How do Chinese people talk about temperature?`, a: `China uses Celsius (摄氏度, shèshì dù). Common expressions include 零下 (língxià) for below zero, 高温 (gāowēn) for high temperature, and 低温 (dīwēn) for low temperature. A typical weather report might say 今天最高温32度 (today's high is 32°C).` },
+  { q: `Is weather a good small-talk topic in Chinese culture?`, a: `Yes! Weather is one of the safest and most universal conversation topics in Chinese, just like in English. Common openings include 今天好热啊！(It's so hot today!) or 下雨了，你带伞了吗？(It's raining, did you bring an umbrella?). It's a natural way to start any conversation.` },
+];
+
+const relatedTools = [
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+];
+
+const headings = [
+  { depth: 2, slug: "basic-weather", text: "Basic Weather Conditions (天气状况)" },
+  { depth: 2, slug: "temperature", text: "Temperature Words and Patterns" },
+  { depth: 2, slug: "seasons", text: "Four Seasons (四季)" },
+  { depth: 2, slug: "severe-weather", text: "Severe Weather and Natural Events" },
+  { depth: 2, slug: "weather-sentences", text: "Essential Weather Sentences" },
+  { depth: 2, slug: "weather-culture", text: "Weather in Chinese Culture" },
+  { depth: 2, slug: "weather-idioms", text: "Weather Idioms and Expressions" },
+  { depth: 2, slug: "practice-conversations", text: "Practice Conversations" },
+];
 ---
 <BlogLayout
-  title="Chinese Weather Vocabulary: Talk About the Weather"
-  description="Learn how to discuss weather in Chinese — essential for daily conversation and small talk."
+  title="Chinese Weather Vocabulary: 70+ Words for Seasons, Temperature, and Daily Conversation"
+  description="Master 70+ Chinese weather words with pinyin. Learn to discuss seasons, temperature, severe weather, and use weather idioms in natural conversation."
   language="chinese"
   category="chinese-basics"
-  tags={["weather", "vocabulary", "beginner"]}
+  tags={["weather", "vocabulary", "beginner", "conversation", "seasons"]}
   publishDate="2026-02-27"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="basics">Basic Weather Words</h2><p><strong>天气 (tiānqì)</strong> weather, <strong>晴天 (qíngtiān)</strong> sunny, <strong>阴天 (yīntiān)</strong> cloudy, <strong>下雨 (xià yǔ)</strong> raining, <strong>下雪 (xià xuě)</strong> snowing, <strong>风 (fēng)</strong> wind, <strong>热 (rè)</strong> hot, <strong>冷 (lěng)</strong> cold, <strong>暖和 (nuǎnhuo)</strong> warm, <strong>凉快 (liángkuai)</strong> cool.</p>
-    <h2 id="describing">Describing Weather</h2><p>Combine words naturally: 今天很热 (Today is very hot). 外面下大雨了 (It's raining heavily outside). 明天会冷 (Tomorrow will be cold). Weather is a safe and universal conversation topic.</p>
-    <h2 id="seasons">Seasons</h2><p><strong>春天 (chūntiān)</strong> spring, <strong>夏天 (xiàtiān)</strong> summer, <strong>秋天 (qiūtiān)</strong> autumn, <strong>冬天 (dōngtiān)</strong> winter. Each character for season combined with 天 (sky/day) creates the season name. Practice these with our <a href="/chinese/tools/daily-character/">Daily Character</a>.</p>
+
+<p>Weather is one of the first things people talk about in any language. In Chinese, it's the go-to small talk topic — at the bus stop, in the elevator, with your neighbor, or when starting a phone call with family. Mastering weather vocabulary opens the door to effortless daily conversation.</p>
+
+<p>This guide covers <strong>70+ weather-related words</strong>, from basic conditions like sunny and rainy to temperature expressions, seasonal vocabulary, severe weather terms, and the cultural idioms that Chinese speakers use every day. Whether you're planning a trip to China or Taiwan, preparing for the <a href="/chinese/blog/hsk-preparation/">HSK exam</a>, or just want to chat naturally, this vocabulary will keep the conversation flowing.</p>
+
+<h2 id="basic-weather">Basic Weather Conditions (天气状况)</h2>
+
+<p>Start with these foundational weather words. The core question is <strong>天气怎么样？</strong> (tiānqì zěnme yàng?) — "How's the weather?"</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">☀️ 晴天</td><td style="padding:8px; border:1px solid #e2e8f0;">qíngtiān</td><td style="padding:8px; border:1px solid #e2e8f0;">sunny day</td><td style="padding:8px; border:1px solid #e2e8f0;">今天是晴天 (It's sunny today)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">☁️ 阴天</td><td style="padding:8px; border:1px solid #e2e8f0;">yīntiān</td><td style="padding:8px; border:1px solid #e2e8f0;">cloudy day</td><td style="padding:8px; border:1px solid #e2e8f0;">阴天不热 (Cloudy, not hot)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">⛅ 多云</td><td style="padding:8px; border:1px solid #e2e8f0;">duōyún</td><td style="padding:8px; border:1px solid #e2e8f0;">partly cloudy</td><td style="padding:8px; border:1px solid #e2e8f0;">明天多云 (Partly cloudy tomorrow)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">🌧️ 下雨</td><td style="padding:8px; border:1px solid #e2e8f0;">xià yǔ</td><td style="padding:8px; border:1px solid #e2e8f0;">raining</td><td style="padding:8px; border:1px solid #e2e8f0;">外面下雨了 (It's raining outside)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">🌨️ 下雪</td><td style="padding:8px; border:1px solid #e2e8f0;">xià xuě</td><td style="padding:8px; border:1px solid #e2e8f0;">snowing</td><td style="padding:8px; border:1px solid #e2e8f0;">北京在下雪 (It's snowing in Beijing)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">💨 刮风</td><td style="padding:8px; border:1px solid #e2e8f0;">guā fēng</td><td style="padding:8px; border:1px solid #e2e8f0;">windy</td><td style="padding:8px; border:1px solid #e2e8f0;">今天刮大风 (Strong wind today)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">🌫️ 有雾</td><td style="padding:8px; border:1px solid #e2e8f0;">yǒu wù</td><td style="padding:8px; border:1px solid #e2e8f0;">foggy</td><td style="padding:8px; border:1px solid #e2e8f0;">早上有雾 (Foggy in the morning)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">⛈️ 打雷</td><td style="padding:8px; border:1px solid #e2e8f0;">dǎ léi</td><td style="padding:8px; border:1px solid #e2e8f0;">thunder</td><td style="padding:8px; border:1px solid #e2e8f0;">外面打雷了 (It's thundering)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">⚡ 闪电</td><td style="padding:8px; border:1px solid #e2e8f0;">shǎndiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">lightning</td><td style="padding:8px; border:1px solid #e2e8f0;">打雷闪电 (Thunder and lightning)</td></tr>
+  </tbody>
+</table>
+
+<div style="background:linear-gradient(135deg, #dbeafe, #bfdbfe); padding:1.25rem; border-radius:12px; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">💡 Rain Intensity Scale</p>
+  <p style="margin:0;">Chinese has specific words for rain intensity: <strong>小雨</strong> (xiǎo yǔ, light rain) → <strong>中雨</strong> (zhōng yǔ, moderate rain) → <strong>大雨</strong> (dà yǔ, heavy rain) → <strong>暴雨</strong> (bào yǔ, torrential rain). The same pattern works for snow: 小雪, 中雪, 大雪, 暴雪.</p>
+</div>
+
+<h2 id="temperature">Temperature Words and Patterns</h2>
+
+<p>Temperature is expressed in Celsius in Chinese-speaking regions. Here's the complete vocabulary for discussing how hot or cold it is:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Feeling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">🥶 冷</td><td style="padding:8px; border:1px solid #e2e8f0;">lěng</td><td style="padding:8px; border:1px solid #e2e8f0;">cold</td><td style="padding:8px; border:1px solid #e2e8f0;">Uncomfortably cold</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">😊 凉快</td><td style="padding:8px; border:1px solid #e2e8f0;">liángkuai</td><td style="padding:8px; border:1px solid #e2e8f0;">cool</td><td style="padding:8px; border:1px solid #e2e8f0;">Pleasantly cool</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">😊 暖和</td><td style="padding:8px; border:1px solid #e2e8f0;">nuǎnhuo</td><td style="padding:8px; border:1px solid #e2e8f0;">warm</td><td style="padding:8px; border:1px solid #e2e8f0;">Pleasantly warm</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">🥵 热</td><td style="padding:8px; border:1px solid #e2e8f0;">rè</td><td style="padding:8px; border:1px solid #e2e8f0;">hot</td><td style="padding:8px; border:1px solid #e2e8f0;">Uncomfortably hot</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">🌡️ 闷热</td><td style="padding:8px; border:1px solid #e2e8f0;">mēnrè</td><td style="padding:8px; border:1px solid #e2e8f0;">muggy/humid</td><td style="padding:8px; border:1px solid #e2e8f0;">Hot and stuffy</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">🧊 冰冷</td><td style="padding:8px; border:1px solid #e2e8f0;">bīnglěng</td><td style="padding:8px; border:1px solid #e2e8f0;">ice cold</td><td style="padding:8px; border:1px solid #e2e8f0;">Freezing cold</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Temperature sentences:</strong></p>
+<ul>
+  <li>今天几度？(Jīntiān jǐ dù?) — What's the temperature today?</li>
+  <li>今天三十五度。(Jīntiān sānshíwǔ dù.) — It's 35 degrees today.</li>
+  <li>零下十度。(Língxià shí dù.) — Minus 10 degrees.</li>
+  <li>今天比昨天热。(Jīntiān bǐ zuótiān rè.) — Today is hotter than yesterday.</li>
+</ul>
+
+<h2 id="seasons">Four Seasons (四季)</h2>
+
+<p>Chinese creates season names by combining a descriptive character with 天 (tiān, sky/day). Each season has its own character, weather patterns, and cultural associations.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:linear-gradient(135deg, #dcfce7, #bbf7d0); padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">🌸</div>
+    <div style="font-size:1.25rem; font-weight:700;">春天</div>
+    <div style="color:#166534;">chūntiān — Spring</div>
+    <div style="font-size:0.85rem; margin-top:0.5rem; color:#15803d;">暖和 warm · 下雨 rain<br/>万物复苏 everything revives</div>
+  </div>
+  <div style="background:linear-gradient(135deg, #fef9c3, #fde68a); padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">☀️</div>
+    <div style="font-size:1.25rem; font-weight:700;">夏天</div>
+    <div style="color:#854d0e;">xiàtiān — Summer</div>
+    <div style="font-size:0.85rem; margin-top:0.5rem; color:#a16207;">热 hot · 闷热 muggy<br/>台风 typhoon season</div>
+  </div>
+  <div style="background:linear-gradient(135deg, #ffedd5, #fed7aa); padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">🍂</div>
+    <div style="font-size:1.25rem; font-weight:700;">秋天</div>
+    <div style="color:#9a3412;">qiūtiān — Autumn</div>
+    <div style="font-size:0.85rem; margin-top:0.5rem; color:#c2410c;">凉快 cool · 干燥 dry<br/>秋高气爽 crisp autumn</div>
+  </div>
+  <div style="background:linear-gradient(135deg, #dbeafe, #bfdbfe); padding:1.25rem; border-radius:12px; text-align:center;">
+    <div style="font-size:2rem;">❄️</div>
+    <div style="font-size:1.25rem; font-weight:700;">冬天</div>
+    <div style="color:#1e40af;">dōngtiān — Winter</div>
+    <div style="font-size:0.85rem; margin-top:0.5rem; color:#1d4ed8;">冷 cold · 下雪 snow<br/>暖气 heating season</div>
+  </div>
+</div>
+
+<p><strong>Seasonal expressions:</strong></p>
+<ul>
+  <li>我最喜欢秋天。(Wǒ zuì xǐhuan qiūtiān.) — I like autumn the most.</li>
+  <li>台湾的冬天不太冷。(Táiwān de dōngtiān bú tài lěng.) — Winter in Taiwan isn't too cold.</li>
+  <li>北京的春天经常刮风。(Běijīng de chūntiān jīngcháng guā fēng.) — Spring in Beijing is often windy.</li>
+</ul>
+
+<h2 id="severe-weather">Severe Weather and Natural Events</h2>
+
+<p>These words are important for travel safety and understanding news reports. Taiwan and southern China experience typhoons regularly, while northern China deals with sandstorms and extreme cold.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef2f2;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Where Common</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">台风</td><td style="padding:8px; border:1px solid #e2e8f0;">táifēng</td><td style="padding:8px; border:1px solid #e2e8f0;">typhoon</td><td style="padding:8px; border:1px solid #e2e8f0;">Taiwan, Southeast coast</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">暴风雨</td><td style="padding:8px; border:1px solid #e2e8f0;">bàofēngyǔ</td><td style="padding:8px; border:1px solid #e2e8f0;">storm</td><td style="padding:8px; border:1px solid #e2e8f0;">Everywhere</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">沙尘暴</td><td style="padding:8px; border:1px solid #e2e8f0;">shāchénbào</td><td style="padding:8px; border:1px solid #e2e8f0;">sandstorm</td><td style="padding:8px; border:1px solid #e2e8f0;">Northern China, Beijing spring</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">洪水</td><td style="padding:8px; border:1px solid #e2e8f0;">hóngshuǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">flood</td><td style="padding:8px; border:1px solid #e2e8f0;">Southern China summer</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">地震</td><td style="padding:8px; border:1px solid #e2e8f0;">dìzhèn</td><td style="padding:8px; border:1px solid #e2e8f0;">earthquake</td><td style="padding:8px; border:1px solid #e2e8f0;">Taiwan, Sichuan</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">干旱</td><td style="padding:8px; border:1px solid #e2e8f0;">gānhàn</td><td style="padding:8px; border:1px solid #e2e8f0;">drought</td><td style="padding:8px; border:1px solid #e2e8f0;">Northern and western China</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">雾霾</td><td style="padding:8px; border:1px solid #e2e8f0;">wùmái</td><td style="padding:8px; border:1px solid #e2e8f0;">smog/haze</td><td style="padding:8px; border:1px solid #e2e8f0;">Major cities in winter</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">冰雹</td><td style="padding:8px; border:1px solid #e2e8f0;">bīngbáo</td><td style="padding:8px; border:1px solid #e2e8f0;">hail</td><td style="padding:8px; border:1px solid #e2e8f0;">Northern plains</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Related weather items:</strong></p>
+<ul>
+  <li>雨伞 (yǔsǎn) — umbrella</li>
+  <li>雨衣 (yǔyī) — raincoat</li>
+  <li>防晒霜 (fángshàishuāng) — sunscreen</li>
+  <li>口罩 (kǒuzhào) — face mask (for smog/cold)</li>
+  <li>暖气 (nuǎnqì) — heating</li>
+  <li>空调 (kōngtiáo) — air conditioning</li>
+</ul>
+
+<h2 id="weather-sentences">Essential Weather Sentences</h2>
+
+<p>These are the sentence patterns you'll actually use in real conversations. Practice mixing and matching the weather words above with these structures.</p>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Asking About Weather</p>
+  <p style="margin:0.5rem 0;">今天天气怎么样？<span style="color:#64748b;">— How's the weather today?</span></p>
+  <p style="margin:0.5rem 0;">明天会下雨吗？<span style="color:#64748b;">— Will it rain tomorrow?</span></p>
+  <p style="margin:0.5rem 0;">这个周末天气好吗？<span style="color:#64748b;">— Will the weekend weather be good?</span></p>
+  <p style="margin:0.5rem 0;">外面冷不冷？<span style="color:#64748b;">— Is it cold outside?</span></p>
+</div>
+
+<div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Describing Weather</p>
+  <p style="margin:0.5rem 0;">今天很热。<span style="color:#64748b;">— It's very hot today.</span></p>
+  <p style="margin:0.5rem 0;">外面下大雨了。<span style="color:#64748b;">— It's raining heavily outside.</span></p>
+  <p style="margin:0.5rem 0;">今天比昨天凉快。<span style="color:#64748b;">— Today is cooler than yesterday.</span></p>
+  <p style="margin:0.5rem 0;">天气预报说明天晴天。<span style="color:#64748b;">— The forecast says sunny tomorrow.</span></p>
+  <p style="margin:0.5rem 0;">最近天气越来越冷了。<span style="color:#64748b;">— The weather has been getting colder lately.</span></p>
+</div>
+
+<div style="background:#fef3c7; border:1px solid #fde68a; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Making Plans Based on Weather</p>
+  <p style="margin:0.5rem 0;">如果明天晴天，我们去爬山。<span style="color:#64748b;">— If it's sunny tomorrow, let's go hiking.</span></p>
+  <p style="margin:0.5rem 0;">下雨了，带伞吧。<span style="color:#64748b;">— It's raining, bring an umbrella.</span></p>
+  <p style="margin:0.5rem 0;">太热了，开空调吧。<span style="color:#64748b;">— It's too hot, let's turn on the AC.</span></p>
+</div>
+
+<h2 id="weather-culture">Weather in Chinese Culture</h2>
+
+<p>Weather is deeply embedded in Chinese culture, from the traditional agricultural calendar to everyday greetings. Understanding these cultural connections makes your Chinese feel more natural.</p>
+
+<p><strong>The 24 Solar Terms (二十四节气):</strong> China's traditional calendar divides the year into 24 solar terms based on weather and farming cycles. Some terms you might hear in daily life include:</p>
+<ul>
+  <li><strong>立春</strong> (lìchūn) — Start of Spring (around February 4)</li>
+  <li><strong>清明</strong> (qīngmíng) — Clear and Bright (tomb-sweeping festival, April 5)</li>
+  <li><strong>大暑</strong> (dàshǔ) — Great Heat (hottest period, late July)</li>
+  <li><strong>冬至</strong> (dōngzhì) — Winter Solstice (family reunion, eating dumplings)</li>
+</ul>
+
+<p><strong>Regional weather differences:</strong> China spans a massive geographic range, so weather vocabulary varies by region:</p>
+<ul>
+  <li><strong>Taiwan:</strong> Subtropical — 台风 (typhoons), 梅雨季 (méiyǔ jì, plum rain season in May-June), year-round warmth</li>
+  <li><strong>Beijing:</strong> Four distinct seasons — 沙尘暴 (sandstorms in spring), harsh 冬天 (winters), beautiful 秋天 (autumn)</li>
+  <li><strong>Shanghai:</strong> Humid — 闷热 (muggy summers), 梅雨季 (plum rain season), mild winters</li>
+  <li><strong>Harbin:</strong> Extreme cold — 零下三十度 (minus 30°C), famous for 冰雪节 (Ice and Snow Festival)</li>
+</ul>
+
+<h2 id="weather-idioms">Weather Idioms and Expressions</h2>
+
+<p>Weather-related idioms are among the most commonly used in Chinese. They add color to your speech and help you understand native conversations.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Expression</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Literal</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">风和日丽</td><td style="padding:8px; border:1px solid #e2e8f0;">fēng hé rì lì</td><td style="padding:8px; border:1px solid #e2e8f0;">gentle wind, beautiful sun</td><td style="padding:8px; border:1px solid #e2e8f0;">A beautiful, pleasant day</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">雪中送炭</td><td style="padding:8px; border:1px solid #e2e8f0;">xuě zhōng sòng tàn</td><td style="padding:8px; border:1px solid #e2e8f0;">send charcoal in the snow</td><td style="padding:8px; border:1px solid #e2e8f0;">Help someone in need</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">雨过天晴</td><td style="padding:8px; border:1px solid #e2e8f0;">yǔ guò tiān qíng</td><td style="padding:8px; border:1px solid #e2e8f0;">after rain, sky clears</td><td style="padding:8px; border:1px solid #e2e8f0;">Things improve after hardship</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">晴天霹雳</td><td style="padding:8px; border:1px solid #e2e8f0;">qíngtiān pīlì</td><td style="padding:8px; border:1px solid #e2e8f0;">thunder from clear sky</td><td style="padding:8px; border:1px solid #e2e8f0;">Shocking, unexpected news</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">冰冻三尺非一日之寒</td><td style="padding:8px; border:1px solid #e2e8f0;">bīng dòng sān chǐ fēi yī rì zhī hán</td><td style="padding:8px; border:1px solid #e2e8f0;">three feet of ice didn't freeze in one day</td><td style="padding:8px; border:1px solid #e2e8f0;">Problems build over time</td></tr>
+  </tbody>
+</table>
+
+<h2 id="practice-conversations">Practice Conversations</h2>
+
+<p>Use these dialogues to practice weather vocabulary in realistic contexts:</p>
+
+<div style="background:#f0f9ff; border-left:4px solid #3b82f6; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">Conversation 1: Morning Chat</p>
+  <p style="margin:0.25rem 0;">A: 早上好！今天天气怎么样？<em>(Good morning! How's the weather today?)</em></p>
+  <p style="margin:0.25rem 0;">B: 今天晴天，但是有点冷。<em>(Sunny today, but a bit cold.)</em></p>
+  <p style="margin:0.25rem 0;">A: 几度？<em>(How many degrees?)</em></p>
+  <p style="margin:0;">B: 大概十五度，穿件外套吧。<em>(About 15°C, wear a jacket.)</em></p>
+</div>
+
+<div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">Conversation 2: Making Weekend Plans</p>
+  <p style="margin:0.25rem 0;">A: 周末我们去野餐好吗？<em>(Shall we go on a picnic this weekend?)</em></p>
+  <p style="margin:0.25rem 0;">B: 天气预报说周六下雨。<em>(The forecast says it'll rain Saturday.)</em></p>
+  <p style="margin:0.25rem 0;">A: 那周日呢？<em>(What about Sunday?)</em></p>
+  <p style="margin:0;">B: 周日晴天，二十度，很舒服。<em>(Sunday will be sunny, 20°C, very comfortable.)</em></p>
+</div>
+
+<p>Weather vocabulary connects naturally to many other topic areas. Explore our <a href="/chinese/blog/chinese-travel-phrases/">travel phrases guide</a> for conversations during your trip, or check out <a href="/chinese/blog/chinese-colors/">Chinese color vocabulary</a> to describe the sky and nature. Use our <a href="/chinese/tools/daily-character/">Daily Character tool</a> to practice one new weather character each day, and browse the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> to see which weather words appear on each exam level.</p>
+
 </BlogLayout>

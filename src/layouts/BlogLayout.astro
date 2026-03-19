@@ -33,16 +33,35 @@ const breadcrumbs = [
   { name: title },
 ];
 
+const author = siteConfig.authorPerson;
+const publishDateISO = publishDate.includes('T') ? publishDate : `${publishDate}T00:00:00+08:00`;
+const modifiedDateISO = updatedDate ? (updatedDate.includes('T') ? updatedDate : `${updatedDate}T00:00:00+08:00`) : publishDateISO;
+const articleImage = image || siteConfig.ogImage;
+const fullImageUrl = articleImage ? (articleImage.startsWith('http') ? articleImage : `${siteConfig.url}${articleImage}`) : undefined;
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description: description,
-  image: image,
-  datePublished: publishDate,
-  dateModified: updatedDate || publishDate,
-  author: { '@type': 'Organization', name: siteConfig.name },
-  publisher: { '@type': 'Organization', name: siteConfig.name },
+  image: fullImageUrl,
+  datePublished: publishDateISO,
+  dateModified: modifiedDateISO,
+  author: {
+    '@type': 'Person',
+    name: author.name,
+    url: `${siteConfig.url}${author.url}`,
+    jobTitle: author.title,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/images/logo.png`,
+    },
+  },
 };
 ---
 
@@ -68,7 +87,11 @@ const articleSchema = {
       </div>
       <h1 class="mb-4">{title}</h1>
       <div class="flex items-center gap-4 text-sm text-gray-500">
-        <time datetime={publishDate}>
+        <a href={author.url} class="flex items-center gap-2 hover:text-primary-600 transition-colors">
+          <span class="w-6 h-6 rounded-full bg-primary-100 text-primary-700 flex items-center justify-content text-xs font-bold" style="display:inline-flex;align-items:center;justify-content:center;">{author.name.charAt(0)}</span>
+          <span>{author.name}</span>
+        </a>
+        <time datetime={publishDateISO}>
           {new Date(publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
         {updatedDate && updatedDate !== publishDate && (
@@ -110,6 +133,16 @@ const articleSchema = {
       {tags.map((tag) => (
         <a href={`/${language}/tags/${tag}/`} class="tag-badge">#{tag}</a>
       ))}
+    </div>
+
+    {/* Author Bio */}
+    <div class="mt-8 p-6 bg-white border border-gray-200 rounded-xl flex gap-4 items-start">
+      <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center text-lg font-bold flex-shrink-0">{author.name.charAt(0)}</div>
+      <div>
+        <a href={author.url} class="font-bold text-gray-900 hover:text-primary-600 transition-colors">{author.name}</a>
+        <p class="text-xs text-primary-600 font-medium">{author.title}</p>
+        <p class="text-sm text-gray-600 mt-1">{author.bio}</p>
+      </div>
     </div>
 
     {/* Cross-language */}

@@ -1,21 +1,273 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Is bargaining common in China?`, a: `Bargaining is expected in street markets, small shops, and tourist areas. Fixed-price stores (like malls and chain stores) do not negotiate. In Taiwan, night markets sometimes allow mild bargaining.` }];
-const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
-const headings = [{ depth: 2, slug: "pricing", text: "Asking About Prices" }, { depth: 2, slug: "bargaining", text: "Bargaining Phrases" }, { depth: 2, slug: "payment", text: "Payment" }];
+
+const faq = [
+  { q: `Is bargaining common in China?`, a: `Bargaining is expected in street markets, small shops, and tourist areas — starting at 50-60% of the asking price is standard. However, fixed-price stores (malls, chain stores, supermarkets) and Taiwan's shops generally do not negotiate. Night markets in Taiwan sometimes allow mild bargaining for bulk purchases.` },
+  { q: `How does mobile payment work in China?`, a: `WeChat Pay (微信支付) and Alipay (支付宝) dominate payments in mainland China. You scan QR codes to pay at almost any business, from restaurants to street vendors. As a tourist, setting up these apps can be tricky — carry some cash as backup, especially for small purchases. Taiwan primarily uses cash and credit cards, with LINE Pay growing in popularity.` },
+  { q: `What are the best shopping phrases for tourists?`, a: `Start with 多少钱？(how much?), 太贵了 (too expensive), 可以便宜一点吗？(can you make it cheaper?), and 我要这个 (I want this one). These four phrases cover most tourist shopping situations. Also learn 可以试穿吗？(can I try it on?) for clothing.` },
+  { q: `How do I understand Chinese clothing sizes?`, a: `China uses its own sizing system. S/M/L/XL labels are common for international brands, but local sizes often use numbers like 160/80A or 165/84A. The first number is height in cm, the second is chest/waist measurement. When shopping, 试穿 (try on) is always the safest approach.` },
+];
+
+const relatedTools = [
+  { name: "Number Converter", url: "/chinese/tools/number-converter/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+];
+
+const headings = [
+  { depth: 2, slug: "basic-phrases", text: "Basic Shopping Phrases" },
+  { depth: 2, slug: "pricing-numbers", text: "Pricing and Numbers" },
+  { depth: 2, slug: "bargaining", text: "Bargaining Like a Local" },
+  { depth: 2, slug: "clothing", text: "Clothing and Accessories" },
+  { depth: 2, slug: "grocery", text: "Grocery and Market Shopping" },
+  { depth: 2, slug: "payment", text: "Payment Methods" },
+  { depth: 2, slug: "returns", text: "Returns, Exchanges, and Problems" },
+  { depth: 2, slug: "shopping-types", text: "Types of Stores and Markets" },
+];
 ---
 <BlogLayout
-  title="Shopping in Chinese: Essential Bargaining Phrases"
-  description="Navigate Chinese markets and shops with confidence. Learn pricing, bargaining, and shopping vocabulary."
+  title="Shopping in Chinese: 80+ Essential Phrases for Markets, Stores, and Online Shopping"
+  description="Master 80+ Chinese shopping phrases with pinyin. Learn bargaining, pricing, clothing vocabulary, payment methods, and how to shop confidently in China and Taiwan."
   language="chinese"
   category="culture"
-  tags={["shopping", "vocabulary", "travel", "conversation"]}
+  tags={["shopping", "vocabulary", "travel", "conversation", "culture"]}
   publishDate="2026-02-28"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="pricing">Asking About Prices</h2><p><strong>多少钱？(duōshǎo qián?)</strong> How much? <strong>太贵了 (tài guì le)</strong> Too expensive. <strong>便宜一点 (piányi yīdiǎn)</strong> A little cheaper please. Use our <a href="/chinese/tools/number-converter/">Number Converter</a> to understand Chinese number amounts.</p>
-    <h2 id="bargaining">Bargaining Phrases</h2><p><strong>可以便宜吗？(kěyǐ piányi ma?)</strong> Can you make it cheaper? <strong>打折吗？(dǎzhé ma?)</strong> Is there a discount? <strong>最低多少？(zuìdī duōshǎo?)</strong> What's your lowest price? Start by offering about 50-60% of the asking price and negotiate from there.</p>
-    <h2 id="payment">Payment</h2><p><strong>现金 (xiànjīn)</strong> cash. <strong>刷卡 (shuākǎ)</strong> credit card. <strong>微信支付 (wēixìn zhīfù)</strong> WeChat Pay. <strong>支付宝 (zhīfùbǎo)</strong> Alipay. Mobile payment is nearly universal in China — even street vendors accept it.</p>
+
+<p>Shopping in a Chinese-speaking country is one of the most fun and practical ways to use your language skills. From bustling night markets in Taiwan to massive malls in Shanghai, every purchase is a chance to practice real conversation. But without the right vocabulary, you might overpay at a market, miss a great deal, or struggle to find the right size.</p>
+
+<p>This guide covers <strong>80+ shopping phrases</strong> organized by real situations you'll encounter: asking prices, bargaining at markets, buying clothes, grocery shopping, handling payment, and solving problems. Whether you're a tourist preparing for your first trip or a learner looking to build practical vocabulary, these phrases will make you a confident shopper in any Chinese-speaking environment.</p>
+
+<h2 id="basic-phrases">Basic Shopping Phrases</h2>
+
+<p>These are the phrases you'll use in virtually every shopping situation, from convenience stores to luxury boutiques.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">When to Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">多少钱？</td><td style="padding:8px; border:1px solid #e2e8f0;">duōshǎo qián?</td><td style="padding:8px; border:1px solid #e2e8f0;">How much?</td><td style="padding:8px; border:1px solid #e2e8f0;">Any purchase</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">我要这个</td><td style="padding:8px; border:1px solid #e2e8f0;">wǒ yào zhège</td><td style="padding:8px; border:1px solid #e2e8f0;">I want this one</td><td style="padding:8px; border:1px solid #e2e8f0;">Pointing at items</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">我看看</td><td style="padding:8px; border:1px solid #e2e8f0;">wǒ kànkan</td><td style="padding:8px; border:1px solid #e2e8f0;">I'm just looking</td><td style="padding:8px; border:1px solid #e2e8f0;">When browsing</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">有没有…？</td><td style="padding:8px; border:1px solid #e2e8f0;">yǒu méiyǒu…?</td><td style="padding:8px; border:1px solid #e2e8f0;">Do you have…?</td><td style="padding:8px; border:1px solid #e2e8f0;">Looking for something</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">可以看一下吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">kěyǐ kàn yīxià ma?</td><td style="padding:8px; border:1px solid #e2e8f0;">Can I take a look?</td><td style="padding:8px; border:1px solid #e2e8f0;">Items behind counter</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">买单 / 结账</td><td style="padding:8px; border:1px solid #e2e8f0;">mǎidān / jiézhàng</td><td style="padding:8px; border:1px solid #e2e8f0;">Check please / pay</td><td style="padding:8px; border:1px solid #e2e8f0;">Ready to pay</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">我不要了</td><td style="padding:8px; border:1px solid #e2e8f0;">wǒ bú yào le</td><td style="padding:8px; border:1px solid #e2e8f0;">I don't want it anymore</td><td style="padding:8px; border:1px solid #e2e8f0;">Changed your mind</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">谢谢，不用了</td><td style="padding:8px; border:1px solid #e2e8f0;">xièxie, bú yòng le</td><td style="padding:8px; border:1px solid #e2e8f0;">Thanks, no need</td><td style="padding:8px; border:1px solid #e2e8f0;">Declining an offer</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">需要袋子吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">xūyào dàizi ma?</td><td style="padding:8px; border:1px solid #e2e8f0;">Do you need a bag?</td><td style="padding:8px; border:1px solid #e2e8f0;">Cashier may ask you</td></tr>
+  </tbody>
+</table>
+
+<h2 id="pricing-numbers">Pricing and Numbers</h2>
+
+<p>Understanding prices requires knowing how Chinese expresses money. The currency is 人民币 (rénmínbì, RMB) in mainland China and 台币 (táibì, TWD) in Taiwan. Use our <a href="/chinese/tools/number-converter/">Number Converter</a> to practice reading Chinese numbers.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Meaning</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">元/块</td><td style="padding:8px; border:1px solid #e2e8f0;">yuán/kuài</td><td style="padding:8px; border:1px solid #e2e8f0;">yuan (formal/casual)</td><td style="padding:8px; border:1px solid #e2e8f0;">十块钱 = 10 yuan</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">角/毛</td><td style="padding:8px; border:1px solid #e2e8f0;">jiǎo/máo</td><td style="padding:8px; border:1px solid #e2e8f0;">0.1 yuan (formal/casual)</td><td style="padding:8px; border:1px solid #e2e8f0;">五毛 = 0.5 yuan</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">打折</td><td style="padding:8px; border:1px solid #e2e8f0;">dǎzhé</td><td style="padding:8px; border:1px solid #e2e8f0;">discount</td><td style="padding:8px; border:1px solid #e2e8f0;">打八折 = 20% off</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">半价</td><td style="padding:8px; border:1px solid #e2e8f0;">bànjià</td><td style="padding:8px; border:1px solid #e2e8f0;">half price</td><td style="padding:8px; border:1px solid #e2e8f0;">今天半价 = half off today</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">买一送一</td><td style="padding:8px; border:1px solid #e2e8f0;">mǎi yī sòng yī</td><td style="padding:8px; border:1px solid #e2e8f0;">buy one get one free</td><td style="padding:8px; border:1px solid #e2e8f0;">Common promotion</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">免费</td><td style="padding:8px; border:1px solid #e2e8f0;">miǎnfèi</td><td style="padding:8px; border:1px solid #e2e8f0;">free (no charge)</td><td style="padding:8px; border:1px solid #e2e8f0;">免费试吃 = free sample</td></tr>
+  </tbody>
+</table>
+
+<div style="background:linear-gradient(135deg, #fef3c7, #fde68a); padding:1.25rem; border-radius:12px; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">⚠️ Chinese Discounts Work Backwards!</p>
+  <p style="margin:0;">In Chinese, <strong>打八折</strong> (dǎ bā zhé) means you pay 80% — so it's <strong>20% off</strong>. 打七折 = pay 70% (30% off). 打五折 = pay 50% (50% off). The number tells you how much you <strong>pay</strong>, not how much you save. This trips up many learners! For more on Chinese numbers, see our <a href="/chinese/blog/chinese-numbers-guide/">numbers guide</a>.</p>
+</div>
+
+<h2 id="bargaining">Bargaining Like a Local</h2>
+
+<p>Bargaining is an art form in Chinese markets. Here's a step-by-step approach with the exact phrases you need at each stage:</p>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="font-weight:700; font-size:1.1rem; margin-bottom:1rem;">Step-by-Step Bargaining Script</p>
+
+  <p style="margin:0.75rem 0;"><strong>Step 1 — Ask the price:</strong><br/>你：这个多少钱？<span style="color:#64748b;"> (How much is this?)</span><br/>卖家：一百块。<span style="color:#64748b;"> (100 yuan.)</span></p>
+
+  <p style="margin:0.75rem 0;"><strong>Step 2 — Express shock:</strong><br/>你：太贵了！<span style="color:#64748b;"> (Too expensive!)</span></p>
+
+  <p style="margin:0.75rem 0;"><strong>Step 3 — Counter-offer (50-60%):</strong><br/>你：五十块怎么样？<span style="color:#64748b;"> (How about 50?)</span></p>
+
+  <p style="margin:0.75rem 0;"><strong>Step 4 — Negotiate:</strong><br/>卖家：不行，最少八十。<span style="color:#64748b;"> (No way, 80 minimum.)</span><br/>你：六十吧，我买两个。<span style="color:#64748b;"> (60, I'll buy two.)</span></p>
+
+  <p style="margin:0.75rem 0;"><strong>Step 5 — Walk away if needed:</strong><br/>你：算了，太贵了。<span style="color:#64748b;"> (Forget it, too expensive.)</span><br/><em style="color:#64748b;">Start walking — they'll often call you back with a lower price!</em></p>
+</div>
+
+<p><strong>Essential bargaining phrases:</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+  <tbody>
+    <tr style="background:#f0fdf4;"><td style="padding:8px; border:1px solid #e2e8f0; width:45%;">可以便宜一点吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">Can you make it cheaper?</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">最低多少？</td><td style="padding:8px; border:1px solid #e2e8f0;">What's your lowest price?</td></tr>
+    <tr style="background:#f0fdf4;"><td style="padding:8px; border:1px solid #e2e8f0;">买多一点可以打折吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">Discount for buying more?</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">那边更便宜。</td><td style="padding:8px; border:1px solid #e2e8f0;">It's cheaper over there.</td></tr>
+    <tr style="background:#f0fdf4;"><td style="padding:8px; border:1px solid #e2e8f0;">朋友价吧！</td><td style="padding:8px; border:1px solid #e2e8f0;">Give me the friend price!</td></tr>
+  </tbody>
+</table>
+
+<h2 id="clothing">Clothing and Accessories</h2>
+
+<p>Clothing shopping requires specific vocabulary for sizes, colors, and trying things on. See our <a href="/chinese/blog/chinese-colors/">colors guide</a> for a full color vocabulary reference.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">衣服</td><td style="padding:8px; border:1px solid #e2e8f0;">yīfu</td><td style="padding:8px; border:1px solid #e2e8f0;">clothes (general)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">上衣</td><td style="padding:8px; border:1px solid #e2e8f0;">shàngyī</td><td style="padding:8px; border:1px solid #e2e8f0;">top/shirt</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">裤子</td><td style="padding:8px; border:1px solid #e2e8f0;">kùzi</td><td style="padding:8px; border:1px solid #e2e8f0;">pants/trousers</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">裙子</td><td style="padding:8px; border:1px solid #e2e8f0;">qúnzi</td><td style="padding:8px; border:1px solid #e2e8f0;">skirt/dress</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">外套</td><td style="padding:8px; border:1px solid #e2e8f0;">wàitào</td><td style="padding:8px; border:1px solid #e2e8f0;">jacket/coat</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">鞋子</td><td style="padding:8px; border:1px solid #e2e8f0;">xiézi</td><td style="padding:8px; border:1px solid #e2e8f0;">shoes</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">帽子</td><td style="padding:8px; border:1px solid #e2e8f0;">màozi</td><td style="padding:8px; border:1px solid #e2e8f0;">hat</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">包</td><td style="padding:8px; border:1px solid #e2e8f0;">bāo</td><td style="padding:8px; border:1px solid #e2e8f0;">bag/purse</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Clothing shopping phrases:</strong></p>
+<div style="background:#fce7f3; border-left:4px solid #ec4899; padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+  <p style="margin:0.25rem 0;">可以试穿吗？<span style="color:#64748b;"> — Can I try it on?</span></p>
+  <p style="margin:0.25rem 0;">有大一号的吗？<span style="color:#64748b;"> — Do you have one size bigger?</span></p>
+  <p style="margin:0.25rem 0;">有小一号的吗？<span style="color:#64748b;"> — Do you have one size smaller?</span></p>
+  <p style="margin:0.25rem 0;">有别的颜色吗？<span style="color:#64748b;"> — Do you have other colors?</span></p>
+  <p style="margin:0.25rem 0;">试衣间在哪里？<span style="color:#64748b;"> — Where is the fitting room?</span></p>
+  <p style="margin:0.25rem 0;">太大了/太小了。<span style="color:#64748b;"> — Too big / too small.</span></p>
+  <p style="margin:0;">这件很好看。<span style="color:#64748b;"> — This one looks great.</span></p>
+</div>
+
+<h2 id="grocery">Grocery and Market Shopping</h2>
+
+<p>Markets and supermarkets have their own vocabulary, especially around <a href="/chinese/blog/chinese-measure-words/">measure words</a> for different food items.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Example Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">斤</td><td style="padding:8px; border:1px solid #e2e8f0;">jīn</td><td style="padding:8px; border:1px solid #e2e8f0;">catty (500g)</td><td style="padding:8px; border:1px solid #e2e8f0;">苹果多少钱一斤？</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">公斤</td><td style="padding:8px; border:1px solid #e2e8f0;">gōngjīn</td><td style="padding:8px; border:1px solid #e2e8f0;">kilogram</td><td style="padding:8px; border:1px solid #e2e8f0;">一公斤十块</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">新鲜</td><td style="padding:8px; border:1px solid #e2e8f0;">xīnxiān</td><td style="padding:8px; border:1px solid #e2e8f0;">fresh</td><td style="padding:8px; border:1px solid #e2e8f0;">这个新鲜吗？</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">保质期</td><td style="padding:8px; border:1px solid #e2e8f0;">bǎozhìqī</td><td style="padding:8px; border:1px solid #e2e8f0;">expiration date</td><td style="padding:8px; border:1px solid #e2e8f0;">Check 保质期 on packages</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">有机</td><td style="padding:8px; border:1px solid #e2e8f0;">yǒujī</td><td style="padding:8px; border:1px solid #e2e8f0;">organic</td><td style="padding:8px; border:1px solid #e2e8f0;">有机蔬菜 (organic vegetables)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">称一下</td><td style="padding:8px; border:1px solid #e2e8f0;">chēng yīxià</td><td style="padding:8px; border:1px solid #e2e8f0;">weigh it</td><td style="padding:8px; border:1px solid #e2e8f0;">请帮我称一下</td></tr>
+  </tbody>
+</table>
+
+<p>For a complete guide to food-related vocabulary, check our <a href="/chinese/blog/chinese-food-vocabulary/">Chinese food vocabulary guide</a>.</p>
+
+<h2 id="payment">Payment Methods</h2>
+
+<p>Payment culture differs significantly between mainland China and Taiwan. Here's what you need to know:</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#fef2f2; border:1px solid #fecaca; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">🇨🇳 Mainland China</p>
+    <ul style="margin:0; padding-left:1.25rem;">
+      <li><strong>微信支付</strong> (wēixìn zhīfù) — WeChat Pay</li>
+      <li><strong>支付宝</strong> (zhīfùbǎo) — Alipay</li>
+      <li><strong>扫码</strong> (sǎo mǎ) — Scan QR code</li>
+      <li><strong>现金</strong> (xiànjīn) — Cash (less common)</li>
+      <li><strong>刷卡</strong> (shuā kǎ) — Swipe card</li>
+    </ul>
+  </div>
+  <div style="background:#f0f9ff; border:1px solid #bfdbfe; padding:1.25rem; border-radius:12px;">
+    <p style="font-weight:700; font-size:1.1rem; margin:0 0 0.75rem;">🇹🇼 Taiwan</p>
+    <ul style="margin:0; padding-left:1.25rem;">
+      <li><strong>现金</strong> (xiànjīn) — Cash (most common)</li>
+      <li><strong>信用卡</strong> (xìnyòngkǎ) — Credit card</li>
+      <li><strong>悠游卡</strong> (yōuyóukǎ) — EasyCard</li>
+      <li><strong>LINE Pay</strong> — Growing in popularity</li>
+      <li><strong>发票</strong> (fāpiào) — Receipt (lottery!)</li>
+    </ul>
+  </div>
+</div>
+
+<p><strong>Payment phrases:</strong></p>
+<ul>
+  <li>可以刷卡吗？(Kěyǐ shuā kǎ ma?) — Can I pay by card?</li>
+  <li>可以用微信支付吗？(Kěyǐ yòng wēixìn zhīfù ma?) — Can I use WeChat Pay?</li>
+  <li>只收现金。(Zhǐ shōu xiànjīn.) — Cash only.</li>
+  <li>请给我发票。(Qǐng gěi wǒ fāpiào.) — Please give me a receipt.</li>
+  <li>我没有零钱。(Wǒ méiyǒu língqián.) — I don't have change.</li>
+</ul>
+
+<h2 id="returns">Returns, Exchanges, and Problems</h2>
+
+<p>Things don't always go smoothly. These phrases help when you need to return something, exchange sizes, or resolve a problem.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef2f2;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">可以退吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">kěyǐ tuì ma?</td><td style="padding:8px; border:1px solid #e2e8f0;">Can I return it?</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">可以换吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">kěyǐ huàn ma?</td><td style="padding:8px; border:1px solid #e2e8f0;">Can I exchange it?</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">这个坏了</td><td style="padding:8px; border:1px solid #e2e8f0;">zhège huài le</td><td style="padding:8px; border:1px solid #e2e8f0;">This is broken/defective</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">尺寸不对</td><td style="padding:8px; border:1px solid #e2e8f0;">chǐcùn bú duì</td><td style="padding:8px; border:1px solid #e2e8f0;">Wrong size</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">颜色不对</td><td style="padding:8px; border:1px solid #e2e8f0;">yánsè bú duì</td><td style="padding:8px; border:1px solid #e2e8f0;">Wrong color</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">找错钱了</td><td style="padding:8px; border:1px solid #e2e8f0;">zhǎo cuò qián le</td><td style="padding:8px; border:1px solid #e2e8f0;">You gave wrong change</td></tr>
+  </tbody>
+</table>
+
+<h2 id="shopping-types">Types of Stores and Markets</h2>
+
+<p>Knowing the names of different shopping venues helps you navigate any city:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">超市</td><td style="padding:8px; border:1px solid #e2e8f0;">chāoshì</td><td style="padding:8px; border:1px solid #e2e8f0;">supermarket</td><td style="padding:8px; border:1px solid #e2e8f0;">Fixed prices</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">便利店</td><td style="padding:8px; border:1px solid #e2e8f0;">biànlìdiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">convenience store</td><td style="padding:8px; border:1px solid #e2e8f0;">7-Eleven, FamilyMart</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">商场 / 百货</td><td style="padding:8px; border:1px solid #e2e8f0;">shāngchǎng / bǎihuò</td><td style="padding:8px; border:1px solid #e2e8f0;">shopping mall</td><td style="padding:8px; border:1px solid #e2e8f0;">Fixed prices, brands</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">夜市</td><td style="padding:8px; border:1px solid #e2e8f0;">yèshì</td><td style="padding:8px; border:1px solid #e2e8f0;">night market</td><td style="padding:8px; border:1px solid #e2e8f0;">Taiwan specialty!</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">菜市场</td><td style="padding:8px; border:1px solid #e2e8f0;">càishìchǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">wet market</td><td style="padding:8px; border:1px solid #e2e8f0;">Fresh produce, bargaining OK</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">药店</td><td style="padding:8px; border:1px solid #e2e8f0;">yàodiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">pharmacy</td><td style="padding:8px; border:1px solid #e2e8f0;">Fixed prices</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">书店</td><td style="padding:8px; border:1px solid #e2e8f0;">shūdiàn</td><td style="padding:8px; border:1px solid #e2e8f0;">bookstore</td><td style="padding:8px; border:1px solid #e2e8f0;">Fixed prices</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">网购</td><td style="padding:8px; border:1px solid #e2e8f0;">wǎnggòu</td><td style="padding:8px; border:1px solid #e2e8f0;">online shopping</td><td style="padding:8px; border:1px solid #e2e8f0;">淘宝, 京东, 虾皮</td></tr>
+  </tbody>
+</table>
+
+<p>Shopping vocabulary connects to many essential topics in Chinese. Review <a href="/chinese/blog/chinese-numbers-guide/">Chinese numbers</a> to handle any price, learn <a href="/chinese/blog/chinese-greetings/">greetings</a> for friendly interactions with shopkeepers, and check our <a href="/chinese/blog/chinese-travel-phrases/">travel phrases guide</a> for more practical conversation skills. Use the <a href="/chinese/tools/number-converter/">Number Converter</a> tool to practice reading large prices in Chinese.</p>
+
 </BlogLayout>

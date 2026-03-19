@@ -1,21 +1,293 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What Chinese do I need for a Chinese class?`, a: `Key phrases include 请跟我读 (please repeat after me), 不懂 (I don't understand), 再说一遍 (say it again), and 怎么说 (how do you say...).` }];
-const relatedTools = [{ name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }];
-const headings = [{ depth: 2, slug: "supplies", text: "School Supplies" }, { depth: 2, slug: "phrases", text: "Classroom Phrases" }, { depth: 2, slug: "subjects", text: "School Subjects" }];
+
+const faq = [
+  { q: `What Chinese do I need for a Chinese class?`, a: `Focus on survival phrases first: 请再说一遍 (please say it again), 听不懂 (I don't understand by listening), 这个怎么说 (how do you say this), and 什么意思 (what does it mean). These four phrases will get you through most classroom situations even as a complete beginner.` },
+  { q: `How do I ask my teacher to slow down in Chinese?`, a: `Say 请说慢一点 (qǐng shuō màn yīdiǎn) — "Please speak a little slower." You can also say 太快了 (tài kuài le) — "Too fast." Most teachers will appreciate you asking in Chinese rather than switching to English.` },
+  { q: `What's the difference between 老师 and 教授?`, a: `老师 (lǎoshī) is the general term for any teacher from kindergarten through university — it's also used as a respectful form of address. 教授 (jiàoshòu) specifically means "professor" at a university level. When in doubt, 老师 is always safe and respectful.` },
+  { q: `Should I learn simplified or traditional characters for school?`, a: `It depends on where you'll study. Mainland China uses simplified characters (简体字), while Taiwan and Hong Kong use traditional characters (繁体字). Most international Chinese classes teach simplified, which is also the HSK exam standard. See our guide on simplified vs traditional for more details.` },
+];
+
+const relatedTools = [
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Practice Sheet Generator", url: "/chinese/tools/practice-sheet/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+];
+
+const headings = [
+  { depth: 2, slug: "survival-phrases", text: "Classroom Survival Phrases" },
+  { depth: 2, slug: "school-supplies", text: "School Supplies (学习用品)" },
+  { depth: 2, slug: "people-places", text: "People and Places at School" },
+  { depth: 2, slug: "subjects", text: "School Subjects (学科)" },
+  { depth: 2, slug: "teacher-instructions", text: "Common Teacher Instructions" },
+  { depth: 2, slug: "student-questions", text: "Questions Students Ask" },
+  { depth: 2, slug: "exam-vocabulary", text: "Exam and Grade Vocabulary" },
+  { depth: 2, slug: "online-learning", text: "Online Learning Terms" },
+];
 ---
 <BlogLayout
-  title="Chinese Classroom Vocabulary for Students"
-  description="Essential Chinese words for the classroom — from school supplies to common teacher instructions."
+  title="Chinese Classroom Vocabulary: 80+ Essential Words for Students and Teachers"
+  description="Master 80+ Chinese classroom words and phrases. From school supplies and subjects to teacher instructions and exam vocabulary — everything you need for learning Chinese in Chinese."
   language="chinese"
   category="chinese-basics"
-  tags={["classroom", "vocabulary", "beginner", "school"]}
+  tags={["classroom", "vocabulary", "beginner", "school", "study-tips"]}
   publishDate="2026-02-27"
+  updatedDate="2026-03-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="supplies">School Supplies</h2><p><strong>书 (shū)</strong> book, <strong>笔 (bǐ)</strong> pen, <strong>纸 (zhǐ)</strong> paper, <strong>本子 (běnzi)</strong> notebook, <strong>字典 (zìdiǎn)</strong> dictionary, <strong>书包 (shūbāo)</strong> backpack.</p>
-    <h2 id="phrases">Classroom Phrases</h2><p><strong>听不懂 (tīng bù dǒng)</strong> I don't understand (listening). <strong>请再说一遍 (qǐng zài shuō yī biàn)</strong> Please say it again. <strong>这个怎么说？(zhège zěnme shuō?)</strong> How do you say this?</p>
-    <h2 id="subjects">School Subjects</h2><p><strong>数学 (shùxué)</strong> math, <strong>中文 (zhōngwén)</strong> Chinese, <strong>英语 (yīngyǔ)</strong> English, <strong>历史 (lìshǐ)</strong> history, <strong>科学 (kēxué)</strong> science. Browse more vocabulary in our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a>.</p>
+
+<p>If you're taking Chinese classes — whether at a language school, university, or online — there's a unique challenge: the language you're studying is also the language of instruction. Your teacher might say 请打开课本第三十页 (please open your textbook to page 30), and if you don't know classroom vocabulary, you're lost before the lesson even starts.</p>
+
+<p>This guide covers <strong>80+ essential classroom words and phrases</strong> organized by real classroom situations. You'll learn the survival phrases every student needs from day one, school supplies vocabulary, common teacher instructions you'll hear repeatedly, and how to ask questions and talk about exams — all in Chinese. Master these words and your classroom experience becomes dramatically smoother.</p>
+
+<h2 id="survival-phrases">Classroom Survival Phrases</h2>
+
+<p>Learn these first. They're the difference between struggling silently and actively participating in class, even as a beginner.</p>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+  <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">听不懂</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">tīng bù dǒng</p>
+    <p style="margin:0;">I don't understand (what I'm hearing)</p>
+  </div>
+  <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">看不懂</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">kàn bù dǒng</p>
+    <p style="margin:0;">I don't understand (what I'm reading)</p>
+  </div>
+  <div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">请再说一遍</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">qǐng zài shuō yī biàn</p>
+    <p style="margin:0;">Please say it one more time</p>
+  </div>
+  <div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">请说慢一点</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">qǐng shuō màn yīdiǎn</p>
+    <p style="margin:0;">Please speak a little slower</p>
+  </div>
+  <div style="background:#f0f9ff; border-left:4px solid #3b82f6; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">这个怎么说？</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">zhège zěnme shuō?</p>
+    <p style="margin:0;">How do you say this?</p>
+  </div>
+  <div style="background:#f0f9ff; border-left:4px solid #3b82f6; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">什么意思？</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">shénme yìsi?</p>
+    <p style="margin:0;">What does it mean?</p>
+  </div>
+  <div style="background:#fef3c7; border-left:4px solid #f59e0b; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">怎么写？</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">zěnme xiě?</p>
+    <p style="margin:0;">How do you write it?</p>
+  </div>
+  <div style="background:#fef3c7; border-left:4px solid #f59e0b; padding:1rem; border-radius:0 8px 8px 0;">
+    <p style="font-weight:700; margin:0 0 0.25rem;">怎么读？</p>
+    <p style="font-size:0.9rem; color:#64748b; margin:0 0 0.25rem;">zěnme dú?</p>
+    <p style="margin:0;">How do you read/pronounce it?</p>
+  </div>
+</div>
+
+<p><strong>Pro tip:</strong> 听不懂 vs 看不懂 is a key distinction in Chinese. 听 (tīng) = listen, so 听不懂 means you can't understand what you <em>hear</em>. 看 (kàn) = look, so 看不懂 means you can't understand what you <em>read</em>. This pattern works with many verbs: 学不会 (can't learn it), 记不住 (can't remember it).</p>
+
+<h2 id="school-supplies">School Supplies (学习用品)</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0f9ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">HSK Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">书</td><td style="padding:8px; border:1px solid #e2e8f0;">shū</td><td style="padding:8px; border:1px solid #e2e8f0;">book</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 1</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">课本</td><td style="padding:8px; border:1px solid #e2e8f0;">kèběn</td><td style="padding:8px; border:1px solid #e2e8f0;">textbook</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">笔</td><td style="padding:8px; border:1px solid #e2e8f0;">bǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">pen/writing tool</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 2</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">铅笔</td><td style="padding:8px; border:1px solid #e2e8f0;">qiānbǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">pencil</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">钢笔</td><td style="padding:8px; border:1px solid #e2e8f0;">gāngbǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">fountain pen</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 4</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">纸</td><td style="padding:8px; border:1px solid #e2e8f0;">zhǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">paper</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">本子</td><td style="padding:8px; border:1px solid #e2e8f0;">běnzi</td><td style="padding:8px; border:1px solid #e2e8f0;">notebook</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">字典</td><td style="padding:8px; border:1px solid #e2e8f0;">zìdiǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">dictionary</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">橡皮</td><td style="padding:8px; border:1px solid #e2e8f0;">xiàngpí</td><td style="padding:8px; border:1px solid #e2e8f0;">eraser</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 4</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">尺子</td><td style="padding:8px; border:1px solid #e2e8f0;">chǐzi</td><td style="padding:8px; border:1px solid #e2e8f0;">ruler</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 4</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">书包</td><td style="padding:8px; border:1px solid #e2e8f0;">shūbāo</td><td style="padding:8px; border:1px solid #e2e8f0;">backpack/schoolbag</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">黑板</td><td style="padding:8px; border:1px solid #e2e8f0;">hēibǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">blackboard</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 3</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">电脑</td><td style="padding:8px; border:1px solid #e2e8f0;">diànnǎo</td><td style="padding:8px; border:1px solid #e2e8f0;">computer</td><td style="padding:8px; border:1px solid #e2e8f0;">HSK 2</td></tr>
+  </tbody>
+</table>
+
+<div style="background:linear-gradient(135deg, #dbeafe, #bfdbfe); padding:1.25rem; border-radius:12px; margin:1.5rem 0;">
+  <p style="font-weight:700; margin-bottom:0.5rem;">💡 The 笔 Family</p>
+  <p style="margin:0;">笔 is the general word for any writing tool. Chinese builds specific types by adding a prefix: <strong>铅笔</strong> (lead + pen = pencil), <strong>钢笔</strong> (steel + pen = fountain pen), <strong>毛笔</strong> (hair + pen = calligraphy brush), <strong>圆珠笔</strong> (ball + pen = ballpoint pen), <strong>彩色笔</strong> (color + pen = colored marker).</p>
+</div>
+
+<h2 id="people-places">People and Places at School</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f0fdf4;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">老师</td><td style="padding:8px; border:1px solid #e2e8f0;">lǎoshī</td><td style="padding:8px; border:1px solid #e2e8f0;">teacher (also a respectful address)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">同学</td><td style="padding:8px; border:1px solid #e2e8f0;">tóngxué</td><td style="padding:8px; border:1px solid #e2e8f0;">classmate</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">学生</td><td style="padding:8px; border:1px solid #e2e8f0;">xuéshēng</td><td style="padding:8px; border:1px solid #e2e8f0;">student</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">教授</td><td style="padding:8px; border:1px solid #e2e8f0;">jiàoshòu</td><td style="padding:8px; border:1px solid #e2e8f0;">professor</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">校长</td><td style="padding:8px; border:1px solid #e2e8f0;">xiàozhǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">principal/president</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">教室</td><td style="padding:8px; border:1px solid #e2e8f0;">jiàoshì</td><td style="padding:8px; border:1px solid #e2e8f0;">classroom</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">图书馆</td><td style="padding:8px; border:1px solid #e2e8f0;">túshūguǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">library</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">操场</td><td style="padding:8px; border:1px solid #e2e8f0;">cāochǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">playground/sports field</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">食堂</td><td style="padding:8px; border:1px solid #e2e8f0;">shítáng</td><td style="padding:8px; border:1px solid #e2e8f0;">cafeteria/canteen</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">宿舍</td><td style="padding:8px; border:1px solid #e2e8f0;">sùshè</td><td style="padding:8px; border:1px solid #e2e8f0;">dormitory</td></tr>
+  </tbody>
+</table>
+
+<h2 id="subjects">School Subjects (学科)</h2>
+
+<p>Knowing subject names helps you discuss your studies and understand schedules. Many subjects use descriptive compound words that make sense once you see the pattern.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fef3c7;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Word Breakdown</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">中文</td><td style="padding:8px; border:1px solid #e2e8f0;">zhōngwén</td><td style="padding:8px; border:1px solid #e2e8f0;">Chinese</td><td style="padding:8px; border:1px solid #e2e8f0;">中 (middle/China) + 文 (language)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">英语</td><td style="padding:8px; border:1px solid #e2e8f0;">yīngyǔ</td><td style="padding:8px; border:1px solid #e2e8f0;">English</td><td style="padding:8px; border:1px solid #e2e8f0;">英 (England) + 语 (language)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">数学</td><td style="padding:8px; border:1px solid #e2e8f0;">shùxué</td><td style="padding:8px; border:1px solid #e2e8f0;">math</td><td style="padding:8px; border:1px solid #e2e8f0;">数 (number) + 学 (study)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">科学</td><td style="padding:8px; border:1px solid #e2e8f0;">kēxué</td><td style="padding:8px; border:1px solid #e2e8f0;">science</td><td style="padding:8px; border:1px solid #e2e8f0;">科 (subject/branch) + 学 (study)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">历史</td><td style="padding:8px; border:1px solid #e2e8f0;">lìshǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">history</td><td style="padding:8px; border:1px solid #e2e8f0;">历 (experience) + 史 (record)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">地理</td><td style="padding:8px; border:1px solid #e2e8f0;">dìlǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">geography</td><td style="padding:8px; border:1px solid #e2e8f0;">地 (earth) + 理 (principle)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">物理</td><td style="padding:8px; border:1px solid #e2e8f0;">wùlǐ</td><td style="padding:8px; border:1px solid #e2e8f0;">physics</td><td style="padding:8px; border:1px solid #e2e8f0;">物 (thing) + 理 (principle)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">化学</td><td style="padding:8px; border:1px solid #e2e8f0;">huàxué</td><td style="padding:8px; border:1px solid #e2e8f0;">chemistry</td><td style="padding:8px; border:1px solid #e2e8f0;">化 (change) + 学 (study)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">音乐</td><td style="padding:8px; border:1px solid #e2e8f0;">yīnyuè</td><td style="padding:8px; border:1px solid #e2e8f0;">music</td><td style="padding:8px; border:1px solid #e2e8f0;">音 (sound) + 乐 (joy)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">美术</td><td style="padding:8px; border:1px solid #e2e8f0;">měishù</td><td style="padding:8px; border:1px solid #e2e8f0;">art</td><td style="padding:8px; border:1px solid #e2e8f0;">美 (beautiful) + 术 (technique)</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">体育</td><td style="padding:8px; border:1px solid #e2e8f0;">tǐyù</td><td style="padding:8px; border:1px solid #e2e8f0;">PE / physical education</td><td style="padding:8px; border:1px solid #e2e8f0;">体 (body) + 育 (nurture)</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Talking about subjects:</strong></p>
+<ul>
+  <li>我最喜欢数学。(Wǒ zuì xǐhuan shùxué.) — I like math the most.</li>
+  <li>历史很有意思。(Lìshǐ hěn yǒu yìsi.) — History is very interesting.</li>
+  <li>你今天有什么课？(Nǐ jīntiān yǒu shénme kè?) — What classes do you have today?</li>
+</ul>
+
+<h2 id="teacher-instructions">Common Teacher Instructions</h2>
+
+<p>Your Chinese teacher will use these phrases constantly. Recognizing them by sound will help you follow along in class from day one.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#fce7f3;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">上课了</td><td style="padding:8px; border:1px solid #e2e8f0;">shàngkè le</td><td style="padding:8px; border:1px solid #e2e8f0;">Class is starting</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">下课了</td><td style="padding:8px; border:1px solid #e2e8f0;">xiàkè le</td><td style="padding:8px; border:1px solid #e2e8f0;">Class is over</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">请打开课本</td><td style="padding:8px; border:1px solid #e2e8f0;">qǐng dǎkāi kèběn</td><td style="padding:8px; border:1px solid #e2e8f0;">Please open your textbook</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">请跟我读</td><td style="padding:8px; border:1px solid #e2e8f0;">qǐng gēn wǒ dú</td><td style="padding:8px; border:1px solid #e2e8f0;">Please read after me</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">再读一遍</td><td style="padding:8px; border:1px solid #e2e8f0;">zài dú yī biàn</td><td style="padding:8px; border:1px solid #e2e8f0;">Read it one more time</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">大声一点</td><td style="padding:8px; border:1px solid #e2e8f0;">dà shēng yīdiǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">A little louder</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">请看黑板</td><td style="padding:8px; border:1px solid #e2e8f0;">qǐng kàn hēibǎn</td><td style="padding:8px; border:1px solid #e2e8f0;">Please look at the blackboard</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">请写下来</td><td style="padding:8px; border:1px solid #e2e8f0;">qǐng xiě xiàlái</td><td style="padding:8px; border:1px solid #e2e8f0;">Please write it down</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">有问题吗？</td><td style="padding:8px; border:1px solid #e2e8f0;">yǒu wèntí ma?</td><td style="padding:8px; border:1px solid #e2e8f0;">Any questions?</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">做练习</td><td style="padding:8px; border:1px solid #e2e8f0;">zuò liànxí</td><td style="padding:8px; border:1px solid #e2e8f0;">Do the exercises</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">交作业</td><td style="padding:8px; border:1px solid #e2e8f0;">jiāo zuòyè</td><td style="padding:8px; border:1px solid #e2e8f0;">Hand in your homework</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">两个人一组</td><td style="padding:8px; border:1px solid #e2e8f0;">liǎng gè rén yī zǔ</td><td style="padding:8px; border:1px solid #e2e8f0;">Get into pairs</td></tr>
+  </tbody>
+</table>
+
+<h2 id="student-questions">Questions Students Ask</h2>
+
+<p>Active participation accelerates learning. Here are the questions that good students ask regularly:</p>
+
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+  <p style="margin:0.5rem 0;"><strong>老师，这个字怎么写？</strong><span style="color:#64748b;"> — Teacher, how do you write this character?</span></p>
+  <p style="margin:0.5rem 0;"><strong>"X"是什么意思？</strong><span style="color:#64748b;"> — What does "X" mean?</span></p>
+  <p style="margin:0.5rem 0;"><strong>可以用中文说吗？</strong><span style="color:#64748b;"> — Can you say it in Chinese?</span></p>
+  <p style="margin:0.5rem 0;"><strong>我可以去洗手间吗？</strong><span style="color:#64748b;"> — May I go to the restroom?</span></p>
+  <p style="margin:0.5rem 0;"><strong>作业什么时候交？</strong><span style="color:#64748b;"> — When is the homework due?</span></p>
+  <p style="margin:0.5rem 0;"><strong>明天考试吗？</strong><span style="color:#64748b;"> — Is there an exam tomorrow?</span></p>
+  <p style="margin:0.5rem 0;"><strong>这个会考吗？</strong><span style="color:#64748b;"> — Will this be on the test?</span></p>
+</div>
+
+<h2 id="exam-vocabulary">Exam and Grade Vocabulary</h2>
+
+<p>Tests are a major part of Chinese education culture. These words come up frequently in any learning environment.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#f5f3ff;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">考试</td><td style="padding:8px; border:1px solid #e2e8f0;">kǎoshì</td><td style="padding:8px; border:1px solid #e2e8f0;">exam/test</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">测验</td><td style="padding:8px; border:1px solid #e2e8f0;">cèyàn</td><td style="padding:8px; border:1px solid #e2e8f0;">quiz</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">成绩</td><td style="padding:8px; border:1px solid #e2e8f0;">chéngjì</td><td style="padding:8px; border:1px solid #e2e8f0;">grades/results</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">分数</td><td style="padding:8px; border:1px solid #e2e8f0;">fēnshù</td><td style="padding:8px; border:1px solid #e2e8f0;">score/marks</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">及格</td><td style="padding:8px; border:1px solid #e2e8f0;">jígé</td><td style="padding:8px; border:1px solid #e2e8f0;">pass (the exam)</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">不及格</td><td style="padding:8px; border:1px solid #e2e8f0;">bù jígé</td><td style="padding:8px; border:1px solid #e2e8f0;">fail</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">复习</td><td style="padding:8px; border:1px solid #e2e8f0;">fùxí</td><td style="padding:8px; border:1px solid #e2e8f0;">review/revise</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">作业</td><td style="padding:8px; border:1px solid #e2e8f0;">zuòyè</td><td style="padding:8px; border:1px solid #e2e8f0;">homework</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">毕业</td><td style="padding:8px; border:1px solid #e2e8f0;">bìyè</td><td style="padding:8px; border:1px solid #e2e8f0;">graduate</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Exam-related sentences:</strong></p>
+<ul>
+  <li>明天有考试，我要复习。(Míngtiān yǒu kǎoshì, wǒ yào fùxí.) — There's an exam tomorrow, I need to review.</li>
+  <li>我考了九十分。(Wǒ kǎo le jiǔshí fēn.) — I scored 90 points.</li>
+  <li>这次考试很难。(Zhè cì kǎoshì hěn nán.) — This exam was very hard.</li>
+</ul>
+
+<h2 id="online-learning">Online Learning Terms</h2>
+
+<p>With the rise of virtual classrooms, these modern terms are increasingly essential:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <thead>
+    <tr style="background:#ecfdf5;">
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Chinese</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">Pinyin</th>
+      <th style="padding:10px; border:1px solid #e2e8f0; text-align:left;">English</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">网课</td><td style="padding:8px; border:1px solid #e2e8f0;">wǎngkè</td><td style="padding:8px; border:1px solid #e2e8f0;">online class</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">视频</td><td style="padding:8px; border:1px solid #e2e8f0;">shìpín</td><td style="padding:8px; border:1px solid #e2e8f0;">video</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">麦克风</td><td style="padding:8px; border:1px solid #e2e8f0;">màikèfēng</td><td style="padding:8px; border:1px solid #e2e8f0;">microphone</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">摄像头</td><td style="padding:8px; border:1px solid #e2e8f0;">shèxiàngtóu</td><td style="padding:8px; border:1px solid #e2e8f0;">camera/webcam</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">打开/关掉麦克风</td><td style="padding:8px; border:1px solid #e2e8f0;">dǎkāi/guāndiào màikèfēng</td><td style="padding:8px; border:1px solid #e2e8f0;">turn on/off the microphone</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">屏幕共享</td><td style="padding:8px; border:1px solid #e2e8f0;">píngmù gòngxiǎng</td><td style="padding:8px; border:1px solid #e2e8f0;">screen share</td></tr>
+    <tr><td style="padding:8px; border:1px solid #e2e8f0;">聊天框</td><td style="padding:8px; border:1px solid #e2e8f0;">liáotiānkuāng</td><td style="padding:8px; border:1px solid #e2e8f0;">chat box</td></tr>
+    <tr style="background:#f8fafc;"><td style="padding:8px; border:1px solid #e2e8f0;">网络不好</td><td style="padding:8px; border:1px solid #e2e8f0;">wǎngluò bù hǎo</td><td style="padding:8px; border:1px solid #e2e8f0;">bad internet connection</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Online class phrases:</strong></p>
+<ul>
+  <li>老师，我听不到你的声音。(Lǎoshī, wǒ tīng bú dào nǐ de shēngyīn.) — Teacher, I can't hear you.</li>
+  <li>请打开麦克风。(Qǐng dǎkāi màikèfēng.) — Please turn on your microphone.</li>
+  <li>网络不好，我重新连一下。(Wǎngluò bù hǎo, wǒ chóngxīn lián yīxià.) — Bad connection, let me reconnect.</li>
+</ul>
+
+<p>Classroom vocabulary is your foundation for studying Chinese in any setting. For more learning resources, use our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> to see which classroom words appear on each exam level, and practice writing characters with our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>. If you're new to Chinese, start with our <a href="/chinese/blog/pinyin-guide/">pinyin guide</a> to nail pronunciation, then check out <a href="/chinese/blog/chinese-greetings/">Chinese greetings</a> for more conversation practice.</p>
+
 </BlogLayout>

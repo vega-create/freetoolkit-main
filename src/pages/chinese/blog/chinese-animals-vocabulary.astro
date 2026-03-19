@@ -1,21 +1,254 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What are the most important animal words to learn?`, a: `Start with common pets and farm animals: 猫 (cat), 狗 (dog), 鱼 (fish), 鸟 (bird), 马 (horse), 牛 (cow), 猪 (pig), 鸡 (chicken). These appear in HSK vocabulary lists and daily conversation.` }];
-const relatedTools = [{ name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" }, { name: "Daily Character", url: "/chinese/tools/daily-character/" }];
-const headings = [{ depth: 2, slug: "pets", text: "Pets and Farm Animals" }, { depth: 2, slug: "wild", text: "Wild Animals" }, { depth: 2, slug: "cultural", text: "Animals in Culture" }];
+const faq = [
+  { q: `What are the most important animal words to learn first?`, a: `Start with the 12 zodiac animals as they cover common pets, farm animals, and wild animals: 鼠 (rat), 牛 (ox), 虎 (tiger), 兔 (rabbit), 龙 (dragon), 蛇 (snake), 马 (horse), 羊 (sheep), 猴 (monkey), 鸡 (rooster), 狗 (dog), 猪 (pig). These appear frequently in daily conversation and HSK vocabulary.` },
+  { q: `What are the 12 Chinese zodiac animals?`, a: `In order: 鼠 Rat, 牛 Ox, 虎 Tiger, 兔 Rabbit, 龙 Dragon, 蛇 Snake, 马 Horse, 羊 Sheep/Goat, 猴 Monkey, 鸡 Rooster, 狗 Dog, 猪 Pig. Each year is assigned one animal in a 12-year cycle. Your birth year determines your zodiac animal, which is believed to influence personality.` },
+  { q: `Why is the dragon so important in Chinese culture?`, a: `The dragon (龙, lóng) is the most revered creature in Chinese mythology, symbolizing power, wisdom, and good fortune. Chinese emperors used the dragon as their symbol. Chinese people call themselves 龙的传人 (descendants of the dragon). Unlike Western dragons, Chinese dragons are benevolent and bring rain and prosperity.` },
+  { q: `What does "bear cat" mean — is a panda a bear or a cat?`, a: `The Chinese name for panda is 熊猫 (xióngmāo), literally "bear-cat." Scientifically, giant pandas are bears (family Ursidae), not cats. The name likely arose because early Chinese observers saw cat-like features in its face. The panda is China's national animal and a global symbol of conservation.` },
+  { q: `How do animal radicals help learn Chinese characters?`, a: `Many animal characters contain radicals that hint at the category. The 犭radical (dog/animal) appears in 猫 (cat), 猴 (monkey), 狮 (lion), 狐 (fox). The 虫 radical (insect/creature) appears in 蛇 (snake), 蝴蝶 (butterfly), 蜜蜂 (bee). Recognizing these radicals helps you guess meanings of new characters.` }
+];
+const relatedTools = [
+  { name: "Practice Sheet", url: "/chinese/tools/practice-sheet/" },
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" },
+  { name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "pets-domestic", text: "Pets and Domestic Animals" },
+  { depth: 2, slug: "farm-animals", text: "Farm Animals" },
+  { depth: 2, slug: "wild-animals", text: "Wild Animals" },
+  { depth: 2, slug: "insects-sea", text: "Insects and Sea Creatures" },
+  { depth: 2, slug: "zodiac", text: "The 12 Chinese Zodiac Animals" },
+  { depth: 2, slug: "animal-radicals", text: "Animal Radicals in Chinese Characters" },
+  { depth: 2, slug: "cultural-symbolism", text: "Animal Symbolism in Chinese Culture" },
+  { depth: 2, slug: "idioms", text: "Animal Idioms and Expressions" }
+];
 ---
 <BlogLayout
-  title="Animals in Chinese: 30 Common Animal Names"
-  description="Learn the names of common animals in Chinese with pronunciation, characters, and fun facts about their cultural significance."
+  title="Animals in Chinese: 60+ Animal Names with Cultural Significance"
+  description="Learn animal vocabulary in Chinese — from pets and farm animals to wild creatures, zodiac animals, and powerful animal idioms. Includes character radicals and cultural symbolism."
   language="chinese"
   category="chinese-basics"
-  tags={["animals", "vocabulary", "beginner", "fun"]}
+  tags={["animals", "vocabulary", "beginner", "culture"]}
   publishDate="2026-02-28"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="pets">Pets and Farm Animals</h2><p><strong>猫 (māo)</strong> cat, <strong>狗 (gǒu)</strong> dog, <strong>兔子 (tùzi)</strong> rabbit, <strong>鱼 (yú)</strong> fish, <strong>鸟 (niǎo)</strong> bird, <strong>马 (mǎ)</strong> horse, <strong>牛 (niú)</strong> cow, <strong>猪 (zhū)</strong> pig, <strong>羊 (yáng)</strong> sheep, <strong>鸡 (jī)</strong> chicken.</p>
-    <h2 id="wild">Wild Animals</h2><p><strong>老虎 (lǎohǔ)</strong> tiger, <strong>熊猫 (xióngmāo)</strong> panda (literally "bear cat"), <strong>龙 (lóng)</strong> dragon, <strong>蛇 (shé)</strong> snake, <strong>猴子 (hóuzi)</strong> monkey, <strong>大象 (dàxiàng)</strong> elephant, <strong>狮子 (shīzi)</strong> lion.</p>
-    <h2 id="cultural">Animals in Culture</h2><p>Animals carry rich symbolism in Chinese culture. The <strong>dragon (龙)</strong> represents power and good fortune. The <strong>phoenix (凤凰, fènghuáng)</strong> symbolizes grace and virtue. <strong>Fish (鱼)</strong> represents abundance because it sounds like 余 (surplus). Practice writing animal characters with our <a href="/chinese/tools/practice-sheet/">Practice Sheet Generator</a>.</p>
+
+  <h2 id="pets-domestic">Pets and Domestic Animals</h2>
+  <p>Pet culture is booming in China and Taiwan. Dogs and cats are by far the most popular pets, and knowing these words is essential for daily conversation. Many animal words are among the first vocabulary taught in Chinese classes.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Fun Fact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>猫</td><td>māo</td><td>Cat</td><td>The sound 喵 (miāo) = meow in Chinese</td></tr>
+      <tr><td>狗</td><td>gǒu</td><td>Dog</td><td>汪汪 (wāng wāng) = woof woof</td></tr>
+      <tr><td>兔子</td><td>tùzi</td><td>Rabbit</td><td>Moon rabbit (玉兔) is a Chinese legend</td></tr>
+      <tr><td>鱼</td><td>yú</td><td>Fish</td><td>Sounds like 余 (surplus) = good luck symbol</td></tr>
+      <tr><td>鸟</td><td>niǎo</td><td>Bird</td><td>General term; specific birds have own names</td></tr>
+      <tr><td>仓鼠</td><td>cāngshǔ</td><td>Hamster</td><td>Literally "warehouse mouse"</td></tr>
+      <tr><td>乌龟</td><td>wūguī</td><td>Turtle</td><td>Symbol of longevity in Chinese culture</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="farm-animals">Farm Animals</h2>
+  <p>Farm animal vocabulary is essential because these characters appear in many compound words, idioms, and cultural expressions. The character 牛 (niú, cow/ox) alone appears in dozens of common words.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Related Words</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>牛</td><td>niú</td><td>Cow / Ox</td><td>牛肉 (beef), 牛奶 (milk), 牛仔 (cowboy)</td></tr>
+      <tr><td>马</td><td>mǎ</td><td>Horse</td><td>马上 (immediately), 马路 (road)</td></tr>
+      <tr><td>猪</td><td>zhū</td><td>Pig</td><td>猪肉 (pork), 猪年 (Year of the Pig)</td></tr>
+      <tr><td>羊</td><td>yáng</td><td>Sheep / Goat</td><td>羊肉 (lamb), 山羊 (goat)</td></tr>
+      <tr><td>鸡</td><td>jī</td><td>Chicken / Rooster</td><td>鸡蛋 (egg), 鸡肉 (chicken meat)</td></tr>
+      <tr><td>鸭</td><td>yā</td><td>Duck</td><td>烤鸭 (roast duck), 鸭蛋 (duck egg)</td></tr>
+      <tr><td>驴</td><td>lǘ</td><td>Donkey</td><td>驴肉火烧 (donkey meat sandwich)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice how many food words use animal characters: 牛肉 (beef) = cow + meat, 猪肉 (pork) = pig + meat, 鸡肉 (chicken) = chicken + meat. This pattern makes food vocabulary much easier once you know the animal names. See our <a href="/chinese/blog/chinese-food-vocabulary/">food vocabulary guide</a> for more.</p>
+
+  <h2 id="wild-animals">Wild Animals</h2>
+  <p>Wild animal vocabulary introduces more complex characters, many of which contain the animal radical 犭 that helps you identify animal-related words.</p>
+
+  <table>
+    <thead>
+      <tr><th>Chinese</th><th>Pinyin</th><th>English</th><th>Character Insight</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>老虎</td><td>lǎohǔ</td><td>Tiger</td><td>老 (old) is an honorific prefix showing respect</td></tr>
+      <tr><td>熊猫</td><td>xióngmāo</td><td>Panda</td><td>Literally "bear-cat" — China's national treasure</td></tr>
+      <tr><td>龙</td><td>lóng</td><td>Dragon</td><td>Most powerful mythical creature in Chinese culture</td></tr>
+      <tr><td>蛇</td><td>shé</td><td>Snake</td><td>One of the 12 zodiac animals</td></tr>
+      <tr><td>猴子</td><td>hóuzi</td><td>Monkey</td><td>Sun Wukong (孙悟空) is the famous Monkey King</td></tr>
+      <tr><td>大象</td><td>dàxiàng</td><td>Elephant</td><td>大 (big) + 象 (elephant/appearance)</td></tr>
+      <tr><td>狮子</td><td>shīzi</td><td>Lion</td><td>Stone lions guard Chinese buildings</td></tr>
+      <tr><td>狼</td><td>láng</td><td>Wolf</td><td>犭radical (animal) + 良</td></tr>
+      <tr><td>狐狸</td><td>húli</td><td>Fox</td><td>Associated with cunning and seduction in folklore</td></tr>
+      <tr><td>熊</td><td>xióng</td><td>Bear</td><td>Also slang for "useless" in some dialects</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="insects-sea">Insects and Sea Creatures</h2>
+  <p>These categories use different character radicals. Insects and small creatures often contain the 虫 (chóng) radical, while sea creatures may contain the 鱼 (yú, fish) radical.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #e8f5e9; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #2e7d32; margin-bottom: 10px;">Insects 昆虫</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>蝴蝶 (húdié) — Butterfly</li>
+        <li>蜜蜂 (mìfēng) — Bee</li>
+        <li>蚂蚁 (mǎyǐ) — Ant</li>
+        <li>蚊子 (wénzi) — Mosquito</li>
+        <li>蜘蛛 (zhīzhū) — Spider</li>
+        <li>蟑螂 (zhāngláng) — Cockroach</li>
+      </ul>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #1565c0; margin-bottom: 10px;">Sea Creatures 海洋动物</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.9rem;">
+        <li>鲨鱼 (shāyú) — Shark</li>
+        <li>鲸鱼 (jīngyú) — Whale</li>
+        <li>海豚 (hǎitún) — Dolphin</li>
+        <li>螃蟹 (pángxiè) — Crab</li>
+        <li>虾 (xiā) — Shrimp</li>
+        <li>章鱼 (zhāngyú) — Octopus</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="zodiac">The 12 Chinese Zodiac Animals</h2>
+  <p>The Chinese zodiac (十二生肖, shí'èr shēngxiào) assigns one of 12 animals to each year in a repeating 12-year cycle. Your birth year determines your zodiac animal, which is believed to influence personality traits and compatibility. Learning the zodiac animals covers many of the most important animal characters.</p>
+
+  <!-- Zodiac Grid -->
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 24px 0;">
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐀</div>
+      <div style="font-weight: 700;">鼠 shǔ</div>
+      <div style="font-size: 0.8rem; color: #777;">Rat</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐂</div>
+      <div style="font-weight: 700;">牛 niú</div>
+      <div style="font-size: 0.8rem; color: #777;">Ox</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐅</div>
+      <div style="font-weight: 700;">虎 hǔ</div>
+      <div style="font-size: 0.8rem; color: #777;">Tiger</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐇</div>
+      <div style="font-weight: 700;">兔 tù</div>
+      <div style="font-size: 0.8rem; color: #777;">Rabbit</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐉</div>
+      <div style="font-weight: 700;">龙 lóng</div>
+      <div style="font-size: 0.8rem; color: #777;">Dragon</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐍</div>
+      <div style="font-weight: 700;">蛇 shé</div>
+      <div style="font-size: 0.8rem; color: #777;">Snake</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐎</div>
+      <div style="font-weight: 700;">马 mǎ</div>
+      <div style="font-size: 0.8rem; color: #777;">Horse</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐏</div>
+      <div style="font-weight: 700;">羊 yáng</div>
+      <div style="font-size: 0.8rem; color: #777;">Sheep</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐒</div>
+      <div style="font-weight: 700;">猴 hóu</div>
+      <div style="font-size: 0.8rem; color: #777;">Monkey</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐓</div>
+      <div style="font-weight: 700;">鸡 jī</div>
+      <div style="font-size: 0.8rem; color: #777;">Rooster</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐕</div>
+      <div style="font-weight: 700;">狗 gǒu</div>
+      <div style="font-size: 0.8rem; color: #777;">Dog</div>
+    </div>
+    <div style="background: #efebe9; border-radius: 8px; padding: 12px; text-align: center;">
+      <div style="font-size: 1.3rem;">🐖</div>
+      <div style="font-weight: 700;">猪 zhū</div>
+      <div style="font-size: 0.8rem; color: #777;">Pig</div>
+    </div>
+  </div>
+
+  <p>The zodiac profoundly affects Chinese daily life. Parents plan pregnancies to have children born in favorable years (Dragon years see birth rate spikes). Wedding dates consider zodiac compatibility. Business deals may factor in auspicious animal year alignments.</p>
+
+  <h2 id="animal-radicals">Animal Radicals in Chinese Characters</h2>
+  <p>Many animal characters share common radicals that help you identify and remember them. Recognizing these patterns accelerates your character learning.</p>
+
+  <table>
+    <thead>
+      <tr><th>Radical</th><th>Meaning</th><th>Appears In</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>犭</td><td>Animal / Dog</td><td>猫 (cat), 狗 (dog), 猴 (monkey), 狮 (lion), 狼 (wolf), 狐 (fox)</td></tr>
+      <tr><td>虫</td><td>Insect / Creature</td><td>蛇 (snake), 蝴蝶 (butterfly), 蜜蜂 (bee), 蚂蚁 (ant), 虾 (shrimp)</td></tr>
+      <tr><td>鱼</td><td>Fish</td><td>鲨 (shark), 鲸 (whale), 鲤 (carp), 鲜 (fresh)</td></tr>
+      <tr><td>鸟 / 隹</td><td>Bird</td><td>鸡 (chicken), 鸭 (duck), 鹰 (eagle), 雀 (sparrow)</td></tr>
+      <tr><td>马</td><td>Horse</td><td>驴 (donkey), 骆驼 (camel), 驾 (drive)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Use our <a href="/chinese/tools/daily-character/">Daily Character</a> tool to study animal characters one at a time, and generate <a href="/chinese/tools/practice-sheet/">practice sheets</a> for writing practice.</p>
+
+  <h2 id="cultural-symbolism">Animal Symbolism in Chinese Culture</h2>
+  <p>Animals carry powerful symbolic meanings in Chinese art, literature, and daily life. These associations have remained remarkably consistent for thousands of years.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #c62828;">龙 Dragon — Power & Fortune</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Emperor's symbol. Chinese people are 龙的传人 (descendants of the dragon). Dragon dances at festivals bring good luck.</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #e65100;">凤凰 Phoenix — Grace & Virtue</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Empress's symbol. Paired with dragon (龙凤) for weddings. Represents yin (female) to dragon's yang (male).</div>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #1565c0;">鱼 Fish — Abundance</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Sounds like 余 (surplus). Fish is always served at New Year dinner. 年年有余 (abundance every year).</div>
+    </div>
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 16px;">
+      <div style="font-weight: 700; color: #2e7d32;">龟 Turtle — Longevity</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Ancient symbol of long life and wisdom. Turtle shells were used for oracle bone divination in ancient China.</div>
+    </div>
+  </div>
+
+  <h2 id="idioms">Animal Idioms and Expressions</h2>
+  <p>Chinese has hundreds of animal-related idioms (成语) that are used daily in conversation and writing.</p>
+
+  <table>
+    <thead>
+      <tr><th>Idiom</th><th>Pinyin</th><th>Literal</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>画蛇添足</td><td>huà shé tiān zú</td><td>Draw snake, add feet</td><td>Ruining something by overdoing it</td></tr>
+      <tr><td>对牛弹琴</td><td>duì niú tán qín</td><td>Play lute to a cow</td><td>Wasting effort on someone who cannot appreciate it</td></tr>
+      <tr><td>马马虎虎</td><td>mǎ mǎ hū hū</td><td>Horse horse tiger tiger</td><td>So-so, careless, mediocre</td></tr>
+      <tr><td>狐假虎威</td><td>hú jiǎ hǔ wēi</td><td>Fox borrows tiger's power</td><td>Bullying others using someone else's authority</td></tr>
+      <tr><td>鸡飞蛋打</td><td>jī fēi dàn dǎ</td><td>Chicken flies, eggs break</td><td>Total loss — everything falls apart</td></tr>
+      <tr><td>龙飞凤舞</td><td>lóng fēi fèng wǔ</td><td>Dragon flies, phoenix dances</td><td>Lively and energetic; also describes bold calligraphy</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Start Learning Animal Vocabulary</h3>
+  <p>Generate <a href="/chinese/tools/practice-sheet/">practice sheets</a> for animal characters, learn one new animal daily with <a href="/chinese/tools/daily-character/">Daily Character</a>, and browse animal-related vocabulary in the <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary</a> browser. Read our <a href="/chinese/blog/chinese-radicals/">Chinese radicals guide</a> to understand how animal radicals build into complex characters, and explore <a href="/chinese/blog/chinese-colors/">Chinese color vocabulary</a> to describe animals vividly.</p>
+
 </BlogLayout>
