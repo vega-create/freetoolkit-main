@@ -1,29 +1,388 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Should I watch with subtitles?`, a: `Start with Chinese subtitles plus English subtitles. As you improve, switch to Chinese-only subtitles. The goal is training your ear while having visual support.` }];
-const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
-const headings = [{ depth: 2, slug: "beginner-films", text: "Films for Beginners" }, { depth: 2, slug: "intermediate-films", text: "Intermediate Level Films" }, { depth: 2, slug: "tips", text: "Watching Tips" }];
+const faq = [
+  { q: `Should I watch with subtitles?`, a: `Start with dual subtitles (Chinese + English), then switch to Chinese-only subtitles as you improve. Eventually, try watching without any subtitles for short clips. The goal is to gradually train your ear while reducing dependence on reading.` },
+  { q: `How many times should I watch the same movie?`, a: `At least twice — the first time for story enjoyment and general comprehension, the second time for active language study. For maximum benefit, watch key scenes 3–4 times, pausing to note vocabulary and shadowing the dialogue.` },
+  { q: `Are TV dramas better than movies for learning Chinese?`, a: `TV dramas offer more total content and repetition of everyday language. Movies provide more concentrated, polished dialogue. Both are valuable — dramas for consistent daily practice, movies for focused study sessions.` },
+  { q: `Should I watch Taiwanese or mainland Chinese films?`, a: `Both use standard Mandarin, but with slight accent and vocabulary differences. Start with mainland productions if you are studying simplified characters and standard putonghua. Add Taiwanese content for natural variation once you are comfortable.` },
+  { q: `What if I can barely understand anything in a Chinese movie?`, a: `That is normal for beginners. Start with animated films or children's shows that use simpler language. Watch with dual subtitles and focus on recognizing words you already know. Even understanding 20–30% is valuable listening practice at the beginning.` }
+];
+const relatedTools = [
+  { name: "Character Counter", url: "/chinese/tools/character-counter/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" },
+  { name: "Character Dictionary", url: "/chinese/tools/character-dictionary/" }
+];
+const headings = [
+  { depth: 2, slug: "why-movies-work", text: "Why Movies Are One of the Best Ways to Learn Chinese" },
+  { depth: 2, slug: "beginner-films", text: "5 Films Perfect for Beginners (HSK 1–2)" },
+  { depth: 2, slug: "intermediate-films", text: "5 Films for Intermediate Learners (HSK 3–4)" },
+  { depth: 2, slug: "advanced-films", text: "5 Films for Advanced Learners (HSK 5–6)" },
+  { depth: 2, slug: "tv-dramas", text: "Best Chinese TV Dramas for Language Learning" },
+  { depth: 2, slug: "active-watching", text: "The Active Watching Method — 5 Steps" },
+  { depth: 2, slug: "subtitle-strategy", text: "Subtitle Strategy by Level" },
+  { depth: 2, slug: "building-habit", text: "Building a Movie-Based Study Routine" }
+];
 ---
 <BlogLayout
-  title="Learn Chinese from Movies: 10 Films Every Learner Should Watch"
-  description="Improve your Chinese listening skills and cultural understanding through cinema. Curated film recommendations by proficiency level."
+  title="Learn Chinese from Movies: 15 Films Every Learner Should Watch"
+  description="Improve your Chinese listening and cultural understanding through cinema. 15 curated film recommendations by level, plus the active watching method and subtitle strategies."
   language="chinese"
   category="study-tips"
-  tags={["movies", "listening", "study-tips", "culture"]}
+  tags={["movies", "listening", "study-tips", "culture", "immersion"]}
   publishDate="2026-02-21"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="beginner-films">Films for Beginners</h2>
-    <p>Start with films that use simple, everyday language. Animated films and family dramas are ideal because they use clear pronunciation and common vocabulary. Look for films with scenes set in daily life — ordering food, taking transportation, having conversations with friends — as these provide the most practically useful language input.</p>
-    <p>Taiwanese films often feature a mix of Mandarin with some Taiwanese dialect, which is excellent exposure to real-world language variety. Films set in modern urban environments tend to use more standard Mandarin.</p>
+  <h2 id="why-movies-work">Why Movies Are One of the Best Ways to Learn Chinese</h2>
+  <p>Movies combine listening, cultural context, visual cues, and emotional engagement in a way that textbooks simply cannot match. When you watch a scene where a character orders food at a restaurant, you are not just hearing vocabulary — you are seeing body language, tone of voice, social dynamics, and cultural norms all at once.</p>
 
-    <h2 id="intermediate-films">Intermediate Level Films</h2>
-    <p>Once you are comfortable with basic dialogue, move to dramas, comedies, and historical films. These introduce more complex vocabulary, cultural references, and varied speaking styles. Pay attention to how characters use different registers — formal speech at work vs casual speech with friends.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">👂</div>
+      <strong>Natural Listening</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Hear real pronunciation, speed, and connected speech — not textbook audio</p>
+    </div>
+    <div style="background: #f0fdf4; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🎭</div>
+      <strong>Cultural Context</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Learn customs, humor, social norms, and history naturally</p>
+    </div>
+    <div style="background: #fefce8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🧠</div>
+      <strong>Emotional Memory</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Words learned in emotional scenes stick better than flashcard vocabulary</p>
+    </div>
+    <div style="background: #fdf2f8; padding: 1.2rem; border-radius: 8px; text-align: center;">
+      <div style="font-size: 1.8rem;">🗣️</div>
+      <strong>Real Register</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Hear formal vs casual speech, slang, and how tone changes with emotion</p>
+    </div>
+  </div>
 
-    <h2 id="tips">Watching Tips</h2>
-    <p><strong>Active watching:</strong> Pause frequently to look up words. <strong>Repeat after characters:</strong> Practice their pronunciation and intonation. <strong>Watch scenes twice:</strong> First for story comprehension, then for language study. Use our <a href="/chinese/tools/character-counter/">Character Counter</a> to analyze subtitles you copy.</p>
+  <p>Research on language acquisition shows that <strong>comprehensible input</strong> — language you can mostly understand with some new elements — is the most effective way to improve. Movies with subtitles provide exactly this kind of input, making them an ideal study tool at every level.</p>
+
+  <h2 id="beginner-films">5 Films Perfect for Beginners (HSK 1–2)</h2>
+  <p>These films use simple, everyday language with clear pronunciation. Focus on family dramas, romantic comedies, and animated films — they feature the kind of daily conversation you are learning in class.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #16a34a; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Film Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why It Is Great for Beginners</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">1</td>
+        <td style="padding: 10px;"><strong>不见不散 (Bù Jiàn Bù Sàn)</strong><br><em>Be There or Be Square</em></td>
+        <td style="padding: 10px;">Comedy</td>
+        <td style="padding: 10px;">Modern setting, everyday conversations, clear Mandarin</td>
+        <td style="padding: 10px;">Daily life, directions, greetings</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">2</td>
+        <td style="padding: 10px;"><strong>人在囧途 (Rén Zài Jiǒng Tú)</strong><br><em>Lost on Journey</em></td>
+        <td style="padding: 10px;">Road comedy</td>
+        <td style="padding: 10px;">Travel vocabulary, simple plot, physical comedy aids comprehension</td>
+        <td style="padding: 10px;">Travel, transportation, hotels</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">3</td>
+        <td style="padding: 10px;"><strong>喜欢你 (Xǐ Huan Nǐ)</strong><br><em>This Is Not What I Expected</em></td>
+        <td style="padding: 10px;">Romantic comedy</td>
+        <td style="padding: 10px;">Food vocabulary, restaurant scenes, slow-paced dialogue</td>
+        <td style="padding: 10px;">Food, cooking, emotions</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">4</td>
+        <td style="padding: 10px;"><strong>大鱼海棠 (Dà Yú Hǎi Táng)</strong><br><em>Big Fish & Begonia</em></td>
+        <td style="padding: 10px;">Animation</td>
+        <td style="padding: 10px;">Beautiful visuals, simple narration, Chinese mythology elements</td>
+        <td style="padding: 10px;">Nature, family, feelings</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5</td>
+        <td style="padding: 10px;"><strong>你好，李焕英 (Nǐ Hǎo, Lǐ Huàn Yīng)</strong><br><em>Hi, Mom</em></td>
+        <td style="padding: 10px;">Comedy/Drama</td>
+        <td style="padding: 10px;">Family themes, emotional but simple dialogue, massive cultural hit</td>
+        <td style="padding: 10px;">Family, daily life, emotions</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="intermediate-films">5 Films for Intermediate Learners (HSK 3–4)</h2>
+  <p>At this level, you can handle more complex plots and varied speaking styles. These films introduce formal speech, regional expressions, and more nuanced vocabulary:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #2563eb; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Film Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why It Is Great for Intermediate</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">6</td>
+        <td style="padding: 10px;"><strong>中国合伙人 (Zhōngguó Héhuǒrén)</strong><br><em>American Dreams in China</em></td>
+        <td style="padding: 10px;">Drama</td>
+        <td style="padding: 10px;">Business vocabulary, formal and casual speech mix, inspiring story</td>
+        <td style="padding: 10px;">Business, education, ambition</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">7</td>
+        <td style="padding: 10px;"><strong>饮食男女 (Yǐn Shí Nán Nǚ)</strong><br><em>Eat Drink Man Woman</em></td>
+        <td style="padding: 10px;">Family drama</td>
+        <td style="padding: 10px;">Rich food vocabulary, family dynamics, Taiwanese Mandarin</td>
+        <td style="padding: 10px;">Cooking, relationships, tradition</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">8</td>
+        <td style="padding: 10px;"><strong>夏洛特烦恼 (Xiàluòtè Fánnǎo)</strong><br><em>Goodbye Mr. Loser</em></td>
+        <td style="padding: 10px;">Comedy</td>
+        <td style="padding: 10px;">Modern slang, school vocabulary, rapid-fire humor</td>
+        <td style="padding: 10px;">School, nostalgia, humor</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">9</td>
+        <td style="padding: 10px;"><strong>少年的你 (Shàonián de Nǐ)</strong><br><em>Better Days</em></td>
+        <td style="padding: 10px;">Drama</td>
+        <td style="padding: 10px;">Youth language, emotional dialogue, social themes</td>
+        <td style="padding: 10px;">School, friendship, struggle</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">10</td>
+        <td style="padding: 10px;"><strong>疯狂的石头 (Fēngkuáng de Shítou)</strong><br><em>Crazy Stone</em></td>
+        <td style="padding: 10px;">Comedy/Crime</td>
+        <td style="padding: 10px;">Various dialects and accents, colloquial speech, fast-paced</td>
+        <td style="padding: 10px;">Colloquial expressions, crime</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="advanced-films">5 Films for Advanced Learners (HSK 5–6)</h2>
+  <p>These films challenge you with literary dialogue, historical language, philosophical themes, and subtle wordplay. They reward close attention and multiple viewings:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">#</th>
+        <th style="padding: 10px; text-align: left;">Film Title</th>
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Why It Is Great for Advanced</th>
+        <th style="padding: 10px; text-align: left;">Key Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">11</td>
+        <td style="padding: 10px;"><strong>霸王别姬 (Bàwáng Bié Jī)</strong><br><em>Farewell My Concubine</em></td>
+        <td style="padding: 10px;">Epic drama</td>
+        <td style="padding: 10px;">Literary language, historical context, Peking Opera terms</td>
+        <td style="padding: 10px;">History, art, politics, loyalty</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">12</td>
+        <td style="padding: 10px;"><strong>活着 (Huó Zhe)</strong><br><em>To Live</em></td>
+        <td style="padding: 10px;">Historical drama</td>
+        <td style="padding: 10px;">Spans decades of Chinese history, varied registers</td>
+        <td style="padding: 10px;">Family, survival, politics</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">13</td>
+        <td style="padding: 10px;"><strong>让子弹飞 (Ràng Zǐdàn Fēi)</strong><br><em>Let the Bullets Fly</em></td>
+        <td style="padding: 10px;">Action/Comedy</td>
+        <td style="padding: 10px;">Rapid dialogue, wordplay, political satire, multiple layers</td>
+        <td style="padding: 10px;">Power, deception, wit</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">14</td>
+        <td style="padding: 10px;"><strong>大红灯笼高高挂 (Dà Hóng Dēnglong Gāogāo Guà)</strong><br><em>Raise the Red Lantern</em></td>
+        <td style="padding: 10px;">Drama</td>
+        <td style="padding: 10px;">Formal speech, traditional household vocabulary, subtle conflict</td>
+        <td style="padding: 10px;">Tradition, hierarchy, marriage</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">15</td>
+        <td style="padding: 10px;"><strong>一一 (Yī Yī)</strong><br><em>A One and a Two</em></td>
+        <td style="padding: 10px;">Family drama</td>
+        <td style="padding: 10px;">Slow, contemplative dialogue, everyday philosophy, Taiwanese Mandarin</td>
+        <td style="padding: 10px;">Life, relationships, reflection</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="tv-dramas">Best Chinese TV Dramas for Language Learning</h2>
+  <p>TV dramas offer even more language exposure than movies because of their length. A 40-episode drama gives you 30+ hours of immersive listening practice. Here are the best genres and series for learners:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Genre</th>
+        <th style="padding: 10px; text-align: left;">Recommended Series</th>
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">Language Benefits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Modern romance</strong></td>
+        <td style="padding: 10px;">亲爱的热爱的, 以家人之名</td>
+        <td style="padding: 10px;">Intermediate</td>
+        <td style="padding: 10px;">Daily conversation, relationships, modern slang</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Workplace drama</strong></td>
+        <td style="padding: 10px;">欢乐颂, 精英律师</td>
+        <td style="padding: 10px;">Intermediate+</td>
+        <td style="padding: 10px;">Business vocabulary, formal speech, professional settings</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Historical / Costume</strong></td>
+        <td style="padding: 10px;">琅琊榜, 甄嬛传</td>
+        <td style="padding: 10px;">Advanced</td>
+        <td style="padding: 10px;">Classical expressions, literary Chinese elements, formal registers</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Family / Slice of life</strong></td>
+        <td style="padding: 10px;">家有儿女, 小欢喜</td>
+        <td style="padding: 10px;">Beginner+</td>
+        <td style="padding: 10px;">Family vocabulary, school life, natural speed</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Comedy / Variety</strong></td>
+        <td style="padding: 10px;">爱情公寓, 武林外传</td>
+        <td style="padding: 10px;">Intermediate</td>
+        <td style="padding: 10px;">Humor, wordplay, rapid casual speech</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>💡 Beginner Recommendation:</strong> 家有儿女 (Home with Kids) is widely considered the best Chinese show for beginners. It is a family sitcom with simple language, clear pronunciation, and short episodes. Think of it as the Chinese equivalent of a family-friendly sitcom.
+  </div>
+
+  <h2 id="active-watching">The Active Watching Method — 5 Steps</h2>
+  <p>Passive watching helps, but <strong>active watching</strong> accelerates your learning dramatically. Follow this 5-step method for every movie or episode you study:</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 1: Watch for Story</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Watch the full movie or episode with dual subtitles (Chinese + English). Focus on understanding the plot. Do not pause or take notes yet.</p>
+    </div>
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 2: Scene Study</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Pick 2–3 favorite scenes (2–3 minutes each). Re-watch with Chinese subtitles only. Pause to note new words and phrases.</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 3: Vocabulary Mining</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Look up the 5–10 most useful new words. Add them to your flashcard deck with the movie scene as context. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> for pronunciation.</p>
+    </div>
+    <div style="background: #fdf2f8; border-left: 4px solid #ec4899; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 4: Shadow the Dialogue</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Play your chosen scenes again and speak along with the characters. Match their speed, tone, and emotion. This trains pronunciation and fluency.</p>
+    </div>
+    <div style="background: #f5f3ff; border-left: 4px solid #7c3aed; padding: 1.2rem; border-radius: 0 8px 8px 0;">
+      <strong>Step 5: Re-watch Without Subtitles</strong>
+      <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">A few days later, re-watch the same scenes with no subtitles at all. You will be amazed at how much more you understand.</p>
+    </div>
+  </div>
+
+  <p>This method takes about 60–90 minutes per movie but produces far better results than watching three movies passively. Quality over quantity is the key to movie-based learning.</p>
+
+  <h2 id="subtitle-strategy">Subtitle Strategy by Level</h2>
+  <p>Your subtitle setup should evolve as your Chinese improves. Here is the recommended progression:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Level</th>
+        <th style="padding: 10px; text-align: left;">First Watch</th>
+        <th style="padding: 10px; text-align: left;">Study Watch</th>
+        <th style="padding: 10px; text-align: left;">Review Watch</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Beginner</strong></td>
+        <td style="padding: 10px;">English + Chinese subtitles</td>
+        <td style="padding: 10px;">Chinese subtitles only</td>
+        <td style="padding: 10px;">Chinese subtitles only</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Intermediate</strong></td>
+        <td style="padding: 10px;">Chinese subtitles only</td>
+        <td style="padding: 10px;">Chinese subtitles only</td>
+        <td style="padding: 10px;">No subtitles</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Advanced</strong></td>
+        <td style="padding: 10px;">No subtitles</td>
+        <td style="padding: 10px;">Chinese subtitles (for new vocabulary)</td>
+        <td style="padding: 10px;">No subtitles</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>⚠️ Important:</strong> English-only subtitles are the <strong>worst</strong> option for language learning. Your brain defaults to reading English and ignores the Chinese audio. Always include Chinese characters in your subtitles, even if you also have English.
+  </div>
+
+  <h2 id="building-habit">Building a Movie-Based Study Routine</h2>
+  <p>Integrate movie watching into your weekly study plan for consistent progress:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Day</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Saturday</td>
+        <td style="padding: 10px;">Watch full movie (Step 1)</td>
+        <td style="padding: 10px;">90–120 min</td>
+        <td style="padding: 10px;">Enjoyment + general comprehension</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Sunday</td>
+        <td style="padding: 10px;">Scene study + vocabulary (Steps 2–3)</td>
+        <td style="padding: 10px;">30–45 min</td>
+        <td style="padding: 10px;">New words + grammar patterns</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Mon–Wed</td>
+        <td style="padding: 10px;">Review flashcards from the movie</td>
+        <td style="padding: 10px;">10 min/day</td>
+        <td style="padding: 10px;">Retain new vocabulary</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">Thursday</td>
+        <td style="padding: 10px;">Shadow key scenes (Step 4)</td>
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">Pronunciation + fluency</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">Friday</td>
+        <td style="padding: 10px;">Re-watch without subtitles (Step 5)</td>
+        <td style="padding: 10px;">15 min</td>
+        <td style="padding: 10px;">Test listening comprehension</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+    <strong>🎬 Getting Started:</strong> Pick one film from the beginner list above and commit to the 5-step active watching method this week. Combine it with our <a href="/chinese/tools/">free Chinese learning tools</a> — use the <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation of new words you hear, and explore our <a href="/chinese/blog/chinese-tones-guide/">Tones Guide</a> if you are struggling with hearing tone differences in natural speech. Also check out <a href="/chinese/blog/learn-chinese-apps-resources/">Best Chinese Learning Resources</a> for more tools to supplement your movie study.
+  </div>
 
 </BlogLayout>

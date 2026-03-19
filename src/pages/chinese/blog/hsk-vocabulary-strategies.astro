@@ -1,31 +1,458 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What is the best way to memorize Chinese vocabulary?`, a: `Research supports spaced repetition as the most efficient method. Combine it with contextual learning (seeing words in sentences), character decomposition (breaking words into radicals), and active recall (testing yourself rather than passive review).` }];
-const relatedTools = [{ name: "HSK Vocabulary", url: "/chinese/tools/hsk-vocabulary/" }, { name: "Daily Character", url: "/chinese/tools/daily-character/" }];
-const headings = [{ depth: 2, slug: "spaced-repetition", text: "Spaced Repetition" }, { depth: 2, slug: "context", text: "Context-Based Learning" }, { depth: 2, slug: "mnemonics", text: "Mnemonics and Stories" }, { depth: 2, slug: "active", text: "Active Recall Testing" }];
+const faq = [
+  { q: `What is the best way to memorize Chinese vocabulary?`, a: `Research supports spaced repetition combined with contextual learning as the most efficient method. Use flashcards with spaced intervals, but always study words in example sentences rather than in isolation. Adding character decomposition and personal mnemonics further strengthens retention.` },
+  { q: `How many HSK words should I learn per day?`, a: `For sustainable progress, aim for 10–15 new words per day while reviewing 30–50 old words. This balance ensures you learn new material without losing previously studied vocabulary. Beginners may start with 5–8 words per day and increase gradually.` },
+  { q: `Should I learn all HSK 1 words before starting HSK 2?`, a: `Not necessarily. HSK levels overlap, and real Chinese does not follow strict level boundaries. Master the core 80% of each level, then move on. You will naturally encounter lower-level words in higher-level materials and reinforce them through context.` },
+  { q: `Is Anki the best app for HSK vocabulary?`, a: `Anki is extremely effective because of its customizable spaced repetition algorithm. However, the best app is the one you actually use daily. Pleco flashcards, Hack Chinese, and Tofu Learn are also excellent alternatives with more user-friendly interfaces.` },
+  { q: `How long does it take to learn all HSK 6 vocabulary?`, a: `HSK 6 requires about 5,000 words total. At 10–15 new words per day with consistent review, reaching HSK 6 vocabulary takes approximately 18–24 months of dedicated study. The actual time depends on your consistency, native language, and study methods.` }
+];
+const relatedTools = [
+  { name: "HSK Vocabulary Browser", url: "/chinese/tools/hsk-vocabulary/" },
+  { name: "Daily Character", url: "/chinese/tools/daily-character/" },
+  { name: "Character Dictionary", url: "/chinese/tools/character-dictionary/" }
+];
+const headings = [
+  { depth: 2, slug: "hsk-overview", text: "HSK Vocabulary Overview — What You Need to Know" },
+  { depth: 2, slug: "spaced-repetition", text: "Strategy 1: Spaced Repetition — The Science of Not Forgetting" },
+  { depth: 2, slug: "context-learning", text: "Strategy 2: Context-Based Learning — Words in Action" },
+  { depth: 2, slug: "character-decomposition", text: "Strategy 3: Character Decomposition — Break It Down" },
+  { depth: 2, slug: "mnemonics", text: "Strategy 4: Mnemonics and Visual Stories" },
+  { depth: 2, slug: "active-recall", text: "Strategy 5: Active Recall Testing" },
+  { depth: 2, slug: "daily-schedule", text: "Building Your Daily Vocabulary Routine" },
+  { depth: 2, slug: "common-mistakes", text: "Vocabulary Learning Mistakes to Avoid" }
+];
 ---
 <BlogLayout
-  title="HSK Vocabulary: 5 Proven Memorization Strategies"
-  description="Evidence-based techniques for memorizing HSK vocabulary efficiently. From spaced repetition to contextual learning methods."
+  title="HSK Vocabulary: 5 Proven Memorization Strategies That Actually Work"
+  description="Evidence-based techniques for memorizing HSK vocabulary efficiently. Master spaced repetition, context learning, character decomposition, mnemonics, and active recall with practical examples."
   language="chinese"
   category="hsk-prep"
-  tags={["hsk", "vocabulary", "study-tips", "memory"]}
+  tags={["hsk", "vocabulary", "study-tips", "memory", "spaced-repetition"]}
   publishDate="2026-02-24"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="spaced-repetition">Spaced Repetition</h2>
-    <p>Spaced repetition is the single most effective vocabulary learning technique. Review new words after 1 day, then 3 days, then 7 days, then 14 days. Each successful recall extends the interval. This leverages how human memory naturally consolidates information. Our <a href="/chinese/tools/daily-character/">Daily Character</a> tool builds this habit automatically.</p>
+  <h2 id="hsk-overview">HSK Vocabulary Overview — What You Need to Know</h2>
+  <p>The HSK (汉语水平考试) vocabulary list is the most structured path for Chinese learners. Each level builds on the previous one, and knowing exactly how many words you need gives you a clear, measurable target to work toward.</p>
 
-    <h2 id="context">Context-Based Learning</h2>
-    <p>Never learn words in isolation. Study 学 as part of 学生 (student), 学校 (school), 学习 (study) — seeing a character in multiple words creates stronger neural connections than flashcard drilling.</p>
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #1e40af; color: white;">
+        <th style="padding: 10px; text-align: left;">HSK Level</th>
+        <th style="padding: 10px; text-align: left;">New Words</th>
+        <th style="padding: 10px; text-align: left;">Total Words</th>
+        <th style="padding: 10px; text-align: left;">Study Time*</th>
+        <th style="padding: 10px; text-align: left;">Equivalent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>HSK 1</strong></td>
+        <td style="padding: 10px;">150</td>
+        <td style="padding: 10px;">150</td>
+        <td style="padding: 10px;">1–2 months</td>
+        <td style="padding: 10px;">Absolute beginner — basic greetings and survival phrases</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>HSK 2</strong></td>
+        <td style="padding: 10px;">150</td>
+        <td style="padding: 10px;">300</td>
+        <td style="padding: 10px;">2–3 months</td>
+        <td style="padding: 10px;">Elementary — simple daily conversations</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>HSK 3</strong></td>
+        <td style="padding: 10px;">300</td>
+        <td style="padding: 10px;">600</td>
+        <td style="padding: 10px;">3–4 months</td>
+        <td style="padding: 10px;">Intermediate — travel and work situations</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>HSK 4</strong></td>
+        <td style="padding: 10px;">600</td>
+        <td style="padding: 10px;">1,200</td>
+        <td style="padding: 10px;">4–6 months</td>
+        <td style="padding: 10px;">Upper-intermediate — discuss topics fluently</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>HSK 5</strong></td>
+        <td style="padding: 10px;">1,300</td>
+        <td style="padding: 10px;">2,500</td>
+        <td style="padding: 10px;">6–10 months</td>
+        <td style="padding: 10px;">Advanced — read newspapers and give speeches</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>HSK 6</strong></td>
+        <td style="padding: 10px;">2,500</td>
+        <td style="padding: 10px;">5,000</td>
+        <td style="padding: 10px;">10–14 months</td>
+        <td style="padding: 10px;">Fluent — express opinions on complex topics</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <h2 id="mnemonics">Mnemonics and Stories</h2>
-    <p>Create vivid, unusual stories to link characters to meanings. The character 休 (rest) shows a person (人) leaning against a tree (木). These visual mnemonics exploit your brain's preference for narrative and imagery over abstract symbol-meaning pairs.</p>
+  <p style="font-size: 0.9rem; color: #666;">*Study time assumes 10–15 new words per day with consistent daily review. Use our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> to explore the word list for each level.</p>
 
-    <h2 id="active">Active Recall Testing</h2>
-    <p>Testing yourself is more effective than re-reading. Use our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> to study, then quiz yourself by covering the English meaning and trying to recall it. Active recall strengthens memory traces far more than passive review.</p>
+  <h2 id="spaced-repetition">Strategy 1: Spaced Repetition — The Science of Not Forgetting</h2>
+  <p>Spaced repetition is the single most powerful vocabulary technique backed by cognitive science. Instead of cramming 100 words in one session (and forgetting 80% by next week), you review each word at <strong>precisely timed intervals</strong> that match your brain's forgetting curve.</p>
+
+  <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>📊 How the Forgetting Curve Works:</strong> Without review, you forget ~50% of new information within 24 hours and ~80% within a week. Spaced repetition fights this by scheduling reviews right before you are about to forget — each successful recall doubles the interval.
+  </div>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #7c3aed; color: white;">
+        <th style="padding: 10px; text-align: left;">Review #</th>
+        <th style="padding: 10px; text-align: left;">Interval</th>
+        <th style="padding: 10px; text-align: left;">What You Do</th>
+        <th style="padding: 10px; text-align: left;">Expected Retention</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">1st</td>
+        <td style="padding: 10px;">Same day (evening)</td>
+        <td style="padding: 10px;">Quick review of all new words from today</td>
+        <td style="padding: 10px;">~70%</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">2nd</td>
+        <td style="padding: 10px;">Next day</td>
+        <td style="padding: 10px;">Test recall — check what you forgot</td>
+        <td style="padding: 10px;">~80%</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">3rd</td>
+        <td style="padding: 10px;">3 days later</td>
+        <td style="padding: 10px;">Active recall test — no peeking</td>
+        <td style="padding: 10px;">~85%</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">4th</td>
+        <td style="padding: 10px;">1 week later</td>
+        <td style="padding: 10px;">Full test — write meaning and pronunciation</td>
+        <td style="padding: 10px;">~90%</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">5th</td>
+        <td style="padding: 10px;">2 weeks later</td>
+        <td style="padding: 10px;">Use in a sentence, no flashcard</td>
+        <td style="padding: 10px;">~95%</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">6th</td>
+        <td style="padding: 10px;">1 month later</td>
+        <td style="padding: 10px;">Encounter naturally in reading or listening</td>
+        <td style="padding: 10px;">~95%+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Best tools for spaced repetition:</strong> Anki (most customizable), Pleco flashcards (built into the best Chinese dictionary), or our <a href="/chinese/tools/daily-character/">Daily Character tool</a> which sends you a character to review each day.</p>
+
+  <h2 id="context-learning">Strategy 2: Context-Based Learning — Words in Action</h2>
+  <p>Never learn a word in isolation. A word learned in context is <strong>3–5× more likely</strong> to be retained than the same word memorized from a bare flashcard. Here is why: context gives your brain multiple hooks to hang the memory on — the sentence, the situation, the emotion, and related words.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #0d9488; color: white;">
+        <th style="padding: 10px; text-align: left;">Word</th>
+        <th style="padding: 10px; text-align: left;">Isolated Study ❌</th>
+        <th style="padding: 10px; text-align: left;">Context-Based Study ✅</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>学 (xué)</strong></td>
+        <td style="padding: 10px;">学 = study/learn</td>
+        <td style="padding: 10px;">学生 student, 学校 school, 学习 study, 大学 university</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>看 (kàn)</strong></td>
+        <td style="padding: 10px;">看 = look/see</td>
+        <td style="padding: 10px;">看书 read a book, 看电影 watch a movie, 看病 see a doctor, 好看 good-looking</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>开 (kāi)</strong></td>
+        <td style="padding: 10px;">开 = open</td>
+        <td style="padding: 10px;">开门 open a door, 开车 drive a car, 开心 happy, 开会 have a meeting</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>打 (dǎ)</strong></td>
+        <td style="padding: 10px;">打 = hit</td>
+        <td style="padding: 10px;">打电话 make a call, 打球 play ball, 打工 work a job, 打字 type</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>回 (huí)</strong></td>
+        <td style="padding: 10px;">回 = return</td>
+        <td style="padding: 10px;">回家 go home, 回来 come back, 回答 answer, 回忆 memories</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Context Learning Methods</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Learn word families (same character in different compounds)</li>
+        <li>Write 2–3 example sentences per new word</li>
+        <li>Read graded readers at your HSK level</li>
+        <li>Note new words from podcasts with timestamps</li>
+      </ul>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Avoid These Habits</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li>Memorizing word lists without sentences</li>
+        <li>Only studying Chinese → English direction</li>
+        <li>Ignoring measure words and collocations</li>
+        <li>Learning words you will never actually use</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="character-decomposition">Strategy 3: Character Decomposition — Break It Down</h2>
+  <p>Chinese characters are not random symbols — they are built from <strong>recurring components</strong> (radicals and phonetic elements) that carry meaning and pronunciation clues. Learning to decompose characters turns a seemingly impossible memorization task into a logical puzzle.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #dc2626; color: white;">
+        <th style="padding: 10px; text-align: left;">Character</th>
+        <th style="padding: 10px; text-align: left;">Components</th>
+        <th style="padding: 10px; text-align: left;">Logic</th>
+        <th style="padding: 10px; text-align: left;">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.5rem;">休</td>
+        <td style="padding: 10px;">人 (person) + 木 (tree)</td>
+        <td style="padding: 10px;">A person leaning against a tree</td>
+        <td style="padding: 10px;">rest</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.5rem;">明</td>
+        <td style="padding: 10px;">日 (sun) + 月 (moon)</td>
+        <td style="padding: 10px;">Sun and moon together = bright light</td>
+        <td style="padding: 10px;">bright, clear</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.5rem;">好</td>
+        <td style="padding: 10px;">女 (woman) + 子 (child)</td>
+        <td style="padding: 10px;">A mother with her child = good</td>
+        <td style="padding: 10px;">good</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.5rem;">林</td>
+        <td style="padding: 10px;">木 (tree) + 木 (tree)</td>
+        <td style="padding: 10px;">Two trees = a grove/woods</td>
+        <td style="padding: 10px;">forest, grove</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.5rem;">忘</td>
+        <td style="padding: 10px;">亡 (gone) + 心 (heart)</td>
+        <td style="padding: 10px;">Something gone from the heart</td>
+        <td style="padding: 10px;">forget</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.5rem;">想</td>
+        <td style="padding: 10px;">相 (mutual) + 心 (heart)</td>
+        <td style="padding: 10px;">What the heart looks at mutually</td>
+        <td style="padding: 10px;">think, miss</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px; font-size: 1.5rem;">妈</td>
+        <td style="padding: 10px;">女 (woman) + 马 (mǎ — phonetic)</td>
+        <td style="padding: 10px;">女 = semantic (female), 马 = sound clue (mā)</td>
+        <td style="padding: 10px;">mother</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px; font-size: 1.5rem;">请</td>
+        <td style="padding: 10px;">讠(speech) + 青 (qīng — phonetic)</td>
+        <td style="padding: 10px;">讠= speech-related, 青 = sound clue (qǐng)</td>
+        <td style="padding: 10px;">please, invite</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Use our <a href="/chinese/tools/character-dictionary/">Character Dictionary</a> to look up the component breakdown of any character you encounter. Over time, you will start recognizing patterns — the 讠radical always means speech-related, 氵means water-related, 心/忄means heart/emotion-related.</p>
+
+  <h2 id="mnemonics">Strategy 4: Mnemonics and Visual Stories</h2>
+  <p>Your brain remembers <strong>vivid, unusual images</strong> far better than abstract symbol-meaning pairs. Creating personal mnemonics for difficult characters can cut your memorization time dramatically.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #f0f9ff; border: 2px solid #3b82f6; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #2563eb;">🖼️ Visual Mnemonics</strong>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">See the picture in the character:</p>
+      <ul style="padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>山 (shān)</strong> — looks like three mountain peaks</li>
+        <li><strong>门 (mén)</strong> — looks like a door frame</li>
+        <li><strong>雨 (yǔ)</strong> — raindrops falling from a cloud</li>
+        <li><strong>火 (huǒ)</strong> — a person with arms up, on fire</li>
+      </ul>
+    </div>
+    <div style="background: #fefce8; border: 2px solid #eab308; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #ca8a04;">📖 Story Mnemonics</strong>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">Create a mini-story for each character:</p>
+      <ul style="padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>安 (ān)</strong> — a woman (女) under a roof (宀) feels safe/peaceful</li>
+        <li><strong>家 (jiā)</strong> — a pig (豕) under a roof (宀) = home (ancient farm)</li>
+        <li><strong>男 (nán)</strong> — strength (力) in the field (田) = man</li>
+        <li><strong>花 (huā)</strong> — a person (化) who changes into grass (艹) = flower</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">🔗 Sound Mnemonics</strong>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">Link the sound to an English word:</p>
+      <ul style="padding-left: 1.2rem; font-size: 0.9rem;">
+        <li><strong>马 (mǎ)</strong> — "ma" sounds like "mare" (female horse)</li>
+        <li><strong>书 (shū)</strong> — "shoe" a book (sounds similar)</li>
+        <li><strong>猫 (māo)</strong> — a cat says "mao"</li>
+        <li><strong>谢 (xiè)</strong> — "shie-shie" sounds like a shy thank-you</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+    <strong>💡 Key Principle:</strong> The more <em>personal, absurd, and vivid</em> your mnemonic, the better it sticks. A boring connection ("大 means big") is weaker than a vivid one ("大 looks like a person stretching their arms wide, making themselves BIG").
+  </div>
+
+  <h2 id="active-recall">Strategy 5: Active Recall Testing</h2>
+  <p>Testing yourself is <strong>2–3× more effective</strong> than passively re-reading your notes. Every time you struggle to recall a word and then succeed, you strengthen that memory pathway far more than simply reading the answer.</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #059669; color: white;">
+        <th style="padding: 10px; text-align: left;">Method</th>
+        <th style="padding: 10px; text-align: left;">How to Do It</th>
+        <th style="padding: 10px; text-align: left;">Effectiveness</th>
+        <th style="padding: 10px; text-align: left;">When to Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Cover & Recall</strong></td>
+        <td style="padding: 10px;">Cover the English meaning, try to remember it from the character</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐</td>
+        <td style="padding: 10px;">Daily flashcard sessions</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Write from Sound</strong></td>
+        <td style="padding: 10px;">Hear the pinyin, write the character from memory</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+        <td style="padding: 10px;">After learning new characters</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Sentence Fill-in</strong></td>
+        <td style="padding: 10px;">Read a sentence with a blank and fill in the missing word</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+        <td style="padding: 10px;">Grammar + vocabulary together</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;"><strong>Self-Quiz</strong></td>
+        <td style="padding: 10px;">Give yourself the English meaning, produce the Chinese character + pinyin</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+        <td style="padding: 10px;">Weekly review sessions</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;"><strong>Teach Someone</strong></td>
+        <td style="padding: 10px;">Explain a word's meaning, usage, and components to another person</td>
+        <td style="padding: 10px;">⭐⭐⭐⭐⭐</td>
+        <td style="padding: 10px;">Study groups, language exchange</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Use our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> as a self-testing tool: browse the list, cover the English meanings, and test yourself on each word. Mark the ones you miss for extra review.</p>
+
+  <h2 id="daily-schedule">Building Your Daily Vocabulary Routine</h2>
+  <p>The five strategies above work best when combined into a daily routine. Here is a proven 30-minute vocabulary schedule:</p>
+
+  <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
+    <thead>
+      <tr style="background: #4f46e5; color: white;">
+        <th style="padding: 10px; text-align: left;">Time</th>
+        <th style="padding: 10px; text-align: left;">Activity</th>
+        <th style="padding: 10px; text-align: left;">Strategy Used</th>
+        <th style="padding: 10px; text-align: left;">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">0–5 min</td>
+        <td style="padding: 10px;"><strong>Review old words</strong></td>
+        <td style="padding: 10px;">Spaced repetition + Active recall</td>
+        <td style="padding: 10px;">Anki review — 20–30 due cards</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">5–15 min</td>
+        <td style="padding: 10px;"><strong>Learn new words</strong></td>
+        <td style="padding: 10px;">Context + Decomposition</td>
+        <td style="padding: 10px;">Study 8–12 new words in example sentences; break down components</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">15–20 min</td>
+        <td style="padding: 10px;"><strong>Create mnemonics</strong></td>
+        <td style="padding: 10px;">Mnemonics</td>
+        <td style="padding: 10px;">Write a vivid story or image for the 3 hardest new words</td>
+      </tr>
+      <tr style="background: #ffffff;">
+        <td style="padding: 10px;">20–25 min</td>
+        <td style="padding: 10px;"><strong>Write practice</strong></td>
+        <td style="padding: 10px;">Active recall</td>
+        <td style="padding: 10px;">Write new characters 3× each from memory (no peeking)</td>
+      </tr>
+      <tr style="background: #f8fafc;">
+        <td style="padding: 10px;">25–30 min</td>
+        <td style="padding: 10px;"><strong>Sentence creation</strong></td>
+        <td style="padding: 10px;">Context</td>
+        <td style="padding: 10px;">Write 3–5 sentences using today's new words</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+    <strong>📈 Expected Progress (10 new words/day):</strong>
+    <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+      <li><strong>Month 1:</strong> ~300 words → HSK 2 vocabulary complete</li>
+      <li><strong>Month 3:</strong> ~600 words → HSK 3 vocabulary complete</li>
+      <li><strong>Month 6:</strong> ~1,200 words → HSK 4 vocabulary complete</li>
+      <li><strong>Month 12:</strong> ~2,500 words → HSK 5 vocabulary complete</li>
+    </ul>
+  </div>
+
+  <h2 id="common-mistakes">Vocabulary Learning Mistakes to Avoid</h2>
+  <p>Even diligent learners fall into these traps. Recognizing and avoiding them will save you months of wasted effort:</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #dc2626;">❌ Mistakes</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li><strong>Cramming before exams</strong> — short-term memory fades fast</li>
+        <li><strong>Only passive review</strong> — re-reading without testing</li>
+        <li><strong>Ignoring tones</strong> — learning characters without pronunciation</li>
+        <li><strong>Studying words you do not need</strong> — rare words before common ones</li>
+        <li><strong>No example sentences</strong> — words without context are fragile</li>
+        <li><strong>Skipping review days</strong> — breaks in spaced repetition reset progress</li>
+      </ul>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 1rem; border-radius: 8px;">
+      <strong style="color: #16a34a;">✅ Better Habits</strong>
+      <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.95rem;">
+        <li><strong>Study daily</strong> — 15 min/day beats 2 hours on weekends</li>
+        <li><strong>Test yourself first</strong> — always try to recall before checking</li>
+        <li><strong>Learn pinyin with characters</strong> — pronunciation is part of the word</li>
+        <li><strong>Follow HSK level order</strong> — most frequent words first</li>
+        <li><strong>Use words in sentences</strong> — context creates lasting memories</li>
+        <li><strong>Never miss review</strong> — even 5 min on busy days counts</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Start building your vocabulary today with our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> and <a href="/chinese/tools/daily-character/">Daily Character tool</a>. For a broader study strategy, check out our <a href="/chinese/blog/hsk-preparation/">HSK Preparation Guide</a> and <a href="/chinese/blog/learn-chinese-apps-resources/">Best Chinese Learning Resources</a> for recommended apps and tools to support your vocabulary journey.</p>
 
 </BlogLayout>

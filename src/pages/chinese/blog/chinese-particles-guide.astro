@@ -1,28 +1,252 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `Why are Chinese particles so confusing?`, a: `Particles are small grammatical words that modify meaning in subtle ways. They have no direct English equivalent, which makes them feel abstract. The key is learning through example sentences rather than memorizing rules.` }];
-const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
-const headings = [{ depth: 2, slug: "le", text: "了 (le) — Completion and Change" }, { depth: 2, slug: "guo", text: "过 (guo) — Experience" }, { depth: 2, slug: "de", text: "的/地/得 — The Three De" }];
+const faq = [
+  { q: `Why are Chinese particles so confusing?`, a: `Particles are small grammatical words that modify meaning in subtle ways. They have no direct English equivalent, which makes them feel abstract. The key is learning through example sentences rather than memorizing rules — seeing particles in context builds natural intuition.` },
+  { q: `What is the difference between 了 after a verb and 了 at the end of a sentence?`, a: `了 after a verb (verb 了) indicates a completed action: 我吃了 (I ate). 了 at the end of a sentence (sentence 了) signals a change of state: 下雨了 (It started raining). Sometimes both appear in one sentence: 我吃了三碗饭了 (I've eaten three bowls of rice now).` },
+  { q: `How do I know when to use 的, 地, or 得?`, a: `Simple rule: 的 comes before nouns (modifier + 的 + noun), 地 comes before verbs (adverb + 地 + verb), 得 comes after verbs (verb + 得 + complement). In spoken Chinese, many native speakers use 的 for all three since they sound identical.` },
+  { q: `Is 着 the same as English -ing?`, a: `Not exactly. 着 indicates an ongoing state, not an ongoing action. 门开着 means "the door is open (in a state of being open)" not "the door is opening." For actions in progress, Chinese uses 在 + verb: 他在吃饭 (He is eating).` },
+  { q: `Do I need to use particles in every sentence?`, a: `No. Many Chinese sentences work perfectly without any particles. Beginners often overuse particles, especially 了. Let context guide you — add particles when they add meaning, not as a default habit. Native speakers omit particles frequently in casual speech.` }
+];
+const relatedTools = [
+  { name: "Character Counter", url: "/chinese/tools/character-counter/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "what-are-particles", text: "What Are Chinese Particles?" },
+  { depth: 2, slug: "le", text: "了 (le): Completion and Change" },
+  { depth: 2, slug: "guo", text: "过 (guo): Life Experience" },
+  { depth: 2, slug: "zhe", text: "着 (zhe): Ongoing State" },
+  { depth: 2, slug: "three-de", text: "的/地/得: The Three De" },
+  { depth: 2, slug: "modal-particles", text: "Modal Particles: 吗 吧 呢 啊" },
+  { depth: 2, slug: "comparison-chart", text: "Particle Comparison Chart" },
+  { depth: 2, slug: "common-mistakes", text: "Common Particle Mistakes" }
+];
 ---
 <BlogLayout
-  title="Understanding Chinese Particles: 了 过 着 的 地 得"
-  description="Demystify the most confusing aspect of Chinese grammar. Clear explanations of particles with examples."
+  title="Chinese Particles Explained: 了 过 着 的 地 得 吗 吧 呢"
+  description="Master the most confusing aspect of Chinese grammar. Clear explanations of every major particle with example sentences, comparison charts, and common mistakes to avoid."
   language="chinese"
   category="grammar"
-  tags={["grammar", "particles", "intermediate"]}
+  tags={["grammar", "particles", "intermediate", "le", "de"]}
   publishDate="2026-02-25"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="le">了 (le) — Completion and Change</h2>
-    <p>了 has two main uses. After a verb, it indicates completed action: 我吃了 (I ate / I have eaten). At the end of a sentence, it signals a change of state: 下雨了 (It started raining / It's raining now). Sometimes both uses overlap, making 了 one of the trickiest particles in Chinese.</p>
+  <div class="prose max-w-none">
 
-    <h2 id="guo">过 (guo) — Experience</h2>
-    <p>过 indicates that something has been experienced at some point: 我去过中国 (I have been to China before). It differs from 了 in that 了 focuses on a specific completed event, while 过 emphasizes the life experience. 我吃了寿司 (I ate sushi — specific event) vs 我吃过寿司 (I have eaten sushi before — experience).</p>
+    <p>If there is one topic that makes Chinese learners want to tear their hair out, it is <strong>particles</strong> (助词 zhùcí). These tiny, seemingly insignificant words — 了, 过, 着, 的, 地, 得, 吗, 吧, 呢, 啊 — carry enormous grammatical weight. They have no direct English equivalents, they are impossible to translate literally, and using them wrong can completely change your meaning.</p>
 
-    <h2 id="de">的/地/得 — The Three De</h2>
-    <p>All three are pronounced "de" but serve different functions. <strong>的</strong> connects modifiers to nouns: 红的花 (red flower). <strong>地</strong> connects adverbs to verbs: 快地跑 (run quickly). <strong>得</strong> connects verbs to complements: 跑得快 (runs fast). A simple trick: 的 before nouns, 地 before verbs, 得 after verbs.</p>
+    <p>But here is the secret: particles follow logical patterns. Once you understand the <strong>core function</strong> of each particle, the rest is just practice. This guide breaks down every major particle with clear rules, plenty of examples, and a comparison chart so you can finally stop guessing.</p>
+
+    <!-- What Are Particles -->
+    <h2 id="what-are-particles">What Are Chinese Particles?</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #eff6ff; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">⏰</div>
+        <strong>Aspect Particles</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">了 过 着<br/>Mark time/state of actions</p>
+      </div>
+      <div style="background: #fef3c7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">🔗</div>
+        <strong>Structural Particles</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">的 地 得<br/>Connect words grammatically</p>
+      </div>
+      <div style="background: #dcfce7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">💭</div>
+        <strong>Modal Particles</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">吗 吧 呢 啊<br/>Express mood and tone</p>
+      </div>
+    </div>
+
+    <p>Particles do not carry independent meaning — they modify the meaning of the words around them. Think of them as grammatical seasoning: they change the flavor of a sentence without being a main ingredient.</p>
+
+    <!-- 了 -->
+    <h2 id="le">了 (le): Completion and Change</h2>
+
+    <p>了 is the most used and most confusing particle in Chinese. It has <strong>two distinct functions</strong> depending on its position:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.8rem; color: #2563eb;">了₁: After the verb (Completion)</h3>
+        <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+          <tr><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">我<strong>吃了</strong>三个苹果。</td><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">I ate three apples.</td></tr>
+          <tr><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">他<strong>买了</strong>一本书。</td><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">He bought a book.</td></tr>
+          <tr><td style="padding: 6px;">我<strong>学了</strong>两年中文。</td><td style="padding: 6px;">I studied Chinese for two years.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: #555; margin: 0.5rem 0 0;">Marks that the action is <strong>completed</strong>. Often (but not always) translates to past tense.</p>
+      </div>
+      <div style="background: #fef3c7; border-left: 4px solid #eab308; border-radius: 8px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.8rem; color: #ca8a04;">了₂: End of sentence (Change of state)</h3>
+        <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+          <tr><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">下雨<strong>了</strong>。</td><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">It started raining. (wasn't raining before)</td></tr>
+          <tr><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">我饿<strong>了</strong>。</td><td style="padding: 6px; border-bottom: 1px solid #e2e8f0;">I'm hungry now. (wasn't before)</td></tr>
+          <tr><td style="padding: 6px;">他是大学生<strong>了</strong>。</td><td style="padding: 6px;">He's a college student now. (new status)</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: #555; margin: 0.5rem 0 0;">Signals a <strong>new situation</strong> — something has changed from the previous state.</p>
+      </div>
+    </div>
+
+    <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>⚠️ Common trap:</strong> 了 ≠ past tense. You can use 了 for future completed actions: 你<strong>吃了</strong>饭再走 (Eat first, then go — the eating hasn't happened yet). And you can describe past events without 了: 去年我每天跑步 (Last year I ran every day — habitual, no 了 needed).
+    </div>
+
+    <!-- 过 -->
+    <h2 id="guo">过 (guo): Life Experience</h2>
+
+    <p>过 marks that something has been <strong>experienced at some point in life</strong>. It focuses on whether the experience exists, not when it happened.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">With 过 (experience)</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">With 了 (specific event)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">我去<strong>过</strong>中国。(I've been to China before.)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我去<strong>了</strong>中国。(I went to China.)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">我吃<strong>过</strong>寿司。(I've eaten sushi before.)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我吃<strong>了</strong>寿司。(I ate sushi.)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">你看<strong>过</strong>这部电影吗？(Have you seen this movie?)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你看<strong>了</strong>这部电影吗？(Did you watch this movie?)</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Negative form:</strong> 没(有) + verb + 过: 我没去过日本 (I've never been to Japan).</p>
+
+    <!-- 着 -->
+    <h2 id="zhe">着 (zhe): Ongoing State</h2>
+
+    <p>着 indicates that an action's <strong>result continues</strong> — a state that persists. It is NOT the same as English "-ing" (progressive).</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">着 (ongoing state)</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">English</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">What it means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">门开<strong>着</strong>。</td><td style="padding: 10px; border: 1px solid #e2e8f0;">The door is open.</td><td style="padding: 10px; border: 1px solid #e2e8f0;">The door is in a state of being open</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">他穿<strong>着</strong>红色的衣服。</td><td style="padding: 10px; border: 1px solid #e2e8f0;">He is wearing red clothes.</td><td style="padding: 10px; border: 1px solid #e2e8f0;">The clothes are on him (state)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">墙上挂<strong>着</strong>一幅画。</td><td style="padding: 10px; border: 1px solid #e2e8f0;">A painting hangs on the wall.</td><td style="padding: 10px; border: 1px solid #e2e8f0;">The painting is in a state of hanging</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">她笑<strong>着</strong>说。</td><td style="padding: 10px; border: 1px solid #e2e8f0;">She said with a smile.</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Smiling while speaking (accompanying state)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Three De -->
+    <h2 id="three-de">的/地/得: The Three De</h2>
+
+    <p>All three are pronounced "de" but serve completely different grammatical functions. This is one of the most tested grammar points in Chinese exams.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #faf5ff;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Particle</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Function</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Formula</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong style="font-size: 1.3rem;">的</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Connects modifier → noun</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Adj/Noun + 的 + Noun</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">红<strong>的</strong>花 (red flower), 我<strong>的</strong>书 (my book), 漂亮<strong>的</strong>女孩 (pretty girl)</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong style="font-size: 1.3rem;">地</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Connects adverb → verb</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Adverb + 地 + Verb</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">快<strong>地</strong>跑 (run quickly), 认真<strong>地</strong>学 (study seriously), 高兴<strong>地</strong>说 (said happily)</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong style="font-size: 1.3rem;">得</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Connects verb → complement</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Verb + 得 + Complement</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">跑<strong>得</strong>快 (runs fast), 写<strong>得</strong>好 (writes well), 说<strong>得</strong>很流利 (speaks fluently)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; text-align: center;">
+      <p style="font-size: 1.1rem; font-weight: bold; margin: 0 0 0.5rem;">The Memory Trick</p>
+      <p style="font-size: 1rem; margin: 0;"><strong>的</strong> → before <strong>N</strong>ouns &nbsp;|&nbsp; <strong>地</strong> → before <strong>V</strong>erbs &nbsp;|&nbsp; <strong>得</strong> → after <strong>V</strong>erbs</p>
+    </div>
+
+    <!-- Modal Particles -->
+    <h2 id="modal-particles">Modal Particles: 吗 吧 呢 啊</h2>
+
+    <p>Modal particles sit at the end of sentences and express the speaker's attitude, mood, or intention. They are the emotional seasoning of Chinese:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Particle</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Function</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Examples</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Tone/Feeling</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>吗 (ma)</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Yes/No question</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你好吗？你吃了吗？</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Neutral, straightforward</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>吧 (ba)</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Suggestion / assumption</td><td style="padding: 10px; border: 1px solid #e2e8f0;">走吧！(Let's go!) 你是学生吧？(You're a student, right?)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Softening, suggesting, guessing</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>呢 (ne)</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Follow-up / "what about"</td><td style="padding: 10px; border: 1px solid #e2e8f0;">你呢？(And you?) 他呢？(What about him?)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Continuing a topic, expecting more</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>啊 (a)</strong></td><td style="padding: 10px; border: 1px solid #e2e8f0;">Exclamation / emphasis</td><td style="padding: 10px; border: 1px solid #e2e8f0;">太好了啊！(That's great!) 快来啊！(Come quick!)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Emotional, warm, emphatic</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Comparison Chart -->
+    <h2 id="comparison-chart">Particle Comparison Chart</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Particle</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Position</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Core Meaning</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Negative Form</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>了₁</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">After verb</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Action completed</td><td style="padding: 8px; border: 1px solid #e2e8f0;">没(有) + verb (drop 了)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>了₂</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">End of sentence</td><td style="padding: 8px; border: 1px solid #e2e8f0;">New situation / change</td><td style="padding: 8px; border: 1px solid #e2e8f0;">还没...呢</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>过</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">After verb</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Experience existed</td><td style="padding: 8px; border: 1px solid #e2e8f0;">没(有) + verb + 过</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>着</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">After verb</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Ongoing state</td><td style="padding: 8px; border: 1px solid #e2e8f0;">没 + verb + 着</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>的</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">Before noun</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Modifies noun</td><td style="padding: 8px; border: 1px solid #e2e8f0;">N/A</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>地</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">Before verb</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Adverb marker</td><td style="padding: 8px; border: 1px solid #e2e8f0;">N/A</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>得</strong></td><td style="padding: 8px; border: 1px solid #e2e8f0;">After verb</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Degree/result complement</td><td style="padding: 8px; border: 1px solid #e2e8f0;">verb + 得 + 不 + complement</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Common Mistakes -->
+    <h2 id="common-mistakes">Common Particle Mistakes</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1rem;">
+        <strong style="color: #dc2626;">❌ Overusing 了</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;"><s>昨天我去了学校了，上了课了，吃了饭了。</s><br/>✅ 昨天我去学校上课，然后吃了饭。<br/><em>Don't add 了 to every verb. Use it for the key completed action.</em></p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1rem;">
+        <strong style="color: #dc2626;">❌ Wrong 的/得 choice</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;"><s>他跑的很快。</s><br/>✅ 他跑<strong>得</strong>很快。<br/><em>After verbs, use 得 for degree/result, not 的.</em></p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1rem;">
+        <strong style="color: #dc2626;">❌ Mixing 了 and 过</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;"><s>你去了中国吗？</s> (asking about experience)<br/>✅ 你去<strong>过</strong>中国吗？<br/><em>Use 过 for "have you ever..." questions.</em></p>
+      </div>
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1rem;">
+        <strong style="color: #dc2626;">❌ 着 as progressive</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;"><s>他着看电视。</s><br/>✅ 他<strong>在</strong>看电视。(He is watching TV.)<br/><em>For actions in progress, use 在, not 着.</em></p>
+      </div>
+    </div>
+
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>✅ Best learning strategy:</strong> Do not try to memorize all particle rules at once. Focus on 了 first (it is the most common), then add 过, then the three 的s. Modal particles (吗, 吧, 呢) can be picked up naturally through conversation. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check character readings. For more grammar, see our guides on <a href="/chinese/blog/chinese-connectors-conjunctions/">connectors and conjunctions</a> and <a href="/chinese/blog/chinese-question-words/">question words</a>.
+    </div>
+
+  </div>
 
 </BlogLayout>

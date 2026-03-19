@@ -1,28 +1,241 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How do you say the days of the week in Chinese?`, a: `Monday through Saturday use 星期 (xīngqī) plus a number: 星期一 (Monday) through 星期六 (Saturday). Sunday is 星期天 or 星期日.` }];
-const relatedTools = [{ name: "Number Converter", url: "/chinese/tools/number-converter/" }];
-const headings = [{ depth: 2, slug: "clock", text: "Clock Time" }, { depth: 2, slug: "days", text: "Days and Weeks" }, { depth: 2, slug: "months", text: "Months and Years" }];
+const faq = [
+  { q: `How do you say the days of the week in Chinese?`, a: `Monday through Saturday use 星期 (xīngqī) plus a number: 星期一 (Monday) through 星期六 (Saturday). Sunday breaks the pattern: 星期天 or 星期日. You can also use 周 (zhōu) instead: 周一, 周二, etc.` },
+  { q: `How do Chinese months work?`, a: `Chinese months are beautifully logical: number + 月 (yuè). January is 一月, February is 二月, all the way to December (十二月). No random names to memorize like English.` },
+  { q: `What is the correct order for dates in Chinese?`, a: `Chinese dates go from largest to smallest: year + 月 month + 日 day. So March 15, 2026 is 2026年3月15日. This is the opposite of American English (month/day/year) but similar to international ISO format.` },
+  { q: `How do I say AM and PM in Chinese?`, a: `Use 上午 (shàngwǔ, morning/AM) and 下午 (xiàwǔ, afternoon/PM) before the time: 上午九点 (9 AM), 下午三点 (3 PM). For evening, use 晚上 (wǎnshang): 晚上八点 (8 PM).` },
+  { q: `What is the difference between 点 and 时?`, a: `Both mean "o'clock" but in different contexts. 点 (diǎn) is used in spoken Chinese: 三点 (3 o'clock). 时 (shí) is more formal and used in written contexts or official time: 15时 (15:00). For everyday conversation, always use 点.` }
+];
+const relatedTools = [
+  { name: "Number Converter", url: "/chinese/tools/number-converter/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "clock-time", text: "Clock Time: Hours and Minutes" },
+  { depth: 2, slug: "time-of-day", text: "Time of Day: Morning to Night" },
+  { depth: 2, slug: "days-weeks", text: "Days of the Week" },
+  { depth: 2, slug: "months-dates", text: "Months, Dates, and Years" },
+  { depth: 2, slug: "relative-time", text: "Relative Time: Yesterday, Today, Tomorrow" },
+  { depth: 2, slug: "duration", text: "Expressing Duration" },
+  { depth: 2, slug: "frequency", text: "Frequency Words" },
+  { depth: 2, slug: "time-sentence-position", text: "Where Time Goes in a Sentence" }
+];
 ---
 <BlogLayout
-  title="Telling Time in Chinese: Hours, Days, Months, and Seasons"
-  description="Learn how to express time in Chinese — from clock time and days of the week to months, seasons, and common time phrases."
+  title="Telling Time in Chinese: Complete Guide to Hours, Days, Months, and Seasons"
+  description="Learn every way to express time in Chinese — clock time, days of the week, months, dates, seasons, duration, and frequency. Includes time word placement rules."
   language="chinese"
   category="chinese-basics"
-  tags={["time", "beginner", "vocabulary"]}
+  tags={["time", "beginner", "vocabulary", "numbers", "dates"]}
   publishDate="2026-02-20"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="clock">Clock Time</h2>
-    <p>Chinese clock time uses <strong>点 (diǎn)</strong> for hours and <strong>分 (fēn)</strong> for minutes. Three o'clock is 三点 (sān diǎn). 3:30 is 三点半 (sān diǎn bàn, using 半 for half) or 三点三十分. A quarter is 刻 (kè), so 3:15 is 三点一刻.</p>
+  <div class="prose max-w-none">
 
-    <h2 id="days">Days and Weeks</h2>
-    <p>Days of the week follow an elegant number pattern. 星期一 (Monday, literally "week-one") through 星期六 (Saturday, "week-six"). Only Sunday breaks the pattern: 星期天 or 星期日. Today is 今天 (jīntiān), yesterday is 昨天 (zuótiān), tomorrow is 明天 (míngtiān).</p>
+    <p>Time expressions are some of the most practical vocabulary in any language. Whether you are making plans, catching a flight, or telling someone when to meet, you need to express time clearly. The good news? <strong>Chinese time expressions are incredibly logical</strong> — months are just numbers, days follow a pattern, and clock time uses a simple formula.</p>
 
-    <h2 id="months">Months and Years</h2>
-    <p>Months are simply number + 月: 一月 (January), 二月 (February), and so on through 十二月 (December). Years are read digit by digit: 2026 is 二零二六年. This system is remarkably logical compared to English month names. Try our <a href="/chinese/tools/number-converter/">Number Converter</a> to practice numbers.</p>
+    <p>This guide covers everything from telling the exact time to expressing duration, frequency, and relative time words. By the end, you will be able to handle any time-related conversation in Chinese.</p>
+
+    <!-- Clock Time -->
+    <h2 id="clock-time">Clock Time: Hours and Minutes</h2>
+
+    <p>Chinese clock time uses a simple formula: <strong>number + 点 (diǎn)</strong> for hours and <strong>number + 分 (fēn)</strong> for minutes.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Time</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Chinese</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3:00</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三点</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sān diǎn</td><td style="padding: 10px; border: 1px solid #e2e8f0;">点 = o'clock</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">3:15</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三点一刻 / 三点十五分</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sān diǎn yí kè</td><td style="padding: 10px; border: 1px solid #e2e8f0;">刻 = quarter</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3:30</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三点半</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sān diǎn bàn</td><td style="padding: 10px; border: 1px solid #e2e8f0;">半 = half</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">3:45</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三点三刻 / 三点四十五分</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sān diǎn sān kè</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三刻 = three quarters</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">3:05</td><td style="padding: 10px; border: 1px solid #e2e8f0;">三点零五分</td><td style="padding: 10px; border: 1px solid #e2e8f0;">sān diǎn líng wǔ fēn</td><td style="padding: 10px; border: 1px solid #e2e8f0;">零 fills the tens digit</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">12:00</td><td style="padding: 10px; border: 1px solid #e2e8f0;">十二点</td><td style="padding: 10px; border: 1px solid #e2e8f0;">shí'èr diǎn</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Noon or midnight (add context)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">2:58</td><td style="padding: 10px; border: 1px solid #e2e8f0;">差两分三点 / 两点五十八分</td><td style="padding: 10px; border: 1px solid #e2e8f0;">chà liǎng fēn sān diǎn</td><td style="padding: 10px; border: 1px solid #e2e8f0;">差 = lacking (two minutes to three)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Time of Day -->
+    <h2 id="time-of-day">Time of Day: Morning to Night</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fef3c7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Period</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Chinese</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Approximate Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Early morning</td><td style="padding: 10px; border: 1px solid #e2e8f0;">凌晨</td><td style="padding: 10px; border: 1px solid #e2e8f0;">língchén</td><td style="padding: 10px; border: 1px solid #e2e8f0;">12am - 5am</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Morning</td><td style="padding: 10px; border: 1px solid #e2e8f0;">早上 / 上午</td><td style="padding: 10px; border: 1px solid #e2e8f0;">zǎoshang / shàngwǔ</td><td style="padding: 10px; border: 1px solid #e2e8f0;">5am - 12pm</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Noon</td><td style="padding: 10px; border: 1px solid #e2e8f0;">中午</td><td style="padding: 10px; border: 1px solid #e2e8f0;">zhōngwǔ</td><td style="padding: 10px; border: 1px solid #e2e8f0;">11am - 1pm</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Afternoon</td><td style="padding: 10px; border: 1px solid #e2e8f0;">下午</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xiàwǔ</td><td style="padding: 10px; border: 1px solid #e2e8f0;">12pm - 6pm</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Evening</td><td style="padding: 10px; border: 1px solid #e2e8f0;">晚上</td><td style="padding: 10px; border: 1px solid #e2e8f0;">wǎnshang</td><td style="padding: 10px; border: 1px solid #e2e8f0;">6pm - 12am</td></tr>
+      </tbody>
+    </table>
+
+    <p>Place these <strong>before</strong> the clock time: 下午三点 (3 PM), 早上七点半 (7:30 AM), 晚上十一点 (11 PM).</p>
+
+    <!-- Days -->
+    <h2 id="days-weeks">Days of the Week</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dcfce7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Day</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">星期 version</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">周 version</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Pinyin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Monday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期一</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周一</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī yī / zhōu yī</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Tuesday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期二</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周二</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī èr / zhōu èr</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Wednesday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期三</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周三</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī sān / zhōu sān</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Thursday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期四</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周四</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī sì / zhōu sì</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Friday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期五</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周五</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī wǔ / zhōu wǔ</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Saturday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期六</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周六</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī liù / zhōu liù</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Sunday</td><td style="padding: 10px; border: 1px solid #e2e8f0;">星期天 / 星期日</td><td style="padding: 10px; border: 1px solid #e2e8f0;">周日</td><td style="padding: 10px; border: 1px solid #e2e8f0;">xīngqī tiān / zhōu rì</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Months and Dates -->
+    <h2 id="months-dates">Months, Dates, and Years</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #eff6ff; border-radius: 12px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.5rem;">Months: Number + 月</h3>
+        <table style="width:100%; border-collapse: collapse; font-size: 0.88rem;">
+          <tr><td style="padding: 4px;">一月 yīyuè</td><td style="padding: 4px;">January</td></tr>
+          <tr><td style="padding: 4px;">二月 èryuè</td><td style="padding: 4px;">February</td></tr>
+          <tr><td style="padding: 4px;">三月 sānyuè</td><td style="padding: 4px;">March</td></tr>
+          <tr><td style="padding: 4px;">...</td><td style="padding: 4px;">...</td></tr>
+          <tr><td style="padding: 4px;">十二月 shí'èryuè</td><td style="padding: 4px;">December</td></tr>
+        </table>
+      </div>
+      <div style="background: #fef3c7; border-radius: 12px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.5rem;">Dates: Number + 号/日</h3>
+        <table style="width:100%; border-collapse: collapse; font-size: 0.88rem;">
+          <tr><td style="padding: 4px;">1号 yī hào</td><td style="padding: 4px;">1st (spoken)</td></tr>
+          <tr><td style="padding: 4px;">1日 yī rì</td><td style="padding: 4px;">1st (written)</td></tr>
+          <tr><td style="padding: 4px;">15号 shíwǔ hào</td><td style="padding: 4px;">15th</td></tr>
+          <tr><td style="padding: 4px;">31号 sānshíyī hào</td><td style="padding: 4px;">31st</td></tr>
+        </table>
+      </div>
+      <div style="background: #dcfce7; border-radius: 12px; padding: 1.2rem;">
+        <h3 style="margin: 0 0 0.5rem;">Years: Digit by Digit + 年</h3>
+        <table style="width:100%; border-collapse: collapse; font-size: 0.88rem;">
+          <tr><td style="padding: 4px;">2026年</td><td style="padding: 4px;">èr líng èr liù nián</td></tr>
+          <tr><td style="padding: 4px;">2000年</td><td style="padding: 4px;">èr líng líng líng nián</td></tr>
+          <tr><td style="padding: 4px;">1999年</td><td style="padding: 4px;">yī jiǔ jiǔ jiǔ nián</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; text-align: center;">
+      <strong>Full Date Example</strong><br/>
+      <span style="font-size: 1.2rem;">2026年3月15日 星期六 下午三点半</span><br/>
+      <span style="font-size: 0.9rem; color: #666;">Saturday, March 15, 2026, 3:30 PM</span><br/>
+      <span style="font-size: 0.85rem; color: #888;">Order: Year → Month → Day → Day of week → Time of day → Clock time</span>
+    </div>
+
+    <!-- Relative Time -->
+    <h2 id="relative-time">Relative Time: Yesterday, Today, Tomorrow</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Past</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Present</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Future</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">前天 qiántiān (day before yesterday)</td><td style="padding: 10px; border: 1px solid #e2e8f0; font-weight: bold;">今天 jīntiān (today)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">后天 hòutiān (day after tomorrow)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">昨天 zuótiān (yesterday)</td><td style="padding: 10px; border: 1px solid #e2e8f0;"></td><td style="padding: 10px; border: 1px solid #e2e8f0;">明天 míngtiān (tomorrow)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">上个星期 (last week)</td><td style="padding: 10px; border: 1px solid #e2e8f0; font-weight: bold;">这个星期 (this week)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">下个星期 (next week)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">上个月 (last month)</td><td style="padding: 10px; border: 1px solid #e2e8f0; font-weight: bold;">这个月 (this month)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">下个月 (next month)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">去年 qùnián (last year)</td><td style="padding: 10px; border: 1px solid #e2e8f0; font-weight: bold;">今年 jīnnián (this year)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">明年 míngnián (next year)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Duration -->
+    <h2 id="duration">Expressing Duration</h2>
+
+    <p>Duration uses different words from clock time. Do not confuse 点/分 (clock time) with 小时/分钟 (duration):</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #faf5ff;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Duration</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Minutes</td><td style="padding: 10px; border: 1px solid #e2e8f0;">分钟 fēnzhōng</td><td style="padding: 10px; border: 1px solid #e2e8f0;">等了十分钟 (waited 10 minutes)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Hours</td><td style="padding: 10px; border: 1px solid #e2e8f0;">小时 xiǎoshí</td><td style="padding: 10px; border: 1px solid #e2e8f0;">学了两个小时 (studied for 2 hours)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Days</td><td style="padding: 10px; border: 1px solid #e2e8f0;">天 tiān</td><td style="padding: 10px; border: 1px solid #e2e8f0;">去了三天 (went for 3 days)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Weeks</td><td style="padding: 10px; border: 1px solid #e2e8f0;">个星期 gè xīngqī</td><td style="padding: 10px; border: 1px solid #e2e8f0;">住了两个星期 (stayed 2 weeks)</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Months</td><td style="padding: 10px; border: 1px solid #e2e8f0;">个月 gè yuè</td><td style="padding: 10px; border: 1px solid #e2e8f0;">学了六个月 (studied 6 months)</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Years</td><td style="padding: 10px; border: 1px solid #e2e8f0;">年 nián</td><td style="padding: 10px; border: 1px solid #e2e8f0;">工作了五年 (worked 5 years)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Frequency -->
+    <h2 id="frequency">Frequency Words</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Frequency</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Always</td><td style="padding: 10px; border: 1px solid #e2e8f0;">总是</td><td style="padding: 10px; border: 1px solid #e2e8f0;">zǒngshì</td><td style="padding: 10px; border: 1px solid #e2e8f0;">他总是迟到</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Often</td><td style="padding: 10px; border: 1px solid #e2e8f0;">经常 / 常常</td><td style="padding: 10px; border: 1px solid #e2e8f0;">jīngcháng</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我经常去那家餐厅</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Sometimes</td><td style="padding: 10px; border: 1px solid #e2e8f0;">有时候</td><td style="padding: 10px; border: 1px solid #e2e8f0;">yǒu shíhou</td><td style="padding: 10px; border: 1px solid #e2e8f0;">有时候我走路去</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Rarely</td><td style="padding: 10px; border: 1px solid #e2e8f0;">很少</td><td style="padding: 10px; border: 1px solid #e2e8f0;">hěn shǎo</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我很少喝酒</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">Never</td><td style="padding: 10px; border: 1px solid #e2e8f0;">从不 / 从来不</td><td style="padding: 10px; border: 1px solid #e2e8f0;">cóng bù</td><td style="padding: 10px; border: 1px solid #e2e8f0;">她从不吃辣</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid #e2e8f0;">Every day</td><td style="padding: 10px; border: 1px solid #e2e8f0;">每天</td><td style="padding: 10px; border: 1px solid #e2e8f0;">měi tiān</td><td style="padding: 10px; border: 1px solid #e2e8f0;">我每天学中文</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Time Placement -->
+    <h2 id="time-sentence-position">Where Time Goes in a Sentence</h2>
+
+    <p>In Chinese, time expressions go <strong>before the verb</strong>, either at the beginning of the sentence or right after the subject:</p>
+
+    <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+      <p style="font-size: 1rem; margin: 0 0 0.8rem;"><strong>Pattern:</strong> Subject + <span style="color: #2563eb; font-weight: bold;">Time</span> + Verb + Object</p>
+      <table style="width:100%; border-collapse: collapse; font-size: 0.92rem;">
+        <tr><td style="padding: 6px;">我 <strong style="color: #2563eb;">明天</strong> 去学校。</td><td style="padding: 6px;">I will go to school <strong>tomorrow</strong>.</td></tr>
+        <tr><td style="padding: 6px;">他 <strong style="color: #2563eb;">每天早上</strong> 跑步。</td><td style="padding: 6px;">He runs <strong>every morning</strong>.</td></tr>
+        <tr><td style="padding: 6px;"><strong style="color: #2563eb;">昨天下午</strong> 我去了超市。</td><td style="padding: 6px;"><strong>Yesterday afternoon</strong> I went to the supermarket.</td></tr>
+      </table>
+    </div>
+
+    <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>⚠️ Never at the end:</strong> Unlike English, you cannot put time at the end of a sentence in Chinese. <s>我去学校明天</s> is wrong. Time always comes before the action.
+    </div>
+
+    <p>Practice numbers with our <a href="/chinese/tools/number-converter/">Number Converter</a> and check pronunciation with the <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a>. For more foundational vocabulary, see our guides on <a href="/chinese/blog/chinese-question-words/">question words</a> and <a href="/chinese/blog/chinese-greetings/">Chinese greetings</a>.</p>
+
+  </div>
 
 </BlogLayout>

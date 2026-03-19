@@ -1,21 +1,413 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `What are the most important Chinese conjunctions?`, a: `The essential pairs: 因为...所以 (because...so), 虽然...但是 (although...but), 如果...就 (if...then), 不但...而且 (not only...but also).` }];
-const relatedTools = [{ name: "Character Counter", url: "/chinese/tools/character-counter/" }];
-const headings = [{ depth: 2, slug: "cause-effect", text: "Cause and Effect" }, { depth: 2, slug: "contrast", text: "Contrast" }, { depth: 2, slug: "condition", text: "Condition" }];
+const faq = [
+  { q: `What are the most important Chinese conjunctions to learn first?`, a: `Start with the four essential paired connectors: 因为...所以 (because...so), 虽然...但是 (although...but), 如果...就 (if...then), and 不但...而且 (not only...but also). These cover the majority of complex sentences in daily conversation.` },
+  { q: `Why do Chinese conjunctions come in pairs?`, a: `Chinese grammar favors balanced structures. Paired connectors clearly mark both halves of a complex sentence, making the logical relationship explicit. In casual speech, native speakers often drop one half of the pair (usually the first), but learners should practice using both for clarity.` },
+  { q: `Can I use only one half of a connector pair?`, a: `Yes, in many cases. For 因为...所以, you can drop either half: 因为下雨我不去 or 下雨所以我不去. For 虽然...但是, dropping 虽然 is common in casual speech. However, 如果...就 almost always keeps 就 even if 如果 is dropped.` },
+  { q: `What is the difference between 但是, 可是, and 不过?`, a: `All three mean "but/however." 但是 (dànshì) is the most common and neutral. 可是 (kěshì) is slightly more colloquial and emotional. 不过 (búguò) is the softest, meaning "however" or "it's just that." In formal writing, 但是 or 然而 (rán'ér) are preferred.` },
+  { q: `How many connectors do I need for HSK?`, a: `HSK 1-2 requires basic connectors like 和, 但是, 因为. HSK 3-4 adds paired connectors like 虽然...但是, 如果...就, 不但...而且. HSK 5-6 introduces formal and literary connectors like 尽管, 即使, 与其...不如. This guide covers all levels.` }
+];
+const relatedTools = [
+  { name: "Character Counter", url: "/chinese/tools/character-counter/" },
+  { name: "Pinyin Converter", url: "/chinese/tools/pinyin-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "why-connectors-matter", text: "Why Connectors Matter" },
+  { depth: 2, slug: "cause-effect", text: "Cause and Effect Connectors" },
+  { depth: 2, slug: "contrast", text: "Contrast and Concession" },
+  { depth: 2, slug: "condition", text: "Conditional Connectors" },
+  { depth: 2, slug: "addition", text: "Addition and Progression" },
+  { depth: 2, slug: "purpose-result", text: "Purpose and Result" },
+  { depth: 2, slug: "sequence-time", text: "Sequence and Time" },
+  { depth: 2, slug: "practice-sentences", text: "Practice Sentences" }
+];
 ---
 <BlogLayout
-  title="Chinese Connectors: Because, Although, If, and More"
-  description="Master Chinese conjunctions and connectors to form complex sentences. Essential for moving beyond beginner level."
+  title="Chinese Connectors and Conjunctions: Complete Guide to Complex Sentences"
+  description="Master 30+ Chinese conjunctions and connector pairs for cause-effect, contrast, conditions, and more. Includes example sentences with pinyin for every level."
   language="chinese"
   category="grammar"
-  tags={["grammar", "connectors", "intermediate", "sentence-structure"]}
+  tags={["grammar", "connectors", "intermediate", "sentence-structure", "conjunctions"]}
   publishDate="2026-02-28"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
-<h2 id="cause-effect">Cause and Effect</h2><p><strong>因为…所以… (yīnwèi…suǒyǐ…)</strong> Because…therefore… Example: 因为下雨，所以我不去 (Because it's raining, I'm not going). Note: in Chinese, you can use both halves of the pair or just one.</p>
-    <h2 id="contrast">Contrast</h2><p><strong>虽然…但是… (suīrán…dànshì…)</strong> Although…but… Example: 虽然很累，但是很开心 (Although tired, I'm happy). Unlike English, Chinese uses both "although" AND "but" in the same sentence.</p>
-    <h2 id="condition">Condition</h2><p><strong>如果…就… (rúguǒ…jiù…)</strong> If…then… Example: 如果明天不下雨，我就去 (If it doesn't rain tomorrow, I'll go). <strong>只要…就… (zhǐyào…jiù…)</strong> As long as…then… These connector pairs are key to expressing complex ideas in Chinese.</p>
+
+  <div class="prose max-w-none">
+
+    <p>Once you move beyond basic Chinese sentences, you need <strong>connectors</strong> (连词 liáncí) to link ideas together. These are the glue that turns simple statements into complex, nuanced thoughts. Without them, your Chinese sounds choppy and childish. With them, you sound like someone who actually thinks in Chinese.</p>
+
+    <p>Chinese connectors work differently from English ones. Many come in <strong>pairs</strong> — a unique feature that English lacks. This guide covers <strong>30+ essential connectors</strong> organized by function, with example sentences, pinyin, and usage notes for every one.</p>
+
+    <!-- Why Connectors Matter -->
+    <h2 id="why-connectors-matter">Why Connectors Matter</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0;">
+      <div style="background: #fef2f2; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #dc2626;">Without connectors:</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">下雨了。我不去了。他也不去。我们在家。(It rained. I'm not going. He's not going either. We're at home.)</p>
+      </div>
+      <div style="background: #f0fdf4; border-radius: 10px; padding: 1.2rem;">
+        <strong style="color: #16a34a;">With connectors:</strong>
+        <p style="font-size: 0.92rem; margin: 0.5rem 0 0;">因为下雨了，所以我不去了，而且他也不去，所以我们就在家。(Because it rained, I'm not going, and he's not going either, so we'll just stay home.)</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #eff6ff; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">🧩</div>
+        <strong>Paired Structure</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">Many connectors come in A...B pairs unique to Chinese</p>
+      </div>
+      <div style="background: #fef3c7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">📊</div>
+        <strong>HSK Essential</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">Tested at every HSK level from 2 through 6</p>
+      </div>
+      <div style="background: #dcfce7; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">💬</div>
+        <strong>Natural Speech</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">Connectors make you sound fluent and coherent</p>
+      </div>
+      <div style="background: #fce7f3; border-radius: 12px; padding: 1.2rem; text-align: center;">
+        <div style="font-size: 2rem;">✍️</div>
+        <strong>Writing Power</strong>
+        <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">Essential for essays, emails, and formal writing</p>
+      </div>
+    </div>
+
+    <!-- Cause and Effect -->
+    <h2 id="cause-effect">Cause and Effect Connectors</h2>
+
+    <p>These connectors express why something happened and what resulted from it:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fef2f2;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>因为...所以...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yīnwèi...suǒyǐ...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Because...therefore...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">因为下雨，所以我不去。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>由于</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yóuyú</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Due to / owing to (formal)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">由于天气原因，航班取消了。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>因此</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yīncǐ</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Therefore (formal)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他努力学习，因此考试通过了。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>既然...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">jìrán...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Since...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">既然你不想去，就别去了。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>💡 因为 vs 既然:</strong> 因为 explains a reason the listener may not know. 既然 refers to a fact both speakers already accept. "Since you're already here (既然你来了), let's eat together." You would not use 因为 here because the person's presence is obvious.
+    </div>
+
+    <!-- Contrast -->
+    <h2 id="contrast">Contrast and Concession</h2>
+
+    <p>These connectors express contradiction, unexpected results, or opposing ideas:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fefce8;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>虽然...但是...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">suīrán...dànshì...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Although...but...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">虽然很贵，但是质量好。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>可是</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">kěshì</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">But / however (colloquial)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">我想去，可是没时间。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>不过</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">búguò</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">However / it's just that</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">菜很好吃，不过有点辣。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>然而</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">rán'ér</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">However (formal/written)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他很努力，然而结果不理想。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>尽管...还是...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">jǐnguǎn...háishi...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Despite...still...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">尽管很难，他还是坚持了。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>即使...也...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">jíshǐ...yě...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Even if...still...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">即使下雨，我也要去。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>⚠️ English vs Chinese:</strong> In English, using "although" AND "but" in the same sentence is a grammar error. In Chinese, using 虽然 AND 但是 together is <em>correct and standard</em>. This is one of the biggest adjustment points for English speakers learning Chinese grammar.
+    </div>
+
+    <!-- Condition -->
+    <h2 id="condition">Conditional Connectors</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dcfce7;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>如果...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">rúguǒ...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">If...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">如果明天晴天，我就去公园。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>只要...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">zhǐyào...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">As long as...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">只要你努力，就能成功。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>除非...否则...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">chúfēi...fǒuzé...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Unless...otherwise...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">除非你道歉，否则我不原谅你。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>要是...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yàoshi...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">If...then... (casual)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">要是你不喜欢，就换一个。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>万一...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">wànyī...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">In case...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">万一迟到，就打电话。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 8px; padding: 1rem;">
+        <strong>如果 vs 要是</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">如果 is neutral/formal. 要是 is casual/spoken. Both mean "if" and pair with 就. Use 如果 in writing and 要是 with friends.</p>
+      </div>
+      <div style="background: #fef3c7; border-left: 4px solid #eab308; border-radius: 8px; padding: 1rem;">
+        <strong>只要 vs 只有</strong>
+        <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">只要 = "as long as" (any sufficient condition). 只有...才 = "only if" (the ONLY way). 只有你来，他才会开心 (Only if you come will he be happy).</p>
+      </div>
+    </div>
+
+    <!-- Addition -->
+    <h2 id="addition">Addition and Progression</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #dbeafe;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>不但...而且...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">búdàn...érqiě...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Not only...but also...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他不但会说中文，而且会说日语。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>而且</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">érqiě</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Moreover / and also</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">这个便宜，而且好吃。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>另外</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">lìngwài</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">In addition / besides</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">另外，我还有一个问题。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>越...越...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yuè...yuè...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">The more...the more...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">越学越有意思。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>不仅...还...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">bùjǐn...hái...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Not only...also...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他不仅聪明，还很努力。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>与其...不如...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yǔqí...bùrú...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Rather than...better to...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">与其抱怨，不如行动。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Purpose and Result -->
+    <h2 id="purpose-result">Purpose and Result</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #faf5ff;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>为了</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">wèile</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">In order to</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">为了健康，我每天运动。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>以便</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yǐbiàn</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">So that / in order to (formal)</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">请提前到达，以便安排座位。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>结果</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">jiéguǒ</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">As a result</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他没复习，结果考试没过。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>以免</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yǐmiǎn</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">In order to avoid</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">早点出发，以免迟到。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Sequence and Time -->
+    <h2 id="sequence-time">Sequence and Time</h2>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+      <thead>
+        <tr style="background: #fff7ed;">
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Connector</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Pinyin</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Meaning</th>
+          <th style="padding: 10px; border: 1px solid #e2e8f0; text-align: left;">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>先...再...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">xiān...zài...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">First...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">先吃饭，再做作业。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>先...然后...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">xiān...ránhòu...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">First...after that...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">先洗手，然后吃饭。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>一...就...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yī...jiù...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">As soon as...then...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">他一回家就睡觉了。</td>
+        </tr>
+        <tr style="background: #f8fafc;">
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>一边...一边...</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">yìbiān...yìbiān...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">While...at the same time...</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">一边听音乐，一边做饭。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>最后</strong></td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">zuìhòu</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">Finally / in the end</td>
+          <td style="padding: 10px; border: 1px solid #e2e8f0;">最后，我们决定在家吃。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Practice Sentences -->
+    <h2 id="practice-sentences">Practice Sentences</h2>
+
+    <p>Read these sentences aloud, paying attention to how each connector links the two halves of the sentence. Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to check pronunciation.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">#</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Chinese</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">Pattern</th>
+          <th style="padding: 8px; border: 1px solid #e2e8f0;">English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">1</td><td style="padding: 8px; border: 1px solid #e2e8f0;">因为太累了，所以我早睡了。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">因为...所以</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Because I was too tired, I went to bed early.</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">2</td><td style="padding: 8px; border: 1px solid #e2e8f0;">虽然他很忙，但是他还是来了。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">虽然...但是</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Although he was busy, he still came.</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">3</td><td style="padding: 8px; border: 1px solid #e2e8f0;">如果你有问题，就问我。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">如果...就</td><td style="padding: 8px; border: 1px solid #e2e8f0;">If you have questions, just ask me.</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">4</td><td style="padding: 8px; border: 1px solid #e2e8f0;">她不但漂亮，而且聪明。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">不但...而且</td><td style="padding: 8px; border: 1px solid #e2e8f0;">She is not only pretty but also smart.</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">5</td><td style="padding: 8px; border: 1px solid #e2e8f0;">只要你坚持，就一定能学会。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">只要...就</td><td style="padding: 8px; border: 1px solid #e2e8f0;">As long as you persist, you will definitely learn.</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">6</td><td style="padding: 8px; border: 1px solid #e2e8f0;">一到周末，他就去爬山。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">一...就</td><td style="padding: 8px; border: 1px solid #e2e8f0;">As soon as the weekend comes, he goes hiking.</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">7</td><td style="padding: 8px; border: 1px solid #e2e8f0;">既然你决定了，就不要后悔。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">既然...就</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Since you've decided, don't regret it.</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">8</td><td style="padding: 8px; border: 1px solid #e2e8f0;">即使失败了，也不要放弃。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">即使...也</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Even if you fail, don't give up.</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">9</td><td style="padding: 8px; border: 1px solid #e2e8f0;">中文越学越有趣。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">越...越</td><td style="padding: 8px; border: 1px solid #e2e8f0;">The more you study Chinese, the more interesting it gets.</td></tr>
+        <tr style="background: #f8fafc;"><td style="padding: 8px; border: 1px solid #e2e8f0;">10</td><td style="padding: 8px; border: 1px solid #e2e8f0;">与其浪费时间，不如多学一点。</td><td style="padding: 8px; border: 1px solid #e2e8f0;">与其...不如</td><td style="padding: 8px; border: 1px solid #e2e8f0;">Rather than waste time, better to learn a bit more.</td></tr>
+      </tbody>
+    </table>
+
+    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
+      <strong>✅ Learning strategy:</strong> Start by mastering the four essential pairs (因为...所以, 虽然...但是, 如果...就, 不但...而且). These cover 80% of complex sentences in daily conversation. Then gradually add connectors from other categories as your level increases. For more grammar topics, see our guides on <a href="/chinese/blog/chinese-particles-guide/">Chinese particles</a> and <a href="/chinese/blog/chinese-question-words/">question words</a>.
+    </div>
+
+  </div>
+
 </BlogLayout>
