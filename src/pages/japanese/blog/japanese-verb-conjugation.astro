@@ -1,33 +1,205 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How many verb groups are there in Japanese?`, a: `Three groups: Group 1 (godan/u-verbs ending in consonant+u), Group 2 (ichidan/ru-verbs ending in -iru or -eru), and Group 3 (irregular — only する and 来る).` }, { q: `What is the te-form used for?`, a: `Te-form is one of the most versatile forms, used for requests (食べてください), connecting actions (食べて飲んで), progressive tense (食べている), and giving/receiving (食べてあげる).` }];
-const relatedTools = [{ name: "Verb Conjugator", url: "/japanese/tools/verb-conjugator/" }];
-const headings = [{ depth: 2, slug: "three-groups", text: "The Three Verb Groups" }, { depth: 2, slug: "polite", text: "Polite Form (ます)" }, { depth: 2, slug: "te-form", text: "Te-Form" }, { depth: 2, slug: "past-negative", text: "Past and Negative" }];
+const faq = [
+  { q: `How many verb groups are there in Japanese?`, a: `Three groups: Group 1 (五段 godan / u-verbs) includes most verbs ending in a consonant+u sound. Group 2 (一段 ichidan / ru-verbs) includes verbs ending in -iru or -eru. Group 3 (irregular) has only two verbs: する (to do) and 来る (to come). About 75% of common verbs are Group 1, 20% Group 2, and 5% are する-compounds.` },
+  { q: `What is the te-form used for?`, a: `Te-form is arguably the most versatile conjugation in Japanese. It is used for: requests (食べてください — please eat), connecting sequential actions (食べて飲んで — eat and drink), progressive tense (食べている — is eating), permission (食べてもいい — may I eat), and giving/receiving favors (食べてあげる — eat for someone). Mastering te-form unlocks dozens of grammar patterns.` },
+  { q: `Should I learn polite form or casual form first?`, a: `Start with polite form (ます/です). It is appropriate in nearly all situations — with strangers, at work, in stores. Using casual form incorrectly can be rude. Once comfortable with polite form, learn casual form for conversations with friends. Most textbooks (Genki, Minna no Nihongo) teach polite form first for this reason.` },
+  { q: `How do I know if a verb is Group 1 or Group 2?`, a: `If the verb ends in -iru or -eru, it is likely Group 2 (食べる, 見る, 寝る). All other -u endings are Group 1 (飲む, 書く, 話す). However, some -iru/-eru verbs are actually Group 1 (帰る, 走る, 切る) — these exceptions must be memorized. When in doubt, check a dictionary or use our Verb Conjugator tool.` },
+  { q: `Is Japanese verb conjugation harder than other languages?`, a: `In some ways, Japanese is easier: verbs do not change based on the subject (I eat, you eat, he eats are all 食べる). There is no grammatical gender affecting verbs. The main challenge is the number of forms (polite, casual, te-form, potential, passive, causative) and the Group 1 consonant changes. With systematic study, most learners find it manageable within 3-6 months.` }
+];
+const relatedTools = [
+  { name: "Verb Conjugator", url: "/japanese/tools/verb-conjugator/" },
+  { name: "Particle Guide", url: "/japanese/tools/particle-guide/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "three-groups", text: "The Three Verb Groups Explained" },
+  { depth: 2, slug: "polite-form", text: "Polite Form (ます masu)" },
+  { depth: 2, slug: "negative", text: "Negative Form (ない nai)" },
+  { depth: 2, slug: "past-tense", text: "Past Tense (た ta / ました mashita)" },
+  { depth: 2, slug: "te-form", text: "Te-Form: The Swiss Army Knife of Japanese" },
+  { depth: 2, slug: "potential", text: "Potential Form: Expressing Ability" },
+  { depth: 2, slug: "conjugation-chart", text: "Complete Conjugation Chart" },
+  { depth: 2, slug: "practice", text: "Practice Strategy and Resources" }
+];
 ---
 <BlogLayout
-  title="Japanese Verb Conjugation: A Practical Guide"
-  description="Learn the three verb groups and essential conjugation forms. From dictionary form to polite, te-form, past, and negative."
+  title="Japanese Verb Conjugation: A Complete Practical Guide"
+  description="Master Japanese verb conjugation with clear explanations of all 3 verb groups, polite form, negative, past tense, te-form, and potential form. Includes complete conjugation chart and practice resources."
   language="japanese"
   category="grammar"
-  tags={["grammar", "verbs", "conjugation", "beginner"]}
+  tags={["grammar", "verbs", "conjugation", "beginner", "intermediate"]}
   publishDate="2026-02-21"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="three-groups">The Three Verb Groups</h2>
-    <p><strong>Group 1 (五段 godan):</strong> Verbs whose stems end in a consonant. Examples: 飲む (nomu, drink), 書く (kaku, write), 話す (hanasu, speak). These conjugate by changing the final vowel sound.</p>
-    <p><strong>Group 2 (一段 ichidan):</strong> Verbs ending in -iru or -eru. Examples: 食べる (taberu, eat), 見る (miru, see). These conjugate simply by dropping -ru and adding the conjugation ending.</p>
-    <p><strong>Group 3 (不規則 irregular):</strong> Only two verbs — する (suru, to do) and 来る (kuru, to come). These must be memorized individually.</p>
+    <p>Japanese verb conjugation is the engine of the language — every sentence needs at least one verb, and that verb's form tells you the tense, politeness level, and mood. The good news? Japanese verbs do <strong>not change based on the subject</strong> (no "I eat / he eats / they eat" distinction), and there are only <strong>two irregular verbs</strong> in the entire language. According to the Japan Foundation, verb conjugation is the grammar topic that most directly determines your JLPT passing score.</p>
 
-    <h2 id="polite">Polite Form (ます)</h2>
-    <p>The polite form is used in most social situations. Group 1: change the final -u to -imasu (飲む→飲みます). Group 2: drop -ru, add -masu (食べる→食べます). Irregular: する→します, 来る→来ます. Try our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> to see all forms.</p>
+    <h2 id="three-groups">The Three Verb Groups Explained</h2>
 
-    <h2 id="te-form">Te-Form</h2>
-    <p>Te-form is essential for making requests, connecting sentences, and forming progressive tense. Group 2 is easy: drop -ru, add -te (食べて). Group 1 follows patterns based on the ending consonant: -mu/-nu/-bu → -nde, -ku → -ite, -su → -shite, -u/-tsu/-ru → -tte. The irregular verbs: して, 来て.</p>
+    <div style="max-width:520px;margin:2rem auto;font-family:sans-serif">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <div style="flex:1;min-width:150px;border:2px solid #dc2626;border-radius:8px;padding:14px;text-align:center">
+          <div style="background:#dc2626;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;margin:-14px -14px 10px -14px;border-radius:6px 6px 0 0">Group 1 五段</div>
+          <div style="font-size:0.85rem;color:#666">~75% of verbs</div>
+          <div style="font-size:0.9rem;margin-top:6px">飲<strong>む</strong> · 書<strong>く</strong> · 話<strong>す</strong> · 買<strong>う</strong> · 待<strong>つ</strong></div>
+        </div>
+        <div style="flex:1;min-width:150px;border:2px solid #2563eb;border-radius:8px;padding:14px;text-align:center">
+          <div style="background:#2563eb;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;margin:-14px -14px 10px -14px;border-radius:6px 6px 0 0">Group 2 一段</div>
+          <div style="font-size:0.85rem;color:#666">~20% of verbs</div>
+          <div style="font-size:0.9rem;margin-top:6px">食べ<strong>る</strong> · 見<strong>る</strong> · 寝<strong>る</strong> · 起き<strong>る</strong></div>
+        </div>
+        <div style="flex:1;min-width:150px;border:2px solid #059669;border-radius:8px;padding:14px;text-align:center">
+          <div style="background:#059669;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;margin:-14px -14px 10px -14px;border-radius:6px 6px 0 0">Group 3 不規則</div>
+          <div style="font-size:0.85rem;color:#666">Only 2 verbs</div>
+          <div style="font-size:0.9rem;margin-top:6px"><strong>する</strong> (do) · <strong>来る</strong> (come)</div>
+        </div>
+      </div>
+    </div>
 
-    <h2 id="past-negative">Past and Negative</h2>
-    <p>Past tense follows the same consonant patterns as te-form but ends in -ta/-da instead. Negative form: Group 1 changes final -u to -anai (飲まない), Group 2 drops -ru and adds -nai (食べない). Irregular: しない, 来ない. Practice all conjugations with our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a>.</p>
+    <p><strong>Group 1 (五段 godan / u-verbs):</strong> The largest group. The dictionary form always ends in an -u sound (む, く, す, う, つ, ぬ, ぶ, ぐ, る). Conjugation works by changing the final vowel. Examples: 飲<strong>む</strong> (nomu, drink), 書<strong>く</strong> (kaku, write), 話<strong>す</strong> (hanasu, speak), 待<strong>つ</strong> (matsu, wait).</p>
+    <p><strong>Group 2 (一段 ichidan / ru-verbs):</strong> Verbs ending in -iru or -eru. Conjugation is simple: drop the final る and add the appropriate ending. Examples: 食べ<strong>る</strong> (taberu, eat), 見<strong>る</strong> (miru, see), 寝<strong>る</strong> (neru, sleep).</p>
+    <p><strong>Group 3 (不規則 irregular):</strong> Only する (suru, to do) and 来る (kuru, to come). する is especially important because it combines with nouns to create hundreds of compound verbs: 勉強する (study), 運動する (exercise), 料理する (cook).</p>
+    <p><strong>Tricky verbs:</strong> Some -iru/-eru verbs are actually Group 1: 帰る (kaeru, return), 走る (hashiru, run), 切る (kiru, cut), 入る (hairu, enter), 知る (shiru, know). These are common exceptions you must memorize.</p>
+
+    <h2 id="polite-form">Polite Form (ます masu)</h2>
+    <p>Polite form is used in most everyday situations and is the form most textbooks teach first:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#2563eb;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Group</th>
+          <th style="padding:10px 14px;text-align:left">Rule</th>
+          <th style="padding:10px 14px;text-align:left">Dictionary → Polite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px"><strong>Group 1</strong></td><td style="padding:8px 14px">Change final -u to -imasu</td><td style="padding:8px 14px">飲<strong>む</strong> → 飲<strong>みます</strong> · 書<strong>く</strong> → 書<strong>きます</strong> · 話<strong>す</strong> → 話<strong>します</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Group 2</strong></td><td style="padding:8px 14px">Drop -ru, add -masu</td><td style="padding:8px 14px">食べ<strong>る</strong> → 食べ<strong>ます</strong> · 見<strong>る</strong> → 見<strong>ます</strong></td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 14px"><strong>Group 3</strong></td><td style="padding:8px 14px">Memorize</td><td style="padding:8px 14px">する → <strong>します</strong> · 来る → <strong>来ます</strong> (きます)</td></tr>
+      </tbody>
+    </table>
+
+    <p>For Group 1, the key is the vowel change: む→み, く→き, す→し, う→い, つ→ち, ぬ→に, ぶ→び, ぐ→ぎ, る→り. This pattern (changing to the -i row) applies to several conjugation forms, so learning it once pays off multiple times.</p>
+
+    <h2 id="negative">Negative Form (ない nai)</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#dc2626;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Group</th>
+          <th style="padding:10px 14px;text-align:left">Rule</th>
+          <th style="padding:10px 14px;text-align:left">Dictionary → Negative</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px"><strong>Group 1</strong></td><td style="padding:8px 14px">Change final -u to -anai</td><td style="padding:8px 14px">飲<strong>む</strong> → 飲<strong>まない</strong> · 書<strong>く</strong> → 書<strong>かない</strong> · 話<strong>す</strong> → 話<strong>さない</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Group 1 (う)</strong></td><td style="padding:8px 14px">Special: う → わない</td><td style="padding:8px 14px">買<strong>う</strong> → 買<strong>わない</strong> (not 買あない)</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px"><strong>Group 2</strong></td><td style="padding:8px 14px">Drop -ru, add -nai</td><td style="padding:8px 14px">食べ<strong>る</strong> → 食べ<strong>ない</strong> · 見<strong>る</strong> → 見<strong>ない</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Group 3</strong></td><td style="padding:8px 14px">Memorize</td><td style="padding:8px 14px">する → <strong>しない</strong> · 来る → <strong>来ない</strong> (こない)</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:8px 14px"><strong>ある (special)</strong></td><td style="padding:8px 14px">Irregular negative</td><td style="padding:8px 14px">ある → <strong>ない</strong> (not あらない)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Watch out for two exceptions: verbs ending in う change to わない (not あない), and ある becomes ない (the only verb besides する/来る with an irregular form).</p>
+
+    <h2 id="past-tense">Past Tense (た ta / ました mashita)</h2>
+    <p>Polite past tense is simple: change ます to ました. 食べます → 食べました. 飲みます → 飲みました.</p>
+    <p>Casual past tense follows the same consonant change patterns as te-form (next section), but ends in た/だ instead of て/で:</p>
+
+    <div style="max-width:500px;margin:2rem auto">
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:100px;font-weight:bold">む/ぬ/ぶ</span><div style="display:inline-block;background:#dc2626;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ んだ</div><span style="margin-left:8px">飲む → 飲<strong>んだ</strong></span></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:100px;font-weight:bold">く</span><div style="display:inline-block;background:#ef4444;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ いた</div><span style="margin-left:8px">書く → 書<strong>いた</strong></span></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:100px;font-weight:bold">ぐ</span><div style="display:inline-block;background:#f87171;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ いだ</div><span style="margin-left:8px">泳ぐ → 泳<strong>いだ</strong></span></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:100px;font-weight:bold">す</span><div style="display:inline-block;background:#fca5a5;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">→ した</div><span style="margin-left:8px">話す → 話<strong>した</strong></span></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:100px;font-weight:bold">う/つ/る</span><div style="display:inline-block;background:#fecaca;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">→ った</div><span style="margin-left:8px">買う → 買<strong>った</strong></span></div>
+    </div>
+
+    <h2 id="te-form">Te-Form: The Swiss Army Knife of Japanese</h2>
+    <p>Te-form is the most versatile conjugation — it unlocks dozens of grammar patterns. The rules follow the same consonant changes as past tense, but ending in て/で instead of た/だ:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#7c3aed;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Ending</th>
+          <th style="padding:10px 14px;text-align:left">Te-form</th>
+          <th style="padding:10px 14px;text-align:left">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">む / ぬ / ぶ</td><td style="padding:8px 14px">→ んで</td><td style="padding:8px 14px">飲む → 飲<strong>んで</strong> · 死ぬ → 死<strong>んで</strong> · 遊ぶ → 遊<strong>んで</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">く</td><td style="padding:8px 14px">→ いて</td><td style="padding:8px 14px">書く → 書<strong>いて</strong> (exception: 行く → 行<strong>って</strong>)</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">ぐ</td><td style="padding:8px 14px">→ いで</td><td style="padding:8px 14px">泳ぐ → 泳<strong>いで</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">す</td><td style="padding:8px 14px">→ して</td><td style="padding:8px 14px">話す → 話<strong>して</strong></td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">う / つ / る</td><td style="padding:8px 14px">→ って</td><td style="padding:8px 14px">買う → 買<strong>って</strong> · 待つ → 待<strong>って</strong> · 帰る → 帰<strong>って</strong></td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">Group 2 (-ru)</td><td style="padding:8px 14px">→ drop る, add て</td><td style="padding:8px 14px">食べる → 食べ<strong>て</strong> · 見る → 見<strong>て</strong></td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">Group 3</td><td style="padding:8px 14px">Memorize</td><td style="padding:8px 14px">する → <strong>して</strong> · 来る → <strong>来て</strong> (きて)</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>What te-form enables:</strong></p>
+    <ul>
+      <li><strong>Requests:</strong> 食べて<strong>ください</strong> = Please eat</li>
+      <li><strong>Progressive:</strong> 食べて<strong>いる</strong> = Is eating (right now)</li>
+      <li><strong>Permission:</strong> 食べて<strong>もいい</strong> = May I eat?</li>
+      <li><strong>Prohibition:</strong> 食べて<strong>はいけない</strong> = Must not eat</li>
+      <li><strong>Sequence:</strong> 食べて飲んで寝る = Eat, drink, and sleep</li>
+    </ul>
+
+    <h2 id="potential">Potential Form: Expressing Ability</h2>
+    <p>Potential form expresses "can do" something:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#059669;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Group</th>
+          <th style="padding:10px 14px;text-align:left">Rule</th>
+          <th style="padding:10px 14px;text-align:left">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>Group 1</strong></td><td style="padding:8px 14px">Change -u to -eru</td><td style="padding:8px 14px">飲む → 飲<strong>める</strong> (can drink) · 書く → 書<strong>ける</strong> (can write)</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Group 2</strong></td><td style="padding:8px 14px">Drop -ru, add -rareru</td><td style="padding:8px 14px">食べる → 食べ<strong>られる</strong> (can eat) · 見る → 見<strong>られる</strong> (can see)</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>Group 3</strong></td><td style="padding:8px 14px">Memorize</td><td style="padding:8px 14px">する → <strong>できる</strong> · 来る → <strong>来られる</strong> (こられる)</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Note:</strong> In casual speech, Group 2 potential form often drops the ら: 食べられる → 食べれる (called "ra-nuki"). While technically non-standard, this is extremely common among younger speakers.</p>
+
+    <h2 id="conjugation-chart">Complete Conjugation Chart</h2>
+    <p>Here is a summary of all major forms for the three example verbs:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem">
+      <thead>
+        <tr style="background:#374151;color:#fff">
+          <th style="padding:8px 12px;text-align:left">Form</th>
+          <th style="padding:8px 12px;text-align:left">飲む (G1)</th>
+          <th style="padding:8px 12px;text-align:left">食べる (G2)</th>
+          <th style="padding:8px 12px;text-align:left">する (G3)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f9fafb"><td style="padding:6px 12px"><strong>Dictionary</strong></td><td style="padding:6px 12px">飲む</td><td style="padding:6px 12px">食べる</td><td style="padding:6px 12px">する</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px"><strong>Polite</strong></td><td style="padding:6px 12px">飲みます</td><td style="padding:6px 12px">食べます</td><td style="padding:6px 12px">します</td></tr>
+        <tr style="background:#f9fafb"><td style="padding:6px 12px"><strong>Negative</strong></td><td style="padding:6px 12px">飲まない</td><td style="padding:6px 12px">食べない</td><td style="padding:6px 12px">しない</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px"><strong>Past</strong></td><td style="padding:6px 12px">飲んだ</td><td style="padding:6px 12px">食べた</td><td style="padding:6px 12px">した</td></tr>
+        <tr style="background:#f9fafb"><td style="padding:6px 12px"><strong>Te-form</strong></td><td style="padding:6px 12px">飲んで</td><td style="padding:6px 12px">食べて</td><td style="padding:6px 12px">して</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px"><strong>Potential</strong></td><td style="padding:6px 12px">飲める</td><td style="padding:6px 12px">食べられる</td><td style="padding:6px 12px">できる</td></tr>
+        <tr style="background:#f9fafb"><td style="padding:6px 12px"><strong>Volitional</strong></td><td style="padding:6px 12px">飲もう</td><td style="padding:6px 12px">食べよう</td><td style="padding:6px 12px">しよう</td></tr>
+      </tbody>
+    </table>
+
+    <p>Use our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> to look up any verb's complete conjugation forms instantly.</p>
+
+    <h2 id="practice">Practice Strategy and Resources</h2>
+    <ul>
+      <li><strong>Conjugation drills:</strong> Our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> shows all forms for any verb — use it as both a reference and a self-test tool.</li>
+      <li><strong>Particles + verbs:</strong> Verbs work with <a href="/japanese/blog/japanese-particles-explained/">particles</a> — practice them together for natural sentences.</li>
+      <li><strong>Common verbs list:</strong> Start with our <a href="/japanese/blog/common-japanese-verbs/">50 most common verbs</a> and conjugate each one through all major forms.</li>
+      <li><strong>JLPT preparation:</strong> Verb conjugation is tested at every JLPT level. See our <a href="/japanese/blog/jlpt-preparation-guide/">JLPT study guide</a> for level-specific verb requirements.</li>
+    </ul>
+    <p>For comprehensive verb reference, see <a href="https://www.tofugu.com/japanese-grammar/verb-conjugation/" target="_blank" rel="noopener">Tofugu's conjugation guide</a> and <a href="https://jlptsensei.com/japanese-verb-conjugation-guide/" target="_blank" rel="noopener">JLPT Sensei's verb forms</a>. For the full list of irregular readings, check <a href="https://www.imabi.net/regularandirregularverbs.htm" target="_blank" rel="noopener">IMABI's verb classification</a>.</p>
 
 </BlogLayout>

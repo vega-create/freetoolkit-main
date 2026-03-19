@@ -1,38 +1,248 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Can I get by in Japan with just English?", "a": "In Tokyo and major tourist areas, many signs are in English. But outside cities, Japanese is essential. Even basic phrases dramatically improve your experience."}, {"q": "Should I learn to read Japanese before visiting?", "a": "Learning hiragana and katakana helps enormously with menus, signs, and station names. Even without kanji knowledge, kana opens up a lot."}, {"q": "What is the single most useful Japanese phrase?", "a": "すみません (sumimasen) — it works as excuse me, sorry, and thank you. You will use it dozens of times daily in Japan."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Name Generator", "url": "/japanese/tools/name-generator/"}];
-const headings = [{"depth": 2, "slug": "essential-10", "text": "10 Most Essential Phrases"}, {"depth": 2, "slug": "airport", "text": "Airport and Transportation"}, {"depth": 2, "slug": "hotel", "text": "Hotel Phrases"}, {"depth": 2, "slug": "restaurant", "text": "Restaurant Phrases"}, {"depth": 2, "slug": "shopping", "text": "Shopping Phrases"}, {"depth": 2, "slug": "emergency", "text": "Emergency Phrases"}];
+const faq = [
+  { q: `Can I get by in Japan with just English?`, a: `In major tourist areas like Tokyo, Osaka, and Kyoto, English signage is common and many service staff speak basic English. However, outside tourist zones, English is rare. Even basic Japanese phrases dramatically improve your experience and show cultural respect.` },
+  { q: `What is the single most useful Japanese phrase for tourists?`, a: `すみません (sumimasen) is arguably the most versatile phrase. It works as "excuse me" to get attention, "sorry" for minor apologies, and even "thank you" in casual situations. You will use it dozens of times daily in Japan.` },
+  { q: `Should I learn to read Japanese before visiting?`, a: `Learning hiragana and katakana (1-2 weeks each) is extremely helpful. Katakana lets you decode foreign loanwords on menus and signs. Many station names and restaurant menus include kana readings. Even without kanji, kana literacy opens up significantly more information.` },
+  { q: `Is it rude to use casual Japanese with strangers?`, a: `Yes, always use polite forms (です/ます) with strangers, service workers, and anyone older than you. Japanese culture places high value on appropriate formality. Using casual forms with strangers can come across as disrespectful, even if unintentional.` },
+  { q: `How do I handle ordering food if I cannot read the menu?`, a: `Point at menu items or food displays (many restaurants have realistic plastic food models). Say これをお願いします (kore wo onegai shimasu — "this one, please"). You can also say おすすめは何ですか (osusume wa nan desu ka — "what do you recommend?").` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Hiragana Chart", url: "/japanese/tools/hiragana-chart/" },
+  { name: "Katakana Quiz", url: "/japanese/tools/katakana-quiz/" },
+  { name: "Name Generator", url: "/japanese/tools/name-generator/" }
+];
+const headings = [
+  { depth: 2, slug: "essential-survival", text: "10 Survival Phrases You Must Know" },
+  { depth: 2, slug: "greetings-manners", text: "Greetings and Manners" },
+  { depth: 2, slug: "transportation", text: "Transportation and Directions" },
+  { depth: 2, slug: "hotel-accommodation", text: "Hotel and Accommodation" },
+  { depth: 2, slug: "restaurant-food", text: "Restaurant and Food Ordering" },
+  { depth: 2, slug: "shopping", text: "Shopping and Money" },
+  { depth: 2, slug: "emergency-help", text: "Emergency and Getting Help" },
+  { depth: 2, slug: "cultural-tips", text: "Cultural Tips for Communication" }
+];
 ---
 <BlogLayout
-  title="100 Basic Japanese Phrases for Travel: Survival Guide"
-  description="The essential Japanese phrase guide for traveling — airports, hotels, restaurants, shopping, and emergencies."
+  title="100+ Essential Japanese Phrases for Travel: Your Complete Survival Guide"
+  description="Master the Japanese phrases you actually need for travel — from airports to restaurants, hotels to emergencies. Pronunciation guide included for every phrase."
   language="japanese"
   category="culture"
-  tags={["vocabulary", "beginner", "travel"]}
+  tags={["vocabulary", "beginner", "travel", "culture"]}
   publishDate="2026-03-02"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="essential-10">10 Most Essential Phrases</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="airport">Airport and Transportation</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="hotel">Hotel Phrases</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="restaurant">Restaurant Phrases</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="shopping">Shopping Phrases</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="emergency">Emergency Phrases</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/name-generator/">Name Generator</a> to reinforce what you have learned.</p>
+  <h2 id="essential-survival">10 Survival Phrases You Must Know</h2>
+  <p>If you learn nothing else before your trip to Japan, memorize these ten phrases. They cover the most common situations every traveler faces and will solve 80% of your daily communication needs. Practice saying them aloud until they feel natural — pronunciation does not need to be perfect, but familiarity prevents panic in the moment.</p>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Japanese</th><th>Reading</th><th>Meaning</th><th>When to Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>すみません</td><td>sumimasen</td><td>Excuse me / Sorry</td><td>Getting attention, apologizing, thanking</td></tr>
+      <tr><td>2</td><td>ありがとうございます</td><td>arigatou gozaimasu</td><td>Thank you (polite)</td><td>After any service, help, or gift</td></tr>
+      <tr><td>3</td><td>お願いします</td><td>onegai shimasu</td><td>Please</td><td>Requesting anything, ordering food</td></tr>
+      <tr><td>4</td><td>はい / いいえ</td><td>hai / iie</td><td>Yes / No</td><td>Answering any question</td></tr>
+      <tr><td>5</td><td>これをください</td><td>kore wo kudasai</td><td>This one, please</td><td>Pointing at items, ordering</td></tr>
+      <tr><td>6</td><td>いくらですか？</td><td>ikura desu ka?</td><td>How much?</td><td>Shopping, checking prices</td></tr>
+      <tr><td>7</td><td>トイレはどこですか？</td><td>toire wa doko desu ka?</td><td>Where is the toilet?</td><td>Finding restrooms anywhere</td></tr>
+      <tr><td>8</td><td>英語を話せますか？</td><td>eigo wo hanasemasu ka?</td><td>Do you speak English?</td><td>When you need English help</td></tr>
+      <tr><td>9</td><td>大丈夫です</td><td>daijoubu desu</td><td>It's okay / I'm fine</td><td>Declining offers, reassuring</td></tr>
+      <tr><td>10</td><td>助けてください</td><td>tasukete kudasai</td><td>Please help me</td><td>Emergencies, urgent situations</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Phrase Usage Frequency Bar Chart -->
+  <div style="max-width: 550px; margin: 24px auto;">
+    <div style="font-weight: 700; margin-bottom: 12px; text-align: center; color: #333;">How Often You'll Use These Phrases (per day in Japan)</div>
+    <div style="display: flex; align-items: center; margin: 6px 0;">
+      <span style="width: 100px; font-size: 0.8rem; text-align: right; padding-right: 8px;">sumimasen</span>
+      <div style="background: #e91e63; height: 22px; border-radius: 3px; width: 100%; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: 0.75rem;">20-30 times</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 6px 0;">
+      <span style="width: 100px; font-size: 0.8rem; text-align: right; padding-right: 8px;">arigatou</span>
+      <div style="background: #e91e63; height: 22px; border-radius: 3px; width: 85%; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: 0.75rem;">15-25 times</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 6px 0;">
+      <span style="width: 100px; font-size: 0.8rem; text-align: right; padding-right: 8px;">onegai shimasu</span>
+      <div style="background: #e91e63; height: 22px; border-radius: 3px; width: 60%; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: 0.75rem;">10-15 times</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 6px 0;">
+      <span style="width: 100px; font-size: 0.8rem; text-align: right; padding-right: 8px;">hai / iie</span>
+      <div style="background: #e91e63; height: 22px; border-radius: 3px; width: 50%; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: 0.75rem;">8-12 times</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 6px 0;">
+      <span style="width: 100px; font-size: 0.8rem; text-align: right; padding-right: 8px;">ikura desu ka</span>
+      <div style="background: #e91e63; height: 22px; border-radius: 3px; width: 30%; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: 0.75rem;">5-8 times</div>
+    </div>
+  </div>
+
+  <h2 id="greetings-manners">Greetings and Manners</h2>
+  <p>Japanese greetings follow strict rules based on time of day and social context. Using the correct greeting shows cultural awareness and immediately creates a positive impression. Japanese people are genuinely delighted when foreigners use proper greetings — it signals respect for their culture.</p>
+
+  <table>
+    <thead>
+      <tr><th>Situation</th><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Morning (until ~10am)</td><td>おはようございます</td><td>ohayou gozaimasu</td><td>Good morning (polite)</td></tr>
+      <tr><td>Daytime</td><td>こんにちは</td><td>konnichiwa</td><td>Good afternoon / Hello</td></tr>
+      <tr><td>Evening</td><td>こんばんは</td><td>konbanwa</td><td>Good evening</td></tr>
+      <tr><td>Entering a shop</td><td>いらっしゃいませ</td><td>irasshaimase</td><td>(Staff says this — no reply needed)</td></tr>
+      <tr><td>Leaving</td><td>失礼します</td><td>shitsurei shimasu</td><td>Excuse me (leaving politely)</td></tr>
+      <tr><td>Before eating</td><td>いただきます</td><td>itadakimasu</td><td>Thank you for the food</td></tr>
+      <tr><td>After eating</td><td>ごちそうさまでした</td><td>gochisousama deshita</td><td>Thank you for the meal</td></tr>
+      <tr><td>Apologizing</td><td>申し訳ございません</td><td>moushiwake gozaimasen</td><td>I'm very sorry (formal)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Two phrases deserve special attention: <strong>いただきます</strong> (itadakimasu) is said before every meal, hands pressed together. It expresses gratitude to everyone involved in preparing the food. <strong>ごちそうさまでした</strong> (gochisousama deshita) is said after finishing. Saying these phrases in restaurants will earn you genuine smiles from staff.</p>
+
+  <h2 id="transportation">Transportation and Directions</h2>
+  <p>Japan's transportation system is world-class but can be overwhelming for first-time visitors. Trains, subways, and buses run with legendary punctuality, and station announcements are often in both Japanese and English. These phrases help you navigate with confidence when English announcements are not available.</p>
+
+  <table>
+    <thead>
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>＿＿駅はどこですか？</td><td>__ eki wa doko desu ka?</td><td>Where is __ station?</td></tr>
+      <tr><td>切符をください</td><td>kippu wo kudasai</td><td>A ticket, please</td></tr>
+      <tr><td>＿＿まで行きたいです</td><td>__ made ikitai desu</td><td>I want to go to __</td></tr>
+      <tr><td>次の電車は何時ですか？</td><td>tsugi no densha wa nanji desu ka?</td><td>When is the next train?</td></tr>
+      <tr><td>乗り換えはありますか？</td><td>norikae wa arimasu ka?</td><td>Do I need to transfer?</td></tr>
+      <tr><td>右 / 左 / まっすぐ</td><td>migi / hidari / massugu</td><td>Right / Left / Straight ahead</td></tr>
+      <tr><td>タクシーを呼んでください</td><td>takushii wo yonde kudasai</td><td>Please call a taxi</td></tr>
+      <tr><td>ここで降ります</td><td>koko de orimasu</td><td>I'll get off here</td></tr>
+      <tr><td>空港までお願いします</td><td>kuukou made onegai shimasu</td><td>To the airport, please</td></tr>
+    </tbody>
+  </table>
+
+  <p>Pro tip: When asking for directions, Japanese people often physically walk you to your destination rather than explaining the route verbally. If someone starts walking, they are guiding you — follow them and thank them warmly when you arrive. This incredible helpfulness is a hallmark of Japanese hospitality.</p>
+
+  <h2 id="hotel-accommodation">Hotel and Accommodation</h2>
+  <p>Whether you are staying at a luxury hotel, a traditional ryokan (Japanese inn), or a budget hostel, these phrases cover check-in, requests, and common situations. Japanese hotel staff are extremely accommodating, and even a small effort to speak Japanese is deeply appreciated.</p>
+
+  <table>
+    <thead>
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>予約があります</td><td>yoyaku ga arimasu</td><td>I have a reservation</td></tr>
+      <tr><td>チェックインお願いします</td><td>chekkuin onegai shimasu</td><td>Check-in, please</td></tr>
+      <tr><td>チェックアウトは何時ですか？</td><td>chekkuauto wa nanji desu ka?</td><td>What time is checkout?</td></tr>
+      <tr><td>Wi-Fiのパスワードは？</td><td>waifai no pasuwaado wa?</td><td>What is the Wi-Fi password?</td></tr>
+      <tr><td>タオルをもう一枚ください</td><td>taoru wo mou ichimai kudasai</td><td>One more towel, please</td></tr>
+      <tr><td>荷物を預かってもらえますか？</td><td>nimotsu wo azukatte moraemasu ka?</td><td>Can you keep my luggage?</td></tr>
+      <tr><td>朝食は何時からですか？</td><td>choushoku wa nanji kara desu ka?</td><td>What time does breakfast start?</td></tr>
+      <tr><td>部屋を変えてもらえますか？</td><td>heya wo kaete moraemasu ka?</td><td>Can I change rooms?</td></tr>
+      <tr><td>近くにコンビニはありますか？</td><td>chikaku ni konbini wa arimasu ka?</td><td>Is there a convenience store nearby?</td></tr>
+    </tbody>
+  </table>
+
+  <p>At traditional ryokan, you may encounter unique experiences like communal baths (温泉, onsen) and futon bedding. The phrase <strong>お風呂は何時まで入れますか？</strong> (ofuro wa nanji made hairemasu ka? — Until what time can I use the bath?) is essential for onsen etiquette.</p>
+
+  <h2 id="restaurant-food">Restaurant and Food Ordering</h2>
+  <p>Eating in Japan is one of the great travel experiences. From tiny ramen shops to multi-course kaiseki dinners, these phrases help you navigate any dining situation. Many restaurants have picture menus or plastic food displays, so pointing combined with basic phrases works perfectly.</p>
+
+  <table>
+    <thead>
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>二人です</td><td>futari desu</td><td>Two people (for seating)</td></tr>
+      <tr><td>メニューをお願いします</td><td>menyuu wo onegai shimasu</td><td>Menu, please</td></tr>
+      <tr><td>おすすめは何ですか？</td><td>osusume wa nan desu ka?</td><td>What do you recommend?</td></tr>
+      <tr><td>これは何ですか？</td><td>kore wa nan desu ka?</td><td>What is this?</td></tr>
+      <tr><td>＿＿アレルギーがあります</td><td>__ arerugii ga arimasu</td><td>I have a __ allergy</td></tr>
+      <tr><td>お水をください</td><td>omizu wo kudasai</td><td>Water, please</td></tr>
+      <tr><td>お会計お願いします</td><td>okaikei onegai shimasu</td><td>Check, please</td></tr>
+      <tr><td>クレジットカードは使えますか？</td><td>kurejitto kaado wa tsukaemasu ka?</td><td>Can I use a credit card?</td></tr>
+      <tr><td>とても美味しかったです</td><td>totemo oishikatta desu</td><td>It was very delicious</td></tr>
+      <tr><td>持ち帰りできますか？</td><td>mochikaeri dekimasu ka?</td><td>Can I take it to go?</td></tr>
+    </tbody>
+  </table>
+
+  <p>Important cultural note: <strong>tipping does not exist in Japan</strong>. Leaving money on the table may confuse or even offend staff. The best compliment is telling the chef 美味しかったです (oishikatta desu — it was delicious). For allergy communication, common terms include: 卵 (tamago — egg), 牛乳 (gyuunyuu — milk), 小麦 (komugi — wheat), えび (ebi — shrimp), ピーナッツ (piinattsu — peanuts).</p>
+
+  <h2 id="shopping">Shopping and Money</h2>
+  <p>Japan is a shopper's paradise, from 100-yen shops (like Daiso) to luxury department stores. Tax-free shopping is available for tourists on purchases over 5,000 yen at participating stores — look for the "Tax Free" signs and bring your passport.</p>
+
+  <table>
+    <thead>
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>見ているだけです</td><td>mite iru dake desu</td><td>Just looking</td></tr>
+      <tr><td>試着できますか？</td><td>shichaku dekimasu ka?</td><td>Can I try this on?</td></tr>
+      <tr><td>もっと小さいのはありますか？</td><td>motto chiisai no wa arimasu ka?</td><td>Do you have a smaller one?</td></tr>
+      <tr><td>免税できますか？</td><td>menzei dekimasu ka?</td><td>Is tax-free available?</td></tr>
+      <tr><td>袋をお願いします</td><td>fukuro wo onegai shimasu</td><td>A bag, please</td></tr>
+      <tr><td>現金のみですか？</td><td>genkin nomi desu ka?</td><td>Cash only?</td></tr>
+      <tr><td>レシートをください</td><td>reshiito wo kudasai</td><td>Receipt, please</td></tr>
+      <tr><td>これをもう一つください</td><td>kore wo mou hitotsu kudasai</td><td>One more of this, please</td></tr>
+    </tbody>
+  </table>
+
+  <p>Japan is still a heavily cash-based society, especially at smaller shops, restaurants, and vending machines. Always carry 10,000-20,000 yen in cash. Major convenience stores (7-Eleven, Lawson, FamilyMart) have international ATMs that accept foreign cards. IC cards like Suica and Pasmo work for trains and many small purchases.</p>
+
+  <h2 id="emergency-help">Emergency and Getting Help</h2>
+  <p>Japan is one of the safest countries in the world, but emergencies can happen anywhere. These phrases could be critical in urgent situations. The emergency number in Japan is <strong>110</strong> for police and <strong>119</strong> for fire and ambulance.</p>
+
+  <table>
+    <thead>
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>助けて！</td><td>tasukete!</td><td>Help!</td></tr>
+      <tr><td>警察を呼んでください</td><td>keisatsu wo yonde kudasai</td><td>Please call the police</td></tr>
+      <tr><td>救急車を呼んでください</td><td>kyuukyuusha wo yonde kudasai</td><td>Please call an ambulance</td></tr>
+      <tr><td>病院に行きたいです</td><td>byouin ni ikitai desu</td><td>I want to go to a hospital</td></tr>
+      <tr><td>パスポートをなくしました</td><td>pasupooto wo nakushimashita</td><td>I lost my passport</td></tr>
+      <tr><td>気分が悪いです</td><td>kibun ga warui desu</td><td>I feel sick</td></tr>
+      <tr><td>薬局はどこですか？</td><td>yakkyoku wa doko desu ka?</td><td>Where is the pharmacy?</td></tr>
+      <tr><td>大使館に連絡してください</td><td>taishikan ni renraku shite kudasai</td><td>Please contact the embassy</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Emergency Quick Reference Card -->
+  <div style="background: #ffebee; border: 2px solid #c62828; border-radius: 10px; padding: 20px; margin: 24px 0;">
+    <div style="font-weight: 700; font-size: 1.1rem; color: #c62828; margin-bottom: 12px; text-align: center;">Emergency Quick Reference</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: 700; color: #c62828;">110</div>
+        <div style="font-size: 0.85rem;">Police (警察)</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: 700; color: #c62828;">119</div>
+        <div style="font-size: 0.85rem;">Fire & Ambulance (消防・救急)</div>
+      </div>
+    </div>
+    <div style="font-size: 0.85rem; color: #555; text-align: center; margin-top: 12px;">Tourist Helpline: 050-3816-2787 (English available 24/7)</div>
+  </div>
+
+  <p>For non-emergency medical issues, Japanese pharmacies (薬局, yakkyoku) can recommend over-the-counter medications. Chain drugstores like Matsumoto Kiyoshi and Welcia have staff who may speak some English. Describing symptoms with simple phrases and gestures usually works: 頭が痛いです (atama ga itai desu — I have a headache), お腹が痛いです (onaka ga itai desu — my stomach hurts).</p>
+
+  <h2 id="cultural-tips">Cultural Tips for Communication</h2>
+  <p>Knowing phrases is only half the equation — understanding Japanese communication culture ensures your words land correctly. These cultural insights prevent common misunderstandings that phrasebooks do not cover.</p>
+
+  <h3>The Art of Indirectness</h3>
+  <p>Japanese communication tends to be indirect. When someone says ちょっと... (chotto... — "a little...") and trails off, they usually mean "no" or "that's difficult." Saying no directly is considered impolite in many situations. Similarly, 考えておきます (kangaete okimasu — "I'll think about it") often means "probably no." Understanding these indirect signals prevents confusion and shows cultural sophistication.</p>
+
+  <h3>Body Language Matters</h3>
+  <ul>
+    <li><strong>Bowing:</strong> A slight nod (15 degrees) works for casual greetings. A deeper bow (30 degrees) shows respect. You do not need to bow as deeply as Japanese people — any bow is appreciated from a foreigner.</li>
+    <li><strong>Volume:</strong> Japanese public spaces are notably quiet. Keep your voice low on trains, in restaurants, and especially in temples and shrines.</li>
+    <li><strong>Pointing:</strong> Point with your whole hand (palm up) rather than a single finger. Pointing at people is considered rude.</li>
+    <li><strong>Shoes:</strong> Remove shoes when entering homes, ryokan, some restaurants, and temple interiors. Look for a shoe rack or genkan (entryway step) as signals.</li>
+  </ul>
+
+  <h3>Start Practicing Today</h3>
+  <p>The best way to prepare for travel in Japan is to start practicing these phrases now. Use our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> to learn reading basics, practice with the <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> to decode loanwords you will see everywhere, and explore the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool for systematic word building. Read our guide on <a href="/japanese/blog/hiragana-guide/">mastering hiragana</a> for the fastest path to basic literacy, and check out <a href="/japanese/blog/japanese-particles-explained/">Japanese particles explained</a> to understand how these phrases are constructed. Even 15 minutes of daily practice for two weeks before your trip will transform your travel experience.</p>
 
 </BlogLayout>

@@ -1,38 +1,228 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "What is jikoshoukai?", "a": "自己紹介 (jikoshoukai) means self-introduction. It is a common practice in Japan when meeting new people, joining a class, or starting a new job."}, {"q": "How long should my self-introduction be?", "a": "Casual: 2-3 sentences. Formal: 4-5 sentences. Business: 30-60 seconds covering name, company, role, and a personal touch."}, {"q": "Should I use my real name or a Japanese name?", "a": "Use your real name — Japanese people expect foreigners to have foreign names. Say it slowly and clearly."}];
-const relatedTools = [{"name": "Name Generator", "url": "/japanese/tools/name-generator/"}, {"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "what-is", "text": "What is Jikoshoukai?"}, {"depth": 2, "slug": "casual", "text": "Casual Introduction"}, {"depth": 2, "slug": "formal", "text": "Formal Introduction"}, {"depth": 2, "slug": "business", "text": "Business Introduction"}, {"depth": 2, "slug": "templates", "text": "Templates You Can Use"}, {"depth": 2, "slug": "tips", "text": "Pronunciation Tips"}];
+const faq = [
+  { q: `What is jikoshoukai?`, a: `自己紹介 (jikoshoukai) means self-introduction. It is a structured practice in Japan used when meeting new people, joining a class, starting a job, or entering any new social group. Japanese self-introductions follow predictable patterns that vary by formality level.` },
+  { q: `How long should a Japanese self-introduction be?`, a: `Casual: 2-3 sentences (10-15 seconds). Formal: 4-5 sentences (20-30 seconds). Business: 30-60 seconds covering name, company, role, and a personal touch. School: 30-45 seconds with name, hometown, hobby, and a closing phrase.` },
+  { q: `Should I use my real name or create a Japanese name?`, a: `Use your real name. Japanese people expect foreigners to have foreign names. Say your name slowly and clearly, and consider adding the katakana version for clarity. You can use our Name Generator tool to find the katakana spelling of your name.` },
+  { q: `Do I need to bow during a self-introduction?`, a: `Yes, a brief bow (about 15-30 degrees) at the beginning and end of your introduction is appropriate. In business settings, bow at the start while saying your name. For casual settings, a slight nod works fine. The depth and duration of the bow reflects the formality level.` },
+  { q: `What should I NOT say in a Japanese self-introduction?`, a: `Avoid controversial topics like politics, religion, salary, and age. Do not boast about achievements — humility is valued. Do not use casual language (タメ口) with people you just met. Avoid oversharing personal problems. Keep it positive and pleasant.` }
+];
+const relatedTools = [
+  { name: "Name Generator", url: "/japanese/tools/name-generator/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Hiragana Chart", url: "/japanese/tools/hiragana-chart/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "what-is-jikoshoukai", text: "What Is Jikoshoukai?" },
+  { depth: 2, slug: "essential-phrases", text: "Essential Self-Introduction Phrases" },
+  { depth: 2, slug: "casual-introduction", text: "Casual Self-Introduction" },
+  { depth: 2, slug: "formal-introduction", text: "Formal Self-Introduction" },
+  { depth: 2, slug: "business-introduction", text: "Business Self-Introduction" },
+  { depth: 2, slug: "school-introduction", text: "School and Class Introduction" },
+  { depth: 2, slug: "useful-topics", text: "Topics to Include in Your Introduction" },
+  { depth: 2, slug: "practice-templates", text: "Ready-to-Use Templates" }
+];
 ---
 <BlogLayout
-  title="How to Introduce Yourself in Japanese: Complete Guide"
-  description="Give a perfect Japanese self-introduction for casual, formal, and business settings with templates."
+  title="How to Introduce Yourself in Japanese: Complete Guide for Every Situation"
+  description="Master Japanese self-introduction (jikoshoukai) for casual, formal, business, and school settings with templates, example phrases, and cultural tips."
   language="japanese"
   category="culture"
-  tags={["culture", "vocabulary", "beginner"]}
+  tags={["culture", "vocabulary", "beginner", "grammar"]}
   publishDate="2026-03-01"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="what-is">What is Jikoshoukai?</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="casual">Casual Introduction</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="formal">Formal Introduction</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="business">Business Introduction</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="templates">Templates You Can Use</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="tips">Pronunciation Tips</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/name-generator/">Name Generator</a> and <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <h2 id="what-is-jikoshoukai">What Is Jikoshoukai?</h2>
+  <p>自己紹介 (jikoshoukai) — literally "self-introduction" — is one of the most important social rituals in Japan. Unlike Western cultures where introductions are often casual and spontaneous, Japanese self-introductions follow structured patterns that everyone learns from childhood. Whether you are joining a new class, starting a new job, meeting your partner's family, or attending a social gathering, you will be expected to give a jikoshoukai.</p>
+  <p>The structure of your self-introduction signals your understanding of Japanese social norms. A well-prepared jikoshoukai immediately establishes you as someone who respects the culture, while a disorganized or overly casual introduction can create an awkward first impression that is difficult to overcome in a society that values first encounters (第一印象, daiichi inshou) highly.</p>
+  <p>The good news is that jikoshoukai follows predictable formulas. Once you learn the basic pattern, you can adapt it to any situation by adjusting the formality level and content. This guide covers four main contexts — casual, formal, business, and school — with complete templates you can customize with your own information.</p>
+
+  <!-- Formality Level Card -->
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 24px 0;">
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.1rem; font-weight: 700; color: #2e7d32;">Casual</div>
+      <div style="font-size: 0.8rem; color: #555; margin-top: 4px;">Friends, peers</div>
+      <div style="font-size: 0.75rem; color: #777; margin-top: 4px;">2-3 sentences</div>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.1rem; font-weight: 700; color: #1565c0;">Formal</div>
+      <div style="font-size: 0.8rem; color: #555; margin-top: 4px;">Elders, new groups</div>
+      <div style="font-size: 0.75rem; color: #777; margin-top: 4px;">4-5 sentences</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.1rem; font-weight: 700; color: #e65100;">Business</div>
+      <div style="font-size: 0.8rem; color: #555; margin-top: 4px;">Clients, colleagues</div>
+      <div style="font-size: 0.75rem; color: #777; margin-top: 4px;">30-60 seconds</div>
+    </div>
+    <div style="background: #fce4ec; border-radius: 8px; padding: 14px; text-align: center;">
+      <div style="font-size: 1.1rem; font-weight: 700; color: #c62828;">School</div>
+      <div style="font-size: 0.8rem; color: #555; margin-top: 4px;">Classmates, teachers</div>
+      <div style="font-size: 0.75rem; color: #777; margin-top: 4px;">30-45 seconds</div>
+    </div>
+  </div>
+
+  <h2 id="essential-phrases">Essential Self-Introduction Phrases</h2>
+  <p>Before diving into specific scenarios, master these building-block phrases that appear in every type of self-introduction. Think of them as Lego pieces — you combine different ones depending on the situation.</p>
+
+  <table>
+    <thead>
+      <tr><th>Purpose</th><th>Japanese</th><th>Reading</th><th>English</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Opening (polite)</td><td>はじめまして</td><td>hajimemashite</td><td>Nice to meet you (first time)</td></tr>
+      <tr><td>Name</td><td>＿＿と申します</td><td>__ to moushimasu</td><td>My name is __ (formal)</td></tr>
+      <tr><td>Name (casual)</td><td>＿＿です</td><td>__ desu</td><td>I'm __</td></tr>
+      <tr><td>Country</td><td>＿＿から来ました</td><td>__ kara kimashita</td><td>I came from __</td></tr>
+      <tr><td>Occupation</td><td>＿＿をしています</td><td>__ wo shite imasu</td><td>I work as __</td></tr>
+      <tr><td>Hobby</td><td>趣味は＿＿です</td><td>shumi wa __ desu</td><td>My hobby is __</td></tr>
+      <tr><td>Studying Japanese</td><td>日本語を勉強しています</td><td>nihongo wo benkyou shite imasu</td><td>I'm studying Japanese</td></tr>
+      <tr><td>Request</td><td>よろしくお願いします</td><td>yoroshiku onegai shimasu</td><td>Please treat me well (closing)</td></tr>
+    </tbody>
+  </table>
+
+  <p>The phrase <strong>よろしくお願いします</strong> (yoroshiku onegai shimasu) deserves special attention. It has no direct English translation — it roughly means "please treat me well" or "I look forward to our relationship." This phrase closes virtually every self-introduction in Japan and signals that you are placing yourself in the other person's care. Omitting it feels incomplete to Japanese listeners.</p>
+
+  <h2 id="casual-introduction">Casual Self-Introduction</h2>
+  <p>Use this pattern with peers, at parties, casual meetups, language exchange events, and with friends of friends. The language uses polite forms (です/ます) but the content is relaxed and personal. Sharing a hobby or interest creates immediate connection points for conversation.</p>
+
+  <div style="background: #e8f5e9; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-weight: 700; color: #2e7d32; margin-bottom: 12px;">Casual Introduction Example</div>
+    <p style="font-size: 1.1rem; line-height: 2; margin: 0;">
+      はじめまして。<br>
+      サラです。<br>
+      アメリカから来ました。<br>
+      趣味はアニメを見ることです。<br>
+      日本語を勉強しています。<br>
+      よろしくお願いします。
+    </p>
+    <div style="border-top: 1px solid #c8e6c9; margin-top: 12px; padding-top: 12px; font-size: 0.9rem; color: #555;">
+      Nice to meet you. I'm Sarah. I came from America. My hobby is watching anime. I'm studying Japanese. Nice to meet you.
+    </div>
+  </div>
+
+  <p>In casual settings, you can add personality to your introduction. Mention specific interests rather than generic ones — saying "I love Studio Ghibli movies" (ジブリの映画が大好きです) is more memorable and conversation-worthy than just "I like movies." Share what brought you to Japan or why you are learning Japanese — this gives others easy follow-up questions.</p>
+
+  <h2 id="formal-introduction">Formal Self-Introduction</h2>
+  <p>Use formal introductions when meeting older people, your partner's parents, community groups, or any situation where you want to show extra respect. The key differences from casual are: use と申します instead of です for your name, speak more slowly, bow more deliberately, and keep personal topics brief.</p>
+
+  <div style="background: #e3f2fd; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-weight: 700; color: #1565c0; margin-bottom: 12px;">Formal Introduction Example</div>
+    <p style="font-size: 1.1rem; line-height: 2; margin: 0;">
+      はじめまして。<br>
+      サラ・ジョンソンと申します。<br>
+      アメリカのカリフォルニアから参りました。<br>
+      現在、東京で英語の教師をしております。<br>
+      日本の文化にとても興味があり、日本語を勉強しております。<br>
+      どうぞよろしくお願いいたします。
+    </p>
+    <div style="border-top: 1px solid #bbdefb; margin-top: 12px; padding-top: 12px; font-size: 0.9rem; color: #555;">
+      Nice to meet you. My name is Sarah Johnson. I came from California, America. Currently, I work as an English teacher in Tokyo. I'm very interested in Japanese culture and am studying Japanese. I look forward to getting to know you.
+    </div>
+  </div>
+
+  <p>Notice the language upgrades: 参りました (mairimashita) is the humble form of 来ました (kimashita), しております (shite orimasu) is the humble form of しています (shite imasu), and よろしくお願い<strong>いたします</strong> adds extra formality to the standard closing. These humble forms (謙譲語, kenjougo) lower yourself to elevate the listener — a core principle of Japanese politeness.</p>
+
+  <h2 id="business-introduction">Business Self-Introduction</h2>
+  <p>Business introductions in Japan are highly ritualized. They always accompany the exchange of business cards (名刺交換, meishi koukan), and the order of information is strict: greeting, company name, department, your name, then a brief role description. In Japanese business culture, your company identity comes before your personal identity.</p>
+
+  <div style="background: #fff3e0; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-weight: 700; color: #e65100; margin-bottom: 12px;">Business Introduction Example</div>
+    <p style="font-size: 1.1rem; line-height: 2; margin: 0;">
+      はじめまして。<br>
+      ABC株式会社のマーケティング部のサラ・ジョンソンと申します。<br>
+      主にデジタルマーケティングを担当しております。<br>
+      御社とお仕事できることを大変嬉しく思います。<br>
+      どうぞよろしくお願いいたします。
+    </p>
+    <div style="border-top: 1px solid #ffe0b2; margin-top: 12px; padding-top: 12px; font-size: 0.9rem; color: #555;">
+      Nice to meet you. I'm Sarah Johnson from the Marketing Department at ABC Corporation. I'm primarily in charge of digital marketing. I'm very pleased to work with your company. I look forward to working with you.
+    </div>
+  </div>
+
+  <h3>Business Card Etiquette</h3>
+  <p>The business card exchange is a ceremony, not just a formality. Present your card with both hands, Japanese side facing the recipient. Receive their card with both hands, read it carefully (never just pocket it), and place it on the table in front of you during the meeting. Never write on someone's business card or place it in your back pocket. These small gestures communicate profound respect.</p>
+
+  <h2 id="school-introduction">School and Class Introduction</h2>
+  <p>If you are joining a Japanese language class, university, or study program, you will give a jikoshoukai on your first day. School introductions balance friendliness with respect for teachers and classmates. Include your name, where you are from, why you are studying Japanese, and what you enjoy — this helps classmates find common ground.</p>
+
+  <div style="background: #fce4ec; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-weight: 700; color: #c62828; margin-bottom: 12px;">School Introduction Example</div>
+    <p style="font-size: 1.1rem; line-height: 2; margin: 0;">
+      はじめまして。<br>
+      サラです。アメリカから来ました。<br>
+      日本のアニメが大好きで、日本語を勉強し始めました。<br>
+      好きな食べ物はラーメンです。<br>
+      みんなと一緒に勉強できるのを楽しみにしています。<br>
+      よろしくお願いします。
+    </p>
+    <div style="border-top: 1px solid #f8bbd0; margin-top: 12px; padding-top: 12px; font-size: 0.9rem; color: #555;">
+      Nice to meet you. I'm Sarah. I came from America. I love Japanese anime, so I started studying Japanese. My favorite food is ramen. I look forward to studying with everyone. Nice to meet you.
+    </div>
+  </div>
+
+  <h2 id="useful-topics">Topics to Include in Your Introduction</h2>
+  <p>Choosing the right topics makes your introduction memorable and creates natural conversation starters. Here are the most effective topics organized by context.</p>
+
+  <table>
+    <thead>
+      <tr><th>Topic</th><th>Japanese Pattern</th><th>Best For</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Hometown</td><td>＿＿出身です</td><td>All contexts</td><td>カナダのトロント出身です</td></tr>
+      <tr><td>Occupation</td><td>＿＿をしています</td><td>Formal, business</td><td>エンジニアをしています</td></tr>
+      <tr><td>Hobby</td><td>趣味は＿＿です</td><td>Casual, school</td><td>趣味は写真を撮ることです</td></tr>
+      <tr><td>Favorite food</td><td>好きな食べ物は＿＿です</td><td>Casual, school</td><td>好きな食べ物は寿司です</td></tr>
+      <tr><td>Why Japan</td><td>＿＿がきっかけで</td><td>All contexts</td><td>日本の音楽がきっかけで日本に興味を持ちました</td></tr>
+      <tr><td>Japanese level</td><td>日本語は＿＿くらいです</td><td>School, casual</td><td>日本語はまだ初級くらいです</td></tr>
+      <tr><td>Goal</td><td>＿＿が目標です</td><td>School, formal</td><td>JLPTのN2合格が目標です</td></tr>
+    </tbody>
+  </table>
+
+  <p>Avoid topics that are considered too personal for first meetings: salary, age (especially asking women), political opinions, romantic relationships, and health problems. Japanese culture values a harmonious surface (建前, tatemae) in initial interactions, and deeper personal sharing happens gradually as trust builds.</p>
+
+  <h2 id="practice-templates">Ready-to-Use Templates</h2>
+  <p>Fill in the blanks with your information and practice saying these aloud. Reading them silently is not enough — your mouth needs muscle memory for the sounds. Practice in front of a mirror, record yourself, or use our <a href="/japanese/tools/name-generator/">Name Generator</a> to find the katakana version of your name.</p>
+
+  <!-- Template Cards -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #f5f5f5; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; margin-bottom: 10px;">Template A: Quick & Casual</div>
+      <p style="font-size: 0.9rem; line-height: 1.8;">
+        はじめまして。<br>
+        [名前]です。<br>
+        [国]から来ました。<br>
+        趣味は[趣味]です。<br>
+        よろしくお願いします。
+      </p>
+    </div>
+    <div style="background: #f5f5f5; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; margin-bottom: 10px;">Template B: Detailed & Friendly</div>
+      <p style="font-size: 0.9rem; line-height: 1.8;">
+        はじめまして。<br>
+        [名前]です。[国]から来ました。<br>
+        [職業]をしています。<br>
+        [理由]で日本語を勉強しています。<br>
+        好きな[カテゴリ]は[具体的]です。<br>
+        よろしくお願いします。
+      </p>
+    </div>
+  </div>
+
+  <h3>Pronunciation Tips for Self-Introductions</h3>
+  <p>Pronunciation during self-introductions matters more than in casual conversation because first impressions are lasting. Focus on these key points:</p>
+  <ul>
+    <li><strong>Speak slowly</strong> — Nervous speakers tend to rush. Deliberately slow down, especially when saying your name.</li>
+    <li><strong>Pause between sentences</strong> — Brief pauses give listeners time to process and show you are composed.</li>
+    <li><strong>Flatten your intonation slightly</strong> — Japanese has less dramatic pitch variation than English. Avoid the rising intonation that English speakers use for excitement.</li>
+    <li><strong>Practice your name</strong> — Say your name clearly, at half the speed you think is necessary. Japanese listeners are not accustomed to foreign name sounds.</li>
+    <li><strong>End strong</strong> — よろしくお願いします should sound confident and warm, not mumbled or rushed.</li>
+  </ul>
+
+  <h3>Start Practicing Now</h3>
+  <p>Choose the template that fits your next situation, fill in your details, and practice it 10 times aloud. Use our <a href="/japanese/tools/name-generator/">Name Generator</a> to find your name in katakana, explore the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> browser for words to describe your hobbies and interests, and reference the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> while reading. Check out our <a href="/japanese/blog/basic-japanese-phrases-travel/">travel phrases guide</a> for more conversation starters, and read about <a href="/japanese/blog/japanese-particles-explained/">Japanese particles</a> to understand why these sentence patterns work the way they do. A confident jikoshoukai opens doors to genuine connections in Japan — the investment of 30 minutes of practice pays dividends in every future interaction.</p>
 
 </BlogLayout>

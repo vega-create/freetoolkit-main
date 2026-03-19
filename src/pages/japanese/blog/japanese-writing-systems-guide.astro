@@ -1,37 +1,315 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Can I skip kanji and just use kana?", "a": "You can communicate at a basic level, but reading real Japanese requires kanji. Most written content uses all three systems together."}, {"q": "Why not simplify to one system?", "a": "The three systems offer advantages: kanji is compact and information-dense, visual variety aids reading, and kanji distinguishes homophones that sound identical."}, {"q": "How long to learn all three?", "a": "Hiragana and katakana take 1-2 weeks each. Basic kanji (500 characters) takes 6-12 months. Full jouyou kanji (2,136) takes several years."}];
-const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "Three Systems at a Glance"}, {"depth": 2, "slug": "hiragana", "text": "Hiragana: The Foundation"}, {"depth": 2, "slug": "katakana", "text": "Katakana: The Foreign Script"}, {"depth": 2, "slug": "kanji", "text": "Kanji: The Meaning Characters"}, {"depth": 2, "slug": "together", "text": "How They Work Together"}, {"depth": 2, "slug": "learning-order", "text": "Best Learning Order"}];
+const faq = [
+  { q: `Why does Japanese use three writing systems instead of one?`, a: `The three systems evolved for different purposes and now serve distinct functions. Kanji carries meaning compactly, hiragana handles grammar and native words, and katakana marks foreign loanwords and emphasis. Together they create visual variety that actually makes reading faster — the different visual shapes help readers identify word boundaries in a language written without spaces.` },
+  { q: `Can I skip kanji and just use hiragana for everything?`, a: `Technically yes for basic communication, but practically no. Writing everything in hiragana is like writing English in all lowercase with no spaces — technically readable but painfully slow. Real Japanese text requires kanji for efficient reading. Even children's books transition from all-hiragana to kanji by elementary school.` },
+  { q: `How long does it take to learn all three writing systems?`, a: `Hiragana takes 1-2 weeks of focused study. Katakana takes another 1-2 weeks. Basic functional kanji (500 characters) takes 6-12 months. The full jouyou kanji set (2,136 characters) takes most learners 2-4 years of consistent study. The kana scripts are quick wins; kanji is the long-term investment.` },
+  { q: `Which writing system should I learn first?`, a: `Always start with hiragana — it is the foundation of Japanese writing and used for grammar, verb endings, and pronunciation guides. Learn katakana second (same sounds, different shapes). Begin kanji once both kana are solid, typically after 3-4 weeks. Some overlap is fine and even encouraged.` },
+  { q: `Is romaji (writing Japanese in English letters) useful for learning?`, a: `Romaji is a crutch that slows long-term progress. It creates a dependency on English letter sounds that do not perfectly match Japanese pronunciation. Stop using romaji as soon as possible — ideally within the first month of study. Learning to read kana directly builds stronger neural pathways for the language.` }
+];
+const relatedTools = [
+  { name: "Hiragana Chart", url: "/japanese/tools/hiragana-chart/" },
+  { name: "Hiragana Quiz", url: "/japanese/tools/hiragana-quiz/" },
+  { name: "Katakana Quiz", url: "/japanese/tools/katakana-quiz/" },
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }
+];
+const headings = [
+  { depth: 2, slug: "three-systems-overview", text: "Three Systems, One Language" },
+  { depth: 2, slug: "hiragana-foundation", text: "Hiragana: The Essential Foundation" },
+  { depth: 2, slug: "katakana-foreign", text: "Katakana: Decoding the Modern World" },
+  { depth: 2, slug: "kanji-meaning", text: "Kanji: The Meaning Carriers" },
+  { depth: 2, slug: "how-they-combine", text: "How the Three Systems Work Together" },
+  { depth: 2, slug: "reading-real-japanese", text: "Reading Real Japanese: A Practical Walkthrough" },
+  { depth: 2, slug: "learning-roadmap", text: "Your Learning Roadmap" },
+  { depth: 2, slug: "common-questions", text: "Common Struggles and Solutions" }
+];
 ---
 <BlogLayout
-  title="Japanese Writing Systems: Hiragana, Katakana and Kanji Explained"
-  description="Understand all three writing systems — when to use each one, how they work together, and the best learning order."
+  title="Japanese Writing Systems Explained: Hiragana, Katakana, and Kanji Complete Guide"
+  description="Understand all three Japanese writing systems — how each one works, when to use them, how they combine in real text, and the best learning order for beginners."
   language="japanese"
   category="kana"
-  tags={["hiragana", "katakana", "kanji", "beginner"]}
+  tags={["hiragana", "katakana", "kanji", "beginner", "study-tips"]}
   publishDate="2026-02-21"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="overview">Three Systems at a Glance</h2>
-    <p>Japanese uses three writing systems simultaneously. A single sentence like 私はコーヒーを飲みました (I drank coffee) contains all three: 私 and 飲 are <strong>kanji</strong> (meaning characters), は, を, みました are <strong>hiragana</strong> (grammar), and コーヒー is <strong>katakana</strong> (loanword).</p>
+  <h2 id="three-systems-overview">Three Systems, One Language</h2>
+  <p>Japanese is unique among major world languages in using three distinct writing systems simultaneously. A single sentence can contain all three: <strong>kanji</strong> (Chinese characters carrying meaning), <strong>hiragana</strong> (rounded script for grammar and native words), and <strong>katakana</strong> (angular script for foreign words and emphasis). Far from being an inconvenience, this triple system actually makes Japanese more readable — the visual contrast between scripts helps readers parse sentences quickly in a language written without spaces.</p>
 
-    <h2 id="hiragana">Hiragana: The Foundation</h2>
-    <p>46 rounded, flowing characters used for native Japanese words, grammar particles (は, を, に, で), verb endings, and furigana (pronunciation guides above kanji). This is where every learner should start. Refer to our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> while studying.</p>
+  <p>Consider this everyday sentence: <strong>私はコーヒーを飲みました</strong> (I drank coffee). Three scripts work together seamlessly:</p>
 
-    <h2 id="katakana">Katakana: The Foreign Script</h2>
-    <p>46 angular, sharp characters representing the same sounds as hiragana. Used for foreign loanwords (コンピューター), emphasis (like italics), scientific terms, onomatopoeia, and brand names. Learn after hiragana — same sounds, just new visual symbols.</p>
+  <!-- Sentence Breakdown Visual -->
+  <div style="background: #f5f5f5; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-size: 1.5rem; text-align: center; margin-bottom: 16px; letter-spacing: 2px;">
+      <span style="color: #c62828; font-weight: 700;">私</span><span style="color: #1565c0;">は</span><span style="color: #e65100; font-weight: 700;">コーヒー</span><span style="color: #1565c0;">を</span><span style="color: #c62828; font-weight: 700;">飲</span><span style="color: #1565c0;">みました</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center;">
+      <div style="background: #ffebee; border-radius: 6px; padding: 10px;">
+        <div style="font-weight: 700; color: #c62828;">Kanji 漢字</div>
+        <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">私 (I), 飲 (drink)</div>
+        <div style="font-size: 0.8rem; color: #777;">Meaning words</div>
+      </div>
+      <div style="background: #e3f2fd; border-radius: 6px; padding: 10px;">
+        <div style="font-weight: 700; color: #1565c0;">Hiragana ひらがな</div>
+        <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">は, を, みました</div>
+        <div style="font-size: 0.8rem; color: #777;">Grammar + verb ending</div>
+      </div>
+      <div style="background: #fff3e0; border-radius: 6px; padding: 10px;">
+        <div style="font-weight: 700; color: #e65100;">Katakana カタカナ</div>
+        <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">コーヒー (coffee)</div>
+        <div style="font-size: 0.8rem; color: #777;">Foreign loanword</div>
+      </div>
+    </div>
+  </div>
 
-    <h2 id="kanji">Kanji: The Meaning Characters</h2>
-    <p>Chinese characters adapted for Japanese. Each carries meaning and usually has multiple readings: on'yomi (Chinese-derived, for compounds) and kun'yomi (native Japanese, standalone). Example: 山 has on'yomi &quot;san&quot; (富士山, Fujisan) and kun'yomi &quot;yama&quot; (山が見える). The government designates 2,136 &quot;jouyou kanji&quot; for everyday use. Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool for study.</p>
+  <h2 id="hiragana-foundation">Hiragana: The Essential Foundation</h2>
+  <p>Hiragana (ひらがな) is where every Japanese learner must begin. This set of 46 base characters represents every sound in the Japanese language with rounded, flowing strokes. Hiragana serves as the grammatical glue that holds sentences together and is the default script for native Japanese words that are not written in kanji.</p>
 
-    <h2 id="together">How They Work Together</h2>
-    <p>The three systems complement each other beautifully. Kanji provides meaning at a glance. Hiragana adds grammatical structure. Katakana signals foreign concepts. In a language without spaces, the visual distinction between systems helps readers quickly identify word boundaries.</p>
+  <h3>What Hiragana Is Used For</h3>
+  <ul>
+    <li><strong>Grammar particles</strong> — は (wa, topic marker), を (wo, object marker), に (ni, direction/time), で (de, location/means), が (ga, subject marker)</li>
+    <li><strong>Verb and adjective endings</strong> — 食べ<strong>ます</strong> (tabemasu, eat), 美し<strong>い</strong> (utsukushii, beautiful)</li>
+    <li><strong>Furigana</strong> — small hiragana above kanji to show pronunciation, common in children's books and learning materials</li>
+    <li><strong>Native Japanese words</strong> not typically written in kanji — ありがとう (thank you), すみません (excuse me)</li>
+    <li><strong>Words where the kanji is very complex</strong> — some words are conventionally written in hiragana even though kanji exists</li>
+  </ul>
 
-    <h2 id="learning-order">Best Learning Order</h2>
-    <p>Start with <strong>hiragana</strong> (2 weeks), then <strong>katakana</strong> while reinforcing hiragana. Begin basic <strong>kanji</strong> once both kana systems are solid. Do not wait to master one before starting the next — overlap your studies for faster progress.</p>
+  <h3>The 46 Base Characters</h3>
+  <p>Hiragana is organized in a logical grid called the <strong>gojuuon</strong> (fifty-sound chart), though only 46 characters are used in modern Japanese. Each row shares a consonant, and each column shares a vowel. This systematic structure makes learning predictable.</p>
+
+  <table>
+    <thead>
+      <tr><th></th><th>a</th><th>i</th><th>u</th><th>e</th><th>o</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>vowels</strong></td><td>あ</td><td>い</td><td>う</td><td>え</td><td>お</td></tr>
+      <tr><td><strong>k-</strong></td><td>か</td><td>き</td><td>く</td><td>け</td><td>こ</td></tr>
+      <tr><td><strong>s-</strong></td><td>さ</td><td>し</td><td>す</td><td>せ</td><td>そ</td></tr>
+      <tr><td><strong>t-</strong></td><td>た</td><td>ち</td><td>つ</td><td>て</td><td>と</td></tr>
+      <tr><td><strong>n-</strong></td><td>な</td><td>に</td><td>ぬ</td><td>ね</td><td>の</td></tr>
+      <tr><td><strong>h-</strong></td><td>は</td><td>ひ</td><td>ふ</td><td>へ</td><td>ほ</td></tr>
+      <tr><td><strong>m-</strong></td><td>ま</td><td>み</td><td>む</td><td>め</td><td>も</td></tr>
+      <tr><td><strong>y-</strong></td><td>や</td><td></td><td>ゆ</td><td></td><td>よ</td></tr>
+      <tr><td><strong>r-</strong></td><td>ら</td><td>り</td><td>る</td><td>れ</td><td>ろ</td></tr>
+      <tr><td><strong>w-</strong></td><td>わ</td><td></td><td></td><td></td><td>を</td></tr>
+      <tr><td><strong>n</strong></td><td>ん</td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p>Beyond the 46 base characters, dakuten marks (゛) and handakuten marks (゜) create additional sounds: か → が (ka → ga), さ → ざ (sa → za), は → ば → ぱ (ha → ba → pa). Combination characters (きゃ, しゅ, ちょ, etc.) add another layer. In total, hiragana can represent about 100 distinct sounds. Start learning with our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> and test yourself with the <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a>.</p>
+
+  <h2 id="katakana-foreign">Katakana: Decoding the Modern World</h2>
+  <p>Katakana (カタカナ) represents exactly the same sounds as hiragana but uses angular, sharp-edged characters. Think of katakana as the Japanese equivalent of italics in English — it makes certain words visually stand out from the surrounding text.</p>
+
+  <h3>What Katakana Is Used For</h3>
+  <ul>
+    <li><strong>Foreign loanwords</strong> — コンピューター (computer), レストラン (restaurant), ホテル (hotel)</li>
+    <li><strong>Foreign names</strong> — アメリカ (America), マイケル (Michael), ロンドン (London)</li>
+    <li><strong>Scientific and technical terms</strong> — ウイルス (virus), アレルギー (allergy)</li>
+    <li><strong>Emphasis</strong> — similar to bold or italics in English, especially in manga</li>
+    <li><strong>Onomatopoeia</strong> — ワンワン (wan wan, dog barking), ニャー (nyaa, cat meowing)</li>
+    <li><strong>Brand names and company names</strong> — トヨタ (Toyota), ソニー (Sony)</li>
+  </ul>
+
+  <p>Katakana is incredibly practical for travelers because it lets you decode foreign loanwords on signs and menus. When you see アイスクリーム, sound it out: a-i-su-ku-ri-i-mu → ice cream. This skill alone makes navigating Japan significantly easier. Test your katakana reading speed with our <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a>.</p>
+
+  <!-- Katakana Decoding Examples -->
+  <div style="background: #fff3e0; border-radius: 10px; padding: 20px; margin: 20px 0;">
+    <div style="font-weight: 700; color: #e65100; margin-bottom: 12px;">Can You Decode These Katakana Loanwords?</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+      <div style="background: #ffe0b2; border-radius: 6px; padding: 10px; text-align: center;">
+        <div style="font-size: 1.2rem;">チョコレート</div>
+        <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">cho-ko-re-e-to → chocolate</div>
+      </div>
+      <div style="background: #ffe0b2; border-radius: 6px; padding: 10px; text-align: center;">
+        <div style="font-size: 1.2rem;">タクシー</div>
+        <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">ta-ku-shi-i → taxi</div>
+      </div>
+      <div style="background: #ffe0b2; border-radius: 6px; padding: 10px; text-align: center;">
+        <div style="font-size: 1.2rem;">ビール</div>
+        <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">bi-i-ru → beer</div>
+      </div>
+      <div style="background: #ffe0b2; border-radius: 6px; padding: 10px; text-align: center;">
+        <div style="font-size: 1.2rem;">スマートフォン</div>
+        <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">su-ma-a-to-fo-n → smartphone</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="kanji-meaning">Kanji: The Meaning Carriers</h2>
+  <p>Kanji (漢字, literally "Chinese characters") are the meaning-dense building blocks of written Japanese. Originally borrowed from China over 1,500 years ago, Japanese kanji have evolved their own readings and usage patterns. Each character carries one or more meanings and typically has multiple pronunciations: <strong>on'yomi</strong> (Chinese-derived reading, used in compounds) and <strong>kun'yomi</strong> (native Japanese reading, used standalone).</p>
+
+  <h3>On'yomi vs Kun'yomi</h3>
+  <p>Understanding when to use which reading is one of the trickiest parts of kanji. The general rules:</p>
+  <table>
+    <thead>
+      <tr><th>Reading Type</th><th>When Used</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>On'yomi</strong> (音読み)</td><td>Kanji compounds (two+ kanji together)</td><td>山 = san in 富士<strong>山</strong> (Fujisan, Mt. Fuji)</td></tr>
+      <tr><td><strong>Kun'yomi</strong> (訓読み)</td><td>Standalone kanji + hiragana endings</td><td>山 = yama in <strong>山</strong>が見える (yama ga mieru, I can see the mountain)</td></tr>
+    </tbody>
+  </table>
+
+  <p>The Japanese government designates 2,136 kanji as <strong>jouyou kanji</strong> (常用漢字, "regular-use kanji") — the characters considered necessary for full literacy. These are taught throughout the school system: 1,026 characters in elementary school (grades 1-6) and the remaining 1,110 in junior high and high school. For learners, the JLPT levels provide a practical progression: N5 (100) → N4 (300) → N3 (650) → N2 (1,000) → N1 (2,000). Use our <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> to research any kanji's readings, meanings, and components.</p>
+
+  <!-- Kanji Complexity Funnel -->
+  <div style="max-width: 500px; margin: 24px auto; text-align: center;">
+    <div style="font-weight: 700; margin-bottom: 12px; color: #333;">Kanji by Complexity Level</div>
+    <div style="background: #e8f5e9; padding: 10px; border-radius: 6px; width: 30%; margin: 4px auto; font-size: 0.85rem;">1-3 strokes: 一 二 三 大 小</div>
+    <div style="background: #c8e6c9; padding: 10px; border-radius: 6px; width: 45%; margin: 4px auto; font-size: 0.85rem;">4-6 strokes: 日 月 木 水 火</div>
+    <div style="background: #a5d6a7; padding: 10px; border-radius: 6px; width: 60%; margin: 4px auto; font-size: 0.85rem;">7-10 strokes: 食 話 読 書 語</div>
+    <div style="background: #81c784; padding: 10px; border-radius: 6px; width: 78%; margin: 4px auto; font-size: 0.85rem; color: #fff;">11-15 strokes: 親 選 調 熱 練</div>
+    <div style="background: #388e3c; padding: 10px; border-radius: 6px; width: 100%; margin: 4px auto; font-size: 0.85rem; color: #fff;">16+ strokes: 曜 議 競 鬱 驚</div>
+  </div>
+
+  <h2 id="how-they-combine">How the Three Systems Work Together</h2>
+  <p>In practice, the three scripts divide labor seamlessly in every sentence. Understanding this division helps you read Japanese more efficiently because you can use the visual differences as parsing cues. Here is how a typical sentence breaks down:</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #ffebee; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #c62828; margin-bottom: 8px;">Kanji's Role</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem;">
+        <li>Core meaning words (nouns, verb roots)</li>
+        <li>Compact information density</li>
+        <li>Distinguishes homophones</li>
+        <li>Provides visual anchors for scanning</li>
+      </ul>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #1565c0; margin-bottom: 8px;">Hiragana's Role</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem;">
+        <li>Grammar particles and connectors</li>
+        <li>Verb and adjective endings</li>
+        <li>Words without standard kanji</li>
+        <li>Pronunciation guides (furigana)</li>
+      </ul>
+    </div>
+    <div style="background: #fff3e0; border-radius: 10px; padding: 18px;">
+      <div style="font-weight: 700; color: #e65100; margin-bottom: 8px;">Katakana's Role</div>
+      <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem;">
+        <li>Foreign loanwords</li>
+        <li>Foreign names and places</li>
+        <li>Emphasis and sound effects</li>
+        <li>Technical/scientific terms</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>This visual separation is actually a feature, not a bug. Because Japanese has no spaces between words, the different character shapes serve as visual word boundaries. Kanji characters are denser and more complex; hiragana is rounded and flowing; katakana is angular and sharp. Experienced readers process these visual cues instantly, parsing sentences faster than if everything were written in a single script.</p>
+
+  <h2 id="reading-real-japanese">Reading Real Japanese: A Practical Walkthrough</h2>
+  <p>Let us analyze how the three systems combine in real-world examples across different contexts.</p>
+
+  <table>
+    <thead>
+      <tr><th>Context</th><th>Japanese Text</th><th>Script Analysis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Train station sign</td>
+        <td>東京駅</td>
+        <td>All kanji: 東(east) 京(capital) 駅(station)</td>
+      </tr>
+      <tr>
+        <td>Restaurant menu</td>
+        <td>チーズバーガーセット</td>
+        <td>All katakana: cheeseburger set (loanword)</td>
+      </tr>
+      <tr>
+        <td>Warning sign</td>
+        <td>ここでタバコを吸わないでください</td>
+        <td>Mix: hiragana grammar + katakana tabako + kanji 吸</td>
+      </tr>
+      <tr>
+        <td>Email greeting</td>
+        <td>お世話になっております</td>
+        <td>Hiragana (お, に, なって, おります) + kanji (世話)</td>
+      </tr>
+      <tr>
+        <td>News headline</td>
+        <td>日本のAI技術が世界をリードする</td>
+        <td>Kanji + hiragana grammar + katakana AI + romaji-style</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>As you progress in Japanese, you will develop an intuitive sense for which script to expect in which context. This pattern recognition is one of the skills that distinguishes intermediate readers from beginners — and it comes naturally with consistent reading practice.</p>
+
+  <h2 id="learning-roadmap">Your Learning Roadmap</h2>
+  <p>Here is the optimal learning sequence based on how the scripts are used in real Japanese. Follow this roadmap for the most efficient path to reading ability.</p>
+
+  <!-- Learning Timeline -->
+  <div style="max-width: 600px; margin: 24px auto;">
+    <div style="font-weight: 700; margin-bottom: 16px; text-align: center; color: #333;">Recommended Learning Timeline</div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="background: #1565c0; color: #fff; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+      <div style="margin-left: 12px;">
+        <div style="font-weight: 600;">Weeks 1-2: Hiragana</div>
+        <div style="font-size: 0.85rem; color: #555;">Master all 46 characters + dakuten. Goal: read hiragana fluently without hesitation.</div>
+      </div>
+    </div>
+    <div style="border-left: 2px solid #ddd; height: 16px; margin-left: 15px;"></div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="background: #e65100; color: #fff; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+      <div style="margin-left: 12px;">
+        <div style="font-weight: 600;">Weeks 3-4: Katakana</div>
+        <div style="font-size: 0.85rem; color: #555;">Learn all 46 characters. Practice decoding loanwords from menus and signs.</div>
+      </div>
+    </div>
+    <div style="border-left: 2px solid #ddd; height: 16px; margin-left: 15px;"></div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="background: #c62828; color: #fff; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+      <div style="margin-left: 12px;">
+        <div style="font-weight: 600;">Month 2-3: Basic Kanji (100 characters)</div>
+        <div style="font-size: 0.85rem; color: #555;">Numbers, days, basic nouns and verbs. Learn through vocabulary, not isolation.</div>
+      </div>
+    </div>
+    <div style="border-left: 2px solid #ddd; height: 16px; margin-left: 15px;"></div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="background: #6a1b9a; color: #fff; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">4</div>
+      <div style="margin-left: 12px;">
+        <div style="font-weight: 600;">Month 4-12: Expand Kanji (300-650)</div>
+        <div style="font-size: 0.85rem; color: #555;">5 new kanji per day with spaced repetition. Start reading graded materials.</div>
+      </div>
+    </div>
+    <div style="border-left: 2px solid #ddd; height: 16px; margin-left: 15px;"></div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="background: #2e7d32; color: #fff; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">5</div>
+      <div style="margin-left: 12px;">
+        <div style="font-weight: 600;">Year 2+: Advanced Kanji (1,000-2,136)</div>
+        <div style="font-size: 0.85rem; color: #555;">Read native content daily. Learn kanji through immersion and context.</div>
+      </div>
+    </div>
+  </div>
+
+  <p>The most critical transition is from step 1 to step 2. Many learners spend too long perfecting hiragana before starting katakana. Since both scripts represent the same sounds, learning katakana while reinforcing hiragana is more efficient than sequential mastery. Start katakana once you can read hiragana at a reasonable speed — perfection is not required.</p>
+
+  <h2 id="common-questions">Common Struggles and Solutions</h2>
+  <p>Every learner faces predictable challenges when tackling Japanese writing. Here are the most common struggles and proven solutions.</p>
+
+  <h3>Confusing Similar Characters</h3>
+  <p>Several hiragana and katakana pairs look frustratingly similar. Create mnemonics that highlight the differences:</p>
+  <table>
+    <thead>
+      <tr><th>Confused Pair</th><th>Script</th><th>How to Tell Them Apart</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>は (ha) vs ほ (ho)</td><td>Hiragana</td><td>ほ has an extra horizontal stroke at the top</td></tr>
+      <tr><td>め (me) vs ぬ (nu)</td><td>Hiragana</td><td>ぬ has a loop at the end; め does not</td></tr>
+      <tr><td>シ (shi) vs ツ (tsu)</td><td>Katakana</td><td>シ strokes go left-to-right; ツ strokes go top-to-bottom</td></tr>
+      <tr><td>ソ (so) vs ン (n)</td><td>Katakana</td><td>ソ starts from top-right; ン starts from bottom-left</td></tr>
+      <tr><td>ア (a) vs マ (ma)</td><td>Katakana</td><td>ア has a curved bottom stroke; マ has a straight angular bottom</td></tr>
+    </tbody>
+  </table>
+
+  <h3>When to Use Which Script</h3>
+  <p>If you are writing and unsure which script to use, follow these rules: use hiragana as your default for everything, use katakana when writing a word borrowed from another language, and use kanji when you know the correct character. When in doubt, hiragana is always acceptable — using the wrong kanji is worse than using no kanji at all.</p>
+
+  <h3>Start Learning Today</h3>
+  <p>Begin your journey with our <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> — study the first row (あいうえお) today and add one new row each day. Test yourself regularly with the <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a>, then progress to the <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> as you advance. When you are ready for kanji, use the <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool to explore characters by radical, stroke count, or JLPT level. Read our detailed guides on <a href="/japanese/blog/hiragana-guide/">mastering hiragana</a> and <a href="/japanese/blog/katakana-guide/">learning katakana</a> for in-depth strategies. The three writing systems may seem daunting at first, but thousands of learners before you have mastered them — and you can too.</p>
 
 </BlogLayout>

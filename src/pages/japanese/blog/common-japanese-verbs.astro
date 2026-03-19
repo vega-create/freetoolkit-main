@@ -1,35 +1,189 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How many verb groups are there?", "a": "Three groups: Group 1 (u-verbs like 飲む), Group 2 (ru-verbs like 食べる), and Group 3 (irregular — する and 来る only)."}, {"q": "Which conjugation should I learn first?", "a": "Start with masu-form (polite present) and te-form. These two forms cover most beginner conversations."}, {"q": "How do I memorize verb conjugations?", "a": "Learn verbs in sentences rather than isolation. Practice conjugation drills with the 20 most common verbs until they become automatic."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Verb Conjugator", "url": "/japanese/tools/verb-conjugator/"}];
-const headings = [{"depth": 2, "slug": "verb-groups", "text": "Three Verb Groups"}, {"depth": 2, "slug": "essential-20", "text": "20 Most Essential Verbs"}, {"depth": 2, "slug": "conjugation-basics", "text": "Basic Conjugation Forms"}, {"depth": 2, "slug": "daily-verbs", "text": "Daily Life Verbs"}, {"depth": 2, "slug": "practice", "text": "Practice Methods"}];
+const faq = [
+  { q: `How many verbs do I need to know for JLPT N5?`, a: `JLPT N5 requires approximately 100-120 verbs. The 50 verbs listed in this guide cover the core N5 requirement plus some essential N4 verbs. With these 50 verbs and basic grammar, you can handle most daily conversations and pass the N5 listening and reading sections.` },
+  { q: `Which conjugation forms should I learn first?`, a: `Start with polite present (ます masu-form) and te-form (て form). Polite form covers all formal conversations, and te-form unlocks requests, progressive tense, and connecting sentences. Together these two forms handle 80%+ of beginner-level communication needs.` },
+  { q: `How do I memorize verb conjugations efficiently?`, a: `Learn verbs in sentences rather than isolation — 毎日水を飲みます (I drink water every day) sticks better than memorizing 飲む alone. Practice conjugation drills with the 20 most common verbs until forms become automatic, then expand. Our Verb Conjugator tool lets you check any verb instantly.` },
+  { q: `What is the difference between Group 1 and Group 2 verbs?`, a: `Group 1 (u-verbs/godan) end in a consonant+u and conjugate by changing the final vowel: 飲む→飲みます. Group 2 (ru-verbs/ichidan) end in -iru or -eru and conjugate by simply dropping る: 食べる→食べます. Group 2 is simpler but some -iru/-eru verbs are actually Group 1 (帰る, 走る) — these exceptions must be memorized.` },
+  { q: `Are there only two irregular verbs in Japanese?`, a: `Yes — する (to do) and 来る (to come) are the only truly irregular verbs. However, する is extremely common because it combines with hundreds of nouns to create compound verbs: 勉強する (study), 料理する (cook), 運動する (exercise), 掃除する (clean). Learning する compounds effectively doubles your verb vocabulary.` }
+];
+const relatedTools = [
+  { name: "Verb Conjugator", url: "/japanese/tools/verb-conjugator/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "essential-verbs", text: "The 25 Most Essential Verbs (Must-Know)" },
+  { depth: 2, slug: "daily-life", text: "15 Daily Life Verbs" },
+  { depth: 2, slug: "suru-compounds", text: "10 Essential する Compound Verbs" },
+  { depth: 2, slug: "conjugation-patterns", text: "Quick Conjugation Reference" },
+  { depth: 2, slug: "verb-pairs", text: "Transitive vs Intransitive Verb Pairs" },
+  { depth: 2, slug: "practice-strategy", text: "How to Practice Verbs Effectively" },
+  { depth: 2, slug: "resources", text: "Resources and Next Steps" }
+];
 ---
 <BlogLayout
-  title="100 Most Common Japanese Verbs Every Beginner Needs"
-  description="Essential Japanese verbs with conjugations, example sentences, and memory tips for JLPT N5 level."
+  title="50 Most Common Japanese Verbs Every Beginner Needs"
+  description="Master the 50 most essential Japanese verbs with group classifications, conjugation forms, example sentences, and する compound verbs. Complete JLPT N5 verb coverage."
   language="japanese"
   category="jlpt"
-  tags={["jlpt", "vocabulary", "beginner", "grammar"]}
+  tags={["jlpt", "vocabulary", "verbs", "beginner", "grammar"]}
   publishDate="2026-02-24"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="verb-groups">Three Verb Groups</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="essential-20">20 Most Essential Verbs</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="conjugation-basics">Basic Conjugation Forms</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="daily-verbs">Daily Life Verbs</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="practice">Practice Methods</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> to reinforce what you have learned.</p>
+    <p>Verbs are the engine of Japanese sentences — you cannot form a single complete sentence without one. According to corpus analysis of conversational Japanese, just <strong>50 verbs account for over 80%</strong> of all verb usage in daily conversation. Master these 50 verbs with their conjugations, and you have the foundation for fluent basic communication.</p>
+
+    <h2 id="essential-verbs">The 25 Most Essential Verbs (Must-Know)</h2>
+    <p>These are the verbs you will use in virtually every Japanese conversation. Learn them first, and practice each one through polite, negative, past, and te-form.</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem">
+      <thead>
+        <tr style="background:#dc2626;color:#fff">
+          <th style="padding:8px 12px;text-align:center">#</th>
+          <th style="padding:8px 12px;text-align:left">Verb</th>
+          <th style="padding:8px 12px;text-align:center">Group</th>
+          <th style="padding:8px 12px;text-align:left">Meaning</th>
+          <th style="padding:8px 12px;text-align:left">Polite Form</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">1</td><td style="padding:6px 12px">する</td><td style="padding:6px 12px;text-align:center">G3</td><td style="padding:6px 12px">to do</td><td style="padding:6px 12px">します</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">2</td><td style="padding:6px 12px">ある</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to exist (things)</td><td style="padding:6px 12px">あります</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">3</td><td style="padding:6px 12px">いる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to exist (living)</td><td style="padding:6px 12px">います</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">4</td><td style="padding:6px 12px">行く (いく)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to go</td><td style="padding:6px 12px">行きます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">5</td><td style="padding:6px 12px">来る (くる)</td><td style="padding:6px 12px;text-align:center">G3</td><td style="padding:6px 12px">to come</td><td style="padding:6px 12px">来ます</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">6</td><td style="padding:6px 12px">見る (みる)</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to see/watch</td><td style="padding:6px 12px">見ます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">7</td><td style="padding:6px 12px">食べる (たべる)</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to eat</td><td style="padding:6px 12px">食べます</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">8</td><td style="padding:6px 12px">飲む (のむ)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to drink</td><td style="padding:6px 12px">飲みます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">9</td><td style="padding:6px 12px">言う (いう)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to say</td><td style="padding:6px 12px">言います</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">10</td><td style="padding:6px 12px">思う (おもう)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to think</td><td style="padding:6px 12px">思います</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">11</td><td style="padding:6px 12px">書く (かく)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to write</td><td style="padding:6px 12px">書きます</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">12</td><td style="padding:6px 12px">読む (よむ)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to read</td><td style="padding:6px 12px">読みます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">13</td><td style="padding:6px 12px">聞く (きく)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to listen/ask</td><td style="padding:6px 12px">聞きます</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">14</td><td style="padding:6px 12px">話す (はなす)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to speak</td><td style="padding:6px 12px">話します</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">15</td><td style="padding:6px 12px">買う (かう)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to buy</td><td style="padding:6px 12px">買います</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">16</td><td style="padding:6px 12px">分かる (わかる)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to understand</td><td style="padding:6px 12px">分かります</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">17</td><td style="padding:6px 12px">知る (しる)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to know</td><td style="padding:6px 12px">知ります</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">18</td><td style="padding:6px 12px">会う (あう)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to meet</td><td style="padding:6px 12px">会います</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">19</td><td style="padding:6px 12px">待つ (まつ)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to wait</td><td style="padding:6px 12px">待ちます</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">20</td><td style="padding:6px 12px">使う (つかう)</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to use</td><td style="padding:6px 12px">使います</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">21</td><td style="padding:6px 12px">帰る (かえる)</td><td style="padding:6px 12px;text-align:center">G1⚠</td><td style="padding:6px 12px">to return home</td><td style="padding:6px 12px">帰ります</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">22</td><td style="padding:6px 12px">出る (でる)</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to leave/exit</td><td style="padding:6px 12px">出ます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">23</td><td style="padding:6px 12px">入る (はいる)</td><td style="padding:6px 12px;text-align:center">G1⚠</td><td style="padding:6px 12px">to enter</td><td style="padding:6px 12px">入ります</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px;text-align:center">24</td><td style="padding:6px 12px">寝る (ねる)</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to sleep</td><td style="padding:6px 12px">寝ます</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:6px 12px;text-align:center">25</td><td style="padding:6px 12px">起きる (おきる)</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to wake up</td><td style="padding:6px 12px">起きます</td></tr>
+      </tbody>
+    </table>
+    <p>⚠ marks verbs that end in -iru/-eru but are Group 1 (exceptions to memorize).</p>
+
+    <h2 id="daily-life">15 Daily Life Verbs</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem">
+      <thead>
+        <tr style="background:#2563eb;color:#fff">
+          <th style="padding:8px 12px;text-align:left">Verb</th>
+          <th style="padding:8px 12px;text-align:center">Group</th>
+          <th style="padding:8px 12px;text-align:left">Meaning</th>
+          <th style="padding:8px 12px;text-align:left">Example Sentence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">作る つくる</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to make</td><td style="padding:6px 12px">晩ごはんを作ります (I make dinner)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">働く はたらく</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to work</td><td style="padding:6px 12px">毎日働きます (I work every day)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">歩く あるく</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to walk</td><td style="padding:6px 12px">公園を歩きます (I walk in the park)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">走る はしる</td><td style="padding:6px 12px;text-align:center">G1⚠</td><td style="padding:6px 12px">to run</td><td style="padding:6px 12px">毎朝走ります (I run every morning)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">乗る のる</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to ride</td><td style="padding:6px 12px">電車に乗ります (I ride the train)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">教える おしえる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to teach/tell</td><td style="padding:6px 12px">日本語を教えます (I teach Japanese)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">覚える おぼえる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to memorize</td><td style="padding:6px 12px">漢字を覚えます (I memorize kanji)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">忘れる わすれる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to forget</td><td style="padding:6px 12px">名前を忘れました (I forgot the name)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">遊ぶ あそぶ</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to play/hang out</td><td style="padding:6px 12px">友達と遊びます (I hang out with friends)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">持つ もつ</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to hold/have</td><td style="padding:6px 12px">傘を持っています (I have an umbrella)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">開ける あける</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to open</td><td style="padding:6px 12px">窓を開けます (I open the window)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">閉める しめる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to close</td><td style="padding:6px 12px">ドアを閉めます (I close the door)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">住む すむ</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to live (reside)</td><td style="padding:6px 12px">東京に住んでいます (I live in Tokyo)</td></tr>
+        <tr style="background:#fff"><td style="padding:6px 12px">着る きる</td><td style="padding:6px 12px;text-align:center">G2</td><td style="padding:6px 12px">to wear</td><td style="padding:6px 12px">シャツを着ます (I wear a shirt)</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:6px 12px">洗う あらう</td><td style="padding:6px 12px;text-align:center">G1</td><td style="padding:6px 12px">to wash</td><td style="padding:6px 12px">手を洗います (I wash my hands)</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="suru-compounds">10 Essential する Compound Verbs</h2>
+    <p>する (to do) combines with nouns to create compound verbs. These are some of the most frequently used:</p>
+
+    <div style="max-width:500px;margin:2rem auto">
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">勉強する</span><div style="display:inline-block;background:#dc2626;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to study</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">料理する</span><div style="display:inline-block;background:#ef4444;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to cook</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">運動する</span><div style="display:inline-block;background:#f87171;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to exercise</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">掃除する</span><div style="display:inline-block;background:#fca5a5;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">to clean</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">洗濯する</span><div style="display:inline-block;background:#2563eb;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to do laundry</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">買い物する</span><div style="display:inline-block;background:#3b82f6;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to shop</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">散歩する</span><div style="display:inline-block;background:#60a5fa;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">to take a walk</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">電話する</span><div style="display:inline-block;background:#93c5fd;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">to make a phone call</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">旅行する</span><div style="display:inline-block;background:#bfdbfe;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">to travel</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:140px;font-weight:bold">結婚する</span><div style="display:inline-block;background:#dbeafe;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">to marry</div></div>
+    </div>
+
+    <p>All する compounds conjugate exactly like する: 勉強します (polite), 勉強しない (negative), 勉強した (past), 勉強して (te-form). Learn する's conjugation once and it applies to hundreds of compound verbs.</p>
+
+    <h2 id="conjugation-patterns">Quick Conjugation Reference</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.85rem">
+      <thead>
+        <tr style="background:#374151;color:#fff">
+          <th style="padding:8px 10px;text-align:left">Form</th>
+          <th style="padding:8px 10px;text-align:left">飲む G1</th>
+          <th style="padding:8px 10px;text-align:left">食べる G2</th>
+          <th style="padding:8px 10px;text-align:left">する G3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f9fafb"><td style="padding:5px 10px">Polite</td><td style="padding:5px 10px">飲みます</td><td style="padding:5px 10px">食べます</td><td style="padding:5px 10px">します</td></tr>
+        <tr style="background:#fff"><td style="padding:5px 10px">Negative</td><td style="padding:5px 10px">飲まない</td><td style="padding:5px 10px">食べない</td><td style="padding:5px 10px">しない</td></tr>
+        <tr style="background:#f9fafb"><td style="padding:5px 10px">Past</td><td style="padding:5px 10px">飲んだ</td><td style="padding:5px 10px">食べた</td><td style="padding:5px 10px">した</td></tr>
+        <tr style="background:#fff"><td style="padding:5px 10px">Te-form</td><td style="padding:5px 10px">飲んで</td><td style="padding:5px 10px">食べて</td><td style="padding:5px 10px">して</td></tr>
+        <tr style="background:#f9fafb"><td style="padding:5px 10px">Potential</td><td style="padding:5px 10px">飲める</td><td style="padding:5px 10px">食べられる</td><td style="padding:5px 10px">できる</td></tr>
+      </tbody>
+    </table>
+
+    <p>Use our <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> to look up all forms for any verb instantly.</p>
+
+    <h2 id="verb-pairs">Transitive vs Intransitive Verb Pairs</h2>
+    <p>Japanese has paired verbs where one is transitive (takes an object) and one is intransitive (no object). These are essential for describing actions vs states:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#7c3aed;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Transitive (を)</th>
+          <th style="padding:10px 14px;text-align:left">Intransitive (が)</th>
+          <th style="padding:10px 14px;text-align:left">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">開ける あける</td><td style="padding:8px 14px">開く あく</td><td style="padding:8px 14px">open (someone opens) / (it opens)</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">閉める しめる</td><td style="padding:8px 14px">閉まる しまる</td><td style="padding:8px 14px">close (someone closes) / (it closes)</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">つける</td><td style="padding:8px 14px">つく</td><td style="padding:8px 14px">turn on / (it turns on)</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px">消す けす</td><td style="padding:8px 14px">消える きえる</td><td style="padding:8px 14px">turn off, erase / (it goes out)</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px">出す だす</td><td style="padding:8px 14px">出る でる</td><td style="padding:8px 14px">take out / (it comes out)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Knowing these pairs prevents common errors. You say ドア<strong>を</strong>開ける (I open the door — transitive) but ドア<strong>が</strong>開く (The door opens — intransitive). The particle changes along with the verb.</p>
+
+    <h2 id="practice-strategy">How to Practice Verbs Effectively</h2>
+    <p><strong>1. Learn in sentences, not isolation.</strong> Instead of memorizing 飲む = drink, learn 毎日水を飲みます (I drink water every day). The sentence teaches you the verb, its particle (を), and a useful phrase all at once.</p>
+    <p><strong>2. Practice conjugation chains.</strong> Take one verb and conjugate through all forms: 飲む → 飲みます → 飲まない → 飲んだ → 飲んで → 飲める. Do this with 5 verbs per day until the patterns are automatic.</p>
+    <p><strong>3. Use spaced repetition.</strong> Add verbs (with example sentences) to an SRS system. Review daily to prevent forgetting.</p>
+    <p><strong>4. Group by ending pattern.</strong> Practice all む-ending verbs together (飲む, 読む, 住む), then all く-ending verbs (書く, 歩く, 聞く). This reinforces the conjugation patterns.</p>
+
+    <h2 id="resources">Resources and Next Steps</h2>
+    <ul>
+      <li><strong>Conjugation practice:</strong> <a href="/japanese/tools/verb-conjugator/">Verb Conjugator</a> — look up any verb's complete conjugation</li>
+      <li><strong>Vocabulary building:</strong> <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a> — verbs organized by JLPT level</li>
+      <li><strong>Grammar context:</strong> Learn how verbs work with <a href="/japanese/blog/japanese-particles-explained/">particles</a> and in <a href="/japanese/blog/japanese-verb-conjugation/">conjugation patterns</a></li>
+      <li><strong>Exam preparation:</strong> See our <a href="/japanese/blog/jlpt-preparation-guide/">JLPT study guide</a> for level-specific verb requirements</li>
+    </ul>
+    <p>For additional verb lists, see <a href="https://www.tofugu.com/japanese/common-japanese-verbs/" target="_blank" rel="noopener">Tofugu's verb guide</a> and <a href="https://jlptsensei.com/jlpt-n5-vocabulary-list/" target="_blank" rel="noopener">JLPT Sensei's N5 vocabulary list</a>.</p>
 
 </BlogLayout>

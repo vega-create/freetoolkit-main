@@ -1,33 +1,246 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How long should I study for each JLPT level?`, a: `General guidelines: N5 requires about 350 study hours, N4 about 600, N3 about 950, N2 about 1,600, and N1 about 3,000-4,800 hours of study. These are cumulative totals.` }, { q: `Which JLPT level should I aim for?`, a: `N5 proves basic Japanese ability. N4 shows you can handle everyday situations. N3 is useful for daily life in Japan. N2 is expected for most jobs in Japan. N1 demonstrates near-native reading comprehension.` }];
-const relatedTools = [{ name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }, { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" }];
-const headings = [{ depth: 2, slug: "overview", text: "JLPT Overview" }, { depth: 2, slug: "n5-n4", text: "N5 and N4 Strategy" }, { depth: 2, slug: "n3", text: "N3 Strategy" }, { depth: 2, slug: "n2-n1", text: "N2 and N1 Strategy" }];
+const faq = [
+  { q: `How long does it take to pass each JLPT level?`, a: `Approximate cumulative study hours: N5 needs 350 hours, N4 about 600, N3 around 950, N2 roughly 1,600, and N1 between 3,000 and 4,800 hours. Consistent daily study of 1-2 hours is more effective than irregular cramming sessions.` },
+  { q: `Which JLPT level should I aim for first?`, a: `Start with N5 if you are a complete beginner. If you already know hiragana, katakana, and 200+ vocabulary words, consider jumping to N4. Most university Japanese programs prepare students for N3 by year two. N2 is the minimum for working in Japan.` },
+  { q: `Can I skip JLPT levels and go straight to N2?`, a: `Yes, you can register for any level without passing lower ones. However, skipping levels means gaps in foundational grammar. Many self-studiers aim for N3 first as a realistic milestone, then progress to N2 within 12-18 months.` },
+  { q: `What is the passing score for each JLPT level?`, a: `N5 through N3 require 95 out of 180 points (about 53%). N2 requires 90 out of 180 (50%). N1 requires 100 out of 180 (56%). Each section also has a minimum score requirement — you cannot pass by excelling in one area alone.` },
+  { q: `Are there free resources to prepare for the JLPT?`, a: `Yes. The official JLPT website offers sample questions. NHK World provides graded news in simple Japanese. Tae Kim's Grammar Guide covers N5-N3 grammar for free. Our JLPT Vocabulary tool organizes words by level for systematic study.` }
+];
+const relatedTools = [
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" },
+  { name: "Kanji Lookup", url: "/japanese/tools/kanji-lookup/" },
+  { name: "Hiragana Quiz", url: "/japanese/tools/hiragana-quiz/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "what-is-jlpt", text: "What Is the JLPT?" },
+  { depth: 2, slug: "level-requirements", text: "Level-by-Level Requirements" },
+  { depth: 2, slug: "n5-n4-strategy", text: "N5 and N4 Strategy: Building the Foundation" },
+  { depth: 2, slug: "n3-strategy", text: "N3 Strategy: The Intermediate Bridge" },
+  { depth: 2, slug: "n2-n1-strategy", text: "N2 and N1 Strategy: Advanced Mastery" },
+  { depth: 2, slug: "study-timeline", text: "Realistic Study Timelines" },
+  { depth: 2, slug: "section-strategies", text: "Section-by-Section Test Strategies" },
+  { depth: 2, slug: "free-resources", text: "Free Resources and Study Tools" }
+];
 ---
 <BlogLayout
-  title="JLPT Preparation Guide: Study Plans for N5 to N1"
-  description="Complete study guide for every JLPT level with recommended timelines, resources, and section-by-section strategies."
+  title="JLPT Preparation Guide: Complete Study Plans for N5 to N1"
+  description="Master every JLPT level with proven study plans, realistic timelines, section strategies, and free resources. From N5 beginner to N1 advanced — your complete roadmap."
   language="japanese"
   category="jlpt"
-  tags={["jlpt", "study-tips", "exam", "vocabulary"]}
+  tags={["jlpt", "study-tips", "exam", "vocabulary", "grammar"]}
   publishDate="2026-02-20"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="overview">JLPT Overview</h2>
-    <p>The Japanese Language Proficiency Test has five levels, from N5 (beginner) to N1 (advanced). Each test covers three sections: Language Knowledge (vocabulary, grammar, reading) and Listening. Tests are held twice yearly in July and December at testing centers worldwide.</p>
-    <p>Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary Browser</a> to study essential words for every level from N5 through N1.</p>
+  <h2 id="what-is-jlpt">What Is the JLPT?</h2>
+  <p>The Japanese Language Proficiency Test (JLPT) is the most widely recognized Japanese language certification in the world. Administered jointly by the Japan Foundation and Japan Educational Exchanges and Services, the test measures reading and listening comprehension across five levels — N5 (easiest) through N1 (most difficult). Each year, over 1.3 million people take the JLPT in more than 90 countries.</p>
+  <p>The JLPT is held twice a year, in <strong>July</strong> and <strong>December</strong>, at designated test centers worldwide. Registration typically opens 3-4 months before the exam date. Results are mailed approximately two months after the test, and scores remain valid indefinitely — there is no expiration date on your certification.</p>
+  <p>Understanding the JLPT structure helps you study more efficiently. The test does <strong>not</strong> include speaking or writing sections. It focuses entirely on passive skills: reading comprehension and listening comprehension. This means your study strategy should prioritize input (reading and listening) while still building vocabulary and grammar knowledge as the foundation.</p>
 
-    <h2 id="n5-n4">N5 and N4 Strategy</h2>
-    <p>For N5, focus on mastering hiragana and katakana completely, learning about 100 kanji, and building vocabulary of around 800 words. Grammar covers basic sentence patterns, particles, and verb conjugations. For N4, expand to 300 kanji and 1,500 vocabulary words, add complex grammar patterns, and practice listening with natural-speed audio.</p>
-    <p>Our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a> and <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> help ensure your kana foundation is solid before moving to higher levels.</p>
+  <!-- JLPT Level Overview Card -->
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 24px 0;">
+    <div style="background: #e8f5e9; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #2e7d32;">N5</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Beginner</div>
+      <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">~350 hrs</div>
+    </div>
+    <div style="background: #e3f2fd; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #1565c0;">N4</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Elementary</div>
+      <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">~600 hrs</div>
+    </div>
+    <div style="background: #fff3e0; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #e65100;">N3</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Intermediate</div>
+      <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">~950 hrs</div>
+    </div>
+    <div style="background: #fce4ec; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #c62828;">N2</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Upper-Int</div>
+      <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">~1,600 hrs</div>
+    </div>
+    <div style="background: #f3e5f5; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #6a1b9a;">N1</div>
+      <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Advanced</div>
+      <div style="font-size: 0.8rem; color: #777; margin-top: 4px;">~3,000 hrs</div>
+    </div>
+  </div>
 
-    <h2 id="n3">N3 Strategy</h2>
-    <p>N3 bridges basic and intermediate Japanese. You need around 650 kanji and 3,750 vocabulary words. Reading passages become longer and more complex. Grammar includes conditional forms, passive voice, and causative constructions. Practice reading newspaper articles and short stories at this level.</p>
+  <h2 id="level-requirements">Level-by-Level Requirements</h2>
+  <p>Each JLPT level has specific requirements for vocabulary, kanji, and grammar. Understanding these benchmarks helps you set clear study goals and track your progress systematically. The table below shows the cumulative knowledge expected at each level.</p>
 
-    <h2 id="n2-n1">N2 and N1 Strategy</h2>
-    <p>N2 requires approximately 1,000 kanji and 6,000 vocabulary words. Reading passages include editorials, business documents, and literature. N1 demands around 2,000 kanji and 10,000 words, with the ability to read and comprehend complex texts on abstract topics. For both levels, immersion through Japanese media, books, and conversation is essential alongside structured study.</p>
+  <table>
+    <thead>
+      <tr><th>Level</th><th>Kanji</th><th>Vocabulary</th><th>Grammar Points</th><th>Test Duration</th><th>Pass Score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>N5</strong></td><td>~100</td><td>~800</td><td>~50 basic</td><td>105 min</td><td>95/180 (53%)</td></tr>
+      <tr><td><strong>N4</strong></td><td>~300</td><td>~1,500</td><td>~120 elementary</td><td>125 min</td><td>95/180 (53%)</td></tr>
+      <tr><td><strong>N3</strong></td><td>~650</td><td>~3,750</td><td>~200 intermediate</td><td>140 min</td><td>95/180 (53%)</td></tr>
+      <tr><td><strong>N2</strong></td><td>~1,000</td><td>~6,000</td><td>~300 upper-int</td><td>155 min</td><td>90/180 (50%)</td></tr>
+      <tr><td><strong>N1</strong></td><td>~2,000</td><td>~10,000</td><td>~400+ advanced</td><td>170 min</td><td>100/180 (56%)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice an important pattern: the jump from N3 to N2 is the steepest. You need 350 more kanji and 2,250 more vocabulary words. Many learners plateau at this stage, which is why N3-to-N2 typically takes the longest per-level study period. Planning for this difficulty spike prevents frustration and burnout.</p>
+
+  <!-- Vocabulary Growth Funnel -->
+  <div style="max-width: 500px; margin: 24px auto; text-align: center;">
+    <div style="font-weight: 700; margin-bottom: 12px; color: #333;">Vocabulary Growth by JLPT Level</div>
+    <div style="background: #e8f5e9; padding: 10px; border-radius: 6px; width: 30%; margin: 4px auto; font-size: 0.85rem;">N5: 800 words</div>
+    <div style="background: #c8e6c9; padding: 10px; border-radius: 6px; width: 45%; margin: 4px auto; font-size: 0.85rem;">N4: 1,500 words</div>
+    <div style="background: #a5d6a7; padding: 10px; border-radius: 6px; width: 60%; margin: 4px auto; font-size: 0.85rem;">N3: 3,750 words</div>
+    <div style="background: #81c784; padding: 10px; border-radius: 6px; width: 80%; margin: 4px auto; font-size: 0.85rem; color: #fff;">N2: 6,000 words</div>
+    <div style="background: #388e3c; padding: 10px; border-radius: 6px; width: 100%; margin: 4px auto; font-size: 0.85rem; color: #fff;">N1: 10,000 words</div>
+  </div>
+
+  <h2 id="n5-n4-strategy">N5 and N4 Strategy: Building the Foundation</h2>
+  <p>N5 and N4 represent the foundation of your Japanese journey. Your primary goal at these levels is building a solid base in the writing system, core vocabulary, and basic grammar patterns that everything else depends on.</p>
+
+  <h3>N5 Study Plan (3-6 Months)</h3>
+  <p><strong>Month 1-2: Writing system mastery.</strong> Dedicate the first phase entirely to hiragana and katakana. You need to read both scripts fluently — not just recognize characters, but read them at natural speed without hesitation. Use our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a> daily until you achieve consistent 100% accuracy, then move to katakana.</p>
+  <p><strong>Month 2-4: Core vocabulary and basic grammar.</strong> Learn the 100 essential kanji and 800 vocabulary words that N5 requires. Study basic sentence patterns: は/が particles, です/ます polite forms, basic verb conjugations (present, past, negative), and question formation with か. Focus on high-frequency patterns you will encounter daily.</p>
+  <p><strong>Month 4-6: Practice and consolidation.</strong> Work through N5 practice tests. Focus on listening comprehension — many students neglect this section. Listen to slow-speed Japanese podcasts, NHK World Easy Japanese, and textbook audio daily. The listening section accounts for roughly one-third of your total score.</p>
+
+  <h3>N4 Study Plan (4-8 Months After N5)</h3>
+  <p>N4 expands your kanji knowledge to 300 characters and vocabulary to 1,500 words. Grammar becomes more complex: you will learn て-form connections, conditional patterns (たら, ば), giving and receiving expressions (あげる, もらう, くれる), and potential form (can do). The reading passages grow longer and include short letters, notices, and simple narratives.</p>
+  <p>At the N4 level, begin reading simple Japanese content outside of textbooks. Children's stories, graded readers, and NHK News Web Easy provide comprehensible input that reinforces vocabulary and grammar in natural contexts. Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool to study N4-level words systematically.</p>
+
+  <h2 id="n3-strategy">N3 Strategy: The Intermediate Bridge</h2>
+  <p>N3 is often called the most important JLPT level because it bridges basic and intermediate Japanese. Passing N3 means you can handle most everyday situations in Japan. This is also where many learners experience the dreaded "intermediate plateau" — a period where progress feels painfully slow despite continued study.</p>
+  <p>At N3, you need approximately <strong>650 kanji</strong> and <strong>3,750 vocabulary words</strong>. Grammar includes around 200 patterns covering conditional forms, passive voice (受身形), causative constructions (使役形), and various conjunctive expressions. Reading passages become significantly longer and cover topics like news summaries, personal essays, and informational texts.</p>
+
+  <h3>Breaking Through the Intermediate Plateau</h3>
+  <p>The plateau happens because basic grammar no longer drives visible progress. At N5-N4, learning one grammar point unlocks dozens of new sentences. At N3, each new grammar point adds subtle nuance rather than dramatic new ability. The solution is to shift your study approach:</p>
+  <ul>
+    <li><strong>Extensive reading</strong> — Read large volumes of slightly-below-your-level material. Speed and comfort matter more than difficulty at this stage.</li>
+    <li><strong>Active listening</strong> — Watch Japanese YouTube channels, drama, and anime with Japanese subtitles. Pause and look up unknown words.</li>
+    <li><strong>Grammar in context</strong> — Stop studying grammar points in isolation. Instead, notice them in real content and analyze how they change meaning.</li>
+    <li><strong>Vocabulary depth</strong> — Learn multiple meanings and collocations for words you already know. The word 取る alone has dozens of uses.</li>
+  </ul>
+
+  <h3>N3 Study Schedule</h3>
+  <table>
+    <thead>
+      <tr><th>Daily Block</th><th>Activity</th><th>Duration</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Morning</td><td>New kanji + vocabulary review (SRS flashcards)</td><td>30 min</td></tr>
+      <tr><td>Commute</td><td>Listening practice (podcasts, NHK news)</td><td>20 min</td></tr>
+      <tr><td>Lunch</td><td>Grammar study — one new point per day</td><td>20 min</td></tr>
+      <tr><td>Evening</td><td>Reading practice (graded readers, articles)</td><td>30 min</td></tr>
+      <tr><td>Weekend</td><td>Full practice test section (reading or listening)</td><td>45 min</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="n2-n1-strategy">N2 and N1 Strategy: Advanced Mastery</h2>
+  <p>N2 is the level most employers in Japan require. It demonstrates you can read newspaper articles, understand business correspondence, and follow complex spoken Japanese. N1 represents near-native reading comprehension and is required for specialized roles in translation, academia, and certain government positions.</p>
+
+  <h3>N2 Requirements and Approach</h3>
+  <p>N2 demands roughly 1,000 kanji and 6,000 vocabulary words. Grammar includes over 300 patterns, many of which are written-language expressions rarely used in conversation: ～に際して (on the occasion of), ～に伴い (accompanying), ～を踏まえて (based on). Your study material should shift heavily toward written Japanese — newspaper editorials, academic articles, and business documents.</p>
+  <p>The reading section at N2 is notoriously time-pressured. You must read and answer questions about 5-6 passages within a tight time limit. Speed-reading practice is essential: set a timer, read a passage once, then answer questions without re-reading. This trains you to extract key information efficiently.</p>
+
+  <h3>N1: The Summit</h3>
+  <p>N1 requires approximately 2,000 kanji and 10,000 vocabulary words. At this level, you should be able to read complex texts on abstract topics — philosophy, social commentary, literary criticism. Grammar includes highly formal and literary expressions that even some native speakers find challenging.</p>
+  <p>The most effective N1 preparation is extensive immersion in authentic Japanese content. Read novels, newspapers (朝日新聞, 読売新聞), academic papers, and opinion pieces. Listen to news programs, lecture series, and formal interviews. The gap between N2 and N1 is the largest in the entire JLPT system, and brute-force memorization alone will not bridge it — you need genuine comprehension skills.</p>
+
+  <!-- N2 vs N1 Comparison Card -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+    <div style="background: #fce4ec; border-radius: 10px; padding: 20px;">
+      <div style="font-weight: 700; font-size: 1.2rem; color: #c62828; margin-bottom: 8px;">N2 — Professional Level</div>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem;">
+        <li>1,000 kanji / 6,000 vocabulary</li>
+        <li>Read newspapers and business docs</li>
+        <li>Required for most jobs in Japan</li>
+        <li>Study time: ~1,600 hours cumulative</li>
+        <li>Pass rate: ~35-40%</li>
+      </ul>
+    </div>
+    <div style="background: #f3e5f5; border-radius: 10px; padding: 20px;">
+      <div style="font-weight: 700; font-size: 1.2rem; color: #6a1b9a; margin-bottom: 8px;">N1 — Near-Native Level</div>
+      <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem;">
+        <li>2,000 kanji / 10,000 vocabulary</li>
+        <li>Read abstract and literary texts</li>
+        <li>Required for translation, academia</li>
+        <li>Study time: 3,000-4,800 hours cumulative</li>
+        <li>Pass rate: ~30-35%</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="study-timeline">Realistic Study Timelines</h2>
+  <p>How long it takes to pass each level depends on your daily study hours, learning background, and whether you live in Japan. The timelines below assume consistent study with no prior Japanese knowledge.</p>
+
+  <!-- Study Timeline Bar Chart -->
+  <div style="max-width: 600px; margin: 24px auto;">
+    <div style="font-weight: 700; margin-bottom: 12px; text-align: center; color: #333;">Months to Pass Each Level (2 hours/day study)</div>
+    <div style="display: flex; align-items: center; margin: 8px 0;">
+      <span style="width: 40px; font-weight: 600; font-size: 0.9rem;">N5</span>
+      <div style="background: #4caf50; height: 28px; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 0.85rem; width: 15%;">6 mo</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 8px 0;">
+      <span style="width: 40px; font-weight: 600; font-size: 0.9rem;">N4</span>
+      <div style="background: #2196f3; height: 28px; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 0.85rem; width: 25%;">10 mo</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 8px 0;">
+      <span style="width: 40px; font-weight: 600; font-size: 0.9rem;">N3</span>
+      <div style="background: #ff9800; height: 28px; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 0.85rem; width: 42%;">16 mo</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 8px 0;">
+      <span style="width: 40px; font-weight: 600; font-size: 0.9rem;">N2</span>
+      <div style="background: #e91e63; height: 28px; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 0.85rem; width: 67%;">27 mo</div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 8px 0;">
+      <span style="width: 40px; font-weight: 600; font-size: 0.9rem;">N1</span>
+      <div style="background: #9c27b0; height: 28px; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; color: #fff; font-size: 0.85rem; width: 100%;">50 mo</div>
+    </div>
+    <div style="font-size: 0.75rem; color: #999; text-align: center; margin-top: 8px;">Based on cumulative study hours at 2 hours/day average</div>
+  </div>
+
+  <p>These timelines are cumulative — passing N2 in 27 months means you would also pass N5, N4, and N3 along the way. Living in Japan can reduce these timelines by 30-40% due to daily immersion. Chinese and Korean speakers also progress faster due to shared kanji knowledge.</p>
+  <p>The most common mistake is underestimating the time commitment. Many learners register for a level they are not ready for, fail, and lose motivation. A better strategy is to take practice tests regularly and only register when you consistently score above the passing threshold on mock exams.</p>
+
+  <h2 id="section-strategies">Section-by-Section Test Strategies</h2>
+  <p>The JLPT tests three main areas, and each requires a different study approach and test-day strategy.</p>
+
+  <h3>Vocabulary and Grammar (言語知識)</h3>
+  <p>This section tests your ability to choose the correct word, reading, or grammar pattern. For vocabulary questions, context clues are your best friend — read the entire sentence before choosing an answer. For grammar questions, pay attention to what comes before and after the blank. Many grammar patterns have strict rules about what forms they connect to.</p>
+  <p>Study tip: Create a grammar notebook organized by function (reason, contrast, condition, etc.) rather than alphabetically. When you encounter a new grammar point, write three example sentences and note what makes it different from similar patterns.</p>
+
+  <h3>Reading Comprehension (読解)</h3>
+  <p>Time management is critical in the reading section. Read the questions first, then scan the passage for relevant information. For N2 and N1, you do not have time to read every passage carefully from start to finish. Practice skimming and scanning techniques: identify topic sentences (usually the first or last sentence of each paragraph) and focus on transition words that signal the author's logic.</p>
+  <p>Common question types include: main idea identification, detail extraction, author's opinion, and inference questions. Each type requires a different reading strategy. Main idea questions require understanding the overall argument; detail questions require finding specific information; opinion questions require distinguishing fact from opinion.</p>
+
+  <h3>Listening Comprehension (聴解)</h3>
+  <p>The listening section follows predictable patterns across all levels. Task-based questions play a conversation and ask you to identify what action should be taken. Point comprehension questions test whether you understood specific information. Integrated comprehension questions require combining information from a longer passage.</p>
+  <p>Effective listening preparation includes: daily exposure to natural-speed Japanese, practicing note-taking during audio passages, and learning to identify key information words (numbers, locations, times, names) as anchors for understanding. Use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool to ensure you recognize words by sound, not just by sight.</p>
+
+  <h2 id="free-resources">Free Resources and Study Tools</h2>
+  <p>You do not need expensive textbooks or courses to pass the JLPT. Numerous high-quality free resources exist for every level.</p>
+
+  <table>
+    <thead>
+      <tr><th>Resource</th><th>Best For</th><th>JLPT Levels</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="https://www.nhk.or.jp/lesson/en/" rel="noopener noreferrer" target="_blank">NHK World Easy Japanese</a></td><td>Listening, vocabulary</td><td>N5-N4</td></tr>
+      <tr><td><a href="https://www.wasabi-jpn.com/japanese-grammar/wasabis-online-japanese-grammar-reference/" rel="noopener noreferrer" target="_blank">Wasabi Japanese Grammar</a></td><td>Grammar explanations</td><td>N5-N3</td></tr>
+      <tr><td><a href="https://www3.nhk.or.jp/news/easy/" rel="noopener noreferrer" target="_blank">NHK News Web Easy</a></td><td>Reading practice</td><td>N3-N2</td></tr>
+      <tr><td><a href="https://www.jlpt.jp/e/samples/forlearners.html" rel="noopener noreferrer" target="_blank">Official JLPT Sample Questions</a></td><td>Test format familiarity</td><td>All levels</td></tr>
+      <tr><td><a href="/japanese/tools/jlpt-vocabulary/">Freetoolkit JLPT Vocabulary</a></td><td>Systematic word study</td><td>N5-N1</td></tr>
+      <tr><td><a href="/japanese/tools/kanji-lookup/">Freetoolkit Kanji Lookup</a></td><td>Kanji research</td><td>N5-N1</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Building Your Study Routine</h3>
+  <p>Consistency beats intensity. Studying 30 minutes every day produces better results than studying 4 hours on weekends. Set a fixed daily study time and protect it. Use the commute for listening practice, lunch breaks for vocabulary review, and evening time for reading and grammar study.</p>
+  <p>Track your progress with regular practice tests. Take a full-length practice test every 4-6 weeks to identify weak areas. If your listening score lags behind your reading score, shift more daily time to audio input. If grammar is your weakness, dedicate an extra 15 minutes daily to grammar pattern drills.</p>
+
+  <h3>Your JLPT Journey Starts Now</h3>
+  <p>The JLPT is a marathon, not a sprint. Choose your target level, set a realistic timeline, build a daily study habit, and track your progress with regular practice tests. Start with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> browser to begin systematic word study, and use the <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool to research unfamiliar characters. Check out our guides on <a href="/japanese/blog/hiragana-guide/">mastering hiragana</a> and <a href="/japanese/blog/japanese-verb-conjugation/">verb conjugation</a> to build a strong foundation. Generate <a href="/japanese/tools/practice-sheet/">practice sheets</a> for writing practice. Every kanji you learn and every grammar pattern you master brings you one step closer to your goal.</p>
 
 </BlogLayout>

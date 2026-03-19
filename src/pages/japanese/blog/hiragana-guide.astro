@@ -1,38 +1,205 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `How long does it take to learn hiragana?`, a: `Most learners can memorize all 46 basic hiragana in 1-2 weeks with daily practice of 20-30 minutes. Recognition comes first, then writing fluency follows with continued practice.` }, { q: `Should I learn hiragana or katakana first?`, a: `Start with hiragana. It is used far more frequently in everyday Japanese and is essential for reading grammar particles, verb endings, and native Japanese words.` }, { q: `What is the best way to memorize hiragana?`, a: `Combine visual mnemonics with active writing practice. For example, あ (a) looks like a figure doing a karate chop saying 'Ahh!' Write each character repeatedly while saying the sound aloud.` }];
-const relatedTools = [{ name: "Hiragana Quiz", url: "/japanese/tools/hiragana-quiz/" }, { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }, { name: "Kana Converter", url: "/japanese/tools/kana-converter/" }];
-const headings = [{ depth: 2, slug: "what-is", text: "What is Hiragana?" }, { depth: 2, slug: "five-vowels", text: "The Five Vowels" }, { depth: 2, slug: "consonant-rows", text: "Consonant Rows" }, { depth: 2, slug: "dakuten", text: "Dakuten and Combinations" }, { depth: 2, slug: "practice", text: "Practice Strategy" }];
+const faq = [
+  { q: `How long does it take to learn hiragana?`, a: `Most learners memorize all 46 basic hiragana in 1-2 weeks with daily practice of 20-30 minutes. Recognition comes first (usually within 5-7 days), then writing fluency follows with continued practice. Adding dakuten and combination characters takes another 3-5 days. Total time to comfortable reading: about 2-3 weeks.` },
+  { q: `Should I learn hiragana or katakana first?`, a: `Start with hiragana. It is used far more frequently in everyday Japanese — for grammar particles, verb endings, native Japanese words, and furigana readings above kanji. Hiragana accounts for roughly 35-40% of characters in a typical Japanese text, while katakana makes up only about 5-10%.` },
+  { q: `What is the best way to memorize hiragana?`, a: `Combine visual mnemonics with active writing practice. For example, あ (a) looks like a figure saying "Ahh!" Write each character 10-15 times while saying the sound aloud. Then test yourself with flashcards or quiz tools. Studies show that combining visual, motor, and auditory input triples retention compared to visual study alone.` },
+  { q: `Can I type Japanese without knowing hiragana?`, a: `Technically yes — you can use romaji input on a keyboard. But hiragana is absolutely essential for reading Japanese, understanding grammar, and selecting the correct kanji from input suggestions. Without hiragana, you cannot function in Japanese at all. It is the non-negotiable first step.` },
+  { q: `Do I need to learn stroke order for hiragana?`, a: `Yes, proper stroke order is recommended. It makes your handwriting look natural and legible, helps with handwriting recognition on tablets and phones, and is required for many Japanese courses and exams. The rules are intuitive: top to bottom, left to right, horizontal before vertical.` }
+];
+const relatedTools = [
+  { name: "Hiragana Quiz", url: "/japanese/tools/hiragana-quiz/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" },
+  { name: "Kana Converter", url: "/japanese/tools/kana-converter/" }
+];
+const headings = [
+  { depth: 2, slug: "what-is", text: "What is Hiragana?" },
+  { depth: 2, slug: "five-vowels", text: "The Five Vowels: Foundation of All Hiragana" },
+  { depth: 2, slug: "consonant-rows", text: "The 10 Consonant Rows (Complete Chart)" },
+  { depth: 2, slug: "dakuten", text: "Dakuten and Handakuten: Modified Sounds" },
+  { depth: 2, slug: "combinations", text: "Combination Characters (拗音)" },
+  { depth: 2, slug: "learning-plan", text: "10-Day Learning Plan" },
+  { depth: 2, slug: "mnemonics", text: "Mnemonic Techniques for Tricky Characters" },
+  { depth: 2, slug: "practice", text: "Practice Strategy and Resources" }
+];
 ---
 <BlogLayout
-  title="How to Learn Hiragana: Complete Beginner Guide"
-  description="Master all 46 hiragana characters with proven memorization techniques, stroke order tips, and free practice resources."
+  title="How to Learn Hiragana: Complete Beginner Guide with Charts"
+  description="Master all 46 hiragana characters in 2 weeks. Complete chart, mnemonic tips, 10-day learning plan, dakuten and combination sounds, free quiz and practice sheets."
   language="japanese"
   category="kana"
-  tags={["hiragana", "beginner", "kana", "writing"]}
+  tags={["hiragana", "beginner", "kana", "writing", "study-tips"]}
   publishDate="2026-02-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
+    <p>Hiragana is the gateway to reading Japanese — and the good news is that it is <strong>entirely learnable in 2 weeks</strong>. Unlike English with its 26 letters and thousands of spelling exceptions, hiragana has just 46 characters and every character always makes the same sound. According to the Japan Foundation's annual survey, over <strong>3.8 million people worldwide</strong> are studying Japanese, and hiragana mastery is every single one of their first milestones.</p>
+
     <h2 id="what-is">What is Hiragana?</h2>
-    <p>Hiragana is one of three Japanese writing systems and the first one every learner should master. It consists of 46 basic characters, each representing a syllable sound. Hiragana is used for native Japanese words, grammatical particles, verb endings, and as reading aids (furigana) above kanji characters.</p>
-    <p>Unlike the English alphabet where letters combine to form sounds, each hiragana character represents a complete syllable. This makes Japanese pronunciation remarkably consistent — once you know the characters, you can pronounce any word written in hiragana.</p>
+    <p>Hiragana (平仮名) is one of three Japanese writing systems. It is a <strong>syllabary</strong> — each character represents a complete syllable, not a single consonant or vowel sound like the English alphabet. The character か is always "ka," き is always "ki," く is always "ku." No exceptions, no silent letters, no irregular pronunciation.</p>
+    <p>Hiragana is used for:</p>
+    <ul>
+      <li><strong>Grammar particles:</strong> は (wa), が (ga), を (wo), に (ni), で (de) — the backbone of Japanese sentences</li>
+      <li><strong>Verb and adjective endings:</strong> 食べ<strong>ます</strong> (tabemasu), 大き<strong>い</strong> (ookii)</li>
+      <li><strong>Native Japanese words:</strong> words not typically written in kanji</li>
+      <li><strong>Furigana:</strong> tiny reading guides above kanji characters</li>
+    </ul>
+    <p>In a typical Japanese text, hiragana makes up about <strong>35-40%</strong> of all characters — more than kanji (30-35%) or katakana (5-10%). This is why it must be your first priority.</p>
 
-    <h2 id="five-vowels">The Five Vowels</h2>
-    <p>Japanese has only five vowel sounds, making pronunciation simpler than English. Start by mastering these: <strong>あ (a)</strong> as in "father," <strong>い (i)</strong> as in "meet," <strong>う (u)</strong> as in "food," <strong>え (e)</strong> as in "pet," and <strong>お (o)</strong> as in "go." These five vowels form the foundation — every other hiragana is a consonant plus one of these vowels.</p>
+    <h2 id="five-vowels">The Five Vowels: Foundation of All Hiragana</h2>
+    <p>Japanese has only <strong>five vowel sounds</strong> — far fewer than English's 12-15 vowel sounds. This makes Japanese pronunciation remarkably consistent:</p>
 
-    <h2 id="consonant-rows">Consonant Rows</h2>
-    <p>Hiragana is organized into rows based on consonants: ka-row (かきくけこ), sa-row (さしすせそ), ta-row (たちつてと), na-row (なにぬねの), ha-row (はひふへほ), ma-row (まみむめも), ya-row (やゆよ), ra-row (らりるれろ), and wa-row (わを) plus the standalone ん (n).</p>
-    <p>Learn one row per day and review previous rows. By day 10, you will know all basic hiragana. Test yourself with our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a>.</p>
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#dc2626;color:#fff">
+          <th style="padding:10px 14px;text-align:center;font-size:1.3rem">Character</th>
+          <th style="padding:10px 14px;text-align:center">Romaji</th>
+          <th style="padding:10px 14px;text-align:left">Sound</th>
+          <th style="padding:10px 14px;text-align:left">Mnemonic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fef2f2"><td style="padding:10px 14px;text-align:center;font-size:1.5rem">あ</td><td style="padding:10px 14px;text-align:center;font-weight:bold">a</td><td style="padding:10px 14px">"a" as in f<strong>a</strong>ther</td><td style="padding:10px 14px">Looks like someone doing a karate move saying "Ahhh!"</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.5rem">い</td><td style="padding:10px 14px;text-align:center;font-weight:bold">i</td><td style="padding:10px 14px">"ee" as in m<strong>ee</strong>t</td><td style="padding:10px 14px">Two parallel lines like two "ee"ls standing side by side</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:10px 14px;text-align:center;font-size:1.5rem">う</td><td style="padding:10px 14px;text-align:center;font-weight:bold">u</td><td style="padding:10px 14px">"oo" as in f<strong>oo</strong>d</td><td style="padding:10px 14px">Looks like a mouth pursed to say "oo"</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.5rem">え</td><td style="padding:10px 14px;text-align:center;font-weight:bold">e</td><td style="padding:10px 14px">"e" as in p<strong>e</strong>t</td><td style="padding:10px 14px">Looks like an exotic bird with a crest</td></tr>
+        <tr style="background:#fef2f2"><td style="padding:10px 14px;text-align:center;font-size:1.5rem">お</td><td style="padding:10px 14px;text-align:center;font-weight:bold">o</td><td style="padding:10px 14px">"o" as in g<strong>o</strong></td><td style="padding:10px 14px">Looks like a golfer swinging — "Oh, nice shot!"</td></tr>
+      </tbody>
+    </table>
 
-    <h2 id="dakuten">Dakuten and Combinations</h2>
-    <p>Dakuten (゛) and handakuten (゜) modify existing characters to create new sounds. Adding dakuten to か makes が (ga), to さ makes ざ (za), to た makes だ (da), and to は makes ば (ba). Handakuten only applies to the ha-row, turning は into ぱ (pa).</p>
-    <p>Combination characters use small や, ゆ, or よ after certain characters: きゃ (kya), しゅ (shu), ちょ (cho). These extend your sound inventory significantly.</p>
+    <p>Every other hiragana character is a consonant + one of these five vowels. So once you internalize these five sounds, you have the building blocks for all 46 characters. Japanese pronunciation is consistent: あ always sounds the same, whether it is the first syllable or the last.</p>
 
-    <h2 id="practice">Practice Strategy</h2>
-    <p>The most effective approach combines recognition drills with writing practice. Use our <a href="/japanese/tools/hiragana-quiz/">quiz tool</a> for recognition, and our <a href="/japanese/tools/practice-sheet/">practice sheets</a> for writing. Start with 5 characters per session, adding more as previous ones become automatic. Read simple Japanese texts (children's books, NHK Easy News) to reinforce recognition in context.</p>
-    <p>Download our <a href="/japanese/downloads/">free kana chart PDF</a> to keep as a reference while studying.</p>
+    <h2 id="consonant-rows">The 10 Consonant Rows (Complete Chart)</h2>
+    <p>Hiragana is organized into rows, each based on a consonant sound combined with the five vowels. Here is the complete chart:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#1d4ed8;color:#fff">
+          <th style="padding:8px 10px;text-align:left">Row</th>
+          <th style="padding:8px 10px;text-align:center">-a</th>
+          <th style="padding:8px 10px;text-align:center">-i</th>
+          <th style="padding:8px 10px;text-align:center">-u</th>
+          <th style="padding:8px 10px;text-align:center">-e</th>
+          <th style="padding:8px 10px;text-align:center">-o</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff"><td style="padding:8px 10px;font-weight:bold">Vowels</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">あ a</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">い i</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">う u</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">え e</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">お o</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">K-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">か ka</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">き ki</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">く ku</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">け ke</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">こ ko</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 10px;font-weight:bold">S-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">さ sa</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">し shi</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">す su</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">せ se</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">そ so</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">T-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">た ta</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ち chi</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">つ tsu</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">て te</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">と to</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 10px;font-weight:bold">N-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">な na</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">に ni</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ぬ nu</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ね ne</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">の no</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">H-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">は ha</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ひ hi</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ふ fu</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">へ he</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ほ ho</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 10px;font-weight:bold">M-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ま ma</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">み mi</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">む mu</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">め me</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">も mo</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">Y-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">や ya</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem"></td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ゆ yu</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem"></td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">よ yo</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:8px 10px;font-weight:bold">R-row</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ら ra</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">り ri</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">る ru</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">れ re</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">ろ ro</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">W-row + N</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">わ wa</td><td style="padding:8px 10px;text-align:center;font-size:1.2rem"></td><td style="padding:8px 10px;text-align:center;font-size:1.2rem"></td><td style="padding:8px 10px;text-align:center;font-size:1.2rem"></td><td style="padding:8px 10px;text-align:center;font-size:1.2rem">を wo</td></tr>
+      </tbody>
+    </table>
+
+    <p>Plus the standalone character <strong>ん (n)</strong> — the only hiragana that does not end in a vowel. That gives us <strong>46 basic characters</strong> total.</p>
+    <p><strong>Irregular sounds to note:</strong> In the S-row, し is "shi" (not "si"). In the T-row, ち is "chi" and つ is "tsu." In the H-row, ふ is "fu" (not "hu"). These are the only exceptions to the regular consonant + vowel pattern.</p>
+
+    <h2 id="dakuten">Dakuten and Handakuten: Modified Sounds</h2>
+    <p>Adding two small marks (゛ dakuten) or a small circle (゜ handakuten) to existing characters creates 25 additional sounds:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#7c3aed;color:#fff">
+          <th style="padding:8px 10px;text-align:left">Base → Modified</th>
+          <th style="padding:8px 10px;text-align:center">-a</th>
+          <th style="padding:8px 10px;text-align:center">-i</th>
+          <th style="padding:8px 10px;text-align:center">-u</th>
+          <th style="padding:8px 10px;text-align:center">-e</th>
+          <th style="padding:8px 10px;text-align:center">-o</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f3ff"><td style="padding:8px 10px;font-weight:bold">K → G (゛)</td><td style="padding:8px 10px;text-align:center">が ga</td><td style="padding:8px 10px;text-align:center">ぎ gi</td><td style="padding:8px 10px;text-align:center">ぐ gu</td><td style="padding:8px 10px;text-align:center">げ ge</td><td style="padding:8px 10px;text-align:center">ご go</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">S → Z (゛)</td><td style="padding:8px 10px;text-align:center">ざ za</td><td style="padding:8px 10px;text-align:center">じ ji</td><td style="padding:8px 10px;text-align:center">ず zu</td><td style="padding:8px 10px;text-align:center">ぜ ze</td><td style="padding:8px 10px;text-align:center">ぞ zo</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 10px;font-weight:bold">T → D (゛)</td><td style="padding:8px 10px;text-align:center">だ da</td><td style="padding:8px 10px;text-align:center">ぢ ji</td><td style="padding:8px 10px;text-align:center">づ zu</td><td style="padding:8px 10px;text-align:center">で de</td><td style="padding:8px 10px;text-align:center">ど do</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">H → B (゛)</td><td style="padding:8px 10px;text-align:center">ば ba</td><td style="padding:8px 10px;text-align:center">び bi</td><td style="padding:8px 10px;text-align:center">ぶ bu</td><td style="padding:8px 10px;text-align:center">べ be</td><td style="padding:8px 10px;text-align:center">ぼ bo</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 10px;font-weight:bold">H → P (゜)</td><td style="padding:8px 10px;text-align:center">ぱ pa</td><td style="padding:8px 10px;text-align:center">ぴ pi</td><td style="padding:8px 10px;text-align:center">ぷ pu</td><td style="padding:8px 10px;text-align:center">ぺ pe</td><td style="padding:8px 10px;text-align:center">ぽ po</td></tr>
+      </tbody>
+    </table>
+
+    <p>The pattern is logical: dakuten (゛) voices the consonant (k→g, s→z, t→d, h→b), while handakuten (゜) only applies to the H-row, creating P-sounds. Since these are just modifications of characters you already know, they are quick to learn.</p>
+
+    <h2 id="combinations">Combination Characters (拗音)</h2>
+    <p>Combination hiragana use a small や (ya), ゆ (yu), or よ (yo) after certain characters to create blended sounds. These are essential for reading many common Japanese words.</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#059669;color:#fff">
+          <th style="padding:8px 10px;text-align:left">Base</th>
+          <th style="padding:8px 10px;text-align:center">+ や</th>
+          <th style="padding:8px 10px;text-align:center">+ ゆ</th>
+          <th style="padding:8px 10px;text-align:center">+ よ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#ecfdf5"><td style="padding:8px 10px;font-weight:bold">き ki</td><td style="padding:8px 10px;text-align:center">きゃ kya</td><td style="padding:8px 10px;text-align:center">きゅ kyu</td><td style="padding:8px 10px;text-align:center">きょ kyo</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">し shi</td><td style="padding:8px 10px;text-align:center">しゃ sha</td><td style="padding:8px 10px;text-align:center">しゅ shu</td><td style="padding:8px 10px;text-align:center">しょ sho</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 10px;font-weight:bold">ち chi</td><td style="padding:8px 10px;text-align:center">ちゃ cha</td><td style="padding:8px 10px;text-align:center">ちゅ chu</td><td style="padding:8px 10px;text-align:center">ちょ cho</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">に ni</td><td style="padding:8px 10px;text-align:center">にゃ nya</td><td style="padding:8px 10px;text-align:center">にゅ nyu</td><td style="padding:8px 10px;text-align:center">にょ nyo</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 10px;font-weight:bold">ひ hi</td><td style="padding:8px 10px;text-align:center">ひゃ hya</td><td style="padding:8px 10px;text-align:center">ひゅ hyu</td><td style="padding:8px 10px;text-align:center">ひょ hyo</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 10px;font-weight:bold">み mi</td><td style="padding:8px 10px;text-align:center">みゃ mya</td><td style="padding:8px 10px;text-align:center">みゅ myu</td><td style="padding:8px 10px;text-align:center">みょ myo</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 10px;font-weight:bold">り ri</td><td style="padding:8px 10px;text-align:center">りゃ rya</td><td style="padding:8px 10px;text-align:center">りゅ ryu</td><td style="padding:8px 10px;text-align:center">りょ ryo</td></tr>
+      </tbody>
+    </table>
+
+    <p>Common words using combinations: <strong>東京 (とうきょう tōkyō)</strong>, <strong>写真 (しゃしん shashin)</strong> = photo, <strong>牛乳 (ぎゅうにゅう gyūnyū)</strong> = milk. The small や/ゆ/よ is visibly smaller than a regular character — size matters here.</p>
+
+    <h2 id="learning-plan">10-Day Learning Plan</h2>
+
+    <div style="max-width:500px;margin:2rem auto;font-family:sans-serif">
+      <div style="background:#dc2626;color:#fff;text-align:center;padding:14px;font-weight:bold;border-radius:6px 6px 0 0;width:100%">Day 1-2: Vowels あいうえお + K-row かきくけこ</div>
+      <div style="background:#ef4444;color:#fff;text-align:center;padding:12px;font-weight:bold;width:90%;margin:0 auto">Day 3-4: S-row + T-row (10 characters)</div>
+      <div style="background:#f87171;color:#fff;text-align:center;padding:12px;font-weight:bold;width:80%;margin:0 auto">Day 5-6: N-row + H-row + M-row (15 chars)</div>
+      <div style="background:#fca5a5;color:#333;text-align:center;padding:12px;font-weight:bold;width:70%;margin:0 auto">Day 7-8: Y-row + R-row + W + ん</div>
+      <div style="background:#fecaca;color:#333;text-align:center;padding:10px;font-weight:bold;width:60%;margin:0 auto">Day 9: Dakuten + Handakuten</div>
+      <div style="background:#fee2e2;color:#333;text-align:center;padding:10px;font-weight:bold;width:50%;margin:0 auto;border-radius:0 0 6px 6px">Day 10: Combinations + Full Review ✓</div>
+    </div>
+
+    <p><strong>Daily routine (20-30 minutes):</strong></p>
+    <ul>
+      <li><strong>5 min:</strong> Review all previously learned characters (flashcards or <a href="/japanese/tools/hiragana-quiz/">quiz tool</a>)</li>
+      <li><strong>10 min:</strong> Learn new row — study each character's shape, say the sound aloud, note the mnemonic</li>
+      <li><strong>10 min:</strong> Writing practice — write each new character 10 times on <a href="/japanese/tools/practice-sheet/">practice sheets</a></li>
+      <li><strong>5 min:</strong> Mixed quiz combining new and old characters</li>
+    </ul>
+
+    <h2 id="mnemonics">Mnemonic Techniques for Tricky Characters</h2>
+    <p>Some hiragana characters are easy to confuse. Here are visual mnemonics for the trickiest ones:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#d97706;color:#fff">
+          <th style="padding:10px 14px;text-align:center;font-size:1.3rem">Pair</th>
+          <th style="padding:10px 14px;text-align:left">Difference</th>
+          <th style="padding:10px 14px;text-align:left">Memory Trick</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fffbeb"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">は ha ↔ ほ ho</td><td style="padding:10px 14px">ほ has an extra horizontal stroke</td><td style="padding:10px 14px">ほ has more strokes, like "ho ho ho" (Santa laughs more)</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">め me ↔ ぬ nu</td><td style="padding:10px 14px">ぬ has a loop at the end</td><td style="padding:10px 14px">ぬ's loop looks like "noodles" (nu → noodle loop)</td></tr>
+        <tr style="background:#fffbeb"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">わ wa ↔ れ re</td><td style="padding:10px 14px">れ has a tail curving right</td><td style="padding:10px 14px">れ reaches right like "reaching" (re → reach)</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">る ru ↔ ろ ro</td><td style="padding:10px 14px">る has a loop, ろ does not</td><td style="padding:10px 14px">る "ru"ns around in a loop</td></tr>
+      </tbody>
+    </table>
+
+    <p>The best mnemonics are personal — if you create your own visual story for a character, it sticks far better than using someone else's. Spend 30 seconds per character inventing a connection between the shape and the sound.</p>
+
+    <h2 id="practice">Practice Strategy and Resources</h2>
+    <p>The key to hiragana mastery is <strong>active recall</strong> — testing yourself rather than passively reviewing charts. Research shows active recall improves retention by 50-70% compared to re-reading.</p>
+    <ul>
+      <li><strong>Daily quizzes:</strong> Use our <a href="/japanese/tools/hiragana-quiz/">Hiragana Quiz</a> tool — it tests recognition with randomized characters and tracks your progress.</li>
+      <li><strong>Writing practice:</strong> Generate custom sheets with our <a href="/japanese/tools/practice-sheet/">Practice Sheet Generator</a>. Physical writing engages motor memory.</li>
+      <li><strong>Conversion practice:</strong> Use our <a href="/japanese/tools/kana-converter/">Kana Converter</a> to see how romaji translates to hiragana and back.</li>
+      <li><strong>Reading practice:</strong> Once you know all hiragana, read <a href="https://www3.nhk.or.jp/news/easy/" target="_blank" rel="noopener">NHK Easy News</a> — it uses furigana over all kanji so you can read everything in hiragana.</li>
+    </ul>
+    <p>After mastering hiragana, your next step is <a href="/japanese/blog/katakana-guide/">katakana</a> (which follows the exact same 46-character structure with different shapes). Then begin learning <a href="/japanese/blog/learn-kanji-effectively/">kanji</a> and <a href="/japanese/blog/japanese-particles-explained/">grammar particles</a>. For the complete roadmap, see our <a href="/japanese/blog/japanese-writing-systems-guide/">Japanese writing systems overview</a>.</p>
 
 </BlogLayout>

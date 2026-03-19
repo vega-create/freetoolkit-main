@@ -1,31 +1,203 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{ q: `When is katakana used?`, a: `Katakana is used for foreign loanwords, foreign names, onomatopoeia, scientific terms, and emphasis (similar to italics in English).` }, { q: `Why do some katakana look similar?`, a: `Characters like シ (shi) and ツ (tsu), or ソ (so) and ン (n) are notoriously confusing. Focus on the stroke direction — シ strokes go upward while ツ strokes go downward.` }];
-const relatedTools = [{ name: "Katakana Quiz", url: "/japanese/tools/katakana-quiz/" }, { name: "Kana Converter", url: "/japanese/tools/kana-converter/" }];
-const headings = [{ depth: 2, slug: "when-used", text: "When is Katakana Used?" }, { depth: 2, slug: "confusing-pairs", text: "Confusing Pairs" }, { depth: 2, slug: "loanwords", text: "Reading Loanwords" }];
+const faq = [
+  { q: `When is katakana used in Japanese?`, a: `Katakana serves five main purposes: (1) foreign loanwords from English and other languages (コーヒー coffee, パソコン personal computer), (2) foreign names and place names (アメリカ America), (3) onomatopoeia and sound effects (ドキドキ heartbeat, ガタガタ rattling), (4) scientific and technical terms, and (5) emphasis — similar to italics or bold in English writing.` },
+  { q: `Why do some katakana characters look so similar?`, a: `The most confusing pairs are シ(shi)/ツ(tsu) and ソ(so)/ン(n). The key difference is stroke direction: シ strokes start from the left and sweep up-right; ツ strokes start from the top and sweep down-left. Similarly, ソ has a stroke going down-left while ン goes up-right. Practice these pairs specifically until automatic.` },
+  { q: `How long does it take to learn katakana?`, a: `If you already know hiragana, katakana takes about 1-2 weeks since the sounds are identical — you only need to learn new shapes. The challenging part is not memorization but reading speed, since katakana appears less frequently than hiragana. Regular reading practice with loanwords builds fluency over 1-2 months.` },
+  { q: `Is katakana harder than hiragana?`, a: `Most learners find katakana slightly harder because: (1) the characters are more angular and some look very similar (シ/ツ, ソ/ン), (2) you encounter katakana less often so you get less natural practice, and (3) reading loanwords requires mentally "translating" Japanese pronunciation back to the source language. However, the effort is absolutely worthwhile — katakana unlocks thousands of English-origin words.` },
+  { q: `Can Japanese people read romaji instead of katakana?`, a: `Japanese people can generally read romaji but strongly prefer kana. Writing Japanese in romaji is considered childish or foreign. All Japanese signage, menus, advertisements, and websites use katakana for foreign words. Not knowing katakana means you cannot read menus, product labels, or navigate daily life in Japan.` }
+];
+const relatedTools = [
+  { name: "Katakana Quiz", url: "/japanese/tools/katakana-quiz/" },
+  { name: "Kana Converter", url: "/japanese/tools/kana-converter/" },
+  { name: "Practice Sheet", url: "/japanese/tools/practice-sheet/" }
+];
+const headings = [
+  { depth: 2, slug: "what-is", text: "What is Katakana and Why Does It Matter?" },
+  { depth: 2, slug: "complete-chart", text: "Complete Katakana Chart (46 Characters)" },
+  { depth: 2, slug: "confusing-pairs", text: "The 5 Most Confusing Katakana Pairs" },
+  { depth: 2, slug: "special-sounds", text: "Extended Katakana: Sounds That Don't Exist in Hiragana" },
+  { depth: 2, slug: "loanwords", text: "Reading Loanwords: The Decode Technique" },
+  { depth: 2, slug: "common-loanwords", text: "100 Most Common Katakana Loanwords" },
+  { depth: 2, slug: "learning-strategy", text: "Learning Strategy: Hiragana Learners' Shortcut" },
+  { depth: 2, slug: "resources", text: "Practice Resources" }
+];
 ---
 <BlogLayout
-  title="Katakana Made Easy: Learn All 46 Characters"
-  description="Complete guide to learning katakana — when it is used, how to read it, and strategies for mastering foreign loanwords."
+  title="Katakana Made Easy: Complete Guide to All 46 Characters"
+  description="Master all 46 katakana characters with complete charts, confusing pair solutions, 100 common loanwords, and the decode technique for reading foreign words in Japanese."
   language="japanese"
   category="kana"
-  tags={["katakana", "beginner", "kana", "loanwords"]}
+  tags={["katakana", "beginner", "kana", "loanwords", "writing"]}
   publishDate="2026-02-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
-    <h2 id="when-used">When is Katakana Used?</h2>
-    <p>Katakana serves several specific purposes in Japanese writing. Its primary use is for foreign loanwords: コーヒー (koohii, coffee), レストラン (resutoran, restaurant), パソコン (pasokon, personal computer). It is also used for foreign personal and place names, onomatopoeia, scientific terminology, and occasionally for emphasis.</p>
-    <p>In modern Japan, katakana words are everywhere — menus, advertisements, technology, fashion. Learning katakana unlocks a huge vocabulary of words borrowed from English and other languages.</p>
+    <p>Walk into any convenience store in Japan and you are surrounded by katakana: サンドイッチ (sandwich), コーヒー (coffee), チョコレート (chocolate). According to the National Institute for Japanese Language and Linguistics, modern Japanese text contains approximately <strong>5-10% katakana</strong>, but in advertising, menus, and product labels, that percentage jumps to <strong>30-50%</strong>. Without katakana, you literally cannot order food or read product labels in Japan.</p>
 
-    <h2 id="confusing-pairs">Confusing Pairs</h2>
-    <p>Several katakana characters look remarkably similar and trip up beginners. The most infamous pairs: <strong>シ (shi) vs ツ (tsu)</strong> — look at stroke angle; シ strokes are more horizontal while ツ strokes are more vertical. <strong>ソ (so) vs ン (n)</strong> — similar distinction in stroke direction. <strong>ウ (u) vs フ (fu)</strong> — ウ has a top stroke that フ lacks.</p>
-    <p>Practice these confusing pairs specifically with our <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> until they become automatic.</p>
+    <h2 id="what-is">What is Katakana and Why Does It Matter?</h2>
+    <p>Katakana (片仮名) is the second Japanese syllabary, representing the <strong>exact same 46 sounds</strong> as hiragana but with different character shapes. Think of it like uppercase and lowercase in English — different forms, same sounds.</p>
 
-    <h2 id="loanwords">Reading Loanwords</h2>
-    <p>Japanese adapts foreign words to fit its sound system, so they may not be immediately recognizable. The key is to read them aloud at natural speed: テレビ (te-re-bi → television), アイスクリーム (a-i-su-ku-rii-mu → ice cream), チョコレート (cho-ko-ree-to → chocolate). Once you hear the rhythm, the English origin becomes clear.</p>
-    <p>Use our <a href="/japanese/tools/kana-converter/">Kana Converter</a> to check any katakana word, and download our <a href="/japanese/downloads/">free kana chart</a> for quick reference.</p>
+    <div style="max-width:500px;margin:2rem auto;font-family:sans-serif">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <div style="flex:1;min-width:200px;border:2px solid #dc2626;border-radius:8px;padding:16px">
+          <div style="background:#dc2626;color:#fff;padding:8px 12px;text-align:center;font-weight:bold;margin:-16px -16px 12px -16px;border-radius:6px 6px 0 0">ひらがな Hiragana</div>
+          <ul style="margin:0;padding-left:18px;font-size:0.9rem;line-height:1.8">
+            <li>Rounded, flowing shapes</li>
+            <li>Grammar particles</li>
+            <li>Native Japanese words</li>
+            <li>Verb/adjective endings</li>
+            <li>~35-40% of text</li>
+          </ul>
+        </div>
+        <div style="flex:1;min-width:200px;border:2px solid #2563eb;border-radius:8px;padding:16px">
+          <div style="background:#2563eb;color:#fff;padding:8px 12px;text-align:center;font-weight:bold;margin:-16px -16px 12px -16px;border-radius:6px 6px 0 0">カタカナ Katakana</div>
+          <ul style="margin:0;padding-left:18px;font-size:0.9rem;line-height:1.8">
+            <li>Angular, sharp shapes</li>
+            <li>Foreign loanwords</li>
+            <li>Foreign names</li>
+            <li>Onomatopoeia/emphasis</li>
+            <li>~5-10% of text</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p>Katakana is used for five main purposes: <strong>foreign loanwords</strong> (the largest category), foreign names, onomatopoeia, scientific terms, and emphasis. In modern Japanese, an estimated <strong>10-15% of the total vocabulary</strong> consists of loanwords — and that percentage grows every year as Japanese absorbs new English technology and pop culture terms.</p>
+
+    <h2 id="complete-chart">Complete Katakana Chart (46 Characters)</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#2563eb;color:#fff">
+          <th style="padding:8px 10px;text-align:left">Row</th>
+          <th style="padding:8px 10px;text-align:center">-a</th>
+          <th style="padding:8px 10px;text-align:center">-i</th>
+          <th style="padding:8px 10px;text-align:center">-u</th>
+          <th style="padding:8px 10px;text-align:center">-e</th>
+          <th style="padding:8px 10px;text-align:center">-o</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff"><td style="padding:7px 10px;font-weight:bold">Vowels</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ア a</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">イ i</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ウ u</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">エ e</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">オ o</td></tr>
+        <tr style="background:#fff"><td style="padding:7px 10px;font-weight:bold">K</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">カ ka</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">キ ki</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ク ku</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ケ ke</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">コ ko</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:7px 10px;font-weight:bold">S</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">サ sa</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">シ shi</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ス su</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">セ se</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ソ so</td></tr>
+        <tr style="background:#fff"><td style="padding:7px 10px;font-weight:bold">T</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">タ ta</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">チ chi</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ツ tsu</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">テ te</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ト to</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:7px 10px;font-weight:bold">N</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ナ na</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ニ ni</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヌ nu</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ネ ne</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ノ no</td></tr>
+        <tr style="background:#fff"><td style="padding:7px 10px;font-weight:bold">H</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ハ ha</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヒ hi</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">フ fu</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヘ he</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ホ ho</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:7px 10px;font-weight:bold">M</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">マ ma</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ミ mi</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ム mu</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">メ me</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">モ mo</td></tr>
+        <tr style="background:#fff"><td style="padding:7px 10px;font-weight:bold">Y</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヤ ya</td><td style="padding:7px 10px;text-align:center"></td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ユ yu</td><td style="padding:7px 10px;text-align:center"></td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヨ yo</td></tr>
+        <tr style="background:#eff6ff"><td style="padding:7px 10px;font-weight:bold">R</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ラ ra</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">リ ri</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ル ru</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">レ re</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ロ ro</td></tr>
+        <tr style="background:#fff"><td style="padding:7px 10px;font-weight:bold">W + N</td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ワ wa</td><td style="padding:7px 10px;text-align:center"></td><td style="padding:7px 10px;text-align:center"></td><td style="padding:7px 10px;text-align:center"></td><td style="padding:7px 10px;text-align:center;font-size:1.2rem">ヲ wo</td></tr>
+      </tbody>
+    </table>
+    <p>Plus standalone <strong>ン (n)</strong>. Total: 46 basic characters — identical count and sound system to hiragana.</p>
+
+    <h2 id="confusing-pairs">The 5 Most Confusing Katakana Pairs</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#d97706;color:#fff">
+          <th style="padding:10px 14px;text-align:center;font-size:1.2rem">Pair</th>
+          <th style="padding:10px 14px;text-align:left">Key Difference</th>
+          <th style="padding:10px 14px;text-align:left">Memory Trick</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fffbeb"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">シ shi ↔ ツ tsu</td><td style="padding:10px 14px">シ strokes go up-right; ツ strokes go down-left</td><td style="padding:10px 14px">シ smiles sideways :) ツ frowns :(</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">ソ so ↔ ン n</td><td style="padding:10px 14px">ソ stroke goes down; ン stroke goes up</td><td style="padding:10px 14px">ソ "so" down, ン goes "n-up"</td></tr>
+        <tr style="background:#fffbeb"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">ウ u ↔ フ fu</td><td style="padding:10px 14px">ウ has a top horizontal stroke</td><td style="padding:10px 14px">ウ wears a hat on top</td></tr>
+        <tr style="background:#fff"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">ク ku ↔ タ ta</td><td style="padding:10px 14px">タ has an extra horizontal stroke</td><td style="padding:10px 14px">タ has a "ta"ble (extra line)</td></tr>
+        <tr style="background:#fffbeb"><td style="padding:10px 14px;text-align:center;font-size:1.3rem">マ ma ↔ ム mu</td><td style="padding:10px 14px">マ is angular; ム is rounder</td><td style="padding:10px 14px">マ looks like "mama" with straight arms</td></tr>
+      </tbody>
+    </table>
+
+    <p>The シ/ツ distinction is the single most common katakana mistake. Practice this specific pair for 5 minutes daily until it becomes automatic. Our <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> has a confusing pairs mode for exactly this purpose.</p>
+
+    <h2 id="special-sounds">Extended Katakana: Sounds That Don't Exist in Hiragana</h2>
+    <p>Because katakana must represent foreign sounds that do not exist in native Japanese, it has special combinations not found in hiragana:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#7c3aed;color:#fff">
+          <th style="padding:10px 14px;text-align:center">Katakana</th>
+          <th style="padding:10px 14px;text-align:center">Sound</th>
+          <th style="padding:10px 14px;text-align:left">Used In</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px;text-align:center;font-size:1.1rem">ティ</td><td style="padding:8px 14px;text-align:center">ti</td><td style="padding:8px 14px">パーティー (party), ティッシュ (tissue)</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px;text-align:center;font-size:1.1rem">ディ</td><td style="padding:8px 14px;text-align:center">di</td><td style="padding:8px 14px">ディズニー (Disney), ディナー (dinner)</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px;text-align:center;font-size:1.1rem">ファ</td><td style="padding:8px 14px;text-align:center">fa</td><td style="padding:8px 14px">ファン (fan), ソファ (sofa)</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px;text-align:center;font-size:1.1rem">ヴァ</td><td style="padding:8px 14px;text-align:center">va</td><td style="padding:8px 14px">ヴァイオリン (violin)</td></tr>
+        <tr style="background:#f5f3ff"><td style="padding:8px 14px;text-align:center;font-size:1.1rem">ウィ</td><td style="padding:8px 14px;text-align:center">wi</td><td style="padding:8px 14px">ウィキペディア (Wikipedia)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Also important: the long vowel mark <strong>ー</strong> extends the previous vowel. コーヒー (kō-hī, coffee) has two long vowels. This mark is unique to katakana — hiragana uses additional vowel characters instead.</p>
+
+    <h2 id="loanwords">Reading Loanwords: The Decode Technique</h2>
+    <p>Japanese adapts foreign words to its sound system, which can make them hard to recognize at first. The <strong>decode technique</strong>: read the katakana aloud at natural speaking speed, and the English origin usually becomes clear.</p>
+
+    <div style="max-width:500px;margin:2rem auto">
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:160px;font-size:1.1rem">テレビ te-re-bi</span><div style="display:inline-block;background:#2563eb;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ television</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:160px;font-size:1.1rem">アイスクリーム</span><div style="display:inline-block;background:#3b82f6;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ ice cream</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:160px;font-size:1.1rem">チョコレート</span><div style="display:inline-block;background:#60a5fa;color:#fff;padding:4px 12px;border-radius:4px;font-weight:bold">→ chocolate</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:160px;font-size:1.1rem">エレベーター</span><div style="display:inline-block;background:#93c5fd;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">→ elevator</div></div>
+      <div style="margin-bottom:8px"><span style="display:inline-block;width:160px;font-size:1.1rem">スマートフォン</span><div style="display:inline-block;background:#bfdbfe;color:#333;padding:4px 12px;border-radius:4px;font-weight:bold">→ smartphone</div></div>
+    </div>
+
+    <p><strong>Common sound adaptations to know:</strong></p>
+    <ul>
+      <li>English "L" becomes "R": ラーメン (rāmen from "ramen"), ロンドン (Rondon from "London")</li>
+      <li>English "V" becomes "B": テレビ (terebi from "television")</li>
+      <li>Consonant clusters get a vowel inserted: ス(su)トリート from "street"</li>
+      <li>Final consonants get a vowel: ドッグ (doggu from "dog")</li>
+    </ul>
+
+    <h2 id="common-loanwords">100 Most Common Katakana Loanwords</h2>
+    <p>Here are the most frequently encountered katakana words organized by category:</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem">
+      <thead>
+        <tr style="background:#059669;color:#fff">
+          <th style="padding:10px 14px;text-align:left">Category</th>
+          <th style="padding:10px 14px;text-align:left">Common Words</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>Food & Drink</strong></td><td style="padding:8px 14px">コーヒー coffee · ビール beer · パン bread · サラダ salad · ケーキ cake · ジュース juice</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Technology</strong></td><td style="padding:8px 14px">パソコン PC · スマホ smartphone · インターネット internet · メール email · アプリ app</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>Places</strong></td><td style="padding:8px 14px">レストラン restaurant · ホテル hotel · デパート department store · コンビニ convenience store</td></tr>
+        <tr style="background:#fff"><td style="padding:8px 14px"><strong>Daily Life</strong></td><td style="padding:8px 14px">トイレ toilet · エレベーター elevator · タクシー taxi · バス bus · ニュース news</td></tr>
+        <tr style="background:#ecfdf5"><td style="padding:8px 14px"><strong>Fashion</strong></td><td style="padding:8px 14px">シャツ shirt · ズボン pants · ジーンズ jeans · サイズ size · デザイン design</td></tr>
+      </tbody>
+    </table>
+
+    <p>Learning these common loanwords serves double duty: you practice katakana reading while building practical vocabulary for daily life in Japan.</p>
+
+    <h2 id="learning-strategy">Learning Strategy: Hiragana Learners' Shortcut</h2>
+    <p>If you already know <a href="/japanese/blog/hiragana-guide/">hiragana</a>, learning katakana is mainly about mapping new shapes to sounds you already know:</p>
+
+    <div style="max-width:500px;margin:2rem auto;font-family:sans-serif">
+      <div style="background:#2563eb;color:#fff;text-align:center;padding:14px;font-weight:bold;border-radius:6px 6px 0 0;width:100%">Day 1-3: Vowels + K/S/T rows (20 characters)</div>
+      <div style="background:#3b82f6;color:#fff;text-align:center;padding:12px;font-weight:bold;width:85%;margin:0 auto">Day 4-5: N/H/M rows (15 characters)</div>
+      <div style="background:#60a5fa;color:#fff;text-align:center;padding:12px;font-weight:bold;width:70%;margin:0 auto">Day 6-7: Y/R/W + ン (11 characters)</div>
+      <div style="background:#93c5fd;color:#333;text-align:center;padding:10px;font-weight:bold;width:55%;margin:0 auto">Day 8-9: Dakuten + Special sounds</div>
+      <div style="background:#bfdbfe;color:#333;text-align:center;padding:10px;font-weight:bold;width:40%;margin:0 auto;border-radius:0 0 6px 6px">Day 10: Loanword reading practice ✓</div>
+    </div>
+
+    <p><strong>Best practice activity:</strong> Walk through a Japanese supermarket (or browse an online Japanese store) and try to read every katakana word you see. Most product names and labels are in katakana. This real-world practice builds fluency faster than any worksheet.</p>
+
+    <h2 id="resources">Practice Resources</h2>
+    <ul>
+      <li><strong>Quiz yourself:</strong> <a href="/japanese/tools/katakana-quiz/">Katakana Quiz</a> with randomized characters and confusing-pair focus mode</li>
+      <li><strong>Writing practice:</strong> <a href="/japanese/tools/practice-sheet/">Practice Sheet Generator</a> for katakana handwriting</li>
+      <li><strong>Conversion tool:</strong> <a href="/japanese/tools/kana-converter/">Kana Converter</a> to check any word's katakana form</li>
+      <li><strong>Reading practice:</strong> Browse <a href="https://www.nhk.or.jp/lesson/english/" target="_blank" rel="noopener">NHK World Easy Japanese</a> for beginner-friendly content</li>
+    </ul>
+    <p>After mastering katakana, you are ready for <a href="/japanese/blog/japanese-particles-explained/">grammar particles</a>, <a href="/japanese/blog/learn-kanji-effectively/">kanji study</a>, and the <a href="/japanese/blog/japanese-writing-systems-guide/">complete writing systems overview</a>. For a structured study path, see our <a href="/japanese/blog/jlpt-preparation-guide/">JLPT preparation guide</a>.</p>
 
 </BlogLayout>
