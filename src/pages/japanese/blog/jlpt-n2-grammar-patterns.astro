@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How many grammar points are on N2?", "a": "The N2 test covers approximately 200 grammar patterns, but about 50 appear most frequently."}, {"q": "What is the difference between N3 and N2 grammar?", "a": "N2 grammar expresses more nuanced meanings — cause and effect, contrast, degree, and formal written expressions."}, {"q": "How should I practice N2 grammar?", "a": "Read authentic Japanese articles and identify grammar patterns in context. Create example sentences for each pattern using your own experiences."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Particle Guide", "url": "/japanese/tools/particle-guide/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "N2 Grammar Overview"}, {"depth": 2, "slug": "cause-effect", "text": "Cause and Effect Patterns"}, {"depth": 2, "slug": "contrast", "text": "Contrast Patterns"}, {"depth": 2, "slug": "degree", "text": "Degree and Extent"}, {"depth": 2, "slug": "formal", "text": "Formal Written Expressions"}, {"depth": 2, "slug": "tips", "text": "Study Tips"}];
+const faq = [
+  {"q": "How many grammar points are on the JLPT N2?", "a": "The N2 test covers approximately 200 grammar patterns, but about 50 appear most frequently. Focus on mastering the high-frequency patterns first, then expand your range as the exam approaches."},
+  {"q": "What is the difference between N3 and N2 grammar?", "a": "N2 grammar expresses more nuanced meanings — cause and effect, contrast, degree, formal written expressions, and subtle emotional attitudes. N3 grammar covers basic sentence patterns while N2 adds layers of sophistication."},
+  {"q": "How should I practice N2 grammar?", "a": "Read authentic Japanese articles and identify grammar patterns in context. Create example sentences for each pattern using your own experiences. Then practice with mock test questions to build test-taking speed."},
+  {"q": "Can I pass N2 without memorizing all grammar patterns?", "a": "You need strong grammar knowledge, but understanding patterns in context matters more than pure memorization. If you master the top 50 patterns thoroughly, you can often deduce unfamiliar patterns from context on the test."},
+  {"q": "How long does it take to prepare for N2 from N3?", "a": "Most learners need 6-12 months of consistent study between N3 and N2. The jump is significant — N2 requires much more reading ability and nuanced grammar understanding."}
+];
+const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Particle Guide", "url": "/japanese/tools/particle-guide/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}];
+const headings = [
+  {"depth": 2, "slug": "overview", "text": "N2 Grammar Overview"},
+  {"depth": 2, "slug": "cause-effect", "text": "Cause and Effect Patterns"},
+  {"depth": 2, "slug": "contrast", "text": "Contrast and Comparison Patterns"},
+  {"depth": 2, "slug": "degree", "text": "Degree and Extent Patterns"},
+  {"depth": 2, "slug": "formal", "text": "Formal and Written Expressions"},
+  {"depth": 2, "slug": "attitude", "text": "Speaker Attitude and Emotion"},
+  {"depth": 2, "slug": "time", "text": "Time and Condition Patterns"},
+  {"depth": 2, "slug": "tips", "text": "Study Strategy for N2 Grammar"}
+];
 ---
 <BlogLayout
   title="JLPT N2 Grammar: 50 Must-Know Patterns with Examples"
@@ -16,23 +31,174 @@ const headings = [{"depth": 2, "slug": "overview", "text": "N2 Grammar Overview"
   headings={headings}
 >
 
-    <h2 id="overview">N2 Grammar Overview</h2>
-    <p>Preparing effectively for the JLPT requires understanding both the content and the test format. This guide covers the essential knowledge you need along with practical strategies for maximizing your score.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="cause-effect">Cause and Effect Patterns</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="contrast">Contrast Patterns</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="degree">Degree and Extent</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="formal">Formal Written Expressions</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="tips">Study Tips</h2>
-    <p>The key to JLPT success is combining systematic study with regular practice using authentic materials. Past exam questions are your most valuable resource — work through at least 3-5 full practice tests before your exam date.</p>
-    <p>Beyond the exam, the skills you develop through JLPT preparation — reading comprehension, listening strategies, grammar analysis — transfer directly to real-world Japanese use. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/particle-guide/">Particle Guide</a> to reinforce what you have learned.</p>
+  <p>The JLPT N2 grammar section is where many test-takers struggle. Moving from N3 to N2 requires mastering patterns that express nuanced meanings — subtle cause-and-effect relationships, degrees of certainty, formal written language, and speaker attitudes. This guide covers the 50 most frequently tested N2 grammar patterns organized by category, with clear explanations, example sentences, and usage notes. Whether you are preparing for the test or want to level up your reading comprehension, these patterns are essential for intermediate-to-advanced Japanese.</p>
+
+  <h2 id="overview">N2 Grammar Overview</h2>
+  <p>The JLPT N2 grammar section (文法) contains approximately 200 grammar patterns that you may encounter. The test format includes sentence completion, sentence ordering, and passage-based grammar questions. Time pressure is real — you need to recognize patterns quickly.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Category</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Number of Patterns</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Test Frequency</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Difficulty</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Cause and effect</td><td style="padding:10px; border:1px solid #ddd;">~15 patterns</td><td style="padding:10px; border:1px solid #ddd;">Very high</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Contrast and comparison</td><td style="padding:10px; border:1px solid #ddd;">~12 patterns</td><td style="padding:10px; border:1px solid #ddd;">High</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Degree and extent</td><td style="padding:10px; border:1px solid #ddd;">~10 patterns</td><td style="padding:10px; border:1px solid #ddd;">High</td><td style="padding:10px; border:1px solid #ddd;">Medium-High</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Formal/written expressions</td><td style="padding:10px; border:1px solid #ddd;">~15 patterns</td><td style="padding:10px; border:1px solid #ddd;">Very high</td><td style="padding:10px; border:1px solid #ddd;">High</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Speaker attitude</td><td style="padding:10px; border:1px solid #ddd;">~10 patterns</td><td style="padding:10px; border:1px solid #ddd;">Medium</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Time and condition</td><td style="padding:10px; border:1px solid #ddd;">~10 patterns</td><td style="padding:10px; border:1px solid #ddd;">High</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="cause-effect">Cause and Effect Patterns</h2>
+  <p>These patterns express reasons, causes, and results — why something happened or what something led to. They appear constantly on the N2 test and in real Japanese writing.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Notes</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～おかげで</td><td style="padding:10px; border:1px solid #ddd;">thanks to ~</td><td style="padding:10px; border:1px solid #ddd;">先生のおかげで合格した (I passed thanks to my teacher)</td><td style="padding:10px; border:1px solid #ddd;">Positive result only</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～せいで</td><td style="padding:10px; border:1px solid #ddd;">because of ~ (blame)</td><td style="padding:10px; border:1px solid #ddd;">雨のせいで試合が中止になった (The game was canceled because of rain)</td><td style="padding:10px; border:1px solid #ddd;">Negative result only</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～ばかりに</td><td style="padding:10px; border:1px solid #ddd;">just because ~</td><td style="padding:10px; border:1px solid #ddd;">遅刻したばかりに怒られた (Got scolded just because I was late)</td><td style="padding:10px; border:1px solid #ddd;">Regrettable result</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～あまり</td><td style="padding:10px; border:1px solid #ddd;">so much that ~</td><td style="padding:10px; border:1px solid #ddd;">嬉しさのあまり泣いてしまった (Was so happy that I cried)</td><td style="padding:10px; border:1px solid #ddd;">Excessive degree → result</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～ものだから</td><td style="padding:10px; border:1px solid #ddd;">because ~ (excuse)</td><td style="padding:10px; border:1px solid #ddd;">電車が遅れたものだから遅刻した (I was late because the train was delayed)</td><td style="padding:10px; border:1px solid #ddd;">Explaining/excusing</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～以上は</td><td style="padding:10px; border:1px solid #ddd;">since/now that ~</td><td style="padding:10px; border:1px solid #ddd;">約束した以上は守るべきだ (Since you promised, you should keep it)</td><td style="padding:10px; border:1px solid #ddd;">Obligation follows</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～からには</td><td style="padding:10px; border:1px solid #ddd;">now that ~</td><td style="padding:10px; border:1px solid #ddd;">やるからには最後まで頑張る (Now that I'm doing it, I'll try my best)</td><td style="padding:10px; border:1px solid #ddd;">Strong determination</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～につき</td><td style="padding:10px; border:1px solid #ddd;">due to/because of</td><td style="padding:10px; border:1px solid #ddd;">工事中につき通行止め (Closed due to construction)</td><td style="padding:10px; border:1px solid #ddd;">Formal/written</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="contrast">Contrast and Comparison Patterns</h2>
+  <p>These patterns express contrast between expectations and reality, or compare different situations. They add nuance to your writing and are heavily tested.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Notes</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～にもかかわらず</td><td style="padding:10px; border:1px solid #ddd;">despite ~</td><td style="padding:10px; border:1px solid #ddd;">努力にもかかわらず不合格だった (Despite my effort, I failed)</td><td style="padding:10px; border:1px solid #ddd;">Formal, strong contrast</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～くせに</td><td style="padding:10px; border:1px solid #ddd;">even though ~ (critical)</td><td style="padding:10px; border:1px solid #ddd;">知らないくせに偉そうに言うな (Don't act superior when you don't even know)</td><td style="padding:10px; border:1px solid #ddd;">Criticizing</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～一方で</td><td style="padding:10px; border:1px solid #ddd;">on the other hand</td><td style="padding:10px; border:1px solid #ddd;">都会は便利な一方で空気が悪い (Cities are convenient but the air is bad)</td><td style="padding:10px; border:1px solid #ddd;">Balanced contrast</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～反面</td><td style="padding:10px; border:1px solid #ddd;">on the flip side</td><td style="padding:10px; border:1px solid #ddd;">自由な反面責任も大きい (Free, but responsibility is also great)</td><td style="padding:10px; border:1px solid #ddd;">Two sides of same thing</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～どころか</td><td style="padding:10px; border:1px solid #ddd;">far from ~</td><td style="padding:10px; border:1px solid #ddd;">簡単どころか非常に難しかった (Far from easy, it was extremely difficult)</td><td style="padding:10px; border:1px solid #ddd;">Reality opposite of expected</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～ものの</td><td style="padding:10px; border:1px solid #ddd;">although ~</td><td style="padding:10px; border:1px solid #ddd;">買ったものの一度も使っていない (Bought it but never used it once)</td><td style="padding:10px; border:1px solid #ddd;">Concession + unexpected result</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="degree">Degree and Extent Patterns</h2>
+  <p>These patterns describe the degree, limit, or extent of something. They help express how much, to what degree, or within what range.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～ほど</td><td style="padding:10px; border:1px solid #ddd;">to the extent that ~</td><td style="padding:10px; border:1px solid #ddd;">泣きたいほど嬉しかった (So happy I could cry)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～くらい/ぐらい</td><td style="padding:10px; border:1px solid #ddd;">to the point of ~</td><td style="padding:10px; border:1px solid #ddd;">死ぬぐらい忙しい (So busy I could die)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～に限り</td><td style="padding:10px; border:1px solid #ddd;">limited to ~</td><td style="padding:10px; border:1px solid #ddd;">会員に限り割引あり (Discount for members only)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～に限って</td><td style="padding:10px; border:1px solid #ddd;">only when ~</td><td style="padding:10px; border:1px solid #ddd;">急いでいるときに限って電車が遅れる (Trains are late only when I'm in a hurry)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～を問わず</td><td style="padding:10px; border:1px solid #ddd;">regardless of ~</td><td style="padding:10px; border:1px solid #ddd;">年齢を問わず参加できる (Anyone can participate regardless of age)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～にわたって</td><td style="padding:10px; border:1px solid #ddd;">spanning/over ~</td><td style="padding:10px; border:1px solid #ddd;">3日間にわたって会議が行われた (The meeting spanned 3 days)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～に関して</td><td style="padding:10px; border:1px solid #ddd;">regarding ~</td><td style="padding:10px; border:1px solid #ddd;">この件に関して説明します (I will explain regarding this matter)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="formal">Formal and Written Expressions</h2>
+  <p>N2 introduces many patterns used primarily in formal writing, news articles, and business Japanese. These rarely appear in casual conversation but are critical for the reading section.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～において</td><td style="padding:10px; border:1px solid #ddd;">at/in (formal "で")</td><td style="padding:10px; border:1px solid #ddd;">会議は東京において行われる (The meeting will be held in Tokyo)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～に際して</td><td style="padding:10px; border:1px solid #ddd;">on the occasion of ~</td><td style="padding:10px; border:1px solid #ddd;">卒業に際してお祝いの言葉 (Congratulatory words on the occasion of graduation)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～に基づいて</td><td style="padding:10px; border:1px solid #ddd;">based on ~</td><td style="padding:10px; border:1px solid #ddd;">調査に基づいて報告する (Report based on the investigation)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～にしたがって</td><td style="padding:10px; border:1px solid #ddd;">as ~ / according to ~</td><td style="padding:10px; border:1px solid #ddd;">時間が経つにしたがって落ち着いた (Calmed down as time passed)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～にともなって</td><td style="padding:10px; border:1px solid #ddd;">along with ~</td><td style="padding:10px; border:1px solid #ddd;">人口増加にともなって問題が増えた (Problems increased along with population growth)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～をはじめ</td><td style="padding:10px; border:1px solid #ddd;">starting with ~</td><td style="padding:10px; border:1px solid #ddd;">東京をはじめ各地で開催される (Held in Tokyo and other locations)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～上で</td><td style="padding:10px; border:1px solid #ddd;">in terms of / for</td><td style="padding:10px; border:1px solid #ddd;">仕事をする上で大切なこと (Important things for doing work)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～次第</td><td style="padding:10px; border:1px solid #ddd;">as soon as / depends on</td><td style="padding:10px; border:1px solid #ddd;">届き次第ご連絡します (Will contact you as soon as it arrives)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="attitude">Speaker Attitude and Emotion</h2>
+  <p>These patterns convey the speaker's feelings, judgments, or attitudes toward the situation.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～ざるを得ない</td><td style="padding:10px; border:1px solid #ddd;">cannot help but ~</td><td style="padding:10px; border:1px solid #ddd;">認めざるを得ない (Cannot help but admit it)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～わけがない</td><td style="padding:10px; border:1px solid #ddd;">there's no way ~</td><td style="padding:10px; border:1px solid #ddd;">そんなことがあるわけがない (There's no way that's true)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～にちがいない</td><td style="padding:10px; border:1px solid #ddd;">must be / no doubt</td><td style="padding:10px; border:1px solid #ddd;">彼は日本人にちがいない (He must be Japanese)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～っぽい</td><td style="padding:10px; border:1px solid #ddd;">-ish / tends to be</td><td style="padding:10px; border:1px solid #ddd;">最近忘れっぽくなった (I've become forgetful lately)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～気味</td><td style="padding:10px; border:1px solid #ddd;">slightly / a touch of</td><td style="padding:10px; border:1px solid #ddd;">風邪気味で休んだ (Took off work feeling a bit sick)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～がちだ</td><td style="padding:10px; border:1px solid #ddd;">tend to ~ (negative)</td><td style="padding:10px; border:1px solid #ddd;">冬は運動不足になりがちだ (In winter, people tend to lack exercise)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="time">Time and Condition Patterns</h2>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～たとたん</td><td style="padding:10px; border:1px solid #ddd;">the moment ~</td><td style="padding:10px; border:1px solid #ddd;">ドアを開けたとたん猫が飛び出した (The moment I opened the door, the cat jumped out)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～うちに</td><td style="padding:10px; border:1px solid #ddd;">while / before ~</td><td style="padding:10px; border:1px solid #ddd;">若いうちにたくさん旅行したい (Want to travel a lot while I'm young)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～最中に</td><td style="padding:10px; border:1px solid #ddd;">in the middle of ~</td><td style="padding:10px; border:1px solid #ddd;">食事の最中に電話が鳴った (The phone rang in the middle of the meal)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～てからでないと</td><td style="padding:10px; border:1px solid #ddd;">not until after ~</td><td style="padding:10px; border:1px solid #ddd;">確認してからでないと判断できない (Can't decide until after confirming)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～たびに</td><td style="padding:10px; border:1px solid #ddd;">every time ~</td><td style="padding:10px; border:1px solid #ddd;">この曲を聞くたびに学生時代を思い出す (Every time I hear this song, I remember my student days)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～としたら</td><td style="padding:10px; border:1px solid #ddd;">if it were the case that ~</td><td style="padding:10px; border:1px solid #ddd;">もし転職するとしたらどこに行きたい？ (If you were to change jobs, where would you go?)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="tips">Study Strategy for N2 Grammar</h2>
+  <p>Effective N2 grammar study combines systematic learning with authentic practice. Here is a proven approach.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Phase 1: Learn (Weeks 1-8)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Study 5-7 new patterns per week. Read the meaning, study 3+ example sentences, and create your own sentences. Use flashcards for review.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Phase 2: Recognize (Weeks 9-16)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Read NHK News and Japanese articles. Highlight N2 grammar patterns as you find them. This builds recognition speed critical for the test.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Phase 3: Practice (Weeks 17-24)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Work through practice tests under timed conditions. Review wrong answers carefully. Focus on patterns you consistently miss.</p>
+    </div>
+  </div>
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Key difference between similar patterns:</strong> Many N2 patterns seem identical at first. The test specifically targets these distinctions. For example, おかげで (positive result) vs せいで (negative result), or 一方で (balanced comparison) vs 反面 (two sides of same thing). Create comparison charts for easily confused pairs.
+  </div>
+  <p>Build your N2 vocabulary alongside grammar using our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool, review particles with the <a href="/japanese/tools/particle-guide/">Particle Guide</a>, and look up unfamiliar kanji with <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a>. Grammar and vocabulary work together — the more words you know, the easier it is to recognize patterns in context, and the more patterns you know, the easier it is to guess the meaning of new words.</p>
 
 </BlogLayout>

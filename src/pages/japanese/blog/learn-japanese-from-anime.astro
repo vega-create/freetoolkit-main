@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Can I really learn Japanese from anime?", "a": "Anime alone will not make you fluent, but it is an excellent supplement. It builds listening skills, teaches casual speech, and maintains motivation."}, {"q": "Which anime is best for beginners?", "a": "Slice-of-life series like Yotsuba, My Neighbor Totoro, and Chi's Sweet Home use everyday language. Avoid fantasy and action series initially as they use archaic or exaggerated speech."}, {"q": "Should I watch with subtitles?", "a": "Start with English subtitles to understand context, then switch to Japanese subtitles, then try without. This three-stage approach works for most learners."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
-const headings = [{"depth": 2, "slug": "can-you", "text": "Can You Really Learn from Anime?"}, {"depth": 2, "slug": "best-shows", "text": "Best Anime by Level"}, {"depth": 2, "slug": "subtitle-method", "text": "The Subtitle Method"}, {"depth": 2, "slug": "vocabulary", "text": "Picking Up Vocabulary"}, {"depth": 2, "slug": "warnings", "text": "What Anime Gets Wrong"}, {"depth": 2, "slug": "study-routine", "text": "Anime Study Routine"}];
+const faq = [
+  {"q": "Can I really learn Japanese from anime?", "a": "Anime alone will not make you fluent, but it is an excellent supplement. It builds listening skills, teaches casual speech patterns, exposes you to natural pronunciation, and maintains motivation through engaging content."},
+  {"q": "Which anime is best for beginners?", "a": "Slice-of-life series like よつばと, となりのトトロ, and ちびまる子ちゃん use everyday language. Avoid fantasy and action series initially as they use archaic, exaggerated, or genre-specific speech."},
+  {"q": "Should I watch with subtitles?", "a": "Start with English subtitles to understand context, then switch to Japanese subtitles, then try without. This three-stage approach works for most learners and builds skills progressively."},
+  {"q": "Is anime Japanese different from real Japanese?", "a": "Yes — anime uses exaggerated expressions, character-specific speech patterns, and sometimes archaic or fantasy language. Slice-of-life genres are closest to real speech, while action and fantasy genres are furthest."},
+  {"q": "How many episodes should I study per week?", "a": "Quality over quantity. Deeply studying 2-3 episodes per week with vocabulary notes and re-watching is more effective than passively watching 20 episodes. Active engagement is the key."}
+];
+const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}, {"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}];
+const headings = [
+  {"depth": 2, "slug": "can-you", "text": "Can You Really Learn from Anime?"},
+  {"depth": 2, "slug": "best-beginner", "text": "Best Anime for Beginners"},
+  {"depth": 2, "slug": "best-intermediate", "text": "Best Anime for Intermediate Learners"},
+  {"depth": 2, "slug": "subtitle-method", "text": "The Three-Stage Subtitle Method"},
+  {"depth": 2, "slug": "vocabulary", "text": "How to Extract Vocabulary from Anime"},
+  {"depth": 2, "slug": "warnings", "text": "What Anime Gets Wrong"},
+  {"depth": 2, "slug": "grammar-patterns", "text": "Common Anime Grammar Patterns"},
+  {"depth": 2, "slug": "study-routine", "text": "Weekly Anime Study Routine"}
+];
 ---
 <BlogLayout
   title="Learn Japanese Through Anime: A Practical Guide That Works"
@@ -16,23 +31,171 @@ const headings = [{"depth": 2, "slug": "can-you", "text": "Can You Really Learn 
   headings={headings}
 >
 
-    <h2 id="can-you">Can You Really Learn from Anime?</h2>
-    <p>Effective Japanese study is about working smarter, not harder. Research consistently shows that certain approaches dramatically outperform traditional study methods.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="best-shows">Best Anime by Level</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="subtitle-method">The Subtitle Method</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="vocabulary">Picking Up Vocabulary</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="warnings">What Anime Gets Wrong</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="study-routine">Anime Study Routine</h2>
-    <p>The spacing effect — reviewing at gradually increasing intervals — and active recall — retrieving information from memory rather than re-reading — are two of the most powerful evidence-based techniques for language learning.</p>
-    <p>Consistency beats intensity. Studying 15 minutes daily produces better results than 2 hours once a week. Build Japanese into your daily routine rather than treating it as a separate activity. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> to reinforce what you have learned.</p>
+  <p>Anime is what got millions of people interested in Japanese in the first place. The good news is that it can also be a genuinely effective study tool — if you use it the right way. The bad news is that passively watching hundreds of episodes with English subtitles will not teach you much. This guide shows you how to turn your anime hobby into real language learning: which shows to pick at each level, how to use subtitles strategically, how to extract and retain vocabulary, and what pitfalls to avoid.</p>
+
+  <h2 id="can-you">Can You Really Learn from Anime?</h2>
+  <p>The short answer is yes, with caveats. Research on extensive listening shows that regular exposure to comprehensible input builds listening skills, vocabulary, and natural speech patterns. Anime provides exactly this — hours of native Japanese audio with visual context that aids comprehension.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#f0fdf4; border:1px solid #86efac; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#16a34a;">What anime teaches well</strong>
+      <ul style="margin:0.5rem 0 0; padding-left:1rem; font-size:0.95rem;">
+        <li>Listening comprehension at native speed</li>
+        <li>Casual and informal speech patterns</li>
+        <li>Natural pronunciation and rhythm</li>
+        <li>Emotional expressions and interjections</li>
+        <li>Cultural context and social dynamics</li>
+      </ul>
+    </div>
+    <div style="background:#fef2f2; border:1px solid #fca5a5; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#dc2626;">What anime does NOT teach</strong>
+      <ul style="margin:0.5rem 0 0; padding-left:1rem; font-size:0.95rem;">
+        <li>Polite and formal speech (keigo)</li>
+        <li>Reading and writing skills</li>
+        <li>Business or professional Japanese</li>
+        <li>Proper grammar explanations</li>
+        <li>Gender-appropriate language choices</li>
+      </ul>
+    </div>
+  </div>
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>The 80/20 rule:</strong> Anime should be about 20% of your study time — the fun, motivating part. The other 80% should be structured learning: textbooks, grammar study, vocabulary drills, and speaking practice. Anime supplements formal study; it does not replace it.
+  </div>
+
+  <h2 id="best-beginner">Best Anime for Beginners</h2>
+  <p>For beginners, choose slice-of-life anime with everyday settings, simple vocabulary, and clear pronunciation. Avoid action, fantasy, and sci-fi — they use specialized or archaic language.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Anime</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Genre</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Why It Works</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Speech Style</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ちびまる子ちゃん</td><td style="padding:10px; border:1px solid #ddd;">Slice-of-life</td><td style="padding:10px; border:1px solid #ddd;">Elementary school setting, simple daily vocabulary</td><td style="padding:10px; border:1px solid #ddd;">Very natural, family speech</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">となりのトトロ</td><td style="padding:10px; border:1px solid #ddd;">Fantasy/family</td><td style="padding:10px; border:1px solid #ddd;">Clear pronunciation, simple sentences, heartwarming</td><td style="padding:10px; border:1px solid #ddd;">Polite and casual mix</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">しろくまカフェ</td><td style="padding:10px; border:1px solid #ddd;">Comedy</td><td style="padding:10px; border:1px solid #ddd;">Slow-paced, lots of everyday conversation, puns</td><td style="padding:10px; border:1px solid #ddd;">Polite, clear speech</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">日常 (Nichijou)</td><td style="padding:10px; border:1px solid #ddd;">Comedy</td><td style="padding:10px; border:1px solid #ddd;">School setting, exaggerated but clear speech</td><td style="padding:10px; border:1px solid #ddd;">Casual student speech</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">よつばと! (manga)</td><td style="padding:10px; border:1px solid #ddd;">Slice-of-life</td><td style="padding:10px; border:1px solid #ddd;">5-year-old perspective, very simple language</td><td style="padding:10px; border:1px solid #ddd;">Natural family conversation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="best-intermediate">Best Anime for Intermediate Learners</h2>
+  <p>Once you understand basic grammar and have 1,000+ words of vocabulary, you can branch into more complex anime with richer dialogue.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Anime</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Genre</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">What You'll Learn</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">聲の形 (A Silent Voice)</td><td style="padding:10px; border:1px solid #ddd;">Drama</td><td style="padding:10px; border:1px solid #ddd;">Emotional vocabulary, school dynamics, social situations</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ハイキュー!!</td><td style="padding:10px; border:1px solid #ddd;">Sports</td><td style="padding:10px; border:1px solid #ddd;">Team vocabulary, motivation phrases, senpai-kouhai dynamics</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">銀の匙 (Silver Spoon)</td><td style="padding:10px; border:1px solid #ddd;">Slice-of-life</td><td style="padding:10px; border:1px solid #ddd;">Agriculture vocabulary, rural life, practical conversations</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">バクマン。</td><td style="padding:10px; border:1px solid #ddd;">Drama/comedy</td><td style="padding:10px; border:1px solid #ddd;">Publishing industry, work culture, goal-setting language</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">僕だけがいない街</td><td style="padding:10px; border:1px solid #ddd;">Mystery</td><td style="padding:10px; border:1px solid #ddd;">Past tense narration, detective vocabulary, suspense language</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="subtitle-method">The Three-Stage Subtitle Method</h2>
+  <p>How you use subtitles determines whether anime is entertainment or education. Follow this progressive method for maximum learning.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Stage</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Subtitles</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Purpose</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Focus</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">First watch</td><td style="padding:10px; border:1px solid #ddd;">English subtitles</td><td style="padding:10px; border:1px solid #ddd;">Understand story and context</td><td style="padding:10px; border:1px solid #ddd;">Plot, characters, emotion</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Second watch</td><td style="padding:10px; border:1px solid #ddd;">Japanese subtitles</td><td style="padding:10px; border:1px solid #ddd;">Connect spoken words to written form</td><td style="padding:10px; border:1px solid #ddd;">Reading along, noting words</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Third watch</td><td style="padding:10px; border:1px solid #ddd;">No subtitles</td><td style="padding:10px; border:1px solid #ddd;">Pure listening comprehension</td><td style="padding:10px; border:1px solid #ddd;">How much can you catch?</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Pro tip:</strong> You do not need all three stages for every episode. Pick 1-2 episodes per week for deep study. Watch the rest casually with Japanese subtitles for enjoyable exposure.
+  </div>
+
+  <h2 id="vocabulary">How to Extract Vocabulary from Anime</h2>
+  <p>Passive watching teaches very little. Active vocabulary extraction turns anime into a powerful learning tool.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 1: Watch and note</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Keep a notebook or app open. When you hear a recurring word or find one especially useful, write it down with the timestamp.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 2: Look up and record</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">After watching, look up each word. Record the kanji, reading, meaning, and the sentence you heard it in.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 3: Add to SRS</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Add words to Anki or another spaced repetition system. Include the anime sentence as example context.</p>
+    </div>
+  </div>
+
+  <h2 id="warnings">What Anime Gets Wrong</h2>
+  <p>Anime is entertainment, not a language textbook. Be aware of these differences between anime Japanese and real Japanese.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#fef2f2;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Anime Habit</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reality</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Risk</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Male characters use おれ (ore)</td><td style="padding:10px; border:1px solid #ddd;">Only casual situations — rude in formal settings</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Constant だ (da) sentence endings</td><td style="padding:10px; border:1px solid #ddd;">Very casual — use です with anyone not a close friend</td><td style="padding:10px; border:1px solid #ddd;">High</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">お前 (omae) to address people</td><td style="padding:10px; border:1px solid #ddd;">Can be rude or aggressive in real life</td><td style="padding:10px; border:1px solid #ddd;">High</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Exaggerated reactions</td><td style="padding:10px; border:1px solid #ddd;">Real Japanese people are much more subdued</td><td style="padding:10px; border:1px solid #ddd;">Low</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Female わ (wa) endings</td><td style="padding:10px; border:1px solid #ddd;">Rarely used by young women in modern Japan</td><td style="padding:10px; border:1px solid #ddd;">Low</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Fantasy/archaic vocabulary</td><td style="padding:10px; border:1px solid #ddd;">Completely useless in daily conversation</td><td style="padding:10px; border:1px solid #ddd;">Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="grammar-patterns">Common Anime Grammar Patterns</h2>
+  <p>Anime does teach useful grammar through repeated exposure. Here are patterns you will hear constantly.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Pattern</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Example</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～てくれ</td><td style="padding:10px; border:1px solid #ddd;">do ~ for me (casual)</td><td style="padding:10px; border:1px solid #ddd;">待ってくれ！(Wait!)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～なきゃ</td><td style="padding:10px; border:1px solid #ddd;">have to ~ (casual must)</td><td style="padding:10px; border:1px solid #ddd;">行かなきゃ (Gotta go)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～ってば</td><td style="padding:10px; border:1px solid #ddd;">I said ~! (insistence)</td><td style="padding:10px; border:1px solid #ddd;">やめてってば！(I said stop!)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～じゃん</td><td style="padding:10px; border:1px solid #ddd;">isn't it ~ (casual tag)</td><td style="padding:10px; border:1px solid #ddd;">すごいじゃん！(That's awesome!)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">～かもしれない</td><td style="padding:10px; border:1px solid #ddd;">might ~</td><td style="padding:10px; border:1px solid #ddd;">嘘かもしれない (Might be a lie)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">～ようにする</td><td style="padding:10px; border:1px solid #ddd;">try to ~</td><td style="padding:10px; border:1px solid #ddd;">忘れないようにする (I'll try not to forget)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="study-routine">Weekly Anime Study Routine</h2>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Day</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Activity</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Time</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Monday</td><td style="padding:10px; border:1px solid #ddd;">Watch new episode with English subtitles</td><td style="padding:10px; border:1px solid #ddd;">25 min</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Tuesday</td><td style="padding:10px; border:1px solid #ddd;">Re-watch with Japanese subtitles, note vocabulary</td><td style="padding:10px; border:1px solid #ddd;">30 min</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Wednesday</td><td style="padding:10px; border:1px solid #ddd;">Look up vocabulary, add to flashcards</td><td style="padding:10px; border:1px solid #ddd;">15 min</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Thursday</td><td style="padding:10px; border:1px solid #ddd;">Re-watch without subtitles (listening test)</td><td style="padding:10px; border:1px solid #ddd;">25 min</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Friday</td><td style="padding:10px; border:1px solid #ddd;">Shadow a favorite scene (repeat lines aloud)</td><td style="padding:10px; border:1px solid #ddd;">15 min</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Weekend</td><td style="padding:10px; border:1px solid #ddd;">Casual watching of 2-3 episodes with JP subtitles</td><td style="padding:10px; border:1px solid #ddd;">1-2 hours</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Complement your anime study with structured tools: use our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to look up words you hear, practice kana reading with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>, and reference the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> when reading Japanese subtitles. The combination of entertaining anime and structured study tools creates a balanced, sustainable learning routine that keeps you motivated for the long journey to fluency.</p>
 
 </BlogLayout>

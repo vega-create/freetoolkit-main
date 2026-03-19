@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Do I need to learn keigo as a beginner?", "a": "Not immediately, but basic teineigo (desu/masu form) is essential from day one. Sonkeigo and kenjougo become important at intermediate level."}, {"q": "Will Japanese people expect foreigners to use keigo?", "a": "They will appreciate any effort. Using basic polite forms shows respect. Perfect keigo is not expected from non-native speakers."}, {"q": "What is the difference between the three types?", "a": "Teineigo is general politeness (です/ます). Sonkeigo elevates the listener's actions. Kenjougo humbles your own actions."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Particle Guide", "url": "/japanese/tools/particle-guide/"}];
-const headings = [{"depth": 2, "slug": "three-types", "text": "Three Types of Keigo"}, {"depth": 2, "slug": "teineigo", "text": "Teineigo: Basic Politeness"}, {"depth": 2, "slug": "sonkeigo", "text": "Sonkeigo: Honorific Language"}, {"depth": 2, "slug": "kenjougo", "text": "Kenjougo: Humble Language"}, {"depth": 2, "slug": "business", "text": "Keigo in Business"}, {"depth": 2, "slug": "practice", "text": "Practice Scenarios"}];
+const faq = [
+  {"q": "Do I need to learn keigo as a beginner?", "a": "Not immediately, but basic teineigo (desu/masu form) is essential from day one. Sonkeigo and kenjougo become important at intermediate level and are tested from JLPT N3 onward."},
+  {"q": "Will Japanese people expect foreigners to use keigo?", "a": "They will appreciate any effort. Using basic polite forms shows respect. Perfect keigo is not expected from non-native speakers, but knowing the basics makes a strong positive impression in business settings."},
+  {"q": "What is the difference between the three types?", "a": "Teineigo is general politeness (です/ます). Sonkeigo elevates the listener's actions to show respect. Kenjougo humbles your own actions to show deference. Think of it as: teineigo is neutral polite, sonkeigo raises others, kenjougo lowers yourself."},
+  {"q": "When do Japanese people use keigo?", "a": "In business, with customers, with strangers, with older people, in formal settings, and with anyone of higher social status. The default in professional settings is always keigo — casual speech is reserved for close friends and family."},
+  {"q": "What happens if I use the wrong keigo?", "a": "Minor errors are forgiven, especially from foreigners. But using sonkeigo for your own actions (elevating yourself) or kenjougo for your boss (humbling them) can sound quite strange. The key mistakes to avoid are mixing up the direction."}
+];
+const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Particle Guide", "url": "/japanese/tools/particle-guide/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}];
+const headings = [
+  {"depth": 2, "slug": "three-types", "text": "The Three Types of Keigo"},
+  {"depth": 2, "slug": "teineigo", "text": "Teineigo: Basic Politeness"},
+  {"depth": 2, "slug": "sonkeigo", "text": "Sonkeigo: Honorific Language"},
+  {"depth": 2, "slug": "kenjougo", "text": "Kenjougo: Humble Language"},
+  {"depth": 2, "slug": "comparison", "text": "Side-by-Side Comparison: 10 Essential Verbs"},
+  {"depth": 2, "slug": "business", "text": "Keigo in Business Japanese"},
+  {"depth": 2, "slug": "mistakes", "text": "Common Keigo Mistakes"},
+  {"depth": 2, "slug": "practice", "text": "How to Practice Keigo"}
+];
 ---
 <BlogLayout
   title="Keigo Guide: Master Japanese Polite Language"
@@ -16,23 +31,184 @@ const headings = [{"depth": 2, "slug": "three-types", "text": "Three Types of Ke
   headings={headings}
 >
 
-    <h2 id="three-types">Three Types of Keigo</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="teineigo">Teineigo: Basic Politeness</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="sonkeigo">Sonkeigo: Honorific Language</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="kenjougo">Kenjougo: Humble Language</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="business">Keigo in Business</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="practice">Practice Scenarios</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/particle-guide/">Particle Guide</a> to reinforce what you have learned.</p>
+  <p>Keigo (敬語) is the Japanese politeness system that adjusts your language based on who you are talking to, their social status relative to yours, and the formality of the situation. It is one of the most challenging aspects of Japanese for learners, but it is also one of the most important for real-world communication. Whether you are working in a Japanese company, shopping in Tokyo, or meeting your partner's parents, knowing the right level of keigo makes the difference between sounding respectful and sounding awkward. This guide breaks down all three types with clear examples and practical patterns you can use immediately.</p>
+
+  <h2 id="three-types">The Three Types of Keigo</h2>
+  <p>Japanese keigo has three distinct categories, each serving a different purpose in the politeness hierarchy.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#eff6ff; border:1px solid #93c5fd; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#1d4ed8;">丁寧語 (Teineigo)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;"><strong>General politeness.</strong> The です/ます forms. Used with anyone you are not close to. This is the baseline polite Japanese every learner should master first.</p>
+    </div>
+    <div style="background:#fdf2f8; border:1px solid #f9a8d4; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#be185d;">尊敬語 (Sonkeigo)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;"><strong>Honorific language.</strong> Elevates the other person's actions. Used when talking about your boss, clients, teachers, or anyone you want to show respect to. Direction: raises others UP.</p>
+    </div>
+    <div style="background:#ecfdf5; border:1px solid #6ee7b7; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#047857;">謙譲語 (Kenjougo)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;"><strong>Humble language.</strong> Lowers your own actions to show deference. Used when describing what you or your company does to/for someone of higher status. Direction: lowers yourself DOWN.</p>
+    </div>
+  </div>
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>The key principle:</strong> Sonkeigo and kenjougo work in opposite directions but achieve the same goal — creating respectful distance. Sonkeigo elevates the other person. Kenjougo lowers yourself. Both make the listener feel respected. The critical rule: NEVER use sonkeigo for your own actions or kenjougo for the other person's actions.
+  </div>
+
+  <h2 id="teineigo">Teineigo: Basic Politeness</h2>
+  <p>Teineigo (丁寧語) is the foundation of polite Japanese. If you only learn one type of keigo, this is it. The です/ます forms are used in everyday polite conversation — with coworkers, shopkeepers, acquaintances, and anyone you are not close friends with.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Casual</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Teineigo (Polite)</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">食べる (taberu)</td><td style="padding:10px; border:1px solid #ddd;">食べます (tabemasu)</td><td style="padding:10px; border:1px solid #ddd;">eat</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">行く (iku)</td><td style="padding:10px; border:1px solid #ddd;">行きます (ikimasu)</td><td style="padding:10px; border:1px solid #ddd;">go</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">する (suru)</td><td style="padding:10px; border:1px solid #ddd;">します (shimasu)</td><td style="padding:10px; border:1px solid #ddd;">do</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">いい (ii)</td><td style="padding:10px; border:1px solid #ddd;">いいです (ii desu)</td><td style="padding:10px; border:1px solid #ddd;">good</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">だ (da)</td><td style="padding:10px; border:1px solid #ddd;">です (desu)</td><td style="padding:10px; border:1px solid #ddd;">is/am/are</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Teineigo also includes polite prefixes: お (o-) and ご (go-) attached to nouns. お水 (omizu, water), お名前 (onamae, name), ご家族 (gokazoku, family), ご意見 (goiken, opinion). Generally, お goes with native Japanese words and ご with Chinese-origin words, though there are exceptions.</p>
+
+  <h2 id="sonkeigo">Sonkeigo: Honorific Language</h2>
+  <p>Sonkeigo (尊敬語) elevates the actions of the person you are speaking to or about. It has two formation patterns.</p>
+  <p><strong>Pattern 1: お + verb stem + になる</strong> — Works for most verbs. Example: 読む → お読みになる (to read — honorific).</p>
+  <p><strong>Pattern 2: Special verbs</strong> — Certain common verbs have completely different honorific forms that must be memorized.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#fdf2f8;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Plain Verb</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Sonkeigo Form</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">いる (to be)</td><td style="padding:10px; border:1px solid #ddd;">いらっしゃる</td><td style="padding:10px; border:1px solid #ddd;">(you/they) are present</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">行く / 来る (go/come)</td><td style="padding:10px; border:1px solid #ddd;">いらっしゃる</td><td style="padding:10px; border:1px solid #ddd;">(you/they) go/come</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">食べる / 飲む (eat/drink)</td><td style="padding:10px; border:1px solid #ddd;">召し上がる (meshiagaru)</td><td style="padding:10px; border:1px solid #ddd;">(you/they) eat/drink</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">言う (say)</td><td style="padding:10px; border:1px solid #ddd;">おっしゃる</td><td style="padding:10px; border:1px solid #ddd;">(you/they) say</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">見る (see)</td><td style="padding:10px; border:1px solid #ddd;">ご覧になる (goran ni naru)</td><td style="padding:10px; border:1px solid #ddd;">(you/they) see/look</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">知る (know)</td><td style="padding:10px; border:1px solid #ddd;">ご存じ (gozonji)</td><td style="padding:10px; border:1px solid #ddd;">(you/they) know</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">する (do)</td><td style="padding:10px; border:1px solid #ddd;">なさる</td><td style="padding:10px; border:1px solid #ddd;">(you/they) do</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">くれる (give me)</td><td style="padding:10px; border:1px solid #ddd;">くださる</td><td style="padding:10px; border:1px solid #ddd;">(you/they) give me</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="kenjougo">Kenjougo: Humble Language</h2>
+  <p>Kenjougo (謙譲語) lowers your own actions to show respect to the listener. The general pattern is お + verb stem + する, plus special replacement verbs for common actions.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#ecfdf5;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Plain Verb</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Kenjougo Form</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">いる (to be)</td><td style="padding:10px; border:1px solid #ddd;">おる</td><td style="padding:10px; border:1px solid #ddd;">(I) am present</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">行く (go)</td><td style="padding:10px; border:1px solid #ddd;">参る (mairu)</td><td style="padding:10px; border:1px solid #ddd;">(I) go</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">食べる / 飲む</td><td style="padding:10px; border:1px solid #ddd;">いただく</td><td style="padding:10px; border:1px solid #ddd;">(I) eat/drink/receive</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">言う (say)</td><td style="padding:10px; border:1px solid #ddd;">申す (mousu)</td><td style="padding:10px; border:1px solid #ddd;">(I) say</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">見る (see)</td><td style="padding:10px; border:1px solid #ddd;">拝見する (haiken suru)</td><td style="padding:10px; border:1px solid #ddd;">(I) see/look</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">知る (know)</td><td style="padding:10px; border:1px solid #ddd;">存じる (zonjiru)</td><td style="padding:10px; border:1px solid #ddd;">(I) know</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">する (do)</td><td style="padding:10px; border:1px solid #ddd;">いたす</td><td style="padding:10px; border:1px solid #ddd;">(I) do</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">あげる (give)</td><td style="padding:10px; border:1px solid #ddd;">差し上げる (sashiageru)</td><td style="padding:10px; border:1px solid #ddd;">(I) give (to you)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="comparison">Side-by-Side Comparison: 10 Essential Verbs</h2>
+  <p>This master reference table shows how the same action changes across all three levels. Memorize these ten verbs and you will handle most keigo situations.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Action</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Plain</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Sonkeigo (about them)</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Kenjougo (about me)</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">go</td><td style="padding:10px; border:1px solid #ddd;">行く</td><td style="padding:10px; border:1px solid #ddd;">いらっしゃる</td><td style="padding:10px; border:1px solid #ddd;">参る</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">be (exist)</td><td style="padding:10px; border:1px solid #ddd;">いる</td><td style="padding:10px; border:1px solid #ddd;">いらっしゃる</td><td style="padding:10px; border:1px solid #ddd;">おる</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">eat/drink</td><td style="padding:10px; border:1px solid #ddd;">食べる/飲む</td><td style="padding:10px; border:1px solid #ddd;">召し上がる</td><td style="padding:10px; border:1px solid #ddd;">いただく</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">say</td><td style="padding:10px; border:1px solid #ddd;">言う</td><td style="padding:10px; border:1px solid #ddd;">おっしゃる</td><td style="padding:10px; border:1px solid #ddd;">申す</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">see</td><td style="padding:10px; border:1px solid #ddd;">見る</td><td style="padding:10px; border:1px solid #ddd;">ご覧になる</td><td style="padding:10px; border:1px solid #ddd;">拝見する</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">do</td><td style="padding:10px; border:1px solid #ddd;">する</td><td style="padding:10px; border:1px solid #ddd;">なさる</td><td style="padding:10px; border:1px solid #ddd;">いたす</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">know</td><td style="padding:10px; border:1px solid #ddd;">知る</td><td style="padding:10px; border:1px solid #ddd;">ご存じ</td><td style="padding:10px; border:1px solid #ddd;">存じる</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">give</td><td style="padding:10px; border:1px solid #ddd;">あげる/くれる</td><td style="padding:10px; border:1px solid #ddd;">くださる</td><td style="padding:10px; border:1px solid #ddd;">差し上げる</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">receive</td><td style="padding:10px; border:1px solid #ddd;">もらう</td><td style="padding:10px; border:1px solid #ddd;">—</td><td style="padding:10px; border:1px solid #ddd;">いただく</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ask/visit</td><td style="padding:10px; border:1px solid #ddd;">聞く/訪ねる</td><td style="padding:10px; border:1px solid #ddd;">お聞きになる</td><td style="padding:10px; border:1px solid #ddd;">伺う (ukagau)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="business">Keigo in Business Japanese</h2>
+  <p>Business keigo (ビジネス敬語) has its own set of commonly used phrases. These appear in every Japanese workplace and are essential for professional communication.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Situation</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Keigo Phrase</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Answering phone</td><td style="padding:10px; border:1px solid #ddd;">お電話ありがとうございます</td><td style="padding:10px; border:1px solid #ddd;">Thank you for calling</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Introducing yourself</td><td style="padding:10px; border:1px solid #ddd;">○○と申します</td><td style="padding:10px; border:1px solid #ddd;">My name is ○○ (humble)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Apologizing</td><td style="padding:10px; border:1px solid #ddd;">申し訳ございません</td><td style="padding:10px; border:1px solid #ddd;">I sincerely apologize</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Asking to wait</td><td style="padding:10px; border:1px solid #ddd;">少々お待ちいただけますか</td><td style="padding:10px; border:1px solid #ddd;">Could you please wait a moment?</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Confirming</td><td style="padding:10px; border:1px solid #ddd;">かしこまりました</td><td style="padding:10px; border:1px solid #ddd;">Certainly / Understood (very formal)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Requesting</td><td style="padding:10px; border:1px solid #ddd;">お手数ですがおねがいいたします</td><td style="padding:10px; border:1px solid #ddd;">I'm sorry for the trouble, but please...</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Ending email</td><td style="padding:10px; border:1px solid #ddd;">ご確認のほどよろしくおねがいいたします</td><td style="padding:10px; border:1px solid #ddd;">I kindly ask for your confirmation</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Leaving for the day</td><td style="padding:10px; border:1px solid #ddd;">お先に失礼いたします</td><td style="padding:10px; border:1px solid #ddd;">Excuse me for leaving before you</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>The in-group/out-group rule (ウチとソト):</strong> When speaking to a client about your boss, you humble your boss (use kenjougo). Your boss is part of your in-group (ウチ), and the client is out-group (ソト). Example: 部長の田中は外出しております (Our director Tanaka is currently out). You do NOT use sonkeigo for your own boss when talking to a client.
+  </div>
+
+  <h2 id="mistakes">Common Keigo Mistakes</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem 1.2rem; border-radius:0 8px 8px 0;">
+      <strong>❌ Common Mistakes</strong>
+      <ul style="margin:0.5rem 0 0; padding-left:1.2rem; font-size:0.95rem;">
+        <li>Using sonkeigo for yourself: ×私がおっしゃった</li>
+        <li>Using kenjougo for your boss: ×部長が申しました</li>
+        <li>Double keigo: ×お召し上がりになられる</li>
+        <li>Using casual with clients: ×了解です instead of 承知いたしました</li>
+        <li>Honoring your boss to a client (wrong ウチ/ソト)</li>
+      </ul>
+    </div>
+    <div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:1rem 1.2rem; border-radius:0 8px 8px 0;">
+      <strong>✅ Correct Forms</strong>
+      <ul style="margin:0.5rem 0 0; padding-left:1.2rem; font-size:0.95rem;">
+        <li>Kenjougo for yourself: ○私が申しました</li>
+        <li>Sonkeigo for boss (internal): ○部長がおっしゃいました</li>
+        <li>Single keigo only: ○召し上がる</li>
+        <li>Formal with clients: ○承知いたしました</li>
+        <li>Humble boss to client: ○田中は外出しております</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="practice">How to Practice Keigo</h2>
+  <p>Keigo improves fastest through exposure and active practice. Here are the most effective methods.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Watch business dramas</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Dramas like 半沢直樹 and リーガルハイ are full of keigo. Notice how characters switch between casual and formal speech depending on who they address.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Memorize set phrases</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Learn the business phrases above as fixed expressions first. Practice saying them aloud until they feel natural. Muscle memory matters for keigo.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Role-play scenarios</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Practice with a language partner using workplace scenarios: phone calls, client meetings, email writing. Switch roles between junior and senior positions.</p>
+    </div>
+  </div>
+  <p>Build your keigo vocabulary with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool, check particle usage with the <a href="/japanese/tools/particle-guide/">Particle Guide</a>, and look up keigo kanji with <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a>. Keigo mastery takes time and practice, but even basic efforts show respect and open doors in Japanese professional and social settings. Start with teineigo, then gradually add sonkeigo and kenjougo as your confidence grows.</p>
 
 </BlogLayout>

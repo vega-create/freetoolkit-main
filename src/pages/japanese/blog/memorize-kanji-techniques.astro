@@ -1,8 +1,41 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How many kanji should I learn per day?", "a": "3-5 new kanji daily is sustainable for most learners. This pace gives you 1,000+ in a year while allowing time for review."}, {"q": "Should I learn kanji by JLPT level or frequency?", "a": "Both approaches work. JLPT order gives exam goals. Frequency order means you encounter your kanji sooner in real reading. Many successful learners use a hybrid approach."}, {"q": "Do I need to write kanji by hand?", "a": "Handwriting practice significantly improves retention but is not strictly necessary for reading fluency. Aim for at least some handwriting practice for the most common 500 kanji."}];
-const relatedTools = [{"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}, {"name": "Stroke Order", "url": "/japanese/tools/stroke-order/"}];
-const headings = [{"depth": 2, "slug": "why-hard", "text": "Why Kanji Feels Hard"}, {"depth": 2, "slug": "radicals", "text": "1. Radical Decomposition"}, {"depth": 2, "slug": "mnemonics", "text": "2. Visual Mnemonics"}, {"depth": 2, "slug": "srs", "text": "3. Spaced Repetition"}, {"depth": 2, "slug": "context", "text": "4. Learn in Context"}, {"depth": 2, "slug": "writing", "text": "5. Handwriting Practice"}, {"depth": 2, "slug": "reading", "text": "6. Extensive Reading"}, {"depth": 2, "slug": "compounds", "text": "7. Compound Word Patterns"}];
+const faq = [
+  {
+    "q": "How many kanji should I learn per day?",
+    "a": "3-5 new kanji daily is a sustainable pace for most learners. At that rate you will cover 1,000+ kanji in a year while still having time to review older ones. If you try to cram 20 per day, you will likely forget most of them within a week. Quality of recall matters far more than raw quantity. Track your retention rate in your SRS app — if you are failing more than 30% of reviews, slow down and add fewer new cards each day."
+  },
+  {
+    "q": "Should I learn kanji by JLPT level or by frequency?",
+    "a": "Both approaches have real merits. Learning by JLPT order gives you clear milestones and aligns with textbooks and exams. Learning by frequency means the kanji you study will appear constantly in real-world text, reinforcing them naturally. Many successful learners use a hybrid approach: start with N5/N4 kanji because they are foundational and appear everywhere, then switch to frequency-ranked lists once you hit around 500 kanji. The most important thing is to pick a system and stick with it consistently."
+  },
+  {
+    "q": "Do I need to write kanji by hand?",
+    "a": "Handwriting practice is not strictly required for reading fluency, but it dramatically improves retention for most learners. The physical act of writing activates additional memory pathways — motor memory, visual memory, and spatial memory all reinforce each other. Even in the digital age, being able to write at least the most common 500-800 kanji by hand is a valuable skill. Aim for short daily sessions with a Japanese notebook grid (genkouyoushi) rather than long infrequent sessions."
+  },
+  {
+    "q": "What is the best app or tool for kanji study?",
+    "a": "Anki is the gold standard for spaced repetition and is highly customizable, but it has a steep learning curve. WaniKani is a structured paid service that teaches kanji through radicals and mnemonics in a fixed order — excellent if you want guidance. Kanji Study (mobile app) is great for handwriting practice with instant stroke-order feedback. For looking up kanji you encounter in the wild, our free Kanji Lookup tool lets you search by radical, reading, or meaning instantly without an account."
+  },
+  {
+    "q": "How long does it take to learn all joyo kanji?",
+    "a": "The 2,136 joyo (officially recognized) kanji can realistically be learned in 2-4 years with consistent daily study. Reaching reading literacy — roughly 1,000-1,500 kanji — typically takes 1-2 years. The key insight is that progress is not linear: the first 500 feel slow because everything is new, but kanji 500-1000 come much faster as you recognize more radicals and patterns. Kanji 1000-2000 can feel almost easy because so many compounds reuse familiar components."
+  }
+];
+const relatedTools = [
+  {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"},
+  {"name": "Stroke Order", "url": "/japanese/tools/stroke-order/"}
+];
+const headings = [
+  {"depth": 2, "slug": "why-hard", "text": "Why Kanji Feels Hard"},
+  {"depth": 2, "slug": "radicals", "text": "1. Radical Decomposition"},
+  {"depth": 2, "slug": "mnemonics", "text": "2. Visual Mnemonics"},
+  {"depth": 2, "slug": "srs", "text": "3. Spaced Repetition"},
+  {"depth": 2, "slug": "context", "text": "4. Learn in Context"},
+  {"depth": 2, "slug": "writing", "text": "5. Handwriting Practice"},
+  {"depth": 2, "slug": "reading", "text": "6. Extensive Reading"},
+  {"depth": 2, "slug": "compounds", "text": "7. Compound Word Patterns"}
+];
 ---
 <BlogLayout
   title="How to Memorize Kanji: 7 Proven Techniques That Work"
@@ -16,29 +49,346 @@ const headings = [{"depth": 2, "slug": "why-hard", "text": "Why Kanji Feels Hard
   headings={headings}
 >
 
-    <h2 id="why-hard">Why Kanji Feels Hard</h2>
-    <p>Effective Japanese study is about working smarter, not harder. Research consistently shows that certain approaches dramatically outperform traditional study methods.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="radicals">1. Radical Decomposition</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="mnemonics">2. Visual Mnemonics</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="srs">3. Spaced Repetition</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="context">4. Learn in Context</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="writing">5. Handwriting Practice</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="reading">6. Extensive Reading</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="compounds">7. Compound Word Patterns</h2>
-    <p>The spacing effect — reviewing at gradually increasing intervals — and active recall — retrieving information from memory rather than re-reading — are two of the most powerful evidence-based techniques for language learning.</p>
-    <p>Consistency beats intensity. Studying 15 minutes daily produces better results than 2 hours once a week. Build Japanese into your daily routine rather than treating it as a separate activity. Practice with <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> and <a href="/japanese/tools/stroke-order/">Stroke Order</a> to reinforce what you have learned.</p>
+  <h2 id="why-hard">Why Kanji Feels Hard</h2>
+  <p>Many Japanese learners hit a wall with kanji. After a few weeks of effort they can recognize 日 (sun/day) and 山 (mountain), but then 漢字 starts to blur into an undifferentiated mass of lines and boxes. This experience is completely normal — and it is rooted in how Western learners are trained to process written language.</p>
+  <p>In an alphabetic system, letters map to sounds. Kanji do something more complex: each character carries meaning, one or more Japanese readings (<em>on'yomi</em> from Chinese, <em>kun'yomi</em> native Japanese), and a specific stroke structure. That is three separate layers of information per character, for over 2,000 characters. No wonder rote memorization fails.</p>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 0.5rem 0.5rem 0; margin:1.5rem 0;">
+    <strong>The good news:</strong> kanji are not random. Around 90% of all kanji are built from a limited set of reusable components called <em>radicals</em>. Once you learn to see those components, thousands of characters become puzzles to decode rather than pictures to memorize blindly.
+  </div>
+
+  <p>The seven techniques below work because they address the real problem: building a mental filing system for kanji rather than stacking isolated flashcards. Used together, they compound — each technique reinforces the others, making your study time far more efficient than grinding flashcards alone.</p>
+
+  <h2 id="radicals">1. Radical Decomposition</h2>
+  <p>A <strong>radical</strong> (部首, <em>bushu</em>) is a recurring building block found inside kanji. There are 214 official radicals in the Kangxi system, but in practice just 50-100 of the most common ones appear in the vast majority of everyday kanji. Learning to spot radicals instantly is the single highest-leverage skill in kanji study.</p>
+  <p>Consider the character 語 (language). Break it down: on the left is 言 (speech/say), and on the right is 吾 (I/me). Put together, you get "my speech" — a natural mnemonic for "language." Radical decomposition gives you a story for free.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.95rem;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Radical</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Meaning</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Example Kanji</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Reading / Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">氵</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">water</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">海, 湖, 泳, 波</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">sea, lake, swim, wave</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">木</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">tree / wood</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">森, 林, 机, 板</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">forest, grove, desk, board</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">言</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">speech / say</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">話, 語, 読, 記</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">talk, language, read, record</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">人／亻</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">person</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">休, 体, 住, 仕</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">rest, body, live, work</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">心／忄</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">heart / mind</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">思, 愛, 忘, 悲</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">think, love, forget, sad</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">口</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">mouth</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">叫, 吹, 味, 唱</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">shout, blow, taste, sing</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">火／灬</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">fire</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">焼, 炎, 灯, 熱</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">burn, flame, light, heat</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">手／扌</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">hand</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">持, 押, 拾, 投</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">hold, push, pick up, throw</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">日</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">sun / day</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">時, 明, 晴, 曜</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">time, bright, clear, weekday</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">金／钅</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">metal / money</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">銀, 鉄, 銅, 鍵</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">silver, iron, copper, key</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.4rem;">土</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">earth / soil</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">地, 場, 城, 坂</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">ground, place, castle, slope</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>When you encounter a new kanji, your first question should always be: <em>which radicals do I recognize?</em> Use our free <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool to search by radical and explore which characters share the same component — this "family browsing" approach can teach you five related kanji in the time it would take to memorize one in isolation.</p>
+
+  <h2 id="mnemonics">2. Visual Mnemonics</h2>
+  <p>A mnemonic is any mental hook that ties new information to something you already know. For kanji, the most effective mnemonics are <strong>visual stories</strong> that connect a character's shape to its meaning. They do not need to be clever or logical — they just need to be vivid and personal enough to stick.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">山</div>
+      <strong>Mountain (yama)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">Three peaks sticking up from the ground — the tallest peak in the center, smaller ones on each side. Picture Mt. Fuji.</p>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">木</div>
+      <strong>Tree (ki)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">A trunk going up, branches spreading left and right at the top, roots spreading left and right at the bottom. A perfect stylized tree.</p>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">森</div>
+      <strong>Forest (mori)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">Three 木 (trees) together make a forest. No story needed — the meaning is literally shown by repeating the radical three times.</p>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">休</div>
+      <strong>Rest (yasumu)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">A person (亻) leaning against a tree (木) for a rest in the shade. The two components tell the whole story.</p>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">明</div>
+      <strong>Bright (akarui)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">Sun (日) plus moon (月) together — when both the sun and moon shine, everything is bright. A beautifully logical compound.</p>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:0.5rem; padding:1rem;">
+      <div style="font-size:2.5rem; text-align:center; margin-bottom:0.5rem;">岩</div>
+      <strong>Rock (iwa)</strong>
+      <p style="margin:0.4rem 0 0; font-size:0.9rem;">Mountain (山) on top of stone (石) — a mountain made of stone is a rock face or cliff. Picture a giant boulder under a peak.</p>
+    </div>
+  </div>
+
+  <p>The key to a good mnemonic is making it <em>personal and absurd</em>. Generic mnemonics from books are better than nothing, but the ones you invent yourself are far stickier. Spend 30 seconds crafting a weird mental image when you learn a new character — that investment pays off for years.</p>
+
+  <h2 id="srs">3. Spaced Repetition</h2>
+  <p>Spaced repetition (SRS) is the most evidence-backed memorization technique that exists. The core idea is simple: review information at gradually increasing intervals — instead of re-reading it the next day, you review it after 1 day, then 3 days, then 7 days, then 2 weeks, and so on. Each successful recall pushes the next review further into the future. Cards you struggle with get reviewed more frequently.</p>
+  <p>For kanji specifically, an SRS deck should have the kanji on the front and its meaning, key reading(s), and example word on the back. Testing yourself on recall — not recognition — is what builds durable memory.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.9rem;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Review Stage</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Interval</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Status</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">First learn</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Same day (10 min)</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">New</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Write mnemonic, check stroke order</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Review 1</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Next day</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Learning</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Expected ~50% pass rate</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Review 2</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">3 days later</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Learning</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Mnemonic should kick in now</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Review 3</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">1 week later</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Young</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Feeling more solid</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Review 4</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">2 weeks later</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Young</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Context encounters help a lot here</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Review 5+</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">1–4 months</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Mature</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Long-term memory established</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 0.5rem 0.5rem 0; margin:1.5rem 0;">
+    <strong>Practical tip:</strong> Keep your daily new-card limit at 5-10 kanji. The real time cost of SRS is not learning new cards — it is the ever-growing pile of reviews. Adding 20 new cards per day quickly creates 200-card review sessions that burn learners out. Slow and steady wins.
+  </div>
+
+  <h2 id="context">4. Learn in Context</h2>
+  <p>Isolated kanji flashcards build recognition, but <strong>compound words and sentences</strong> build true fluency. Every time you learn a new kanji, immediately pair it with two or three common compound words that use it. This gives your brain multiple retrieval paths for the same character.</p>
+  <p>For example, when you learn 気 (spirit, energy, feeling), do not stop there. Learn it in context:</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.95rem;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Compound</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Reading</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Meaning</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Components</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.1rem;">天気</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">tenki</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">weather</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">heaven + energy</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.1rem;">元気</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">genki</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">healthy, energetic</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">origin + spirit</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.1rem;">電気</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">denki</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">electricity</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">lightning + energy</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.1rem;">気持ち</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">kimochi</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">feeling, mood</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">spirit + hold</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0; font-size:1.1rem;">空気</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">kuuki</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">air, atmosphere</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">sky + energy</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Notice how learning 気 in these five compounds also teaches you 天 (heaven), 元 (origin), 電 (lightning), 空 (sky) — your vocabulary expands in a web, not a line. Browse the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool to find compounds grouped by level and kanji component.</p>
+  <p>Sentence-level context matters too. When a kanji appears in a sentence you actually understand, your brain forms a richer memory trace than from a flashcard alone. Save interesting example sentences alongside your SRS cards and re-read them during review sessions.</p>
+
+  <h2 id="writing">5. Handwriting Practice</h2>
+  <p>In the age of smartphones and keyboards, handwriting practice might seem unnecessary — after all, you will type most Japanese in real life. But the research on motor learning strongly suggests that physically writing characters creates memory traces that purely visual study cannot replicate. Writing engages proprioception (body position awareness), fine motor sequences, and spatial reasoning all at once, layering multiple memory systems on top of each other.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#2563eb;">Benefit 1: Stroke Order Memory</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.9rem;">Writing forces you to learn stroke order, which in turn helps you draw similar kanji faster and more consistently. Correct stroke order is also essential for handwriting recognition on smartphones.</p>
+    </div>
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#2563eb;">Benefit 2: Component Awareness</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.9rem;">When you write a character stroke by stroke, you naturally notice which radicals it contains. This awareness feeds directly into radical decomposition and mnemonic creation.</p>
+    </div>
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#2563eb;">Benefit 3: Distinguishing Similar Kanji</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.9rem;">Many kanji look nearly identical at small font sizes — 土 vs 士, 己 vs 已 vs 巳. Writing them out reveals the exact differences in a way that staring at a screen does not.</p>
+    </div>
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#2563eb;">Benefit 4: Better Recall Under Pressure</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.9rem;">Learners who have practiced writing kanji by hand tend to recall them more reliably in high-pressure situations like exams or live conversations where there is no time to look things up.</p>
+    </div>
+  </div>
+
+  <p><strong>Method:</strong> Use a <em>genkouyoushi</em> grid notebook (standard Japanese manuscript paper). For each new kanji, write it 5-10 times while saying the reading aloud. Then close the notebook and write it once more from memory. This final "closed book" repetition is the critical step most learners skip. Check stroke order with our <a href="/japanese/tools/stroke-order/">Stroke Order</a> tool before you begin so you do not accidentally ingrain incorrect habits.</p>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 0.5rem 0.5rem 0; margin:1.5rem 0;">
+    <strong>Time-saving approach:</strong> You do not need to handwrite every kanji. Focus intensive handwriting practice on the 500-800 most common joyo kanji. For rarer characters, recognition-only study is a reasonable trade-off.
+  </div>
+
+  <h2 id="reading">6. Extensive Reading</h2>
+  <p>Extensive reading means reading large quantities of material at or slightly below your current level — prioritizing fluency and enjoyment over stopping to look up every unknown word. For kanji learning, extensive reading is the technique that transitions kanji from "studied words" to "part of my mental vocabulary."</p>
+  <p>The mechanism is simple: when you encounter a kanji you have studied in a real text, in a real context, your memory of it gets stronger. Multiple encounters in diverse contexts — news articles, manga, novels, social media — create a rich network of associations around each character. After seeing 水 (water) in 水泳 (swimming), 水道 (waterworks), 洪水 (flood), and a weather report, you will never forget it.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.9rem;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Level</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Approx. Kanji Known</th>
+        <th style="padding:0.6rem 0.8rem; text-align:left; border:1px solid #e2e8f0;">Recommended Material</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">N5 / Beginner</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">50–100</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Graded readers (Level 0–1), children's picture books, simple manga with furigana</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">N4 / Elementary</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">100–300</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Graded readers (Level 2–3), NHK Web Easy (simplified news), slice-of-life manga</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">N3 / Intermediate</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">300–600</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Light novels, NHK News Web, manga without furigana</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">N2 / Upper Intermediate</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">600–1,000</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Regular novels, mainstream news sites, social media</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">N1 / Advanced</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">1,000–2,000+</td>
+        <td style="padding:0.6rem 0.8rem; border:1px solid #e2e8f0;">Literary fiction, business documents, academic texts</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The rule of thumb for extensive reading is the <strong>98% comprehension threshold</strong>: you should understand roughly 98 out of every 100 words. Below that rate, stopping to look up unknown words disrupts your reading flow too much. Choose material that feels almost easy — you will still encounter new kanji, but in a volume you can absorb without frustration.</p>
+
+  <h2 id="compounds">7. Compound Word Patterns</h2>
+  <p>Japanese uses thousands of <strong>jukugo</strong> (熟語) — kanji compound words made of two or more characters. The great thing about compounds is that knowing the components often lets you infer the meaning of a word you have never seen before. This is like knowing Latin roots in English: once you know "bio" means life and "logy" means study, you can guess "biology" even without being told.</p>
+  <p>Several highly productive patterns appear again and again in Japanese compounds:</p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#7c3aed;">Verb + Object (動目型)</strong>
+      <p style="margin:0.5rem 0; font-size:0.9rem;">読書 (dokusho) = read + book = reading<br>登山 (tozan) = climb + mountain = mountain climbing<br>作文 (sakubun) = make + sentence = writing (composition)</p>
+    </div>
+    <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#7c3aed;">Noun + Noun (修飾型)</strong>
+      <p style="margin:0.5rem 0; font-size:0.9rem;">国語 (kokugo) = country + language = Japanese language<br>図書館 (toshokan) = picture + book + building = library<br>新幹線 (shinkansen) = new + trunk + line = bullet train</p>
+    </div>
+    <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#7c3aed;">Opposite Pairs (対義語型)</strong>
+      <p style="margin:0.5rem 0; font-size:0.9rem;">売買 (baibai) = sell + buy = trading<br>往復 (ofuku) = go + return = round trip<br>増減 (zougen) = increase + decrease = fluctuation</p>
+    </div>
+    <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:0.5rem; padding:1rem;">
+      <strong style="color:#7c3aed;">Number/Quantity Prefixes</strong>
+      <p style="margin:0.5rem 0; font-size:0.9rem;">一方 (ippou) = one side / one way<br>両親 (ryoushin) = both + parent = parents<br>全員 (zen'in) = all + members = everyone</p>
+    </div>
+  </div>
+
+  <p>When you learn a new compound, always ask yourself: does this follow a pattern I recognize? Could I predict other words using the same pattern? For example, once you learn 登山 (mountain climbing), you can guess that 登校 means "going to school" (登 = climb/go up, 校 = school), and 登場 means "appearance on stage" (場 = place/stage).</p>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.25rem; border-radius:0 0.5rem 0.5rem 0; margin:1.5rem 0;">
+    <strong>Putting it all together:</strong> The most effective kanji learners do not treat these seven techniques as separate activities. A typical session might look like: review SRS cards (technique 3) → learn 5 new kanji using radical decomposition and mnemonics (techniques 1 & 2) → read a short graded reader passage and look up any unfamiliar kanji by radical (techniques 6 & 1) → write 5 new kanji in a notebook (technique 5). Twenty to thirty minutes covers all the bases.
+  </div>
+
+  <p>Consistency is what separates learners who plateau from those who keep progressing. It does not matter whether you use Anki, WaniKani, a paper notebook, or our free <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> and <a href="/japanese/tools/stroke-order/">Stroke Order</a> tools — what matters is showing up every day and applying these techniques with genuine attention. The 2,136 joyo kanji feel like an impossible mountain from the base, but they become a manageable climb once you have the right strategies and a daily habit to sustain them.</p>
 
 </BlogLayout>

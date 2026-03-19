@@ -1,38 +1,602 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "How do I type small kana on a keyboard?", "a": "Type 'x' or 'l' before the character. For example, 'xtsu' gives you っ. For combinations, just type naturally: 'kya' produces きゃ."}, {"q": "What happens if I write regular-sized kana instead of small?", "a": "The meaning changes. きよう (kiyou, skillful) is different from きょう (kyou, today). きて (kite, come) differs from きって (kitte, stamp)."}, {"q": "Are there rarely used small kana?", "a": "Yes — small ゎ (wa) is extremely rare. Small ヵ and ヶ appear in katakana for counting like 3ヶ月 (3 months) but are not standard combinations."}];
-const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
-const headings = [{"depth": 2, "slug": "what-are", "text": "What Are Small Kana?"}, {"depth": 2, "slug": "small-tsu", "text": "Small っ: The Double Consonant"}, {"depth": 2, "slug": "combo-sounds", "text": "Combination Sounds: ゃ ゅ ょ"}, {"depth": 2, "slug": "katakana", "text": "Small Kana in Katakana"}, {"depth": 2, "slug": "practice", "text": "How to Practice"}];
+const faq = [
+  { q: `How do I type small kana on a keyboard?`, a: `On most Japanese IME systems, type 'x' or 'l' before the character to produce a small version. For example, 'xtsu' or 'ltsu' gives you っ, 'xya' gives ゃ, 'xyu' gives ゅ, and 'xyo' gives ょ. However, for combination sounds you usually do not need this — simply typing 'kya' will automatically produce きゃ, and 'sha' will produce しゃ. The 'x' or 'l' prefix is mainly needed when you want a standalone small kana without a preceding character, which is rare.` },
+  { q: `What happens if I write regular-sized kana instead of small?`, a: `The meaning changes entirely, and native speakers will notice immediately. きよう (ki-yo-u, meaning skillful or dexterous) is a completely different word from きょう (kyou, meaning today). Similarly, きて (kite, meaning "come" as a command) differs from きって (kitte, meaning postage stamp). The size difference is not optional or stylistic — it changes the phonetic structure of the syllable and, therefore, the word itself. This is why it is critical to write small kana visibly smaller and positioned in the upper-left of the character space.` },
+  { q: `Are there rarely used small kana?`, a: `Yes. Small ゎ (wa) is extremely rare and appears almost exclusively in historical texts or classical poetry. Small ヵ and ヶ are katakana characters that appear in contexts like 3ヶ月 (san-kagetsu, 3 months) and 2ヵ国 (ni-kakoku, 2 countries), but they function as special counters rather than phonetic combination characters. Small ヱ and ヲ are archaic. You do not need to worry about these for everyday Japanese — focus on っ/ッ and the ゃゅょ/ャュョ set first.` },
+  { q: `Why does small っ feel so hard to pronounce correctly?`, a: `The difficulty is that っ represents a mora — a unit of timing — rather than an audible sound you can hear in isolation. You hold your mouth in position for one beat before releasing the next consonant. This creates what linguists call a "geminate consonant." English has no direct equivalent, though the pause in "bookcase" (where two k-sounds meet) is a rough analogy. The best practice technique is to exaggerate it first: say "kip-pu" with a very clear pause, then gradually make it more natural. Listening to native audio while reading along helps your ear calibrate the timing.` },
+  { q: `Do combination sounds count as one syllable or two in Japanese?`, a: `They count as one mora (one beat of timing). This is crucial for understanding Japanese poetry like haiku, which counts morae rather than syllables in the English sense. For example, きょ (kyo) is one mora, not two. By contrast, きよ (ki-yo) is two morae. This distinction matters for rhythm, song lyrics, and formal writing. When counting the length of a Japanese word for poetry or wordplay, always count っ as one mora and each combination like しゃ as one mora.` }
+];
+const relatedTools = [
+  { name: "Hiragana Chart", url: "/japanese/tools/hiragana-chart/" },
+  { name: "Kana Quiz", url: "/japanese/tools/kana-quiz/" },
+  { name: "JLPT Vocabulary", url: "/japanese/tools/jlpt-vocabulary/" }
+];
+const headings = [
+  { depth: 2, slug: "what-are", text: "What Are Small Kana?" },
+  { depth: 2, slug: "small-tsu", text: "Small っ: The Double Consonant" },
+  { depth: 2, slug: "combo-sounds", text: "Combination Sounds: ゃ ゅ ょ" },
+  { depth: 2, slug: "katakana", text: "Small Kana in Katakana" },
+  { depth: 2, slug: "typing", text: "How to Type Small Kana on a Keyboard" },
+  { depth: 2, slug: "handwriting", text: "How to Write Small Kana by Hand" },
+  { depth: 2, slug: "mistakes", text: "Common Mistakes with Small Kana" },
+  { depth: 2, slug: "practice", text: "Practice Exercises" }
+];
 ---
 <BlogLayout
   title="Small Kana (っ ゃ ゅ ょ): Double Consonants and Combo Sounds"
-  description="Master small kana characters — double consonants with っ and combination sounds with ゃ ゅ ょ."
+  description="Master small kana characters — double consonants with っ and combination sounds with ゃ ゅ ょ. Complete tables, typing guide, handwriting tips, and practice exercises for beginners."
   language="japanese"
   category="kana"
-  tags={["hiragana", "katakana", "beginner"]}
+  tags={["hiragana", "katakana", "beginner", "kana", "pronunciation"]}
   publishDate="2026-02-19"
   faq={faq}
   relatedTools={relatedTools}
   headings={headings}
 >
 
+    <p>Small kana are one of the first real pronunciation hurdles for Japanese learners — and mastering them makes an immediate difference in how natural your Japanese sounds. This guide covers every small kana character with complete reference tables, a full typing guide, handwriting positioning tips, and targeted practice exercises to help them stick.</p>
+
     <h2 id="what-are">What Are Small Kana?</h2>
-    <p>Small kana (捨て仮名) are miniature versions of certain hiragana and katakana characters. They serve two purposes: creating double consonants and forming combination sounds. Unlike regular kana that represent full syllables, small kana modify the pronunciation of surrounding characters.</p>
-    <p>There are two main categories. The small っ (tsu) creates a brief pause or double consonant. The characters ゃ, ゅ, and ょ combine with consonant characters to create blended sounds.</p>
+    <p>Small kana (捨て仮名, sutegana) are miniature versions of certain hiragana and katakana characters. They serve two purposes: creating double consonants and forming combination sounds. Unlike regular kana that represent full syllables on their own, small kana modify the pronunciation of the characters around them.</p>
+    <p>There are two main categories. The small っ (tsu) creates a brief pause or double consonant effect. The characters ゃ, ゅ, and ょ combine with い-column characters to create blended sounds that function as a single syllable. The complete set of small kana used in standard modern Japanese is shown in the table below.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Character</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Type</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Role</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Katakana Equivalent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.4rem; text-align:center;">っ</td>
+          <td style="padding:9px 14px;">Hiragana</td>
+          <td style="padding:9px 14px;">Double consonant (geminate)</td>
+          <td style="padding:9px 14px; font-size:1.3rem; text-align:center;">ッ</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.4rem; text-align:center;">ゃ</td>
+          <td style="padding:9px 14px;">Hiragana</td>
+          <td style="padding:9px 14px;">Combination with -ya sound</td>
+          <td style="padding:9px 14px; font-size:1.3rem; text-align:center;">ャ</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.4rem; text-align:center;">ゅ</td>
+          <td style="padding:9px 14px;">Hiragana</td>
+          <td style="padding:9px 14px;">Combination with -yu sound</td>
+          <td style="padding:9px 14px; font-size:1.3rem; text-align:center;">ュ</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.4rem; text-align:center;">ょ</td>
+          <td style="padding:9px 14px;">Hiragana</td>
+          <td style="padding:9px 14px;">Combination with -yo sound</td>
+          <td style="padding:9px 14px; font-size:1.3rem; text-align:center;">ョ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="border-left: 4px solid #0ea5e9; background:#f0f9ff; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Key Concept:</strong> Small kana are always written noticeably smaller than regular kana — roughly half the height and width. In printed text, the size difference is obvious. In handwriting, you must consciously make them smaller or native readers may misread your text.
+    </div>
 
     <h2 id="small-tsu">Small っ: The Double Consonant</h2>
-    <p>When you see small っ in a word, hold your mouth in position briefly before releasing the next consonant. This creates a sharp, clipped effect shown by doubling the next consonant in romaji.</p>
-    <p>Common examples: <strong>がっこう</strong> (gakkou, school), <strong>きっぷ</strong> (kippu, ticket), <strong>ざっし</strong> (zasshi, magazine), <strong>にっき</strong> (nikki, diary), <strong>いっぱい</strong> (ippai, full). The biggest mistake is ignoring っ entirely — native speakers notice immediately because it changes the word rhythm.</p>
+    <p>When you see small っ in a word, hold your mouth in position briefly before releasing the next consonant. This creates a sharp, clipped effect shown by doubling the next consonant in romaji. In phonetic terms, っ represents one full mora — one beat of timing — even though you do not hear an actual sound in that beat.</p>
+    <p>The biggest mistake learners make is ignoring っ entirely. Native speakers notice immediately because it changes the rhythm of the entire word. Compare: <strong>かた</strong> (kata, shoulder) versus <strong>かった</strong> (katta, won/bought). Omitting the double consonant turns one word into a completely different one.</p>
+
+    <p>Here are the most common everyday words that use small っ, organized with their pronunciation guide:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Word</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Romaji</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Meaning</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Pronunciation Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">がっこう</td>
+          <td style="padding:9px 14px; text-align:center;">gakkou</td>
+          <td style="padding:9px 14px;">school</td>
+          <td style="padding:9px 14px;">Pause before "kou" — gak-kou</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">きっぷ</td>
+          <td style="padding:9px 14px; text-align:center;">kippu</td>
+          <td style="padding:9px 14px;">ticket</td>
+          <td style="padding:9px 14px;">Pause before "pu" — kip-pu</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">ざっし</td>
+          <td style="padding:9px 14px; text-align:center;">zasshi</td>
+          <td style="padding:9px 14px;">magazine</td>
+          <td style="padding:9px 14px;">Pause before "shi" — zas-shi</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">にっき</td>
+          <td style="padding:9px 14px; text-align:center;">nikki</td>
+          <td style="padding:9px 14px;">diary</td>
+          <td style="padding:9px 14px;">Pause before "ki" — nik-ki</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">いっぱい</td>
+          <td style="padding:9px 14px; text-align:center;">ippai</td>
+          <td style="padding:9px 14px;">full / a lot</td>
+          <td style="padding:9px 14px;">Pause before "pai" — ip-pai</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">ちょっと</td>
+          <td style="padding:9px 14px; text-align:center;">chotto</td>
+          <td style="padding:9px 14px;">a little / a moment</td>
+          <td style="padding:9px 14px;">Uses both っ and ょ — cho-tto</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">きって</td>
+          <td style="padding:9px 14px; text-align:center;">kitte</td>
+          <td style="padding:9px 14px;">postage stamp</td>
+          <td style="padding:9px 14px;">Pause before "te" — kit-te</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">まった</td>
+          <td style="padding:9px 14px; text-align:center;">matta</td>
+          <td style="padding:9px 14px;">waited (past tense)</td>
+          <td style="padding:9px 14px;">Pause before "ta" — mat-ta</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">けっか</td>
+          <td style="padding:9px 14px; text-align:center;">kekka</td>
+          <td style="padding:9px 14px;">result</td>
+          <td style="padding:9px 14px;">Pause before "ka" — kek-ka</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-size:1.2rem; text-align:center;">しっかり</td>
+          <td style="padding:9px 14px; text-align:center;">shikkari</td>
+          <td style="padding:9px 14px;">firmly / properly</td>
+          <td style="padding:9px 14px;">Pause before "ka" — shik-kari</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="border-left: 4px solid #f59e0b; background:#fffbeb; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Practice Tip:</strong> When you encounter っ while reading, tap your finger on the desk for that beat. One tap per mora — including the silent っ mora. This physical cue helps your internal sense of Japanese rhythm develop much faster.
+    </div>
 
     <h2 id="combo-sounds">Combination Sounds: ゃ ゅ ょ</h2>
-    <p>These small characters combine with い-column characters to create single blended syllables. For example, き (ki) + ゃ (ya) becomes きゃ (kya) — one syllable, not two.</p>
-    <p>The full set: きゃ/きゅ/きょ (kya/kyu/kyo), しゃ/しゅ/しょ (sha/shu/sho), ちゃ/ちゅ/ちょ (cha/chu/cho), にゃ/にゅ/にょ (nya/nyu/nyo), ひゃ/ひゅ/ひょ (hya/hyu/hyo), みゃ/みゅ/みょ (mya/myu/myo), りゃ/りゅ/りょ (rya/ryu/ryo). The same applies to voiced consonants: ぎゃ, じゃ, びゃ, ぴゃ.</p>
-    <p>Real-world examples: <strong>きょう</strong> (kyou, today), <strong>しゃしん</strong> (shashin, photo), <strong>りょうり</strong> (ryouri, cooking), <strong>ちょっと</strong> (chotto, a little — combines both っ and ょ).</p>
+    <p>These small characters combine with い-column characters (き, し, ち, に, ひ, み, り, and their voiced equivalents) to create single blended syllables called yoon (拗音). For example, き (ki) + ゃ (ya) becomes きゃ (kya) — one syllable, not two. The small kana is swallowed into the preceding consonant.</p>
+    <p>Real-world examples: <strong>きょう</strong> (kyou, today), <strong>しゃしん</strong> (shashin, photo), <strong>りょうり</strong> (ryouri, cooking), <strong>ちょっと</strong> (chotto, a little — combines both っ and ょ), <strong>にゅうがく</strong> (nyuugaku, school enrollment).</p>
+
+    <p>The complete combination sound table, including voiced consonants:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Base Character</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">+ ゃ</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">+ ゅ</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">+ ょ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold;">き ki</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">きゃ kya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">きゅ kyu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">きょ kyo</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-weight:bold;">し shi</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">しゃ sha</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">しゅ shu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">しょ sho</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold;">ち chi</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ちゃ cha</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ちゅ chu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ちょ cho</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-weight:bold;">に ni</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">にゃ nya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">にゅ nyu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">にょ nyo</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold;">ひ hi</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ひゃ hya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ひゅ hyu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ひょ hyo</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-weight:bold;">み mi</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">みゃ mya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">みゅ myu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">みょ myo</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold;">り ri</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">りゃ rya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">りゅ ryu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">りょ ryo</td>
+        </tr>
+        <tr style="background:#f0f9ff; border-top: 2px solid #bae6fd;">
+          <td style="padding:9px 14px; font-weight:bold; color:#1d4ed8;">ぎ gi (voiced)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぎゃ gya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぎゅ gyu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぎょ gyo</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold; color:#1d4ed8;">じ ji (voiced)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">じゃ ja</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">じゅ ju</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">じょ jo</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; font-weight:bold; color:#1d4ed8;">び bi (voiced)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">びゃ bya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">びゅ byu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">びょ byo</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; font-weight:bold; color:#7c3aed;">ぴ pi (semi-voiced)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぴゃ pya</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぴゅ pyu</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.1rem;">ぴょ pyo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="border-left: 4px solid #10b981; background:#ecfdf5; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Common words to remember:</strong> ぎゅうにゅう (gyuunyuu, cow's milk), じゅうどう (juudou, judo), びょういん (byouin, hospital), ぴょんと (pyonto, with a hop/jump). The voiced combinations appear frequently in both formal writing and casual speech.
+    </div>
 
     <h2 id="katakana">Small Kana in Katakana</h2>
-    <p>Everything applies to katakana too. Small ッ creates double consonants in loanwords: チョコレート (chokoreeto, chocolate), コンピューター (konpyuutaa, computer). Katakana also has additional small kana like ティ (ti), ディ (di), and フォ (fo) for foreign sounds.</p>
+    <p>Everything covered above applies equally to katakana. Small ッ creates double consonants in loanwords: チョコレート (chokoreeto, chocolate), コンピューター (konpyuutaa, computer), バッグ (baggu, bag). Small ャ, ュ, ョ form combination sounds exactly as in hiragana.</p>
+    <p>Katakana has an additional set of small kana combinations that do not exist in hiragana. These were developed specifically to represent foreign sounds not native to Japanese phonology:</p>
 
-    <h2 id="practice">How to Practice</h2>
-    <p>Start by identifying small kana in everyday Japanese text — product labels, manga, or news articles. Practice writing them clearly smaller than regular characters, positioned in the upper-left of the character space. Use our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> to test recognition and the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> as reference.</p>
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Katakana</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Sound</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Example Words</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Source Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ティ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">ti</td>
+          <td style="padding:9px 14px;">パーティー (party), ティッシュ (tissue), ティーム (team)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ディ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">di</td>
+          <td style="padding:9px 14px;">ディズニー (Disney), ディナー (dinner), ディスク (disc)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ファ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">fa</td>
+          <td style="padding:9px 14px;">ファン (fan), ソファ (sofa), ファイル (file)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">フィ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">fi</td>
+          <td style="padding:9px 14px;">フィルム (film), フィンランド (Finland)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">フォ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">fo</td>
+          <td style="padding:9px 14px;">フォーク (fork), プラットフォーム (platform)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ウィ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">wi</td>
+          <td style="padding:9px 14px;">ウィキペディア (Wikipedia), ウィンドウ (window)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ウェ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">we</td>
+          <td style="padding:9px 14px;">ウェブ (web), ウェールズ (Wales)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ヴァ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">va</td>
+          <td style="padding:9px 14px;">ヴァイオリン (violin), ヴァンパイア (vampire)</td>
+          <td style="padding:9px 14px;">English / European</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">ヴィ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">vi</td>
+          <td style="padding:9px 14px;">ヴィラ (villa), ヴィデオ (video — older usage)</td>
+          <td style="padding:9px 14px;">Italian / Latin</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">トゥ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">tu</td>
+          <td style="padding:9px 14px;">トゥルー (true — stylized), ツーツー (toot-toot)</td>
+          <td style="padding:9px 14px;">English</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.2rem;">デュ</td>
+          <td style="padding:9px 14px; text-align:center; font-weight:bold;">dyu</td>
+          <td style="padding:9px 14px;">デュエット (duet), デュアル (dual)</td>
+          <td style="padding:9px 14px;">English / French</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="border-left: 4px solid #8b5cf6; background:#f5f3ff; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Note:</strong> The ヴ series (va/vi/vu/ve/vo) is used in formal or literary contexts to precisely render V-sounds. In everyday casual Japanese, バ (ba) is often substituted — for example, バイオリン instead of ヴァイオリン for violin. Both are acceptable.
+    </div>
+
+    <h2 id="typing">How to Type Small Kana on a Keyboard</h2>
+    <p>Typing small kana is straightforward once you know the shortcuts. Japanese IME (Input Method Editor) on any device — Windows, Mac, iOS, Android — uses the same basic system. There are two ways to enter small kana.</p>
+
+    <p><strong>Method 1: Natural combination input</strong> — For combination sounds, simply type the romaji naturally. The IME generates the small kana automatically:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1rem 0;">
+      <div style="border: 1px solid #e0e7ff; border-radius: 8px; padding: 1rem; background:#fafafa; text-align:center;">
+        <div style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Type</div>
+        <div style="font-family:monospace; font-size:1.1rem; color:#1d4ed8; font-weight:bold;">kya</div>
+        <div style="font-size:1.5rem; margin:6px 0;">→ きゃ</div>
+      </div>
+      <div style="border: 1px solid #e0e7ff; border-radius: 8px; padding: 1rem; background:#fafafa; text-align:center;">
+        <div style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Type</div>
+        <div style="font-family:monospace; font-size:1.1rem; color:#1d4ed8; font-weight:bold;">sha</div>
+        <div style="font-size:1.5rem; margin:6px 0;">→ しゃ</div>
+      </div>
+      <div style="border: 1px solid #e0e7ff; border-radius: 8px; padding: 1rem; background:#fafafa; text-align:center;">
+        <div style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Type</div>
+        <div style="font-family:monospace; font-size:1.1rem; color:#1d4ed8; font-weight:bold;">cho</div>
+        <div style="font-size:1.5rem; margin:6px 0;">→ ちょ</div>
+      </div>
+      <div style="border: 1px solid #e0e7ff; border-radius: 8px; padding: 1rem; background:#fafafa; text-align:center;">
+        <div style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Type</div>
+        <div style="font-family:monospace; font-size:1.1rem; color:#1d4ed8; font-weight:bold;">ryu</div>
+        <div style="font-size:1.5rem; margin:6px 0;">→ りゅ</div>
+      </div>
+    </div>
+
+    <p><strong>Method 2: The x or l prefix</strong> — When you need a standalone small kana (without a preceding character), type <code>x</code> or <code>l</code> before the character's romaji. This is the manual override method:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Desired Small Kana</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Type (x prefix)</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Type (l prefix)</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Also works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:8px 14px; text-align:center; font-size:1.3rem;">っ</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xtsu</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">ltsu</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xtu / ltu</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:8px 14px; text-align:center; font-size:1.3rem;">ゃ</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xya</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">lya</td>
+          <td style="padding:8px 14px; text-align:center;">—</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:8px 14px; text-align:center; font-size:1.3rem;">ゅ</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xyu</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">lyu</td>
+          <td style="padding:8px 14px; text-align:center;">—</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:8px 14px; text-align:center; font-size:1.3rem;">ょ</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xyo</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">lyo</td>
+          <td style="padding:8px 14px; text-align:center;">—</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:8px 14px; text-align:center; font-size:1.3rem;">ッ</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">xtsu</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">ltsu</td>
+          <td style="padding:8px 14px; text-align:center; font-family:monospace;">(katakana mode)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Shortcut for double consonants:</strong> When typing words with っ inside them, you do not need to type <code>xtsu</code>. Simply double the following consonant. For example, type <code>kitte</code> and you get きって automatically. Type <code>gakkou</code> and you get がっこう. This is the fastest method in practice.</p>
+
+    <div style="border-left: 4px solid #0ea5e9; background:#f0f9ff; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Mobile typing:</strong> On Japanese smartphone keyboards (flick input), small kana are entered by tapping the base character and then swiping or selecting the "small" option from the character wheel. The interface varies slightly by app, but look for the small/dakuten toggle button near the text input area.
+    </div>
+
+    <h2 id="handwriting">How to Write Small Kana by Hand</h2>
+    <p>Writing small kana correctly is a matter of size and positioning. When you write Japanese by hand — on paper, on a tablet, or in a notebook — each character occupies a square grid space. Small kana must fit into roughly the upper-left quadrant of that grid space, not the full square.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0;">
+      <div style="border: 1px solid #d1d5db; border-radius: 8px; padding: 1.2rem; background:#fff;">
+        <div style="font-weight:bold; margin-bottom:0.6rem; color:#1d4ed8;">Small っ / ッ</div>
+        <ul style="margin:0; padding-left:1.2rem; line-height:1.8; font-size:0.92rem;">
+          <li>Write in upper-left quadrant of the grid box</li>
+          <li>Roughly half the size of regular つ / ツ</li>
+          <li>Same stroke order as full-size version</li>
+          <li>Common error: writing it too large or too low</li>
+        </ul>
+      </div>
+      <div style="border: 1px solid #d1d5db; border-radius: 8px; padding: 1.2rem; background:#fff;">
+        <div style="font-weight:bold; margin-bottom:0.6rem; color:#1d4ed8;">Small ゃ ゅ ょ / ャ ュ ョ</div>
+        <ul style="margin:0; padding-left:1.2rem; line-height:1.8; font-size:0.92rem;">
+          <li>Write immediately after the preceding character</li>
+          <li>Positioned in the lower-left area when horizontal writing</li>
+          <li>Positioned in the upper-right area in vertical writing</li>
+          <li>Must be visibly smaller than regular ya/yu/yo</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>In vertical writing (tategumi, 縦組み), which is traditional for Japanese literature and formal documents, small kana are positioned in the upper-right of the grid space rather than the lower-left. This is the opposite of horizontal writing. If you are studying classical literature or plan to write formal letters in Japanese, be aware of this distinction.</p>
+
+    <p>A useful practice method: use Japanese graph paper (方眼紙, houganshi) with visible grid squares. Write each pair — first the regular-sized kana, then the small version — side by side so you train your hand to make the size distinction instinctively. After 20-30 repetitions per character, the size ratio becomes natural.</p>
+
+    <div style="border-left: 4px solid #f59e0b; background:#fffbeb; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0;">
+      <strong>Stroke order:</strong> Small kana follow the same stroke order as their full-size counterparts. The only difference is size, not structure. So if you already know how to write つ (tsu), you already know how to write っ — just smaller and positioned correctly in the grid.
+    </div>
+
+    <h2 id="mistakes">Common Mistakes with Small Kana</h2>
+    <p>Learners consistently make the same handful of errors with small kana. Knowing these in advance helps you avoid them from the start.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Mistake</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Example</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">What Native Speakers Hear</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Fix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px;">Skipping っ entirely</td>
+          <td style="padding:9px 14px;">Saying きぷ instead of きっぷ (kippu)</td>
+          <td style="padding:9px 14px;">Sounds like a completely different (often meaningless) word</td>
+          <td style="padding:9px 14px;">Tap the beat; say "kip — pu" with a clear pause</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px;">Treating ゃゅょ as two syllables</td>
+          <td style="padding:9px 14px;">Saying き-や instead of きゃ (kya)</td>
+          <td style="padding:9px 14px;">Wrong word or unnatural accent</td>
+          <td style="padding:9px 14px;">Say it as one fluid syllable: kya, not ki-ya</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px;">Writing small kana full-sized</td>
+          <td style="padding:9px 14px;">Writing きよう when meaning きょう (kyou, today)</td>
+          <td style="padding:9px 14px;">Reads as "kiyou" (skillful/dexterous) — different word</td>
+          <td style="padding:9px 14px;">Write small kana at half-size in the upper-left quadrant</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px;">Confusing じゃ and ちゃ</td>
+          <td style="padding:9px 14px;">Writing じゃしん instead of しゃしん (photo)</td>
+          <td style="padding:9px 14px;">Meaningless — じゃ is "ja," しゃ is "sha"</td>
+          <td style="padding:9px 14px;">Review the base characters し vs じ before combining</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px;">Misreading ッ in loanwords</td>
+          <td style="padding:9px 14px;">Reading バック (bakku, bag) as バク (baku)</td>
+          <td style="padding:9px 14px;">Different word or unclear to native ears</td>
+          <td style="padding:9px 14px;">Always look for ッ — it is common in katakana loanwords</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px;">Ignoring っ at end of utterance</td>
+          <td style="padding:9px 14px;">あっ (ah! / oh!) said without a glottal stop</td>
+          <td style="padding:9px 14px;">Lacks the surprised/sharp feeling of the exclamation</td>
+          <td style="padding:9px 14px;">Let the word end on a stopped breath, not an open vowel</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>One additional mistake worth highlighting: in casual texting and social media, Japanese people sometimes write multiple っ characters in a row for expressive effect — for example, えっっっ (ehhhh?!) or よかったっっ (so gladdd!). This is internet slang and not standard Japanese, but you will encounter it frequently in online text.</p>
+
+    <h2 id="practice">Practice Exercises</h2>
+    <p>The best way to master small kana is through targeted, active practice — not passive review. Work through these exercises in order: recognition first, then production, then reading in context.</p>
+
+    <p><strong>Exercise 1: Reading Recognition</strong><br>
+    Read each word and identify whether it contains small っ, a combination with ゃゅょ, both, or neither. Cover the romaji column and try to read aloud first:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1rem 0;">
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">しゃしん</div>
+        <div style="font-size:0.85rem; color:#64748b;">shashin — photo</div>
+        <div style="font-size:0.8rem; color:#10b981; margin-top:4px;">contains ゃ</div>
+      </div>
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">がっこう</div>
+        <div style="font-size:0.85rem; color:#64748b;">gakkou — school</div>
+        <div style="font-size:0.8rem; color:#10b981; margin-top:4px;">contains っ</div>
+      </div>
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">ちょっと</div>
+        <div style="font-size:0.85rem; color:#64748b;">chotto — a little</div>
+        <div style="font-size:0.8rem; color:#f59e0b; margin-top:4px;">contains both!</div>
+      </div>
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">りょうり</div>
+        <div style="font-size:0.85rem; color:#64748b;">ryouri — cooking</div>
+        <div style="font-size:0.8rem; color:#10b981; margin-top:4px;">contains ょ</div>
+      </div>
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">きって</div>
+        <div style="font-size:0.85rem; color:#64748b;">kitte — stamp</div>
+        <div style="font-size:0.8rem; color:#10b981; margin-top:4px;">contains っ</div>
+      </div>
+      <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.9rem; background:#fff; text-align:center;">
+        <div style="font-size:1.5rem; margin-bottom:4px;">にゅうがく</div>
+        <div style="font-size:0.85rem; color:#64748b;">nyuugaku — enrollment</div>
+        <div style="font-size:0.8rem; color:#10b981; margin-top:4px;">contains ゅ</div>
+      </div>
+    </div>
+
+    <p><strong>Exercise 2: Minimal Pair Discrimination</strong><br>
+    These pairs of words differ only by the presence or absence of small kana. Understanding both words helps you appreciate how critical small kana are to meaning:</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background:#f0f9ff;">
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">Without small kana</th>
+          <th style="padding:10px 14px; text-align:center; border-bottom:2px solid #bae6fd;">With small kana</th>
+          <th style="padding:10px 14px; text-align:left; border-bottom:2px solid #bae6fd;">Meaning difference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">きよう (kiyou)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">きょう (kyou)</td>
+          <td style="padding:9px 14px;">skillful ↔ today</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">きて (kite)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">きって (kitte)</td>
+          <td style="padding:9px 14px;">come (command) ↔ postage stamp</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">しよ (shiyo)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">しょ (sho)</td>
+          <td style="padding:9px 14px;">let's do (volitional) ↔ writing/calligraphy</td>
+        </tr>
+        <tr style="background:#f0f9ff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">かた (kata)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">かった (katta)</td>
+          <td style="padding:9px 14px;">shoulder / direction ↔ won / bought (past tense)</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">ちよ (chiyo)</td>
+          <td style="padding:9px 14px; text-align:center; font-size:1.15rem;">ちょ (cho)</td>
+          <td style="padding:9px 14px;">a Japanese name (千代) ↔ (prefix meaning "super," casual)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Exercise 3: Typing Practice Sequence</strong><br>
+    Open a Japanese text input field (Google, your notes app, or our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>) and type these words in sequence. Focus on speed and accuracy:</p>
+    <ol style="line-height: 2.2;">
+      <li>がっこう (gakkou) — double your k: ga-k-kou</li>
+      <li>きっぷ (kippu) — double your p: ki-p-pu</li>
+      <li>しゃしん (shashin) — type "sha" naturally</li>
+      <li>りょうり (ryouri) — type "ryo" naturally</li>
+      <li>ちょっと (chotto) — combines both: "cho" then double t</li>
+      <li>ぎゅうにゅう (gyuunyuu) — type "gyu" then "u" then "nyu" then "u"</li>
+      <li>びょういん (byouin) — type "byo" then "u" then "i" then "n"</li>
+    </ol>
+
+    <p>For further practice, use our <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> to test recognition of small kana in randomized contexts, consult the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> for reference, and explore the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool where you will encounter small kana in real vocabulary words from all JLPT levels. Once small kana feel automatic, you are ready for deeper grammar study — check out our <a href="/japanese/blog/japanese-particles-explained/">guide to Japanese particles</a> and <a href="/japanese/blog/japanese-writing-systems-guide/">complete writing systems overview</a>.</p>
 
 </BlogLayout>

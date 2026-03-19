@@ -1,12 +1,46 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "What is romaji input vs kana input?", "a": "Romaji input lets you type using English letters that convert to Japanese (type 'ka' to get か). Kana input uses a Japanese keyboard layout. Romaji input is recommended for learners."}, {"q": "How do I type kanji?", "a": "Type the reading in hiragana, then press space to see kanji candidates. Select the correct one and press enter. The system learns your preferences over time."}, {"q": "Can I handwrite Japanese on my phone?", "a": "Yes — both iOS and Android support handwriting input for Japanese. It is useful for looking up unknown kanji by drawing them."}];
-const relatedTools = [{"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}];
-const headings = [{"depth": 2, "slug": "why-type", "text": "Why Learn to Type Japanese"}, {"depth": 2, "slug": "iphone", "text": "iPhone and iPad Setup"}, {"depth": 2, "slug": "android", "text": "Android Setup"}, {"depth": 2, "slug": "windows", "text": "Windows Setup"}, {"depth": 2, "slug": "mac", "text": "Mac Setup"}, {"depth": 2, "slug": "tips", "text": "Typing Tips and Shortcuts"}];
+const faq = [
+  {
+    "q": "What is romaji input vs kana input?",
+    "a": "Romaji input lets you type using the English letters you already know — type 'ka' and the IME converts it to か, type 'shi' and you get し. Kana input requires learning a separate Japanese keyboard layout where each key corresponds directly to a kana. For beginners, romaji input is strongly recommended because there is nothing new to memorize for the physical keyboard. Advanced users sometimes prefer kana input for speed, but the difference is minor and romaji input is perfectly fine even at a professional level."
+  },
+  {
+    "q": "How do I type kanji?",
+    "a": "Type the reading of the word in hiragana using romaji input, then press the Space bar. A list of kanji candidates will appear — for example, typing 'nihon' gives you candidates including 日本, 二本, and others. Use the arrow keys or mouse to select the correct kanji, then press Enter to confirm. If you press Space again the candidate window expands to show more options. Over time the IME learns which words you use most often and prioritises them. For unfamiliar kanji, you can also use handwriting input on mobile devices to look them up by drawing the strokes."
+  },
+  {
+    "q": "Can I handwrite Japanese on my phone?",
+    "a": "Yes — both iOS and Android support handwriting input for Japanese. On iPhone, open Settings > General > Keyboard > Keyboards > Add New Keyboard, then select Japanese > Handwriting. On Android with Gboard, tap the keyboard icon and choose Handwriting. Handwriting input is especially useful when you encounter an unknown kanji and want to look it up without knowing how it is read. Draw the strokes in roughly the correct order and the system will offer matches."
+  },
+  {
+    "q": "How do I type small kana like っ, ぁ, ぃ?",
+    "a": "Small tsu (っ) is typed by doubling the following consonant — 'kk' gives っk, so typing 'kkа' produces っか. You can also type 'ltu' or 'xtu' to get っ directly. For other small kana, add 'l' or 'x' before the syllable: 'la' or 'xa' gives ぁ, 'li' or 'xi' gives ぃ, 'lyu' gives ゅ, and so on. These small versions appear frequently in combined sounds like きゃ (kya), しゅ (shu), and ちょ (cho)."
+  },
+  {
+    "q": "Why does pressing 'n' sometimes give me ん and sometimes not?",
+    "a": "The IME waits to see if you are typing a word that starts with 'n' (like 'na', 'ni', 'nu', 'ne', 'no'). If you want a standalone ん, type 'nn' (double n) to force it, or type 'n' followed by a non-n consonant. For example, 'kana' becomes かな (two characters), while 'kan' followed by a space or 'nn' produces かん. This is the single most common source of confusion for beginners, so getting the hang of 'nn' = ん early will save you a lot of frustration."
+  }
+];
+const relatedTools = [
+  {"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"},
+  {"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"},
+  {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}
+];
+const headings = [
+  {"depth": 2, "slug": "why-type", "text": "Why Learn to Type Japanese"},
+  {"depth": 2, "slug": "iphone", "text": "iPhone and iPad Setup"},
+  {"depth": 2, "slug": "android", "text": "Android Setup"},
+  {"depth": 2, "slug": "windows", "text": "Windows Setup with Microsoft IME"},
+  {"depth": 2, "slug": "mac", "text": "Mac Setup with Japanese IME"},
+  {"depth": 2, "slug": "romaji-table", "text": "Romaji to Kana Conversion Table"},
+  {"depth": 2, "slug": "mistakes", "text": "Common Typing Mistakes and How to Fix Them"},
+  {"depth": 2, "slug": "practice", "text": "Practice Suggestions"}
+];
 ---
 <BlogLayout
   title="How to Type Japanese on Phone Computer and Tablet"
-  description="Set up Japanese typing on iPhone, Android, Windows, and Mac with input methods and keyboard shortcuts."
+  description="Set up Japanese typing on iPhone, Android, Windows, and Mac. Step-by-step instructions plus a complete romaji-to-kana conversion table for beginners."
   language="japanese"
   category="study tips"
   tags={["beginner", "tools"]}
@@ -16,23 +50,333 @@ const headings = [{"depth": 2, "slug": "why-type", "text": "Why Learn to Type Ja
   headings={headings}
 >
 
-    <h2 id="why-type">Why Learn to Type Japanese</h2>
-    <p>Effective Japanese study is about working smarter, not harder. Research consistently shows that certain approaches dramatically outperform traditional study methods.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="iphone">iPhone and iPad Setup</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="android">Android Setup</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="windows">Windows Setup</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="mac">Mac Setup</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="tips">Typing Tips and Shortcuts</h2>
-    <p>The spacing effect — reviewing at gradually increasing intervals — and active recall — retrieving information from memory rather than re-reading — are two of the most powerful evidence-based techniques for language learning.</p>
-    <p>Consistency beats intensity. Studying 15 minutes daily produces better results than 2 hours once a week. Build Japanese into your daily routine rather than treating it as a separate activity. Practice with <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> and <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> to reinforce what you have learned.</p>
+  <h2 id="why-type">Why Learn to Type Japanese</h2>
+  <p>At first glance, typing Japanese looks intimidating. The language uses three scripts — hiragana, katakana, and kanji — and the keyboard does not have a dedicated button for each character. But the reality is that typing Japanese is far more accessible than most beginners expect, and getting set up correctly unlocks a huge range of study and communication tools.</p>
+  <p>Once you can type Japanese, you can search for words in online dictionaries, message Japanese friends, read and write in apps like LINE, post on language-exchange platforms, and interact with AI tutors that respond in Japanese. Typing also reinforces your reading: when you type a word like <strong>さくら</strong> and watch the IME convert it to <strong>桜</strong>, the connection between sound, hiragana, and kanji becomes concrete in a way that flashcards alone cannot replicate.</p>
+
+  <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:1rem 1.2rem; border-radius:4px; margin:1.5rem 0;">
+    <strong>What is an IME?</strong><br>
+    IME stands for Input Method Editor. It is a piece of software that intercepts your keystrokes and converts them into Japanese characters. All modern operating systems include a Japanese IME for free — you just need to activate it. You do not need a special keyboard or any paid software.
+  </div>
+
+  <p>The standard method on every platform is <strong>romaji input</strong>: you type familiar English letters and the IME converts them to kana in real time. Type <code>a</code> → あ, <code>ka</code> → か, <code>sushi</code> → すし. Then, if you want kanji, you press Space to bring up a list of candidates. It is a remarkably fast system once you get used to it.</p>
+
+  <h2 id="iphone">iPhone and iPad Setup</h2>
+  <p>Apple's Japanese keyboard is one of the best available. It supports romaji input, a kana flick keyboard (popular in Japan), and even handwriting. Follow these steps to add it:</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.5rem;">Step 1 — Open Settings</strong>
+      Go to <em>Settings → General → Keyboard → Keyboards</em>, then tap <strong>Add New Keyboard…</strong>
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.5rem;">Step 2 — Select Japanese</strong>
+      Scroll down and tap <strong>Japanese</strong>. You will see three options: Romaji, Kana, and Handwriting.
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.5rem;">Step 3 — Choose Romaji</strong>
+      Tap <strong>Romaji</strong> and then tap Done. This is the recommended option for learners.
+    </div>
+    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.5rem;">Step 4 — Switch Keyboards</strong>
+      When typing, tap the globe icon (🌐) at the bottom-left of the keyboard to cycle between your installed keyboards.
+    </div>
+  </div>
+
+  <p>Once the Japanese keyboard is active, type romaji and the prediction bar above the keyboard shows kana and kanji candidates. Tap a candidate to insert it. To force a long vowel in katakana, type a hyphen (<code>-</code>) and the IME will insert ー.</p>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; border-radius:4px; margin:1.5rem 0;">
+    <strong>iPhone tip:</strong> If you add the <strong>Japanese Kana</strong> keyboard as well, you get the traditional 12-key flick layout used by most Japanese people on phones. Each key represents a row of the kana syllabary — flick up, down, left, or right to select the exact character. It feels awkward at first but becomes very fast with practice.
+  </div>
+
+  <p>For iPad users, the experience is identical. On larger screens you also have the option of connecting a physical Bluetooth keyboard; in that case, use <em>Settings → General → Keyboard → Hardware Keyboard</em> and set the input source to Japanese Romaji.</p>
+
+  <h2 id="android">Android Setup</h2>
+  <p>Most Android phones come with Gboard (Google Keyboard) pre-installed, which has excellent Japanese support. If your phone uses a different default keyboard, install Gboard from the Play Store for free.</p>
+
+  <ol>
+    <li>Open <strong>Settings → General Management → Language and Input → On-screen Keyboard</strong> (the exact path varies by manufacturer — search "keyboard" in Settings if you can not find it).</li>
+    <li>Tap <strong>Gboard → Languages → Add Keyboard</strong>.</li>
+    <li>Search for <strong>Japanese</strong> and select it. Choose <strong>Romaji</strong> as the layout, then tap Done.</li>
+    <li>While typing, tap the globe icon or the language key to switch to Japanese input.</li>
+  </ol>
+
+  <p>Gboard's Japanese mode works similarly to iOS: type romaji, tap candidates from the suggestion strip. For kanji conversion, type the full reading and then tap the best match. Gboard also supports a 12-key flick layout and handwriting mode — tap the keyboard options icon (the icon that looks like a puzzle piece or grid) to switch between input styles.</p>
+
+  <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:1rem 1.2rem; border-radius:4px; margin:1.5rem 0;">
+    <strong>Samsung devices:</strong> Samsung Galaxy phones include the Samsung Keyboard with built-in Japanese support. Go to <em>Settings → General Management → Samsung Keyboard Settings → Languages and Types → Manage Input Languages</em> and enable Japanese. The setup steps are slightly different but the romaji input method works the same way.
+  </div>
+
+  <h2 id="windows">Windows Setup with Microsoft IME</h2>
+  <p>Windows includes Microsoft IME for Japanese at no extra cost. It is reliable, fast, and deeply integrated with the OS. Here is how to activate it on Windows 10 and Windows 11:</p>
+
+  <ol>
+    <li>Go to <strong>Settings → Time &amp; Language → Language &amp; Region</strong>.</li>
+    <li>Click <strong>Add a Language</strong>, search for <strong>Japanese</strong>, and click Next → Install.</li>
+    <li>After installation, a language indicator (usually showing <strong>ENG</strong> or <strong>JPN</strong>) will appear in the taskbar near the clock.</li>
+    <li>Click the indicator to switch between English and Japanese input, or use the keyboard shortcut <strong>Windows key + Space</strong> to cycle through installed input methods.</li>
+  </ol>
+
+  <p>When Japanese IME is active, the taskbar shows <strong>A</strong> (for alphanumeric / English mode) or <strong>あ</strong> (for hiragana input). Click it to toggle, or use the shortcut below.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Shortcut</th>
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>Alt + ~</code> (backtick key)</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Toggle IME on / off</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>Space</code> (during input)</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Open kanji candidate list</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>Enter</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Confirm the current conversion</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>Escape</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Cancel the current conversion</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>F6</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Convert typed text to hiragana</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>F7</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Convert typed text to full-width katakana</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>F8</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Convert to half-width katakana</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>F9</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Convert to full-width alphanumeric</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>F10</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Convert to half-width alphanumeric</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The F6–F10 function keys are particularly powerful. If you type <code>sushi</code> in Japanese IME mode and press F6, you get すし. Press F7 and it converts to スシ (katakana). This is useful when you want katakana for loanwords without typing them differently.</p>
+
+  <h2 id="mac">Mac Setup with Japanese IME</h2>
+  <p>macOS includes a high-quality Japanese IME called "Japanese - Romaji" (and a separate "Japanese - Kana" option). To add it:</p>
+
+  <ol>
+    <li>Open <strong>System Settings → Keyboard → Input Sources</strong>, then click the <strong>+</strong> button.</li>
+    <li>In the language list, select <strong>Japanese</strong> and choose <strong>Romaji</strong> from the right panel. Click Add.</li>
+    <li>Enable <strong>Show Input menu in menu bar</strong> so you can see which input source is active.</li>
+    <li>Switch between English and Japanese using <strong>Ctrl + Space</strong> or by clicking the input menu in the menu bar.</li>
+  </ol>
+
+  <p>When Japanese input is active, a small underline appears below the text you are composing (called the <em>preedit string</em>). Press Space to convert to kanji, Tab to move between conversion segments, and Return to confirm. Pressing Escape cancels the current conversion and returns to romaji.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Ctrl + Space</strong>
+      Toggle Japanese / English input
+    </div>
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Space</strong>
+      Open kanji candidate list
+    </div>
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Tab</strong>
+      Move to next conversion segment
+    </div>
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Shift + Space</strong>
+      Insert full-width space (　)
+    </div>
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Return</strong>
+      Confirm conversion and commit text
+    </div>
+    <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem;">Escape</strong>
+      Cancel conversion, revert to romaji
+    </div>
+  </div>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; border-radius:4px; margin:1.5rem 0;">
+    <strong>Mac tip:</strong> macOS Japanese IME has a "Live Conversion" feature that converts text to kanji automatically as you type, without pressing Space. You can toggle this in <em>System Settings → Keyboard → Input Sources → Japanese - Romaji → Live Conversion</em>. It is impressive but can be distracting for beginners — turn it off until you feel comfortable with the basic conversion flow.
+  </div>
+
+  <h2 id="romaji-table">Romaji to Kana Conversion Table</h2>
+  <p>Most romaji input is straightforward — type the sound you hear and you get the right kana. However, a handful of sounds have non-obvious spellings. The table below covers every tricky case you are likely to encounter. Bookmark it and refer back until the rules become second nature.</p>
+
+  <p>For a complete interactive chart, see the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> and <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> tools. You can also test yourself with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Type this</th>
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">You get</th>
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>shi</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">し</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Also works: <code>si</code></td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>chi</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ち</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Also works: <code>ti</code></td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>tsu</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">つ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Also works: <code>tu</code></td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>fu</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ふ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Also works: <code>hu</code></td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>nn</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ん</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Single <code>n</code> before a consonant also works; use <code>nn</code> when you need ん at end of word or before a vowel</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>tt</code> / doubled consonant</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">っ + next kana</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">e.g. <code>kitte</code> → きって (stamp)</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>ltu</code> or <code>xtu</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">っ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Standalone small tsu without following character</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>la</code> / <code>xa</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ぁ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Small vowels — same pattern: <code>li</code>=ぃ, <code>lu</code>=ぅ, <code>le</code>=ぇ, <code>lo</code>=ぉ</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>lya</code> / <code>xya</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ゃ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Small ya — same: <code>lyu</code>=ゅ, <code>lyo</code>=ょ</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>kya</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">きゃ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Combined sounds: <code>kyu</code>=きゅ, <code>kyo</code>=きょ</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>sha</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">しゃ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>shu</code>=しゅ, <code>sho</code>=しょ</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>cha</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ちゃ</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>chu</code>=ちゅ, <code>cho</code>=ちょ</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>-</code> (hyphen, katakana only)</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">ー</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Long vowel mark used in katakana words (e.g. コーヒー = koohii)</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;"><code>~</code> or <code>wyi</code></td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">〜</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Wave dash, used frequently in Japanese informal writing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="mistakes">Common Typing Mistakes and How to Fix Them</h2>
+  <p>Even after you understand romaji input, a few patterns trip up nearly every beginner. Here are the most common ones and how to handle them:</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: ん becomes n</strong>
+      You type <code>kana</code> hoping for かんあ but get かな instead. <strong>Fix:</strong> Use <code>nn</code> for a standalone ん, especially before vowels: <code>kanna</code> → かんな.
+    </div>
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: Wrong kanji selected</strong>
+      You accepted the first candidate without checking. <strong>Fix:</strong> Always glance at the full candidate list before pressing Enter. Press Space a second time to expand it.
+    </div>
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: Text stays in preedit (underlined) forever</strong>
+      You forgot to confirm the conversion. <strong>Fix:</strong> Press Enter to confirm, or Escape to cancel and start over.
+    </div>
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: Katakana words look wrong</strong>
+      <code>koohii</code> (コーヒー, coffee) has a long ō but you typed short <code>kohi</code>. <strong>Fix:</strong> Double the vowel or use a hyphen for ー in katakana.
+    </div>
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: IME keeps switching off</strong>
+      Many apps reset the input language. <strong>Fix:</strong> Check the input indicator in the taskbar / menu bar before you start typing in a new window.
+    </div>
+    <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:8px; padding:1rem;">
+      <strong style="display:block; margin-bottom:0.4rem; color:#be123c;">Problem: Japanese punctuation is hard to find</strong>
+      Japanese uses 。(period) and 、(comma), not . and ,. <strong>Fix:</strong> While the IME is active, the period and comma keys automatically output 。 and 、. No special steps needed.
+    </div>
+  </div>
+
+  <h2 id="practice">Practice Suggestions</h2>
+  <p>The single most effective way to get faster at typing Japanese is simply to type more Japanese. Here are structured suggestions for different stages:</p>
+
+  <p><strong>Absolute beginners (first week):</strong> Open a notes app with the Japanese keyboard active and type every hiragana in the chart one by one, saying the sound aloud as you go. Use the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> as a reference. Do the same for katakana with the <a href="/japanese/tools/katakana-chart/">Katakana Chart</a>. Your goal is to confirm that every romaji input produces the character you expect — not speed.</p>
+
+  <p><strong>Early learners (first month):</strong> After each vocabulary study session, type the new words you learned. Type them in hiragana, then convert to kanji. This connects pronunciation (romaji), reading (hiragana/kanji), and meaning all in one action. The <a href="/japanese/tools/kana-quiz/">Kana Quiz</a> is excellent for drilling recognition speed.</p>
+
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; border-radius:4px; margin:1.5rem 0;">
+    <strong>Practical tip:</strong> Change the language on one social media app or messaging app to Japanese. Even if you only read the interface rather than type in it, the daily exposure keeps Japanese characters familiar. When you feel ready, try composing short messages in Japanese — even just a line or two a day adds up quickly.
+  </div>
+
+  <p><strong>Intermediate learners:</strong> Start writing journal entries or daily summaries in Japanese. Do not worry about perfect grammar — just type freely and let the IME handle the kana-to-kanji conversion. This builds IME fluency fast because you are dealing with real sentences, ambiguous conversions, and diverse vocabulary rather than isolated characters.</p>
+
+  <p><strong>Typing speed benchmark:</strong> A comfortable typing speed for everyday Japanese use is around 30–40 words per minute (measured in Japanese characters). Professional Japanese typists average 60–80 CPM. If you practice for 10–15 minutes a day, most learners reach comfortable everyday speed within two to three months.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+    <thead>
+      <tr style="background:#f0f9ff;">
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Stage</th>
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Recommended Activity</th>
+        <th style="padding:0.6rem 1rem; text-align:left; border:1px solid #e2e8f0;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Week 1</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Type all hiragana and katakana from chart, no speed pressure</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">10 min/day</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Weeks 2–4</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Type vocabulary words from lessons; use Kana Quiz for speed drills</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">15 min/day</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Month 2+</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Write short journal entries; text a language exchange partner</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">20 min/day</td>
+      </tr>
+      <tr style="background:#f8fafc;">
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Ongoing</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Change one app's language to Japanese; read and type in Japanese daily</td>
+        <td style="padding:0.6rem 1rem; border:1px solid #e2e8f0;">Integrated into routine</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Remember that typing is a motor skill as much as a knowledge skill. The romaji-to-kana mappings will eventually become automatic — you will stop thinking "how do I type し?" and just type it. That transition usually happens somewhere between 20 and 40 hours of deliberate practice. Consistent daily sessions are far more effective than occasional long sessions for building this kind of muscle memory.</p>
+
+  <p>Good luck — and remember, every message you send in Japanese, however short, is real communication in the language. That motivation makes all the difference.</p>
 
 </BlogLayout>

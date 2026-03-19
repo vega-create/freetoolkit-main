@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Why are seasons so important in Japanese culture?", "a": "Japan's four distinct seasons deeply influence daily life, food, fashion, greetings, and communication. Seasonal awareness (季節感) is a core cultural value."}, {"q": "What are seasonal greetings?", "a": "Japanese letters and emails traditionally open with a seasonal reference. Summer might mention heat while autumn references changing leaves. This practice continues in business communication."}, {"q": "What is hanami?", "a": "花見 (hanami) means flower viewing — the tradition of gathering under cherry blossom trees in spring. It is one of Japan's most beloved cultural events."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
-const headings = [{"depth": 2, "slug": "overview", "text": "Seasons in Japanese Culture"}, {"depth": 2, "slug": "spring", "text": "Spring: 春 (Haru)"}, {"depth": 2, "slug": "summer", "text": "Summer: 夏 (Natsu)"}, {"depth": 2, "slug": "autumn", "text": "Autumn: 秋 (Aki)"}, {"depth": 2, "slug": "winter", "text": "Winter: 冬 (Fuyu)"}, {"depth": 2, "slug": "seasonal-words", "text": "Seasonal Vocabulary List"}];
+const faq = [
+  {"q": "Why are seasons so important in Japanese culture?", "a": "Japan's four distinct seasons (四季) deeply influence daily life, food, fashion, greetings, and communication. Seasonal awareness (季節感) is a core cultural value reflected in everything from business emails to packaging design."},
+  {"q": "What are seasonal greetings in Japanese?", "a": "Japanese letters and emails traditionally open with a seasonal reference called 時候の挨拶. Summer might mention heat (暑中お見舞い), autumn references changing leaves, and winter mentions cold. This practice continues in business communication."},
+  {"q": "What is hanami?", "a": "花見 (hanami) means flower viewing — the tradition of gathering under cherry blossom trees in spring to eat, drink, and celebrate. It is one of Japan's most beloved cultural events, typically held in late March to mid-April."},
+  {"q": "What are 季語 (kigo)?", "a": "Kigo are seasonal words used in haiku and traditional poetry. Each season has hundreds of associated words — for example, 蛙 (frog) is a spring word, and 月 (moon) is an autumn word. They encode deep cultural associations."},
+  {"q": "Do Japanese festivals follow the seasons?", "a": "Yes, nearly every festival (祭り) is tied to a specific season. Spring has hanami and children's festivals, summer has fireworks and Obon, autumn has harvest festivals, and winter has New Year celebrations."}
+];
+const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Kanji Lookup", "url": "/japanese/tools/kanji-lookup/"}, {"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}];
+const headings = [
+  {"depth": 2, "slug": "overview", "text": "Seasons in Japanese Culture"},
+  {"depth": 2, "slug": "spring", "text": "Spring: 春 (Haru) — March to May"},
+  {"depth": 2, "slug": "summer", "text": "Summer: 夏 (Natsu) — June to August"},
+  {"depth": 2, "slug": "autumn", "text": "Autumn: 秋 (Aki) — September to November"},
+  {"depth": 2, "slug": "winter", "text": "Winter: 冬 (Fuyu) — December to February"},
+  {"depth": 2, "slug": "seasonal-words", "text": "Essential Seasonal Vocabulary"},
+  {"depth": 2, "slug": "greetings", "text": "Seasonal Greetings for Letters and Email"},
+  {"depth": 2, "slug": "food-calendar", "text": "Seasonal Food Calendar"}
+];
 ---
 <BlogLayout
   title="Japanese Seasonal Words and Festivals: A Cultural Calendar"
@@ -16,23 +31,176 @@ const headings = [{"depth": 2, "slug": "overview", "text": "Seasons in Japanese 
   headings={headings}
 >
 
-    <h2 id="overview">Seasons in Japanese Culture</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="spring">Spring: 春 (Haru)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="summer">Summer: 夏 (Natsu)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="autumn">Autumn: 秋 (Aki)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="winter">Winter: 冬 (Fuyu)</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="seasonal-words">Seasonal Vocabulary List</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> to reinforce what you have learned.</p>
+  <p>In Japan, the changing seasons are not just weather — they are a way of life. The concept of 季節感 (kisetsukan, seasonal awareness) permeates every aspect of Japanese culture, from the food you eat and the clothes you wear to the greetings in your emails and the designs on your shopping bags. Understanding seasonal culture gives you a deeper appreciation of Japan and provides rich vocabulary that makes your Japanese sound more natural and culturally aware. This guide walks you through all four seasons with their festivals, vocabulary, traditions, and the language that brings them to life.</p>
+
+  <h2 id="overview">Seasons in Japanese Culture</h2>
+  <p>Japan's geography gives it four beautifully distinct seasons, and the Japanese have celebrated this for over a thousand years. Seasonal awareness appears in poetry (haiku requires a seasonal word), food (each season has signature dishes), fashion (seasonal colors and fabrics), and daily greetings.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fdf2f8; border:1px solid #f9a8d4; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#be185d;">🌸 春 (Haru)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Cherry blossoms, new beginnings, school year starts. Colors: pink, light green. March-May.</p>
+    </div>
+    <div style="background:#ecfdf5; border:1px solid #6ee7b7; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#047857;">🎆 夏 (Natsu)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Fireworks, festivals, yukata. Intense heat and humidity. Colors: blue, white. June-August.</p>
+    </div>
+    <div style="background:#fff7ed; border:1px solid #fdba74; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#c2410c;">🍁 秋 (Aki)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Red leaves, harvest, sports day. Comfortable weather. Colors: red, orange, gold. September-November.</p>
+    </div>
+    <div style="background:#eff6ff; border:1px solid #93c5fd; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#1d4ed8;">⛩️ 冬 (Fuyu)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">New Year, hot springs, illuminations. Cold and dry. Colors: white, red, gold. December-February.</p>
+    </div>
+  </div>
+  <p>Japan also recognizes 24 micro-seasons (二十四節気, nijuushi sekki) from the traditional calendar, with poetic names like 立春 (risshun, start of spring) and 大雪 (taisetsu, heavy snow). While modern Japanese people do not follow all 24, many remain in common use and appear on calendars.</p>
+
+  <h2 id="spring">Spring: 春 (Haru) — March to May</h2>
+  <p>Spring is Japan's season of renewal. The school year and fiscal year both begin in April, making spring synonymous with fresh starts and new beginnings. The star of spring is undoubtedly 桜 (sakura, cherry blossoms), which bloom briefly and beautifully across the country.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#fdf2f8;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Event</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Description</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Doll Festival</td><td style="padding:10px; border:1px solid #ddd;">ひな祭り (hina matsuri)</td><td style="padding:10px; border:1px solid #ddd;">March 3</td><td style="padding:10px; border:1px solid #ddd;">Girls' Day — families display ornamental dolls and wish for daughters' health</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Cherry blossom viewing</td><td style="padding:10px; border:1px solid #ddd;">花見 (hanami)</td><td style="padding:10px; border:1px solid #ddd;">Late March-April</td><td style="padding:10px; border:1px solid #ddd;">Picnics under cherry trees with food, drinks, and friends</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Golden Week</td><td style="padding:10px; border:1px solid #ddd;">ゴールデンウィーク</td><td style="padding:10px; border:1px solid #ddd;">Late April-May 5</td><td style="padding:10px; border:1px solid #ddd;">Series of national holidays — Japan's longest vacation period</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Children's Day</td><td style="padding:10px; border:1px solid #ddd;">こどもの日 (kodomo no hi)</td><td style="padding:10px; border:1px solid #ddd;">May 5</td><td style="padding:10px; border:1px solid #ddd;">Carp streamers (鯉のぼり) fly to wish children strength and success</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Spring vocabulary reflects themes of new life and beauty: 桜前線 (sakura zensen, cherry blossom front — the wave of blooming moving north), 新入社員 (shinnyuushain, new employees), 入学式 (nyuugakushiki, school entrance ceremony), and 春一番 (haruichiban, the first strong spring wind).</p>
+
+  <h2 id="summer">Summer: 夏 (Natsu) — June to August</h2>
+  <p>Summer in Japan is hot and humid, but it is also the season of colorful festivals, spectacular fireworks, and lively outdoor events. June brings 梅雨 (tsuyu, the rainy season) with weeks of steady rain, followed by intense summer heat in July and August.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#ecfdf5;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Event</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Description</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Star Festival</td><td style="padding:10px; border:1px solid #ddd;">七夕 (tanabata)</td><td style="padding:10px; border:1px solid #ddd;">July 7</td><td style="padding:10px; border:1px solid #ddd;">Write wishes on paper strips tied to bamboo branches</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Fireworks festivals</td><td style="padding:10px; border:1px solid #ddd;">花火大会 (hanabi taikai)</td><td style="padding:10px; border:1px solid #ddd;">July-August</td><td style="padding:10px; border:1px solid #ddd;">Massive firework displays — wear yukata and enjoy street food</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Obon</td><td style="padding:10px; border:1px solid #ddd;">お盆 (obon)</td><td style="padding:10px; border:1px solid #ddd;">Mid-August</td><td style="padding:10px; border:1px solid #ddd;">Buddhist festival honoring ancestors — many return to hometowns</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Summer festivals</td><td style="padding:10px; border:1px solid #ddd;">夏祭り (natsu matsuri)</td><td style="padding:10px; border:1px solid #ddd;">Throughout summer</td><td style="padding:10px; border:1px solid #ddd;">Local festivals with food stalls (屋台), games, and dancing</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Summer vocabulary is vivid and sensory: 浴衣 (yukata, light cotton kimono for summer), 風鈴 (fuurin, wind chime), かき氷 (kakigoori, shaved ice), 蝉 (semi, cicada — their loud buzzing is the sound of Japanese summer), and 打ち水 (uchimizu, sprinkling water on the ground to cool it down).</p>
+
+  <h2 id="autumn">Autumn: 秋 (Aki) — September to November</h2>
+  <p>Autumn brings relief from the summer heat and is considered Japan's most beautiful season alongside spring. The 紅葉 (kouyou, autumn foliage) paints mountains and temples in stunning reds, oranges, and golds. It is also the season of harvests, sports, and cultural arts.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#fff7ed;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Event</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Description</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Moon viewing</td><td style="padding:10px; border:1px solid #ddd;">お月見 (otsukimi)</td><td style="padding:10px; border:1px solid #ddd;">September</td><td style="padding:10px; border:1px solid #ddd;">Viewing the harvest moon while eating dango (rice dumplings)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Sports Day</td><td style="padding:10px; border:1px solid #ddd;">体育の日 (taiiku no hi)</td><td style="padding:10px; border:1px solid #ddd;">October</td><td style="padding:10px; border:1px solid #ddd;">Schools hold 運動会 (undoukai, sports festivals) with team events</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Autumn foliage viewing</td><td style="padding:10px; border:1px solid #ddd;">紅葉狩り (momijigari)</td><td style="padding:10px; border:1px solid #ddd;">October-November</td><td style="padding:10px; border:1px solid #ddd;">Visiting temples and mountains for spectacular red and gold leaves</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Seven-Five-Three</td><td style="padding:10px; border:1px solid #ddd;">七五三 (shichi-go-san)</td><td style="padding:10px; border:1px solid #ddd;">November 15</td><td style="padding:10px; border:1px solid #ddd;">Children aged 3, 5, and 7 visit shrines in traditional dress</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Autumn is called 食欲の秋 (shokuyoku no aki, the autumn of appetite) because harvest brings an abundance of delicious food. Key autumn vocabulary includes 秋刀魚 (sanma, Pacific saury — the iconic autumn fish), 栗 (kuri, chestnut), 柿 (kaki, persimmon), 芋 (imo, sweet potato), and 新米 (shinmai, new rice).</p>
+
+  <h2 id="winter">Winter: 冬 (Fuyu) — December to February</h2>
+  <p>Winter culminates in Japan's biggest holiday — お正月 (oshougatsu, New Year). The weeks around New Year are filled with traditions, special foods, and family gatherings. Winter is also the season for hot springs, illumination displays, and comfort food.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#eff6ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Event</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Description</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Christmas</td><td style="padding:10px; border:1px solid #ddd;">クリスマス (kurisumasu)</td><td style="padding:10px; border:1px solid #ddd;">December 25</td><td style="padding:10px; border:1px solid #ddd;">Celebrated as a romantic holiday — couples eat Christmas cake and KFC</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Year-end party</td><td style="padding:10px; border:1px solid #ddd;">忘年会 (bounenkai)</td><td style="padding:10px; border:1px solid #ddd;">December</td><td style="padding:10px; border:1px solid #ddd;">End-of-year drinking party with coworkers to forget the year's troubles</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">New Year</td><td style="padding:10px; border:1px solid #ddd;">お正月 (oshougatsu)</td><td style="padding:10px; border:1px solid #ddd;">January 1-3</td><td style="padding:10px; border:1px solid #ddd;">Temple visits (初詣), special food (おせち), and 年賀状 (New Year cards)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Bean throwing</td><td style="padding:10px; border:1px solid #ddd;">節分 (setsubun)</td><td style="padding:10px; border:1px solid #ddd;">February 3</td><td style="padding:10px; border:1px solid #ddd;">Throw beans shouting 鬼は外、福は内 (out with demons, in with luck)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Winter vocabulary centers on warmth and celebration: こたつ (kotatsu, heated table with blanket), 鍋 (nabe, hot pot), 温泉 (onsen, hot spring), 雪 (yuki, snow), 年越しそば (toshikoshi soba, year-crossing noodles eaten on December 31), and お年玉 (otoshidama, New Year money gift for children).</p>
+
+  <h2 id="seasonal-words">Essential Seasonal Vocabulary</h2>
+  <p>Build your vocabulary with these key words organized by season. Use the <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool to practice these words and look up kanji with the <a href="/japanese/tools/kanji-lookup/">Kanji Lookup</a> tool.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Season</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Word</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">春</td><td style="padding:10px; border:1px solid #ddd;">桜</td><td style="padding:10px; border:1px solid #ddd;">sakura</td><td style="padding:10px; border:1px solid #ddd;">cherry blossom</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">春</td><td style="padding:10px; border:1px solid #ddd;">新学期</td><td style="padding:10px; border:1px solid #ddd;">shingakki</td><td style="padding:10px; border:1px solid #ddd;">new school term</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">春</td><td style="padding:10px; border:1px solid #ddd;">花粉症</td><td style="padding:10px; border:1px solid #ddd;">kafunshou</td><td style="padding:10px; border:1px solid #ddd;">hay fever (pollen allergy)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">夏</td><td style="padding:10px; border:1px solid #ddd;">花火</td><td style="padding:10px; border:1px solid #ddd;">hanabi</td><td style="padding:10px; border:1px solid #ddd;">fireworks</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">夏</td><td style="padding:10px; border:1px solid #ddd;">海水浴</td><td style="padding:10px; border:1px solid #ddd;">kaisuiyoku</td><td style="padding:10px; border:1px solid #ddd;">ocean swimming</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">夏</td><td style="padding:10px; border:1px solid #ddd;">梅雨</td><td style="padding:10px; border:1px solid #ddd;">tsuyu</td><td style="padding:10px; border:1px solid #ddd;">rainy season</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">秋</td><td style="padding:10px; border:1px solid #ddd;">紅葉</td><td style="padding:10px; border:1px solid #ddd;">kouyou</td><td style="padding:10px; border:1px solid #ddd;">autumn foliage</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">秋</td><td style="padding:10px; border:1px solid #ddd;">収穫</td><td style="padding:10px; border:1px solid #ddd;">shuukaku</td><td style="padding:10px; border:1px solid #ddd;">harvest</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">秋</td><td style="padding:10px; border:1px solid #ddd;">読書の秋</td><td style="padding:10px; border:1px solid #ddd;">dokusho no aki</td><td style="padding:10px; border:1px solid #ddd;">autumn of reading</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">冬</td><td style="padding:10px; border:1px solid #ddd;">雪</td><td style="padding:10px; border:1px solid #ddd;">yuki</td><td style="padding:10px; border:1px solid #ddd;">snow</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">冬</td><td style="padding:10px; border:1px solid #ddd;">初日の出</td><td style="padding:10px; border:1px solid #ddd;">hatsuhinode</td><td style="padding:10px; border:1px solid #ddd;">first sunrise of the year</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">冬</td><td style="padding:10px; border:1px solid #ddd;">暖房</td><td style="padding:10px; border:1px solid #ddd;">danbou</td><td style="padding:10px; border:1px solid #ddd;">heating</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="greetings">Seasonal Greetings for Letters and Email</h2>
+  <p>Japanese business and formal communication traditionally includes seasonal greetings (時候の挨拶, jikou no aisatsu). Using the right seasonal phrase shows cultural awareness and sophistication.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Month</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Opening Greeting</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">March</td><td style="padding:10px; border:1px solid #ddd;">春暖の候</td><td style="padding:10px; border:1px solid #ddd;">In this season of spring warmth</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">June</td><td style="padding:10px; border:1px solid #ddd;">梅雨の候</td><td style="padding:10px; border:1px solid #ddd;">In this rainy season</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">August</td><td style="padding:10px; border:1px solid #ddd;">残暑の候</td><td style="padding:10px; border:1px solid #ddd;">In this lingering summer heat</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">October</td><td style="padding:10px; border:1px solid #ddd;">秋涼の候</td><td style="padding:10px; border:1px solid #ddd;">In this cool autumn season</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">December</td><td style="padding:10px; border:1px solid #ddd;">師走の候</td><td style="padding:10px; border:1px solid #ddd;">In this busy year-end season</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>In casual communication, you can use simpler seasonal references: 暑くなりましたね (atsuku narimashita ne, it's gotten hot, hasn't it) or 寒くなりましたね (samuku narimashita ne, it's gotten cold). These natural observations about seasons make excellent conversation starters in Japanese.</p>
+
+  <h2 id="food-calendar">Seasonal Food Calendar</h2>
+  <p>Japanese cuisine revolves around 旬 (shun) — eating ingredients at their seasonal peak. Restaurants proudly feature seasonal specials, and supermarkets reorganize their displays with each season.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Season</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Signature Foods</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Special Items</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">春 Spring</td><td style="padding:10px; border:1px solid #ddd;">たけのこ (bamboo shoots), 菜の花 (rapeseed flowers), いちご (strawberry)</td><td style="padding:10px; border:1px solid #ddd;">桜餅 (sakura mochi), 花見弁当 (hanami bento)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">夏 Summer</td><td style="padding:10px; border:1px solid #ddd;">スイカ (watermelon), 枝豆 (edamame), うなぎ (eel)</td><td style="padding:10px; border:1px solid #ddd;">かき氷 (shaved ice), 冷やし中華 (cold noodles)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">秋 Autumn</td><td style="padding:10px; border:1px solid #ddd;">秋刀魚 (sanma), 栗 (chestnut), 柿 (persimmon), きのこ (mushrooms)</td><td style="padding:10px; border:1px solid #ddd;">月見団子 (moon viewing dango), 松茸 (matsutake mushroom)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">冬 Winter</td><td style="padding:10px; border:1px solid #ddd;">みかん (mandarin orange), 大根 (daikon radish), ふぐ (blowfish)</td><td style="padding:10px; border:1px solid #ddd;">おせち料理 (New Year food), 年越しそば (year-end soba)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Understanding seasonal food culture adds depth to your Japanese conversations and helps you appreciate why certain dishes appear on menus at specific times. When a Japanese friend says 秋刀魚の季節ですね (sanma no kisetsu desu ne, it's sanma season), you will know exactly what they mean and can join the conversation naturally.</p>
+
+  <p>Seasonal awareness is a gateway to deeper understanding of Japanese culture. By learning the vocabulary, festivals, and traditions of each season, you gain not just language skills but genuine cultural insight that makes your interactions with Japanese people more meaningful. Start noticing seasonal references in anime, dramas, and social media — once you are aware of 季節感, you will see it absolutely everywhere in Japanese life.</p>
 
 </BlogLayout>

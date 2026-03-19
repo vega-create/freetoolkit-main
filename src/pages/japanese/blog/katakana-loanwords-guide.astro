@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "What percentage of Japanese comes from English?", "a": "Loanwords make up roughly 10-15 percent of commonly used vocabulary. In tech, fashion, and food service, the percentage exceeds 50 percent."}, {"q": "Do Japanese people know the English origin?", "a": "Not always. Many loanwords have been used so long they feel fully Japanese. Some have shifted meaning — マンション means apartment, not mansion."}, {"q": "Are new loanwords still being added?", "a": "Yes, constantly. Recent additions include サブスク (subscription), リモートワーク (remote work), and インフルエンサー (influencer)."}];
-const relatedTools = [{"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}];
-const headings = [{"depth": 2, "slug": "how-it-works", "text": "How English Becomes Japanese"}, {"depth": 2, "slug": "food", "text": "Food and Drinks"}, {"depth": 2, "slug": "technology", "text": "Technology"}, {"depth": 2, "slug": "sports", "text": "Sports"}, {"depth": 2, "slug": "false-friends", "text": "False Friends"}, {"depth": 2, "slug": "decode", "text": "How to Decode New Words"}];
+const faq = [
+  {"q": "What percentage of Japanese comes from English?", "a": "Loanwords (外来語) make up roughly 10-15 percent of commonly used vocabulary. In technology, fashion, and food service, the percentage exceeds 50 percent. New loanwords are added constantly as global culture evolves."},
+  {"q": "Do Japanese people know the English origin of loanwords?", "a": "Not always. Many loanwords have been used so long they feel fully Japanese. Some have shifted meaning — マンション means apartment, not mansion. Younger Japanese tend to be more aware of English origins."},
+  {"q": "Are new loanwords still being added?", "a": "Yes, constantly. Recent additions include サブスク (subscription), リモートワーク (remote work), インフルエンサー (influencer), and ワーケーション (workation). Tech and social media drive the fastest growth."},
+  {"q": "Why does Japan use so many English loanwords?", "a": "After World War II, American culture heavily influenced Japan. English words filled vocabulary gaps for new technologies, foods, and concepts. Using katakana makes it easy to adopt foreign words without creating new kanji."},
+  {"q": "Can I just speak English slowly and be understood?", "a": "Not usually. Japanese pronunciation rules change English words significantly. コーヒー sounds nothing like 'coffee' to English ears. Learning the katakana pronunciation patterns is essential for being understood."}
+];
+const relatedTools = [{"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}, {"name": "Kana Quiz", "url": "/japanese/tools/kana-quiz/"}, {"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}];
+const headings = [
+  {"depth": 2, "slug": "how-it-works", "text": "How English Becomes Japanese"},
+  {"depth": 2, "slug": "pronunciation-rules", "text": "The 7 Pronunciation Rules"},
+  {"depth": 2, "slug": "food", "text": "Food and Drinks (40+ Words)"},
+  {"depth": 2, "slug": "technology", "text": "Technology and Internet (30+ Words)"},
+  {"depth": 2, "slug": "daily-life", "text": "Daily Life and Fashion (30+ Words)"},
+  {"depth": 2, "slug": "sports", "text": "Sports and Entertainment (25+ Words)"},
+  {"depth": 2, "slug": "false-friends", "text": "False Friends: Words That Trick You"},
+  {"depth": 2, "slug": "decode", "text": "How to Decode Any Katakana Word"}
+];
 ---
 <BlogLayout
   title="Katakana Loanwords: 200+ English Words You Already Know in Japanese"
@@ -16,22 +31,186 @@ const headings = [{"depth": 2, "slug": "how-it-works", "text": "How English Beco
   headings={headings}
 >
 
-    <h2 id="how-it-works">How English Becomes Japanese</h2>
-    <p>English words undergo predictable pronunciation changes in Japanese. Consonant clusters get broken up with vowels: &quot;strike&quot; becomes ストライク (sutoraiku). Final consonants get a vowel added: &quot;cat&quot; becomes キャット (kyatto). L becomes R: &quot;lemon&quot; becomes レモン (remon). &quot;Th&quot; becomes s/z: &quot;thank you&quot; becomes サンキュー (sankyuu). Long vowels use ー: &quot;cake&quot; becomes ケーキ (keeki).</p>
+  <p>Here is a secret that makes Japanese vocabulary much less intimidating: you already know hundreds of Japanese words. English loanwords written in katakana (外来語, gairaigo) make up a huge part of modern Japanese, especially in technology, food, fashion, and entertainment. Once you learn the predictable pronunciation patterns that transform English into Japanese, you can instantly recognize and use thousands of words. This guide teaches you those patterns and gives you 200+ ready-to-use loanwords organized by category.</p>
 
-    <h2 id="food">Food and Drinks</h2>
-    <p>コーヒー (coffee), ケーキ (cake), チョコレート (chocolate), アイスクリーム (ice cream), ハンバーガー (hamburger), サンドイッチ (sandwich), サラダ (salad), ビール (beer), ワイン (wine), ジュース (juice), ピザ (pizza), パスタ (pasta), ステーキ (steak), カレー (curry), ドーナツ (doughnut), クッキー (cookie).</p>
+  <h2 id="how-it-works">How English Becomes Japanese</h2>
+  <p>When English words enter Japanese, they undergo systematic pronunciation changes to fit Japanese phonetics. Japanese has a simple sound system — every syllable is either a vowel or a consonant followed by a vowel (with the exception of ん/n). This means English words must be adapted to follow these rules, which is why they sometimes sound very different from the original.</p>
+  <p>The good news is that these changes follow predictable patterns. Once you internalize the rules below, you can reverse-engineer almost any katakana word back to its English origin — and you can predict how any English word would sound in Japanese.</p>
+  <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Quick tip:</strong> When you see an unfamiliar katakana word, read it aloud at normal speed. Your brain will often recognize the English word hiding inside the Japanese pronunciation. The faster you read it, the more English it sounds.
+  </div>
 
-    <h2 id="technology">Technology</h2>
-    <p>コンピューター (computer), インターネット (internet), スマートフォン (smartphone), アプリ (app), ウェブサイト (website), メール (email), パスワード (password), ダウンロード (download), ソフトウェア (software), データ (data), ブログ (blog), オンライン (online), ログイン (login).</p>
+  <h2 id="pronunciation-rules">The 7 Pronunciation Rules</h2>
+  <p>These seven rules explain how nearly every English loanword gets transformed into katakana Japanese. Master these and you unlock instant vocabulary.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Rule</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">What Happens</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English → Japanese</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>1. Vowel insertion</strong></td><td style="padding:10px; border:1px solid #ddd;">Consonant clusters get vowels between them</td><td style="padding:10px; border:1px solid #ddd;">strike → ストライク (su-to-rai-ku)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>2. Final vowel</strong></td><td style="padding:10px; border:1px solid #ddd;">Words ending in consonants get a vowel added</td><td style="padding:10px; border:1px solid #ddd;">bus → バス (ba-su), bed → ベッド (be-ddo)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>3. L → R</strong></td><td style="padding:10px; border:1px solid #ddd;">L becomes R (Japanese has no L sound)</td><td style="padding:10px; border:1px solid #ddd;">lemon → レモン (re-mon), hotel → ホテル (ho-te-ru)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>4. Th → S/Z</strong></td><td style="padding:10px; border:1px solid #ddd;">Th becomes S or Z</td><td style="padding:10px; border:1px solid #ddd;">theme → テーマ (tee-ma), the → ザ (za)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>5. Long vowels</strong></td><td style="padding:10px; border:1px solid #ddd;">Long vowel sounds use ー (dash)</td><td style="padding:10px; border:1px solid #ddd;">cake → ケーキ (kee-ki), cream → クリーム (ku-rii-mu)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>6. V → B</strong></td><td style="padding:10px; border:1px solid #ddd;">V sounds become B (traditional) or ヴ (modern)</td><td style="padding:10px; border:1px solid #ddd;">violin → バイオリン (ba-i-o-ri-n), vitamin → ビタミン</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>7. Abbreviation</strong></td><td style="padding:10px; border:1px solid #ddd;">Long words get shortened</td><td style="padding:10px; border:1px solid #ddd;">apartment → アパート (apaato), convenience → コンビニ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The added vowel follows a pattern: after t/d add ‑o (ト/ド), after other consonants add ‑u (ス/ク/プ/ム). The exception is ‑ch and ‑j which add ‑i. Knowing this pattern lets you predict the katakana for almost any English word.</p>
 
-    <h2 id="sports">Sports</h2>
-    <p>サッカー (soccer), バスケットボール (basketball), テニス (tennis), ゴルフ (golf), マラソン (marathon), チーム (team), コーチ (coach), トレーニング (training), ジム (gym), ヨガ (yoga).</p>
+  <h2 id="food">Food and Drinks (40+ Words)</h2>
+  <p>Food loanwords are among the most useful for daily life in Japan. You will encounter these on every menu, convenience store shelf, and restaurant sign.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">コーヒー</td><td style="padding:10px; border:1px solid #ddd;">koohii</td><td style="padding:10px; border:1px solid #ddd;">coffee</td><td style="padding:10px; border:1px solid #ddd;">ケーキ</td><td style="padding:10px; border:1px solid #ddd;">keeki</td><td style="padding:10px; border:1px solid #ddd;">cake</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">チョコレート</td><td style="padding:10px; border:1px solid #ddd;">chokoreeto</td><td style="padding:10px; border:1px solid #ddd;">chocolate</td><td style="padding:10px; border:1px solid #ddd;">アイスクリーム</td><td style="padding:10px; border:1px solid #ddd;">aisukuriimu</td><td style="padding:10px; border:1px solid #ddd;">ice cream</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ハンバーガー</td><td style="padding:10px; border:1px solid #ddd;">hanbaagaa</td><td style="padding:10px; border:1px solid #ddd;">hamburger</td><td style="padding:10px; border:1px solid #ddd;">サンドイッチ</td><td style="padding:10px; border:1px solid #ddd;">sandoicchi</td><td style="padding:10px; border:1px solid #ddd;">sandwich</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">サラダ</td><td style="padding:10px; border:1px solid #ddd;">sarada</td><td style="padding:10px; border:1px solid #ddd;">salad</td><td style="padding:10px; border:1px solid #ddd;">スープ</td><td style="padding:10px; border:1px solid #ddd;">suupu</td><td style="padding:10px; border:1px solid #ddd;">soup</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ビール</td><td style="padding:10px; border:1px solid #ddd;">biiru</td><td style="padding:10px; border:1px solid #ddd;">beer</td><td style="padding:10px; border:1px solid #ddd;">ワイン</td><td style="padding:10px; border:1px solid #ddd;">wain</td><td style="padding:10px; border:1px solid #ddd;">wine</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ジュース</td><td style="padding:10px; border:1px solid #ddd;">juusu</td><td style="padding:10px; border:1px solid #ddd;">juice</td><td style="padding:10px; border:1px solid #ddd;">ミルク</td><td style="padding:10px; border:1px solid #ddd;">miruku</td><td style="padding:10px; border:1px solid #ddd;">milk</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ピザ</td><td style="padding:10px; border:1px solid #ddd;">piza</td><td style="padding:10px; border:1px solid #ddd;">pizza</td><td style="padding:10px; border:1px solid #ddd;">パスタ</td><td style="padding:10px; border:1px solid #ddd;">pasuta</td><td style="padding:10px; border:1px solid #ddd;">pasta</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ステーキ</td><td style="padding:10px; border:1px solid #ddd;">suteeki</td><td style="padding:10px; border:1px solid #ddd;">steak</td><td style="padding:10px; border:1px solid #ddd;">カレー</td><td style="padding:10px; border:1px solid #ddd;">karee</td><td style="padding:10px; border:1px solid #ddd;">curry</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ドーナツ</td><td style="padding:10px; border:1px solid #ddd;">doonatsu</td><td style="padding:10px; border:1px solid #ddd;">doughnut</td><td style="padding:10px; border:1px solid #ddd;">クッキー</td><td style="padding:10px; border:1px solid #ddd;">kukkii</td><td style="padding:10px; border:1px solid #ddd;">cookie</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">パン</td><td style="padding:10px; border:1px solid #ddd;">pan</td><td style="padding:10px; border:1px solid #ddd;">bread*</td><td style="padding:10px; border:1px solid #ddd;">バター</td><td style="padding:10px; border:1px solid #ddd;">bataa</td><td style="padding:10px; border:1px solid #ddd;">butter</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ソース</td><td style="padding:10px; border:1px solid #ddd;">soosu</td><td style="padding:10px; border:1px solid #ddd;">sauce</td><td style="padding:10px; border:1px solid #ddd;">マヨネーズ</td><td style="padding:10px; border:1px solid #ddd;">mayoneezu</td><td style="padding:10px; border:1px solid #ddd;">mayonnaise</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>*Note: パン (pan) comes from Portuguese (pão), not English. Many older loanwords in Japanese came from Portuguese and Dutch traders in the 16th-17th centuries, including ガラス (garasu, glass from Dutch) and タバコ (tabako, tobacco from Portuguese).</p>
 
-    <h2 id="false-friends">False Friends: Words That Trick You</h2>
-    <p><strong>マンション</strong> (manshon) means apartment, not mansion. <strong>スマート</strong> (sumaato) often means slim or stylish, not smart. <strong>バイキング</strong> (baikingu) means buffet, not Viking. <strong>ナイーブ</strong> (naiibu) means sensitive, not naive. <strong>カンニング</strong> (kanningu) means cheating on a test, not cunning.</p>
+  <h2 id="technology">Technology and Internet (30+ Words)</h2>
+  <p>Technology vocabulary is almost entirely katakana loanwords. If you work in tech or use computers daily, you already know a huge chunk of Japanese IT vocabulary.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">コンピューター</td><td style="padding:10px; border:1px solid #ddd;">konpyuutaa</td><td style="padding:10px; border:1px solid #ddd;">computer</td><td style="padding:10px; border:1px solid #ddd;">インターネット</td><td style="padding:10px; border:1px solid #ddd;">intaanetto</td><td style="padding:10px; border:1px solid #ddd;">internet</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">スマートフォン</td><td style="padding:10px; border:1px solid #ddd;">sumaatofon</td><td style="padding:10px; border:1px solid #ddd;">smartphone</td><td style="padding:10px; border:1px solid #ddd;">アプリ</td><td style="padding:10px; border:1px solid #ddd;">apuri</td><td style="padding:10px; border:1px solid #ddd;">app</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ウェブサイト</td><td style="padding:10px; border:1px solid #ddd;">webusaito</td><td style="padding:10px; border:1px solid #ddd;">website</td><td style="padding:10px; border:1px solid #ddd;">メール</td><td style="padding:10px; border:1px solid #ddd;">meeru</td><td style="padding:10px; border:1px solid #ddd;">email</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">パスワード</td><td style="padding:10px; border:1px solid #ddd;">pasuwaado</td><td style="padding:10px; border:1px solid #ddd;">password</td><td style="padding:10px; border:1px solid #ddd;">ダウンロード</td><td style="padding:10px; border:1px solid #ddd;">daunroodo</td><td style="padding:10px; border:1px solid #ddd;">download</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ソフトウェア</td><td style="padding:10px; border:1px solid #ddd;">sofutowea</td><td style="padding:10px; border:1px solid #ddd;">software</td><td style="padding:10px; border:1px solid #ddd;">データ</td><td style="padding:10px; border:1px solid #ddd;">deeta</td><td style="padding:10px; border:1px solid #ddd;">data</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ブログ</td><td style="padding:10px; border:1px solid #ddd;">burogu</td><td style="padding:10px; border:1px solid #ddd;">blog</td><td style="padding:10px; border:1px solid #ddd;">オンライン</td><td style="padding:10px; border:1px solid #ddd;">onrain</td><td style="padding:10px; border:1px solid #ddd;">online</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ログイン</td><td style="padding:10px; border:1px solid #ddd;">roguin</td><td style="padding:10px; border:1px solid #ddd;">login</td><td style="padding:10px; border:1px solid #ddd;">クラウド</td><td style="padding:10px; border:1px solid #ddd;">kuraudo</td><td style="padding:10px; border:1px solid #ddd;">cloud</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">プログラム</td><td style="padding:10px; border:1px solid #ddd;">puroguramu</td><td style="padding:10px; border:1px solid #ddd;">program</td><td style="padding:10px; border:1px solid #ddd;">ファイル</td><td style="padding:10px; border:1px solid #ddd;">fairu</td><td style="padding:10px; border:1px solid #ddd;">file</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Japanese tech vocabulary loves abbreviations: スマホ (sumaho) for smartphone, パソコン (pasokon) for personal computer, リモコン (rimokon) for remote control, エアコン (eakon) for air conditioner. These shortened forms are used far more often than the full katakana versions in everyday conversation.</p>
 
-    <h2 id="decode">How to Decode New Words</h2>
-    <p>When you see unfamiliar katakana: read it aloud slowly, listen for the English hiding inside, then reverse the pronunciation rules — remove extra vowels, try L instead of R, restore consonant clusters. Practice with our <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> and test yourself with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>.</p>
+  <h2 id="daily-life">Daily Life and Fashion (30+ Words)</h2>
+  <p>Shopping, fashion, and daily life are full of katakana loanwords. Walking through any Japanese department store or convenience store, you will see these words everywhere.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">シャツ (shatsu)</td><td style="padding:10px; border:1px solid #ddd;">shirt</td><td style="padding:10px; border:1px solid #ddd;">ズボン (zubon)</td><td style="padding:10px; border:1px solid #ddd;">pants (from French)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">スカート (sukaato)</td><td style="padding:10px; border:1px solid #ddd;">skirt</td><td style="padding:10px; border:1px solid #ddd;">ネクタイ (nekutai)</td><td style="padding:10px; border:1px solid #ddd;">necktie</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">マンション (manshon)</td><td style="padding:10px; border:1px solid #ddd;">apartment</td><td style="padding:10px; border:1px solid #ddd;">アパート (apaato)</td><td style="padding:10px; border:1px solid #ddd;">apartment (older/smaller)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">エレベーター (erebeetaa)</td><td style="padding:10px; border:1px solid #ddd;">elevator</td><td style="padding:10px; border:1px solid #ddd;">エスカレーター (esukareetaa)</td><td style="padding:10px; border:1px solid #ddd;">escalator</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">タクシー (takushii)</td><td style="padding:10px; border:1px solid #ddd;">taxi</td><td style="padding:10px; border:1px solid #ddd;">バス (basu)</td><td style="padding:10px; border:1px solid #ddd;">bus</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ホテル (hoteru)</td><td style="padding:10px; border:1px solid #ddd;">hotel</td><td style="padding:10px; border:1px solid #ddd;">レストラン (resutoran)</td><td style="padding:10px; border:1px solid #ddd;">restaurant</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">テーブル (teeburu)</td><td style="padding:10px; border:1px solid #ddd;">table</td><td style="padding:10px; border:1px solid #ddd;">ドア (doa)</td><td style="padding:10px; border:1px solid #ddd;">door</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">トイレ (toire)</td><td style="padding:10px; border:1px solid #ddd;">toilet</td><td style="padding:10px; border:1px solid #ddd;">シャワー (shawaa)</td><td style="padding:10px; border:1px solid #ddd;">shower</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="sports">Sports and Entertainment (25+ Words)</h2>
+  <p>Sports vocabulary is overwhelmingly katakana because most modern sports came to Japan from the West. Entertainment and media words follow the same pattern.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">サッカー (sakkaa)</td><td style="padding:10px; border:1px solid #ddd;">soccer</td><td style="padding:10px; border:1px solid #ddd;">バスケットボール (basuketto booru)</td><td style="padding:10px; border:1px solid #ddd;">basketball</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">テニス (tenisu)</td><td style="padding:10px; border:1px solid #ddd;">tennis</td><td style="padding:10px; border:1px solid #ddd;">ゴルフ (gorufu)</td><td style="padding:10px; border:1px solid #ddd;">golf</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">マラソン (marason)</td><td style="padding:10px; border:1px solid #ddd;">marathon</td><td style="padding:10px; border:1px solid #ddd;">チーム (chiimu)</td><td style="padding:10px; border:1px solid #ddd;">team</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">コーチ (koochi)</td><td style="padding:10px; border:1px solid #ddd;">coach</td><td style="padding:10px; border:1px solid #ddd;">トレーニング (toreeningu)</td><td style="padding:10px; border:1px solid #ddd;">training</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ジム (jimu)</td><td style="padding:10px; border:1px solid #ddd;">gym</td><td style="padding:10px; border:1px solid #ddd;">ヨガ (yoga)</td><td style="padding:10px; border:1px solid #ddd;">yoga</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ゲーム (geemu)</td><td style="padding:10px; border:1px solid #ddd;">game</td><td style="padding:10px; border:1px solid #ddd;">アニメ (anime)</td><td style="padding:10px; border:1px solid #ddd;">animation</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">ドラマ (dorama)</td><td style="padding:10px; border:1px solid #ddd;">drama (TV)</td><td style="padding:10px; border:1px solid #ddd;">ニュース (nyuusu)</td><td style="padding:10px; border:1px solid #ddd;">news</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="false-friends">False Friends: Words That Trick You</h2>
+  <p>Some katakana words look like English but have shifted meaning in Japanese. These false friends (和製英語, wasei eigo — Japanese-made English) can cause embarrassing misunderstandings if you assume the English meaning.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#fef2f2;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Katakana</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">You Think It Means</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">It Actually Means</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>マンション</strong> (manshon)</td><td style="padding:10px; border:1px solid #ddd;">mansion</td><td style="padding:10px; border:1px solid #ddd;">Apartment/condo (concrete building)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>スマート</strong> (sumaato)</td><td style="padding:10px; border:1px solid #ddd;">smart/intelligent</td><td style="padding:10px; border:1px solid #ddd;">Slim, stylish, sleek</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>バイキング</strong> (baikingu)</td><td style="padding:10px; border:1px solid #ddd;">Viking</td><td style="padding:10px; border:1px solid #ddd;">Buffet/all-you-can-eat</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>ナイーブ</strong> (naiibu)</td><td style="padding:10px; border:1px solid #ddd;">naive</td><td style="padding:10px; border:1px solid #ddd;">Sensitive, delicate (positive meaning)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>カンニング</strong> (kanningu)</td><td style="padding:10px; border:1px solid #ddd;">cunning</td><td style="padding:10px; border:1px solid #ddd;">Cheating on a test</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>クレーム</strong> (kureemu)</td><td style="padding:10px; border:1px solid #ddd;">claim</td><td style="padding:10px; border:1px solid #ddd;">Complaint</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>サービス</strong> (saabisu)</td><td style="padding:10px; border:1px solid #ddd;">service</td><td style="padding:10px; border:1px solid #ddd;">Free/on the house (also: service)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>テンション</strong> (tenshon)</td><td style="padding:10px; border:1px solid #ddd;">tension</td><td style="padding:10px; border:1px solid #ddd;">Energy level/excitement (テンション高い = hyped up)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;"><strong>コンセント</strong> (konsento)</td><td style="padding:10px; border:1px solid #ddd;">consent</td><td style="padding:10px; border:1px solid #ddd;">Electrical outlet/plug</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;"><strong>ペーパードライバー</strong></td><td style="padding:10px; border:1px solid #ddd;">paper driver</td><td style="padding:10px; border:1px solid #ddd;">Licensed driver who never drives</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Watch out for 和製英語 (wasei eigo):</strong> These are English-sounding words invented in Japan that do not exist in English. Examples include ノートパソコン (laptop), ガソリンスタンド (gas station), and フリーダイヤル (toll-free number). They sound English but would confuse native English speakers.
+  </div>
+
+  <h2 id="decode">How to Decode Any Katakana Word</h2>
+  <p>When you encounter an unfamiliar katakana word, follow this systematic decoding process to figure out the English origin.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 1: Read aloud quickly</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Say the katakana at natural speed. Your brain often recognizes the English word when spoken aloud. Speed helps — slow reading emphasizes the Japanese pronunciation too much.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 2: Strip extra vowels</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Remove the added vowels at the end of syllables and between consonant clusters. ストライク → s-t-r-ai-k → strike.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 3: Swap R for L</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Try replacing R sounds with L. レモン → lemon. ホテル → hotel. This single swap unlocks many words.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">Step 4: Consider abbreviation</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">The word might be shortened. Think of longer English words that start with those sounds. コンビニ → convenience (store). デパート → department (store).</p>
+    </div>
+  </div>
+  <p>Practice this decoding skill regularly and it becomes automatic. Start by reading katakana signs in Japanese stores, menus, and advertisements. Use our <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> to refresh character recognition and test yourself with the <a href="/japanese/tools/kana-quiz/">Kana Quiz</a>. Within a few weeks, you will be reading katakana loanwords effortlessly and enjoying the instant vocabulary boost they provide.</p>
+
+  <p>Katakana loanwords are your biggest shortcut in Japanese vocabulary. By learning the seven pronunciation rules and practicing with the 200+ words in this guide, you have already built a substantial foundation. Keep an eye out for katakana everywhere in Japan — on signs, menus, product labels, and websites — and you will be surprised how much you can already understand.</p>
 
 </BlogLayout>

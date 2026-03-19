@@ -1,8 +1,23 @@
 ---
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-const faq = [{"q": "Do I need to tip in Japan?", "a": "No — tipping is not customary and can even be considered rude. Excellent service is simply the standard expectation."}, {"q": "How do I get the waiter's attention?", "a": "Say すみません (sumimasen) and raise your hand slightly. Many restaurants also have a call button on the table."}, {"q": "What does おまかせ mean?", "a": "It means 'I leave it up to you' — the chef chooses your meal. Common at sushi restaurants and high-end dining."}];
-const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Name Generator", "url": "/japanese/tools/name-generator/"}];
-const headings = [{"depth": 2, "slug": "entering", "text": "Entering a Restaurant"}, {"depth": 2, "slug": "ordering", "text": "Ordering Phrases"}, {"depth": 2, "slug": "menu-vocab", "text": "Menu Vocabulary"}, {"depth": 2, "slug": "paying", "text": "Paying the Bill"}, {"depth": 2, "slug": "etiquette", "text": "Dining Etiquette"}];
+const faq = [
+  {"q": "Do I need to tip in Japan?", "a": "No — tipping is not customary in Japan and can even be considered rude or confusing. Excellent service is simply the standard expectation at every restaurant, from convenience stores to high-end dining."},
+  {"q": "How do I get the waiter's attention?", "a": "Say すみません (sumimasen) clearly and raise your hand slightly. Many restaurants also have a call button (呼び出しボタン) on the table — just press it and wait."},
+  {"q": "What does おまかせ mean?", "a": "It means 'I leave it up to you' — the chef chooses your meal based on the freshest ingredients available. Common at sushi restaurants and high-end dining. Expect to pay a premium price."},
+  {"q": "Can I ask for substitutions or modifications?", "a": "Japanese restaurants are less flexible about modifications than Western ones. For allergies, say アレルギーがあります (arerugii ga arimasu). Simple requests like no wasabi (わさび抜き) are usually fine."},
+  {"q": "What if I cannot read the menu at all?", "a": "Many tourist-area restaurants have English menus or picture menus. You can ask メニューの英語版はありますか (eigo-ban wa arimasu ka) or simply point at food displays (食品サンプル) outside the restaurant."}
+];
+const relatedTools = [{"name": "JLPT Vocabulary", "url": "/japanese/tools/jlpt-vocabulary/"}, {"name": "Hiragana Chart", "url": "/japanese/tools/hiragana-chart/"}, {"name": "Katakana Chart", "url": "/japanese/tools/katakana-chart/"}];
+const headings = [
+  {"depth": 2, "slug": "entering", "text": "Entering a Restaurant"},
+  {"depth": 2, "slug": "seating", "text": "Seating and Table Setup"},
+  {"depth": 2, "slug": "ordering", "text": "Essential Ordering Phrases"},
+  {"depth": 2, "slug": "menu-vocab", "text": "Menu Vocabulary and Food Categories"},
+  {"depth": 2, "slug": "special-requests", "text": "Special Requests and Dietary Needs"},
+  {"depth": 2, "slug": "during-meal", "text": "During the Meal"},
+  {"depth": 2, "slug": "paying", "text": "Paying the Bill"},
+  {"depth": 2, "slug": "restaurant-types", "text": "Restaurant Types and What to Expect"}
+];
 ---
 <BlogLayout
   title="How to Order Food in Japanese: Restaurant Phrases and Etiquette"
@@ -16,20 +31,191 @@ const headings = [{"depth": 2, "slug": "entering", "text": "Entering a Restauran
   headings={headings}
 >
 
-    <h2 id="entering">Entering a Restaurant</h2>
-    <p>Language and culture are inseparable in Japanese. Understanding the cultural context behind words and phrases transforms your communication from technically correct to genuinely appropriate.</p>
-    <p>This section covers the fundamentals that every learner needs to understand. Take your time with these concepts — they form the foundation for everything that follows.</p>
-    <h2 id="ordering">Ordering Phrases</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="menu-vocab">Menu Vocabulary</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="paying">Paying the Bill</h2>
-    <p>This is a critical area that many learners underestimate. Understanding these patterns and concepts will significantly accelerate your progress and help you avoid common plateaus.</p>
-    <p>Focus on recognizing these elements in real Japanese content — news articles, manga, conversations, and social media. Active recognition in context is far more effective than passive memorization.</p>
-    <h2 id="etiquette">Dining Etiquette</h2>
-    <p>Japanese communication reflects core cultural values: respect for hierarchy, consideration for others' feelings, and careful attention to context. When you understand these values, language patterns that seemed arbitrary suddenly make perfect sense.</p>
-    <p>Immerse yourself in authentic Japanese media to observe how native speakers adjust their language across different social contexts. This builds cultural intuition far more effectively than memorizing rules from a textbook. Practice with <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> and <a href="/japanese/tools/name-generator/">Name Generator</a> to reinforce what you have learned.</p>
+  <p>Eating out is one of the greatest pleasures of visiting or living in Japan. From tiny ramen shops with just eight seats to bustling izakayas and elegant sushi counters, every dining experience follows cultural patterns that are easy to learn once you know the key phrases. Whether you are a tourist spending a week in Tokyo or a student living in Osaka, knowing how to order food in Japanese transforms your meals from awkward pointing sessions into genuinely enjoyable cultural experiences. This guide covers every phrase you need from walking in the door to paying the bill.</p>
+
+  <h2 id="entering">Entering a Restaurant</h2>
+  <p>The moment you step through the door, you will hear the staff call out いらっしゃいませ (irasshaimase), meaning welcome. This is a greeting — you do not need to respond, though a smile or slight nod is polite. The next thing you need to communicate is the size of your party.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Situation</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">English</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">1 person</td><td style="padding:10px; border:1px solid #ddd;">一人です</td><td style="padding:10px; border:1px solid #ddd;">hitori desu</td><td style="padding:10px; border:1px solid #ddd;">Just one</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">2 people</td><td style="padding:10px; border:1px solid #ddd;">二人です</td><td style="padding:10px; border:1px solid #ddd;">futari desu</td><td style="padding:10px; border:1px solid #ddd;">Two people</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">3 people</td><td style="padding:10px; border:1px solid #ddd;">三人です</td><td style="padding:10px; border:1px solid #ddd;">san-nin desu</td><td style="padding:10px; border:1px solid #ddd;">Three people</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">4 people</td><td style="padding:10px; border:1px solid #ddd;">四人です</td><td style="padding:10px; border:1px solid #ddd;">yo-nin desu</td><td style="padding:10px; border:1px solid #ddd;">Four people</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Reservation</td><td style="padding:10px; border:1px solid #ddd;">予約した〇〇です</td><td style="padding:10px; border:1px solid #ddd;">yoyaku shita ○○ desu</td><td style="padding:10px; border:1px solid #ddd;">I have a reservation under ○○</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">No reservation</td><td style="padding:10px; border:1px solid #ddd;">予約してないです</td><td style="padding:10px; border:1px solid #ddd;">yoyaku shitenai desu</td><td style="padding:10px; border:1px solid #ddd;">I don't have a reservation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The staff may ask 喫煙ですか、禁煙ですか (kitsuen desu ka, kin'en desu ka) — smoking or non-smoking? Answer 禁煙で (kin'en de) for non-smoking. At popular restaurants, you might hear 少々お待ちください (shoushou omachi kudasai) meaning please wait a moment. Many busy restaurants use a waiting list — write your name and party size on the clipboard near the entrance.</p>
+
+  <h2 id="seating">Seating and Table Setup</h2>
+  <p>Japanese restaurants offer different seating styles, and you may be asked about your preference. Understanding these terms helps you get the experience you want.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">テーブル席</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">teeburu seki — Regular table and chairs. The most familiar style for Western visitors. Common in family restaurants and cafes.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">カウンター席</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">kauntaa seki — Counter seating facing the kitchen. Perfect for solo diners at ramen shops and sushi bars. You can watch the chef work.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">座敷</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">zashiki — Tatami mat seating on the floor. Remove your shoes before stepping up. Cushions (座布団) are provided for sitting.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">個室</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">koshitsu — Private room. Often available at izakayas for groups. May have a minimum order or extra charge.</p>
+    </div>
+  </div>
+  <p>When seated, you will typically receive おしぼり (oshibori) — a warm or cold wet towel for cleaning your hands. Use it for your hands only, not your face. Water (お水, omizu) is usually served free automatically. At many restaurants, you will also find condiments on the table: 醤油 (shouyu, soy sauce), 七味 (shichimi, chili flakes), and 酢 (su, vinegar).</p>
+
+  <h2 id="ordering">Essential Ordering Phrases</h2>
+  <p>Once you have the menu, these are the phrases that will carry you through 95 percent of ordering situations. The basic pattern is simple: say the item name, then ください (kudasai, please) or おねがいします (onegaishimasu, I'd like).</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Meaning</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When to Use</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">これをください</td><td style="padding:10px; border:1px solid #ddd;">kore o kudasai</td><td style="padding:10px; border:1px solid #ddd;">This one, please</td><td style="padding:10px; border:1px solid #ddd;">Pointing at menu/display</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">〇〇を一つください</td><td style="padding:10px; border:1px solid #ddd;">○○ o hitotsu kudasai</td><td style="padding:10px; border:1px solid #ddd;">One ○○, please</td><td style="padding:10px; border:1px solid #ddd;">Ordering a specific item</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">おすすめは何ですか</td><td style="padding:10px; border:1px solid #ddd;">osusume wa nan desu ka</td><td style="padding:10px; border:1px solid #ddd;">What do you recommend?</td><td style="padding:10px; border:1px solid #ddd;">Asking for suggestions</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">注文おねがいします</td><td style="padding:10px; border:1px solid #ddd;">chuumon onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">I'd like to order</td><td style="padding:10px; border:1px solid #ddd;">Getting staff attention</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">まだ決めていません</td><td style="padding:10px; border:1px solid #ddd;">mada kimeteimasen</td><td style="padding:10px; border:1px solid #ddd;">I haven't decided yet</td><td style="padding:10px; border:1px solid #ddd;">Need more time</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">以上です</td><td style="padding:10px; border:1px solid #ddd;">ijou desu</td><td style="padding:10px; border:1px solid #ddd;">That's all</td><td style="padding:10px; border:1px solid #ddd;">Finishing your order</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">追加おねがいします</td><td style="padding:10px; border:1px solid #ddd;">tsuika onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">I'd like to add something</td><td style="padding:10px; border:1px solid #ddd;">Ordering more food</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">取り消してください</td><td style="padding:10px; border:1px solid #ddd;">torikeshite kudasai</td><td style="padding:10px; border:1px solid #ddd;">Please cancel that</td><td style="padding:10px; border:1px solid #ddd;">Changing your order</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Counter words for ordering:</strong> When ordering multiple items, you need the right counter. For most food and drinks: 一つ (hitotsu, 1), 二つ (futatsu, 2), 三つ (mittsu, 3). For drinks specifically: 一杯 (ippai), 二杯 (nihai), 三杯 (sanbai). For plates or sets: 一皿 (hitosara), 一人前 (ichininmae, one serving).
+  </div>
+
+  <h2 id="menu-vocab">Menu Vocabulary and Food Categories</h2>
+  <p>Japanese menus are organized by food category. Learning these category names helps you navigate even menus written entirely in Japanese. Many restaurants also use katakana for Western dishes, so your <a href="/japanese/tools/katakana-chart/">Katakana Chart</a> knowledge pays off here.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Category</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Common Items</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Rice dishes</td><td style="padding:10px; border:1px solid #ddd;">ご飯もの (gohan mono)</td><td style="padding:10px; border:1px solid #ddd;">丼 (donburi, rice bowl), チャーハン (fried rice), カレーライス (curry rice)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Noodles</td><td style="padding:10px; border:1px solid #ddd;">麺類 (menrui)</td><td style="padding:10px; border:1px solid #ddd;">ラーメン (ramen), うどん (udon), そば (soba), 焼きそば (yakisoba)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Grilled items</td><td style="padding:10px; border:1px solid #ddd;">焼き物 (yakimono)</td><td style="padding:10px; border:1px solid #ddd;">焼き鳥 (yakitori), 焼き魚 (yakizakana), 焼肉 (yakiniku)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Fried items</td><td style="padding:10px; border:1px solid #ddd;">揚げ物 (agemono)</td><td style="padding:10px; border:1px solid #ddd;">天ぷら (tempura), とんかつ (tonkatsu), 唐揚げ (karaage)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Raw fish</td><td style="padding:10px; border:1px solid #ddd;">刺身 / 寿司</td><td style="padding:10px; border:1px solid #ddd;">まぐろ (tuna), サーモン (salmon), えび (shrimp), いか (squid)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Hot pot</td><td style="padding:10px; border:1px solid #ddd;">鍋物 (nabemono)</td><td style="padding:10px; border:1px solid #ddd;">すき焼き (sukiyaki), しゃぶしゃぶ (shabu-shabu), おでん (oden)</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Side dishes</td><td style="padding:10px; border:1px solid #ddd;">一品料理 (ippin ryouri)</td><td style="padding:10px; border:1px solid #ddd;">枝豆 (edamame), 冷奴 (cold tofu), 漬物 (pickles)</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Drinks</td><td style="padding:10px; border:1px solid #ddd;">飲み物 (nomimono)</td><td style="padding:10px; border:1px solid #ddd;">ビール (beer), 日本酒 (sake), お茶 (tea), ジュース (juice)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Cooking method words appear frequently on menus: 焼き (yaki, grilled), 揚げ (age, deep-fried), 煮 (ni, simmered), 蒸し (mushi, steamed), 生 (nama, raw), 炒め (itame, stir-fried). Knowing these six words helps you decode nearly any dish name. For example, 野菜炒め (yasai itame) is stir-fried vegetables, and 茶碗蒸し (chawan mushi) is steamed egg custard.</p>
+
+  <h2 id="special-requests">Special Requests and Dietary Needs</h2>
+  <p>Communicating dietary restrictions in Japan requires specific phrases. While Japan is becoming more accommodating of allergies and dietary preferences, it helps to be clear and direct.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Need</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Japanese</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">I have an allergy</td><td style="padding:10px; border:1px solid #ddd;">〇〇アレルギーがあります</td><td style="padding:10px; border:1px solid #ddd;">○○ arerugii ga arimasu</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">No peanuts</td><td style="padding:10px; border:1px solid #ddd;">ピーナッツ抜きでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">piinattsu nuki de onegaishimasu</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Vegetarian</td><td style="padding:10px; border:1px solid #ddd;">肉と魚は食べられません</td><td style="padding:10px; border:1px solid #ddd;">niku to sakana wa taberaremasen</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Less spicy</td><td style="padding:10px; border:1px solid #ddd;">辛さ控えめでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">karasa hikaeme de onegaishimasu</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Large portion</td><td style="padding:10px; border:1px solid #ddd;">大盛りでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">oomori de onegaishimasu</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Small portion</td><td style="padding:10px; border:1px solid #ddd;">少なめでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">sukuname de onegaishimasu</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">No wasabi</td><td style="padding:10px; border:1px solid #ddd;">わさび抜きでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">wasabi nuki de onegaishimasu</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">Takeout</td><td style="padding:10px; border:1px solid #ddd;">持ち帰りでおねがいします</td><td style="padding:10px; border:1px solid #ddd;">mochikaeri de onegaishimasu</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:1rem 1.2rem; margin:1rem 0; border-radius:0 8px 8px 0;">
+    <strong>Important note on vegetarian dining:</strong> Many Japanese dishes contain hidden fish-based ingredients like 出汁 (dashi, fish stock) even when they appear vegetarian. Miso soup, noodle broth, and simmered dishes almost always use dashi. The word ベジタリアン is understood but the concept is less common — being specific about what you cannot eat works better than using a label.
+  </div>
+
+  <h2 id="during-meal">During the Meal</h2>
+  <p>Before eating, say いただきます (itadakimasu) — a grateful expression acknowledging the food, the cook, and the ingredients. It is equivalent to saying grace or bon appetit, and Japanese people say it every meal. When you finish eating, say ごちそうさまでした (gochisousama deshita) to express gratitude for the meal.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Phrase</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">When to Use</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">いただきます</td><td style="padding:10px; border:1px solid #ddd;">itadakimasu</td><td style="padding:10px; border:1px solid #ddd;">Before eating</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">ごちそうさまでした</td><td style="padding:10px; border:1px solid #ddd;">gochisousama deshita</td><td style="padding:10px; border:1px solid #ddd;">After eating</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">おいしい！</td><td style="padding:10px; border:1px solid #ddd;">oishii!</td><td style="padding:10px; border:1px solid #ddd;">Complimenting the food</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">お水をください</td><td style="padding:10px; border:1px solid #ddd;">omizu o kudasai</td><td style="padding:10px; border:1px solid #ddd;">Requesting water</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">お箸をください</td><td style="padding:10px; border:1px solid #ddd;">ohashi o kudasai</td><td style="padding:10px; border:1px solid #ddd;">Requesting chopsticks</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">フォークはありますか</td><td style="padding:10px; border:1px solid #ddd;">fooku wa arimasu ka</td><td style="padding:10px; border:1px solid #ddd;">Asking for a fork</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">トイレはどこですか</td><td style="padding:10px; border:1px solid #ddd;">toire wa doko desu ka</td><td style="padding:10px; border:1px solid #ddd;">Where is the restroom?</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Chopstick etiquette matters in Japan. Never stick chopsticks vertically into rice — this resembles incense at funerals and is considered very rude. Do not pass food from chopstick to chopstick, do not point with chopsticks, and do not rub disposable chopsticks together (it implies the restaurant is cheap). When not eating, rest your chopsticks on the 箸置き (hashioki, chopstick rest) or across your plate.</p>
+
+  <h2 id="paying">Paying the Bill</h2>
+  <p>In Japan, you rarely pay at the table. Instead, take your receipt (伝票, denpyou) to the register near the exit. The phrase お会計おねがいします (okaikei onegaishimasu) means "Check, please" if you need to ask.</p>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead><tr style="background:#f0f9ff;">
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Phrase</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Reading</th>
+        <th style="padding:10px; border:1px solid #ddd; text-align:left;">Use</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid #ddd;">お会計おねがいします</td><td style="padding:10px; border:1px solid #ddd;">okaikei onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">Check please</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">別々でおねがいします</td><td style="padding:10px; border:1px solid #ddd;">betsubetsu de onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">Separate checks</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">一緒でおねがいします</td><td style="padding:10px; border:1px solid #ddd;">issho de onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">One check together</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">カードは使えますか</td><td style="padding:10px; border:1px solid #ddd;">kaado wa tsukaemasu ka</td><td style="padding:10px; border:1px solid #ddd;">Do you accept cards?</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">現金でおねがいします</td><td style="padding:10px; border:1px solid #ddd;">genkin de onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">Cash please</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:10px; border:1px solid #ddd;">領収書をおねがいします</td><td style="padding:10px; border:1px solid #ddd;">ryoushuusho o onegaishimasu</td><td style="padding:10px; border:1px solid #ddd;">Receipt please</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Japan is still largely a cash society, though credit card acceptance is increasing in cities. Smaller restaurants, ramen shops, and izakayas may be cash-only. Carry at least 3,000-5,000 yen in cash when dining out. Place your payment on the small tray (カルトン) at the register rather than handing money directly to the cashier.</p>
+
+  <h2 id="restaurant-types">Restaurant Types and What to Expect</h2>
+  <p>Each restaurant type in Japan has its own customs and ordering style. Knowing what to expect makes the experience smoother and more enjoyable.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">🍜 ラーメン屋 (Ramen Shop)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Many use ticket vending machines (食券機). Insert money, press the button for your order, hand the ticket to the chef. Fast, cheap, and no Japanese conversation needed. Choose broth richness (あっさり light vs こってり rich) and noodle firmness (硬め firm, 普通 normal, 柔らかめ soft).</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">🍺 居酒屋 (Izakaya)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Japanese pub serving small dishes to share. Many have 飲み放題 (nomihoudai, all-you-can-drink) for a set price and time limit. Expect an automatic お通し (otoshi, cover charge appetizer) of 300-500 yen per person. Great for trying many dishes.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">🍣 回転寿司 (Conveyor Belt Sushi)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Grab plates from the belt or order from a touchscreen tablet (often with English). Plates are color-coded by price. Stack your plates and staff count them at the end. Budget-friendly sushi experience.</p>
+    </div>
+    <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:1.2rem;">
+      <strong style="color:#2563eb;">🍱 定食屋 (Set Meal Restaurant)</strong>
+      <p style="margin:0.5rem 0 0; font-size:0.95rem;">Serves complete meals (定食, teishoku) with a main dish, rice, miso soup, and pickles. Great value for lunch (700-1000 yen). Point at display models outside or photos on the menu. Rice and miso soup refills are often free (ご飯おかわり自由).</p>
+    </div>
+  </div>
+  <p>Other restaurant types you might encounter include ファミレス (famiresu, family restaurants like Denny's or Gusto) with picture menus and affordable prices, カフェ (cafe) with Western-style ordering at a counter, and 牛丼屋 (gyuudon-ya, beef bowl chains like Yoshinoya and Matsuya) that are fast and cheap. For building your food vocabulary, practice with our <a href="/japanese/tools/jlpt-vocabulary/">JLPT Vocabulary</a> tool and use the <a href="/japanese/tools/hiragana-chart/">Hiragana Chart</a> to read menu items.</p>
+
+  <p>Dining in Japan is a wonderful cultural experience that becomes even richer when you can communicate with the staff. Start with the basics — いらっしゃいませ, いただきます, ごちそうさまでした — and build from there. Even small efforts to order in Japanese earn warm smiles and sometimes extra-generous portions. Print out or save the key phrases from this guide on your phone, and you will be ready to enjoy every meal in Japan with confidence.</p>
 
 </BlogLayout>
