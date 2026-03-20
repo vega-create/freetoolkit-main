@@ -42,6 +42,8 @@ const headings = [
 
     <p>This guide walks you through setup on every major platform (Windows, Mac, iPhone, Android), explains the different input methods available, and shares tips for typing faster.</p>
 
+    <p>Unlike alphabetic languages where each letter maps directly to a key, Chinese has tens of thousands of characters. No keyboard could hold them all. Instead, Chinese input methods use clever encoding systems that let you type phonetic hints or structural patterns, and then software converts those hints into the characters you want. Understanding this fundamental difference is the first step toward becoming a confident Chinese typist.</p>
+
     <!-- Input Methods -->
 
     <div style="margin: 2rem 0; padding: 1.2rem; background: linear-gradient(135deg, #fef2f2, #eff6ff); border-radius: 12px; border: 1px solid #e5e7eb; text-align: center;"><div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📖</div><div style="font-weight: 700; color: #111827; font-size: 1rem;">Chinese Typing Guide</div><div style="color: #6b7280; font-size: 0.8rem; margin-top: 0.3rem;">Complete Learning Guide</div></div>
@@ -70,6 +72,22 @@ const headings = [
       <strong>💡 Recommendation:</strong> Start with <strong>Pinyin input</strong>. It is the easiest to learn, the most widely used, and it reinforces your pinyin knowledge. You can add other methods later. If you are studying in Taiwan, add <strong>Zhuyin input</strong> as well.
     </div>
 
+    <h3>How Pinyin Input Works Step by Step</h3>
+
+    <p>Pinyin input is the most popular Chinese typing method worldwide, used by hundreds of millions of people every day. The process works like this: you type the romanized spelling of a Chinese word using your regular QWERTY keyboard, and the input method editor (IME) displays a list of candidate characters that match that pronunciation. You then select the correct character from the list, usually by pressing a number key or clicking on it.</p>
+
+    <p>For example, if you type "shi", the IME might show candidates like 是, 十, 时, 事, 市, and many more, because dozens of characters share the same pinyin spelling. The software ranks the most commonly used characters first, and it learns from your typing habits over time. After a few days of use, the character you want almost always appears as the first suggestion.</p>
+
+    <p>Modern Pinyin input methods are remarkably intelligent. They use contextual prediction, which means if you type a multi-character phrase, the software can figure out the correct characters from context. Typing "woqu" will suggest 我去 rather than showing separate candidates for each syllable. You can even type entire sentences in one go — the software parses the pinyin string and proposes the most likely character combination. This contextual awareness is what makes Pinyin input fast enough for professional use.</p>
+
+    <h3>Wubi Input: The Shape-Based Alternative</h3>
+
+    <p>Wubi (五笔字型) takes a completely different approach from Pinyin. Instead of typing based on pronunciation, you decompose each character into its structural components and type codes based on the shapes of those components. Each key on the keyboard is assigned a set of character roots (basic strokes and components), and you combine up to four keystrokes to input any character.</p>
+
+    <p>The advantage of Wubi is speed and precision. Because each character has a unique code, you never need to select from a candidate list — the character appears immediately after you finish typing the code. Experienced Wubi typists can reach speeds of 100 to 160 characters per minute, significantly faster than Pinyin for professional data entry work. Wubi is also useful for typing rare or unusual characters that might be difficult to find through Pinyin.</p>
+
+    <p>The disadvantage is the steep learning curve. You need to memorize which character roots are assigned to which keys, and you need to understand how characters decompose into components. Most learners spend two to four weeks of dedicated practice before they can type fluently with Wubi. For this reason, Wubi is mainly used by professional typists, data entry workers, and people who grew up learning it in typing classes. For Chinese language learners, Pinyin input is almost always the better choice because it reinforces pronunciation knowledge.</p>
+
     <!-- Windows -->
     <h2 id="setup-windows">Setup on Windows</h2>
 
@@ -84,6 +102,10 @@ const headings = [
       </table>
     </div>
 
+    <p>After installation, the Microsoft Pinyin IME appears in your taskbar. When you switch to Chinese input mode, everything you type on your keyboard is interpreted as pinyin and converted to character candidates. You can type in English at any time by switching back to the English input mode. The default keyboard shortcut to toggle between Chinese and English within the Chinese IME is the Shift key — press Shift once to temporarily switch to English mode without changing your input language. This is very useful when you need to type an English word in the middle of a Chinese sentence.</p>
+
+    <p>Windows also supports installing multiple Chinese input methods simultaneously. You can add both Simplified and Traditional Chinese if you need to write in both character sets. Each language pack can be configured independently, and you can customize features like fuzzy pinyin matching, candidate list length, and cloud-based suggestions in the input method settings.</p>
+
     <!-- Mac -->
     <h2 id="setup-mac">Setup on Mac</h2>
 
@@ -97,6 +119,10 @@ const headings = [
         <tr><td style="padding: 8px;"><strong>5</strong></td><td style="padding: 8px;">Switch input: <strong>Caps Lock</strong> (quick toggle) or <strong>Control + Space</strong></td></tr>
       </table>
     </div>
+
+    <p>The macOS Chinese input experience is particularly polished. The built-in Pinyin IME features a clean candidate window, trackpad handwriting support, and tight integration with the system dictionary. One standout feature is the ability to press the Caps Lock key to instantly toggle between Chinese and English input — this is faster than using a multi-key shortcut and becomes second nature very quickly. You can also use the function key row to select candidates: pressing the number keys 1 through 9 picks the corresponding character from the suggestion list.</p>
+
+    <p>For users who prefer third-party input methods, popular options on macOS include Sogou Pinyin and Baidu Input. These third-party tools often have larger dictionaries, more aggressive prediction, and support for custom skins and themes. However, the built-in Apple Pinyin IME has improved dramatically in recent versions and is sufficient for most users without requiring any additional software installation.</p>
 
     <!-- Phone -->
     <h2 id="setup-phone">Setup on iPhone and Android</h2>
@@ -122,6 +148,10 @@ const headings = [
       </div>
     </div>
 
+    <p>On mobile devices, you have the option of using a full QWERTY layout or a 9-key (T9-style) layout for pinyin input. The QWERTY layout works exactly like desktop pinyin — you tap out the full pinyin spelling on a miniature keyboard. The 9-key layout groups multiple letters onto each key (like old phone keypads), and the software figures out which pinyin combination you intended. Many native Chinese speakers actually prefer the 9-key layout on phones because it requires less precise tapping and can be operated with one thumb.</p>
+
+    <p>Both iPhone and Android also support adding multiple Chinese keyboards simultaneously. You can install Pinyin, Handwriting, and even Zhuyin keyboards and switch between them using the globe icon. On Android, third-party keyboard apps like Sogou, Baidu, and Google Pinyin offer additional features such as swipe typing for pinyin, emoji prediction tailored to Chinese conversations, and built-in GIF search with Chinese keyword support.</p>
+
     <!-- Pinyin Tips -->
     <h2 id="pinyin-typing-tips">Pinyin Typing Tips and Tricks</h2>
 
@@ -141,6 +171,10 @@ const headings = [
         <tr><td style="padding: 10px; border: 1px solid #e2e8f0;">v = ü shortcut</td><td style="padding: 10px; border: 1px solid #e2e8f0;">Type "nv" for 女 (nǚ)</td><td style="padding: 10px; border: 1px solid #e2e8f0;">v replaces ü on keyboards</td></tr>
       </tbody>
     </table>
+
+    <p>One of the most powerful yet underused features is fuzzy pinyin matching. Many learners (and even native speakers) mix up certain pinyin pairs like "zh/z", "ch/c", "sh/s", "n/l", "an/ang", "en/eng", and "in/ing". Fuzzy pinyin settings allow the IME to treat these confusable pairs as interchangeable, so even if you type the wrong one, the correct character still appears in the suggestions. You can enable fuzzy pinyin in your input method settings and select exactly which pairs you tend to confuse.</p>
+
+    <p>Another important technique is learning to use custom phrases. Most input methods let you define shortcut codes for phrases you type frequently. For example, you could set "dz" to expand to your full address, or "gx" to expand to a common greeting you use in emails. Over time, building a personal shortcut dictionary can dramatically reduce the number of keystrokes needed for your daily typing tasks.</p>
 
     <!-- Handwriting -->
     <h2 id="handwriting-input">Handwriting Input Method</h2>
@@ -166,6 +200,12 @@ const headings = [
       </div>
     </div>
 
+    <p>Handwriting input has come a long way in accuracy. Modern recognition engines on both iOS and Android can handle messy or incomplete strokes, cursive-style writing, and even characters written out of standard stroke order. On phones, you draw characters directly on the touchscreen with your finger. On iPads and tablets with a stylus, the experience is even more natural and feels similar to writing on paper. The system typically shows a ranked list of character candidates as you draw, updating in real time with each new stroke.</p>
+
+    <p>On Mac laptops and desktops, you can use the trackpad as a handwriting surface. Enable the Trackpad Handwriting feature in your Chinese input settings, and a dedicated drawing area will appear on screen. This is especially handy when you encounter an unfamiliar character while reading — you can simply copy its visual shape using the trackpad and the system will identify it for you, along with its pronunciation and meaning.</p>
+
+    <p>One practical strategy for language learners is to use handwriting input deliberately as a study tool. When you practice writing characters by hand on your phone, you reinforce stroke order and visual memory. If the recognition engine cannot identify what you wrote, it usually means your strokes are off — giving you immediate feedback without needing a teacher to check your work.</p>
+
     <!-- Voice -->
     <h2 id="voice-input">Voice Input</h2>
 
@@ -174,6 +214,12 @@ const headings = [
     <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.2rem; border-radius: 8px; margin: 1.5rem 0;">
       <strong>🎤 Double benefit:</strong> Voice input is not just convenient — it is also excellent <strong>pronunciation practice</strong>. If the system cannot recognize your speech, your pronunciation needs work. Try speaking clearly and see if the correct characters appear. It is like having a built-in pronunciation checker.
     </div>
+
+    <p>Voice input is available on every major platform. On iPhone, you can activate Siri dictation by tapping the microphone icon on the Chinese keyboard — it supports Mandarin, Cantonese, and several other Chinese dialects. On Android, Google Voice Typing and the built-in Gboard voice input both handle Mandarin with high accuracy. For desktop users, Windows has built-in voice typing (press Win + H), and macOS supports dictation through the function key or a keyboard shortcut you can configure in System Settings.</p>
+
+    <p>Third-party apps like WeChat also have their own voice input buttons embedded directly in the chat interface. WeChat voice-to-text is particularly popular in China and handles conversational Mandarin very well, including slang and informal expressions. When sending a message, you can hold the microphone button to record a voice message, or use the speech-to-text feature to convert your words into typed text before sending.</p>
+
+    <p>For best results with voice input, speak at a natural pace in standard Mandarin (Putonghua). Avoid pausing too long between words, as the system uses context from continuous speech to improve accuracy. Background noise can interfere with recognition, so try to use voice input in a reasonably quiet environment. If you are a language learner, start with simple sentences and gradually work up to longer, more complex speech as your pronunciation improves.</p>
 
     <!-- Speed Tips -->
     <h2 id="speed-tips">Tips for Faster Typing</h2>
@@ -200,6 +246,23 @@ const headings = [
         <p style="font-size: 0.88rem; margin: 0.5rem 0 0;">Add frequently used phrases to your input method's custom dictionary</p>
       </div>
     </div>
+
+    <h3>Typing Speed Benchmarks</h3>
+
+    <p>How fast should you aim to type? For casual Chinese typing — messaging friends, writing social media posts, and searching the web — a speed of 20 to 40 characters per minute is perfectly functional. Most beginners reach this level within a few weeks of regular practice. Intermediate typists who use Chinese daily for work typically type at 40 to 70 characters per minute. Professional typists and native speakers who have been using Pinyin input for years often reach 80 to 120 characters per minute, with some Wubi experts exceeding 150 characters per minute in competitive settings.</p>
+
+    <p>To measure and improve your speed, try dedicated typing practice websites that offer Chinese typing tests. These tools show you passages of Chinese text and measure how many characters you can type per minute with accuracy tracking. Practicing for just 10 to 15 minutes a day can produce noticeable improvement within two weeks. Focus on accuracy first — it is better to type 30 correct characters per minute than to rush to 60 with frequent errors, because fixing mistakes costs more time than typing slowly and correctly.</p>
+
+    <h3>Common Typing Mistakes and How to Avoid Them</h3>
+
+    <p>One of the most frequent mistakes for beginners is selecting the wrong character from the candidate list without carefully checking. Characters that look similar, like 已 (already) and 己 (self), or 天 (day) and 夫 (husband), are easy to mix up when you are scanning the suggestions quickly. Take an extra moment to confirm the character before pressing Enter, especially when the word carries important meaning in your message.</p>
+
+    <p>Another common error is forgetting to switch back to English input mode when you need to type a URL, email address, or programming code. This results in the IME trying to interpret your English text as pinyin, producing nonsensical Chinese characters. Get into the habit of checking your input mode indicator (visible in the taskbar on Windows or the menu bar on Mac) before you start typing. On most systems, pressing Shift once quickly toggles between Chinese and English mode within the IME.</p>
+
+    <p>Tone-related confusion is another pitfall. While Pinyin input does not require you to type tone marks (the IME figures out the correct characters from context), knowing the tones still helps you narrow down candidates when the software shows many options. If you type "ma" and need the character 马 (horse, third tone), recognizing tones helps you pick the right one faster from a list that might include 妈, 麻, 骂, and 吗 as well.</p>
+
+    <p><strong>Predictive text and phrase memory:</strong> Chinese input methods learn from your typing habits over time. The more you type, the smarter the predictions become. After typing a phrase like 没有问题 (no problem) a few times, your keyboard will suggest the entire phrase after just the first syllable "mei." This adaptive learning is why switching between different keyboards or devices can feel slow at first — each one needs time to learn your patterns. To speed up the process on a new device, type a few dozen of your most-used phrases in the first day to train the prediction engine. You can also manually add custom phrases to your input method's dictionary for names, addresses, and technical terms you use frequently.</p>
+    <p><strong>Typing as a learning tool:</strong> Beyond being a practical skill, Chinese typing actively reinforces your language learning in ways that handwriting alone cannot match. When you type in Chinese, you must recall the pinyin pronunciation of each character — strengthening the connection between sound and meaning. The candidate list that appears also exposes you to homophones and related characters you might not encounter otherwise. Many learners report that their reading recognition improves significantly after a few weeks of regular Chinese typing, because the process of selecting the correct character from a list forces active discrimination between similar characters.</p>
 
     <p>Use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a> to look up the pinyin for characters you want to type, or our <a href="/chinese/tools/zhuyin-converter/">Zhuyin Converter</a> if you are using a Taiwanese keyboard. For more on the two input systems, see our guide on <a href="/chinese/blog/bopomofo-vs-pinyin/">Bopomofo vs Pinyin</a>.</p>
 
