@@ -39,7 +39,16 @@ const headings = [
 
     <p>Here is the best-kept secret about Chinese grammar: it is <strong>simpler than English</strong> in many ways. No verb conjugations (eat/eats/ate/eaten is just 吃), no noun genders, no articles (a/the), and no plural forms. According to the Foreign Service Institute, Mandarin is rated "Category IV" for difficulty — but that rating is mainly due to characters and tones, not grammar. This guide covers every major sentence pattern you need, from basic SVO to complex compound sentences.</p>
 
-    <div style="margin: 2rem 0; padding: 1.2rem; background: linear-gradient(135deg, #fef2f2, #eff6ff); border-radius: 12px; border: 1px solid #e5e7eb; text-align: center;"><div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📖</div><div style="font-weight: 700; color: #111827; font-size: 1rem;">Chinese Sentence Structure</div><div style="color: #6b7280; font-size: 0.8rem; margin-top: 0.3rem;">Complete Learning Guide</div></div>
+    <div style="margin: 2rem 0; padding: 1.2rem; background: #f9fafb; border-radius: 12px; border: 1px solid #e5e7eb;">
+      <div style="font-weight: 700; font-size: 0.85rem; color: #374151; margin-bottom: 0.8rem; text-align: center;">Chinese vs English Grammar Complexity</div>
+      <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 100px; font-size: 0.75rem; text-align: right; color: #374151;">Verb forms</span><div style="flex: 1; display: flex; gap: 4px;"><div style="background: #2563eb; border-radius: 4px; height: 22px; flex: 1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">CN: 1 form</div><div style="background: #dc2626; border-radius: 4px; height: 22px; flex: 5; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">EN: 5+ forms (eat/eats/ate/eaten/eating)</div></div></div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 100px; font-size: 0.75rem; text-align: right; color: #374151;">Articles</span><div style="flex: 1; display: flex; gap: 4px;"><div style="background: #2563eb; border-radius: 4px; height: 22px; flex: 1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">CN: none</div><div style="background: #dc2626; border-radius: 4px; height: 22px; flex: 3; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">EN: a/an/the</div></div></div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 100px; font-size: 0.75rem; text-align: right; color: #374151;">Plurals</span><div style="flex: 1; display: flex; gap: 4px;"><div style="background: #2563eb; border-radius: 4px; height: 22px; flex: 1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">CN: none</div><div style="background: #dc2626; border-radius: 4px; height: 22px; flex: 3; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">EN: -s/-es/irregular</div></div></div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 100px; font-size: 0.75rem; text-align: right; color: #374151;">Measure words</span><div style="flex: 1; display: flex; gap: 4px;"><div style="background: #2563eb; border-radius: 4px; height: 22px; flex: 4; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">CN: 100+ classifiers required</div><div style="background: #dc2626; border-radius: 4px; height: 22px; flex: 1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.65rem; font-weight: 600;">EN: optional</div></div></div>
+      </div>
+      <div style="text-align: center; margin-top: 0.5rem; font-size: 0.7rem; color: #6b7280;">🔵 Chinese  🔴 English — shorter bar = simpler</div>
+    </div>
 
 
     <h2 id="svo">Basic SVO Structure: The Foundation</h2>
@@ -63,6 +72,8 @@ const headings = [
     </table>
 
     <p>This is good news — the most basic Chinese sentences translate word-for-word from English. The complications come when you add time, place, and modifiers, which Chinese handles differently.</p>
+    <p><strong>Important note on 是 (shì):</strong> Unlike English, Chinese does not use "is" with adjectives. You cannot say 她是漂亮 (she is pretty) — this is wrong. Instead, use 很 (hěn, very) as a connector: 她很漂亮. The verb 是 is only used before nouns: 她是老师 (She is a teacher). This is one of the most common mistakes English speakers make, so memorize this rule early: <strong>是 + noun, 很 + adjective</strong>.</p>
+    <p>Another key difference: Chinese uses <strong>topic-comment structure</strong> extensively. The topic (what you are talking about) comes first, followed by the comment (what you say about it). For example: 这本书，我看了 (zhè běn shū, wǒ kàn le) literally translates to "This book, I read it." The book is the topic being commented on. This structure appears everywhere in natural Chinese and explains why some sentences feel "backwards" compared to English.</p>
 
     <h2 id="time-place">Time and Place: The STPVO Pattern</h2>
     <p>The single biggest structural difference between Chinese and English: <strong>time and place expressions go before the verb</strong>, not after it.</p>
@@ -98,6 +109,8 @@ const headings = [
     </table>
 
     <p><strong>Memory trick:</strong> In Chinese, you always answer "when" and "where" before "what happened." This follows a logical principle: establish the context (time, place), then describe what occurred within that context.</p>
+    <p><strong>Stacking multiple time expressions:</strong> When you have several time elements, they go from largest to smallest — the opposite of English. In English you say "at 3 PM on Monday," but in Chinese: 星期一下午三点 (Monday afternoon three o'clock). This "big to small" principle applies consistently: year → month → day → time of day → hour. For example: 2026年三月二十日下午两点 (March 20, 2026, 2 PM). Learn more about Chinese time vocabulary in our <a href="/chinese/blog/chinese-time-expressions/">time expressions guide</a>.</p>
+    <p><strong>Flexible subject placement:</strong> While STPVO is the standard pattern, Chinese allows the subject to be dropped entirely when it is obvious from context. 吃了吗？(Eaten yet?) drops the subject 你 because it is clearly directed at the listener. In casual conversation, Chinese speakers drop subjects far more frequently than English speakers, which can confuse learners who are trying to identify every sentence component.</p>
 
     <h2 id="negation">Negation: 不 vs 没</h2>
     <p>Chinese has two main negation words, and choosing the right one is important:</p>
@@ -118,6 +131,8 @@ const headings = [
     </table>
 
     <p><strong>Simple rule:</strong> Use 不 for "won't" and "don't" (habitual, future, willingness). Use 没 for "didn't" and "haven't" (past, completion). The verb 有 (have) always uses 没, never 不.</p>
+    <p><strong>Double negation:</strong> Chinese uses double negation to create emphasis, similar to "not without" in English. 不能不去 (bù néng bú qù) means "cannot not go" = "must go." 没有不喜欢 (méiyǒu bù xǐhuan) means "there is nothing I dislike" = "I like everything." These patterns appear frequently in more formal or literary Chinese.</p>
+    <p><strong>Negating with 别 (bié):</strong> For negative commands (telling someone not to do something), use 别 instead of 不: 别走 (bié zǒu, don't leave), 别担心 (bié dānxīn, don't worry). This is equivalent to "don't" as a command in English. Some speakers also use 不要 (bùyào) interchangeably with 别, though 别 is more casual and commonly used in everyday speech.</p>
 
     <h2 id="questions">3 Ways to Form Questions</h2>
     <p>Unlike English, Chinese does <strong>not change word order</strong> to form questions. The sentence structure stays the same — you just add a question marker:</p>
@@ -165,7 +180,9 @@ const headings = [
       </tbody>
     </table>
 
-    <p><strong>The most confusing particle is 了 (le)</strong> because it has two different functions: (1) after a verb, it marks completion (我吃了 = I ate); (2) at the end of a sentence, it marks a change of state (下雨了 = It started raining). Many sentences use both simultaneously, which takes practice to master.</p>
+    <p><strong>The most confusing particle is 了 (le)</strong> because it has two different functions: (1) after a verb, it marks completion (我吃了 = I ate); (2) at the end of a sentence, it marks a change of state (下雨了 = It started raining). Many sentences use both simultaneously: 我吃了三碗饭了 (I have eaten three bowls of rice — both completion and current state).</p>
+    <p><strong>The three 的/得/地 (de):</strong> These three particles are all pronounced "de" but serve completely different functions and are written with different characters. 的 modifies nouns (漂亮的花, beautiful flower). 得 follows verbs to express degree (跑得快, runs fast). 地 modifies verbs to express manner (快快地跑, run quickly). Even native speakers sometimes confuse these in writing, but understanding the distinction helps you parse complex sentences correctly.</p>
+    <p><strong>把 (bǎ) construction:</strong> One important sentence pattern that does not appear in basic SVO is the 把 construction, which moves the object before the verb to emphasize what happens to it: 我把书放在桌子上 (wǒ bǎ shū fàng zài zhuōzi shàng, "I put the book on the table"). The 把 pattern is used when the action causes a change in the object's state or location. This is one of the more challenging grammar patterns and typically appears in HSK 3-4 level material. See our <a href="/chinese/blog/hsk-preparation/">HSK preparation guide</a> for study strategies.</p>
 
     <h2 id="complex-sentences">Complex Sentences: Connecting Ideas</h2>
     <p>Chinese uses paired connectors (similar to "although...but" or "because...so") to build complex sentences:</p>
@@ -188,6 +205,7 @@ const headings = [
     </table>
 
     <p>Notice that Chinese often uses <strong>both parts</strong> of paired connectors (因为 AND 所以), while English typically uses only one ("because" OR "so"). This is a common source of redundancy errors for English speakers learning Chinese.</p>
+    <p><strong>Relative clauses come BEFORE the noun:</strong> This is the opposite of English and catches many learners off guard. In English: "The book that I bought yesterday." In Chinese: 我昨天买的书 (literally "I yesterday bought DE book"). The entire modifying clause comes before the noun it describes, connected by 的. This means Chinese relative clauses can be very long and stack up before the noun, creating sentences that feel front-heavy compared to English. Practice reading these structures by starting from the noun at the end and working backwards.</p>
 
     <h2 id="comparison">Chinese vs English Structure: Key Differences</h2>
 
@@ -219,6 +237,8 @@ const headings = [
     </div>
 
     <p>The biggest structural differences to internalize: (1) time and place go before the verb, (2) relative clauses come before the noun they modify (using 的), and (3) Chinese is a "topic-prominent" language — the topic often comes first regardless of whether it is the grammatical subject.</p>
+    <p><strong>What Chinese grammar lacks (that makes it easier):</strong> No verb conjugation means 吃 is always 吃 — regardless of who eats, when they eat, or how many people eat. No articles means you never need to decide between "a" and "the." No grammatical gender means you never need to memorize whether a table is masculine or feminine (as in French or German). No plural markers on nouns means 书 is both "book" and "books" — context and numbers handle the distinction.</p>
+    <p><strong>What Chinese grammar has (that makes it harder):</strong> Measure words (量词, liàngcí) require a specific classifier between a number and a noun: 一本书 (one VOLUME book), 一条鱼 (one STRIP fish), 一张桌子 (one FLAT-OBJECT table). There are over 100 measure words in common use. Aspect particles (了, 过, 着) express nuanced time relationships that do not map cleanly onto English tenses. And the flexible word order, while powerful, can be confusing when the same words rearranged create entirely different meanings. Read our detailed <a href="/chinese/blog/chinese-measure-words/">measure words guide</a> for a comprehensive list with examples.</p>
 
     <h2 id="practice-patterns">10 Sentence Patterns to Master First</h2>
     <p>These 10 patterns cover most everyday Chinese communication. Practice each one by creating 5 sentences of your own:</p>
@@ -246,6 +266,7 @@ const headings = [
       </tbody>
     </table>
 
+    <p><strong>How to practice:</strong> For each pattern, create five sentences using vocabulary you already know. Write them down, then try to say them at natural speed. Recording yourself and comparing with native speakers is particularly effective for internalizing word order. Start with patterns 1-5, which cover 80% of basic conversation, then gradually add the more complex patterns.</p>
     <p>For pronunciation help with any of these sentences, use our <a href="/chinese/tools/pinyin-converter/">Pinyin Converter</a>. For vocabulary study, browse our <a href="/chinese/tools/hsk-vocabulary/">HSK Vocabulary Browser</a> organized by level. For deeper grammar reference, see the <a href="https://resources.allsetlearning.com/chinese/grammar" target="_blank" rel="noopener">AllSet Learning Chinese Grammar Wiki</a> and our guides on <a href="/chinese/blog/chinese-measure-words/">measure words</a> and <a href="/chinese/blog/chinese-tones-guide/">Chinese tones</a>.</p>
 
 </BlogLayout>
