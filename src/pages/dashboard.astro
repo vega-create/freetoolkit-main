@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../site.config';
+
+const chineseTools = [
+  { name: '中文取名', emoji: '📝', href: '/chinese/tools/name-generator/', desc: 'Generate a meaningful Chinese name' },
+  { name: '拼音轉換', emoji: '🔤', href: '/chinese/tools/pinyin-converter/', desc: 'Convert characters to pinyin' },
+  { name: '繁簡轉換', emoji: '🔁', href: '/chinese/tools/traditional-simplified/', desc: 'Traditional ↔ Simplified' },
+  { name: '字數統計', emoji: '🔢', href: '/chinese/tools/character-counter/', desc: 'Count characters and words' },
+  { name: '數字轉換', emoji: '🔢', href: '/chinese/tools/number-converter/', desc: 'Arabic ↔ Chinese numbers' },
+  { name: '聲調練習', emoji: '🔊', href: '/chinese/tools/tone-trainer/', desc: 'Practice Chinese tones' },
+  { name: '拼音測驗', emoji: '📝', href: '/chinese/tools/pinyin-quiz/', desc: 'HSK-level pinyin quiz' },
+  { name: '每日一字', emoji: '📅', href: '/chinese/tools/daily-character/', desc: 'Daily character of the day' },
+  { name: '每日成語', emoji: '🏮', href: '/chinese/tools/daily-idiom/', desc: 'Daily chengyu idiom' },
+  { name: '筆順查詢', emoji: '✍️', href: '/chinese/tools/stroke-order/', desc: 'Visualize stroke order' },
+  { name: '注音轉換', emoji: '㊟', href: '/chinese/tools/zhuyin-converter/', desc: 'Pinyin ↔ Bopomofo' },
+  { name: '部首查詢', emoji: '⿱', href: '/chinese/tools/radical-lookup/', desc: 'Radical & component search' },
+  { name: 'HSK 詞彙', emoji: '📊', href: '/chinese/tools/hsk-vocab/', desc: 'Browse HSK 1-6 vocabulary' },
+  { name: '量詞練習', emoji: '📏', href: '/chinese/tools/measure-words/', desc: 'Practice measure words' },
+  { name: '練習表產生', emoji: '📄', href: '/chinese/tools/practice-sheet/', desc: 'Generate practice sheets' },
+];
+
+const japaneseTools = [
+  { name: '日文取名', emoji: '📝', href: '/japanese/tools/name-generator/', desc: 'Create Japanese name from English' },
+  { name: '平假名測驗', emoji: 'あ', href: '/japanese/tools/hiragana-quiz/', desc: 'Interactive hiragana quiz' },
+  { name: '片假名測驗', emoji: 'ア', href: '/japanese/tools/katakana-quiz/', desc: 'Interactive katakana quiz' },
+  { name: '假名轉換', emoji: '🔤', href: '/japanese/tools/kana-converter/', desc: 'Romaji ↔ Kana conversion' },
+  { name: '每日漢字', emoji: '📅', href: '/japanese/tools/daily-kanji/', desc: 'Daily kanji of the day' },
+  { name: '每日短句', emoji: '💬', href: '/japanese/tools/daily-phrase/', desc: 'Daily Japanese phrase' },
+  { name: '漢字查詢', emoji: '🔍', href: '/japanese/tools/kanji-lookup/', desc: 'Kanji search & info' },
+  { name: '字數統計', emoji: '🔢', href: '/japanese/tools/character-counter/', desc: 'Japanese text analysis' },
+  { name: '量詞練習', emoji: '📏', href: '/japanese/tools/counter-practice/', desc: 'Japanese counter practice' },
+  { name: '助詞指南', emoji: '📖', href: '/japanese/tools/particle-guide/', desc: 'Particle reference guide' },
+  { name: '動詞變化', emoji: '🔄', href: '/japanese/tools/verb-conjugator/', desc: 'Japanese verb conjugation' },
+  { name: '羅馬字轉假名', emoji: 'ロ', href: '/japanese/tools/romaji-to-kana/', desc: 'Romanized text to kana' },
+  { name: 'JLPT 詞彙', emoji: '📊', href: '/japanese/tools/jlpt-vocab/', desc: 'JLPT N1-N5 vocabulary' },
+  { name: '練習表', emoji: '📄', href: '/japanese/tools/practice-sheet/', desc: 'Printable practice sheets' },
+  { name: '助詞練習', emoji: '✏️', href: '/japanese/tools/particle-practice/', desc: 'Interactive particle drills' },
+];
+
+const quickLinks = [
+  { name: '中文學習進度', emoji: '📈', href: '/chinese/my-progress/', color: 'chinese' },
+  { name: '日文學習進度', emoji: '📈', href: '/japanese/my-progress/', color: 'japanese' },
+  { name: '中文文章', emoji: '📚', href: '/chinese/blog/', color: 'chinese' },
+  { name: '日文文章', emoji: '📚', href: '/japanese/blog/', color: 'japanese' },
+  { name: '中文下載', emoji: '⬇️', href: '/chinese/downloads/', color: 'chinese' },
+  { name: '日文下載', emoji: '⬇️', href: '/japanese/downloads/', color: 'japanese' },
+];
+---
+
+<BaseLayout
+  title="System Dashboard — All Tools at a Glance | FreeToolkit"
+  description="Access all FreeToolkit language learning tools and utility tools from one central dashboard. 30 language tools + 15 utility tools."
+>
+  {/* Header */}
+  <section class="bg-gradient-to-br from-gray-900 to-gray-800 py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">System Dashboard</h1>
+      <p class="text-gray-400">All tools & resources in one place</p>
+      <div class="flex gap-3 mt-6">
+        <span class="inline-flex items-center gap-1.5 bg-gray-700/50 text-gray-300 text-xs font-medium px-3 py-1.5 rounded-full">
+          🈶 15 Chinese Tools
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-gray-700/50 text-gray-300 text-xs font-medium px-3 py-1.5 rounded-full">
+          🗾 15 Japanese Tools
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-gray-700/50 text-gray-300 text-xs font-medium px-3 py-1.5 rounded-full">
+          🔧 15 Utility Tools
+        </span>
+      </div>
+    </div>
+  </section>
+
+  {/* Quick Links */}
+  <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+      {quickLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'bg-white rounded-xl shadow-sm border border-gray-100 p-3 text-center hover:shadow-md transition-all group',
+            link.color === 'chinese' ? 'hover:border-chinese-300' : 'hover:border-japanese-300',
+          ]}
+        >
+          <div class="text-xl mb-1">{link.emoji}</div>
+          <div class:list={[
+            'text-xs font-medium text-gray-600 group-hover:text-gray-900',
+          ]}>{link.name}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Chinese Tools */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-chinese-50 rounded-lg flex items-center justify-center text-xl">🈶</div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-900">Chinese Learning Tools</h2>
+          <p class="text-sm text-gray-500">15 interactive tools for Mandarin Chinese</p>
+        </div>
+      </div>
+      <a href="/chinese/tools/" class="text-chinese-600 hover:text-chinese-700 text-sm font-medium">View all →</a>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+      {chineseTools.map((tool) => (
+        <a href={tool.href} class="bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md hover:border-chinese-200 transition-all group">
+          <div class="text-2xl mb-2">{tool.emoji}</div>
+          <div class="font-semibold text-sm text-gray-800 group-hover:text-chinese-600 mb-0.5">{tool.name}</div>
+          <div class="text-[11px] text-gray-400 leading-tight">{tool.desc}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Japanese Tools */}
+  <section class="max-w-6xl mx-auto px-4 pb-12">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-japanese-50 rounded-lg flex items-center justify-center text-xl">🗾</div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-900">Japanese Learning Tools</h2>
+          <p class="text-sm text-gray-500">15 interactive tools for Japanese</p>
+        </div>
+      </div>
+      <a href="/japanese/tools/" class="text-japanese-600 hover:text-japanese-700 text-sm font-medium">View all →</a>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+      {japaneseTools.map((tool) => (
+        <a href={tool.href} class="bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md hover:border-japanese-200 transition-all group">
+          <div class="text-2xl mb-2">{tool.emoji}</div>
+          <div class="font-semibold text-sm text-gray-800 group-hover:text-japanese-600 mb-0.5">{tool.name}</div>
+          <div class="text-[11px] text-gray-400 leading-tight">{tool.desc}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Utility Tools */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center text-xl">🔧</div>
+          <div>
+            <h2 class="text-xl font-bold text-gray-900">Utility Tools</h2>
+            <p class="text-sm text-gray-500">15 free online tools for everyday tasks</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        {siteConfig.tools.map((tool) => (
+          <a
+            href={`https://${tool.domain}`}
+            target="_blank"
+            rel="noopener"
+            class="bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md hover:border-primary-200 transition-all group"
+          >
+            <div class="text-2xl mb-2">{tool.emoji}</div>
+            <div class="font-semibold text-sm text-gray-800 group-hover:text-primary-600 mb-0.5">{tool.name}</div>
+            <div class="text-[11px] text-gray-400 leading-tight">{tool.domain}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Resources */}
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-xl font-bold text-gray-900 mb-6">Resources & Content</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <a href="/chinese/blog/" class="flex items-center gap-4 bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md hover:border-chinese-200 transition-all group">
+        <div class="w-12 h-12 bg-chinese-50 rounded-lg flex items-center justify-center text-2xl shrink-0">📚</div>
+        <div>
+          <div class="font-bold text-gray-800 group-hover:text-chinese-600">Chinese Articles</div>
+          <div class="text-sm text-gray-500">40+ expert guides covering tones, characters, grammar, culture, and HSK prep</div>
+        </div>
+      </a>
+      <a href="/japanese/blog/" class="flex items-center gap-4 bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md hover:border-japanese-200 transition-all group">
+        <div class="w-12 h-12 bg-japanese-50 rounded-lg flex items-center justify-center text-2xl shrink-0">📚</div>
+        <div>
+          <div class="font-bold text-gray-800 group-hover:text-japanese-600">Japanese Articles</div>
+          <div class="text-sm text-gray-500">41+ expert guides covering kana, kanji, grammar, JLPT, and culture</div>
+        </div>
+      </a>
+      <a href="/chinese/downloads/" class="flex items-center gap-4 bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md hover:border-chinese-200 transition-all group">
+        <div class="w-12 h-12 bg-chinese-50 rounded-lg flex items-center justify-center text-2xl shrink-0">⬇️</div>
+        <div>
+          <div class="font-bold text-gray-800 group-hover:text-chinese-600">Chinese Downloads</div>
+          <div class="text-sm text-gray-500">Printable PDF resources for offline study</div>
+        </div>
+      </a>
+      <a href="/japanese/downloads/" class="flex items-center gap-4 bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md hover:border-japanese-200 transition-all group">
+        <div class="w-12 h-12 bg-japanese-50 rounded-lg flex items-center justify-center text-2xl shrink-0">⬇️</div>
+        <div>
+          <div class="font-bold text-gray-800 group-hover:text-japanese-600">Japanese Downloads</div>
+          <div class="text-sm text-gray-500">Printable PDF resources for offline study</div>
+        </div>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
