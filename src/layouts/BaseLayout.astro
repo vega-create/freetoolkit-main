@@ -32,14 +32,8 @@ const { tracking } = siteConfig;
     })(window,document,'script','dataLayer','${tracking.gtm}');`} />
   )}
 
-  {/* AdSense */}
-  {tracking.adsense.enabled && (
-    <script
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${tracking.adsense.client}`}
-      crossorigin="anonymous"
-    />
-  )}
+  {/* Teleworker ad network */}
+  <script src="https://storage.googleapis.com/teleworker-public-storage/gad_js/net.min.js" async></script>
 </head>
 <body class="min-h-screen flex flex-col">
   {/* GTM noscript */}
