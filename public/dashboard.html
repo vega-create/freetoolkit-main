@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Dashboard</title>
+<meta name="robots" content="noindex,nofollow">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  .card:hover .card-actions { display: flex; }
+</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- Header -->
+<section class="bg-gradient-to-br from-gray-900 to-gray-800 py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">System Dashboard</h1>
+    <p class="text-gray-400">所有系統與工具的快速入口，可自行新增、編輯、刪除</p>
+  </div>
+</section>
+
+<!-- Dashboard -->
+<section class="max-w-6xl mx-auto px-4 py-10">
+  <div id="app"></div>
+</section>
+
+<script>
+const DEFAULT_CATEGORIES = [
+  'Google 系統',
+  '社群媒體',
+  '廣告系統',
+  '會計系統',
+  '網站',
+  '寫文系統',
+  '開發工具',
+  '其他',
+];
+
+const DEFAULT_SYSTEMS = [
+  // Google
+  { id: 'ga4', name: 'Google Analytics 4', url: 'https://analytics.google.com/', category: 'Google 系統', emoji: '📊' },
+  { id: 'gsc', name: 'Google Search Console', url: 'https://search.google.com/search-console', category: 'Google 系統', emoji: '🔍' },
+  { id: 'gtm', name: 'Google Tag Manager', url: 'https://tagmanager.google.com/', category: 'Google 系統', emoji: '🏷️' },
+  { id: 'adsense', name: 'Google AdSense', url: 'https://www.google.com/adsense/', category: 'Google 系統', emoji: '💰' },
+  // Social
+  { id: 'ig', name: 'Instagram', url: 'https://www.instagram.com/', category: '社群媒體', emoji: '📸' },
+  { id: 'fb', name: 'Facebook', url: 'https://www.facebook.com/', category: '社群媒體', emoji: '👥' },
+  // Ad Report
+  { id: 'ad-report', name: '廣告報表', url: 'https://ad-report-cloudflare.pages.dev/', category: '廣告系統', emoji: '📈' },
+  // Accounting
+  { id: 'accounting', name: '會計系統', url: 'https://mommy-wisdom-accounting.vercel.app/', category: '會計系統', emoji: '🧾' },
+  // Websites
+  { id: 'main-site', name: 'FreeToolkit 主站', url: 'https://freetoolkit.cc', category: '網站', emoji: '🧰' },
+  { id: 'calc', name: 'Calculators', url: 'https://calc.freetoolkit.cc', category: '網站', emoji: '🔢' },
+  { id: 'convert', name: 'Converters', url: 'https://convert.freetoolkit.cc', category: '網站', emoji: '🔄' },
+  { id: 'text', name: 'Text Tools', url: 'https://text.freetoolkit.cc', category: '網站', emoji: '📝' },
+  { id: 'password', name: 'Password', url: 'https://password.freetoolkit.cc', category: '網站', emoji: '🔐' },
+  { id: 'image', name: 'Image Tools', url: 'https://image.freetoolkit.cc', category: '網站', emoji: '🖼️' },
+  { id: 'pdf', name: 'PDF Tools', url: 'https://pdf.freetoolkit.cc', category: '網站', emoji: '📄' },
+  { id: 'qr', name: 'QR Code', url: 'https://qr.freetoolkit.cc', category: '網站', emoji: '📱' },
+  { id: 'color', name: 'Color Tools', url: 'https://color.freetoolkit.cc', category: '網站', emoji: '🎨' },
+  { id: 'json', name: 'Dev Tools', url: 'https://json.freetoolkit.cc', category: '網站', emoji: '💻' },
+  { id: 'seo', name: 'SEO Tools', url: 'https://seo.freetoolkit.cc', category: '網站', emoji: '🔍' },
+  { id: 'social', name: 'Social Media', url: 'https://social.freetoolkit.cc', category: '網站', emoji: '📣' },
+  { id: 'random', name: 'Random', url: 'https://random.freetoolkit.cc', category: '網站', emoji: '🎲' },
+  { id: 'time', name: 'Time & Date', url: 'https://time.freetoolkit.cc', category: '網站', emoji: '⏰' },
+  { id: 'finance', name: 'Finance', url: 'https://finance-tools.freetoolkit.cc', category: '網站', emoji: '💰' },
+  { id: 'health', name: 'Health', url: 'https://health-tools.freetoolkit.cc', category: '網站', emoji: '❤️' },
+];
+
+const STORAGE_KEY = 'ftk-dashboard-systems';
+
+function loadSystems() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch {}
+  return DEFAULT_SYSTEMS;
+}
+
+function saveSystems(systems) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(systems));
+}
+
+let systems = loadSystems();
+let showForm = false;
+let editingId = null;
+let form = { name: '', url: '', category: DEFAULT_CATEGORIES[0], emoji: '🔗' };
+
+function getCategories() {
+  return [...new Set([...DEFAULT_CATEGORIES, ...systems.map(s => s.category)])];
+}
+
+function getGrouped() {
+  const cats = getCategories();
+  return cats
+    .map(cat => ({ category: cat, items: systems.filter(s => s.category === cat) }))
+    .filter(g => g.items.length > 0);
+}
+
+function render() {
+  const grouped = getGrouped();
+  const categories = getCategories();
+  const app = document.getElementById('app');
+
+  let html = '';
+
+  // Action Bar
+  html += `
+    <div class="flex items-center justify-between mb-8">
+      <div class="text-sm text-gray-500">共 ${systems.length} 個系統，${grouped.length} 個分類</div>
+      <div class="flex gap-2">
+        <button onclick="handleReset()" class="text-xs text-gray-400 hover:text-gray-600 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors">重置預設</button>
+        <button onclick="openAddForm()" class="text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-1.5 rounded-lg transition-colors">+ 新增系統</button>
+      </div>
+    </div>`;
+
+  // Form
+  if (showForm) {
+    html += `
+    <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-5 mb-8">
+      <h3 class="font-bold text-gray-800 mb-4">${editingId ? '編輯系統' : '新增系統'}</h3>
+      <form onsubmit="handleSubmit(event)" class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">名稱</label>
+          <input type="text" id="form-name" value="${escHtml(form.name)}" placeholder="例如：Google Analytics"
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">網址</label>
+          <input type="url" id="form-url" value="${escHtml(form.url)}" placeholder="https://..."
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">分類</label>
+          <input type="text" id="form-category" list="category-list" value="${escHtml(form.category)}"
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
+          <datalist id="category-list">
+            ${categories.map(cat => `<option value="${escHtml(cat)}">`).join('')}
+          </datalist>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">Emoji</label>
+          <input type="text" id="form-emoji" value="${form.emoji}" maxlength="4"
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
+        </div>
+        <div class="sm:col-span-2 flex gap-2 justify-end">
+          <button type="button" onclick="closeForm()" class="text-sm text-gray-500 hover:text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">取消</button>
+          <button type="submit" class="text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition-colors">${editingId ? '儲存' : '新增'}</button>
+        </div>
+      </form>
+    </div>`;
+  }
+
+  // Groups
+  for (const group of grouped) {
+    html += `
+    <div class="mb-8">
+      <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+        ${escHtml(group.category)}
+        <span class="text-xs font-normal text-gray-400">(${group.items.length})</span>
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">`;
+
+    for (const item of group.items) {
+      html += `
+        <div class="card group relative bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md hover:border-indigo-200 transition-all">
+          <a href="${escHtml(item.url)}" target="_blank" rel="noopener" class="block">
+            <div class="text-2xl mb-2">${item.emoji}</div>
+            <div class="font-semibold text-sm text-gray-800 group-hover:text-indigo-600 mb-0.5 truncate">${escHtml(item.name)}</div>
+            <div class="text-[11px] text-gray-400 leading-tight truncate">${escHtml(item.url.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</div>
+          </a>
+          <div class="card-actions absolute top-2 right-2 hidden gap-1">
+            <button onclick="handleEdit('${item.id}')" class="w-6 h-6 rounded bg-gray-100 hover:bg-gray-200 text-gray-500 text-xs flex items-center justify-center transition-colors" title="編輯">✏</button>
+            <button onclick="handleDelete('${item.id}')" class="w-6 h-6 rounded bg-red-50 hover:bg-red-100 text-red-400 text-xs flex items-center justify-center transition-colors" title="刪除">✕</button>
+          </div>
+        </div>`;
+    }
+
+    html += `</div></div>`;
+  }
+
+  app.innerHTML = html;
+}
+
+function escHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function openAddForm() {
+  showForm = true;
+  editingId = null;
+  form = { name: '', url: '', category: DEFAULT_CATEGORIES[0], emoji: '🔗' };
+  render();
+}
+
+function closeForm() {
+  showForm = false;
+  editingId = null;
+  render();
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('form-name').value;
+  const url = document.getElementById('form-url').value;
+  const category = document.getElementById('form-category').value;
+  const emoji = document.getElementById('form-emoji').value || '🔗';
+
+  if (!name || !url) return;
+
+  if (editingId) {
+    systems = systems.map(s => s.id === editingId ? { ...s, name, url, category, emoji } : s);
+  } else {
+    systems.push({ id: Date.now().toString(), name, url, category, emoji });
+  }
+
+  saveSystems(systems);
+  showForm = false;
+  editingId = null;
+  render();
+}
+
+function handleEdit(id) {
+  const item = systems.find(s => s.id === id);
+  if (!item) return;
+  editingId = id;
+  form = { name: item.name, url: item.url, category: item.category, emoji: item.emoji };
+  showForm = true;
+  render();
+}
+
+function handleDelete(id) {
+  systems = systems.filter(s => s.id !== id);
+  saveSystems(systems);
+  render();
+}
+
+function handleReset() {
+  systems = [...DEFAULT_SYSTEMS];
+  saveSystems(systems);
+  render();
+}
+
+// Initial render
+render();
+</script>
+</body>
+</html>
